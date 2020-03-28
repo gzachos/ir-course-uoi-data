@@ -5,6 +5,7 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 from requests.exceptions import RequestException
+import threading
 
 
 class Article:
@@ -108,8 +109,12 @@ def write_urls_tofile(articles):
         perror('Cannot write \'urls.txt\'')
 
 
-def scrape(articles):
-    for article in articles:
+def scrape(articles, tid, num_threads):
+   # print(tid)
+    num_articles = len(articles)
+    chunksize = num_articles // num_threads
+#    print("%d: %d-%d" % (tid, tid * chunksize, (tid+1)*chunksize))
+    for article in articles[tid*chunksize:(tid+1)*chunksize]:
         scrape_article(article)
 
 
@@ -119,6 +124,12 @@ repo_path = './repository/'
 if __name__ == '__main__':
     seeds = read_seeds()
     articles = crawl(seeds)
-    write_urls_tofile(articles)
-    scrape(articles)
-
+    # write_urls_tofile(articles)
+    threads = []
+    num_threads = os.cpu_count()
+    for i in range(num_threads):
+        thread = threading.Thread(target=scrape, args = (articles, i, num_threads))
+        threads.append(thread)
+        thread.start()
+    for thread in threads:
+        thread.join()
