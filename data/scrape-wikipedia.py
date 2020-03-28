@@ -34,7 +34,7 @@ def read_seeds():
 
 def expand_frontier(html):
     global crawl_frontier
-    if len(crawl_frontier) > 5000:
+    if len(crawl_frontier) == 5000:
         return
     soup = BeautifulSoup(html, 'html.parser')
     links = soup.find(id='content').find_all('a')
@@ -42,9 +42,12 @@ def expand_frontier(html):
         href = str(link.get('href'))
         if href.startswith('/wiki/') and not ('#' in href or ':' in href):
             url = 'https://en.wikipedia.org' + href
+            if url in crawl_frontier:
+                continue
             print('Adding \'%s\' to frontier' % (url))
             crawl_frontier.append(url)
-
+            if len(crawl_frontier) == 5000:
+                break
 
 
 def download(url, repo_path):
