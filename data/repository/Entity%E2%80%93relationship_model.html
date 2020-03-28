@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Entity–relationship model - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRequestId":"XnCviwpAAEIAAJ5CteYAAAAF","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Entity–relationship_model","wgTitle":"Entity–relationship model","wgCurRevisionId":945927969,"wgRevisionId":945927969,"wgArticleId":752991,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Articles with short description","Articles needing additional references from November 2016","All articles needing additional references",
+"Wikipedia articles needing clarification from April 2012","Articles to be expanded from February 2018","All articles to be expanded","Articles using small message boxes","All articles with unsourced statements","Articles with unsourced statements from July 2016","All articles with specifically marked weasel-worded phrases","Articles with specifically marked weasel-worded phrases from June 2012","Commons category link is on Wikidata","Wikipedia articles with BNF identifiers","Wikipedia articles with GND identifiers","Wikipedia articles with LCCN identifiers","Wikipedia articles with SUDOC identifiers","Data modeling diagrams","Entity–relationship model","Data modeling languages","Modeling languages"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Entity–relationship_model","wgRelevantArticleId":752991,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,
+"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q624546","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":
+"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.22"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/ER_Diagram_MMORPG.png/1200px-ER_Diagram_MMORPG.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Entity–relationship_model rootpage-Entity–relationship_model skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Entity–relationship model</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Model or diagram describing interrelated things</div>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Entity%E2%80%93relationship+model%22">"Entity–relationship model"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Entity%E2%80%93relationship+model%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Entity%E2%80%93relationship+model%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Entity%E2%80%93relationship+model%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Entity%E2%80%93relationship+model%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Entity%E2%80%93relationship+model%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">November 2016</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>An <b>entity–relationship model</b> (or <b>ER model</b>) describes interrelated things of interest in a specific domain of knowledge. A basic ER model is composed of entity types (which classify the things of interest) and specifies relationships that can exist between <a href="https://en.wiktionary.org/wiki/entity" class="extiw" title="wikt:entity">entities</a> (instances of those entity types).
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:452px;"><a href="/wiki/File:ER_Diagram_MMORPG.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/ER_Diagram_MMORPG.png/450px-ER_Diagram_MMORPG.png" decoding="async" width="450" height="401" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/ER_Diagram_MMORPG.png/675px-ER_Diagram_MMORPG.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/72/ER_Diagram_MMORPG.png/900px-ER_Diagram_MMORPG.png 2x" data-file-width="1600" data-file-height="1425" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:ER_Diagram_MMORPG.png" class="internal" title="Enlarge"></a></div>An entity–relationship diagram for a <a href="/wiki/MMORPG" class="mw-redirect" title="MMORPG">MMORPG</a> using Chen's notation.</div></div></div>
+<p>In <a href="/wiki/Software_engineering" title="Software engineering">software engineering</a>, an ER model is commonly formed to represent things a business needs to remember in order to perform business processes. Consequently, the ER model becomes an abstract <a href="/wiki/Data_modeling" title="Data modeling">data model</a>, that defines a data or information structure which can be implemented in a <a href="/wiki/Database" title="Database">database</a>, typically a <a href="/wiki/Relational_database" title="Relational database">relational database</a>.
+</p><p>Entity–relationship modeling was developed for database and design by <a href="/wiki/Peter_Chen" title="Peter Chen">Peter Chen</a> and published in a 1976 paper.<sup id="cite_ref-Chen_1-0" class="reference"><a href="#cite_note-Chen-1">&#91;1&#93;</a></sup> However, variants of the idea existed previously.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> Some ER models show super and subtype entities connected by generalization-specialization relationships,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> and an ER model can be used also in the specification of domain-specific <a href="/wiki/Ontology_(computer_science)" class="mw-redirect" title="Ontology (computer science)">ontologies</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Entity–relationship_model"><span class="tocnumber">2</span> <span class="toctext">Entity–relationship model</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Mapping_natural_language"><span class="tocnumber">2.1</span> <span class="toctext">Mapping natural language</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Relationships,_roles_and_cardinalities"><span class="tocnumber">2.2</span> <span class="toctext">Relationships, roles and cardinalities</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Role_naming"><span class="tocnumber">2.3</span> <span class="toctext">Role naming</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Cardinalities"><span class="tocnumber">2.4</span> <span class="toctext">Cardinalities</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Crow&#39;s_foot_notation"><span class="tocnumber">2.5</span> <span class="toctext">Crow's foot notation</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Model_usability_issues"><span class="tocnumber">2.6</span> <span class="toctext">Model usability issues</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Entity–relationships_and_semantic_modeling"><span class="tocnumber">3</span> <span class="toctext">Entity–relationships and semantic modeling</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Semantic_model"><span class="tocnumber">3.1</span> <span class="toctext">Semantic model</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Extension_model"><span class="tocnumber">3.2</span> <span class="toctext">Extension model</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Entity–relationship_origins"><span class="tocnumber">3.3</span> <span class="toctext">Entity–relationship origins</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href="#Philosophical_alignment"><span class="tocnumber">3.3.1</span> <span class="toctext">Philosophical alignment</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Limitations"><span class="tocnumber">4</span> <span class="toctext">Limitations</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>An E-R model is usually the result of systematic analysis to define and describe what is important to processes in an area of a business. It does not define the business processes; it only presents a business data schema in graphical form.  It is usually drawn in a graphical form as boxes (<i>entities</i>) that are connected by lines (<i>relationships</i>) which express the associations and dependencies between entities. An ER model can also be expressed in a verbal form, for example: <i>one building may be divided into zero or more apartments, but one apartment can only be located in one building.</i>
+</p><p>Entities may be characterized not only by relationships, but also by additional properties (<i>attributes</i>), which include identifiers called "primary keys". Diagrams created to represent attributes as well as entities and relationships may be called entity-attribute-relationship diagrams, rather than entity–relationship models. 
+</p><p>An ER model is typically implemented as a <a href="/wiki/Database" title="Database">database</a>. In a simple relational database implementation, each row of a table represents one instance of an entity type, and each field in a table represents an attribute type. In a <a href="/wiki/Relational_database" title="Relational database">relational database</a> a relationship between entities is implemented by storing the primary key of one entity as a pointer or "foreign key" in the table of another entity
+</p><p>There is a tradition for ER/data models to be built at two or three levels of abstraction. Note that the conceptual-logical-physical hierarchy below is used in other kinds of specification, and is different from the <a href="/wiki/Three_schema_approach" class="mw-redirect" title="Three schema approach">three schema approach</a> to <a href="/wiki/Software_engineering" title="Software engineering">software engineering</a>.
+</p>
+<dl><dt><a href="/wiki/Conceptual_data_model" class="mw-redirect" title="Conceptual data model">Conceptual data model</a></dt>
+<dd>This is the highest level ER model in that it contains the least granular detail but establishes the overall scope of what is to be included within the model set. The conceptual ER model normally defines master reference data entities that are commonly used by the organization.  Developing an enterprise-wide conceptual ER model is useful to support documenting the <a href="/wiki/Data_architecture" title="Data architecture">data architecture</a> for an organization.</dd>
+<dd>A conceptual ER model may be used as the foundation for one or more <i>logical data models</i> (see below). The purpose of the conceptual ER model is then to establish structural <a href="/wiki/Metadata" title="Metadata">metadata</a> commonality for the <a href="/wiki/Master_data" title="Master data">master data</a> entities between the set of logical ER models. The conceptual data model may be used to form commonality relationships between ER models as a basis for data model integration.</dd>
+<dt><a href="/wiki/Logical_data_model" class="mw-redirect" title="Logical data model">Logical data model</a></dt>
+<dd>A logical ER model does not require a conceptual ER model, especially if the scope of the logical ER model includes only the development of a distinct information system. The logical ER model contains more detail than the conceptual ER model. In addition to master data entities, operational and transactional data entities are now defined. The details of each data entity are developed and the relationships between these data entities are established. The logical ER model is however developed independently of the specific <a href="/wiki/Database_management_system" class="mw-redirect" title="Database management system">database management system</a> into which it can be implemented.</dd>
+<dt><a href="/wiki/Physical_data_model" class="mw-redirect" title="Physical data model">Physical data model</a></dt>
+<dd>One or more physical ER models may be developed from each logical ER model. The physical ER model is normally developed to be instantiated as a database. Therefore, each physical ER model must contain enough detail to produce a database and each physical ER model is technology dependent since each database management system is somewhat different.</dd>
+<dd>The physical model is normally instantiated in the structural metadata of a database management system as relational database objects such as <a href="/wiki/Database_table" class="mw-redirect" title="Database table">database tables</a>, <a href="/wiki/Database_index" title="Database index">database indexes</a> such as <a href="/wiki/Unique_key" title="Unique key">unique key</a> indexes, and database constraints such as a <a href="/wiki/Foreign_key_constraint" class="mw-redirect" title="Foreign key constraint">foreign key constraint</a> or a commonality constraint.  The ER model is also normally used to design modifications to the relational database objects and to maintain the structural metadata of the database.</dd></dl>
+<p>The first stage of <a href="/wiki/Information_system" title="Information system">information system</a> design uses these models during the <a href="/wiki/Requirements_analysis" title="Requirements analysis">requirements analysis</a> to describe information needs or the type of <a href="/wiki/Information" title="Information">information</a> that is to be stored in a <a href="/wiki/Database" title="Database">database</a>. The <a href="/wiki/Data_modeling" title="Data modeling">data modeling</a> technique can be used to describe any <a href="/wiki/Ontology_(computer_science)" class="mw-redirect" title="Ontology (computer science)">ontology</a> (i.e. an overview and classifications of used terms and their relationships) for a certain <a href="/wiki/Universe_of_discourse" class="mw-redirect" title="Universe of discourse">area of interest</a>. In the case of the design of an information system that is based on a database, the <a href="/wiki/Conceptual_data_model" class="mw-redirect" title="Conceptual data model">conceptual data model</a> is, at a later stage (usually called logical design), mapped to a <a href="/wiki/Logical_data_model" class="mw-redirect" title="Logical data model">logical data model</a>, such as the <a href="/wiki/Relational_model" title="Relational model">relational model</a>; this in turn is mapped to a physical model during physical design. Note that sometimes, both of these phases are referred to as "physical design."
+</p>
+<h2><span id="Entity.E2.80.93relationship_model"></span><span class="mw-headline" id="Entity–relationship_model">Entity–relationship model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=2" title="Edit section: Entity–relationship model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:285px;"><a href="/wiki/File:Erd-entity-relationship-example1.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Erd-entity-relationship-example1.svg/283px-Erd-entity-relationship-example1.svg.png" decoding="async" width="283" height="59" class="thumbimage" data-file-width="283" data-file-height="59" /></a>  <div class="thumbcaption">Two related entities</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:195px;"><a href="/wiki/File:Erd-entity-with-attribute.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Erd-entity-with-attribute.svg/193px-Erd-entity-with-attribute.svg.png" decoding="async" width="193" height="39" class="thumbimage" data-file-width="193" data-file-height="39" /></a>  <div class="thumbcaption">An entity with an attribute</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:196px;"><a href="/wiki/File:Erd-relationship-with-attribute.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/8/84/Erd-relationship-with-attribute.png" decoding="async" width="194" height="51" class="thumbimage" data-file-width="194" data-file-height="51" /></a>  <div class="thumbcaption">A relationship with an attribute</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:57px;"><a href="/wiki/File:Erd-id-as-primary-key.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/5/52/Erd-id-as-primary-key.png" decoding="async" width="55" height="37" class="thumbimage" data-file-width="55" data-file-height="37" /></a>  <div class="thumbcaption"><a href="/wiki/Primary_key" title="Primary key">Primary key</a></div></div></div>
+<p>An <a href="https://en.wiktionary.org/wiki/entity" class="extiw" title="wikt:entity">entity</a> may be defined as a thing capable of an independent existence that can be uniquely identified. An entity is an abstraction from the complexities of a domain. When we speak of an entity, we normally speak of some aspect of the real world that can be distinguished from other aspects of the real world.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>An entity is a thing that exists either physically or logically. An entity may be a physical object such as a house or a car (they exist physically), an event such as a house sale or a car service, or a concept such as a customer transaction or order (they exist logically—as a concept). Although the term entity is the one most commonly used, following Chen we should really distinguish between an entity and an entity-type. An entity-type is a category. An entity, strictly speaking, is an instance of a given entity-type. There are usually many instances of an entity-type. Because the term entity-type is somewhat cumbersome, most people tend to use the term entity as a synonym for this term
+</p><p>Entities can be thought of as <a href="/wiki/Noun" title="Noun">nouns</a>. Examples: a computer, an employee, a song, a mathematical theorem, etc.
+</p><p>A relationship captures how entities are related to one another. Relationships can be thought of as <a href="/wiki/Verb" title="Verb">verbs</a>, linking two or more nouns.  Examples: an <i>owns</i> relationship between a company and a computer, a <i>supervises</i> relationship between an employee and a department, a <i>performs</i> relationship between an artist and a song, a <i>proves</i> relationship between a mathematician and a conjecture, etc.
+</p><p>The model's linguistic aspect described above is utilized in the <a href="/wiki/Declarative_programming_language" class="mw-redirect" title="Declarative programming language">declarative</a> database <a href="/wiki/Query_language" title="Query language">query language</a> ERROL, which mimics <a href="/wiki/Natural_language" title="Natural language">natural language</a> constructs. ERROL's <a href="/wiki/Semantics" title="Semantics">semantics</a> and implementation are based on reshaped relational algebra (RRA), a relational algebra that is adapted to the entity–relationship model and captures its linguistic aspect.
+</p><p>Entities and relationships can both have attributes. Examples: an <i>employee</i> entity might have a <i>Social Security Number</i> (SSN) attribute, while a <i>proved</i> relationship may have a <i>date</i> attribute.
+</p><p>Every entity (unless it is a <a href="/wiki/Weak_entity" title="Weak entity">weak entity</a>) must have a minimal set of uniquely identifying attributes, which is called the entity's <a href="/wiki/Unique_key" title="Unique key">primary key</a>.
+</p><p>Entity–relationship diagrams don't show single entities or single instances of relations. Rather, they show entity sets (all entities of the same entity type) and relationship sets (all relationships of the same relationship type). Examples: a particular <i>song</i> is an entity; the collection of all songs in a database is an entity set; the <i>eaten</i> relationship between a child and his lunch is a single relationship; the set of all such child-lunch relationships in a database is a relationship set.
+In other words, a relationship set corresponds to a <a href="/wiki/Relation_(mathematics)" class="mw-redirect" title="Relation (mathematics)">relation in mathematics</a>, while a relationship corresponds to a member of the relation.
+</p><p>Certain <a href="/wiki/Cardinality_(data_modeling)" title="Cardinality (data modeling)">cardinality constraints</a> on relationship sets may be indicated as well.
+</p>
+<h3><span class="mw-headline" id="Mapping_natural_language">Mapping natural language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=3" title="Edit section: Mapping natural language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Chen proposed the following "rules of thumb" for mapping natural language descriptions into ER diagrams: <a rel="nofollow" class="external text" href="http://bit.csc.lsu.edu/~chen/pdf/ER_C.pdf">"English, Chinese and ER diagrams"</a> by Peter Chen.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>English grammar structure</th>
+<th>ER structure
+</th></tr>
+<tr>
+<td><a href="/wiki/Common_noun" class="mw-redirect" title="Common noun">Common noun</a></td>
+<td>Entity type
+</td></tr>
+<tr>
+<td><a href="/wiki/Proper_noun" title="Proper noun">Proper noun</a></td>
+<td>Entity
+</td></tr>
+<tr>
+<td><a href="/wiki/Transitive_verb" title="Transitive verb">Transitive verb</a></td>
+<td>Relationship type
+</td></tr>
+<tr>
+<td><a href="/wiki/Intransitive_verb" title="Intransitive verb">Intransitive verb</a></td>
+<td>Attribute type
+</td></tr>
+<tr>
+<td><a href="/wiki/Adjective" title="Adjective">Adjective</a></td>
+<td>Attribute for entity
+</td></tr>
+<tr>
+<td><a href="/wiki/Adverb" title="Adverb">Adverb</a></td>
+<td>Attribute for relationship
+</td></tr></tbody></table>
+<p>Physical view show how data is actually stored.
+</p>
+<h3><span id="Relationships.2C_roles_and_cardinalities"></span><span class="mw-headline" id="Relationships,_roles_and_cardinalities">Relationships, roles and cardinalities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=4" title="Edit section: Relationships, roles and cardinalities">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Chen's original paper he gives an example of a relationship and its roles. He describes a relationship "marriage" and its two roles "husband" and "wife".
+</p><p>A person plays the role of husband in a marriage (relationship) and another person plays the role of wife in the (same) marriage. These words are nouns. That is no surprise; naming things requires a noun.
+</p><p>Chen's terminology has also been applied to earlier ideas. The lines, arrows and crow's-feet of some diagrams owes more to the earlier <a href="/wiki/Data_structure_diagram" title="Data structure diagram">Bachman diagrams</a> than to Chen's relationship diagrams.
+</p><p>Another common extension to Chen's model is to "name" relationships and roles as verbs or phrases.
+</p>
+<h3><span class="mw-headline" id="Role_naming">Role naming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=5" title="Edit section: Role naming">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It has also become prevalent to name roles with phrases such as <i>is the owner of</i> and <i>is owned by</i>. Correct nouns in this case are <i>owner</i> and <i>possession</i>. Thus <i>person plays the role of owner</i> and <i>car plays the role of possession</i> rather than <i>person plays the role of</i>, <i>is the owner of</i>, etc.
+</p><p>The use of nouns has direct benefit when generating physical implementations from semantic models. When a <i>person</i> has two relationships with <i>car</i> then it is possible to generate names such as <i>owner_person</i> and <i>driver_person</i>, which are immediately meaningful.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Cardinalities">Cardinalities</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=6" title="Edit section: Cardinalities">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Modifications to the original specification can be beneficial. Chen described <a href="/w/index.php?title=Look-across_cardinality&amp;action=edit&amp;redlink=1" class="new" title="Look-across cardinality (page does not exist)">look-across cardinalities</a>. As an aside, the <a href="/wiki/Barker%27s_notation" title="Barker&#39;s notation">Barker–Ellis</a> notation, used in Oracle Designer, uses same-side for minimum cardinality (analogous to optionality) and role, but look-across for maximum cardinality (the crows foot).<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (April 2012)">clarification needed</span></a></i>&#93;</sup>
+</p><p>In <a href="/wiki/Merise" title="Merise">Merise</a>,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> Elmasri &amp; Navathe<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> and others<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> there is a preference for same-side for roles and both minimum and maximum cardinalities. Recent researchers (Feinerer,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> Dullea et al.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>) have shown that this is more coherent when applied to n-ary relationships of order greater than&#160;2.
+</p><p>In Dullea et al. one reads "A 'look across' notation such as used in the UML does not effectively represent the semantics of participation constraints imposed on relationships where the degree is higher than binary."
+</p><p>In Feinerer it says "Problems arise if we operate under the look-across semantics as used for UML associations. Hartmann<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> investigates this situation and shows how and why different transformations fail." <i>(Although the "reduction" mentioned is spurious as the two diagrams 3.4 and 3.5 are in fact the same)</i> and also "As we will see on the next few pages, the look-across interpretation introduces several difficulties that prevent the extension of simple mechanisms from binary to n-ary associations."
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:322px;"><a href="/wiki/File:ERD_Representation.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ERD_Representation.svg/320px-ERD_Representation.svg.png" decoding="async" width="320" height="506" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ERD_Representation.svg/480px-ERD_Representation.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f1/ERD_Representation.svg/640px-ERD_Representation.svg.png 2x" data-file-width="637" data-file-height="1007" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:ERD_Representation.svg" class="internal" title="Enlarge"></a></div>Various methods of representing the same one to many relationship. In each case, the diagram shows the relationship between a person and a place of birth: each person must have been born at one, and only one, location, but each location may have had zero or more people born at it.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:322px;"><a href="/wiki/File:ERD-artist-performs-song.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/320px-ERD-artist-performs-song.svg.png" decoding="async" width="320" height="82" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/480px-ERD-artist-performs-song.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/640px-ERD-artist-performs-song.svg.png 2x" data-file-width="370" data-file-height="95" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:ERD-artist-performs-song.svg" class="internal" title="Enlarge"></a></div>Two related entities shown using Crow's Foot notation. In this example, an optional relationship is shown between Artist and Song; the symbols closest to the song entity represents "zero, one, or many", whereas a song has "one and only one" Artist. The former is therefore read as, an Artist (can) perform(s) "zero, one, or many" song(s).</div></div></div><p> Chen's notation for entity–relationship modeling uses rectangles to represent entity sets, and diamonds to represent relationships appropriate for <a href="/wiki/First-class_object" class="mw-redirect" title="First-class object">first-class objects</a>: they can have attributes and relationships of their own. If an entity set participates in a relationship set, they are connected with a line.
+</p><p>Attributes are drawn as ovals and are connected with a line to exactly one entity or relationship set.
+</p><p>Cardinality constraints are expressed as follows:
+</p>
+<ul><li>a double line indicates a <i>participation constraint</i>,  <a href="/wiki/Total_relation" class="mw-redirect" title="Total relation">totality</a> or <a href="/wiki/Surjective_function" title="Surjective function">surjectivity</a>: all entities in the entity set must participate in <i>at least one</i> relationship in the relationship set;</li>
+<li>an arrow from entity set to relationship set indicates a <a href="/wiki/Unique_key" title="Unique key">key constraint</a>, i.e. <a href="/wiki/Injective_relation" class="mw-redirect" title="Injective relation">injectivity</a>: each entity of the entity set can participate in <i>at most one</i> relationship in the relationship set;</li>
+<li>a thick line indicates both, i.e. <a href="/wiki/Bijection" title="Bijection">bijectivity</a>: each entity in the entity set is involved in <i>exactly one</i> relationship.</li>
+<li>an underlined name of an attribute indicates that it is a <a href="/wiki/Unique_key" title="Unique key">key</a>: two different entities or relationships with this attribute always have different values for this attribute.</li></ul>
+<p>Attributes are often omitted as they can clutter up a diagram; other diagram techniques often list entity attributes within the rectangles drawn for entity sets.
+</p><p>Related diagramming convention techniques:
+</p>
+<ul><li><a href="/wiki/Bachman_diagram" class="mw-redirect" title="Bachman diagram">Bachman notation</a></li>
+<li><a href="/wiki/Barker%27s_notation" title="Barker&#39;s notation">Barker's notation</a></li>
+<li><a href="/wiki/EXPRESS_(data_modeling_language)" title="EXPRESS (data modeling language)">EXPRESS</a></li>
+<li><a href="/wiki/IDEF1X" title="IDEF1X">IDEF1X</a></li>
+<li>Crow's foot notation (also <a href="/wiki/James_Martin_(author)" title="James Martin (author)">Martin</a> notation)</li>
+<li><a href="/w/index.php?title=Min-Max-Notation&amp;action=edit&amp;redlink=1" class="new" title="Min-Max-Notation (page does not exist)">(min, max)-notation</a> of <a href="/wiki/Jean-Raymond_Abrial" title="Jean-Raymond Abrial">Jean-Raymond Abrial</a> in 1974</li>
+<li><a href="/wiki/Class_diagram" title="Class diagram">UML class diagrams</a></li>
+<li><a href="/wiki/Merise" title="Merise">Merise</a></li>
+<li><a href="/wiki/Object-role_modeling" title="Object-role modeling">Object-role modeling</a></li></ul>
+<h3><span id="Crow.27s_foot_notation"></span><span class="mw-headline" id="Crow's_foot_notation">Crow's foot notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=7" title="Edit section: Crow&#039;s foot notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Crow's foot notation, the beginning of which dates back to an article by Gordon Everest (1976),<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> is used in <a href="/wiki/Barker%27s_notation" title="Barker&#39;s notation">Barker's notation</a>, <a href="/wiki/Structured_Systems_Analysis_and_Design_Method" class="mw-redirect" title="Structured Systems Analysis and Design Method">Structured Systems Analysis and Design Method</a> (SSADM) and <a href="/wiki/Information_technology_engineering" class="mw-redirect" title="Information technology engineering">information technology engineering</a>. Crow's foot diagrams represent entities as boxes, and relationships as lines between the boxes. Different shapes at the ends of these lines represent the relative cardinality of the relationship.
+</p><p>Crow's foot notation was used in the consultancy practice <a href="/wiki/CACI" title="CACI">CACI</a>. Many of the consultants at CACI (including Richard Barker) subsequently moved to <a href="/wiki/Oracle_Corporation" title="Oracle Corporation">Oracle</a> UK, where they developed the early versions of Oracle's <a href="/wiki/Computer-aided_software_engineering" title="Computer-aided software engineering">CASE</a> tools, introducing the notation to a wider audience.
+</p><p>With this notation, relationships cannot have attributes. Where necessary, relationships are promoted to entities in their own right: for example, if it is necessary to capture where and when an artist performed a song, a new entity "performance" is introduced (with attributes reflecting the time and place), and the relationship of an artist to a song becomes an indirect relationship via the performance (artist-performs-performance, performance-features-song). 
+</p><p>Three symbols are used to represent cardinality:
+</p>
+<ul><li>the <i>ring</i> represents "zero"</li>
+<li>the <i>dash</i> represents "one"</li>
+<li>the <i>crow's foot</i> represents "many" or "infinite"</li></ul>
+<p>These symbols are used in pairs to represent the four types of cardinality that an entity may have in a relationship. The inner component of the notation represents the minimum, and the outer component represents the maximum.
+</p>
+<ul><li><i>ring</i> and <i>dash</i> → <b>minimum zero, maximum one (optional)</b></li>
+<li><i>dash</i> and <i>dash</i> → <b>minimum one, maximum one (mandatory)</b></li>
+<li><i>ring</i> and <i>crow's foot</i> → <b>minimum zero, maximum many (optional)</b></li>
+<li><i>dash</i> and <i>crow's foot</i> → <b>minimum one, maximum many (mandatory)</b></li></ul>
+<h3><span class="mw-headline" id="Model_usability_issues">Model usability issues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=8" title="Edit section: Model usability issues">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="box-Expand_section plainlinks metadata ambox mbox-small-left ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" decoding="async" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs expansion</b>&#32;with: fan trap causes. <small>You can help by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=">adding to it</a>.</small>  <small class="date-container"><i>(<span class="date">February 2018</span>)</i></small></div></td></tr></tbody></table>
+<p>In using a modeled database, users can encounter two well known issues where the returned results mean something other than the results assumed by the query author.
+</p><p>The first is the 'fan trap'. It occurs with a (master) table that links to multiple tables in a one-to-many relationship. The issue derives its name from the way the model looks when it's drawn in an entity–relationship diagram: the linked tables 'fan out' from the master table. This type of model looks similar to a <a href="/wiki/Star_schema" title="Star schema">star schema</a>, a type of model used in <a href="/wiki/Data_warehouse" title="Data warehouse">data warehouses</a>. When trying to calculate sums over aggregates using standard SQL over the master table, unexpected (and incorrect) results. The solution is to either adjust the model or the SQL. This issue occurs mostly in databases for decision support systems, and software that queries such systems sometimes includes specific methods for handling this issue.
+</p><p>The second issue is a 'chasm trap'. A chasm trap occurs when a model suggests the existence of a relationship between entity types, but the pathway does not exist between certain entity occurrences. For example, a Building has one-or-more Rooms, that hold zero-or-more Computers. One would expect to be able to query the model to see all the Computers in the Building. However, Computers not currently assigned to a Room (because they are under repair or somewhere else) are not shown on the list. Another relation between Building and Computers is needed to capture all the computers in the building. This last modelling issue is the result of a failure to capture all the relationships that exist in the real world in the model. See <a rel="nofollow" class="external text" href="http://db.grussell.org/section005.html">Entity-Relationship Modelling 2</a> for details.
+</p>
+<h2><span id="Entity.E2.80.93relationships_and_semantic_modeling"></span><span class="mw-headline" id="Entity–relationships_and_semantic_modeling">Entity–relationships and semantic modeling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=9" title="Edit section: Entity–relationships and semantic modeling">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Semantic_model">Semantic model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=10" title="Edit section: Semantic model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A semantic model is a model of concepts, it is sometimes called a "platform independent model". It is an intensional model. At the latest since <a href="/wiki/Rudolf_Carnap" title="Rudolf Carnap">Carnap</a>, it is well known that:<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> 
+</p>
+<dl><dd><i>"...the full meaning of a concept is constituted by two aspects, its intension and its extension. The first part comprises the embedding of a concept in the world of concepts as a whole, i.e. the totality of all relations to other concepts. The second part establishes the referential meaning of the concept, i.e. its counterpart in the real or in a possible world".</i></dd></dl>
+<h3><span class="mw-headline" id="Extension_model">Extension model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=11" title="Edit section: Extension model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An extensional model is one that maps to the elements of a particular methodology or technology, and is thus a "platform specific model". The UML specification explicitly states that associations in class models are extensional and this is in fact self-evident by considering the extensive array of additional "adornments" provided by the specification over and above those provided by any of the prior candidate "semantic modelling languages".<a rel="nofollow" class="external text" href="http://www.tdan.com/view-articles/8589">"UML as a Data Modeling Notation, Part 2"</a>
+</p>
+<h3><span id="Entity.E2.80.93relationship_origins"></span><span class="mw-headline" id="Entity–relationship_origins">Entity–relationship origins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=12" title="Edit section: Entity–relationship origins">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Peter Chen, the father of ER modeling said in his seminal paper:
+</p>
+<dl><dd>"<i>The entity-relationship model adopts the more natural view that the real world consists of entities and relationships. It incorporates some of the important semantic information about the real world.</i>" <sup id="cite_ref-Chen_1-1" class="reference"><a href="#cite_note-Chen-1">&#91;1&#93;</a></sup></dd></dl>
+<p>In his original 1976 article Chen explicitly contrasts entity–relationship diagrams with record modelling techniques:
+</p>
+<dl><dd>"<i>The <a href="/wiki/Bachman_diagram" class="mw-redirect" title="Bachman diagram">data structure diagram</a> is a representation of the organization of records and is not an exact representation of entities and relationships.</i>"</dd></dl>
+<p>Several other authors also support Chen's program:<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup>
+</p>
+<h4><span class="mw-headline" id="Philosophical_alignment">Philosophical alignment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=13" title="Edit section: Philosophical alignment">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Chen is in accord with philosophic and theoretical traditions from the time of the Ancient Greek philosophers: Socrates, Plato and Aristotle (428 BC) through to modern <a href="/wiki/Epistemology" title="Epistemology">epistemology</a>, <a href="/wiki/Semiotics" title="Semiotics">semiotics</a> and <a href="/wiki/First-order_logic" title="First-order logic">logic</a> of <a href="/wiki/Charles_Sanders_Peirce" title="Charles Sanders Peirce">Peirce</a>, <a href="/wiki/Gottlob_Frege" title="Gottlob Frege">Frege</a> and <a href="/wiki/Bertrand_Russell" title="Bertrand Russell">Russell</a>.
+</p><p><a href="/wiki/Plato" title="Plato">Plato</a> himself associates knowledge with the apprehension of unchanging Forms (The forms, according to Socrates, are roughly speaking archetypes or abstract representations of the many types of things, and properties) and their relationships to one another.
+</p>
+<h2><span class="mw-headline" id="Limitations">Limitations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=14" title="Edit section: Limitations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>ER assume information content that can readily be represented in a relational database. They describe only a relational structure for this information.</li>
+<li>They are inadequate for systems in which the information cannot readily be represented in relational form<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2016)">citation needed</span></a></i>&#93;</sup>, such as with <a href="/wiki/Semi-structured_data" title="Semi-structured data">semi-structured data</a>.</li>
+<li>For many systems, possible changes to information contained are nontrivial and important enough to warrant explicit specification.</li>
+<li>Some<sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions" title="Wikipedia:Manual of Style/Words to watch"><span title="The material near this tag possibly uses too-vague attribution or weasel words. (June 2012)">who?</span></a></i>&#93;</sup> authors have extended ER modeling with constructs to represent change, an approach supported by the original author;<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> an example is <a href="/wiki/Anchor_Modeling" class="mw-redirect" title="Anchor Modeling">Anchor Modeling</a>. An alternative is to model change separately, using a <a href="/wiki/Process_modeling" title="Process modeling">process modeling</a> technique. Additional techniques can be used for other aspects of systems. For instance, ER models roughly correspond to just 1 of the 14 different modeling techniques offered by <a href="/wiki/Unified_Modeling_Language" title="Unified Modeling Language">UML</a>.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup></li>
+<li>Even where it is suitable in principle, ER modeling is rarely used as a separate activity. One reason for this is today's abundance of tools to support diagramming and other design support directly on relational <a href="/wiki/Database_management_system" class="mw-redirect" title="Database management system">database management systems</a>. These tools can readily extract database diagrams that are very close to ER diagrams from existing databases, and they provide alternative views on the information contained in such diagrams.</li>
+<li>In a survey, Brodie and Liu<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> could not find a single instance of entity–relationship modeling inside a sample of ten Fortune 100 companies.  Badia and Lemire<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup> blame this lack of use on the lack of guidance but also on the lack of benefits, such as lack of support for data integration.</li>
+<li>The <a href="/wiki/Enhanced_entity%E2%80%93relationship_model" title="Enhanced entity–relationship model">enhanced entity–relationship model</a> (EER modeling) introduces several concepts not in ER modeling, but are closely related to <a href="/wiki/Object-oriented" class="mw-redirect" title="Object-oriented">object-oriented</a> design, like <a href="/wiki/Is-a" title="Is-a">is-a</a> relationships.</li>
+<li>For modelling <a href="/wiki/Temporal_database" title="Temporal database">temporal databases</a>, numerous ER extensions have been considered.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> Similarly, the ER model was found unsuitable for <a href="/wiki/Multidimensional_database" class="mw-redirect" title="Multidimensional database">multidimensional databases</a> (used in <a href="/wiki/OLAP" class="mw-redirect" title="OLAP">OLAP</a> applications); no dominant conceptual model has emerged in this field yet, although they generally revolve around the concept of <a href="/wiki/OLAP_cube" title="OLAP cube">OLAP cube</a> (also known as <i><a href="/wiki/Data_cube" title="Data cube">data cube</a></i> within the field).<sup id="cite_ref-Rafanelli2003_24-0" class="reference"><a href="#cite_note-Rafanelli2003-24">&#91;24&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=15" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Associative_entity" title="Associative entity">Associative entity</a></li>
+<li><a href="/wiki/Concept_map" title="Concept map">Concept map</a></li>
+<li><a href="/wiki/Database_design" title="Database design">Database design</a></li>
+<li><a href="/wiki/Data_structure_diagram" title="Data structure diagram">Data structure diagram</a></li>
+<li><a href="/wiki/Enhanced_entity%E2%80%93relationship_model" title="Enhanced entity–relationship model">Enhanced entity–relationship model</a></li>
+<li><a href="/wiki/Enterprise_architecture_framework" title="Enterprise architecture framework">Enterprise architecture framework</a></li>
+<li><a href="/wiki/Fundamental_modeling_concepts#Value_Range_Structure_Diagram" title="Fundamental modeling concepts">Value range structure diagrams</a></li>
+<li><a href="/wiki/Comparison_of_data_modeling_tools" title="Comparison of data modeling tools">Comparison of data modeling tools</a></li>
+<li><a href="/wiki/Ontology_(information_science)" title="Ontology (information science)">Ontology</a></li>
+<li><a href="/wiki/Object-role_modeling" title="Object-role modeling">Object-role modeling</a></li>
+<li><a href="/wiki/Three_schema_approach" class="mw-redirect" title="Three schema approach">Three schema approach</a></li>
+<li><a href="/wiki/Structured-Entity-Relationship-Model" class="mw-redirect" title="Structured-Entity-Relationship-Model">Structured-Entity-Relationship-Model</a></li>
+<li><a href="/wiki/Schema-agnostic_Databases" class="mw-redirect" title="Schema-agnostic Databases">Schema-agnostic Databases</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=16" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-Chen-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Chen_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Chen_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal"><a href="/wiki/Peter_Chen" title="Peter Chen">Chen, Peter</a> (March 1976). "The Entity-Relationship Model - Toward a Unified View of Data". <i>ACM Transactions on Database Systems</i>. <b>1</b> (1): 9–36. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.523.6679">10.1.1.523.6679</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F320434.320440">10.1145/320434.320440</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+Transactions+on+Database+Systems&amp;rft.atitle=The+Entity-Relationship+Model+-+Toward+a+Unified+View+of+Data&amp;rft.volume=1&amp;rft.issue=1&amp;rft.pages=9-36&amp;rft.date=1976-03&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.523.6679&amp;rft_id=info%3Adoi%2F10.1145%2F320434.320440&amp;rft.aulast=Chen&amp;rft.aufirst=Peter&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">A.P.G. Brown, "Modelling a Real-World System and Designing a Schema to Represent It", in Douque and Nijssen (eds.), <i>Data Base Description</i>, North-Holland, 1975, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7204-2833-5" title="Special:BookSources/0-7204-2833-5">0-7204-2833-5</a>.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc505839(v%3dtechnet.10)">"Lesson 5: Supertypes and Subtypes"</a>. <i>docs.microsoft.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=docs.microsoft.com&amp;rft.atitle=Lesson+5%3A+Supertypes+and+Subtypes&amp;rft_id=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fprevious-versions%2Ftn-archive%2Fcc505839%28v%253dtechnet.10%29&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation book">Beynon-Davies, Paul (2004). <i>Database Systems</i>. Basingstoke, UK: Palgrave: Houndmills. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1403916013" title="Special:BookSources/978-1403916013"><bdi>978-1403916013</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Database+Systems&amp;rft.place=Basingstoke%2C+UK%3A+Palgrave&amp;rft.pub=Houndmills&amp;rft.date=2004&amp;rft.isbn=978-1403916013&amp;rft.aulast=Beynon-Davies&amp;rft.aufirst=Paul&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://pangrammaticon.blogspot.com/2013/01/emotion-and-society.html">"The Pangrammaticon: Emotion and Society"</a>. January 3, 2013.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Pangrammaticon%3A+Emotion+and+Society&amp;rft.date=2013-01-03&amp;rft_id=http%3A%2F%2Fpangrammaticon.blogspot.com%2F2013%2F01%2Femotion-and-society.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Hubert Tardieu, Arnold Rochfeld and René Colletti La methode MERISE: Principes et outils (Paperback - 1983)</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Elmasri, Ramez, B. Shamkant, Navathe, Fundamentals of Database Systems, third ed., Addison-Wesley, Menlo Park, CA, USA, 2000.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://books.google.com/?id=odZK99osY1EC&amp;pg=PA52&amp;dq=genova"><i>ER 2004&#160;: 23rd International Conference on Conceptual Modeling, Shanghai, China, November 8-12, 2004</i></a>. 2004-10-27. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9783540237235" title="Special:BookSources/9783540237235"><bdi>9783540237235</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ER+2004+%3A+23rd+International+Conference+on+Conceptual+Modeling%2C+Shanghai%2C+China%2C+November+8-12%2C+2004&amp;rft.date=2004-10-27&amp;rft.isbn=9783540237235&amp;rft_id=https%3A%2F%2Fbooks.google.com%2F%3Fid%3DodZK99osY1EC%26pg%3DPA52%26dq%3Dgenova&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://publik.tuwien.ac.at/files/pub-inf_4582.pdf">"A Formal Treatment of UML Class Diagrams as an Efficient Method for Configuration Management 2007"</a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Formal+Treatment+of+UML+Class+Diagrams+as+an+Efficient+Method+for+Configuration+Management+2007&amp;rft_id=http%3A%2F%2Fpublik.tuwien.ac.at%2Ffiles%2Fpub-inf_4582.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ischool.drexel.edu/faculty/song/publications/p_DKE_03_Validity.pdf">"James Dullea, Il-Yeol Song, Ioanna Lamprou - An analysis of structural validity in entity-relationship modeling 2002"</a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=James+Dullea%2C+Il-Yeol+Song%2C+Ioanna+Lamprou+-+An+analysis+of+structural+validity+in+entity-relationship+modeling+2002&amp;rft_id=http%3A%2F%2Fwww.ischool.drexel.edu%2Ffaculty%2Fsong%2Fpublications%2Fp_DKE_03_Validity.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">Hartmann, Sven. "<a rel="nofollow" class="external text" href="http://crpit.com/confpapers/CRPITV17Hartmann.pdf">Reasoning about participation constraints and Chen's constraints</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20130510031920/http://crpit.com/confpapers/CRPITV17Hartmann.pdf">Archived</a> 2013-05-10 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>". Proceedings of the 14th Australasian database conference-Volume 17. Australian Computer Society, Inc., 2003.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">G. Everest, "BASIC DATA STRUCTURE MODELS EXPLAINED WITH A COMMON EXAMPLE", in Computing Systems 1976, Proceedings Fifth Texas Conference on Computing Systems, Austin,TX, 1976 October 18-19, pages 39-46. (Long Beach, CA: IEEE Computer Society Publications Office).</span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://wenku.baidu.com/view/8048e7bb1a37f111f1855b22.html">"The Role of Intensional and Extensional Interpretation in Semantic Representations"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Role+of+Intensional+and+Extensional+Interpretation+in+Semantic+Representations&amp;rft_id=http%3A%2F%2Fwenku.baidu.com%2Fview%2F8048e7bb1a37f111f1855b22.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">Kent in <a rel="nofollow" class="external text" href="http://www.bkent.net/Doc/darxrp.htm">"Data and Reality"</a>&#160;: 
+<dl><dd>"One thing we ought to have clear in our minds at the outset of a modelling endeavour is whether we are intent on describing a portion of "reality" (some human enterprise) or a data processing activity."</dd></dl>
+</span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><a href="/wiki/Jean-Raymond_Abrial" title="Jean-Raymond Abrial">Abrial</a> in "Data Semantics"&#160;: "... the so called "logical" definition and manipulation of data are still influenced (sometimes unconsciously) by the "physical" storage and retrieval mechanisms currently available on computer systems."</span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text">Stamper: "They pretend to describe entity types, but the vocabulary is from data processing: fields, data items, values. Naming rules don't reflect the conventions we use for naming people and things; they reflect instead techniques for locating records in files."</span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">In <a href="/wiki/Jackson_Structured_Programming" class="mw-redirect" title="Jackson Structured Programming">Jackson's</a> words: "The developer begins by creating a model of the reality with which the system is concerned, the reality that furnishes its [the system's] subject matter ..."</span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text">Elmasri, Navathe: "The ER model concepts are designed to be closer to the user’s perception of data and are not meant to describe the way in which data will be stored in the computer."</span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text">P. Chen. <a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F11901181_1">Suggested research directions for a new frontier: Active conceptual modeling</a>. ER 2006, volume 4215 of Lecture Notes in Computer Science, pages 1–4. Springer Berlin / Heidelberg, 2006.</span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://aisel.aisnet.org/jise/vol17/iss1/9">Carte, Traci A.; Jasperson, Jon (Sean); and Cornelius, Mark E. (2020) "Integrating ERD and UML Concepts When Teaching Data Modeling," Journal of Information Systems Education: Vol. 17&#160;: Iss. 1 , Article 9.</a></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.deri.ie/content/power-and-limits-relational-technology-age-information-ecosystems">The power and limits of relational technology in the age of information ecosystems</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160917100748/https://www.deri.ie/content/power-and-limits-relational-technology-age-information-ecosystems">Archived</a> 2016-09-17 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>. On The Move Federated Conferences, 2010.</span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text">A. Badia and D. Lemire. <a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.297.4916&amp;rep=rep1&amp;type=pdf">A call to arms: revisiting database design</a>. Citeseerx, </span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation journal">Gregersen, Heidi; Jensen, Christian S. (1999). "Temporal Entity-Relationship models—a survey". <i>IEEE Transactions on Knowledge and Data Engineering</i>. <b>11</b> (3): 464–497. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.1.2497">10.1.1.1.2497</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2F69.774104">10.1109/69.774104</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Transactions+on+Knowledge+and+Data+Engineering&amp;rft.atitle=Temporal+Entity-Relationship+models%E2%80%94a+survey&amp;rft.volume=11&amp;rft.issue=3&amp;rft.pages=464-497&amp;rft.date=1999&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.1.2497&amp;rft_id=info%3Adoi%2F10.1109%2F69.774104&amp;rft.aulast=Gregersen&amp;rft.aufirst=Heidi&amp;rft.au=Jensen%2C+Christian+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Rafanelli2003-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-Rafanelli2003_24-0">^</a></b></span> <span class="reference-text"><cite class="citation book">RICCARDO TORLONE (2003). <a rel="nofollow" class="external text" href="http://torlone.dia.uniroma3.it/pubs/idea03.pdf">"Conceptual Multidimensional Models"</a> <span class="cs1-format">(PDF)</span>.  In Maurizio Rafanelli (ed.). <i>Multidimensional Databases: Problems and Solutions</i>. Idea Group Inc (IGI). <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-59140-053-0" title="Special:BookSources/978-1-59140-053-0"><bdi>978-1-59140-053-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Conceptual+Multidimensional+Models&amp;rft.btitle=Multidimensional+Databases%3A+Problems+and+Solutions&amp;rft.pub=Idea+Group+Inc+%28IGI%29&amp;rft.date=2003&amp;rft.isbn=978-1-59140-053-0&amp;rft.au=RICCARDO+TORLONE&amp;rft_id=http%3A%2F%2Ftorlone.dia.uniroma3.it%2Fpubs%2Fidea03.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=17" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">Chen, Peter (2002). <a rel="nofollow" class="external text" href="http://bit.csc.lsu.edu/~chen/pdf/Chen_Pioneers.pdf">"Entity-Relationship Modeling: Historical Events, Future Trends, and Lessons Learned"</a> <span class="cs1-format">(PDF)</span>. <i>Software pioneers</i>. Springer-Verlag. pp.&#160;296–310. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-43081-0" title="Special:BookSources/978-3-540-43081-0"><bdi>978-3-540-43081-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Entity-Relationship+Modeling%3A+Historical+Events%2C+Future+Trends%2C+and+Lessons+Learned&amp;rft.btitle=Software+pioneers&amp;rft.pages=296-310&amp;rft.pub=Springer-Verlag&amp;rft.date=2002&amp;rft.isbn=978-3-540-43081-0&amp;rft.aulast=Chen&amp;rft.aufirst=Peter&amp;rft_id=http%3A%2F%2Fbit.csc.lsu.edu%2F~chen%2Fpdf%2FChen_Pioneers.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Barker, Richard (1990). <a rel="nofollow" class="external text" href="https://archive.org/details/casemethod00rich"><i>CASE Method: Entity Relationship Modelling</i></a>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0201416961" title="Special:BookSources/978-0201416961"><bdi>978-0201416961</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CASE+Method%3A+Entity+Relationship+Modelling&amp;rft.pub=Addison-Wesley&amp;rft.date=1990&amp;rft.isbn=978-0201416961&amp;rft.aulast=Barker&amp;rft.aufirst=Richard&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcasemethod00rich&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Barker, Richard (1990). <a rel="nofollow" class="external text" href="https://archive.org/details/casemethodtasksd00bark"><i>CASE Method: Tasks and Deliverables</i></a>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0201416978" title="Special:BookSources/978-0201416978"><bdi>978-0201416978</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CASE+Method%3A+Tasks+and+Deliverables&amp;rft.pub=Addison-Wesley&amp;rft.date=1990&amp;rft.isbn=978-0201416978&amp;rft.aulast=Barker&amp;rft.aufirst=Richard&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcasemethodtasksd00bark&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Heikki_Mannila" title="Heikki Mannila">Mannila, Heikki</a>; Räihä, Kari-Jouko (1992). <i>The Design of Relational Databases</i>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0201565232" title="Special:BookSources/978-0201565232"><bdi>978-0201565232</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Design+of+Relational+Databases&amp;rft.pub=Addison-Wesley&amp;rft.date=1992&amp;rft.isbn=978-0201565232&amp;rft.aulast=Mannila&amp;rft.aufirst=Heikki&amp;rft.au=R%C3%A4ih%C3%A4%2C+Kari-Jouko&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Bernhard_Thalheim" title="Bernhard Thalheim">Thalheim, Bernhard</a> (2000). <i>Entity-Relationship Modeling: Foundations of Database Technology</i>. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-65470-4" title="Special:BookSources/978-3-540-65470-4"><bdi>978-3-540-65470-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Entity-Relationship+Modeling%3A+Foundations+of+Database+Technology&amp;rft.pub=Springer&amp;rft.date=2000&amp;rft.isbn=978-3-540-65470-4&amp;rft.aulast=Thalheim&amp;rft.aufirst=Bernhard&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Bagui, Sikha; Earp, Richard (2011). <i>Database Design Using Entity-Relationship Diagrams</i> (2nd ed.). CRC Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4398-6176-9" title="Special:BookSources/978-1-4398-6176-9"><bdi>978-1-4398-6176-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Database+Design+Using+Entity-Relationship+Diagrams&amp;rft.edition=2nd&amp;rft.pub=CRC+Press&amp;rft.date=2011&amp;rft.isbn=978-1-4398-6176-9&amp;rft.aulast=Bagui&amp;rft.aufirst=Sikha&amp;rft.au=Earp%2C+Richard&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEntity%E2%80%93relationship+model" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit&amp;section=18" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Entity-relationship_models" class="extiw" title="commons:Category:Entity-relationship models"><span style="">Entity-relationship models</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.123.1085">"The Entity Relationship Model: Toward a Unified View of Data"</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160108012618/http://www.databasedesign.co.uk/bookdatabasesafirstcourse/chap3/chap3.htm">Entity Relationship Modelling</a></li>
+<li><a rel="nofollow" class="external text" href="http://arquivo.pt/wayback/20160516171832/http://www.cems.uwe.ac.uk/~tdrewry/lds.htm">Logical Data Structures (LDSs) - Getting started</a> by Tony Drewry.</li>
+<li><a rel="nofollow" class="external text" href="http://www2.cs.uregina.ca/~bernatja/crowsfoot.html">Crow's Foot Notation</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=PU7nKBNR1Vs">Kinds of Data Models -- and How to Name Them</a> presentation by David Hay</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Database_models" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Database_models" title="Template:Database models"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Database_models" title="Template talk:Database models"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Database_models&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Database_models" style="font-size:114%;margin:0 4em"><a href="/wiki/Database_model" title="Database model">Database models</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Common models</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Flat-file_database" title="Flat-file database">Flat</a></li>
+<li><a href="/wiki/Hierarchical_database_model" title="Hierarchical database model">Hierarchical</a></li>
+<li><a href="/wiki/Dimensional_modeling" title="Dimensional modeling">Dimensional</a></li>
+<li><a href="/wiki/Network_model" title="Network model">Network</a></li>
+<li><a href="/wiki/Relational_model" title="Relational model">Relational</a></li>
+<li><a class="mw-selflink selflink">Entity–relationship</a>
+<ul><li><a href="/wiki/Enhanced_entity%E2%80%93relationship_model" title="Enhanced entity–relationship model">Enhanced</a></li></ul></li>
+<li><a href="/wiki/Graph_database" title="Graph database">Graph</a></li>
+<li><a href="/wiki/Object_database" title="Object database">Object-oriented</a></li>
+<li><a href="/wiki/Entity%E2%80%93attribute%E2%80%93value_model" title="Entity–attribute–value model">Entity–attribute–value</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other models</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Associative_model_of_data" title="Associative model of data">Associative</a></li>
+<li><a href="/wiki/Correlation_database" title="Correlation database">Correlational</a></li>
+<li><a href="/wiki/Online_analytical_processing#Multidimensional_databases" title="Online analytical processing">Multidimensional</a></li>
+<li><a href="/wiki/Array_DBMS" title="Array DBMS">Array</a></li>
+<li><a href="/wiki/Semantic_data_model" title="Semantic data model">Semantic</a></li>
+<li><a href="/wiki/Star_schema" title="Star schema">Star schema</a></li>
+<li><a href="/wiki/XML_database" title="XML database">XML database</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Implementations</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Flat_file_database" class="mw-redirect" title="Flat file database">Flat file</a></li>
+<li><a href="/wiki/Column-oriented_DBMS" title="Column-oriented DBMS">Column-oriented</a></li>
+<li><a href="/wiki/Document-oriented_database" title="Document-oriented database">Document-oriented</a></li>
+<li><a href="/wiki/Object-relational_database" title="Object-relational database">Object-relational</a></li>
+<li><a href="/wiki/Deductive_database" title="Deductive database">Deductive</a></li>
+<li><a href="/wiki/Temporal_database" title="Temporal database">Temporal</a></li>
+<li><a href="/wiki/XML_database" title="XML database">XML data store</a></li>
+<li><a href="/wiki/Key-value_database" title="Key-value database">Key-value store</a></li>
+<li><a href="/wiki/Triplestore" title="Triplestore">Triplestore</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Data_model" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Data_model" title="Template:Data model"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Data_model" title="Template talk:Data model"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Data_model&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Data_model" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_model" title="Data model">Data model</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Main</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_architecture" title="Data architecture">Architecture</a></li>
+<li><a href="/wiki/Data_modeling" title="Data modeling">Modeling</a></li>
+<li><a href="/wiki/Data_structure" title="Data structure">Structure</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Schemas</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Conceptual_schema" title="Conceptual schema">Conceptual </a></li>
+<li><a href="/wiki/Logical_data_model" class="mw-redirect" title="Logical data model">Logical</a></li>
+<li><a href="/wiki/Physical_schema" title="Physical schema">Physical</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Types</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database_model" title="Database model">Database</a></li>
+<li><a href="/wiki/Data_structure_diagram" title="Data structure diagram">Data structure diagram</a></li>
+<li><a class="mw-selflink selflink">Entity–relationship model</a> (<a href="/wiki/Enhanced_entity%E2%80%93relationship_model" title="Enhanced entity–relationship model">enhanced</a>)</li>
+<li><a href="/wiki/Data_model_(GIS)" title="Data model (GIS)">Geographic</a></li>
+<li><a href="/wiki/Generic_data_model" title="Generic data model">Generic</a></li>
+<li><a href="/wiki/Semantic_data_model" title="Semantic data model">Semantic</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related models</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data-flow_diagram" title="Data-flow diagram">Data-flow diagram</a></li>
+<li><a href="/wiki/Information_model" title="Information model">Information model</a></li>
+<li><a href="/wiki/Object_model" title="Object model">Object model</a></li>
+<li><a href="/wiki/Object-role_modeling" title="Object-role modeling">Object-role modeling</a></li>
+<li><a href="/wiki/Unified_Modeling_Language" title="Unified Modeling Language">Unified Modeling Language</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">See also</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database_design" title="Database design">Database design</a></li>
+<li><a href="/wiki/Business_process_modeling" title="Business process modeling">Business process modeling</a></li>
+<li><a href="/wiki/Core_architecture_data_model" title="Core architecture data model">Core architecture data model</a></li>
+<li><a href="/wiki/Enterprise_modelling" title="Enterprise modelling">Enterprise modelling</a></li>
+<li><a href="/wiki/Function_model" title="Function model">Function model</a></li>
+<li><a href="/wiki/Process_modeling" title="Process modeling">Process modeling</a></li>
+<li><a href="/wiki/XML_schema" title="XML schema">XML schema</a></li>
+<li><a href="/wiki/Data_Format_Description_Language" title="Data Format Description Language">Data Format Description Language</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Database" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Database" title="Template:Database"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Database" title="Template talk:Database"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Database&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Database" style="font-size:114%;margin:0 4em"><a href="/wiki/Database" title="Database">Database</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Main</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database#Major_database_usage_requirements" title="Database">Requirements</a></li>
+<li><a href="/wiki/Database_theory" title="Database theory">Theory</a></li>
+<li><a href="/wiki/Database_model" title="Database model">Models</a></li>
+<li><a href="/wiki/Database_management_system" class="mw-redirect" title="Database management system">Database management system</a></li>
+<li><a href="/wiki/Database_machine" title="Database machine">Machine</a></li>
+<li><a href="/wiki/Database_server" title="Database server">Server</a></li>
+<li><a href="/wiki/Database_application" title="Database application">Application</a></li>
+<li><a href="/wiki/Database_connection" title="Database connection">Connection</a>
+<ul><li><a href="/wiki/Datasource" title="Datasource">datasource</a></li>
+<li><a href="/wiki/Data_Source_Name" class="mw-redirect" title="Data Source Name">DSN</a></li></ul></li>
+<li><a href="/wiki/Database_administrator" title="Database administrator">Administrator</a></li>
+<li><a href="/wiki/Lock_(database)" class="mw-redirect" title="Lock (database)">Lock</a></li>
+<li><a href="/wiki/Category:Types_of_databases" title="Category:Types of databases">Types</a></li>
+<li><a href="/wiki/Comparison_of_database_tools" title="Comparison of database tools">Tools</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Database#Database_languages" title="Database">Languages</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_definition_language" title="Data definition language">Data definition</a></li>
+<li><a href="/wiki/Data_manipulation_language" title="Data manipulation language">Data manipulation</a></li>
+<li><a href="/wiki/Query_language" title="Query language">Query</a>
+<ul><li><a href="/wiki/Information_retrieval_query_language" title="Information retrieval query language">information retrieval</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Database_security" title="Database security">Security</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database_activity_monitoring" title="Database activity monitoring">Activity monitoring</a></li>
+<li><a href="/wiki/Database_audit" title="Database audit">Audit</a></li>
+<li><a href="/wiki/Database_forensics" title="Database forensics">Forensics</a></li>
+<li><a href="/wiki/Negative_database" title="Negative database">Negative database</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Database_design" title="Database design">Design</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Entities and relationships</a> (and <a href="/wiki/Enhanced_entity%E2%80%93relationship_model" title="Enhanced entity–relationship model">Enhanced</a> notation)</li>
+<li><a href="/wiki/Database_normalization" title="Database normalization">Normalization</a></li>
+<li><a href="/wiki/Database_schema" title="Database schema">Schema</a></li>
+<li><a href="/wiki/Database_refactoring" title="Database refactoring">Refactoring</a></li>
+<li><a href="/wiki/Cardinality_(data_modeling)" title="Cardinality (data modeling)">Cardinality</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Programming</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database_abstraction_layer" title="Database abstraction layer">Abstraction layer</a></li>
+<li><a href="/wiki/Object-relational_mapping" title="Object-relational mapping">Object-relational mapping</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Management</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database_virtualization" title="Database virtualization">Virtualization</a></li>
+<li><a href="/wiki/Database_tuning" title="Database tuning">Tuning</a>
+<ul><li><a href="/wiki/Database_caching" title="Database caching">caching</a></li></ul></li>
+<li><a href="/wiki/Data_migration#Database_migration" title="Data migration">Migration</a></li>
+<li><a href="/wiki/Database_preservation" title="Database preservation">Preservation</a></li>
+<li><a href="/wiki/Database_integrity" class="mw-redirect" title="Database integrity">Integrity</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">See also</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database-centric_architecture" title="Database-centric architecture">Database-centric architecture</a></li>
+<li><a href="/wiki/Intelligent_database" title="Intelligent database">Intelligent database</a></li>
+<li><a href="/wiki/Two-phase_locking" title="Two-phase locking">Two-phase locking</a></li>
+<li><a href="/wiki/Locks_with_ordered_sharing" title="Locks with ordered sharing">Locks with ordered sharing</a></li>
+<li><a href="/wiki/Load_file" title="Load file">Load file</a></li>
+<li><a href="/wiki/Database_publishing" title="Database publishing">Publishing</a></li>
+<li><a href="/wiki/Halloween_Problem" title="Halloween Problem">Halloween Problem</a></li>
+<li><a href="/wiki/Log_shipping" title="Log shipping">Log shipping</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><b><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <a href="/wiki/Book:Databases" title="Book:Databases">Book</a></b></li>
+<li><b><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <a href="/wiki/Category:Databases" title="Category:Databases">Category</a></b></li>
+<li><b><img alt="WikiProject" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" decoding="async" title="WikiProject" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" data-file-width="100" data-file-height="100" /> <a href="/wiki/Wikipedia:WikiProject_Databases" title="Wikipedia:WikiProject Databases">WikiProject</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Software_engineering" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Software_engineering" title="Template:Software engineering"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Software_engineering" title="Template talk:Software engineering"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Software_engineering&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Software_engineering" style="font-size:114%;margin:0 4em"><a href="/wiki/Software_engineering" title="Software engineering">Software engineering</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Fields</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_programming" title="Computer programming">Computer programming</a></li>
+<li><a href="/wiki/Requirements_engineering" title="Requirements engineering">Requirements engineering</a></li>
+<li><a href="/wiki/Software_deployment" title="Software deployment">Software deployment</a></li>
+<li><a href="/wiki/Software_design" title="Software design">Software design</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">Software maintenance</a></li>
+<li><a href="/wiki/Software_testing" title="Software testing">Software testing</a></li>
+<li><a href="/wiki/Systems_analysis" title="Systems analysis">Systems analysis</a></li>
+<li><a href="/wiki/Formal_methods" title="Formal methods">Formal methods</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_modeling" title="Data modeling">Data modeling</a></li>
+<li><a href="/wiki/Enterprise_architecture" title="Enterprise architecture">Enterprise architecture</a></li>
+<li><a href="/wiki/Functional_specification" title="Functional specification">Functional specification</a></li>
+<li><a href="/wiki/Modeling_language" title="Modeling language">Modeling language</a></li>
+<li><a href="/wiki/Programming_paradigm" title="Programming paradigm">Programming paradigm</a></li>
+<li><a href="/wiki/Software" title="Software">Software</a></li>
+<li><a href="/wiki/Software_archaeology" title="Software archaeology">Software archaeology</a></li>
+<li><a href="/wiki/Software_architecture" title="Software architecture">Software architecture</a></li>
+<li><a href="/wiki/Software_configuration_management" title="Software configuration management">Software configuration management</a></li>
+<li><a href="/wiki/Software_development_process" title="Software development process">Software development methodology</a></li>
+<li><a href="/wiki/Software_development_process" title="Software development process">Software development process</a></li>
+<li><a href="/wiki/Software_quality" title="Software quality">Software quality</a></li>
+<li><a href="/wiki/Software_quality_assurance" title="Software quality assurance">Software quality assurance</a></li>
+<li><a href="/wiki/Software_verification_and_validation" title="Software verification and validation">Software verification and validation</a></li>
+<li><a href="/wiki/Structured_analysis" title="Structured analysis">Structured analysis</a></li>
+<li><a href="/wiki/Essential_Systems_Analysis" title="Essential Systems Analysis">Essential Analysis</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Orientations</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Agile_software_development" title="Agile software development">Agile</a></li>
+<li><a href="/wiki/Aspect-oriented_software_development" title="Aspect-oriented software development">Aspect-oriented</a></li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object orientation</a></li>
+<li><a href="/wiki/Ontology_(information_science)" title="Ontology (information science)">Ontology</a></li>
+<li><a href="/wiki/Service-oriented_architecture" title="Service-oriented architecture">Service orientation</a></li>
+<li><a href="/wiki/Systems_development_life_cycle" title="Systems development life cycle">SDLC</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Models</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">Developmental</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Agile_software_development" title="Agile software development">Agile</a></li>
+<li><a href="/wiki/Enterprise_Unified_Process" title="Enterprise Unified Process">EUP</a></li>
+<li><a href="/wiki/Executable_UML" title="Executable UML">Executable UML</a></li>
+<li><a href="/wiki/Incremental_build_model" title="Incremental build model">Incremental model</a></li>
+<li><a href="/wiki/Iterative_and_incremental_development" title="Iterative and incremental development">Iterative model</a></li>
+<li><a href="/wiki/Software_prototyping" title="Software prototyping">Prototype model</a></li>
+<li><a href="/wiki/Rapid_application_development" title="Rapid application development">RAD</a></li>
+<li><a href="/wiki/Unified_Process" title="Unified Process">UP</a></li>
+<li><a href="/wiki/Scrum_(software_development)" title="Scrum (software development)">Scrum</a></li>
+<li><a href="/wiki/Spiral_model" title="Spiral model">Spiral model</a></li>
+<li><a href="/wiki/V-Model_(software_development)" title="V-Model (software development)">V-Model</a></li>
+<li><a href="/wiki/Waterfall_model" title="Waterfall model">Waterfall model</a></li>
+<li><a href="/wiki/Extreme_programming" title="Extreme programming">XP</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">Other</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO/IEC_15504" title="ISO/IEC 15504">SPICE</a></li>
+<li><a href="/wiki/Capability_Maturity_Model_Integration" title="Capability Maturity Model Integration">CMMI</a></li>
+<li><a href="/wiki/Data_model" title="Data model">Data model</a></li>
+<li><a class="mw-selflink selflink">ER model</a></li>
+<li><a href="/wiki/Function_model" title="Function model">Function model</a></li>
+<li><a href="/wiki/Information_model" title="Information model">Information model</a></li>
+<li><a href="/wiki/Metamodeling" title="Metamodeling">Metamodeling</a></li>
+<li><a href="/wiki/Object_model" title="Object model">Object model</a></li>
+<li><a href="/wiki/Systems_modeling" title="Systems modeling">Systems model</a></li>
+<li><a href="/wiki/View_model" title="View model">View model</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%;font-weight:normal;">Languages</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IDEF" title="IDEF">IDEF</a></li>
+<li><a href="/wiki/Unified_Modeling_Language" title="Unified Modeling Language">UML</a></li>
+<li><a href="/wiki/Universal_Systems_Language" title="Universal Systems Language">USL</a></li>
+<li><a href="/wiki/Systems_Modeling_Language" title="Systems Modeling Language">SysML</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><div style="padding:0.1em 0;line-height:1.2em;">Software<br />engineers</div></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Victor_Basili" title="Victor Basili">Victor Basili</a></li>
+<li><a href="/wiki/Kent_Beck" title="Kent Beck">Kent Beck</a></li>
+<li><a href="/wiki/Grady_Booch" title="Grady Booch">Grady Booch</a></li>
+<li><a href="/wiki/Fred_Brooks" title="Fred Brooks">Fred Brooks</a></li>
+<li><a href="/wiki/Barry_Boehm" title="Barry Boehm">Barry Boehm</a></li>
+<li><a href="/wiki/Peter_Chen" title="Peter Chen">Peter Chen</a></li>
+<li><a href="/wiki/Danese_Cooper" title="Danese Cooper">Danese Cooper</a></li>
+<li><a href="/wiki/Ward_Cunningham" title="Ward Cunningham">Ward Cunningham</a></li>
+<li><a href="/wiki/Tom_DeMarco" title="Tom DeMarco">Tom DeMarco</a></li>
+<li><a href="/wiki/Edsger_W._Dijkstra" title="Edsger W. Dijkstra">Edsger W. Dijkstra</a></li>
+<li><a href="/wiki/Delores_M._Etter" title="Delores M. Etter">Delores M. Etter</a></li>
+<li><a href="/wiki/Martin_Fowler_(software_engineer)" title="Martin Fowler (software engineer)">Martin Fowler</a></li>
+<li><a href="/wiki/Adele_Goldstine" title="Adele Goldstine">Adele Goldstine</a></li>
+<li><a href="/wiki/Margaret_Hamilton_(scientist)" class="mw-redirect" title="Margaret Hamilton (scientist)">Margaret Hamilton</a></li>
+<li><a href="/wiki/Tony_Hoare" title="Tony Hoare">C. A. R. Hoare</a></li>
+<li><a href="/wiki/Lois_Haibt" title="Lois Haibt">Lois Haibt</a></li>
+<li><a href="/wiki/Mary_Jean_Harrold" title="Mary Jean Harrold">Mary Jean Harrold</a></li>
+<li><a href="/wiki/Grace_Hopper" title="Grace Hopper">Grace Hopper</a></li>
+<li><a href="/wiki/Watts_Humphrey" title="Watts Humphrey">Watts Humphrey</a></li>
+<li><a href="/wiki/Michael_A._Jackson" title="Michael A. Jackson">Michael A. Jackson</a></li>
+<li><a href="/wiki/Ivar_Jacobson" title="Ivar Jacobson">Ivar Jacobson</a></li>
+<li><a href="/wiki/Alan_Kay" title="Alan Kay">Alan Kay</a></li>
+<li><a href="/wiki/Nancy_Leveson" title="Nancy Leveson">Nancy Leveson</a></li>
+<li><a href="/wiki/Stephen_J._Mellor" title="Stephen J. Mellor">Stephen J. Mellor</a></li>
+<li><a href="/wiki/Bertrand_Meyer" title="Bertrand Meyer">Bertrand Meyer</a></li>
+<li><a href="/wiki/David_Parnas" title="David Parnas">David Parnas</a></li>
+<li><a href="/wiki/Trygve_Reenskaug" title="Trygve Reenskaug">Trygve Reenskaug</a></li>
+<li><a href="/wiki/Winston_W._Royce" title="Winston W. Royce">Winston W. Royce</a></li>
+<li><a href="/wiki/James_Rumbaugh" title="James Rumbaugh">James Rumbaugh</a></li>
+<li><a href="/wiki/Mary_Shaw_(computer_scientist)" title="Mary Shaw (computer scientist)">Mary Shaw</a></li>
+<li><a href="/wiki/Peri_Tarr" title="Peri Tarr">Peri Tarr</a></li>
+<li><a href="/wiki/Elaine_Weyuker" title="Elaine Weyuker">Elaine Weyuker</a></li>
+<li><a href="/wiki/Niklaus_Wirth" title="Niklaus Wirth">Niklaus Wirth</a></li>
+<li><a href="/wiki/Edward_Yourdon" title="Edward Yourdon">Edward Yourdon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related fields</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_science" title="Computer science">Computer science</a></li>
+<li><a href="/wiki/Computer_engineering" title="Computer engineering">Computer engineering</a></li>
+<li><a href="/wiki/Project_management" title="Project management">Project management</a></li>
+<li><a href="/wiki/Risk_management" title="Risk management">Risk management</a></li>
+<li><a href="/wiki/Systems_engineering" title="Systems engineering">Systems engineering</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2" style="font-weight:bold;"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <a href="/wiki/Category:Software_engineering" title="Category:Software engineering">Category</a></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <a href="https://commons.wikimedia.org/wiki/Category:Software_engineering" class="extiw" title="commons:Category:Software engineering">Commons</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q624546&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q624546&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q624546" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Biblioth%C3%A8que_nationale_de_France" title="Bibliothèque nationale de France">BNF</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://catalogue.bnf.fr/ark:/12148/cb167494845">cb167494845</a> <a rel="nofollow" class="external text" href="https://data.bnf.fr/ark:/12148/cb167494845">(data)</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4230505-6">4230505-6</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh00009200">sh00009200</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/Syst%C3%A8me_universitaire_de_documentation" title="Système universitaire de documentation">SUDOC</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://www.idref.fr/177006722">177006722</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1286
+Cached time: 20200317003601
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.548 seconds
+Real time usage: 0.785 seconds
+Preprocessor visited node count: 2219/1000000
+Post‐expand include size: 109416/2097152 bytes
+Template argument size: 2990/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 11/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 52561/5000000 bytes
+Number of Wikibase entities loaded: 3/400
+Lua time usage: 0.259/10.000 seconds
+Lua memory usage: 7.83 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  648.449      1 -total
+ 37.96%  246.133      1 Template:Reflist
+ 20.48%  132.779      2 Template:Cite_journal
+ 12.80%   83.017      1 Template:Refimprove
+ 11.71%   75.941      2 Template:Ambox
+  9.56%   61.975      1 Template:Short_description
+  8.48%   55.004      5 Template:Navbox
+  6.99%   45.331      1 Template:Pagetype
+  6.86%   44.503      1 Template:Commons_category
+  6.42%   41.605      1 Template:ISBN
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:752991-0!canonical and timestamp 20200317003600 and revision id 945927969
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Entity–relationship_model&amp;oldid=945927969">https://en.wikipedia.org/w/index.php?title=Entity–relationship_model&amp;oldid=945927969</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Data_modeling_diagrams" title="Category:Data modeling diagrams">Data modeling diagrams</a></li><li><a href="/wiki/Category:Entity%E2%80%93relationship_model" title="Category:Entity–relationship model">Entity–relationship model</a></li><li><a href="/wiki/Category:Data_modeling_languages" title="Category:Data modeling languages">Data modeling languages</a></li><li><a href="/wiki/Category:Modeling_languages" title="Category:Modeling languages">Modeling languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_November_2016" title="Category:Articles needing additional references from November 2016">Articles needing additional references from November 2016</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_April_2012" title="Category:Wikipedia articles needing clarification from April 2012">Wikipedia articles needing clarification from April 2012</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_February_2018" title="Category:Articles to be expanded from February 2018">Articles to be expanded from February 2018</a></li><li><a href="/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2016" title="Category:Articles with unsourced statements from July 2016">Articles with unsourced statements from July 2016</a></li><li><a href="/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases" title="Category:All articles with specifically marked weasel-worded phrases">All articles with specifically marked weasel-worded phrases</a></li><li><a href="/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_June_2012" title="Category:Articles with specifically marked weasel-worded phrases from June 2012">Articles with specifically marked weasel-worded phrases from June 2012</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_BNF_identifiers" title="Category:Wikipedia articles with BNF identifiers">Wikipedia articles with BNF identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_SUDOC_identifiers" title="Category:Wikipedia articles with SUDOC identifiers">Wikipedia articles with SUDOC identifiers</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul >
+		
+		<li id="pt-anonuserpage">Not logged in</li>
+		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Entity%E2%80%93relationship+model" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Entity%E2%80%93relationship+model" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul >
+		<li id="ca-nstab-main" class="selected"><a href="/wiki/Entity%E2%80%93relationship_model" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Entity%E2%80%93relationship_model" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+	</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<ul class="menu" >
+		
+	</ul>
+</div>
+
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul >
+		<li id="ca-view" class="collapsible selected"><a href="/wiki/Entity%E2%80%93relationship_model">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+	</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<ul class="menu" >
+		
+	</ul>
+</div>
+<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" value="Special:Search" name="title"/>
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+        </div>
+    </div>
+    
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+		<h3  id="p-navigation-label">
+			Navigation
+		</h3>
+		<div class="body">
+			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+		<h3  id="p-interaction-label">
+			Interaction
+		</h3>
+		<div class="body">
+			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+		<h3  id="p-tb-label">
+			Tools
+		</h3>
+		<div class="body">
+			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Entity%E2%80%93relationship_model" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Entity%E2%80%93relationship_model" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;oldid=945927969" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q624546" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Entity%E2%80%93relationship_model&amp;id=945927969" title="Information on how to cite this page">Cite this page</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+		<h3  id="p-wikibase-otherprojects-label">
+			In other projects
+		</h3>
+		<div class="body">
+			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Entity-relationship_models" hreflang="en">Wikimedia Commons</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+		<h3  id="p-coll-print_export-label">
+			Print/export
+		</h3>
+		<div class="body">
+			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Entity%E2%80%93relationship+model">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Entity%E2%80%93relationship+model&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Entity%E2%80%93relationship_model&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+		<h3  id="p-lang-label">
+			Languages
+		</h3>
+		<div class="body">
+			<ul><li class="interlanguage-link interwiki-af"><a href="https://af.wikipedia.org/wiki/Entiteit-relasie_datamodel" title="Entiteit-relasie datamodel – Afrikaans" lang="af" hreflang="af" class="interlanguage-link-target">Afrikaans</a></li><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B7%D8%B1%D9%8A%D9%82%D8%A9_%D8%A7%D9%84%D9%83%D9%8A%D8%A7%D9%86%D8%A7%D8%AA_%D9%88%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA" title="طريقة الكيانات والعلاقات – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Diagrama_Entitat-Relaci%C3%B3" title="Diagrama Entitat-Relació – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Entity-relationship_model" title="Entity-relationship model – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Entity-Relationship-Modell" title="Entity-Relationship-Modell – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%9C%CE%BF%CE%BD%CF%84%CE%AD%CE%BB%CE%BF_%CE%9F%CE%BD%CF%84%CE%BF%CF%84%CE%AE%CF%84%CF%89%CE%BD-%CE%A3%CF%85%CF%83%CF%87%CE%B5%CF%84%CE%AF%CF%83%CE%B5%CF%89%CE%BD" title="Μοντέλο Οντοτήτων-Συσχετίσεων – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Modelo_entidad-relaci%C3%B3n" title="Modelo entidad-relación – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AF%D9%84_%D9%85%D9%88%D8%AC%D9%88%D8%AF%DB%8C%D8%AA%E2%80%93%D8%B1%D8%A7%D8%A8%D8%B7%D9%87" title="مدل موجودیت–رابطه – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le_entit%C3%A9-association" title="Modèle entité-association – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B0%9C%EC%B2%B4-%EA%B4%80%EA%B3%84_%EB%AA%A8%EB%8D%B8" title="개체-관계 모델 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Diagram_hubungan_entitas" title="Diagram hubungan entitas – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Modello_E-R" title="Modello E-R – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%93%D7%9C_%D7%99%D7%A9%D7%95%D7%99%D7%95%D7%AA_%D7%A7%D7%A9%D7%A8%D7%99%D7%9D" title="מודל ישויות קשרים – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%9D%D1%8B%D1%81%D0%B0%D0%BD-%D0%B1%D0%B0%D0%B9%D0%BB%D0%B0%D0%BD%D1%8B%D1%81_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%96" title="Нысан-байланыс моделі – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/ER_diagrammas" title="ER diagrammas – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-lmo"><a href="https://lmo.wikipedia.org/wiki/Diagramma_E-R" title="Diagramma E-R – Lombard" lang="lmo" hreflang="lmo" class="interlanguage-link-target">Lumbaart</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Model_perhubungan_entiti" title="Model perhubungan entiti – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Entity-relationshipmodel" title="Entity-relationshipmodel – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E5%AE%9F%E4%BD%93%E9%96%A2%E9%80%A3%E3%83%A2%E3%83%87%E3%83%AB" title="実体関連モデル – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/E/R-modell" title="E/R-modell – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Diagram_zwi%C4%85zk%C3%B3w_encji" title="Diagram związków encji – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Modelo_entidade_relacionamento" title="Modelo entidade relacionamento – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Modelul_entitate-asociere" title="Modelul entitate-asociere – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/ER-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C" title="ER-модель – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Entity-relationship_model" title="Entity-relationship model – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Entitetni-odnosni_model" title="Entitetni-odnosni model – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB_%D0%BE%D0%B1%D1%98%D0%B5%D0%BA%D1%82%D0%B8-%D0%B2%D0%B5%D0%B7%D0%B5" title="Модел објекти-везе – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/ER-kaavio" title="ER-kaavio – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%89%E0%AE%B0%E0%AF%81%E0%AE%AA%E0%AF%8A%E0%AE%B0%E0%AF%81%E0%AE%B3%E0%AF%8D-%E0%AE%89%E0%AE%B1%E0%AE%B5%E0%AF%81_%E0%AE%AE%E0%AE%BE%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF" title="உருபொருள்-உறவு மாதிரி – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%88%E0%B8%B3%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B9%8C%E0%B9%80%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B4%E0%B8%95%E0%B8%B5" title="แบบจำลองความสัมพันธ์เอนทิตี – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Varl%C4%B1k-ba%C4%9F%C4%B1nt%C4%B1_modeli" title="Varlık-bağıntı modeli – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C_%C2%AB%D1%81%D1%83%D1%82%D0%BD%D1%96%D1%81%D1%82%D1%8C_%E2%80%94_%D0%B7%D0%B2%27%D1%8F%D0%B7%D0%BE%D0%BA%C2%BB" title="Модель «сутність — зв&#039;язок» – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/ER%E6%A8%A1%E5%9E%8B" title="ER模型 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q624546#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+	</div>
+	
+</div>
+
+</div>
+
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 March 2020, at 00:35<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Entity%E2%80%93relationship_model&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.548","walltime":"0.785","ppvisitednodes":{"value":2219,"limit":1000000},"postexpandincludesize":{"value":109416,"limit":2097152},"templateargumentsize":{"value":2990,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":11,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":52561,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00%  648.449      1 -total"," 37.96%  246.133      1 Template:Reflist"," 20.48%  132.779      2 Template:Cite_journal"," 12.80%   83.017      1 Template:Refimprove"," 11.71%   75.941      2 Template:Ambox","  9.56%   61.975      1 Template:Short_description","  8.48%   55.004      5 Template:Navbox","  6.99%   45.331      1 Template:Pagetype","  6.86%   44.503      1 Template:Commons_category","  6.42%   41.605      1 Template:ISBN"]},"scribunto":{"limitreport-timeusage":{"value":"0.259","limit":"10.000"},"limitreport-memusage":{"value":8207241,"limit":52428800}},"cachereport":{"origin":"mw1286","timestamp":"20200317003601","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Entity\u2013relationship model","url":"https:\/\/en.wikipedia.org\/wiki\/Entity%E2%80%93relationship_model","sameAs":"http:\/\/www.wikidata.org\/entity\/Q624546","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q624546","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-06-25T15:30:11Z","dateModified":"2020-03-17T00:35:54Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/7\/72\/ER_Diagram_MMORPG.png","headline":"describes inter-related things of interest in a specific domain of knowledge;composed of entity types (which classify the things of interest) and specifies relationships that can exist between instances of those entity types"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":113,"wgHostname":"mw1271"});});</script></body></html>

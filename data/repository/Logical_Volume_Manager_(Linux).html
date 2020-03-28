@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Logical Volume Manager (Linux) - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7GQApAAL0AADJMLegAAAAK","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Logical_Volume_Manager_(Linux)","wgTitle":"Logical Volume Manager (Linux)","wgCurRevisionId":945989527,"wgRevisionId":945989527,"wgArticleId":2273532,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia articles needing rewrite from April 2013","All articles needing rewrite","Wikipedia introduction cleanup from July 2015","All pages needing cleanup","Articles covered by WikiProject Wikify from July 2015","All articles covered by WikiProject Wikify",
+"Articles with multiple maintenance issues","Pages using Infobox software with unknown parameters","Articles containing potentially dated statements from 2017","All articles containing potentially dated statements","Articles containing potentially dated statements from 2015","Volume manager","Linux file system-related software","Linux kernel features","Red Hat software"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Logical_Volume_Manager_(Linux)","wgRelevantArticleId":2273532,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},
+"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q6667482","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher",
+"ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Logical_Volume_Manager_Linux rootpage-Logical_Volume_Manager_Linux skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Logical Volume Manager (Linux)</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-Multiple_issues plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span"><div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="/wiki/Talk:Logical_Volume_Manager_(Linux)" title="Talk:Logical Volume Manager (Linux)">talk page</a></b>. <small><i>(<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+      <table class="box-Cleanup_rewrite plainlinks metadata ambox ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Crystal_Clear_app_kedit.svg" class="image"><img alt="Crystal Clear app kedit.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Crystal_Clear_app_kedit.svg/40px-Crystal_Clear_app_kedit.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Crystal_Clear_app_kedit.svg/60px-Crystal_Clear_app_kedit.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Crystal_Clear_app_kedit.svg/80px-Crystal_Clear_app_kedit.svg.png 2x" data-file-width="128" data-file-height="128" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article may need to be <b>rewritten</b> to comply with Wikipedia's <a href="/wiki/Wikipedia:Manual_of_Style" title="Wikipedia:Manual of Style">quality standards</a>.<span class="hide-when-compact"> <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit">You can help</a>. The <a href="/wiki/Talk:Logical_Volume_Manager_(Linux)" title="Talk:Logical Volume Manager (Linux)">discussion page</a> may contain suggestions.</span>  <small class="date-container"><i>(<span class="date">April 2013</span>)</i></small></div></td></tr></tbody></table>
+<div class="boilerplate metadata plainlinks tfd" id="tfd" style="background-color: transparent; padding: 0; font-size: 85%; color:#000000; text-align: center; border-bottom:1px solid #AAAAAA;">‹&#160;The <a href="/wiki/Help:Template" title="Help:Template">template</a> below (<i><a href="/wiki/Template:Lead_too_short" title="Template:Lead too short">Lead too short</a></i>) is being considered for restructuring. See <a href="/wiki/Wikipedia:Templates_for_discussion/Log/2020_March_13#Template:Lead_too_short" title="Wikipedia:Templates for discussion/Log/2020 March 13">templates for discussion</a> to help reach a consensus.&#160;›</div>
+<table class="box-Lead_too_short plainlinks metadata ambox ambox-content ambox-lead_too_short" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Wiki_letter_w.svg" class="image"><img alt="Wiki letter w.svg" src="//upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/40px-Wiki_letter_w.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/60px-Wiki_letter_w.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/6/6c/Wiki_letter_w.svg/80px-Wiki_letter_w.svg.png 2x" data-file-width="44" data-file-height="44" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article's <b><a href="/wiki/Wikipedia:Manual_of_Style/Lead_section" title="Wikipedia:Manual of Style/Lead section">lead section</a> does not adequately <a href="/wiki/Wikipedia:Summary_style" title="Wikipedia:Summary style">summarize</a> key points of its contents</b>.<span class="hide-when-compact"> Please consider expanding the lead to <a href="/wiki/Wikipedia:Manual_of_Style/Lead_section#Provide_an_accessible_overview" title="Wikipedia:Manual of Style/Lead section">provide an accessible overview</a> of all important aspects of the article. Please discuss this issue on the article's <a href="/wiki/Talk:Logical_Volume_Manager_(Linux)" title="Talk:Logical Volume Manager (Linux)">talk page</a>.</span>  <small class="date-container"><i>(<span class="date">July 2015</span>)</i></small></div></td></tr></tbody></table>
+    </div>
+</div><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="infobox vevent" style="width:22em"><caption class="summary">Logical Volume Manager</caption><tbody><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td>Heinz Mauelshagen<sup id="cite_ref-auto_1-0" class="reference"><a href="#cite_note-auto-1">&#91;1&#93;</a></sup></td></tr><tr style="display: none;"><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td><div style="margin:0px;">2.03.07
+   / November&#160;2019<span class="noprint">&#59;&#32;4&#160;months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2019-11</span>)</span><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup></div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th><td><span class="url"><a rel="nofollow" class="external text" href="http://sourceware.org/git/?p=lvm2.git">sourceware<wbr />.org<wbr />/git<wbr />/?p=lvm2<wbr />.git</a></span></td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Linux" title="Linux">Linux</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GPLv2</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://sources.redhat.com/lvm2/">sources<wbr />.redhat<wbr />.com<wbr />/lvm2<wbr />/</a></span></td></tr></tbody></table>
+<p>In <a href="/wiki/Linux" title="Linux">Linux</a>, <b>Logical Volume Manager</b> (<b>LVM</b>) is a <a href="/wiki/Device_mapper" title="Device mapper">device mapper</a> target that provides <a href="/wiki/Logical_volume_management" title="Logical volume management">logical volume management</a> for the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>.  Most modern <a href="/wiki/Linux_distribution" title="Linux distribution">Linux distributions</a> are LVM-aware to the point of being able to have their <a href="/wiki/Root_file_system" class="mw-redirect" title="Root file system">root file systems</a> on a <a href="/wiki/Logical_volume" class="mw-redirect" title="Logical volume">logical volume</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-auto1_4-0" class="reference"><a href="#cite_note-auto1-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>Heinz Mauelshagen wrote the original LVM code in 1998, when he was working at <a href="/wiki/Sistina_Software" title="Sistina Software">Sistina Software</a>, taking its primary design guidelines from the <a href="/wiki/HP-UX" title="HP-UX">HP-UX</a>'s volume manager.<sup id="cite_ref-auto_1-1" class="reference"><a href="#cite_note-auto-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Uses"><span class="tocnumber">1</span> <span class="toctext">Uses</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Features"><span class="tocnumber">2</span> <span class="toctext">Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Basic_functionality"><span class="tocnumber">2.1</span> <span class="toctext">Basic functionality</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Advanced_functionality"><span class="tocnumber">2.2</span> <span class="toctext">Advanced functionality</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#RAID"><span class="tocnumber">2.3</span> <span class="toctext">RAID</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#High_availability"><span class="tocnumber">2.4</span> <span class="toctext">High availability</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Volume_group_allocation_policy"><span class="tocnumber">2.5</span> <span class="toctext">Volume group allocation policy</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Implementation"><span class="tocnumber">3</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Caveats"><span class="tocnumber">3.1</span> <span class="toctext">Caveats</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Uses">Uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=1" title="Edit section: Uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>LVM is used for the following purposes:
+</p>
+<ul><li>Creating single <a href="/wiki/Logical_volume" class="mw-redirect" title="Logical volume">logical volumes</a> of multiple physical volumes or entire hard disks (somewhat similar to <a href="/wiki/RAID_0" class="mw-redirect" title="RAID 0">RAID 0</a>, but more similar to <a href="/wiki/JBOD" class="mw-redirect" title="JBOD">JBOD</a>), allowing for dynamic volume resizing.</li>
+<li>Managing large hard disk farms by allowing disks to be added and replaced without downtime or service disruption, in combination with <a href="/wiki/Hot_swapping" title="Hot swapping">hot swapping</a>.</li>
+<li>On small systems (like a desktop), instead of having to estimate at installation time how big a partition might need to be, LVM allows filesystems to be easily resized as needed.</li>
+<li>Performing consistent backups by taking snapshots of the logical volumes.</li>
+<li>Encrypting multiple physical partitions with one password.</li></ul>
+<p>LVM can be considered as a thin software layer on top of the hard disks and partitions, which creates an abstraction of continuity and ease-of-use for managing hard drive replacement, repartitioning and backup.
+</p>
+<h2><span class="mw-headline" id="Features"><span id="WRITE-MOSTLY"></span>Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=2" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="/wiki/File:Lvm.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lvm.svg/400px-Lvm.svg.png" decoding="async" width="400" height="403" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lvm.svg/600px-Lvm.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lvm.svg/800px-Lvm.svg.png 2x" data-file-width="620" data-file-height="624" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Lvm.svg" class="internal" title="Enlarge"></a></div>Various elements of the LVM</div></div></div>
+<h3><span class="mw-headline" id="Basic_functionality">Basic functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=3" title="Edit section: Basic functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Volume groups (VGs) can be resized online by absorbing new <a href="/wiki/Physical_volume" class="mw-redirect" title="Physical volume">physical volumes</a> (PVs) or ejecting existing ones.</li>
+<li>Logical volumes (LVs) can be resized online by concatenating <a href="/wiki/Extent_(file_systems)" title="Extent (file systems)">extents</a> onto them or truncating extents from them.</li>
+<li>LVs can be moved between PVs.</li>
+<li>Creation of read-only <a href="/wiki/Snapshot_(computer_storage)" title="Snapshot (computer storage)">snapshots</a> of logical volumes (LVM1), or read-write snapshots (LVM2).</li>
+<li>VGs can be split or merged <i>in situ</i> as long as no LVs span the split.  This can be useful when migrating whole LVs to or from offline storage.</li>
+<li>LVM objects can be tagged for administrative convenience.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup></li>
+<li>VGs and LVs can be made active as the underlying devices become available through use of the <code>lvmetad</code> daemon.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup></li></ul>
+<h3><span class="mw-headline" id="Advanced_functionality">Advanced functionality</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=4" title="Edit section: Advanced functionality">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Hybrid_volume" class="mw-redirect" title="Hybrid volume">Hybrid volumes</a> can be created using the <a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a> target, which allows one or more fast storage devices, such as flash-based <a href="/wiki/Solid-state_drive" title="Solid-state drive">SSDs</a>, to act as a <a href="/wiki/Cache_(computing)" title="Cache (computing)">cache</a> for one or more slower <a href="/wiki/Hard_disk_drive" title="Hard disk drive">hard disk drives</a>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup></li>
+<li>Thinly provisioned LVs can be allocated from a pool.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup></li>
+<li>On newer versions of <a href="/wiki/Device_mapper" title="Device mapper">device mapper</a>, LVM is integrated with the rest of device mapper enough to ignore the individual paths that back a dm-multipath device if <code>devices/multipath_component_detection=1</code> is set in <code>lvm.conf</code>. This prevents LVM from activating volumes on an individual path instead of the multipath device.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup></li></ul>
+<h3><span class="mw-headline" id="RAID">RAID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=5" title="Edit section: RAID">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>LVs can be created to include <a href="/wiki/RAID" title="RAID">RAID</a> functionality, including <a href="/wiki/RAID_1" class="mw-redirect" title="RAID 1">RAID&#160;1</a>, <a href="/wiki/RAID_5" class="mw-redirect" title="RAID 5">5</a> and <a href="/wiki/RAID_6" class="mw-redirect" title="RAID 6">6</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup></li>
+<li>Entire LVs or their parts can be striped across multiple PVs, similarly to <a href="/wiki/RAID_0" class="mw-redirect" title="RAID 0">RAID&#160;0</a>.</li>
+<li>A RAID&#160;1 backend device (a PV) can be configured as "write-mostly", resulting in reads being avoided to such devices unless necessary.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup></li>
+<li>Recovery rate can be limited using <code>lvchange --raidmaxrecoveryrate</code> and <code>lvchange --raidminrecoveryrate</code> to maintain acceptable I/O performance while rebuilding a LV that includes RAID functionality.</li></ul>
+<h3><span class="mw-headline" id="High_availability">High availability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=6" title="Edit section: High availability">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The LVM also works in a shared-storage <a href="/wiki/Computer_cluster" title="Computer cluster">cluster</a> in which disks holding the PVs are shared between multiple host computers, but can require an additional daemon to mediate metadata access via a form of locking.
+</p>
+<dl><dt>CLVM</dt>
+<dd>A <a href="/wiki/Distributed_lock_manager" title="Distributed lock manager">distributed lock manager</a> is used to broker concurrent LVM metadata accesses. Whenever a cluster node needs to modify the LVM metadata, it must secure permission from its local <code>clvmd</code>, which is in constant contact with other <code>clvmd</code> daemons in the cluster and can communicate a desire to get a lock on a particular set of objects.</dd>
+<dt>HA-LVM</dt>
+<dd>Cluster-awareness is left to the application providing the high availability function. For the LVM's part, HA-LVM can use CLVM as a locking mechanism, or can continue to use the default file locking and reduce "collisions" by restricting access to only those LVM objects that have appropriate tags. Since this simpler solution avoids contention rather than mitigating it, no concurrent accesses are allowed. As such, HA-LVM is considered useful only in active-passive configurations.</dd>
+<dt>lvmlockd</dt>
+<dd>As of 2017<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit">&#91;update&#93;</a></sup>, a stable LVM component that is designed to replace <code>clvmd</code> by making the locking of LVM objects transparent to the rest of LVM, without relying on a distributed lock manager.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> It saw massive development during 2016.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup></dd></dl>
+<p>The above described mechanisms only resolve the issues with LVM's access to the storage. The file system selected to be on top of such LVs must either support clustering by itself (such as <a href="/wiki/GFS2" title="GFS2">GFS2</a> or <a href="/wiki/Veritas_File_System" title="Veritas File System">VxFS</a>) or it must only be mounted by a single cluster node at any time (such as in an active-passive configuration).
+</p>
+<h3><span class="mw-headline" id="Volume_group_allocation_policy">Volume group allocation policy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=7" title="Edit section: Volume group allocation policy">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>LVM VGs must contain a default allocation policy for new volumes created from it. This can later be changed for each LV using the <code>lvconvert -A</code> command, or on the VG itself via <code>vgchange --alloc</code>. To minimize fragmentation, LVM will attempt the strictest policy (contiguous) first and then progress toward the most liberal policy defined for the LVM object until allocation finally succeeds.
+</p><p>In RAID configurations, almost all policies are applied to each leg in isolation. For example, even if a LV has a policy of <i>cling</i>, expanding the file system will not result in LVM using a PV if it is already used by one of the other legs in the RAID setup. LVs with RAID functionality will put each leg on different PVs, making the other PVs unavailable to any other given leg. If this was the only option available, expansion of the LV would fail. In this sense, the logic behind <i>cling</i> will only apply to expanding each of the individual legs of the array.
+</p><p>Available allocation policies are:
+</p>
+<ul><li><i>Contiguous</i> - forces all <a href="/wiki/Logical_extent" class="mw-redirect" title="Logical extent">LEs</a> in a given LV to be adjacent and ordered. This eliminates fragmentation but severely reduces a LV expandability.</li>
+<li><i>Cling</i> - forces new LEs to be allocated only on PVs already used by an LV. This can help mitigate fragmentation as well as reduce vulnerability of particular LVs should a device go down, by reducing the likelihood that other LVs also have extents on that PV.</li>
+<li><i>Normal</i> - implies near-indiscriminate selection of PEs, but it will attempt to keep parallel legs (such as those of a RAID setup) from sharing a physical device.</li>
+<li><i>Anywhere</i> - imposes no restrictions whatsoever. Highly risky in a RAID setup as it ignores isolation requirements, undercutting most of the benefits of RAID. For linear volumes, it can result in increased fragmentation.</li></ul>
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=8" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Example_LVM_head.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Example_LVM_head.png/220px-Example_LVM_head.png" decoding="async" width="220" height="196" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Example_LVM_head.png/330px-Example_LVM_head.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Example_LVM_head.png/440px-Example_LVM_head.png 2x" data-file-width="1140" data-file-height="1016" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Example_LVM_head.png" class="internal" title="Enlarge"></a></div>Basic example of an LVM head</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="/wiki/File:LVM1.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LVM1.svg/400px-LVM1.svg.png" decoding="async" width="400" height="264" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LVM1.svg/600px-LVM1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/ba/LVM1.svg/800px-LVM1.svg.png 2x" data-file-width="500" data-file-height="330" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:LVM1.svg" class="internal" title="Enlarge"></a></div>Inner workings of the version 1 of LVM.  In this diagram, PE stands for a Physical Extent.</div></div></div>
+<p>Typically, the first megabyte of each physical volume contains a mostly <a href="/wiki/ASCII" title="ASCII">ASCII</a>-encoded structure referred to as an "LVM header" or "LVM head". Originally, the LVM head used to be written in the first and last megabyte of each PV for redundancy (in case of a partial hardware failure); however, this was later changed to only the first megabyte.  Each PV's header is a complete copy of the entire volume group's layout, including the UUIDs of all other PVs and of LVs, and allocation map of <a href="/wiki/Physical_extent" class="mw-redirect" title="Physical extent">PEs</a> to <a href="/wiki/Logical_extent" class="mw-redirect" title="Logical extent">LEs</a>.  This simplifies data recovery if a PV is lost.
+</p><p>In the 2.6-series of the Linux Kernel, the LVM is implemented in terms of the <a href="/wiki/Device_mapper" title="Device mapper">device mapper</a>, a simple block-level scheme for creating virtual block devices and mapping their contents onto other block devices.  This minimizes the amount of relatively hard-to-debug kernel code needed to implement the LVM.  It also allows its I/O redirection services to be shared with other volume managers (such as <a href="/wiki/Enterprise_Volume_Management_System" title="Enterprise Volume Management System">EVMS</a>).  Any LVM-specific code is pushed out into its user-space tools, which merely manipulate these mappings and reconstruct their state from on-disk metadata upon each invocation.
+</p><p>To bring a volume group online, the "vgchange" tool:
+</p>
+<ol><li>Searches for PVs in all available block devices.</li>
+<li>Parses the metadata header in each PV found.</li>
+<li>Computes the layouts of all visible volume groups.</li>
+<li>Loops over each logical volume in the volume group to be brought online and:
+<ol><li>Checks if the logical volume to be brought online has all its PVs visible.</li>
+<li>Creates a new, empty device mapping.</li>
+<li>Maps it (with the "linear" target) onto the data areas of the PVs the logical volume belongs to.</li></ol></li></ol>
+<p>To move an online logical volume between PVs on the same Volume Group, use the "pvmove" tool:
+</p>
+<ol><li>Creates a new, empty device mapping for the destination.</li>
+<li>Applies the "mirror" target to the original and destination maps.  The kernel will start the mirror in "degraded" mode and begin copying data from the original to the destination to bring it into sync.</li>
+<li>Replaces the original mapping with the destination when the mirror comes into sync, then destroys the original.</li></ol>
+<p>These device mapper operations take place transparently, without applications or file systems being aware that their underlying storage is moving.
+</p>
+<h3><span class="mw-headline" id="Caveats">Caveats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=9" title="Edit section: Caveats">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Until Linux kernel 2.6.31,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> <a href="/wiki/Write_barrier" title="Write barrier">write barriers</a> were not supported (fully supported in 2.6.33). This means that the guarantee against filesystem corruption offered by <a href="/wiki/Journaled_file_system" class="mw-redirect" title="Journaled file system">journaled file systems</a> like <a href="/wiki/Ext3" title="Ext3">ext3</a> and <a href="/wiki/XFS" title="XFS">XFS</a> was negated under some circumstances.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup></li>
+<li>As of 2015<sup class="plainlinks noexcerpt noprint asof-tag update" style="display:none;"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit">&#91;update&#93;</a></sup>, no online or offline defragmentation program exists for LVM. This is somewhat mitigated by fragmentation only happening if a volume is expanded and by applying the above-mentioned allocation policies. Fragmentation still occurs, however, and if it is to be reduced, non-contiguous extents must be identified and manually rearranged using the <code>pvmove</code> command.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup></li>
+<li>On most LVM setups, only one copy of the LVM head is saved to each PV, which can make the volumes more susceptible to failed disk sectors. This behavior can be overridden using <code>vgconvert --pvmetadatacopies</code>. If the LVM can not read a proper header using the first copy, it will check the end of the volume for a backup header. Most Linux distributions keep a running backup in <code>/etc/lvm/backup</code>, which enables manual rewriting of a corrupted LVM head using the <code>vgcfgrestore</code> command.</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r936637989">.mw-parser-output .portal{border:solid #aaa 1px;padding:0}.mw-parser-output .portal.tleft{margin:0.5em 1em 0.5em 0}.mw-parser-output .portal.tright{margin:0.5em 0 0.5em 1em}.mw-parser-output .portal>ul{display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold}.mw-parser-output .portal>ul>li{display:table-row}.mw-parser-output .portal>ul>li>span:first-child{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portal>ul>li>span:last-child{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}</style><div role="navigation" aria-label="Portals" class="noprint portal plainlist tright">
+<ul>
+<li><span><a href="/wiki/File:NewTux.svg" class="image"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/23px-NewTux.svg.png" decoding="async" width="23" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/35px-NewTux.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/47px-NewTux.svg.png 2x" data-file-width="625" data-file-height="750" /></a></span><span><a href="/wiki/Portal:Linux" title="Portal:Linux">Linux portal</a></span></li></ul></div>
+<div class="div-col columns column-width" style="-moz-column-width: 25em; -webkit-column-width: 25em; column-width: 25em;">
+<ul><li><a href="/wiki/Btrfs" title="Btrfs">Btrfs</a> (has its own "snapshots" that are different, but using <i>LVM</i> snapshots of btrfs leads to loss of both copies)<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Logical_Disk_Manager" title="Logical Disk Manager">Logical Disk Manager</a> (LDM)</li>
+<li><a href="/wiki/Logical_volume_management" title="Logical volume management">Logical volume management</a></li>
+<li><a href="/wiki/Snapshot_(computer_storage)" title="Snapshot (computer storage)">Snapshot (computer storage)</a></li>
+<li><a href="/wiki/Storage_virtualization" title="Storage virtualization">Storage virtualization</a></li></ul>
+</div>
+<ul><li><a href="/wiki/ZFS" title="ZFS">ZFS</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-auto-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-auto_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-auto_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://ftp.gwdg.de/pub/linux/misc/lvm/1.0/README">"LVM README"</a>. 2003-11-17<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=LVM+README&amp;rft.date=2003-11-17&amp;rft_id=http%3A%2F%2Fftp.gwdg.de%2Fpub%2Flinux%2Fmisc%2Flvm%2F1.0%2FREADME&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web">Kergon, Alasdair (2017-11-03). <a rel="nofollow" class="external text" href="https://www.redhat.com/archives/lvm-devel/2017-November/msg00013.html">"&#91;lvm-devel&#93; v2_02_176 annotated tag has been created"</a>. <i>lvm-devel</i>. Red Hat<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-11-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=lvm-devel&amp;rft.atitle=%5Blvm-devel%5D+v2_02_176+annotated+tag+has+been+created&amp;rft.date=2017-11-03&amp;rft.aulast=Kergon&amp;rft.aufirst=Alasdair&amp;rft_id=https%3A%2F%2Fwww.redhat.com%2Farchives%2Flvm-devel%2F2017-November%2Fmsg00013.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20150725212932/https://www.suse.com/documentation/sles10/book_sle_reference/data/sec_yast2_system_lvm.html">"7.1.2 LVM Configuration with YaST"</a>. SUSE. 12 July 2011. Archived from <a rel="nofollow" class="external text" href="https://www.suse.com/documentation/sles10/book_sle_reference/data/sec_yast2_system_lvm.html">the original</a> on 25 July 2015<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=7.1.2+LVM+Configuration+with+YaST&amp;rft.pub=SUSE&amp;rft.date=2011-07-12&amp;rft_id=https%3A%2F%2Fwww.suse.com%2Fdocumentation%2Fsles10%2Fbook_sle_reference%2Fdata%2Fsec_yast2_system_lvm.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-auto1-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-auto1_4-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160304023849/https://help.ubuntu.com/community/UbuntuDesktopLVM">"HowTo: Set up Ubuntu Desktop with LVM Partitions"</a>. Ubuntu. 1 June 2014. Archived from <a rel="nofollow" class="external text" href="https://help.ubuntu.com/community/UbuntuDesktopLVM">the original</a> on 4 March 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=HowTo%3A+Set+up+Ubuntu+Desktop+with+LVM+Partitions&amp;rft.pub=Ubuntu&amp;rft.date=2014-06-01&amp;rft_id=https%3A%2F%2Fhelp.ubuntu.com%2Fcommunity%2FUbuntuDesktopLVM&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/Create_LVM-x86.html">"9.15.4 Create LVM Logical Volume"</a>. Red Hat. 8 October 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=9.15.4+Create+LVM+Logical+Volume&amp;rft.pub=Red+Hat&amp;rft.date=2014-10-08&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F6%2Fhtml%2FInstallation_Guide%2FCreate_LVM-x86.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.suse.com/documentation/sles11/stor_admin/data/lvmtagging.html">"Tagging LVM2 Storage Objects"</a>. Micro Focus International<span class="reference-accessdate">. Retrieved <span class="nowrap">21 May</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Tagging+LVM2+Storage+Objects&amp;rft.pub=Micro+Focus+International&amp;rft_id=https%3A%2F%2Fwww.suse.com%2Fdocumentation%2Fsles11%2Fstor_admin%2Fdata%2Flvmtagging.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Logical_Volume_Manager_Administration/metadatadaemon.html">"The Metadata Daemon"</a>. Red Hat Inc<span class="reference-accessdate">. Retrieved <span class="nowrap">22 May</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Metadata+Daemon&amp;rft.pub=Red+Hat+Inc&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F6%2Fhtml%2FLogical_Volume_Manager_Administration%2Fmetadatadaemon.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://rwmj.wordpress.com/2014/05/22/using-lvms-new-cache-feature/">"Using LVM's new cache feature"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Using+LVM%E2%80%99s+new+cache+feature&amp;rft_id=http%3A%2F%2Frwmj.wordpress.com%2F2014%2F05%2F22%2Fusing-lvms-new-cache-feature%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Logical_Volume_Manager_Administration/thinprovisioned_volumes.html">"2.3.5. Thinly-Provisioned Logical Volumes (Thin Volumes)"</a>. Access.redhat.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=2.3.5.+Thinly-Provisioned+Logical+Volumes+%28Thin+Volumes%29&amp;rft.pub=Access.redhat.com&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fsite%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F6%2Fhtml%2FLogical_Volume_Manager_Administration%2Fthinprovisioned_volumes.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/5/html/5.8_Technical_Notes/lvm2.html">"4.101.3.  RHBA-2012:0161 — lvm2 bug fix and enhancement update"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=4.101.3.++RHBA-2012%3A0161+%E2%80%94+lvm2+bug+fix+and+enhancement+update&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F5%2Fhtml%2F5.8_Technical_Notes%2Flvm2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Logical_Volume_Manager_Administration/LV.html#raid_volumes">"5.4.16. RAID Logical Volumes"</a>. Access.redhat.com<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-02-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=5.4.16.+RAID+Logical+Volumes&amp;rft.pub=Access.redhat.com&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F6%2Fhtml%2FLogical_Volume_Manager_Administration%2FLV.html%23raid_volumes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Logical_Volume_Manager_Administration/raid1-writebehind.html">"Controlling I/O Operations on a RAID1 Logical Volume"</a>. redhat.com<span class="reference-accessdate">. Retrieved <span class="nowrap">16 June</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Controlling+I%2FO+Operations+on+a+RAID1+Logical+Volume&amp;rft.pub=redhat.com&amp;rft_id=https%3A%2F%2Faccess.redhat.com%2Fsite%2Fdocumentation%2Fen-US%2FRed_Hat_Enterprise_Linux%2F6%2Fhtml%2FLogical_Volume_Manager_Administration%2Fraid1-writebehind.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.spinics.net/lists/lvm/msg21756.html">"Re: LVM snapshot with Clustered VG &#91;SOLVED&#93;"</a>. 15 Mar 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Re%3A+LVM+snapshot+with+Clustered+VG+%5BSOLVED%5D&amp;rft.date=2013-03-15&amp;rft_id=http%3A%2F%2Fwww.spinics.net%2Flists%2Flvm%2Fmsg21756.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://sourceware.org/git/?p=lvm2.git;a=history;f=lib/locking/lvmlockd.c;h=master;hb=HEAD">https://sourceware.org/git/?p=lvm2.git;a=history;f=lib/locking/lvmlockd.c;h=master;hb=HEAD</a></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://bugzilla.kernel.org/show_bug.cgi?id=9554">"Bug 9554 – write barriers over device mapper are not supported"</a>. 2009-07-01<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-01-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bug+9554+%E2%80%93+write+barriers+over+device+mapper+are+not+supported&amp;rft.date=2009-07-01&amp;rft_id=http%3A%2F%2Fbugzilla.kernel.org%2Fshow_bug.cgi%3Fid%3D9554&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://lwn.net/Articles/283161">"Barriers and journaling filesystems"</a>. <a href="/wiki/LWN.net" title="LWN.net">LWN</a>. 2008-05-22<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-05-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Barriers+and+journaling+filesystems&amp;rft.pub=LWN&amp;rft.date=2008-05-22&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F283161&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.redhat.com/archives/linux-lvm/2010-April/msg00103.html">"will pvmove'ing (an LV at a time) defragment?"</a>. 2010-04-29<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=will+pvmove%27ing+%28an+LV+at+a+time%29+defragment%3F&amp;rft.date=2010-04-29&amp;rft_id=http%3A%2F%2Fwww.redhat.com%2Farchives%2Flinux-lvm%2F2010-April%2Fmsg00103.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://btrfs.wiki.kernel.org/index.php/Gotchas#Block-level_copies_of_devices"><i>Gotchas</i></a>, btrfs Wiki<span class="reference-accessdate">, retrieved <span class="nowrap">2017-04-24</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Gotchas&amp;rft.pub=btrfs+Wiki&amp;rft_id=https%3A%2F%2Fbtrfs.wiki.kernel.org%2Findex.php%2FGotchas%23Block-level_copies_of_devices&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit&amp;section=12" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r886047268">.mw-parser-output .refbegin{font-size:90%;margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{list-style-type:none;margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li,.mw-parser-output .refbegin-hanging-indents>dl>dd{margin-left:0;padding-left:3.2em;text-indent:-3.2em;list-style:none}.mw-parser-output .refbegin-100{font-size:100%}</style><div class="refbegin reflist columns references-column-width" style="-moz-column-width: 35em; -webkit-column-width: 35em; column-width: 35em;">
+<ul><li><cite class="citation web">Lewis, AJ (2006-11-27). <a rel="nofollow" class="external text" href="http://tldp.org/HOWTO/LVM-HOWTO">"LVM HOWTO"</a>. <a href="/wiki/Linux_Documentation_Project" title="Linux Documentation Project">Linux Documentation Project</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-03-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=LVM+HOWTO&amp;rft.pub=Linux+Documentation+Project&amp;rft.date=2006-11-27&amp;rft.aulast=Lewis&amp;rft.aufirst=AJ&amp;rft_id=http%3A%2F%2Ftldp.org%2FHOWTO%2FLVM-HOWTO&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li>
+<li><span class="citation patent" id="CITEREFAuslander,_et_al.1992"><a rel="nofollow" class="external text" href="https://worldwide.espacenet.com/textdoc?DB=EPODOC&amp;IDX=US5129088">US&#32;patent 5129088</a>,&#32;Auslander, et al.,&#32;"Data Processing Method to Create Virtual Disks from Non-Contiguous Groups of Logically Contiguous Addressable Blocks of Direct Access Storage Device",&#32;issued 1992-7-7</span><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Apatent&amp;rft.number=5129088&amp;rft.cc=US&amp;rft.title=Data+Processing+Method+to+Create+Virtual+Disks+from+Non-Contiguous+Groups+of+Logically+Contiguous+Addressable+Blocks+of+Direct+Access+Storage+Device&amp;rft.inventor=Auslander%2C+et+al.&amp;rft.date=1992-7-7"><span style="display: none;">&#160;</span></span> (fundamental patent).</li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130810011929/http://www.techmagazinez.com/2013/08/redhat-linux-logical-volume-manager.html">"RedHat Linux: What is Logical Volume Manager or LVM?"</a>. <i>techmagazinez.com</i>. 6 August 2013. Archived from <a rel="nofollow" class="external text" href="http://www.techmagazinez.com/2013/08/redhat-linux-logical-volume-manager.html">the original</a> on 10 August 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">4 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=techmagazinez.com&amp;rft.atitle=RedHat+Linux%3A+What+is+Logical+Volume+Manager+or+LVM%3F&amp;rft.date=2013-08-06&amp;rft_id=http%3A%2F%2Fwww.techmagazinez.com%2F2013%2F08%2Fredhat-linux-logical-volume-manager.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="http://sourceware.org/lvm2/">"LVM2 Resource Page"</a>. <i>sourceware.org</i>. 8 June 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">4 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=sourceware.org&amp;rft.atitle=LVM2+Resource+Page&amp;rft.date=2012-06-08&amp;rft_id=http%3A%2F%2Fsourceware.org%2Flvm2%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.debuntu.org/how-to-install-ubuntu-on-lvm-partitions/">"How-To: Install Ubuntu on LVM partitions"</a>. <i>Debuntu.org</i>. 28 July 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">4 September</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Debuntu.org&amp;rft.atitle=How-To%3A+Install+Ubuntu+on+LVM+partitions&amp;rft.date=2007-07-28&amp;rft_id=http%3A%2F%2Fwww.debuntu.org%2Fhow-to-install-ubuntu-on-lvm-partitions%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.markus-gattol.name/ws/lvm.html">"Logical Volume Manager"</a>. <i>markus-gattol.name</i>. 13 July 2013.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=markus-gattol.name&amp;rft.atitle=Logical+Volume+Manager&amp;rft.date=2013-07-13&amp;rft_id=http%3A%2F%2Fwww.markus-gattol.name%2Fws%2Flvm.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ALogical+Volume+Manager+%28Linux%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+</div>
+<div role="navigation" class="navbox" aria-labelledby="Linux" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux" title="Template:Linux"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux" title="Template talk:Linux"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux" title="Linux">Linux</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/History_of_Linux" title="History of Linux">History</a></li>
+<li><a href="/wiki/Linux_kernel" title="Linux kernel">Kernel</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li>
+<li><a href="/wiki/Linux_startup_process" title="Linux startup process">Linux startup process</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><i><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel">more…</a></i></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Controversies</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism of Linux</a></li>
+<li><a href="/wiki/Criticism_of_desktop_Linux" title="Criticism of desktop Linux">Criticism of desktop Linux</a></li>
+<li><a href="/wiki/GNU/Linux_naming_controversy" title="GNU/Linux naming controversy">GNU/Linux naming controversy</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO and Linux</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_distribution" title="Linux distribution">Distributions</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_Linux_distributions" title="Comparison of Linux distributions">General comparison</a></li>
+<li><a href="/wiki/List_of_Linux_distributions" title="List of Linux distributions">Distributions list</a></li>
+<li><a href="/wiki/Comparison_of_netbook-oriented_Linux_distributions" title="Comparison of netbook-oriented Linux distributions">Netbook-specific comparison</a></li>
+<li><a href="/wiki/List_of_Linux_distributions_that_run_from_RAM" title="List of Linux distributions that run from RAM">Distributions that run from RAM</a></li>
+<li><a href="/wiki/Light-weight_Linux_distribution" title="Light-weight Linux distribution">Lightweight</a></li>
+<li><a href="/wiki/Security-focused_operating_system#Linux" title="Security-focused operating system">Security-focused operating system</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li>
+<li><a href="/wiki/Package_manager" title="Package manager">Package manager</a>
+<ul><li><a href="/wiki/Package_format" title="Package format">Package format</a></li>
+<li><a href="/wiki/List_of_software_package_management_systems" title="List of software package management systems">List of software package managers</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organizations</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/LinuxChix" title="LinuxChix">LinuxChix</a></li>
+<li><a href="/wiki/Linux_Counter" title="Linux Counter">Linux Counter</a></li>
+<li><a href="/wiki/Linux_Documentation_Project" title="Linux Documentation Project">Linux Documentation Project</a></li>
+<li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">Adopters</a></li>
+<li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li><a href="/wiki/Linux_for_mobile_devices" title="Linux for mobile devices">Mobile</a></li>
+<li><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range of use</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Media</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DistroWatch" title="DistroWatch">DistroWatch</a></li>
+<li><i><a href="/wiki/Free_Software_Magazine" title="Free Software Magazine">Free Software Magazine</a></i></li>
+<li><i><a href="/wiki/Full_Circle_(magazine)" title="Full Circle (magazine)">Full Circle</a></i></li>
+<li><a href="/wiki/Linux.com" title="Linux.com">Linux.com</a></li>
+<li><i><a href="/wiki/Linux_Format" title="Linux Format">Linux Format</a></i></li>
+<li><i><a href="/wiki/Linux_Gazette" title="Linux Gazette">Linux Gazette</a></i></li>
+<li><i><a href="/wiki/Linux_Journal" title="Linux Journal">Linux Journal</a></i></li>
+<li><i><a href="/wiki/Linux_Magazine" title="Linux Magazine">Linux Magazine</a></i></li>
+<li><i><a href="/wiki/LinuxUser" title="LinuxUser">LinuxUser</a></i>
+<ul><li><i><a href="/wiki/Ubuntu_User" title="Ubuntu User">Ubuntu User</a></i></li></ul></li>
+<li><a href="/wiki/Linux_Outlaws" title="Linux Outlaws">Linux Outlaws</a></li>
+<li><i><a href="/wiki/Linux_Voice" title="Linux Voice">Linux Voice</a></i></li>
+<li><a href="/wiki/LugRadio" title="LugRadio">LugRadio</a></li>
+<li><a href="/wiki/LWN.net" title="LWN.net">LWN.net</a></li>
+<li><i><a href="/wiki/Open_Source_For_You" class="mw-redirect" title="Open Source For You">Open Source For You</a></i></li>
+<li><a href="/wiki/Phoronix_Test_Suite#Phoronix_website" title="Phoronix Test Suite">Phoronix</a></li>
+<li><i><a href="/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li>
+<li><a href="/wiki/The_Code_(2001_film)" title="The Code (2001 film)"><i>The Code</i></a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux" title="Category:Linux">Linux</a></b></li>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel_features" title="Category:Linux kernel features">Linux kernel features</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li>
+<li><img alt="WikiProject" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" decoding="async" title="WikiProject" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" data-file-width="100" data-file-height="100" /> <b><a href="/wiki/Wikipedia:WikiProject_Linux" title="Wikipedia:WikiProject Linux">WikiProject</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Linux_kernel" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux_kernel" title="Template talk:Linux kernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux_kernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux_kernel" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organization</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Kernel" scope="row" class="navbox-group" style="width:1%">Kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO disputes</a></li>
+<li><a href="/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="/wiki/GNU_General_Public_License#Version_2" title="GNU General Public License">GNU GPL v2</a></li>
+<li><a href="/wiki/Menuconfig" title="Menuconfig">menuconfig</a></li>
+<li><a href="/wiki/List_of_Linux-supported_computer_architectures" title="List of Linux-supported computer architectures">Supported computer architectures</a></li>
+<li><a href="/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">Kernel names</a></li>
+<li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Support</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Developers
+<ul><li><i><a href="/wiki/The_Linux_Programming_Interface" title="The Linux Programming Interface">The Linux Programming Interface</a></i></li>
+<li><a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a></li>
+<li><a href="/wiki/Linux_kernel_mailing_list" title="Linux kernel mailing list">LKML</a></li>
+<li><a href="/wiki/Linux_conference" class="mw-redirect" title="Linux conference">Linux conferences</a></li></ul></li>
+<li>Users
+<ul><li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Technical</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Debugging</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CRIU" title="CRIU">CRIU</a></li>
+<li><a href="/wiki/Ftrace" title="Ftrace">ftrace</a></li>
+<li><a href="/wiki/Kdump_(Linux)" title="Kdump (Linux)">kdump</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+<li><a href="/wiki/Berkeley_Packet_Filter" title="Berkeley Packet Filter">BPF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_startup_process" title="Linux startup process">Startup</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="/wiki/System.map" title="System.map">System.map</a></li>
+<li><a href="/wiki/Dracut_(software)" title="Dracut (software)">dracut</a></li>
+<li><a href="/wiki/Initrd" class="mw-redirect" title="Initrd">initrd</a></li>
+<li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">ABIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a></li>
+<li><a href="/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Of<br /><a href="/wiki/User_space" title="User space">userspace</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtual_file_system" title="Virtual file system">FS</a>,<br /><a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemons</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Devfs" class="mw-redirect" title="Devfs">devfs</a></li>
+<li><a href="/wiki/Devpts" title="Devpts">devpts</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Systemd" title="Systemd">systemd</a>
+<ul><li><a href="/wiki/Udev" title="Udev">udev</a></li></ul></li>
+<li><a href="/wiki/Kmscon" title="Kmscon">Kmscon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Wrapper_library" title="Wrapper library">Wrapper<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_standard_library" title="C standard library">C standard library</a>
+<ul><li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li></ul></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">libcgroup</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a></li>
+<li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">libevdev</a></li>
+<li><a href="/wiki/Libusb" title="Libusb">libusb</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Of<br />kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#SCI" title="Linux kernel interfaces">System Call<br />Interface</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/POSIX" title="POSIX">POSIX</a>
+<ul><li><a href="/wiki/Ioctl" title="Ioctl">ioctl</a></li>
+<li><a href="/wiki/Select_(Unix)" title="Select (Unix)">select</a></li>
+<li><a href="/wiki/Open_(system_call)" title="Open (system call)">open</a></li>
+<li><a href="/wiki/Read_(system_call)" title="Read (system call)">read</a></li>
+<li><a href="/wiki/Close_(system_call)" title="Close (system call)">close</a></li>
+<li><a href="/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a></li>
+<li>…</li></ul></li>
+<li>Linux-only
+<ul><li><a href="/wiki/Futex" title="Futex">futex</a></li>
+<li><a href="/wiki/Epoll" title="Epoll">epoll</a></li>
+<li><a href="/wiki/Splice_(system_call)" title="Splice (system call)">splice</a></li>
+<li><a href="/wiki/Dnotify" title="Dnotify">dnotify</a></li>
+<li><a href="/wiki/Inotify" title="Inotify">inotify</a></li>
+<li><a href="/wiki/Readahead" title="Readahead">readahead</a></li>
+<li>…</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#In–kernel_APIs" title="Linux kernel interfaces">In-kernel</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="/wiki/Crypto_API_(Linux)" title="Crypto API (Linux)">Crypto API</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/Kernfs_(Linux)" title="Kernfs (Linux)">kernfs</a></li>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/New_API" title="New API">New API</a></li>
+<li><a href="/wiki/Read-copy-update" title="Read-copy-update">RCU</a></li>
+<li><a href="/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="/wiki/BlueZ" class="mw-redirect" title="BlueZ">BlueZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/EDAC_(Linux)" class="mw-redirect" title="EDAC (Linux)">EDAC</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/LIO_(SCSI_target)" title="LIO (SCSI target)">LIO</a></li>
+<li><a href="/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a class="mw-selflink selflink">LVM</a></li>
+<li><a href="/wiki/KMS_driver" class="mw-redirect" title="KMS driver">KMS driver</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="/wiki/Netlink" title="Netlink">Netlink</a></li>
+<li><a href="/wiki/Nftables" title="Nftables">nftables</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Perf_(Linux)" title="Perf (Linux)">perf</a></li>
+<li><a href="/wiki/SLUB_(software)" title="SLUB (software)">SLUB</a></li>
+<li><a href="/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="/wiki/Zswap" title="Zswap">zswap</a></li></ul>
+<ul><li><a href="/wiki/Scheduling_(computing)#Linux" title="Scheduling (computing)">Process and I/O schedulers</a>:</li>
+<li><a href="/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a></li>
+<li><a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a href="/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> (CFQ)</li>
+<li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/Noop_scheduler" title="Noop scheduler">Noop scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<ul><li><a href="/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a>
+<ul><li><a href="/wiki/PaX" title="PaX">PaX</a></li></ul></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="/wiki/Smack_(software)" title="Smack (software)">Smack</a></li>
+<li><a href="/wiki/Tomoyo_Linux" title="Tomoyo Linux">Tomoyo Linux</a></li>
+<li><a href="/wiki/Linux_PAM" title="Linux PAM">Linux PAM</a></li></ul>
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device drivers</a>
+<ul><li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">802.11</a></li>
+<li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">graphics</a></li></ul></li>
+<li><a href="/wiki/Raw_device" title="Raw device">Raw device</a></li></ul>
+<ul><li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li>
+<li><a href="/wiki/KernelCare" title="KernelCare">KernelCare</a></li>
+<li><a href="/wiki/Kexec" title="Kexec">kexec</a></li>
+<li><a href="/wiki/KGraft" title="KGraft">kGraft</a></li>
+<li><a href="/wiki/Kpatch" title="Kpatch">kpatch</a></li>
+<li><a href="/wiki/Ksplice" title="Ksplice">Ksplice</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Mainline</a>
+<ul><li><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li></ul></li>
+<li><a href="/wiki/High-performance_computing" class="mw-redirect" title="High-performance computing">High-performance computing</a>
+<ul><li><a href="/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="/wiki/Slurm_Workload_Manager" title="Slurm Workload Manager">SLURM</a></li></ul></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul><li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li></ul></li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li></ul></li></ul>
+ </div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Virtualization" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul><li><a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul></li>
+<li><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level virtualization</a>
+<ul><li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li></ul></li>
+<li>Other
+<ul><li><a href="/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Rangeof_use" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range<br />of use</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul><li><a href="/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="/wiki/Thinstation" title="Thinstation">Thinstation</a></li></ul></li>
+<li>Server:
+<ul><li><a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME-LYCE</a></li></ul></li>
+<li><a href="/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Adopters</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel" title="Category:Linux kernel">Category</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Linux_kernel" class="extiw" title="commons:Linux kernel">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="https://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" decoding="async" title="Wikiversity page" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800" /> <b><a href="https://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1353
+Cached time: 20200327172312
+Cache expiry: 86400
+Dynamic content: true
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.608 seconds
+Real time usage: 0.845 seconds
+Preprocessor visited node count: 2883/1000000
+Post‐expand include size: 160349/2097152 bytes
+Template argument size: 11263/2097152 bytes
+Highest expansion depth: 26/40
+Expensive parser function count: 8/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 63873/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.253/10.000 seconds
+Lua memory usage: 6.34 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  670.301      1 -total
+ 30.67%  205.553      2 Template:Infobox
+ 25.91%  173.646      1 Template:Reflist
+ 25.89%  173.553     21 Template:Cite_web
+ 25.28%  169.419      1 Template:Infobox_software
+ 16.62%  111.377      1 Template:Multiple_issues
+ 15.68%  105.082      3 Template:Ambox
+ 10.69%   71.643      9 Template:Navbox
+  7.62%   51.051      1 Template:Infobox_software/simple
+  4.15%   27.821      1 Template:Portal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2273532-0!canonical and timestamp 20200327172311 and revision id 945989527
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;oldid=945989527">https://en.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;oldid=945989527</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Volume_manager" title="Category:Volume manager">Volume manager</a></li><li><a href="/wiki/Category:Linux_file_system-related_software" title="Category:Linux file system-related software">Linux file system-related software</a></li><li><a href="/wiki/Category:Linux_kernel_features" title="Category:Linux kernel features">Linux kernel features</a></li><li><a href="/wiki/Category:Red_Hat_software" title="Category:Red Hat software">Red Hat software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Wikipedia_articles_needing_rewrite_from_April_2013" title="Category:Wikipedia articles needing rewrite from April 2013">Wikipedia articles needing rewrite from April 2013</a></li><li><a href="/wiki/Category:All_articles_needing_rewrite" title="Category:All articles needing rewrite">All articles needing rewrite</a></li><li><a href="/wiki/Category:Wikipedia_introduction_cleanup_from_July_2015" title="Category:Wikipedia introduction cleanup from July 2015">Wikipedia introduction cleanup from July 2015</a></li><li><a href="/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</a></li><li><a href="/wiki/Category:Articles_covered_by_WikiProject_Wikify_from_July_2015" title="Category:Articles covered by WikiProject Wikify from July 2015">Articles covered by WikiProject Wikify from July 2015</a></li><li><a href="/wiki/Category:All_articles_covered_by_WikiProject_Wikify" title="Category:All articles covered by WikiProject Wikify">All articles covered by WikiProject Wikify</a></li><li><a href="/wiki/Category:Articles_with_multiple_maintenance_issues" title="Category:Articles with multiple maintenance issues">Articles with multiple maintenance issues</a></li><li><a href="/wiki/Category:Pages_using_Infobox_software_with_unknown_parameters" title="Category:Pages using Infobox software with unknown parameters">Pages using Infobox software with unknown parameters</a></li><li><a href="/wiki/Category:Articles_containing_potentially_dated_statements_from_2017" title="Category:Articles containing potentially dated statements from 2017">Articles containing potentially dated statements from 2017</a></li><li><a href="/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</a></li><li><a href="/wiki/Category:Articles_containing_potentially_dated_statements_from_2015" title="Category:Articles containing potentially dated statements from 2015">Articles containing potentially dated statements from 2015</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Logical+Volume+Manager+%28Linux%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Logical+Volume+Manager+%28Linux%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Logical_Volume_Manager_(Linux)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Logical_Volume_Manager_(Linux)" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Logical_Volume_Manager_(Linux)">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Logical_Volume_Manager_(Linux)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Logical_Volume_Manager_(Linux)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;oldid=945989527" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6667482" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Logical_Volume_Manager_%28Linux%29&amp;id=945989527&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Logical+Volume+Manager+%28Linux%29">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Logical+Volume+Manager+%28Linux%29&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/LVM" title="LVM – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%85%BC%EB%A6%AC_%EB%B3%BC%EB%A5%A8_%EA%B4%80%EB%A6%AC%EC%9E%90" title="논리 볼륨 관리자 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Logikai_k%C3%B6tetkezel%C5%91" title="Logikai kötetkezelő – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Logical_Volume_Manager" title="Logical Volume Manager – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/LVM" title="LVM – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/LVM" title="LVM – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-ckb"><a href="https://ckb.wikipedia.org/wiki/%D8%A6%DB%8E%DA%B5_%DA%A4%DB%8C_%D8%A6%DB%8E%D9%85_%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3" title="ئێڵ ڤی ئێم لینوکس – Central Kurdish" lang="ckb" hreflang="ckb" class="interlanguage-link-target">کوردی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Looginen_taltiohallinta" title="Looginen taltiohallinta – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/LVM" title="LVM – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%82%8F%E8%BC%AF%E6%8D%B2%E8%BB%B8%E7%AE%A1%E7%90%86%E5%93%A1" title="邏輯捲軸管理員 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6667482#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 March 2020, at 11:09<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Logical_Volume_Manager_(Linux)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.608","walltime":"0.845","ppvisitednodes":{"value":2883,"limit":1000000},"postexpandincludesize":{"value":160349,"limit":2097152},"templateargumentsize":{"value":11263,"limit":2097152},"expansiondepth":{"value":26,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":63873,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  670.301      1 -total"," 30.67%  205.553      2 Template:Infobox"," 25.91%  173.646      1 Template:Reflist"," 25.89%  173.553     21 Template:Cite_web"," 25.28%  169.419      1 Template:Infobox_software"," 16.62%  111.377      1 Template:Multiple_issues"," 15.68%  105.082      3 Template:Ambox"," 10.69%   71.643      9 Template:Navbox","  7.62%   51.051      1 Template:Infobox_software/simple","  4.15%   27.821      1 Template:Portal"]},"scribunto":{"limitreport-timeusage":{"value":"0.253","limit":"10.000"},"limitreport-memusage":{"value":6645543,"limit":52428800}},"cachereport":{"origin":"mw1353","timestamp":"20200327172312","ttl":86400,"transientcontent":true}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Logical Volume Manager (Linux)","url":"https:\/\/en.wikipedia.org\/wiki\/Logical_Volume_Manager_(Linux)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6667482","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6667482","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-07-20T16:20:17Z","dateModified":"2020-03-17T11:09:29Z","headline":"logical volume management for Linux"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":107,"wgHostname":"mw1385"});});</script></body></html>

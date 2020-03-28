@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Pentium FDIV bug - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn@g0gpAMFsAAGC48fIAAABC","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Pentium_FDIV_bug","wgTitle":"Pentium FDIV bug","wgCurRevisionId":944998776,"wgRevisionId":944998776,"wgArticleId":24637,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from January 2019","X86 architecture","Hardware bugs","1994 in computer science"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Pentium_FDIV_bug","wgRelevantArticleId":24637,
+"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q668011","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready",
+"ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/0/01/KL_Intel_Pentium_A80501.jpg"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Pentium_FDIV_bug"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Pentium_FDIV_bug rootpage-Pentium_FDIV_bug skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Pentium FDIV bug</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:KL_Intel_Pentium_A80501.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/KL_Intel_Pentium_A80501.jpg/220px-KL_Intel_Pentium_A80501.jpg" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/01/KL_Intel_Pentium_A80501.jpg/330px-KL_Intel_Pentium_A80501.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/01/KL_Intel_Pentium_A80501.jpg/440px-KL_Intel_Pentium_A80501.jpg 2x" data-file-width="1024" data-file-height="1024" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:KL_Intel_Pentium_A80501.jpg" class="internal" title="Enlarge"></a></div>66 MHz Intel Pentium (sSpec=SX837) with the FDIV bug</div></div></div>
+<p>The <b>Pentium FDIV bug</b> is a <a href="/wiki/Hardware_bug" title="Hardware bug">hardware bug</a> affecting the <a href="/wiki/Floating_point_unit" class="mw-redirect" title="Floating point unit">floating point unit</a> (FPU) of the <a href="/wiki/P5_(microarchitecture)" title="P5 (microarchitecture)">early Intel Pentium processors</a>. Because of the bug, the processor might return incorrect binary floating point results when dividing a number. The bug was discovered in 1994 by Professor Thomas R. Nicely at <a href="/wiki/Lynchburg_College" class="mw-redirect" title="Lynchburg College">Lynchburg College</a>.<sup id="cite_ref-NicelyFAQ_1-0" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup> Intel attributed the error to missing entries in the lookup table used by the floating-point division circuitry.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>The severity of the FDIV bug is debated. Though rarely encountered by most users (<i><a href="/wiki/Byte_(magazine)" title="Byte (magazine)">Byte</a></i> magazine estimated that 1 in 9 billion floating point divides with random parameters would produce inaccurate results),<sup id="cite_ref-halfhill-199503_3-0" class="reference"><a href="#cite_note-halfhill-199503-3">&#91;3&#93;</a></sup> both the flaw and Intel's initial handling of the matter were heavily criticized by the tech community.  
+</p><p>In December 1994, Intel <a href="/wiki/Product_recall" title="Product recall">recalled</a> the defective processors. In January 1995, Intel announced "a pre-tax charge of $475 million against earnings, ostensibly the total cost associated with replacement of the flawed processors."<sup id="cite_ref-NicelyFAQ_1-1" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Chronology"><span class="tocnumber">2</span> <span class="toctext">Chronology</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Affected_models"><span class="tocnumber">3</span> <span class="toctext">Affected models</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Detection_methods"><span class="tocnumber">4</span> <span class="toctext">Detection methods</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Generic"><span class="tocnumber">4.1</span> <span class="toctext">Generic</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Windows_95_or_98"><span class="tocnumber">4.2</span> <span class="toctext">Windows 95 or 98</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Windows_NT,_2000,_XP,_Server_2003"><span class="tocnumber">4.3</span> <span class="toctext">Windows NT, 2000, XP, Server 2003</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=1" title="Edit section: Description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/Division_algorithm#SRT_division" title="Division algorithm">Sweeney, Robertson, and Tocher (SRT)</a> division algorithm is used on the affected Pentium chips.  It is implemented as a <a href="/wiki/Programmable_logic_array" title="Programmable logic array">programmable logic array</a> with 2,048 cells, of which 1,066 cells should have been populated with one of five values: <span class="nowrap">–2, –1, 0, +1, +2</span>.  On the buggy chips, five cells that should have contained the value +2 were missing, instead returning 0.<sup id="cite_ref-halfhill-199503_3-1" class="reference"><a href="#cite_note-halfhill-199503-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Chronology">Chronology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=2" title="Edit section: Chronology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Thomas Nicely, a professor of mathematics at Lynchburg College, had written code to enumerate <a href="/wiki/Prime_number" title="Prime number">primes</a>, <a href="/wiki/Twin_prime" title="Twin prime">twin primes</a>, <a href="/wiki/Prime_triplet" title="Prime triplet">prime triplets</a>, and <a href="/wiki/Prime_quadruplet" title="Prime quadruplet">prime quadruplets</a>. Nicely noticed some inconsistencies in the calculations on June 13, 1994, shortly after adding a Pentium system to his group of computers, but was unable to eliminate other factors (such as programming errors, <a href="/wiki/Motherboard" title="Motherboard">motherboard</a> chipsets, etc.) until October 19, 1994. On October 24, 1994, he reported the issue to Intel. According to Nicely, his contact person at Intel later admitted that Intel had been aware of the problem since May 1994, when the flaw was discovered by Tom Kraljevic, a <a href="/wiki/Purdue_University" title="Purdue University">Purdue University</a> <a href="/wiki/Cooperative_education" title="Cooperative education">co-op</a> student working for Intel in Hillsboro, Oregon, during testing of the FPU for its new <a href="/wiki/P6_(microarchitecture)" title="P6 (microarchitecture)">P6</a> core, first used in the <a href="/wiki/Pentium_Pro" title="Pentium Pro">Pentium Pro</a>.
+</p><p>On October 30, 1994, Nicely sent an email describing the error he had discovered in the Pentium floating point unit to various contacts, requesting reports of testing for the flaw on <a href="/wiki/Intel_80486DX4" class="mw-redirect" title="Intel 80486DX4">486-DX4s</a>, Pentiums and <a href="/wiki/Pentium_compatible_processor" class="mw-redirect" title="Pentium compatible processor">Pentium clones</a>.<sup id="cite_ref-NicelyFAQ_1-2" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup>
+</p><p>This flaw in the Pentium FPU was quickly verified by other people around the <a href="/wiki/Internet" title="Internet">Internet</a>, and became known as the Pentium FDIV bug (FDIV is the <a href="/wiki/X86_instruction_listings" title="X86 instruction listings">x86 assembly language mnemonic</a> for <b>f</b>loating-point <b>div</b>ision). One example was found where the division result returned by the Pentium was off by about 61 parts per million.<sup id="cite_ref-NicelyFAQ_1-3" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup>
+</p><p>The story first appeared in the press on November 7, 1994, in an article in <i><a href="/wiki/Electronic_Engineering_Times" class="mw-redirect" title="Electronic Engineering Times">Electronic Engineering Times</a></i>, "Intel fixes a Pentium FPU glitch" by Alexander Wolfe.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>The story was subsequently picked up by <a href="/wiki/CNN" title="CNN">CNN</a> in a segment aired on November 21, 1994.<sup id="cite_ref-NicelyFAQ_1-4" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup> This brought it into widespread public prominence.
+</p><p>Publicly, Intel acknowledged the floating-point flaw, but claimed that it was not serious and would not affect most users. Intel offered to replace processors to users who could prove that they were affected. However, although most independent estimates found the bug to be of little importance and would have negligible effect on most users, it caused a great public outcry. Companies like <a href="/wiki/International_Business_Machines" class="mw-redirect" title="International Business Machines">IBM</a> (whose <a href="/wiki/IBM_5x86C" title="IBM 5x86C">IBM 5x86C</a> <a href="/wiki/Microprocessor" title="Microprocessor">microprocessor</a> competed at that time with the Intel Pentium line) joined the condemnation.
+</p><p>On December 20, 1994, Intel offered to replace all flawed Pentium processors on the basis of request, in response to mounting public pressure.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> Although it turned out that only a small fraction of Pentium owners bothered to get their chips replaced, the financial impact on the company was significant.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2019)">citation needed</span></a></i>&#93;</sup> On January&#160;17, 1995, Intel announced "a pre-tax charge of $475 million against earnings, ostensibly the total cost associated with replacement of the flawed processors."<sup id="cite_ref-NicelyFAQ_1-5" class="reference"><a href="#cite_note-NicelyFAQ-1">&#91;1&#93;</a></sup> Some of the defective chips were later turned into <a href="/wiki/Keychain" title="Keychain">key rings</a> by Intel.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>A 1995 article in <i><a href="/wiki/Science_(journal)" title="Science (journal)">Science</a></i> describes the value of number theory problems in discovering computer bugs and gives the mathematical background and history of <a href="/wiki/Brun%27s_constant" class="mw-redirect" title="Brun&#39;s constant">Brun's constant</a>, the problem Nicely was working on when he discovered the bug.<sup id="cite_ref-Cipra_Pentium_Bug_7-0" class="reference"><a href="#cite_note-Cipra_Pentium_Bug-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Affected_models">Affected models</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=3" title="Edit section: Affected models">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This problem occurs only on some models of the original Pentium processor.<sup id="cite_ref-IntelFaq_8-0" class="reference"><a href="#cite_note-IntelFaq-8">&#91;8&#93;</a></sup> The bug only existed in some Pentium family processors with a clock speed of less than 120&#160;MHz.<sup id="cite_ref-IntelFaq_8-1" class="reference"><a href="#cite_note-IntelFaq-8">&#91;8&#93;</a></sup> On affected models, the Intel Processor Frequency ID Utility checks for the presence of this bug.
+</p><p>The ten affected processors are listed below. The 39 S-specs of those processors are not listed in the Intel processor specification finder web page.
+</p>
+<table class="wikitable">
+<caption>Pentium P5 800&#160;nm 5V
+</caption>
+<tbody><tr>
+<th>Family</th>
+<th>Model</th>
+<th>Stepping</th>
+<th>Core stepping</th>
+<th>Clock rate</th>
+<th><a href="/wiki/Front_side_bus" class="mw-redirect" title="Front side bus">FSB</a> speed</th>
+<th>S-spec
+</th></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">B1</td>
+<td align="right">60 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">60&#160;MHz</td>
+<td>Q0352, Q0412, SX753
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="right">B1</td>
+<td align="right">66 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">66&#160;MHz</td>
+<td>Q0353, Q0413, SX754
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="right">C1</td>
+<td align="right">60 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">60&#160;MHz</td>
+<td>Q0466, SX835, SZ949
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="right">C1</td>
+<td align="right">66 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">66&#160;MHz</td>
+<td>Q0467, SX837, SZ950
+</td></tr></tbody></table>
+<table class="wikitable">
+<caption>Pentium P54C 600&#160;nm 3.3V
+</caption>
+<tbody><tr>
+<th>Family</th>
+<th>Model</th>
+<th>Stepping</th>
+<th>Core stepping</th>
+<th>Clock rate</th>
+<th>FSB speed</th>
+<th>S-spec
+</th></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">B1</td>
+<td align="right">75 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">50&#160;MHz</td>
+<td>Q0601
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">B1</td>
+<td align="right">90 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">60&#160;MHz</td>
+<td>Q0542, Q0613, Q0543, SX879, SX885, SX909, SX874
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">B1</td>
+<td align="right">100 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">66&#160;MHz</td>
+<td>Q0563, Q0587, Q0614, SX886, SX910
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">B3</td>
+<td align="right">75 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">50&#160;MHz</td>
+<td>Q0606, SX951
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">B3</td>
+<td align="right">90 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">60&#160;MHz</td>
+<td>Q0628, Q0611, Q0612, SX923, SX922, SX921, SX942, SX943, SX944, SZ951
+</td></tr>
+<tr>
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">B3</td>
+<td align="right">100 <a href="/wiki/Hertz" title="Hertz">MHz</a></td>
+<td align="right">66&#160;MHz</td>
+<td>Q0677, SX960
+</td></tr></tbody></table>
+<p>Some <a href="/wiki/Intel_80486_OverDrive" title="Intel 80486 OverDrive">Intel 80486 OverDrive</a> and <a href="/wiki/Pentium_Overdrive" class="mw-redirect" title="Pentium Overdrive">Pentium Overdrive</a> models have also been known to exhibit the FDIV bug, as well as the <a href="/wiki/Pentium_F00F_bug" title="Pentium F00F bug">F00F bug</a>.
+</p>
+<h2><span class="mw-headline" id="Detection_methods">Detection methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=4" title="Edit section: Detection methods">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Generic">Generic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=5" title="Edit section: Generic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The presence of the bug can be checked manually by performing the following calculation in any application that uses native floating point numbers, including the <a href="/wiki/Calculator_(Windows)" class="mw-redirect" title="Calculator (Windows)">Windows Calculator</a> or <a href="/wiki/Microsoft_Excel" title="Microsoft Excel">Microsoft Excel</a> in <a href="/wiki/Windows_95" title="Windows 95">Windows 95</a>/<a href="/wiki/Windows_98" title="Windows 98">98</a>.
+</p><p>The correct value is:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \textstyle {\frac {4,195,835}{3,145,727}}=1.333820449136241002}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="0">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mn>4</mn>
+                <mo>,</mo>
+                <mn>195</mn>
+                <mo>,</mo>
+                <mn>835</mn>
+              </mrow>
+              <mrow>
+                <mn>3</mn>
+                <mo>,</mo>
+                <mn>145</mn>
+                <mo>,</mo>
+                <mn>727</mn>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>=</mo>
+          <mn>1.333820449136241002</mn>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \textstyle {\frac {4,195,835}{3,145,727}}=1.333820449136241002}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b3eb4ba17c482d34efaf3e44d0289fa5b5f7be68" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.505ex; width:33.337ex; height:4.176ex;" alt="\textstyle {\frac {4,195,835}{3,145,727}}=1.333820449136241002"/></span></dd></dl>
+<p>When converted to the hexadecimal value used by the processor, 4,195,835 = 0x4005FB and 3,145,727 = 0x2FFFFF. The '5' in 0x4005FB triggers the fault in the FPU control logic. As a result, the value returned by a flawed Pentium processor in certain situations is incorrect at or beyond four digits:<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \textstyle {\frac {4,195,835}{3,145,727}}=1.333{\color {Red}{739068902037589}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mstyle displaystyle="false" scriptlevel="0">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mrow>
+                <mn>4</mn>
+                <mo>,</mo>
+                <mn>195</mn>
+                <mo>,</mo>
+                <mn>835</mn>
+              </mrow>
+              <mrow>
+                <mn>3</mn>
+                <mo>,</mo>
+                <mn>145</mn>
+                <mo>,</mo>
+                <mn>727</mn>
+              </mrow>
+            </mfrac>
+          </mrow>
+          <mo>=</mo>
+          <mn>1.333</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mstyle mathcolor="#ED1B23">
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>739068902037589</mn>
+              </mrow>
+            </mstyle>
+          </mrow>
+        </mstyle>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \textstyle {\frac {4,195,835}{3,145,727}}=1.333{\color {Red}{739068902037589}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0eeeba18a036ec710e4461279a61d6bc950e1c35" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.505ex; width:33.337ex; height:4.176ex;" alt="\textstyle {\frac {4,195,835}{3,145,727}}=1.333{\color {Red}{739068902037589}}"/></span></dd></dl>
+<h3><span class="mw-headline" id="Windows_95_or_98">Windows 95 or 98</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=6" title="Edit section: Windows 95 or 98">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Users can check if their processor has the issue using <a href="/wiki/Device_Manager" title="Device Manager">Device Manager</a>. Once in Device Manager, users should expand "System devices", locate then click on "Numeric data processor", then click the Properties button.  Once the new Properties window appears, click the Settings tab.<br />
+If the processor does <em>not</em> have the FDIV issue, the following message will be seen:
+<cite>"Your computer's numeric data processor has passed all diagnostic tests and appears to be working properly."</cite>,
+Otherwise the following message shall appear:
+<cite>"The numeric processor in this computer can sometimes compute inaccurate results when dividing large numbers"</cite>
+</p><p>Options are then provided at the bottom of the Settings tab to "Always use", "Use only if [it] passes all diagnostics" or "Never use".<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p>
+<h3><span id="Windows_NT.2C_2000.2C_XP.2C_Server_2003"></span><span class="mw-headline" id="Windows_NT,_2000,_XP,_Server_2003">Windows NT, 2000, XP, Server 2003</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=7" title="Edit section: Windows NT, 2000, XP, Server 2003">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="infobox vevent" style="width:22em"><caption class="summary">pentnt</caption><tbody><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer(s)</a></th><td><a href="/wiki/Microsoft" title="Microsoft">Microsoft</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Initial release</th><td>May&#160;30, 1995<span class="noprint">&#59;&#32;24 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">1995-05-30</span>)</span></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Command_(computing)" title="Command (computing)">Command</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/Proprietary_software" title="Proprietary software">Proprietary</a> <a href="/wiki/Commercial_software" title="Commercial software">commercial software</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.10/cc755868(v=ws.10)">pentnt</a></td></tr></tbody></table>
+<p>Users can run the <code>pentnt</code> <a href="/wiki/Command_(computing)" title="Command (computing)">command</a> included with <a href="/wiki/Windows_NT_3.51" title="Windows NT 3.51">Windows NT 3.51</a>, <a href="/wiki/Windows_NT_4.0" title="Windows NT 4.0">NT 4.0</a>, <a href="/wiki/Windows_2000" title="Windows 2000">2000</a>, <a href="/wiki/Windows_XP" title="Windows XP">XP</a>, and <a href="/wiki/Windows_Server_2003" title="Windows Server 2003">Server 2003</a>. The computer needs to be restarted for changes to take effect.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> The <code>pentnt</code> utility is deprecated and not included in current versions of Windows.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p><p>The command-syntax is:
+</p><p><kbd> pentnt [-c] [-f] [-o]</kbd>
+</p>
+<ul><li><code><b>-c</b></code> – Enable conditional emulation</li>
+<li><code><b>-f</b></code> – Enable forced emulation</li>
+<li><code><b>-o</b></code> – Disable forced emulation and reenable floating-point hardware if it is present</li>
+<li><code><b>/?</b></code> – Display help</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Pentium_F00F_bug" title="Pentium F00F bug">Pentium F00F bug</a></li>
+<li><a href="/wiki/Meltdown_(security_vulnerability)" title="Meltdown (security vulnerability)">Meltdown (security vulnerability)</a> and <a href="/wiki/Spectre_(security_vulnerability)" title="Spectre (security vulnerability)">Spectre (security vulnerability)</a></li>
+<li><a href="/wiki/MOS_Technology_6502#Bugs_and_quirks" title="MOS Technology 6502">MOS Technology 6502 bugs and quirks</a></li>
+<li><a href="/wiki/Floating_point#Accuracy_problems" class="mw-redirect" title="Floating point">Accuracy problems in floating point operations</a></li>
+<li><a href="/wiki/Division_algorithm#SRT_division" title="Division algorithm">SRT division</a></li>
+<li><a href="/wiki/Microcode" title="Microcode">Microcode</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-NicelyFAQ-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-NicelyFAQ_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-NicelyFAQ_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-NicelyFAQ_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-NicelyFAQ_1-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-NicelyFAQ_1-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-NicelyFAQ_1-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Nicely, Thomas (August 19, 2011). <a rel="nofollow" class="external text" href="http://www.trnicely.net/pentbug/pentbug.html">"Pentium FDIV flaw FAQ"</a>. <i>trnicely.net</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20190618044444/http://www.trnicely.net/pentbug/pentbug.html">Archived</a> from the original on June 18, 2019<span class="reference-accessdate">. Retrieved <span class="nowrap">June 18,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=trnicely.net&amp;rft.atitle=Pentium+FDIV+flaw+FAQ&amp;rft.date=2011-08-19&amp;rft.aulast=Nicely&amp;rft.aufirst=Thomas&amp;rft_id=http%3A%2F%2Fwww.trnicely.net%2Fpentbug%2Fpentbug.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160406055056/http://download.intel.com/support/processors/pentium/sb/FDIV_Floating_Point_Flaw_Pentium_Processor.pdf#">"Statistical Analysis of Floating Point Flaw: Intel White Paper"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/Intel" title="Intel">Intel</a>. 9 July 2004. p.&#160;9. Solution ID CS-013007. Archived from <a rel="nofollow" class="external text" href="http://download.intel.com/support/processors/pentium/sb/FDIV_Floating_Point_Flaw_Pentium_Processor.pdf">the original</a> <span class="cs1-format">(PDF)</span> on 2016-04-06<span class="reference-accessdate">. Retrieved <span class="nowrap">5 April</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Statistical+Analysis+of+Floating+Point+Flaw%3A+Intel+White+Paper&amp;rft.pages=9&amp;rft.pub=Intel&amp;rft.date=2004-07-09&amp;rft_id=http%3A%2F%2Fdownload.intel.com%2Fsupport%2Fprocessors%2Fpentium%2Fsb%2FFDIV_Floating_Point_Flaw_Pentium_Processor.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-halfhill-199503-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-halfhill-199503_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-halfhill-199503_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Tom R. Halfhill (March 1995). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20060209005434/http://www.byte.com/art/9503/sec13/art1.htm">"An error in a lookup table created the infamous bug in Intel's latest processor"</a>. <i><a href="/wiki/BYTE" class="mw-redirect" title="BYTE">BYTE</a></i> (March 1995). Archived from <a rel="nofollow" class="external text" href="http://www.byte.com/art/9503/sec13/art1.htm">the original</a> <span class="cs1-format">(– <sup><a rel="nofollow" class="external text" href="https://scholar.google.co.uk/scholar?hl=en&amp;lr=&amp;q=intitle%3AAn+error+in+a+lookup+table+created+the+infamous+bug+in+Intel%27s+latest+processor&amp;as_publication=%5B%5BBYTE%5D%5D&amp;as_ylo=&amp;as_yhi=&amp;btnG=Search">Scholar search</a></sup>)</span> on February 9, 2006<span class="reference-accessdate">. Retrieved <span class="nowrap">2006-12-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=BYTE&amp;rft.atitle=An+error+in+a+lookup+table+created+the+infamous+bug+in+Intel%27s+latest+processor&amp;rft.issue=March+1995&amp;rft.date=1995-03&amp;rft.au=Tom+R.+Halfhill&amp;rft_id=http%3A%2F%2Fwww.byte.com%2Fart%2F9503%2Fsec13%2Fart1.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Alexander Wolfe. <a rel="nofollow" class="external text" href="http://davefaq.com/Opinions/Stupid/Pentium.html#glitch">"Intel fixes a Pentium FPU glitch"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Intel+fixes+a+Pentium+FPU+glitch&amp;rft.au=Alexander+Wolfe&amp;rft_id=http%3A%2F%2Fdavefaq.com%2FOpinions%2FStupid%2FPentium.html%23glitch&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://archive.is/20120710222033/http://findarticles.com/p/articles/mi_m0EIN/is_1994_Dec_20/ai_15939945">"Intel adopts upon-request replacement policy on Pentium processors with floating point flaw; Will take Q4 charge against earnings"</a>. Business Wire. 1994-12-20. Archived from <a rel="nofollow" class="external text" href="http://findarticles.com/p/articles/mi_m0EIN/is_1994_Dec_20/ai_15939945">the original</a> on 2012-07-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2006-12-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Intel+adopts+upon-request+replacement+policy+on+Pentium+processors+with+floating+point+flaw%3B+Will+take+Q4+charge+against+earnings&amp;rft.pub=Business+Wire&amp;rft.date=1994-12-20&amp;rft_id=http%3A%2F%2Ffindarticles.com%2Fp%2Farticles%2Fmi_m0EIN%2Fis_1994_Dec_20%2Fai_15939945&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20100203202905/http://www.boiledbeans.net/2009/04/20/how-many-engineers-does-it-take-to-change-a-lightbulb/#">"How many engineers does it take to change a lightbulb?"</a>. <i>Boiledbeans</i>. 20 April 2009. Archived from <a rel="nofollow" class="external text" href="http://www.boiledbeans.net/2009/04/20/how-many-engineers-does-it-take-to-change-a-lightbulb/">the original</a> on 2010-02-03<span class="reference-accessdate">. Retrieved <span class="nowrap">10 November</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Boiledbeans&amp;rft.atitle=How+many+engineers+does+it+take+to+change+a+lightbulb%3F&amp;rft.date=2009-04-20&amp;rft_id=http%3A%2F%2Fwww.boiledbeans.net%2F2009%2F04%2F20%2Fhow-many-engineers-does-it-take-to-change-a-lightbulb%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Cipra_Pentium_Bug-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-Cipra_Pentium_Bug_7-0">^</a></b></span> <span class="reference-text"><cite class="citation journal"><a href="/wiki/Barry_Arthur_Cipra" title="Barry Arthur Cipra">Cipra, Barry Arthur</a> (1995-01-13). "How number theory got the best of the Pentium chip". <i>Science</i>. <b>267</b> (5195): 175. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1126%2Fscience.267.5195.175">10.1126/science.267.5195.175</a>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/17791336">17791336</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Science&amp;rft.atitle=How+number+theory+got+the+best+of+the+Pentium+chip&amp;rft.volume=267&amp;rft.issue=5195&amp;rft.pages=175&amp;rft.date=1995-01-13&amp;rft_id=info%3Adoi%2F10.1126%2Fscience.267.5195.175&amp;rft_id=info%3Apmid%2F17791336&amp;rft.aulast=Cipra&amp;rft.aufirst=Barry+Arthur&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-IntelFaq-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-IntelFaq_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IntelFaq_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090511094631/http://www.intel.com/support/processors/pentium/sb/CS-012748.htm#">"FDIV Replacement Program: Frequently asked questions"</a>. <a href="/wiki/Intel" title="Intel">Intel</a>. 2009-03-20. Solution ID CS-012748. Archived from <a rel="nofollow" class="external text" href="http://www.intel.com/support/processors/pentium/sb/CS-012748.htm">the original</a> on 2009-05-11<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-11-10</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=FDIV+Replacement+Program%3A+Frequently+asked+questions&amp;rft.pub=Intel&amp;rft.date=2009-03-20&amp;rft_id=http%3A%2F%2Fwww.intel.com%2Fsupport%2Fprocessors%2Fpentium%2Fsb%2FCS-012748.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ipsr.ku.edu/stafffil/hoyle/pentium_fdiv/">"Pentium FDIV bug - a Picture"</a>. Kansas University Institute for Policy and Social Research. 1994-11-30<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-11-03</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Pentium+FDIV+bug+-+a+Picture&amp;rft.pub=Kansas+University+Institute+for+Policy+and+Social+Research&amp;rft.date=1994-11-30&amp;rft_id=http%3A%2F%2Fwww.ipsr.ku.edu%2Fstafffil%2Fhoyle%2Fpentium_fdiv%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20081210133154/https://www.maa.org/mathland/mathland_5_12.html">"Ivars Peterson's MathTrek: Pentium Bug Revisited"</a>. <a href="/wiki/Mathematical_Association_of_America" title="Mathematical Association of America">Mathematical Association of America</a>. Archived from <a rel="nofollow" class="external text" href="https://www.maa.org/mathland/mathland_5_12.html">the original</a> on 10 December 2008.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ivars+Peterson%27s+MathTrek%3A+Pentium+Bug+Revisited&amp;rft.pub=Mathematical+Association+of+America&amp;rft_id=https%3A%2F%2Fwww.maa.org%2Fmathland%2Fmathland_5_12.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web">Slob, Arie. <a rel="nofollow" class="external text" href="http://www.helpwithwindows.com/windows95/troub-58.html">"Windows 95 Troubleshooting: How to Check for a Faulty Math Coprocessor"</a>. <i>www.helpwithwindows.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">April 23,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.helpwithwindows.com&amp;rft.atitle=Windows+95+Troubleshooting%3A+How+to+Check+for+a+Faulty+Math+Coprocessor&amp;rft.aulast=Slob&amp;rft.aufirst=Arie&amp;rft_id=http%3A%2F%2Fwww.helpwithwindows.com%2Fwindows95%2Ftroub-58.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://technet.microsoft.com/en-us/library/bb490967.aspx">"Pentnt"</a>. <i><a href="/wiki/Microsoft_TechNet" title="Microsoft TechNet">Microsoft TechNet</a></i>. <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a>. September 11, 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">April 23,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Microsoft+TechNet&amp;rft.atitle=Pentnt&amp;rft.date=2009-09-11&amp;rft_id=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2Fbb490967.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3APentium+FDIV+bug" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pentnt">https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pentnt</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.trnicely.net/#PENT">Personal website of Dr. Nicely, who discovered the bug</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.earlham.edu/~dusko/cs63/fdiv.html">A page with precise information, also about the cause</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.notebookservice030.de/downloads/docs/win95cleve.pdf">A Tale of Two Numbers</a>, by <a href="/wiki/Cleve_Moler" title="Cleve Moler">Cleve Moler</a> of <a href="/wiki/MathWorks" title="MathWorks">MathWorks</a>
+<ul><li><a rel="nofollow" class="external text" href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=1666&amp;objectType=file">ZIP-file containing more details</a> (See <a href="/wiki/ZIP_file_format" class="mw-redirect" title="ZIP file format">ZIP file format</a> for details on the file)</li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20010429062848/http://support.intel.com/support/processors/pentium/fdiv/">Intel's official site</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.cpucollection.se/details.php?image_id=784">Unopened Intel CPU box from the FDIV replacement program</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1341
+Cached time: 20200311054748
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.356 seconds
+Real time usage: 0.491 seconds
+Preprocessor visited node count: 1375/1000000
+Post‐expand include size: 26768/2097152 bytes
+Template argument size: 1428/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 40457/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.167/10.000 seconds
+Lua memory usage: 5.24 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  401.785      1 -total
+ 48.63%  195.378      1 Template:Reflist
+ 34.15%  137.194     10 Template:Cite_web
+ 27.82%  111.770      1 Template:Infobox_software
+ 24.00%   96.446      1 Template:Infobox
+ 19.76%   79.403      1 Template:Fact
+ 12.53%   50.359      1 Template:Fix
+  9.81%   39.402      1 Template:Start_date_and_age
+  8.60%   34.571      2 Template:Category_handler
+  8.23%   33.075      2 Template:Cite_journal
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:24637-0!canonical!math=5 and timestamp 20200311054748 and revision id 944998776
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Pentium_FDIV_bug&amp;oldid=944998776">https://en.wikipedia.org/w/index.php?title=Pentium_FDIV_bug&amp;oldid=944998776</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:X86_architecture" title="Category:X86 architecture">X86 architecture</a></li><li><a href="/wiki/Category:Hardware_bugs" title="Category:Hardware bugs">Hardware bugs</a></li><li><a href="/wiki/Category:1994_in_computer_science" title="Category:1994 in computer science">1994 in computer science</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_January_2019" title="Category:Articles with unsourced statements from January 2019">Articles with unsourced statements from January 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Pentium+FDIV+bug" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Pentium+FDIV+bug" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Pentium_FDIV_bug" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Pentium_FDIV_bug" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Pentium_FDIV_bug">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Pentium_FDIV_bug" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Pentium_FDIV_bug" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Pentium_FDIV_bug&amp;oldid=944998776" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Pentium_FDIV_bug&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q668011" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Pentium_FDIV_bug&amp;id=944998776&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Pentium+FDIV+bug">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Pentium+FDIV+bug&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Pentium_FDIV_bug&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Error_de_divisi%C3%B3_del_Pentium" title="Error de divisió del Pentium – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Pentium-FDIV-Bug" title="Pentium-FDIV-Bug – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Error_de_divisi%C3%B3n_del_Intel_Pentium" title="Error de división del Intel Pentium – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Bug_de_la_division_du_Pentium" title="Bug de la division du Pentium – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Pentium_FDIV_bug" title="Pentium FDIV bug – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%91%D7%90%D7%92_%D7%94%D7%A4%D7%A0%D7%98%D7%99%D7%95%D7%9D" title="באג הפנטיום – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Pentium_FDIV_%E3%83%90%E3%82%B0" title="Pentium FDIV バグ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Pentium_FDIV_bug" title="Pentium FDIV bug – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Defeito_de_ponto_flutuante" title="Defeito de ponto flutuante – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D1%88%D0%B8%D0%B1%D0%BA%D0%B0_Pentium_FDIV" title="Ошибка Pentium FDIV – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Pentium_FDIV_bag" title="Pentium FDIV bag – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Pentiums_FDIV-bugg" title="Pentiums FDIV-bugg – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BC%D0%B8%D0%BB%D0%BA%D0%B0_Pentium_FDIV" title="Помилка Pentium FDIV – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%A5%94%E8%85%BE%E6%B5%AE%E7%82%B9%E9%99%A4%E9%94%99%E8%AF%AF" title="奔腾浮点除错误 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q668011#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 11 March 2020, at 05:47<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Pentium_FDIV_bug&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.356","walltime":"0.491","ppvisitednodes":{"value":1375,"limit":1000000},"postexpandincludesize":{"value":26768,"limit":2097152},"templateargumentsize":{"value":1428,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":40457,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  401.785      1 -total"," 48.63%  195.378      1 Template:Reflist"," 34.15%  137.194     10 Template:Cite_web"," 27.82%  111.770      1 Template:Infobox_software"," 24.00%   96.446      1 Template:Infobox"," 19.76%   79.403      1 Template:Fact"," 12.53%   50.359      1 Template:Fix","  9.81%   39.402      1 Template:Start_date_and_age","  8.60%   34.571      2 Template:Category_handler","  8.23%   33.075      2 Template:Cite_journal"]},"scribunto":{"limitreport-timeusage":{"value":"0.167","limit":"10.000"},"limitreport-memusage":{"value":5495189,"limit":52428800}},"cachereport":{"origin":"mw1341","timestamp":"20200311054748","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Pentium FDIV bug","url":"https:\/\/en.wikipedia.org\/wiki\/Pentium_FDIV_bug","sameAs":"http:\/\/www.wikidata.org\/entity\/Q668011","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q668011","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-11-16T22:36:19Z","dateModified":"2020-03-11T05:47:46Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/0\/01\/KL_Intel_Pentium_A80501.jpg","headline":"bug in the Intel P5 Pentium floating point unit"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":90,"wgHostname":"mw1256"});});</script></body></html>

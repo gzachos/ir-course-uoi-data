@@ -1,0 +1,1390 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Row- and column-major order - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn4k2QpAIDEAADWDZYUAAABH","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Row-_and_column-major_order","wgTitle":"Row- and column-major order","wgCurRevisionId":942989934,"wgRevisionId":942989934,"wgArticleId":1620786,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: location","All articles with unsourced statements","Articles with unsourced statements from March 2016","Articles with unsourced statements from November 2017","Arrays"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Row-_and_column-major_order","wgRelevantArticleId":1620786,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Row-major_order","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Row-_and_column-major_order","wgWikibaseItemId":"Q7371746","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":
+"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","ext.math.scripts","ext.scribunto.logs","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"]
+;</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Row_and_column_major_order.svg/1200px-Row_and_column_major_order.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Row-_and_column-major_order rootpage-Row-_and_column-major_order skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Row- and column-major order</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Row-major_order&amp;redirect=no" class="mw-redirect" title="Row-major order">Row-major order</a>)</span></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:172px;"><a href="/wiki/File:Row_and_column_major_order.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Row_and_column_major_order.svg/170px-Row_and_column_major_order.svg.png" decoding="async" width="170" height="227" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Row_and_column_major_order.svg/255px-Row_and_column_major_order.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Row_and_column_major_order.svg/340px-Row_and_column_major_order.svg.png 2x" data-file-width="512" data-file-height="683" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Row_and_column_major_order.svg" class="internal" title="Enlarge"></a></div>Illustration of difference between row- and column-major ordering</div></div></div>
+<p>In computing, <b>row-major order</b> and <b>column-major order</b> are methods for storing <a href="/wiki/Multidimensional_array" class="mw-redirect" title="Multidimensional array">multidimensional arrays</a>  in linear storage such as <a href="/wiki/Random_access_memory" class="mw-redirect" title="Random access memory">random access memory</a>.
+</p><p>The difference between the orders lies in which elements of an array are <a href="/w/index.php?title=Contiguous_in_memory&amp;action=edit&amp;redlink=1" class="new" title="Contiguous in memory (page does not exist)">contiguous in memory</a>. In row-major order, the consecutive elements of a row reside next to each other, whereas the same holds true for consecutive elements of a column in column-major order. While the terms allude to the rows and columns of a two-dimensional array, i.e. a <a href="/wiki/Matrix_(mathematics)" title="Matrix (mathematics)">matrix</a>, the orders can be generalized to arrays of any dimension by noting that the terms row-major and column-major are equivalent to <a href="/wiki/Lexicographical_order" title="Lexicographical order">lexicographic and colexicographic orders</a>, respectively.
+</p><p>Data layout is critical for correctly passing arrays between programs written in different programming languages. It is also important for performance when traversing an array because modern CPUs process sequential data more efficiently than nonsequential data. This is primarily due to <a href="/wiki/CPU_cache" title="CPU cache">CPU caching</a>. In addition, contiguous access makes it possible to use <a href="/wiki/SIMD" title="SIMD">SIMD</a> instructions that operate on vectors of data. In some media such as tape or NAND <a href="/wiki/Flash_memory" title="Flash memory">flash memory</a>, accessing sequentially is <a href="/wiki/Order_of_magnitude" title="Order of magnitude">orders of magnitude</a> faster than nonsequential access.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2016)">citation needed</span></a></i>&#93;</sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Explanation_and_example"><span class="tocnumber">1</span> <span class="toctext">Explanation and example</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Programming_languages_and_libraries"><span class="tocnumber">2</span> <span class="toctext">Programming languages and libraries</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Neither_row-major_nor_column-major"><span class="tocnumber">2.1</span> <span class="toctext">Neither row-major nor column-major</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#External_libraries"><span class="tocnumber">2.2</span> <span class="toctext">External libraries</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Transposition"><span class="tocnumber">3</span> <span class="toctext">Transposition</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Address_calculation_in_general"><span class="tocnumber">4</span> <span class="toctext">Address calculation in general</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Sources"><span class="tocnumber">7</span> <span class="toctext">Sources</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Explanation_and_example">Explanation and example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=1" title="Edit section: Explanation and example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The terms row-major and column-major stem from the terminology related to ordering objects.  A general way to order objects with many attributes is to the first group and order them by one attribute, and then, within each such group, group and order them by another attribute, etc. If more than one attribute participates in ordering, the first would be called <i>major</i> and the last <i>minor</i>. If two attributes participate in ordering, it is sufficient to name only the major attribute.
+</p><p>In the case of arrays, the attributes are the indices along each dimension. For <a href="/wiki/Matrix_(mathematics)#Notation" title="Matrix (mathematics)">matrices</a> in mathematical notation, the first index indicates the <i>row</i>, and the second indicates the <i>column</i>, e.g., given a matrix <i>A</i> , <i>a</i><sub><i>1,2</i></sub> is in its first row and second column. This convention is carried over to the syntax in programming languages,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> although often with <a href="/wiki/Zero-based_numbering" title="Zero-based numbering">indexes starting at 0</a> instead of 1.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>Even though the row is indicated by the <i>first</i> index and the column by the <i>second</i> index, no grouping order between the dimensions is implied by this. The choice of how to group and order the indices, either by row-major or column-major methods, is thus a matter of convention. The same terminology can be applied to even higher dimensional arrays. Row-major grouping starts from the <i>leftmost</i> index  and column-major from the <i>rightmost</i> index, leading to <a href="/wiki/Lexicographical_order" title="Lexicographical order">lexicographic and colexicographic (or colex) orders</a>, respectively.
+</p><p>For example, for the array
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A={\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\a_{21}&amp;a_{22}&amp;a_{23}\end{bmatrix}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow>
+            <mo>[</mo>
+            <mtable rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>11</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>12</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>13</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>21</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>22</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub>
+                    <mi>a</mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mn>23</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+            <mo>]</mo>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A={\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\a_{21}&amp;a_{22}&amp;a_{23}\end{bmatrix}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0d2606537373aed9f7c6240cc6c94efcce12c53a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:22.011ex; height:6.176ex;" alt="{\displaystyle A={\begin{bmatrix}a_{11}&amp;a_{12}&amp;a_{13}\\a_{21}&amp;a_{22}&amp;a_{23}\end{bmatrix}}}"/></span></dd></dl>
+<p>the two possible ways (in C, indexing from 0) are
+</p><div>
+
+&#32;
+<table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:50%;"><tbody><tr>
+<td style="text-align: left; vertical-align: top;">
+<table class="wikitable" style="text-align:center; width:250px">
+<caption>Row-major order  (lexographical access order)
+</caption>
+<tbody><tr>
+<th>Address
+</th>
+<th>Access
+</th>
+<th>Value
+</th></tr>
+<tr>
+<th>0
+</th>
+<td><code>A[0][0]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{11}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>11</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{11}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/411c26881c752d514e61bfdd5eb8463c6e808202" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{11}"/></span>
+</td></tr>
+<tr>
+<th>1
+</th>
+<td><code>A[0][1]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{12}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>12</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{12}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e062aea942fa88bbd0aa72d26f8fc011b323bf5e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{12}"/></span>
+</td></tr>
+<tr>
+<th>2
+</th>
+<td><code>A[0][2]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{13}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>13</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{13}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/de4f86c305ff1b04fabb1cddcedd192853d6815c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{13}}"/></span>
+</td></tr>
+<tr>
+<th>3
+</th>
+<td><code>A[1][0]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{21}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{21}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/372531d1d09885784f3430660f8654b0d48eb394" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{21}"/></span>
+</td></tr>
+<tr>
+<th>4
+</th>
+<td><code>A[1][1]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{22}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7a66fac4dcd116c0dca38bd6cd9a805f62b69f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{22}}"/></span>
+</td></tr>
+<tr>
+<th>5
+</th>
+<td><code>A[1][2]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{23}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{23}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e214e4d1b4dcc0f3909e915fd69012c5bd1b7b7b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="{\displaystyle a_{23}}"/></span>
+</td></tr></tbody></table>
+<p>&#32;
+</p>
+</td>
+<td style="text-align: left; vertical-align: top;">
+<table class="wikitable" style="text-align:center; width:250px">
+<caption>Column-major order  (colexographical access order)
+</caption>
+<tbody><tr>
+<th>Address
+</th>
+<th>Access
+</th>
+<th>Value
+</th></tr>
+<tr>
+<th>0
+</th>
+<td><code>A[0][0]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{11}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>11</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{11}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/411c26881c752d514e61bfdd5eb8463c6e808202" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{11}"/></span>
+</td></tr>
+<tr>
+<th>1
+</th>
+<td><code>A[1][0]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{21}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{21}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/372531d1d09885784f3430660f8654b0d48eb394" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{21}"/></span>
+</td></tr>
+<tr>
+<th>2
+</th>
+<td><code>A[0][1]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{12}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>12</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{12}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e062aea942fa88bbd0aa72d26f8fc011b323bf5e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{12}"/></span>
+</td></tr>
+<tr>
+<th>3
+</th>
+<td><code>A[1][1]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{22}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7a66fac4dcd116c0dca38bd6cd9a805f62b69f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{22}}"/></span>
+</td></tr>
+<tr>
+<th>4
+</th>
+<td><code>A[0][2]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{13}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>13</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{13}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/de4f86c305ff1b04fabb1cddcedd192853d6815c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{13}}"/></span>
+</td></tr>
+<tr>
+<th>5
+</th>
+<td><code>A[1][2]</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{23}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{23}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e214e4d1b4dcc0f3909e915fd69012c5bd1b7b7b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="{\displaystyle a_{23}}"/></span>
+</td></tr></tbody></table>
+<p>&#32;
+</p>
+</td>
+<td style="text-align: left; vertical-align: top;">
+<p>&#32;
+</p>
+</td></tr></tbody></table></div>
+<p>The two possible ways (from Fortran, 1-indexed):
+</p><div>
+
+&#32;
+<table class="multicol" role="presentation" style="border-collapse: collapse; padding: 0; border: 0; background:transparent; width:50%;"><tbody><tr>
+<td style="text-align: left; vertical-align: top;">
+<table class="wikitable" style="text-align:center; width:250px">
+<caption>Row-major order  (colexographical access order)
+</caption>
+<tbody><tr>
+<th>Address
+</th>
+<th>Access
+</th>
+<th>Value
+</th></tr>
+<tr>
+<th>1
+</th>
+<td><code>A(1,1)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{11}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>11</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{11}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/411c26881c752d514e61bfdd5eb8463c6e808202" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{11}"/></span>
+</td></tr>
+<tr>
+<th>2
+</th>
+<td><code>A(1,2)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{12}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>12</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{12}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e062aea942fa88bbd0aa72d26f8fc011b323bf5e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{12}"/></span>
+</td></tr>
+<tr>
+<th>3
+</th>
+<td><code>A(1,3)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{13}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>13</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{13}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/de4f86c305ff1b04fabb1cddcedd192853d6815c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{13}}"/></span>
+</td></tr>
+<tr>
+<th>4
+</th>
+<td><code>A(2,1)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{21}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{21}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/372531d1d09885784f3430660f8654b0d48eb394" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{21}"/></span>
+</td></tr>
+<tr>
+<th>5
+</th>
+<td><code>A(2,2)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{22}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7a66fac4dcd116c0dca38bd6cd9a805f62b69f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{22}}"/></span>
+</td></tr>
+<tr>
+<th>6
+</th>
+<td><code>A(2,3)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{23}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{23}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e214e4d1b4dcc0f3909e915fd69012c5bd1b7b7b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="{\displaystyle a_{23}}"/></span>
+</td></tr></tbody></table>
+<p>&#32;
+</p>
+</td>
+<td style="text-align: left; vertical-align: top;">
+<table class="wikitable" style="text-align:center; width:250px">
+<caption>Column-major order  (lexographical access order)
+</caption>
+<tbody><tr>
+<th>Address
+</th>
+<th>Access
+</th>
+<th>Value
+</th></tr>
+<tr>
+<th>1
+</th>
+<td><code>A(1,1)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{11}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>11</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{11}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/411c26881c752d514e61bfdd5eb8463c6e808202" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{11}"/></span>
+</td></tr>
+<tr>
+<th>2
+</th>
+<td><code>A(2,1)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{21}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>21</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{21}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/372531d1d09885784f3430660f8654b0d48eb394" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{21}"/></span>
+</td></tr>
+<tr>
+<th>3
+</th>
+<td><code>A(1,2)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{12}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>12</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{12}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e062aea942fa88bbd0aa72d26f8fc011b323bf5e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{12}"/></span>
+</td></tr>
+<tr>
+<th>4
+</th>
+<td><code>A(2,2)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{22}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>22</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{22}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f7a66fac4dcd116c0dca38bd6cd9a805f62b69f4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{22}}"/></span>
+</td></tr>
+<tr>
+<th>5
+</th>
+<td><code>A(1,3)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{13}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>13</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{13}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/de4f86c305ff1b04fabb1cddcedd192853d6815c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="a_{{13}}"/></span>
+</td></tr>
+<tr>
+<th>6
+</th>
+<td><code>A(2,3)</code>
+</td>
+<td><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{23}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>23</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{23}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e214e4d1b4dcc0f3909e915fd69012c5bd1b7b7b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.106ex; height:2.009ex;" alt="{\displaystyle a_{23}}"/></span>
+</td></tr></tbody></table>
+<p>&#32;
+</p>
+</td>
+<td style="text-align: left; vertical-align: top;">
+<p>&#32;
+</p>
+</td></tr></tbody></table></div>
+<p><br />
+Note how the use of <code>A[i][j]</code> with multi-step indexing as in C, as opposed to a neutral notation like <code>A(i,j)</code> as in Fortran, almost inevitably implies row-major order for syntactic reasons, so to speak, because it can be rewritten as <code>(A[i])[j]</code>, and the <code>A[i]</code> row part can even be assigned to an intermediate variable that is then indexed in a separate expression. (No other implications should be assumed, e.g., Fortran is not column-major simply <i>because</i> of its notation, and even the above implication could intentionally be circumvented in a new language.)
+</p><p>To use column-major order in a row-major environment, or vice versa, for whatever reason, one workaround is to assign non-conventional roles to the indexes (using the first index for the column and the second index for the row), and another is to bypass language syntax by explicitly computing positions in a one-dimensional array. Of course, deviating from convention probably incurs a cost that increases with the degree of necessary interaction with conventional language features and other code, not only in the form of increased vulnerability to mistakes (forgetting to also invert matrix multiplication order, reverting to convention during code maintenance, etc.), but also in the form of having to actively rearrange elements, all of which have to be weighed against any original purpose such as increasing performance.
+</p>
+<h2><span class="mw-headline" id="Programming_languages_and_libraries">Programming languages and libraries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=2" title="Edit section: Programming languages and libraries">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Programming languages or their standard libraries that support multi-dimensional arrays typically have a native row-major or column-major storage order for these arrays.
+</p><p>Row-major order is used in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>/<a href="/wiki/C%2B%2B" title="C++">C++</a>/<a href="/wiki/Objective-C" title="Objective-C">Objective-C</a> (for C-style arrays), <a href="/wiki/PL/I" title="PL/I">PL/I</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a>,<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> <a href="/wiki/Speakeasy_(computational_environment)" title="Speakeasy (computational environment)">Speakeasy</a>,<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="ftp&#58;//www.speakeasy.com/downloads/manuals/speakeasy_reference_manual.pdf download denied (November 2017)">citation needed</span></a></i>&#93;</sup> <a href="/wiki/SAS_language" title="SAS language">SAS</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> and <a href="/wiki/Rasdaman" title="Rasdaman">Rasdaman</a>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>Column-major order is used in <a href="/wiki/Fortran" title="Fortran">Fortran</a>, <a href="/wiki/MATLAB" title="MATLAB">MATLAB</a>,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> <a href="/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a>, <a href="/wiki/S-Plus" class="mw-redirect" title="S-Plus">S-Plus</a>,<sup id="cite_ref-WinBUGS_8-0" class="reference"><a href="#cite_note-WinBUGS-8">&#91;8&#93;</a></sup> <a href="/wiki/R_(programming_language)" title="R (programming language)">R</a>,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> <a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia</a>,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> and <a href="/wiki/Scilab" title="Scilab">Scilab</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p><p>A special case would be <a href="/wiki/OpenGL" title="OpenGL">OpenGL</a> (and <a href="/wiki/OpenGL_ES" title="OpenGL ES">OpenGL ES</a>) for graphics processing. Since "recent mathematical treatments of linear algebra and related fields invariably treat vectors as columns," designer Mark Segal decided to substitute this for the convention in predecessor <a href="/wiki/IRIS_GL" title="IRIS GL">IRIS GL</a>, which was to write vectors as rows; for compatibility, transformation matrices would still be stored in vector-major rather than coordinate-major order, and he then used the "subterfuge [to] say that matrices in OpenGL are stored in column-major order".<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> This was really only relevant for presentation, because matrix multiplication was stack-based and could still be interpreted as post-multiplication, but, worse, reality leaked through the C-based <a href="/wiki/API" class="mw-redirect" title="API">API</a> because individual elements would be accessed as <code>M[vector][coordinate]</code> or, effectively, <code>M[column][row]</code>, which unfortunately muddled the convention that the designer sought to adopt, and this was even preserved in the <a href="/wiki/OpenGL_Shading_Language" title="OpenGL Shading Language">OpenGL Shading Language</a> that was later added (although this also makes it possible to access coordinates by name instead, e.g., <code>M[vector].y</code>). As a result, many developers will now simply declare that having the column as the first index is the definition of column-major, even though this is clearly not the case with a real column-major language like Fortran.
+</p>
+<h3><span class="mw-headline" id="Neither_row-major_nor_column-major">Neither row-major nor column-major</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=3" title="Edit section: Neither row-major nor column-major">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A typical alternative for dense array storage is to use <a href="/wiki/Iliffe_vector" title="Iliffe vector">Iliffe vectors</a>, which typically store elements in the same row contiguously (like row-major order), but not the rows themselves. They are used in (ordered by age): <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>,<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>/<a href="/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a>/<a href="/wiki/.NET_Framework" title=".NET Framework">.Net</a>, <a href="/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala</a>,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> and <a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift</a>.
+</p><p>Even less dense is to use lists of lists, e.g., in <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> and in the <a href="/wiki/Wolfram_Language" title="Wolfram Language">Wolfram Language</a> of <a href="/wiki/Wolfram_Mathematica" title="Wolfram Mathematica">Wolfram Mathematica</a>.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p><p>An alternative approach uses tables of tables, e.g., in <a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a>.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="External_libraries">External libraries</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=4" title="Edit section: External libraries">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Support for multi-dimensional arrays may also be provided by external libraries, which may even support arbitrary orderings, where each dimension has a stride value, and row-major or column-major are just two possible resulting interpretations.
+</p><p>Row-major order is the default in <a href="/wiki/NumPy" title="NumPy">NumPy</a><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> (for Python).
+</p><p>Column-major order is the default in <a href="/wiki/Eigen_(C%2B%2B_library)" title="Eigen (C++ library)">Eigen</a><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> (for C++).
+</p><p><a href="/wiki/Torch_(machine_learning)" title="Torch (machine learning)">Torch</a> (for Lua) changed from column-major<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> to row-major<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> default order.
+</p>
+<h2><span class="mw-headline" id="Transposition">Transposition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=5" title="Edit section: Transposition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As exchanging the indices of an array is the essence of <a href="/wiki/Transpose" title="Transpose">array transposition</a>, an array stored as row-major but read as column-major (or vice versa) will appear transposed.  As actually performing this <a href="/wiki/In-place_matrix_transposition" title="In-place matrix transposition">rearrangement in memory</a> is typically an expensive operation, some systems provide options to specify individual matrices as being stored transposed. The programmer must then decide whether or not to rearrange the elements in memory, based on the actual usage (including the number of times that the array is reused in a computation).
+</p><p>For example, the <a href="/wiki/Basic_Linear_Algebra_Subprograms" title="Basic Linear Algebra Subprograms">Basic Linear Algebra Subprograms</a> functions are passed flags indicating which arrays are transposed.<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Address_calculation_in_general">Address calculation in general</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=6" title="Edit section: Address calculation in general">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The concept generalizes to arrays with more than two dimensions.
+</p><p>For a <i>d</i>-dimensional <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle N_{1}\times N_{2}\times \cdots \times N_{d}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>&#x00D7;<!-- × --></mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle N_{1}\times N_{2}\times \cdots \times N_{d}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/26fa7846ceec855f8a5c19daa8e0c8c04fa4ff77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.044ex; height:2.509ex;" alt="N_1 \times N_2 \times \cdots \times N_d"/></span> array with dimensions <i>N</i><sub><i>k</i></sub> (<i>k</i>=1...<i>d</i>), a given element of this array is specified by a <a href="/wiki/Tuple" title="Tuple">tuple</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (n_{1},n_{2},\ldots ,n_{d})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (n_{1},n_{2},\ldots ,n_{d})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e3205fea5b5d0e78f3b871b55247e2e5a0eec7e6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.406ex; height:2.843ex;" alt="(n_1, n_2, \ldots, n_d)"/></span> of <i>d</i> (zero-based) indices <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n_{k}\in [0,N_{k}-1]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mo stretchy="false">[</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">]</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n_{k}\in [0,N_{k}-1]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5aa8454b8e8f1d95f6d3198688f0d45e9185738f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.772ex; height:2.843ex;" alt="n_k \in [0,N_k - 1]"/></span>.
+</p><p>In row-major order, the <i>last</i> dimension is contiguous, so that the memory-offset of this element is given by:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n_{d}+N_{d}\cdot (n_{d-1}+N_{d-1}\cdot (n_{d-2}+N_{d-2}\cdot (\cdots +N_{2}n_{1})\cdots )))=\sum _{k=1}^{d}\left(\prod _{\ell =k+1}^{d}N_{\ell }\right)n_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </munderover>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <munderover>
+              <mo>&#x220F;<!-- ∏ --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>&#x2113;<!-- ℓ --></mi>
+                <mo>=</mo>
+                <mi>k</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>d</mi>
+              </mrow>
+            </munderover>
+            <msub>
+              <mi>N</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>&#x2113;<!-- ℓ --></mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n_{d}+N_{d}\cdot (n_{d-1}+N_{d-1}\cdot (n_{d-2}+N_{d-2}\cdot (\cdots +N_{2}n_{1})\cdots )))=\sum _{k=1}^{d}\left(\prod _{\ell =k+1}^{d}N_{\ell }\right)n_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a8c2ff591c044c4fabded3a0a4766f8d7beb3f3e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:80.156ex; height:7.509ex;" alt="n_d + N_d \cdot (n_{d-1} + N_{d-1} \cdot (n_{d-2} + N_{d-2} \cdot (\cdots + N_2 n_1)\cdots)))&#10;= \sum_{k=1}^d \left( \prod_{\ell=k+1}^d N_\ell \right) n_k&#10;"/></span></dd></dl>
+<p>In column-major order, the <i>first</i> dimension is contiguous, so that the memory-offset of this element is given by:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n_{1}+N_{1}\cdot (n_{2}+N_{2}\cdot (n_{3}+N_{3}\cdot (\cdots +N_{d-1}n_{d})\cdots )))=\sum _{k=1}^{d}\left(\prod _{\ell =1}^{k-1}N_{\ell }\right)n_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </munderover>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <munderover>
+              <mo>&#x220F;<!-- ∏ --></mo>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>&#x2113;<!-- ℓ --></mi>
+                <mo>=</mo>
+                <mn>1</mn>
+              </mrow>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>k</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+              </mrow>
+            </munderover>
+            <msub>
+              <mi>N</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>&#x2113;<!-- ℓ --></mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n_{1}+N_{1}\cdot (n_{2}+N_{2}\cdot (n_{3}+N_{3}\cdot (\cdots +N_{d-1}n_{d})\cdots )))=\sum _{k=1}^{d}\left(\prod _{\ell =1}^{k-1}N_{\ell }\right)n_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/07e74867c7a38ec61642936e2ff6dfd40a2de66a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:71.752ex; height:7.509ex;" alt="n_1 + N_1 \cdot (n_2 + N_2 \cdot (n_3 + N_3 \cdot (\cdots + N_{d-1} n_d)\cdots)))&#10;= \sum_{k=1}^d \left( \prod_{\ell=1}^{k-1} N_\ell \right) n_k&#10;"/></span></dd></dl>
+<p>where the <a href="/wiki/Empty_product" title="Empty product">empty product</a> is the multiplicative <a href="/wiki/Identity_element" title="Identity element">identity element</a>, i.e., <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \prod _{\ell =1}^{0}N_{\ell }=\prod _{\ell =d+1}^{d}N_{\ell }=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munderover>
+          <mo>&#x220F;<!-- ∏ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x2113;<!-- ℓ --></mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </munderover>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x2113;<!-- ℓ --></mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x220F;<!-- ∏ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x2113;<!-- ℓ --></mi>
+            <mo>=</mo>
+            <mi>d</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>d</mi>
+          </mrow>
+        </munderover>
+        <msub>
+          <mi>N</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x2113;<!-- ℓ --></mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \prod _{\ell =1}^{0}N_{\ell }=\prod _{\ell =d+1}^{d}N_{\ell }=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/abfe64a01339770b04b6b73605d2e3f1da2c5552" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.171ex; width:21.596ex; height:7.509ex;" alt="{\displaystyle \prod _{\ell =1}^{0}N_{\ell }=\prod _{\ell =d+1}^{d}N_{\ell }=1}"/></span>.
+</p><p>For a given order, the <a href="/wiki/Stride_of_an_array" title="Stride of an array">stride</a> in dimension <i>k</i> is given by the multiplication value in parentheses before index <i>n</i><sub><i>k</i></sub> in the right hand-side summations above.
+</p><p>More generally, there are <i>d!</i> possible orders for a given array, one for each <a href="/wiki/Permutation" title="Permutation">permutation</a> of dimensions (with row-major and column-order just 2 special cases), although the lists of stride values are not necessarily permutations of each other, e.g., in the 2-by-3 example above, the strides are (3,1) for row-major and (1,2) for column-major.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Array_data_structure" title="Array data structure">Array data structure</a></li>
+<li><a href="/wiki/Matrix_representation" title="Matrix representation">Matrix representation</a></li>
+<li><a href="/wiki/Vectorization_(mathematics)" title="Vectorization (mathematics)">Vectorization (mathematics)</a>, the equivalent of turning a matrix into the corresponding column-major vector</li>
+<li><a href="/wiki/Sparse_matrix#Storing_a_sparse_matrix" title="Sparse matrix">CSR format</a>, a technique for storing sparse matrices in memory</li>
+<li><a href="/wiki/Morton_order" class="mw-redirect" title="Morton order">Morton order</a>, another way of mapping multidimensional data to a one-dimensional index, useful in tree data structures</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.fortrantutorial.com/arrays-formatted-io/index.php">"Arrays and Formatted I/O"</a>. <i>FORTRAN Tutorial</i><span class="reference-accessdate">. Retrieved <span class="nowrap">19 November</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=FORTRAN+Tutorial&amp;rft.atitle=Arrays+and+Formatted+I%2FO&amp;rft_id=http%3A%2F%2Fwww.fortrantutorial.com%2Farrays-formatted-io%2Findex.php&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html">"Why numbering should start at zero"</a>. <i>E. W. Dijkstra Archive</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2 February</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=E.+W.+Dijkstra+Archive&amp;rft.atitle=Why+numbering+should+start+at+zero&amp;rft_id=https%3A%2F%2Fwww.cs.utexas.edu%2Fusers%2FEWD%2Ftranscriptions%2FEWD08xx%2FEWD831.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.ibm.com/support/knowledgecenter/SSQ2R2_9.0.0/com.ibm.ent.pl1.zos.doc/topics/lrm.pdf">"Language Reference Version 4 Release 3"</a> <span class="cs1-format">(PDF)</span>. IBM<span class="reference-accessdate">. Retrieved <span class="nowrap">13 November</span> 2017</span>. <q>Initial values specified for an array are assigned to successive elements of the array in row-major order (final subscript varying most rapidly).</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Language+Reference+Version+4+Release+3&amp;rft.pub=IBM&amp;rft_id=https%3A%2F%2Fwww.ibm.com%2Fsupport%2Fknowledgecenter%2FSSQ2R2_9.0.0%2Fcom.ibm.ent.pl1.zos.doc%2Ftopics%2Flrm.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.pascal-central.com/docs/iso7185.pdf">"ISO/IEC 7185:1990(E)"</a> <span class="cs1-format">(PDF)</span>. <q>An array-type that specifies a sequence of two or more index-types shall be an abbreviated notation for an array-type specified to have as its index-type the first index-type in the sequence and to have a component-type that is an array-type specifying the sequence of index-types without the first index-type in the sequence and specifying the same component-type as the original specification.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ISO%2FIEC+7185%3A1990%28E%29&amp;rft_id=http%3A%2F%2Fwww.pascal-central.com%2Fdocs%2Fiso7185.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://documentation.sas.com/api/docsets/lrcon/9.4/content/lrcon.pdf">"SAS® 9.4 Language Reference: Concepts, Sixth Edition"</a> <span class="cs1-format">(PDF)</span>. SAS Institute Inc. September 6, 2017. p.&#160;573<span class="reference-accessdate">. Retrieved <span class="nowrap">18 November</span> 2017</span>. <q>From right to left, the rightmost dimension represents columns; the next dimension represents rows. [...] SAS places variables into a multidimensional array by filling all rows in order, beginning at the upper left corner of the array (known as row-major order).</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=SAS%C2%AE+9.4+Language+Reference%3A+Concepts%2C+Sixth+Edition&amp;rft.pages=573&amp;rft.pub=SAS+Institute+Inc.&amp;rft.date=2017-09-06&amp;rft_id=http%3A%2F%2Fdocumentation.sas.com%2Fapi%2Fdocsets%2Flrcon%2F9.4%2Fcontent%2Flrcon.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://rasdaman.org/wiki/RasdamanInternalArrayRepresentation">"Internal array representation in rasdaman"</a>. <i>rasdaman.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">8 June</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=rasdaman.org&amp;rft.atitle=Internal+array+representation+in+rasdaman&amp;rft_id=http%3A%2F%2Frasdaman.org%2Fwiki%2FRasdamanInternalArrayRepresentation&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">MATLAB documentation, <a rel="nofollow" class="external text" href="http://www.mathworks.co.uk/help/matlab/matlab_external/matlab-data.html#f22019">MATLAB Data Storage</a> (retrieved from Mathworks.co.uk, January 2014).</span>
+</li>
+<li id="cite_note-WinBUGS-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-WinBUGS_8-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFSpiegelhalterThomasBestLunn2003">Spiegelhalter et al. (2003</a>, p.&#160;17): <cite id="CITEREFSpiegelhalterThomasBestLunn2003" class="citation"><a href="/wiki/David_Spiegelhalter" title="David Spiegelhalter">Spiegelhalter, David</a>; Thomas, Andrew; <a href="/wiki/Nicky_Best" title="Nicky Best">Best, Nicky</a>; Lunn, Dave (January 2003), "Formatting of data: S-Plus format", <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120303024931/http://www.mrc-bsu.cam.ac.uk/bugs/"><i>WinBUGS User&#160;Manual</i></a> (Version 1.4 ed.), Robinson Way, Cambridge CB2 2SR, UK: MRC Biostatistics Unit, Institute of Public Health, <a rel="nofollow" class="external text" href="http://www.mrc-bsu.cam.ac.uk/bugs/winbugs/manual14.pdf">PDF document</a>, archived from <a rel="nofollow" class="external text" href="http://www.mrc-bsu.cam.ac.uk/bugs">the original</a> on 2012-03-03</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Formatting+of+data%3A+S-Plus+format&amp;rft.btitle=WinBUGS+User+Manual&amp;rft.place=Robinson+Way%2C+Cambridge+CB2+2SR%2C+UK&amp;rft.edition=Version+1.4&amp;rft.pub=MRC+Biostatistics+Unit%2C+Institute+of+Public+Health&amp;rft.date=2003-01&amp;rft.aulast=Spiegelhalter&amp;rft.aufirst=David&amp;rft.au=Thomas%2C+Andrew&amp;rft.au=Best%2C+Nicky&amp;rft.au=Lunn%2C+Dave&amp;rft_id=http%3A%2F%2Fwww.mrc-bsu.cam.ac.uk%2Fbugs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><i>An Introduction to R</i>, <a rel="nofollow" class="external text" href="https://cran.r-project.org/doc/manuals/R-intro.html#Arrays">Section 5.1: Arrays</a> (retrieved March 2010).</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.julialang.org/en/release-0.4/manual/arrays/">"Multi-dimensional Arrays"</a>. <i>Julia</i><span class="reference-accessdate">. Retrieved <span class="nowrap">6 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Julia&amp;rft.atitle=Multi-dimensional+Arrays&amp;rft_id=http%3A%2F%2Fdocs.julialang.org%2Fen%2Frelease-0.4%2Fmanual%2Farrays%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wiki.scilab.org/howto/FFTMultidimensionalData">"FFTs with multidimensional data"</a>. <i>Scilab Wiki</i><span class="reference-accessdate">. Retrieved <span class="nowrap">25 November</span> 2017</span>. <q>Because Scilab stores arrays in column major format, the elements of a column are adjacent (i.e. a separation of 1) in linear format.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Scilab+Wiki&amp;rft.atitle=FFTs+with+multidimensional+data&amp;rft_id=https%3A%2F%2Fwiki.scilab.org%2Fhowto%2FFFTMultidimensionalData&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://steve.hollasch.net/cgindex/math/matrix/column-vec.html">"Column Vectors Vs. Row Vectors"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">12 November</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Column+Vectors+Vs.+Row+Vectors&amp;rft_id=http%3A%2F%2Fsteve.hollasch.net%2Fcgindex%2Fmath%2Fmatrix%2Fcolumn-vec.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html">"Java Language Specification"</a>. Oracle<span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Java+Language+Specification&amp;rft.pub=Oracle&amp;rft_id=https%3A%2F%2Fdocs.oracle.com%2Fjavase%2Fspecs%2Fjls%2Fse7%2Fhtml%2Fjls-10.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.scala-lang.org/api/current/#scala.Array$">"object Array"</a>. <i>Scala Standard Library</i><span class="reference-accessdate">. Retrieved <span class="nowrap">1 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Scala+Standard+Library&amp;rft.atitle=object+Array&amp;rft_id=http%3A%2F%2Fwww.scala-lang.org%2Fapi%2Fcurrent%2F%23scala.Array%24&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.python.org/3.6/library/datatypes.html">"The Python Standard Library: 8. Data Types"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">18 November</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Python+Standard+Library%3A+8.+Data+Types&amp;rft_id=https%3A%2F%2Fdocs.python.org%2F3.6%2Flibrary%2Fdatatypes.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://reference.wolfram.com/language/tutorial/VectorsAndMatrices.html">"Vectors and Matrices"</a>. <i>Wolfram</i><span class="reference-accessdate">. Retrieved <span class="nowrap">12 November</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Wolfram&amp;rft.atitle=Vectors+and+Matrices&amp;rft_id=http%3A%2F%2Freference.wolfram.com%2Flanguage%2Ftutorial%2FVectorsAndMatrices.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.lua.org/pil/11.2.html">"11.2 – Matrices and Multi-Dimensional Arrays"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">6 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=11.2+%E2%80%93+Matrices+and+Multi-Dimensional+Arrays&amp;rft_id=http%3A%2F%2Fwww.lua.org%2Fpil%2F11.2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html">"The N-dimensional array (ndarray)"</a>. <i>SciPy.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">3 April</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=SciPy.org&amp;rft.atitle=The+N-dimensional+array+%28ndarray%29&amp;rft_id=http%3A%2F%2Fdocs.scipy.org%2Fdoc%2Fnumpy%2Freference%2Farrays.ndarray.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://eigen.tuxfamily.org/dox/group__TopicStorageOrders.html">"Eigen: Storage orders"</a>. <i>eigen.tuxfamily.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-11-23</span></span>. <q>If the storage order is not specified, then Eigen defaults to storing the entry in column-major.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=eigen.tuxfamily.org&amp;rft.atitle=Eigen%3A+Storage+orders&amp;rft_id=https%3A%2F%2Feigen.tuxfamily.org%2Fdox%2Fgroup&#95;_TopicStorageOrders.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://torch5.sourceforge.net/manual/torch/index-6.html">"Tensor"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">6 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Tensor&amp;rft_id=http%3A%2F%2Ftorch5.sourceforge.net%2Fmanual%2Ftorch%2Findex-6.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/torch/torch7/blob/master/doc/tensor.md#storage-storage">"Tensor"</a>. <i>Torch Package Reference Manual</i><span class="reference-accessdate">. Retrieved <span class="nowrap">8 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Torch+Package+Reference+Manual&amp;rft.atitle=Tensor&amp;rft_id=https%3A%2F%2Fgithub.com%2Ftorch%2Ftorch7%2Fblob%2Fmaster%2Fdoc%2Ftensor.md%23storage-storage&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.netlib.org/blas/">"BLAS (Basic Linear Algebra Subprograms)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-05-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=BLAS+%28Basic+Linear+Algebra+Subprograms%29&amp;rft_id=http%3A%2F%2Fwww.netlib.org%2Fblas%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ARow-+and+column-major+order" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit&amp;section=9" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Donald E. Knuth, <i><a href="/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a> Volume 1: Fundamental Algorithms</i>, third edition, section 2.2.6 (Addison-Wesley: New York, 1997).</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1372
+Cached time: 20200327154341
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.372 seconds
+Real time usage: 0.459 seconds
+Preprocessor visited node count: 1269/1000000
+Post‐expand include size: 32892/2097152 bytes
+Template argument size: 1102/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 62755/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.202/10.000 seconds
+Lua memory usage: 4.47 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  339.695      1 -total
+ 53.26%  180.938     19 Template:Cite_web
+ 27.91%   94.798      2 Template:Citation_needed
+ 20.25%   68.800      2 Template:Fix
+ 13.53%   45.949      4 Template:Category_handler
+  6.15%   20.895      1 Template:Harvtxt
+  5.20%   17.678      2 Template:Delink
+  2.58%    8.765      1 Template:Citation
+  1.82%    6.169      2 Template:Col-start
+  1.59%    5.389      2 Template:Fix/category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1620786-0!canonical!math=5 and timestamp 20200327154341 and revision id 942989934
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Row-_and_column-major_order&amp;oldid=942989934">https://en.wikipedia.org/w/index.php?title=Row-_and_column-major_order&amp;oldid=942989934</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Arrays" title="Category:Arrays">Arrays</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">CS1 maint: location</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_March_2016" title="Category:Articles with unsourced statements from March 2016">Articles with unsourced statements from March 2016</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_November_2017" title="Category:Articles with unsourced statements from November 2017">Articles with unsourced statements from November 2017</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Row-+and+column-major+order" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Row-+and+column-major+order" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Row-_and_column-major_order" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Row-_and_column-major_order" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Row-_and_column-major_order">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Row-_and_column-major_order" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Row-_and_column-major_order" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Row-_and_column-major_order&amp;oldid=942989934" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Row-_and_column-major_order&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7371746" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Row-_and_column-major_order&amp;id=942989934&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Row-+and+column-major+order">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Row-+and+column-major+order&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Row-_and_column-major_order&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D0%B5%D0%B4%D0%B0%D0%BA_%D0%BF%D0%BE_%D0%B2%D1%80%D1%81%D1%82%D0%B0%D0%BC%D0%B0" title="Поредак по врстама – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7371746#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 28 February 2020, at 04:09<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Row-_and_column-major_order&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.372","walltime":"0.459","ppvisitednodes":{"value":1269,"limit":1000000},"postexpandincludesize":{"value":32892,"limit":2097152},"templateargumentsize":{"value":1102,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":62755,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  339.695      1 -total"," 53.26%  180.938     19 Template:Cite_web"," 27.91%   94.798      2 Template:Citation_needed"," 20.25%   68.800      2 Template:Fix"," 13.53%   45.949      4 Template:Category_handler","  6.15%   20.895      1 Template:Harvtxt","  5.20%   17.678      2 Template:Delink","  2.58%    8.765      1 Template:Citation","  1.82%    6.169      2 Template:Col-start","  1.59%    5.389      2 Template:Fix/category"]},"scribunto":{"limitreport-timeusage":{"value":"0.202","limit":"10.000"},"limitreport-memusage":{"value":4688669,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n  [\"CITEREFSpiegelhalterThomasBestLunn2003\"] = 1,\n}\n"},"cachereport":{"origin":"mw1372","timestamp":"20200327154341","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Row- and column-major order","url":"https:\/\/en.wikipedia.org\/wiki\/Row-_and_column-major_order","sameAs":"http:\/\/www.wikidata.org\/entity\/Q7371746","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q7371746","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-03-19T01:06:04Z","dateModified":"2020-02-28T04:09:19Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/4d\/Row_and_column_major_order.svg","headline":"array representation in memory"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":102,"wgHostname":"mw1328"});});</script></body></html>

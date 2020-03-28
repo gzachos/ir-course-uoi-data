@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>mmap - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7I8ApAMMAAAYchGOQAAADK","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Mmap","wgTitle":"Mmap","wgCurRevisionId":942587350,"wgRevisionId":942587350,"wgArticleId":608709,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Inter-process communication","C POSIX library"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Mmap","wgRelevantArticleId":608709,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,
+"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1935626","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":
+"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Mmap&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Mmap&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Mmap"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Mmap rootpage-Mmap skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">mmap</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><span></span>
+In <a href="/wiki/Computing" title="Computing">computing</a>, <b><code>mmap(2)</code></b> is a <a href="/wiki/POSIX" title="POSIX">POSIX</a>-compliant <a href="/wiki/Unix" title="Unix">Unix</a> <a href="/wiki/System_call" title="System call">system call</a> that maps files or devices into memory. It is a method of <a href="/wiki/Memory-mapped_file" title="Memory-mapped file">memory-mapped file</a> I/O. It implements <a href="/wiki/Demand_paging" title="Demand paging">demand paging</a>, because file contents are not read from disk directly and initially do not use physical RAM at all. The actual reads from disk are performed in a "<a href="/wiki/Lazy_evaluation" title="Lazy evaluation">lazy</a>" manner, after a specific location is accessed. After the memory is no longer needed, it is important to <code>munmap(2)</code> the pointers to it. Protection information can be managed using <code>mprotect(2)</code>, and special treatment can be enforced using <code>madvise(2)</code>.
+</p><p>In <a href="/wiki/Linux" title="Linux">Linux</a>, <a href="/wiki/Mac_OS_X" class="mw-redirect" title="Mac OS X">Mac OS X</a> and the <a href="/wiki/BSD" class="mw-redirect" title="BSD">BSDs</a>, <code>mmap</code> can create several types of mappings. Other operating systems may only support a subset of these, for example, shared mappings may not be practical in an operating system without a global <a href="/wiki/Virtual_file_system" title="Virtual file system">VFS</a> or I/O cache.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#File-backed_and_anonymous"><span class="tocnumber">2</span> <span class="toctext">File-backed and anonymous</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Memory_visibility"><span class="tocnumber">3</span> <span class="toctext">Memory visibility</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Example_of_usage_under_the_C_programming_language"><span class="tocnumber">4</span> <span class="toctext">Example of usage under the C programming language</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Further_reading"><span class="tocnumber">7</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The original design of memory mapped files came from the <a href="/wiki/TOPS-20" title="TOPS-20">TOPS-20</a> operating system. <code>mmap</code> and associated systems calls were designed as part of the <a href="/wiki/Berkeley_Software_Distribution" title="Berkeley Software Distribution">Berkeley Software Distribution</a> (BSD) version of Unix. Their API was already described in the 4.2BSD System Manual, even though it was neither implemented in that release, nor in 4.3BSD.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> <a href="/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a> had implemented this very API, though, in their <a href="/wiki/SunOS" title="SunOS">SunOS</a> operating system. The BSD developers at <a href="/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">U.C. Berkeley</a> requested Sun to donate its implementation, but these talks never led to any transfer of code; 4.3BSD-Reno was shipped instead with an implementation based on the virtual memory system of <a href="/wiki/Mach_(kernel)" title="Mach (kernel)">Mach</a>.<sup id="cite_ref-opensources_2-0" class="reference"><a href="#cite_note-opensources-2">&#91;2&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="File-backed_and_anonymous">File-backed and anonymous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=2" title="Edit section: File-backed and anonymous">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>File-backed mapping</i> maps an area of the process's <a href="/wiki/Virtual_memory" title="Virtual memory">virtual memory</a> to files; i.e. reading those areas of memory causes the file to be read. It is the default mapping type.
+</p><p><i>Anonymous mapping</i> maps an area of the process's virtual memory not backed by any file. The contents are initialized to zero.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> In this respect an anonymous mapping is similar to <code><a href="/wiki/Malloc" class="mw-redirect" title="Malloc">malloc</a></code>, and is used in some <code>malloc(3)</code> implementations for certain allocations. However, anonymous mappings are not part of the POSIX standard, though implemented by almost all operating systems by the <code>MAP_ANONYMOUS</code> and <code>MAP_ANON</code> flags.
+</p>
+<h2><span class="mw-headline" id="Memory_visibility">Memory visibility</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=3" title="Edit section: Memory visibility">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If the mapping is <i>shared</i> (the <code>MAP_SHARED</code> flag is set), then it is preserved across a <a href="/wiki/Fork_(computing)" class="mw-redirect" title="Fork (computing)">fork(2)</a> system call. This means that writes to a mapped area in one process are immediately visible in all related (parent, child or sibling) processes. If the mapping is <i>shared</i> and backed by a file (not <code>MAP_ANONYMOUS</code>) the underlying file media is only guaranteed to be written after it is msync(2)'ed.
+</p><p>If the mapping is <i>private</i> (the <code>MAP_PRIVATE</code> flag is set), the changes will neither be seen by other processes nor written to the file.
+</p><p>A process reading from or writing to the underlying file will not always see the same data as a process that has mapped the file, since the segment of the file is copied into RAM and periodically flushed to disk. Synchronization can be forced with the <code><a href="/w/index.php?title=Msync&amp;action=edit&amp;redlink=1" class="new" title="Msync (page does not exist)">msync</a></code> system call.
+</p><p>mmap(2)ing files can significantly reduce memory overhead for applications accessing the same file; they can share the memory area the file encompasses, instead of loading the file for each application that wants access to it. This means that mmap(2) is sometimes used for <a href="/wiki/Interprocess_Communication" class="mw-redirect" title="Interprocess Communication">Interprocess Communication</a> (IPC). On modern <a href="/wiki/Operating_system" title="Operating system">operating systems</a>, mmap(2) is typically preferred to the <a href="/wiki/System_V" class="mw-redirect" title="System V">System V</a> IPC <a href="/wiki/Shared_memory_(interprocess_communication)" class="mw-redirect" title="Shared memory (interprocess communication)">Shared Memory</a> facility.
+</p><p>The main difference between System V shared memory (shmem) and memory mapped I/O (mmap) is that SystemV shared memory is persistent: unless explicitly removed by a process, it is kept in memory and remains available until the system is shut down.  mmap'd memory is not persistent between application executions (unless it is backed by a file).
+</p>
+<h2><span class="mw-headline" id="Example_of_usage_under_the_C_programming_language">Example of usage under the C programming language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=4" title="Edit section: Example of usage under the C programming language">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/mman.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;err.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fcntl.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/* Does not work on OS X, as you can&#39;t mmap over /dev/zero */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="k">const</span> <span class="kt">char</span> <span class="n">str1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;string 1&quot;</span><span class="p">;</span>
+        <span class="k">const</span> <span class="kt">char</span> <span class="n">str2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;string 2&quot;</span><span class="p">;</span>
+        <span class="kt">pid_t</span> <span class="n">parpid</span> <span class="o">=</span> <span class="n">getpid</span><span class="p">(),</span> <span class="n">childpid</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">fd</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="kt">char</span> <span class="o">*</span><span class="n">anon</span><span class="p">,</span> <span class="o">*</span><span class="n">zero</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">((</span><span class="n">fd</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="s">&quot;/dev/zero&quot;</span><span class="p">,</span> <span class="n">O_RDWR</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">err</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;open&quot;</span><span class="p">);</span>
+
+        <span class="n">anon</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="n">PROT_READ</span><span class="o">|</span><span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_ANON</span><span class="o">|</span><span class="n">MAP_SHARED</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="n">zero</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">mmap</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="mi">4096</span><span class="p">,</span> <span class="n">PROT_READ</span><span class="o">|</span><span class="n">PROT_WRITE</span><span class="p">,</span> <span class="n">MAP_SHARED</span><span class="p">,</span> <span class="n">fd</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">anon</span> <span class="o">==</span> <span class="n">MAP_FAILED</span> <span class="o">||</span> <span class="n">zero</span> <span class="o">==</span> <span class="n">MAP_FAILED</span><span class="p">)</span>
+                <span class="n">errx</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;either mmap&quot;</span><span class="p">);</span>
+
+        <span class="n">strcpy</span><span class="p">(</span><span class="n">anon</span><span class="p">,</span> <span class="n">str1</span><span class="p">);</span>
+        <span class="n">strcpy</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="n">str1</span><span class="p">);</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PID %d:</span><span class="se">\t</span><span class="s">anonymous %s, zero-backed %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">parpid</span><span class="p">,</span> <span class="n">anon</span><span class="p">,</span> <span class="n">zero</span><span class="p">);</span>
+        <span class="k">switch</span> <span class="p">((</span><span class="n">childpid</span> <span class="o">=</span> <span class="n">fork</span><span class="p">()))</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="o">:</span>
+                <span class="n">err</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;fork&quot;</span><span class="p">);</span>
+                <span class="cm">/* NOTREACHED */</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+                <span class="n">childpid</span> <span class="o">=</span> <span class="n">getpid</span><span class="p">();</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PID %d:</span><span class="se">\t</span><span class="s">anonymous %s, zero-backed %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">childpid</span><span class="p">,</span> <span class="n">anon</span><span class="p">,</span> <span class="n">zero</span><span class="p">);</span>
+                <span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PID %d:</span><span class="se">\t</span><span class="s">anonymous %s, zero-backed %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">childpid</span><span class="p">,</span> <span class="n">anon</span><span class="p">,</span> <span class="n">zero</span><span class="p">);</span>
+                <span class="n">munmap</span><span class="p">(</span><span class="n">anon</span><span class="p">,</span> <span class="mi">4096</span><span class="p">);</span>
+                <span class="n">munmap</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="mi">4096</span><span class="p">);</span>
+                <span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+                <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="n">strcpy</span><span class="p">(</span><span class="n">anon</span><span class="p">,</span> <span class="n">str2</span><span class="p">);</span>
+        <span class="n">strcpy</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="n">str2</span><span class="p">);</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;PID %d:</span><span class="se">\t</span><span class="s">anonymous %s, zero-backed %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">parpid</span><span class="p">,</span> <span class="n">anon</span><span class="p">,</span> <span class="n">zero</span><span class="p">);</span>
+        <span class="n">munmap</span><span class="p">(</span><span class="n">anon</span><span class="p">,</span> <span class="mi">4096</span><span class="p">);</span>
+        <span class="n">munmap</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="mi">4096</span><span class="p">);</span>
+        <span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>sample output:
+</p>
+<pre>PID 22475:      anonymous string 1, zero-backed string 1
+PID 22476:      anonymous string 1, zero-backed string 1
+PID 22475:      anonymous string 2, zero-backed string 2
+PID 22476:      anonymous string 2, zero-backed string 2
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Virtual_memory" title="Virtual memory">Virtual memory</a> for when there is more address space than physical memory</li>
+<li><a href="/wiki/Paging" title="Paging">Paging</a> for the implementation of virtual memory</li>
+<li><a href="/wiki/Page_cache" title="Page cache">Page cache</a> for a disk caching mechanism utilized by mmap</li>
+<li><a href="/wiki/Demand_paging" title="Demand paging">Demand paging</a> for a scheme implemented by mmap</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation report"><a href="/wiki/Bill_Joy" title="Bill Joy">William Joy</a>; Eric Cooper; <a href="/wiki/Bob_Fabry" title="Bob Fabry">Robert Fabry</a>; <a href="/wiki/Samuel_Leffler" class="mw-redirect" title="Samuel Leffler">Samuel Leffler</a>; <a href="/wiki/Marshall_Kirk_McKusick" title="Marshall Kirk McKusick">Kirk McKusick</a>; David Mosher (1983). <a rel="nofollow" class="external text" href="http://www.cilinder.be/docs/bsd/4.2BSD_Unix_system_manual.pdf">4.2BSD System Manual</a> <span class="cs1-format">(PDF)</span> (Report). <a href="/wiki/Computer_Systems_Research_Group" title="Computer Systems Research Group">Computer Systems Research Group</a>, <a href="/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">University of California, Berkeley</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=4.2BSD+System+Manual&amp;rft.pub=Computer+Systems+Research+Group%2C+University+of+California%2C+Berkeley&amp;rft.date=1983&amp;rft.au=William+Joy&amp;rft.au=Eric+Cooper&amp;rft.au=Robert+Fabry&amp;rft.au=Samuel+Leffler&amp;rft.au=Kirk+McKusick&amp;rft.au=David+Mosher&amp;rft_id=http%3A%2F%2Fwww.cilinder.be%2Fdocs%2Fbsd%2F4.2BSD_Unix_system_manual.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMmap" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-opensources-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-opensources_2-0">^</a></b></span> <span class="reference-text"><cite class="citation encyclopaedia"><a href="/wiki/Marshall_Kirk_McKusick" title="Marshall Kirk McKusick">McKusick, Marshall Kirk</a> (1999). "Twenty Years of Berkeley Unix: From AT&amp;T-Owned to Freely Redistributable". <i>Open Sources: Voices from the Open Source Revolution</i>. O'Reilly.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Twenty+Years+of+Berkeley+Unix%3A+From+AT%26T-Owned+to+Freely+Redistributable&amp;rft.btitle=Open+Sources%3A+Voices+from+the+Open+Source+Revolution&amp;rft.pub=O%27Reilly&amp;rft.date=1999&amp;rft.aulast=McKusick&amp;rft.aufirst=Marshall+Kirk&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMmap" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/man-pages/online/pages/man2/mmap.2.html">"mmap(2) - Linux manual page"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mmap%282%29+-+Linux+manual+page&amp;rft_id=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2Fonline%2Fpages%2Fman2%2Fmmap.2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMmap" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Mmap&amp;action=edit&amp;section=7" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/9699919799/functions/mmap.html">Description from POSIX standard</a></li>
+<li>Differences:
+<ul><li><a rel="nofollow" class="external text" href="https://leaf.dragonflybsd.org/cgi/web-man?command=mmap">DragonFly BSD</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.freebsd.org/cgi/man.cgi?query=mmap">FreeBSD</a></li>
+<li><a rel="nofollow" class="external text" href="https://man.netbsd.org/cgi-bin/man-cgi?mmap">NetBSD</a></li>
+<li><a rel="nofollow" class="external text" href="https://man.openbsd.org/mmap">OpenBSD</a></li>
+<li><a rel="nofollow" class="external text" href="http://illumos.org/man/2/mmap">illumos</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.apple.com/documentation/Darwin/Reference/ManPages/man2/mmap.2.html">Mac OS X</a></li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/cd/E23824_01/html/821-1463/mmap-2.html#scrolltoc">Solaris</a></li>
+<li><a rel="nofollow" class="external text" href="https://archive.is/20070310090003/http://devrsrc1.external.hp.com/STKS/cgi-bin/man2html?debug=0&amp;manpage=/usr/share/man/man2.Z/mmap.2">HP-UX</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.qnx.com/developers/docs/6.4.1/neutrino/lib_ref/m/mmap.html">QNX</a></li></ul></li>
+<li>Windows
+<ul><li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/aa366761.aspx">MapViewOfFile</a> win32 function is somewhat equivalent to mmap.</li></ul></li>
+<li>More example source code:
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/simonhf/sharedhashfile">SharedHashFile</a>, An open source, shared memory hash table implemented using mmap().</li></ul></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Inter-process_communication" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IPC" title="Template:IPC"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IPC" title="Template talk:IPC"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IPC&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Inter-process_communication" style="font-size:114%;margin:0 4em"><a href="/wiki/Inter-process_communication" title="Inter-process communication">Inter-process communication</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="Data_exchange_among_threads_in_computer_programs"><a href="/wiki/Data" title="Data">Data</a> exchange among <a href="/wiki/Thread_(computing)" title="Thread (computing)">threads</a> in <a href="/wiki/Computer_program" title="Computer program">computer programs</a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Methods</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_file" title="Computer file">File</a></li>
+<li><a class="mw-selflink selflink">Memory-mapped file</a></li>
+<li><a href="/wiki/Message_passing" title="Message passing">Message passing</a></li>
+<li><a href="/wiki/Message_queue" title="Message queue">Message queue and mailbox</a></li>
+<li><a href="/wiki/Named_pipe" title="Named pipe">Named pipe</a></li>
+<li><a href="/wiki/Anonymous_pipe" title="Anonymous pipe">Anonymous pipe</a></li>
+<li><a href="/wiki/Pipeline_(Unix)" title="Pipeline (Unix)">Pipe</a></li>
+<li><a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="/wiki/Shared_memory" title="Shared memory">Shared memory</a></li>
+<li><a href="/wiki/Unix_signal" class="mw-redirect" title="Unix signal">Signal</a></li>
+<li>Sockets
+<ul><li><a href="/wiki/Network_socket" title="Network socket">Network</a></li>
+<li><a href="/wiki/Unix_domain_socket" title="Unix domain socket">Unix</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Communication_protocol" title="Communication protocol">Protocols</a><br />and <a href="/wiki/Technical_standard" title="Technical standard">standards</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_event" title="Apple event">Apple events</a></li>
+<li><a href="/wiki/Component_Object_Model#COM.2B" title="Component Object Model">COM+</a></li>
+<li><a href="/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture">CORBA</a></li>
+<li><a href="/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="/wiki/Data_Distribution_Service" title="Data Distribution Service">DDS</a></li>
+<li><a href="/wiki/Distributed_Computing_Environment" title="Distributed Computing Environment">DCE</a></li>
+<li><a href="/wiki/Internet_Communications_Engine" title="Internet Communications Engine">ICE</a></li>
+<li><a href="/wiki/OpenBinder" title="OpenBinder">OpenBinder</a></li>
+<li><a href="/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">ONC RPC</a></li>
+<li><a href="/wiki/POSIX" title="POSIX">POSIX</a> (various methods)</li>
+<li><a href="/wiki/SOAP" title="SOAP">SOAP</a></li>
+<li><a href="/wiki/Representational_State_Transfer" class="mw-redirect" title="Representational State Transfer">REST</a></li>
+<li><a href="/wiki/Apache_Thrift" title="Apache Thrift">Thrift</a></li>
+<li><a href="/wiki/TIPC" class="mw-redirect" title="TIPC">TIPC</a></li>
+<li><a href="/wiki/XML-RPC" title="XML-RPC">XML-RPC</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Library_(computing)" title="Library (computing)">Software libraries</a><br />and <a href="/wiki/Software_framework" title="Software framework">frameworks</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="/wiki/Libevent" title="Libevent">libevent</a></li>
+<li><a href="/wiki/SIMPL" title="SIMPL">SIMPL</a></li>
+<li><a href="/wiki/LINX_(IPC)" title="LINX (IPC)">LINX</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1364
+Cached time: 20200306194833
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.172 seconds
+Real time usage: 0.426 seconds
+Preprocessor visited node count: 289/1000000
+Post‐expand include size: 13921/2097152 bytes
+Template argument size: 68/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 18321/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.078/10.000 seconds
+Lua memory usage: 2.14 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  377.492      1 -total
+ 34.77%  131.238      1 Template:Reflist
+ 25.58%   96.570      1 Template:Cite_report
+  5.48%   20.697      1 Template:IPC
+  4.67%   17.615      1 Template:Navbox
+  2.16%    8.155      1 Template:Cite_encyclopedia
+  1.81%    6.819      1 Template:Cite_web
+  1.40%    5.286      1 Template:Lowercase
+  0.64%    2.401      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:608709-0!canonical and timestamp 20200306194832 and revision id 942587350
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Mmap&amp;oldid=942587350">https://en.wikipedia.org/w/index.php?title=Mmap&amp;oldid=942587350</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Inter-process_communication" title="Category:Inter-process communication">Inter-process communication</a></li><li><a href="/wiki/Category:C_POSIX_library" title="Category:C POSIX library">C POSIX library</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Mmap" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Mmap" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Mmap" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Mmap" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Mmap">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Mmap&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Mmap&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Mmap" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Mmap" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Mmap&amp;oldid=942587350" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Mmap&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1935626" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Mmap&amp;id=942587350&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Mmap">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Mmap&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Mmap&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Mmap" title="Mmap – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/Mmap" title="Mmap – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Mmap" title="Mmap – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Mmap" title="Mmap – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Mmap" title="Mmap – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Mmap" title="Mmap – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Mmap" title="Mmap – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Mmap" title="Mmap – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1935626#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 25 February 2020, at 16:10<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Mmap&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.172","walltime":"0.426","ppvisitednodes":{"value":289,"limit":1000000},"postexpandincludesize":{"value":13921,"limit":2097152},"templateargumentsize":{"value":68,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":18321,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  377.492      1 -total"," 34.77%  131.238      1 Template:Reflist"," 25.58%   96.570      1 Template:Cite_report","  5.48%   20.697      1 Template:IPC","  4.67%   17.615      1 Template:Navbox","  2.16%    8.155      1 Template:Cite_encyclopedia","  1.81%    6.819      1 Template:Cite_web","  1.40%    5.286      1 Template:Lowercase","  0.64%    2.401      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.078","limit":"10.000"},"limitreport-memusage":{"value":2244974,"limit":52428800}},"cachereport":{"origin":"mw1364","timestamp":"20200306194833","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Mmap","url":"https:\/\/en.wikipedia.org\/wiki\/Mmap","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1935626","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1935626","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-04-20T20:59:40Z","dateModified":"2020-02-25T16:10:53Z","headline":"Memory map - POSIX-compliant system call"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":105,"wgHostname":"mw1350"});});</script></body></html>

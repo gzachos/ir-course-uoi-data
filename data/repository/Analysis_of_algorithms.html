@@ -1,0 +1,2548 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Analysis of algorithms - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XncDxgpAMF0AABaSCWsAAACK","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Analysis_of_algorithms","wgTitle":"Analysis of algorithms","wgCurRevisionId":940455497,"wgRevisionId":940455497,"wgArticleId":2230,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Articles lacking in-text citations from March 2010","All articles lacking in-text citations","Commons category link from Wikidata","Analysis of algorithms","Computational complexity theory"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext",
+"wgRelevantPageName":"Analysis_of_algorithms","wgRelevantArticleId":2230,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q333464","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","ext.math.styles":"ready",
+"jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/1200px-Comparison_computational_complexity.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Analysis_of_algorithms"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Analysis_of_algorithms rootpage-Analysis_of_algorithms skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Analysis of algorithms</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">March 2010</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Binary_search_vs_Linear_search_example_svg.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Binary_search_vs_Linear_search_example_svg.svg/220px-Binary_search_vs_Linear_search_example_svg.svg.png" decoding="async" width="220" height="511" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Binary_search_vs_Linear_search_example_svg.svg/330px-Binary_search_vs_Linear_search_example_svg.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/09/Binary_search_vs_Linear_search_example_svg.svg/440px-Binary_search_vs_Linear_search_example_svg.svg.png 2x" data-file-width="319" data-file-height="741" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Binary_search_vs_Linear_search_example_svg.svg" class="internal" title="Enlarge"></a></div>For looking up a given entry in a given ordered list, both the <a href="/wiki/Binary_search_algorithm" title="Binary search algorithm">binary</a> and the <a href="/wiki/Linear_search" title="Linear search">linear search</a> algorithm (which ignores ordering) can be used. The analysis of the former and the latter algorithm shows that it takes at most log<sub>2</sub>(<i>n</i>) and <i>n</i> check steps, respectively, for a list of length <i>n</i>. In the depicted example list of length 33, searching for <i>"Morin, Arthur"</i> takes 5 and 28 steps with binary (shown in <span style="color:#008080">cyan</span>) and linear (<span style="color:#800080">magenta</span>) search, respectively.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Comparison_computational_complexity.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/220px-Comparison_computational_complexity.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/330px-Comparison_computational_complexity.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Comparison_computational_complexity.svg/440px-Comparison_computational_complexity.svg.png 2x" data-file-width="512" data-file-height="512" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Comparison_computational_complexity.svg" class="internal" title="Enlarge"></a></div>Graphs of functions commonly used in the analysis of algorithms, showing the number of operations <i>N</i> versus input size <i>n</i> for each function</div></div></div>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, the <b>analysis of algorithms</b> is the process of finding the <a href="/wiki/Computational_complexity" title="Computational complexity">computational complexity</a> of algorithms – the amount of time, storage, or other resources needed to <a href="/wiki/Computation" title="Computation">execute them</a>. Usually, this involves determining a <a href="/wiki/Function_(mathematics)" title="Function (mathematics)">function</a> that relates the length of an algorithm's input to the number of steps it takes (its <a href="/wiki/Time_complexity" title="Time complexity">time complexity</a>) or the number of storage locations it uses (its <a href="/wiki/Space_complexity" title="Space complexity">space complexity</a>). An algorithm is said to be efficient when this function's values are small, or grow slowly compared to a growth in the size of the input. Different inputs of the same length may cause the algorithm to have different behavior, so <a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">best, worst and average case</a> descriptions might all be of practical interest.  When not otherwise specified, the function describing the performance of an algorithm is usually an <a href="/wiki/Upper_bound" class="mw-redirect" title="Upper bound">upper bound</a>, determined from the worst case inputs to the algorithm.
+</p><p>The term "analysis of algorithms" was coined by <a href="/wiki/Donald_Knuth" title="Donald Knuth">Donald Knuth</a>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> Algorithm analysis is an important part of a broader <a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">computational complexity theory</a>, which provides theoretical estimates for the resources needed by any algorithm which solves a given <a href="/wiki/Computational_problem" title="Computational problem">computational problem</a>. These estimates provide an insight into reasonable directions of search for <a href="/wiki/Algorithmic_efficiency" title="Algorithmic efficiency">efficient algorithms</a>.
+</p><p>In theoretical analysis of algorithms it is common to estimate their complexity in the asymptotic sense, i.e., to estimate the complexity function for arbitrarily large input. <a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a>, <a href="/wiki/Big-omega_notation" class="mw-redirect" title="Big-omega notation">Big-omega notation</a> and <a href="/wiki/Big-theta_notation" class="mw-redirect" title="Big-theta notation">Big-theta notation</a> are used to this end. For instance, <a href="/wiki/Binary_search" class="mw-redirect" title="Binary search">binary search</a> is said to run in a number of steps proportional to the logarithm of the length of the sorted list being searched, or in O(log(n)), colloquially "in <a href="/wiki/Logarithmic_time" class="mw-redirect" title="Logarithmic time">logarithmic time</a>". Usually <a href="/wiki/Asymptotic_analysis" title="Asymptotic analysis">asymptotic</a> estimates are used because different <a href="/wiki/Implementation" title="Implementation">implementations</a> of the same algorithm may differ in efficiency. However the efficiencies of any two "reasonable" implementations of a given algorithm are related by a constant multiplicative factor  called a <i>hidden constant</i>.
+</p><p>Exact (not asymptotic) measures of efficiency can sometimes be computed but they usually require certain assumptions concerning the particular implementation of the algorithm, called <a href="/wiki/Model_of_computation" title="Model of computation">model of computation</a>. A model of computation may be defined in terms of an <a href="/wiki/Abstract_machine" title="Abstract machine">abstract computer</a>, e.g., <a href="/wiki/Turing_machine" title="Turing machine">Turing machine</a>, and/or by postulating that certain operations are executed in unit time.
+For example, if the sorted list to which we apply binary search has <i>n</i> elements, and we can guarantee that each lookup of an element in the list can be done in unit time, then at most log<sub>2</sub> <i>n</i> + 1 time units are needed to return an answer.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Cost_models"><span class="tocnumber">1</span> <span class="toctext">Cost models</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Run-time_analysis"><span class="tocnumber">2</span> <span class="toctext">Run-time analysis</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Shortcomings_of_empirical_metrics"><span class="tocnumber">2.1</span> <span class="toctext">Shortcomings of empirical metrics</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Orders_of_growth"><span class="tocnumber">2.2</span> <span class="toctext">Orders of growth</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Empirical_orders_of_growth"><span class="tocnumber">2.3</span> <span class="toctext">Empirical orders of growth</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Evaluating_run-time_complexity"><span class="tocnumber">2.4</span> <span class="toctext">Evaluating run-time complexity</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Growth_rate_analysis_of_other_resources"><span class="tocnumber">2.5</span> <span class="toctext">Growth rate analysis of other resources</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Relevance"><span class="tocnumber">3</span> <span class="toctext">Relevance</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Constant_factors"><span class="tocnumber">4</span> <span class="toctext">Constant factors</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Cost_models">Cost models</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=1" title="Edit section: Cost models">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Time efficiency estimates depend on what we define to be a step. For the analysis to correspond usefully to the actual execution time, the time required to perform a step must be guaranteed to be bounded above by a constant. One must be careful here; for instance, some analyses count an addition of two numbers as one step. This assumption may not be warranted in certain contexts. For example, if the numbers involved in a computation may be arbitrarily large, the time required by a single addition can no longer be assumed to be constant.
+</p><p>Two cost models are generally used:<sup id="cite_ref-AhoHopcroft1974_2-0" class="reference"><a href="#cite_note-AhoHopcroft1974-2">&#91;2&#93;</a></sup><sup id="cite_ref-Hromkovič2004_3-0" class="reference"><a href="#cite_note-Hromkovič2004-3">&#91;3&#93;</a></sup><sup id="cite_ref-Ausiello1999_4-0" class="reference"><a href="#cite_note-Ausiello1999-4">&#91;4&#93;</a></sup><sup id="cite_ref-Wegener20_5-0" class="reference"><a href="#cite_note-Wegener20-5">&#91;5&#93;</a></sup><sup id="cite_ref-Tarjan1983_6-0" class="reference"><a href="#cite_note-Tarjan1983-6">&#91;6&#93;</a></sup>
+</p>
+<ul><li>the <b>uniform cost model</b>, also called <b>uniform-cost measurement</b> (and similar variations), assigns a constant cost to every machine operation, regardless of the size of the numbers involved</li>
+<li>the <b>logarithmic cost model</b>, also called <b>logarithmic-cost measurement</b> (and similar variations), assigns a cost to every machine operation proportional to the number of bits involved</li></ul>
+<p>The latter is more cumbersome to use, so it's only employed when necessary, for example in the analysis of <a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">arbitrary-precision arithmetic</a> algorithms, like those used in <a href="/wiki/Cryptography" title="Cryptography">cryptography</a>.
+</p><p>A key point which is often overlooked is that published lower bounds for problems are often given for a model of computation that is more restricted than the set of operations that you could use in practice and therefore there are algorithms that are faster than what would naively be thought possible.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Run-time_analysis">Run-time analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=2" title="Edit section: Run-time analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Run-time analysis is a theoretical classification that estimates and anticipates the increase in <i><a href="/wiki/DTIME" title="DTIME">running time</a></i> (or run-time) of an <a href="/wiki/Algorithm" title="Algorithm">algorithm</a> as its <i><a href="/wiki/Information" title="Information">input size</a></i> (usually denoted as <i>n</i>) increases.  Run-time efficiency is a topic of great interest in <a href="/wiki/Computer_science" title="Computer science">computer science</a>:  A <a href="/wiki/Computer_program" title="Computer program">program</a> can take seconds, hours, or even years to finish executing, depending on which algorithm it implements. While <a href="/wiki/Software_profiling" class="mw-redirect" title="Software profiling">software profiling</a> techniques can be used to measure an algorithm's run-time in practice, they cannot provide timing data for all infinitely many possible inputs; the latter can only be achieved by the theoretical methods of run-time analysis.
+</p>
+<h3><span class="mw-headline" id="Shortcomings_of_empirical_metrics">Shortcomings of empirical metrics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=3" title="Edit section: Shortcomings of empirical metrics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Since algorithms are <a href="/wiki/Platform-independent" class="mw-redirect" title="Platform-independent">platform-independent</a> (i.e. a given algorithm can be implemented in an arbitrary <a href="/wiki/Programming_language" title="Programming language">programming language</a> on an arbitrary <a href="/wiki/Computer" title="Computer">computer</a> running an arbitrary <a href="/wiki/Operating_system" title="Operating system">operating system</a>), there are additional significant drawbacks to using an <a href="/wiki/Empirical" class="mw-redirect" title="Empirical">empirical</a> approach to gauge the comparative performance of a given set of algorithms.
+</p><p>Take as an example a program that looks up a specific entry in a <a href="/wiki/Collation" title="Collation">sorted</a> <a href="/wiki/List_(computing)" class="mw-redirect" title="List (computing)">list</a> of size <i>n</i>.  Suppose this program were implemented on Computer A, a state-of-the-art machine, using a <a href="/wiki/Linear_search" title="Linear search">linear search</a> algorithm, and on Computer B, a much slower machine, using a <a href="/wiki/Binary_search_algorithm" title="Binary search algorithm">binary search algorithm</a>.  <a href="/wiki/Benchmark_(computing)" title="Benchmark (computing)">Benchmark testing</a> on the two computers running their respective programs might look something like the following:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th><i>n</i> (list size)
+</th>
+<th>Computer A run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th>
+<th>Computer B run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th></tr>
+<tr>
+<td>16
+</td>
+<td>8
+</td>
+<td>100,000
+</td></tr>
+<tr>
+<td>63
+</td>
+<td>32
+</td>
+<td>150,000
+</td></tr>
+<tr>
+<td>250
+</td>
+<td>125
+</td>
+<td>200,000
+</td></tr>
+<tr>
+<td>1,000
+</td>
+<td>500
+</td>
+<td>250,000
+</td></tr></tbody></table>
+<p>Based on these metrics, it would be easy to jump to the conclusion that <i>Computer A</i> is running an algorithm that is far superior in efficiency to that of <i>Computer B</i>.  However, if the size of the input-list is increased to a sufficient number, that conclusion is dramatically demonstrated to be in error:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th><i>n</i> (list size)
+</th>
+<th>Computer A run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th>
+<th>Computer B run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th></tr>
+<tr>
+<td>16
+</td>
+<td>8
+</td>
+<td>100,000
+</td></tr>
+<tr>
+<td>63
+</td>
+<td>32
+</td>
+<td>150,000
+</td></tr>
+<tr>
+<td>250
+</td>
+<td>125
+</td>
+<td>200,000
+</td></tr>
+<tr>
+<td>1,000
+</td>
+<td>500
+</td>
+<td>250,000
+</td></tr>
+<tr>
+<td>...
+</td>
+<td>...
+</td>
+<td>...
+</td></tr>
+<tr>
+<td>1,000,000
+</td>
+<td>500,000
+</td>
+<td>500,000
+</td></tr>
+<tr>
+<td>4,000,000
+</td>
+<td>2,000,000
+</td>
+<td>550,000
+</td></tr>
+<tr>
+<td>16,000,000
+</td>
+<td>8,000,000
+</td>
+<td>600,000
+</td></tr>
+<tr>
+<td>...
+</td>
+<td>...
+</td>
+<td>...
+</td></tr>
+<tr>
+<td>63,072 &#215; 10<sup>12</sup>
+</td>
+<td>31,536 &#215; 10<sup>12</sup> ns,<br />or 1 year
+</td>
+<td>1,375,000 ns,<br />or 1.375 milliseconds
+</td></tr></tbody></table>
+<p>Computer A, running the linear search program, exhibits a <a href="/wiki/Linear" class="mw-redirect" title="Linear">linear</a> growth rate.  The program's run-time is directly proportional to its input size.  Doubling the input size doubles the run time, quadrupling the input size quadruples the run-time, and so forth.  On the other hand, Computer B, running the binary search program, exhibits a <a href="/wiki/Logarithm" title="Logarithm">logarithmic</a> growth rate.  Quadrupling the input size only increases the run time by a <a href="https://en.wiktionary.org/wiki/Constant" class="extiw" title="wiktionary:Constant">constant</a> amount (in this example, 50,000 ns).  Even though Computer A is ostensibly a faster machine, Computer B will inevitably surpass Computer A in run-time because it's running an algorithm with a much slower growth rate.
+</p>
+<h3><span class="mw-headline" id="Orders_of_growth">Orders of growth</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=4" title="Edit section: Orders of growth">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a></div>
+<p>Informally, an algorithm can be said to exhibit a growth rate on the order of a <a href="/wiki/Function_(mathematics)" title="Function (mathematics)">mathematical function</a> if beyond a certain input size <i>n</i>, the function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(n)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(n)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c1c49fad1eccc4e9af1e4f23f32efdc3ac4da973" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.483ex; height:2.843ex;" alt="f(n)"/></span> times a positive constant provides an <a href="/wiki/Asymptotic_analysis" title="Asymptotic analysis">upper bound or limit</a> for the run-time of that algorithm.  In other words, for a given input size <i>n</i> greater than some <i>n</i><sub>0</sub> and a constant <i>c</i>, the running time of that algorithm will never be larger than <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c\times f(n)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c\times f(n)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae4c8c636693ea15feed0c7cce2b73f9438776ba" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.33ex; height:2.843ex;" alt="{\displaystyle c\times f(n)}"/></span>.  This concept is frequently expressed using Big O notation.  For example, since the run-time of <a href="/wiki/Insertion_sort" title="Insertion sort">insertion sort</a> <a href="/wiki/Quadratic_growth" title="Quadratic growth">grows quadratically</a> as its input size increases, insertion sort can be said to be of order <i>O</i>(<i>n</i><sup>2</sup>).
+</p><p>Big O notation is a convenient way to express the <a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">worst-case scenario</a> for a given algorithm, although it can also be used to express the average-case &#8212; for example, the worst-case scenario for <a href="/wiki/Quicksort" title="Quicksort">quicksort</a> is <i>O</i>(<i>n</i><sup>2</sup>), but the average-case run-time is <span class="texhtml"><i>O</i>(<i>n</i>&#160;log&#160;<i>n</i>)</span>.
+</p>
+<h3><span class="mw-headline" id="Empirical_orders_of_growth">Empirical orders of growth</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=5" title="Edit section: Empirical orders of growth">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Assuming the execution time follows power rule, <i><span class="texhtml">t &#8776; k n<sup>a</sup></span></i>, the coefficient <i>a</i> can be found <sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> by taking empirical measurements of run time <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{t_{1},t_{2}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{t_{1},t_{2}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/24fe12eea273bc253872cdf0e5a2615079bc3853" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.147ex; height:2.843ex;" alt="{\displaystyle \{t_{1},t_{2}\}}"/></span> at some problem-size points <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{n_{1},n_{2}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{n_{1},n_{2}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b444648cfcc7f3141593bc8b66ccf30c1819cc40" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.257ex; height:2.843ex;" alt="{\displaystyle \{n_{1},n_{2}\}}"/></span>, and calculating <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle t_{2}/t_{1}=(n_{2}/n_{1})^{a}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>a</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle t_{2}/t_{1}=(n_{2}/n_{1})^{a}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/505a097fb9ad38daf700aad312236aca4411d217" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:17.02ex; height:2.843ex;" alt="t_{2}/t_{1}=(n_{2}/n_{1})^{a}"/></span> so that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a=\log(t_{2}/t_{1})/\log(n_{2}/n_{1})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+        <mo>=</mo>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <msub>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a=\log(t_{2}/t_{1})/\log(n_{2}/n_{1})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3d16a4a09f9447ce154080c2ae275b0f0ccc701" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:26.45ex; height:2.843ex;" alt="a=\log(t_{2}/t_{1})/\log(n_{2}/n_{1})"/></span>. In other words, this measures the slope of the empirical line on the <a href="/wiki/Log%E2%80%93log_plot" title="Log–log plot">log–log plot</a> of execution time vs. problem size, at some size point. If the order of growth indeed follows the power rule (and so the line on log–log plot is indeed a straight line), the empirical value of <i>a</i> will  stay constant at different ranges, and if not, it will change (and the line is a curved line) - but still could serve for comparison of any two given algorithms as to their <i>empirical local orders of growth</i> behaviour. Applied to the above table:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th><i>n</i> (list size)
+</th>
+<th>Computer A run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th>
+<th>Local order of growth<br />(n^_)
+</th>
+<th>Computer B run-time<br />(in <a href="/wiki/Nanosecond" title="Nanosecond">nanoseconds</a>)
+</th>
+<th>Local order of growth<br />(n^_)
+</th></tr>
+<tr>
+<td>15
+</td>
+<td>7
+</td>
+<td>
+</td>
+<td>100,000
+</td>
+<td>
+</td></tr>
+<tr>
+<td>65
+</td>
+<td>32
+</td>
+<td>1.04
+</td>
+<td>150,000
+</td>
+<td>0.28
+</td></tr>
+<tr>
+<td>250
+</td>
+<td>125
+</td>
+<td>1.01
+</td>
+<td>200,000
+</td>
+<td>0.21
+</td></tr>
+<tr>
+<td>1,000
+</td>
+<td>500
+</td>
+<td>1.00
+</td>
+<td>250,000
+</td>
+<td>0.16
+</td></tr>
+<tr>
+<td>...
+</td>
+<td>...
+</td>
+<td>
+</td>
+<td>...
+</td>
+<td>
+</td></tr>
+<tr>
+<td>1,000,000
+</td>
+<td>500,000
+</td>
+<td>1.00
+</td>
+<td>500,000
+</td>
+<td>0.10
+</td></tr>
+<tr>
+<td>4,000,000
+</td>
+<td>2,000,000
+</td>
+<td>1.00
+</td>
+<td>550,000
+</td>
+<td>0.07
+</td></tr>
+<tr>
+<td>16,000,000
+</td>
+<td>8,000,000
+</td>
+<td>1.00
+</td>
+<td>600,000
+</td>
+<td>0.06
+</td></tr>
+<tr>
+<td>...
+</td>
+<td>...
+</td>
+<td>
+</td>
+<td>...
+</td>
+<td>
+</td></tr></tbody></table>
+<p>It is clearly seen that the first algorithm exhibits a linear order of growth indeed following the power rule. The empirical values for the second one are diminishing rapidly, suggesting it follows another rule of growth and in any case has much lower local orders of growth (and improving further still), empirically, than the first one.
+</p>
+<h3><span class="mw-headline" id="Evaluating_run-time_complexity">Evaluating run-time complexity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=6" title="Edit section: Evaluating run-time complexity">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The run-time complexity for the worst-case scenario of a given algorithm can sometimes be evaluated by examining the structure of the algorithm and making some simplifying assumptions.  Consider the following <a href="/wiki/Pseudocode" title="Pseudocode">pseudocode</a>:
+</p>
+<pre>1    <i>get a positive integer n from input</i>
+2    <b>if</b> n &gt; 10
+3        <b>print</b> "This might take a while..."
+4    <b>for</b> i = 1 <b>to</b> n
+5        <b>for</b> j = 1 <b>to</b> i
+6            <b>print</b> i * j
+7    <b>print</b> "Done!"
+</pre>
+<p>A given computer will take a <a href="/wiki/DTIME" title="DTIME">discrete amount of time</a> to execute each of the <a href="/wiki/Instruction_(computer_science)" class="mw-redirect" title="Instruction (computer science)">instructions</a> involved with carrying out this algorithm.  The specific amount of time to carry out a given instruction will vary depending on which instruction is being executed and which computer is executing it, but on a conventional computer, this amount will be <a href="/wiki/Deterministic_system_(mathematics)" class="mw-redirect" title="Deterministic system (mathematics)">deterministic</a>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>  Say that the actions carried out in step 1 are considered to consume time <i>T</i><sub>1</sub>, step 2 uses time <i>T</i><sub>2</sub>, and so forth.
+</p><p>In the algorithm above, steps 1, 2 and 7 will only be run once.  For a worst-case evaluation, it should be assumed that step 3 will be run as well.  Thus the total amount of time to run steps 1-3 and step 7 is:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T_{1}+T_{2}+T_{3}+T_{7}.\,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>.</mo>
+        <mspace width="thinmathspace" />
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T_{1}+T_{2}+T_{3}+T_{7}.\,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f0c0ff401f30f1fb4a85625a1594d08283877dc4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:19.202ex; height:2.509ex;" alt="T_{1}+T_{2}+T_{3}+T_{7}.\,"/></span></dd></dl>
+<p>The <a href="/wiki/Program_loop" class="mw-redirect" title="Program loop">loops</a> in steps 4, 5 and 6 are trickier to evaluate.  The outer loop test in step 4 will execute ( <i>n</i> + 1 )
+times (note that an extra step is required to terminate the for loop, hence n + 1 and not n executions), which will consume <i>T</i><sub>4</sub>( <i>n</i> + 1 ) time.  The inner loop, on the other hand, is governed by the value of j, which <a href="/wiki/Iteration" title="Iteration">iterates</a> from 1 to <i>i</i>.  On the first pass through the outer loop, j iterates from 1 to 1:  The inner loop makes one pass, so running the inner loop body (step 6) consumes <i>T</i><sub>6</sub> time, and the inner loop test (step 5) consumes 2<i>T</i><sub>5</sub> time.  During the next pass through the outer loop, j iterates from 1 to 2:  the inner loop makes two passes, so running the inner loop body (step 6) consumes 2<i>T</i><sub>6</sub> time, and the inner loop test (step 5) consumes 3<i>T</i><sub>5</sub> time.
+</p><p>Altogether, the total time required to run the inner loop body can be expressed as an <a href="/wiki/Arithmetic_progression" title="Arithmetic progression">arithmetic progression</a>:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T_{6}+2T_{6}+3T_{6}+\cdots +(n-1)T_{6}+nT_{6}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mn>2</mn>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mn>3</mn>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mi>n</mi>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T_{6}+2T_{6}+3T_{6}+\cdots +(n-1)T_{6}+nT_{6}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f1c503d72d5c303011c665a75a0a3c43e69d69cb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:39.911ex; height:2.843ex;" alt="T_{6}+2T_{6}+3T_{6}+\cdots +(n-1)T_{6}+nT_{6}"/></span></dd></dl>
+<p>which can be <a href="/wiki/Factorization" title="Factorization">factored</a><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T_{6}\left[1+2+3+\cdots +(n-1)+n\right]=T_{6}\left[{\frac {1}{2}}(n^{2}+n)\right]}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mn>1</mn>
+            <mo>+</mo>
+            <mn>2</mn>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mo>+</mo>
+            <mo>&#x22EF;<!-- ⋯ --></mo>
+            <mo>+</mo>
+            <mo stretchy="false">(</mo>
+            <mi>n</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+            <mo stretchy="false">)</mo>
+            <mo>+</mo>
+            <mi>n</mi>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <mo>=</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T_{6}\left[1+2+3+\cdots +(n-1)+n\right]=T_{6}\left[{\frac {1}{2}}(n^{2}+n)\right]}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a9628a01337e38545050be14e2af89455b193523" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:51.951ex; height:6.176ex;" alt="T_{6}\left[1+2+3+\cdots +(n-1)+n\right]=T_{6}\left[{\frac  {1}{2}}(n^{2}+n)\right]"/></span></dd></dl>
+<p>The total time required to run the outer loop test can be evaluated similarly:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}&amp;2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}\\=\ &amp;T_{5}+2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}-T_{5}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <mn>2</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mn>3</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mn>4</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo>&#x22EF;<!-- ⋯ --></mo>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mi>n</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+                <mtext>&#xA0;</mtext>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mn>2</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mn>3</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mn>4</mn>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo>&#x22EF;<!-- ⋯ --></mo>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>&#x2212;<!-- − --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mi>n</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}\\=\ &amp;T_{5}+2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}-T_{5}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc9dcb3771ac6bdd7389ae74b084a6d9124ee5df" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:67.822ex; height:6.176ex;" alt="{\displaystyle {\begin{aligned}&amp;2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}\\=\ &amp;T_{5}+2T_{5}+3T_{5}+4T_{5}+\cdots +(n-1)T_{5}+nT_{5}+(n+1)T_{5}-T_{5}\end{aligned}}}"/></span></dd></dl>
+<p>which can be factored as
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}&amp;T_{5}\left[1+2+3+\cdots +(n-1)+n+(n+1)\right]-T_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{5}+(n+1)T_{5}-T_{5}\\=&amp;T_{5}\left[{\frac {1}{2}}(n^{2}+n)\right]+nT_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>+</mo>
+                    <mn>2</mn>
+                    <mo>+</mo>
+                    <mn>3</mn>
+                    <mo>+</mo>
+                    <mo>&#x22EF;<!-- ⋯ --></mo>
+                    <mo>+</mo>
+                    <mo stretchy="false">(</mo>
+                    <mi>n</mi>
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mn>1</mn>
+                    <mo stretchy="false">)</mo>
+                    <mo>+</mo>
+                    <mi>n</mi>
+                    <mo>+</mo>
+                    <mo stretchy="false">(</mo>
+                    <mi>n</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mo stretchy="false">(</mo>
+                    <msup>
+                      <mi>n</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>n</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>&#x2212;<!-- − --></mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mo stretchy="false">(</mo>
+                    <msup>
+                      <mi>n</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>n</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <mo>+</mo>
+                <mi>n</mi>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mo stretchy="false">(</mo>
+                    <msup>
+                      <mi>n</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <mn>3</mn>
+                    <mi>n</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;T_{5}\left[1+2+3+\cdots +(n-1)+n+(n+1)\right]-T_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{5}+(n+1)T_{5}-T_{5}\\=&amp;T_{5}\left[{\frac {1}{2}}(n^{2}+n)\right]+nT_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/33ef84f31af518a6f696b5b1e657ec3996dc4146" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -10.338ex; width:50.966ex; height:21.843ex;" alt="{\displaystyle {\begin{aligned}&amp;T_{5}\left[1+2+3+\cdots +(n-1)+n+(n+1)\right]-T_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{5}+(n+1)T_{5}-T_{5}\\=&amp;T_{5}\left[{\frac {1}{2}}(n^{2}+n)\right]+nT_{5}\\=&amp;\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}\end{aligned}}}"/></span></dd></dl>
+<p>Therefore, the total running time for this algorithm is:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(n)=T_{1}+T_{2}+T_{3}+T_{7}+(n+1)T_{4}+\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(n)=T_{1}+T_{2}+T_{3}+T_{7}+(n+1)T_{4}+\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/df0c43037b88684ab8db3176ba02600d6e8f5ef5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:76.543ex; height:6.176ex;" alt="f(n)=T_{1}+T_{2}+T_{3}+T_{7}+(n+1)T_{4}+\left[{\frac  {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac  {1}{2}}(n^{2}+3n)\right]T_{5}"/></span></dd></dl>
+<p>which <a href="/wiki/Reduction_(mathematics)" title="Reduction (mathematics)">reduces</a> to
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(n)=\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(n)=\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7e0b694e4aa27688ae37bdc32d9598cec67f6a44" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:76.543ex; height:6.176ex;" alt="f(n)=\left[{\frac  {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac  {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}"/></span></dd></dl>
+<p>As a <a href="/wiki/Rule-of-thumb" class="mw-redirect" title="Rule-of-thumb">rule-of-thumb</a>, one can assume that the highest-order term in any given function dominates its rate of growth and thus defines its run-time order.  In this example, n<sup>2</sup> is the highest-order term, so one can conclude that f(n) = O(n<sup>2</sup>).  Formally this can be proven as follows:
+</p>
+<style data-mw-deduplicate="TemplateStyles:r886047036">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>Prove that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},\ n\geq n_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>c</mi>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mtext>&#xA0;</mtext>
+        <mi>n</mi>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},\ n\geq n_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3ccf43180fd2ae88593d58ac07a334339730eefd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:84.073ex; height:6.176ex;" alt="\left[{\frac  {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac  {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},\ n\geq n_{0}"/></span>
+</p><p><br /><br />
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\\\leq &amp;(n^{2}+n)T_{6}+(n^{2}+3n)T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\ ({\text{for }}n\geq 0)\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mo stretchy="false">(</mo>
+                    <msup>
+                      <mi>n</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <mi>n</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mrow>
+                  <mo>[</mo>
+                  <mrow>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mfrac>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mo stretchy="false">(</mo>
+                    <msup>
+                      <mi>n</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mn>2</mn>
+                      </mrow>
+                    </msup>
+                    <mo>+</mo>
+                    <mn>3</mn>
+                    <mi>n</mi>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                  <mo>]</mo>
+                </mrow>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>&#x2264;<!-- ≤ --></mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>3</mn>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mtext>&#xA0;</mtext>
+                <mo stretchy="false">(</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>for&#xA0;</mtext>
+                </mrow>
+                <mi>n</mi>
+                <mo>&#x2265;<!-- ≥ --></mo>
+                <mn>0</mn>
+                <mo stretchy="false">)</mo>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\\\leq &amp;(n^{2}+n)T_{6}+(n^{2}+3n)T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\ ({\text{for }}n\geq 0)\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8e9f694c04b7471e544732e25e43363b219c8887" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -4.171ex; width:73.253ex; height:9.509ex;" alt="{\displaystyle {\begin{aligned}&amp;\left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\\\leq &amp;(n^{2}+n)T_{6}+(n^{2}+3n)T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\ ({\text{for }}n\geq 0)\end{aligned}}}"/></span>
+<br /><br />
+Let <i>k</i> be a constant greater than or equal to [<i>T</i><sub>1</sub>..<i>T</i><sub>7</sub>]
+<br /><br />
+<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}&amp;T_{6}(n^{2}+n)+T_{5}(n^{2}+3n)+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq k(n^{2}+n)+k(n^{2}+3n)+kn+5k\\=&amp;2kn^{2}+5kn+5k\leq 2kn^{2}+5kn^{2}+5kn^{2}\ ({\text{for }}n\geq 1)=12kn^{2}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd />
+              <mtd>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>6</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>5</mn>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>3</mn>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mo stretchy="false">(</mo>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>4</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>1</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>3</mn>
+                  </mrow>
+                </msub>
+                <mo>+</mo>
+                <msub>
+                  <mi>T</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>7</mn>
+                  </mrow>
+                </msub>
+                <mo>&#x2264;<!-- ≤ --></mo>
+                <mi>k</mi>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>k</mi>
+                <mo stretchy="false">(</mo>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>3</mn>
+                <mi>n</mi>
+                <mo stretchy="false">)</mo>
+                <mo>+</mo>
+                <mi>k</mi>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mi>k</mi>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <mo>=</mo>
+              </mtd>
+              <mtd>
+                <mn>2</mn>
+                <mi>k</mi>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mi>k</mi>
+                <mi>n</mi>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mi>k</mi>
+                <mo>&#x2264;<!-- ≤ --></mo>
+                <mn>2</mn>
+                <mi>k</mi>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mi>k</mi>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mo>+</mo>
+                <mn>5</mn>
+                <mi>k</mi>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+                <mtext>&#xA0;</mtext>
+                <mo stretchy="false">(</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mtext>for&#xA0;</mtext>
+                </mrow>
+                <mi>n</mi>
+                <mo>&#x2265;<!-- ≥ --></mo>
+                <mn>1</mn>
+                <mo stretchy="false">)</mo>
+                <mo>=</mo>
+                <mn>12</mn>
+                <mi>k</mi>
+                <msup>
+                  <mi>n</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mn>2</mn>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}&amp;T_{6}(n^{2}+n)+T_{5}(n^{2}+3n)+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq k(n^{2}+n)+k(n^{2}+3n)+kn+5k\\=&amp;2kn^{2}+5kn+5k\leq 2kn^{2}+5kn^{2}+5kn^{2}\ ({\text{for }}n\geq 1)=12kn^{2}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7b75ddc37c6881dd263b2851db63a094405482bf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:99.012ex; height:6.509ex;" alt="{\displaystyle {\begin{aligned}&amp;T_{6}(n^{2}+n)+T_{5}(n^{2}+3n)+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq k(n^{2}+n)+k(n^{2}+3n)+kn+5k\\=&amp;2kn^{2}+5kn+5k\leq 2kn^{2}+5kn^{2}+5kn^{2}\ ({\text{for }}n\geq 1)=12kn^{2}\end{aligned}}}"/></span>
+<br /><br />
+Therefore <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},n\geq n_{0}{\text{ for }}c=12k,n_{0}=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>6</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mrow>
+          <mo>[</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>2</mn>
+              </mfrac>
+            </mrow>
+            <mo stretchy="false">(</mo>
+            <msup>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+            <mo>+</mo>
+            <mn>3</mn>
+            <mi>n</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mo>]</mo>
+        </mrow>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>5</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>4</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>T</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>7</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mi>c</mi>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>,</mo>
+        <mi>n</mi>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>&#xA0;for&#xA0;</mtext>
+        </mrow>
+        <mi>c</mi>
+        <mo>=</mo>
+        <mn>12</mn>
+        <mi>k</mi>
+        <mo>,</mo>
+        <msub>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},n\geq n_{0}{\text{ for }}c=12k,n_{0}=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/25420dab04b647b89ea4a23a9d503640d65f8a9f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:102.825ex; height:6.176ex;" alt="{\displaystyle \left[{\frac {1}{2}}(n^{2}+n)\right]T_{6}+\left[{\frac {1}{2}}(n^{2}+3n)\right]T_{5}+(n+1)T_{4}+T_{1}+T_{2}+T_{3}+T_{7}\leq cn^{2},n\geq n_{0}{\text{ for }}c=12k,n_{0}=1}"/></span>
+</p>
+</blockquote>
+<p>A more <a href="/wiki/Elegance" title="Elegance">elegant</a> approach to analyzing this algorithm would be to declare that [<i>T</i><sub>1</sub>..<i>T</i><sub>7</sub>] are all equal to one unit of time, in a system of units chosen so that one unit is greater than or equal to the actual times for these steps.  This would mean that the algorithm's running time breaks down as follows:<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 4+\sum _{i=1}^{n}i\leq 4+\sum _{i=1}^{n}n=4+n^{2}\leq 5n^{2}\ ({\text{for }}n\geq 1)=O(n^{2}).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>4</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mi>i</mi>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mn>4</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mi>n</mi>
+        <mo>=</mo>
+        <mn>4</mn>
+        <mo>+</mo>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mn>5</mn>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mtext>&#xA0;</mtext>
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>for&#xA0;</mtext>
+        </mrow>
+        <mi>n</mi>
+        <mo>&#x2265;<!-- ≥ --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>O</mi>
+        <mo stretchy="false">(</mo>
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 4+\sum _{i=1}^{n}i\leq 4+\sum _{i=1}^{n}n=4+n^{2}\leq 5n^{2}\ ({\text{for }}n\geq 1)=O(n^{2}).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bc13b52cc784d8729a1a3f16b2ee522020f28581" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:58.235ex; height:6.843ex;" alt="{\displaystyle 4+\sum _{i=1}^{n}i\leq 4+\sum _{i=1}^{n}n=4+n^{2}\leq 5n^{2}\ ({\text{for }}n\geq 1)=O(n^{2}).}"/></span></p></blockquote>
+<h3><span class="mw-headline" id="Growth_rate_analysis_of_other_resources">Growth rate analysis of other resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=7" title="Edit section: Growth rate analysis of other resources">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The methodology of run-time analysis can also be utilized for predicting other growth rates, such as consumption of <a href="/wiki/DSPACE" title="DSPACE">memory space</a>.  As an example, consider the following pseudocode which manages and reallocates memory usage by a program based on the size of a <a href="/wiki/Computer_file" title="Computer file">file</a> which that program manages:
+</p>
+<pre><b>while</b> <i>file is still open:</i>
+    <b>let</b> n = <i>size of file</i>
+    <b>for</b> <i>every 100,000 <a href="/wiki/Kilobyte" title="Kilobyte">kilobytes</a> of increase in file size</i>
+        <i>double the amount of memory reserved</i>
+</pre>
+<p>In this instance, as the file size n increases, memory will be consumed at an <a href="/wiki/Exponential_growth" title="Exponential growth">exponential growth</a> rate, which is order O(2<sup>n</sup>). This is an extremely rapid and most likely unmanageable growth rate for consumption of memory <a href="/wiki/Resource_(computer_science)" class="mw-redirect" title="Resource (computer science)">resources</a>.
+</p>
+<h2><span class="mw-headline" id="Relevance">Relevance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=8" title="Edit section: Relevance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Algorithm analysis is important in practice because the accidental or unintentional use of an inefficient algorithm can significantly impact system performance. In time-sensitive applications, an algorithm taking too long to run can render its results outdated or useless. An inefficient algorithm can also end up requiring an uneconomical amount of computing power or storage in order to run, again rendering it practically useless.
+</p>
+<h2><span class="mw-headline" id="Constant_factors">Constant factors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=9" title="Edit section: Constant factors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Analysis of algorithms typically focuses on the asymptotic performance, particularly at the elementary level, but in practical applications constant factors are important, and real-world data is in practice always limited in size. The limit is typically the size of addressable memory, so on 32-bit machines 2<sup>32</sup> = 4 GiB (greater if <a href="/wiki/Segmented_memory" class="mw-redirect" title="Segmented memory">segmented memory</a> is used) and on 64-bit machines 2<sup>64</sup> = 16 EiB. Thus given a limited size, an order of growth (time or space) can be replaced by a constant factor, and in this sense all practical algorithms are O(1) for a large enough constant, or for small enough data.
+</p><p>This interpretation is primarily useful for functions that grow extremely slowly: (binary) <a href="/wiki/Iterated_logarithm" title="Iterated logarithm">iterated logarithm</a> (log<sup>*</sup>) is less than 5 for all practical data (2<sup>65536</sup> bits); (binary) log-log (log log <i>n</i>) is less than 6 for virtually all practical data (2<sup>64</sup> bits); and binary log (log <i>n</i>) is less than 64 for virtually all practical data (2<sup>64</sup> bits). An algorithm with non-constant complexity may nonetheless be more efficient than an algorithm with constant complexity on practical data if the overhead of the constant time algorithm results in a larger constant factor, e.g., one may have <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K&gt;k\log \log n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+        <mo>&gt;</mo>
+        <mi>k</mi>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K&gt;k\log \log n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3e92d63ad8925f9548ea045d5d1b165fc4bb6cc6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:14.875ex; height:2.509ex;" alt="K&gt;k\log \log n"/></span> so long as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle K/k&gt;6}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>K</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>k</mi>
+        <mo>&gt;</mo>
+        <mn>6</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle K/k&gt;6}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7f984b786988572539827baa466ef140fd07204f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.701ex; height:2.843ex;" alt="K/k&gt;6"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n&lt;2^{2^{6}}=2^{64}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+        <mo>&lt;</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mn>2</mn>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>6</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </msup>
+        <mo>=</mo>
+        <msup>
+          <mn>2</mn>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>64</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n&lt;2^{2^{6}}=2^{64}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b7ed5e880df20f2d1276942235bd8dca036fbd8b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:13.679ex; height:3.009ex;" alt="n&lt;2^{{2^{6}}}=2^{{64}}"/></span>.
+</p><p>For large data linear or quadratic factors cannot be ignored, but for small data an asymptotically inefficient algorithm may be more efficient. This is particularly used in <a href="/wiki/Hybrid_algorithm" title="Hybrid algorithm">hybrid algorithms</a>, like <a href="/wiki/Timsort" title="Timsort">Timsort</a>, which use an asymptotically efficient algorithm (here <a href="/wiki/Merge_sort" title="Merge sort">merge sort</a>, with time complexity <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n\log n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n\log n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/560dfdce0353a330e03e4b3e0b7ca6e484bb40fb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.535ex; height:2.509ex;" alt="n\log n"/></span>), but switch to an asymptotically inefficient algorithm (here <a href="/wiki/Insertion_sort" title="Insertion sort">insertion sort</a>, with time complexity <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n^{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>n</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n^{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ac9810bbdafe4a6a8061338db0f74e25b7952620" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.449ex; height:2.676ex;" alt="n^{2}"/></span>) for small data, as the simpler algorithm is faster on small data.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Amortized_analysis" title="Amortized analysis">Amortized analysis</a></li>
+<li><a href="/wiki/Analysis_of_parallel_algorithms" title="Analysis of parallel algorithms">Analysis of parallel algorithms</a></li>
+<li><a href="/wiki/Asymptotic_computational_complexity" title="Asymptotic computational complexity">Asymptotic computational complexity</a></li>
+<li><a href="/wiki/Best,_worst_and_average_case" title="Best, worst and average case">Best, worst and average case</a></li>
+<li><a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a></li>
+<li><a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">Computational complexity theory</a></li>
+<li><a href="/wiki/Master_theorem_(analysis_of_algorithms)" title="Master theorem (analysis of algorithms)">Master theorem (analysis of algorithms)</a></li>
+<li><a href="/wiki/NP-Complete" class="mw-redirect" title="NP-Complete">NP-Complete</a></li>
+<li><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical analysis</a></li>
+<li><a href="/wiki/Polynomial_time" class="mw-redirect" title="Polynomial time">Polynomial time</a></li>
+<li><a href="/wiki/Program_optimization" title="Program optimization">Program optimization</a></li>
+<li><a href="/wiki/Profiling_(computer_programming)" title="Profiling (computer programming)">Profiling (computer programming)</a></li>
+<li><a href="/wiki/Scalability" title="Scalability">Scalability</a></li>
+<li><a href="/wiki/Smoothed_analysis" title="Smoothed analysis">Smoothed analysis</a></li>
+<li><a href="/wiki/Termination_analysis" title="Termination analysis">Termination analysis</a> &#8212; the subproblem of checking whether a program will terminate at all</li>
+<li><a href="/wiki/Time_complexity" title="Time complexity">Time complexity</a> — includes table of orders of growth for common algorithms</li>
+<li><a href="/wiki/Information-based_complexity" title="Information-based complexity">Information-based complexity</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=11" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160828152021/http://www-cs-faculty.stanford.edu/~uno/news.html">"Knuth: Recent News"</a>. <i>web.archive.org</i>. 28 August 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=web.archive.org&amp;rft.atitle=Knuth%3A+Recent+News&amp;rft.date=2016-08-28&amp;rft_id=https%3A%2F%2Fweb.archive.org%2Fweb%2F20160828152021%2Fhttp%3A%2F%2Fwww-cs-faculty.stanford.edu%2F~uno%2Fnews.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-AhoHopcroft1974-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-AhoHopcroft1974_2-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Alfred V. Aho; John E. Hopcroft; Jeffrey D. Ullman (1974). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/designanalysisof00ahoarich"><i>The design and analysis of computer algorithms</i></a></span>. Addison-Wesley Pub. Co.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+design+and+analysis+of+computer+algorithms&amp;rft.pub=Addison-Wesley+Pub.+Co.&amp;rft.date=1974&amp;rft.au=Alfred+V.+Aho&amp;rft.au=John+E.+Hopcroft&amp;rft.au=Jeffrey+D.+Ullman&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fdesignanalysisof00ahoarich&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>, section 1.3</span>
+</li>
+<li id="cite_note-Hromkovič2004-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Hromkovič2004_3-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Juraj Hromkovič (2004). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=KpNet-n262QC&amp;pg=PA177"><i>Theoretical computer science: introduction to Automata, computability, complexity, algorithmics, randomization, communication, and cryptography</i></a>. Springer. pp.&#160;177–178. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-14015-3" title="Special:BookSources/978-3-540-14015-3"><bdi>978-3-540-14015-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Theoretical+computer+science%3A+introduction+to+Automata%2C+computability%2C+complexity%2C+algorithmics%2C+randomization%2C+communication%2C+and+cryptography&amp;rft.pages=177-178&amp;rft.pub=Springer&amp;rft.date=2004&amp;rft.isbn=978-3-540-14015-3&amp;rft.au=Juraj+Hromkovi%C4%8D&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DKpNet-n262QC%26pg%3DPA177&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Ausiello1999-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ausiello1999_4-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Giorgio Ausiello (1999). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=Yxxw90d9AuMC&amp;pg=PA3"><i>Complexity and approximation: combinatorial optimization problems and their approximability properties</i></a>. Springer. pp.&#160;3–8. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-65431-5" title="Special:BookSources/978-3-540-65431-5"><bdi>978-3-540-65431-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Complexity+and+approximation%3A+combinatorial+optimization+problems+and+their+approximability+properties&amp;rft.pages=3-8&amp;rft.pub=Springer&amp;rft.date=1999&amp;rft.isbn=978-3-540-65431-5&amp;rft.au=Giorgio+Ausiello&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DYxxw90d9AuMC%26pg%3DPA3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Wegener20-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Wegener20_5-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFWegener2005" class="citation">Wegener, Ingo (2005), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=u7DZSDSUYlQC&amp;pg=PA20"><i>Complexity theory: exploring the limits of efficient algorithms</i></a>, Berlin, New York: <a href="/wiki/Springer-Verlag" class="mw-redirect" title="Springer-Verlag">Springer-Verlag</a>, p.&#160;20, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-21045-0" title="Special:BookSources/978-3-540-21045-0"><bdi>978-3-540-21045-0</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Complexity+theory%3A+exploring+the+limits+of+efficient+algorithms&amp;rft.place=Berlin%2C+New+York&amp;rft.pages=20&amp;rft.pub=Springer-Verlag&amp;rft.date=2005&amp;rft.isbn=978-3-540-21045-0&amp;rft.aulast=Wegener&amp;rft.aufirst=Ingo&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Du7DZSDSUYlQC%26pg%3DPA20&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Tarjan1983-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Tarjan1983_6-0">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/Robert_Endre_Tarjan" class="mw-redirect" title="Robert Endre Tarjan">Robert Endre Tarjan</a> (1983). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=JiC7mIqg-X4C&amp;pg=PA3"><i>Data structures and network algorithms</i></a>. SIAM. pp.&#160;3–7. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-89871-187-5" title="Special:BookSources/978-0-89871-187-5"><bdi>978-0-89871-187-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Data+structures+and+network+algorithms&amp;rft.pages=3-7&amp;rft.pub=SIAM&amp;rft.date=1983&amp;rft.isbn=978-0-89871-187-5&amp;rft.au=Robert+Endre+Tarjan&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DJiC7mIqg-X4C%26pg%3DPA3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://cstheory.stackexchange.com/q/608">Examples of the price of abstraction?</a>, cstheory.stackexchange.com</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://rjlipton.wordpress.com/2009/07/24/how-to-avoid-o-abuse-and-bribes/">How To Avoid O-Abuse and Bribes</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170308175036/https://rjlipton.wordpress.com/2009/07/24/how-to-avoid-o-abuse-and-bribes/">Archived</a> 2017-03-08 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, at the blog "Gödel's Lost Letter and P=NP" by R. J. Lipton, professor of Computer Science at Georgia Tech, recounting idea by Robert Sedgewick</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">However, this is not the case with a <a href="/wiki/Quantum_computer" class="mw-redirect" title="Quantum computer">quantum computer</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">It can be proven by <a href="/wiki/Mathematical_induction" title="Mathematical induction">induction</a> that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1+2+3+\cdots +(n-1)+n={\frac {n(n+1)}{2}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mo>+</mo>
+        <mn>2</mn>
+        <mo>+</mo>
+        <mn>3</mn>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>n</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mo stretchy="false">(</mo>
+              <mi>n</mi>
+              <mo>+</mo>
+              <mn>1</mn>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1+2+3+\cdots +(n-1)+n={\frac {n(n+1)}{2}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/86e80d4ce2fd76d869e9d5f8bbf17668ee1d082e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:41.55ex; height:5.676ex;" alt="1+2+3+\cdots +(n-1)+n={\frac  {n(n+1)}{2}}"/></span></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">This approach, unlike the above approach, neglects the constant time consumed by the loop tests which terminate their respective loops, but it is <a href="/wiki/Trivial_(mathematics)" class="mw-redirect" title="Trivial (mathematics)">trivial</a> to prove that such omission does not affect the final result</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book"><a href="/wiki/Thomas_H._Cormen" title="Thomas H. Cormen">Cormen, Thomas H.</a>; <a href="/wiki/Charles_E._Leiserson" title="Charles E. Leiserson">Leiserson, Charles E.</a>; <a href="/wiki/Ronald_L._Rivest" class="mw-redirect" title="Ronald L. Rivest">Rivest, Ronald L.</a> &amp; <a href="/wiki/Clifford_Stein" title="Clifford Stein">Stein, Clifford</a> (2001). <i><a href="/wiki/Introduction_to_Algorithms" title="Introduction to Algorithms">Introduction to Algorithms</a></i>. Chapter 1: Foundations (Second ed.). Cambridge, MA: MIT Press and McGraw-Hill. pp.&#160;3–122. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-262-03293-7" title="Special:BookSources/0-262-03293-7"><bdi>0-262-03293-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introduction+to+Algorithms&amp;rft.place=Cambridge%2C+MA&amp;rft.pages=3-122&amp;rft.edition=Second&amp;rft.pub=MIT+Press+and+McGraw-Hill&amp;rft.date=2001&amp;rft.isbn=0-262-03293-7&amp;rft.aulast=Cormen&amp;rft.aufirst=Thomas+H.&amp;rft.au=Leiserson%2C+Charles+E.&amp;rft.au=Rivest%2C+Ronald+L.&amp;rft.au=Stein%2C+Clifford&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Robert_Sedgewick_(computer_scientist)" title="Robert Sedgewick (computer scientist)">Sedgewick, Robert</a> (1998). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/algorithmsinc00sedg"><i>Algorithms in C, Parts 1-4: Fundamentals, Data Structures, Sorting, Searching</i></a></span> (3rd ed.). Reading, MA: Addison-Wesley Professional. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-201-31452-6" title="Special:BookSources/978-0-201-31452-6"><bdi>978-0-201-31452-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algorithms+in+C%2C+Parts+1-4%3A+Fundamentals%2C+Data+Structures%2C+Sorting%2C+Searching&amp;rft.place=Reading%2C+MA&amp;rft.edition=3rd&amp;rft.pub=Addison-Wesley+Professional&amp;rft.date=1998&amp;rft.isbn=978-0-201-31452-6&amp;rft.aulast=Sedgewick&amp;rft.aufirst=Robert&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Falgorithmsinc00sedg&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Donald_Knuth" title="Donald Knuth">Knuth, Donald</a>. <i><a href="/wiki/The_Art_of_Computer_Programming" title="The Art of Computer Programming">The Art of Computer Programming</a></i>. Addison-Wesley.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Art+of+Computer+Programming&amp;rft.pub=Addison-Wesley&amp;rft.aulast=Knuth&amp;rft.aufirst=Donald&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Greene, Daniel A.; Knuth, Donald E. (1982). <i>Mathematics for the Analysis of Algorithms</i> (Second ed.). Birkhäuser. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/3-7643-3102-X" title="Special:BookSources/3-7643-3102-X"><bdi>3-7643-3102-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Mathematics+for+the+Analysis+of+Algorithms&amp;rft.edition=Second&amp;rft.pub=Birkh%C3%A4user&amp;rft.date=1982&amp;rft.isbn=3-7643-3102-X&amp;rft.aulast=Greene&amp;rft.aufirst=Daniel+A.&amp;rft.au=Knuth%2C+Donald+E.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Oded_Goldreich" title="Oded Goldreich">Goldreich, Oded</a> (2010). <i>Computational Complexity: A Conceptual Perspective</i>. <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-521-88473-0" title="Special:BookSources/978-0-521-88473-0"><bdi>978-0-521-88473-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computational+Complexity%3A+A+Conceptual+Perspective&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2010&amp;rft.isbn=978-0-521-88473-0&amp;rft.aulast=Goldreich&amp;rft.aufirst=Oded&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAnalysis+of+algorithms" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/File:Commons-logo.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Analysis_of_algorithms" class="extiw" title="commons:Category:Analysis of algorithms"><span style="">Analysis of algorithms</span></a> at Wikimedia Commons</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Computer_science" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Computer_science" title="Template:Computer science"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Computer_science" title="Template talk:Computer science"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Computer_science&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Computer_science" style="font-size:114%;margin:0 4em"><a href="/wiki/Computer_science" title="Computer science">Computer science</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="Note:_This_template_roughly_follows_the_2012_ACM_Computing_Classification_System.">Note: This template roughly follows the 2012 <a href="/wiki/ACM_Computing_Classification_System" title="ACM Computing Classification System">ACM Computing Classification System</a>.</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_hardware" title="Computer hardware">Hardware</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Printed_circuit_board" title="Printed circuit board">Printed circuit board</a></li>
+<li><a href="/wiki/Peripheral" title="Peripheral">Peripheral</a></li>
+<li><a href="/wiki/Integrated_circuit" title="Integrated circuit">Integrated circuit</a></li>
+<li><a href="/wiki/Very_Large_Scale_Integration" title="Very Large Scale Integration">Very Large Scale Integration</a></li>
+<li><a href="/wiki/System_on_a_chip" title="System on a chip">Systems on Chip (SoCs)</a></li>
+<li><a href="/wiki/Green_computing" title="Green computing">Energy consumption (Green computing)</a></li>
+<li><a href="/wiki/Electronic_design_automation" title="Electronic design automation">Electronic design automation</a></li>
+<li><a href="/wiki/Hardware_acceleration" title="Hardware acceleration">Hardware acceleration</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Computer systems<br />organization</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_architecture" title="Computer architecture">Computer architecture</a></li>
+<li><a href="/wiki/Embedded_system" title="Embedded system">Embedded system</a></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a></li>
+<li><a href="/wiki/Dependability" title="Dependability">Dependability</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_network" title="Computer network">Networks</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Network_architecture" title="Network architecture">Network architecture</a></li>
+<li><a href="/wiki/Network_protocol" class="mw-redirect" title="Network protocol">Network protocol</a></li>
+<li><a href="/wiki/Networking_hardware" title="Networking hardware">Network components</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Network_performance" title="Network performance">Network performance evaluation</a></li>
+<li><a href="/wiki/Network_service" title="Network service">Network service</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software organization</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Interpreter_(computing)" title="Interpreter (computing)">Interpreter</a></li>
+<li><a href="/wiki/Middleware" title="Middleware">Middleware</a></li>
+<li><a href="/wiki/Virtual_machine" title="Virtual machine">Virtual machine</a></li>
+<li><a href="/wiki/Operating_system" title="Operating system">Operating system</a></li>
+<li><a href="/wiki/Software_quality" title="Software quality">Software quality</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Programming_language_theory" title="Programming language theory">Software notations</a><br />and <a href="/wiki/Programming_tool" title="Programming tool">tools</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Programming_paradigm" title="Programming paradigm">Programming paradigm</a></li>
+<li><a href="/wiki/Programming_language" title="Programming language">Programming language</a></li>
+<li><a href="/wiki/Compiler_construction" class="mw-redirect" title="Compiler construction">Compiler</a></li>
+<li><a href="/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific language</a></li>
+<li><a href="/wiki/Modeling_language" title="Modeling language">Modeling language</a></li>
+<li><a href="/wiki/Software_framework" title="Software framework">Software framework</a></li>
+<li><a href="/wiki/Integrated_development_environment" title="Integrated development environment">Integrated development environment</a></li>
+<li><a href="/wiki/Software_configuration_management" title="Software configuration management">Software configuration management</a></li>
+<li><a href="/wiki/Library_(computing)" title="Library (computing)">Software library</a></li>
+<li><a href="/wiki/Software_repository" title="Software repository">Software repository</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Software_development" title="Software development">Software development</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Software_development_process" title="Software development process">Software development process</a></li>
+<li><a href="/wiki/Requirements_analysis" title="Requirements analysis">Requirements analysis</a></li>
+<li><a href="/wiki/Software_design" title="Software design">Software design</a></li>
+<li><a href="/wiki/Software_construction" title="Software construction">Software construction</a></li>
+<li><a href="/wiki/Software_deployment" title="Software deployment">Software deployment</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">Software maintenance</a></li>
+<li><a href="/wiki/Programming_team" title="Programming team">Programming team</a></li>
+<li><a href="/wiki/Open-source_software" title="Open-source software">Open-source model</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Theory_of_computation" title="Theory of computation">Theory of computation</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Model_of_computation" title="Model of computation">Model of computation</a></li>
+<li><a href="/wiki/Formal_language" title="Formal language">Formal language</a></li>
+<li><a href="/wiki/Automata_theory" title="Automata theory">Automata theory</a></li>
+<li><a href="/wiki/Computability_theory" title="Computability theory">Computability theory</a></li>
+<li><a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">Computational complexity theory</a></li>
+<li><a href="/wiki/Logic_in_computer_science" title="Logic in computer science">Logic</a></li>
+<li><a href="/wiki/Semantics_(computer_science)" title="Semantics (computer science)">Semantics</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Algorithm" title="Algorithm">Algorithms</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Algorithm_design" class="mw-redirect" title="Algorithm design">Algorithm design</a></li>
+<li><a class="mw-selflink selflink">Analysis of algorithms</a></li>
+<li><a href="/wiki/Algorithmic_efficiency" title="Algorithmic efficiency">Algorithmic efficiency</a></li>
+<li><a href="/wiki/Randomized_algorithm" title="Randomized algorithm">Randomized algorithm</a></li>
+<li><a href="/wiki/Computational_geometry" title="Computational geometry">Computational geometry</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Mathematics<br />of computing</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Discrete_mathematics" title="Discrete mathematics">Discrete mathematics</a></li>
+<li><a href="/wiki/Probability" title="Probability">Probability</a></li>
+<li><a href="/wiki/Statistics" title="Statistics">Statistics</a></li>
+<li><a href="/wiki/Mathematical_software" title="Mathematical software">Mathematical software</a></li>
+<li><a href="/wiki/Information_theory" title="Information theory">Information theory</a></li>
+<li><a href="/wiki/Mathematical_analysis" title="Mathematical analysis">Mathematical analysis</a></li>
+<li><a href="/wiki/Numerical_analysis" title="Numerical analysis">Numerical analysis</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Information_system" title="Information system">Information<br />systems</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Database" title="Database">Database management system</a></li>
+<li><a href="/wiki/Computer_data_storage" title="Computer data storage">Information storage systems</a></li>
+<li><a href="/wiki/Enterprise_information_system" title="Enterprise information system">Enterprise information system</a></li>
+<li><a href="/wiki/Social_software" title="Social software">Social information systems</a></li>
+<li><a href="/wiki/Geographic_information_system" title="Geographic information system">Geographic information system</a></li>
+<li><a href="/wiki/Decision_support_system" title="Decision support system">Decision support system</a></li>
+<li><a href="/wiki/Process_control" title="Process control">Process control system</a></li>
+<li><a href="/wiki/Multimedia_database" title="Multimedia database">Multimedia information system</a></li>
+<li><a href="/wiki/Data_mining" title="Data mining">Data mining</a></li>
+<li><a href="/wiki/Digital_library" title="Digital library">Digital library</a></li>
+<li><a href="/wiki/Computing_platform" title="Computing platform">Computing platform</a></li>
+<li><a href="/wiki/Digital_marketing" title="Digital marketing">Digital marketing</a></li>
+<li><a href="/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a></li>
+<li><a href="/wiki/Information_retrieval" title="Information retrieval">Information retrieval</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_security" title="Computer security">Security</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cryptography" title="Cryptography">Cryptography</a></li>
+<li><a href="/wiki/Formal_methods" title="Formal methods">Formal methods</a></li>
+<li><a href="/wiki/Security_service_(telecommunication)" title="Security service (telecommunication)">Security services</a></li>
+<li><a href="/wiki/Intrusion_detection_system" title="Intrusion detection system">Intrusion detection system</a></li>
+<li><a href="/wiki/Computer_security_compromised_by_hardware_failure" title="Computer security compromised by hardware failure">Hardware security</a></li>
+<li><a href="/wiki/Network_security" title="Network security">Network security</a></li>
+<li><a href="/wiki/Information_security" title="Information security">Information security</a></li>
+<li><a href="/wiki/Application_security" title="Application security">Application security</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Human%E2%80%93computer_interaction" title="Human–computer interaction">Human–computer<br />interaction</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Interaction_design" title="Interaction design">Interaction design</a></li>
+<li><a href="/wiki/Social_computing" title="Social computing">Social computing</a></li>
+<li><a href="/wiki/Ubiquitous_computing" title="Ubiquitous computing">Ubiquitous computing</a></li>
+<li><a href="/wiki/Visualization_(graphics)" title="Visualization (graphics)">Visualization</a></li>
+<li><a href="/wiki/Computer_accessibility" title="Computer accessibility">Accessibility</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></li>
+<li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Artificial_intelligence" title="Artificial intelligence">Artificial<br />intelligence</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Natural_language_processing" title="Natural language processing">Natural language processing</a></li>
+<li><a href="/wiki/Knowledge_representation_and_reasoning" title="Knowledge representation and reasoning">Knowledge representation and reasoning</a></li>
+<li><a href="/wiki/Computer_vision" title="Computer vision">Computer vision</a></li>
+<li><a href="/wiki/Automated_planning_and_scheduling" title="Automated planning and scheduling">Automated planning and scheduling</a></li>
+<li><a href="/wiki/Mathematical_optimization" title="Mathematical optimization">Search methodology</a></li>
+<li><a href="/wiki/Control_theory" title="Control theory">Control method</a></li>
+<li><a href="/wiki/Philosophy_of_artificial_intelligence" title="Philosophy of artificial intelligence">Philosophy of artificial intelligence</a></li>
+<li><a href="/wiki/Distributed_artificial_intelligence" title="Distributed artificial intelligence">Distributed artificial intelligence</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Machine_learning" title="Machine learning">Machine learning</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Supervised_learning" title="Supervised learning">Supervised learning</a></li>
+<li><a href="/wiki/Unsupervised_learning" title="Unsupervised learning">Unsupervised learning</a></li>
+<li><a href="/wiki/Reinforcement_learning" title="Reinforcement learning">Reinforcement learning</a></li>
+<li><a href="/wiki/Multi-task_learning" title="Multi-task learning">Multi-task learning</a></li>
+<li><a href="/wiki/Cross-validation_(statistics)" title="Cross-validation (statistics)">Cross-validation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_graphics" title="Computer graphics">Graphics</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_animation" title="Computer animation">Animation</a></li>
+<li><a href="/wiki/Rendering_(computer_graphics)" title="Rendering (computer graphics)">Rendering</a></li>
+<li><a href="/wiki/Photo_manipulation" title="Photo manipulation">Image manipulation</a></li>
+<li><a href="/wiki/Graphics_processing_unit" title="Graphics processing unit">Graphics processing unit</a></li>
+<li><a href="/wiki/Mixed_reality" title="Mixed reality">Mixed reality</a></li>
+<li><a href="/wiki/Virtual_reality" title="Virtual reality">Virtual reality</a></li>
+<li><a href="/wiki/Image_compression" title="Image compression">Image compression</a></li>
+<li><a href="/wiki/Solid_modeling" title="Solid modeling">Solid modeling</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Applied<br />computing</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/E-commerce" title="E-commerce">E-commerce</a></li>
+<li><a href="/wiki/Enterprise_software" title="Enterprise software">Enterprise software</a></li>
+<li><a href="/wiki/Computational_mathematics" title="Computational mathematics">Computational mathematics</a></li>
+<li><a href="/wiki/Computational_physics" title="Computational physics">Computational physics</a></li>
+<li><a href="/wiki/Computational_chemistry" title="Computational chemistry">Computational chemistry</a></li>
+<li><a href="/wiki/Computational_biology" title="Computational biology">Computational biology</a></li>
+<li><a href="/wiki/Computational_social_science" title="Computational social science">Computational social science</a></li>
+<li><a href="/wiki/Computational_engineering" title="Computational engineering">Computational engineering</a></li>
+<li><a href="/wiki/Health_informatics" title="Health informatics">Computational healthcare</a></li>
+<li><a href="/wiki/Digital_art" title="Digital art">Digital art</a></li>
+<li><a href="/wiki/Electronic_publishing" title="Electronic publishing">Electronic publishing</a></li>
+<li><a href="/wiki/Cyberwarfare" title="Cyberwarfare">Cyberwarfare</a></li>
+<li><a href="/wiki/Electronic_voting" title="Electronic voting">Electronic voting</a></li>
+<li><a href="/wiki/Video_game" title="Video game">Video games</a></li>
+<li><a href="/wiki/Word_processor" title="Word processor">Word processing</a></li>
+<li><a href="/wiki/Operations_research" title="Operations research">Operations research</a></li>
+<li><a href="/wiki/Educational_technology" title="Educational technology">Educational technology</a></li>
+<li><a href="/wiki/Document_management_system" title="Document management system">Document management</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="/wiki/Book:Computer_science" class="mw-redirect" title="Book:Computer science">Book</a></b></li>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Computer_science" title="Category:Computer science">Category</a></b></li>
+<li><img alt="Outline" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Global_thinking.svg/10px-Global_thinking.svg.png" decoding="async" title="Outline" width="10" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/41/Global_thinking.svg/15px-Global_thinking.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/41/Global_thinking.svg/21px-Global_thinking.svg.png 2x" data-file-width="130" data-file-height="200" /> <b><a href="/wiki/Outline_of_computer_science" title="Outline of computer science">Outline</a></b></li>
+<li><img alt="WikiProject" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/16px-People_icon.svg.png" decoding="async" title="WikiProject" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/24px-People_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/37/People_icon.svg/32px-People_icon.svg.png 2x" data-file-width="100" data-file-height="100" /><b><a href="/wiki/Wikipedia:WikiProject_Computer_science" title="Wikipedia:WikiProject Computer science">WikiProject</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Category:Computer_science" class="extiw" title="commons:Category:Computer science">Commons</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1336
+Cached time: 20200322054424
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.400 seconds
+Real time usage: 0.688 seconds
+Preprocessor visited node count: 1457/1000000
+Post‐expand include size: 58416/2097152 bytes
+Template argument size: 1022/2097152 bytes
+Highest expansion depth: 15/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 33203/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.154/10.000 seconds
+Lua memory usage: 4.25 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  536.702      1 -total
+ 34.13%  183.151      1 Template:Commonscatinline
+ 31.86%  170.978      1 Template:Sister-inline
+ 30.92%  165.926      2 Template:If_then_show
+ 26.21%  140.688      1 Template:Reflist
+ 19.07%  102.345      1 Template:More_footnotes
+ 15.57%   83.578      1 Template:Cite_web
+ 10.01%   53.705      1 Template:Ambox
+  8.29%   44.472      9 Template:Cite_book
+  6.22%   33.370      1 Template:Computer_science
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2230-0!canonical!math=5 and timestamp 20200322054424 and revision id 940455497
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Analysis_of_algorithms&amp;oldid=940455497">https://en.wikipedia.org/w/index.php?title=Analysis_of_algorithms&amp;oldid=940455497</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Analysis_of_algorithms" title="Category:Analysis of algorithms">Analysis of algorithms</a></li><li><a href="/wiki/Category:Computational_complexity_theory" title="Category:Computational complexity theory">Computational complexity theory</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_March_2010" title="Category:Articles lacking in-text citations from March 2010">Articles lacking in-text citations from March 2010</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Commons_category_link_from_Wikidata" title="Category:Commons category link from Wikidata">Commons category link from Wikidata</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Analysis+of+algorithms" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Analysis+of+algorithms" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Analysis_of_algorithms" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Analysis_of_algorithms" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Analysis_of_algorithms">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Analysis_of_algorithms" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Analysis_of_algorithms" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Analysis_of_algorithms&amp;oldid=940455497" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Analysis_of_algorithms&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q333464" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Analysis_of_algorithms&amp;id=940455497&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Analysis+of+algorithms">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Analysis+of+algorithms&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Analysis_of_algorithms&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%D9%8A%D9%84_%D8%A7%D9%84%D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A7%D8%AA" title="تحليل الخوارزميات – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/An%C3%A0lisi_d%27algorismes" title="Anàlisi d&#039;algorismes – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Anal%C3%BDza_algoritm%C5%AF" title="Analýza algoritmů – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_de_algoritmos" title="Análisis de algoritmos – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%DB%8C%D9%84_%D8%A7%D9%84%DA%AF%D9%88%D8%B1%DB%8C%D8%AA%D9%85%E2%80%8C%D9%87%D8%A7" title="تحلیل الگوریتم‌ها – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes" title="Analyse de la complexité des algorithmes – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98_%EB%B6%84%EC%84%9D" title="알고리즘 분석 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hi"><a href="https://hi.wikipedia.org/wiki/%E0%A4%95%E0%A4%B2%E0%A4%A8%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%82_%E0%A4%95%E0%A4%BE_%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%8D%E0%A4%B2%E0%A5%87%E0%A4%B7%E0%A4%A3" title="कलनविधियों का विश्लेषण – Hindi" lang="hi" hreflang="hi" class="interlanguage-link-target">हिन्दी</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Analiza_algoritama" title="Analiza algoritama – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%90%D7%A0%D7%9C%D7%99%D7%96%D7%94_%D7%A9%D7%9C_%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9E%D7%99%D7%9D" title="אנליזה של אלגוריתמים – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/%E1%83%90%E1%83%9A%E1%83%92%E1%83%9D%E1%83%A0%E1%83%98%E1%83%97%E1%83%9B%E1%83%97%E1%83%90_%E1%83%90%E1%83%9C%E1%83%90%E1%83%9A%E1%83%98%E1%83%96%E1%83%98" title="ალგორითმთა ანალიზი – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B5%BD%E0%B4%97%E0%B5%8A%E0%B4%B0%E0%B4%BF%E0%B4%A4%E0%B4%99%E0%B5%8D%E0%B4%99%E0%B4%B3%E0%B5%81%E0%B4%9F%E0%B5%86_%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B4%B2%E0%B4%A8%E0%B4%82" title="അൽഗൊരിതങ്ങളുടെ വിശകലനം – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E8%A7%A3%E6%9E%90" title="アルゴリズム解析 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Algoritmeanalyse" title="Algoritmeanalyse – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Analiza_algorytm%C3%B3w" title="Analiza algorytmów – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/An%C3%A1lise_de_algoritmos" title="Análise de algoritmos – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/%C4%8Casovna_zahtevnost" title="Časovna zahtevnost – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%B0%D0%BC%D0%B0" title="Анализа алгоритама – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B2%E0%B8%B0%E0%B8%AB%E0%B9%8C%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5" title="การวิเคราะห์ขั้นตอนวิธี – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Algoritma_analizi" title="Algoritma analizi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D1%96%D0%B7_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%96%D0%B2" title="Аналіз алгоритмів – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Ph%C3%A2n_t%C3%ADch_thu%E1%BA%ADt_to%C3%A1n" title="Phân tích thuật toán – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90" title="算法分析 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q333464#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 12 February 2020, at 17:08<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Analysis_of_algorithms&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.400","walltime":"0.688","ppvisitednodes":{"value":1457,"limit":1000000},"postexpandincludesize":{"value":58416,"limit":2097152},"templateargumentsize":{"value":1022,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":33203,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  536.702      1 -total"," 34.13%  183.151      1 Template:Commonscatinline"," 31.86%  170.978      1 Template:Sister-inline"," 30.92%  165.926      2 Template:If_then_show"," 26.21%  140.688      1 Template:Reflist"," 19.07%  102.345      1 Template:More_footnotes"," 15.57%   83.578      1 Template:Cite_web"," 10.01%   53.705      1 Template:Ambox","  8.29%   44.472      9 Template:Cite_book","  6.22%   33.370      1 Template:Computer_science"]},"scribunto":{"limitreport-timeusage":{"value":"0.154","limit":"10.000"},"limitreport-memusage":{"value":4452232,"limit":52428800}},"cachereport":{"origin":"mw1336","timestamp":"20200322054424","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Analysis of algorithms","url":"https:\/\/en.wikipedia.org\/wiki\/Analysis_of_algorithms","sameAs":"http:\/\/www.wikidata.org\/entity\/Q333464","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q333464","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-10-12T20:24:28Z","dateModified":"2020-02-12T17:08:36Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/7\/7e\/Comparison_computational_complexity.svg","headline":"study of time and space resources used to execute a computational process"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":86,"wgHostname":"mw1258"});});</script></body></html>

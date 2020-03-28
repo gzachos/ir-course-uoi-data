@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Transfer learning - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7GoApAICIAADJu8z4AAAAL","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Transfer_learning","wgTitle":"Transfer learning","wgCurRevisionId":942693334,"wgRevisionId":942693334,"wgArticleId":3920550,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Harv and Sfn template errors","Articles needing POV-check from June 2019","Machine learning"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Transfer_learning","wgRelevantArticleId":3920550,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,
+"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q6027324","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready",
+"ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","ext.scribunto.logs","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Transfer_learning&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Transfer_learning&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Transfer_learning"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Transfer_learning rootpage-Transfer_learning skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Transfer learning</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><b>Transfer learning (TL)</b> is a research problem in <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a> (ML) that focuses on storing knowledge gained while solving one problem and applying it to a different but related problem.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> For example, knowledge gained while learning to <a href="/wiki/Computer_vision#Recognition" title="Computer vision">recognize</a> cars could apply when trying to recognize trucks.  This area of research bears some relation to the long history of psychological literature on <a href="/wiki/Transfer_of_learning" title="Transfer of learning">transfer of learning</a>, although formal ties between the two fields are limited. From the practical standpoint, reusing or transferring information from previously learned tasks for the learning of new tasks has the potential to significantly improve the sample efficiency of a reinforcement learning agent.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p><a href="/wiki/Andrew_Ng" title="Andrew Ng">Andrew Ng</a> said in his NIPS 2016 tutorial <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> that TL will be next driver of ML commercial success after supervised learning to highlight the importance of TL.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Definition"><span class="tocnumber">2</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Applications"><span class="tocnumber">3</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Sources"><span class="tocnumber">6</span> <span class="toctext">Sources</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Undue-section plainlinks metadata ambox ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="Unbalanced scales.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Unbalanced_scales.svg/45px-Unbalanced_scales.svg.png" decoding="async" width="45" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Unbalanced_scales.svg/68px-Unbalanced_scales.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Unbalanced_scales.svg/90px-Unbalanced_scales.svg.png 2x" data-file-width="400" data-file-height="354" /></div></td><td class="mbox-text"><div class="mbox-text-span">This section may <b>lend <a href="/wiki/Wikipedia:Neutral_point_of_view#Due_and_undue_weight" title="Wikipedia:Neutral point of view">undue weight</a> to certain ideas, incidents, or controversies</b>. Please help to <a href="/wiki/Wikipedia:STRUCTURE" class="mw-redirect" title="Wikipedia:STRUCTURE">create a more balanced presentation</a>. Discuss and <a href="/wiki/Wikipedia:Dispute_resolution" title="Wikipedia:Dispute resolution">resolve</a> this issue before removing this message. <small><i>(June 2019)</i></small></div></td></tr></tbody></table>
+<p>In 1993, Lorien Pratt published a paper on transfer in <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a>, formulating the discriminability-based transfer (DBT) algorithm.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>In 1997, the journal <i>Machine Learning</i>  published a special issue devoted to transfer learning,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> and by 1998, the field had advanced to include <a href="/wiki/Multi-task_learning" title="Multi-task learning">multi-task learning</a>,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>  along with a more formal analysis of its theoretical foundations.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> <i>Learning to Learn</i>,<sup id="cite_ref-FOOTNOTEThrunPratt2012_9-0" class="reference"><a href="#cite_note-FOOTNOTEThrunPratt2012-9">&#91;9&#93;</a></sup> edited by Pratt and <a href="/wiki/Sebastian_Thrun" title="Sebastian Thrun">Sebastian Thrun</a>, is a 1998 review of the subject.
+</p><p>Transfer learning has also been applied in cognitive science, with the journal <i>Connection Science</i>
+publishing a special issue on reuse of neural networks through transfer in 1996.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=2" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The definition of transfer learning is given in terms of domain and task. The domain <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3277962e1959c3241fb1b70c7f0ac6dcefebd966" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.792ex; height:2.176ex;" alt="{\mathcal {D}}"/></span> consists of: a <a href="/wiki/Feature_space" class="mw-redirect" title="Feature space">feature space</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {X}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">X</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {X}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8c7e5461c5286852df4ef652fca7e4b0b63030e9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.875ex; height:2.176ex;" alt="{\mathcal {X}}"/></span> and a <a href="/wiki/Marginal_probability_distribution" class="mw-redirect" title="Marginal probability distribution">marginal probability distribution</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle P(X)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle P(X)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/bf94167ebc67db1573e6be9e261cd0518e49e160" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.535ex; height:2.843ex;" alt="P(X)"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle X=\{x_{1},...,x_{n}\}\in {\mathcal {X}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>X</mi>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>.</mo>
+        <mo>,</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">X</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle X=\{x_{1},...,x_{n}\}\in {\mathcal {X}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f366e8a442318d54e0a28b94f25e2756293014e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.221ex; height:2.843ex;" alt="{\displaystyle X=\{x_{1},...,x_{n}\}\in {\mathcal {X}}}"/></span>. Given a specific domain, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}=\{{\mathcal {X}},P(X)\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">X</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>P</mi>
+        <mo stretchy="false">(</mo>
+        <mi>X</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}=\{{\mathcal {X}},P(X)\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/62b90afd89582dbf0e6672baa0708912628f9958" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.659ex; height:2.843ex;" alt="{\displaystyle {\mathcal {D}}=\{{\mathcal {X}},P(X)\}}"/></span>, a task consists of two components: a label space <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {Y}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">Y</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {Y}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8935ef8cf454efa0b58363386c33f16a48ec36ca" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.659ex; height:2.509ex;" alt="{\mathcal {Y}}"/></span> and an objective predictive function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(\cdot )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(\cdot )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ec4adac182c93a76f0238a839ebb10b124e54c2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.735ex; height:2.843ex;" alt="f(\cdot )"/></span>(denoted by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {T}}=\{{\mathcal {Y}},f(\cdot )\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">Y</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {T}}=\{{\mathcal {Y}},f(\cdot )\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/228c1f3897a8edfc347c39e1ffbbec916b76a937" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:13.787ex; height:2.843ex;" alt="{\displaystyle {\mathcal {T}}=\{{\mathcal {Y}},f(\cdot )\}}"/></span>), which is learned from the training data consisting of pairs, which consist of pairs <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{x_{i},y_{i}\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{x_{i},y_{i}\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3c5044f20cfba071b7d4e92dc651c2b39ac0207b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.427ex; height:2.843ex;" alt="{\displaystyle \{x_{i},y_{i}\}}"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x_{i}\in X}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>X</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x_{i}\in X}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b2ea6d0515864dd80d66a0bdc4cc074088a7647f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.95ex; height:2.509ex;" alt="x_{i}\in X"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y_{i}\in {\mathcal {Y}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">Y</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{i}\in {\mathcal {Y}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a7ab4d7fbffa36a1428d869b75f25508da3997e1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.439ex; height:2.509ex;" alt="{\displaystyle y_{i}\in {\mathcal {Y}}}"/></span>. The function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(\cdot )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(\cdot )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6ec4adac182c93a76f0238a839ebb10b124e54c2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.735ex; height:2.843ex;" alt="f(\cdot )"/></span> can be used to predict the corresponding label,<span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/202945cce41ecebb6f643f31d119c514bec7a074" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.418ex; height:2.843ex;" alt="f(x)"/></span>, of a new instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span>.<sup id="cite_ref-Lin,_Jung_2017_11-0" class="reference"><a href="#cite_note-Lin,_Jung_2017-11">&#91;11&#93;</a></sup>
+</p><p>Given a source domain <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}_{S}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}_{S}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/73b93b620f34fe7db50f7f7525417ae5534d9b65" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.084ex; height:2.509ex;" alt="{\displaystyle {\mathcal {D}}_{S}}"/></span> and learning task <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {T}}_{S}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {T}}_{S}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fd1420bea4f3d0b24470564614856f43f0f4b2a3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.559ex; height:2.676ex;" alt="{\displaystyle {\mathcal {T}}_{S}}"/></span>, a target domain <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}_{T}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}_{T}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/13423a952f04fe320974a72ba018efc6c4e867e8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.181ex; height:2.509ex;" alt="\mathcal{D}_T"/></span>and learning task <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {T}}_{T}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {T}}_{T}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/27876915db93885f6db8689624b9dcfe88b2f3a0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.656ex; height:2.676ex;" alt="{\displaystyle {\mathcal {T}}_{T}}"/></span>, transfer learning aims to help improve the learning of the target predictive function <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f_{T}(\cdot )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mo>&#x22C5;<!-- ⋅ --></mo>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f_{T}(\cdot )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0af4f92ff9d7d2a44bc4dca321b8ccd5f0f806eb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.985ex; height:2.843ex;" alt="{\displaystyle f_{T}(\cdot )}"/></span> in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}_{T}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}_{T}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/13423a952f04fe320974a72ba018efc6c4e867e8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.181ex; height:2.509ex;" alt="\mathcal{D}_T"/></span> using the knowledge in <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}_{S}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}_{S}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/73b93b620f34fe7db50f7f7525417ae5534d9b65" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.084ex; height:2.509ex;" alt="{\displaystyle {\mathcal {D}}_{S}}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {T}}_{S}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {T}}_{S}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fd1420bea4f3d0b24470564614856f43f0f4b2a3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.559ex; height:2.676ex;" alt="{\displaystyle {\mathcal {T}}_{S}}"/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {D}}_{S}\neq {\mathcal {D}}_{T}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2260;<!-- ≠ --></mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">D</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {D}}_{S}\neq {\mathcal {D}}_{T}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4bf039e3293649209545fe31ae5d6098aacbbd2a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.364ex; height:2.676ex;" alt="{\displaystyle {\mathcal {D}}_{S}\neq {\mathcal {D}}_{T}}"/></span>, or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {T}}_{S}\neq {\mathcal {T}}_{T}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>S</mi>
+          </mrow>
+        </msub>
+        <mo>&#x2260;<!-- ≠ --></mo>
+        <msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi class="MJX-tex-caligraphic" mathvariant="script">T</mi>
+            </mrow>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>T</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {T}}_{S}\neq {\mathcal {T}}_{T}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8b782c4e0cbf99cc00f83cac1148f4b7384f02de" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.314ex; height:2.843ex;" alt="{\displaystyle {\mathcal {T}}_{S}\neq {\mathcal {T}}_{T}}"/></span>.<sup id="cite_ref-Lin,_Jung_2017_11-1" class="reference"><a href="#cite_note-Lin,_Jung_2017-11">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=3" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Algorithms are available for transfer learning in <a href="/wiki/Markov_logic_network" title="Markov logic network">Markov logic networks</a><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> and <a href="/wiki/Bayesian_networks" class="mw-redirect" title="Bayesian networks">Bayesian networks</a>.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> Transfer learning has also been applied to cancer subtype
+discovery,<sup id="cite_ref-:bmdl_14-0" class="reference"><a href="#cite_note-:bmdl-14">&#91;14&#93;</a></sup> <a href="/wiki/Occupancy" title="Occupancy">building utilization</a>,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> <a href="/wiki/General_game_playing" title="General game playing">general game playing</a>,<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> <a href="/wiki/Document_classification" title="Document classification">text classification</a>,<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> digit recognition<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> and <a href="/wiki/E-mail_filtering" class="mw-redirect" title="E-mail filtering">spam filtering</a>.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Crossover_(genetic_algorithm)" title="Crossover (genetic algorithm)">Crossover (genetic algorithm)</a></li>
+<li><a href="/wiki/Domain_adaptation" title="Domain adaptation">Domain adaptation</a></li>
+<li><a href="/wiki/General_game_playing" title="General game playing">General game playing</a></li>
+<li><a href="/wiki/Multi-task_learning" title="Multi-task learning">Multi-task learning</a></li>
+<li><a href="/wiki/Multitask_optimization" title="Multitask optimization">Multitask optimization</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">West, Jeremy; Ventura, Dan; Warnick, Sean (2007). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070801120743/http://cpms.byu.edu/springresearch/abstract-entry?id=861">"Spring Research Presentation: A Theoretical Foundation for Inductive Transfer"</a>. Brigham Young University, College of Physical and Mathematical Sciences. Archived from <a rel="nofollow" class="external text" href="http://cpms.byu.edu/springresearch/abstract-entry?id=861">the original</a> on 2007-08-01<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Spring+Research+Presentation%3A+A+Theoretical+Foundation+for+Inductive+Transfer&amp;rft.pub=Brigham+Young+University%2C+College+of+Physical+and+Mathematical+Sciences&amp;rft.date=2007&amp;rft.aulast=West&amp;rft.aufirst=Jeremy&amp;rft.au=Ventura%2C+Dan&amp;rft.au=Warnick%2C+Sean&amp;rft_id=http%3A%2F%2Fcpms.byu.edu%2Fspringresearch%2Fabstract-entry%3Fid%3D861&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation journal">George Karimpanal, Thommen; Bouffanais, Roland (2019). "Self-organizing maps for storage and transfer of knowledge in reinforcement learning". <i>Adaptive Behavior</i>. <b>27</b> (2): 111–126. <a href="/wiki/ArXiv" title="ArXiv">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/1811.08318">1811.08318</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1177%2F1059712318818568">10.1177/1059712318818568</a>. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/1059-7123">1059-7123</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Adaptive+Behavior&amp;rft.atitle=Self-organizing+maps+for+storage+and+transfer+of+knowledge+in+reinforcement+learning&amp;rft.volume=27&amp;rft.issue=2&amp;rft.pages=111-126&amp;rft.date=2019&amp;rft_id=info%3Aarxiv%2F1811.08318&amp;rft.issn=1059-7123&amp;rft_id=info%3Adoi%2F10.1177%2F1059712318818568&amp;rft.aulast=George+Karimpanal&amp;rft.aufirst=Thommen&amp;rft.au=Bouffanais%2C+Roland&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=wjqaz6m42wU"><i>NIPS 2016 tutorial: "Nuts and bolts of building AI applications using Deep Learning" by Andrew Ng</i></a><span class="reference-accessdate">, retrieved <span class="nowrap">2019-12-28</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=NIPS+2016+tutorial%3A+%22Nuts+and+bolts+of+building+AI+applications+using+Deep+Learning%22+by+Andrew+Ng&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dwjqaz6m42wU&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://nips.cc/Conferences/2016/Schedule?showEvent=6203">"NIPS 2016 Schedule"</a>. <i>nips.cc</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-12-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=nips.cc&amp;rft.atitle=NIPS+2016+Schedule&amp;rft_id=https%3A%2F%2Fnips.cc%2FConferences%2F2016%2FSchedule%3FshowEvent%3D6203&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book">Pratt, L. Y. (1993). <a rel="nofollow" class="external text" href="http://papers.nips.cc/paper/641-discriminability-based-transfer-between-neural-networks.pdf">"Discriminability-based transfer between neural networks"</a> <span class="cs1-format">(PDF)</span>. <a rel="nofollow" class="external text" href="https://books.google.com/books?id=6tGHlwEACAAJ&amp;pg=PA204"><i>NIPS Conference: Advances in Neural Information Processing Systems 5</i></a>. Morgan Kaufmann Publishers. pp.&#160;204–211.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Discriminability-based+transfer+between+neural+networks&amp;rft.btitle=NIPS+Conference%3A+Advances+in+Neural+Information+Processing+Systems+5&amp;rft.pages=204-211&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.date=1993&amp;rft.aulast=Pratt&amp;rft.aufirst=L.+Y.&amp;rft_id=http%3A%2F%2Fpapers.nips.cc%2Fpaper%2F641-discriminability-based-transfer-between-neural-networks.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Pratt, L. Y.; Thrun, Sebastian (July 1997). <a rel="nofollow" class="external text" href="https://link.springer.com/journal/10994/28/1/page/1">"Machine Learning - Special Issue on Inductive Transfer"</a>. <i>link.springer.com</i>. Springer<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-08-10</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=link.springer.com&amp;rft.atitle=Machine+Learning+-+Special+Issue+on+Inductive+Transfer&amp;rft.date=1997-07&amp;rft.aulast=Pratt&amp;rft.aufirst=L.+Y.&amp;rft.au=Thrun%2C+Sebastian&amp;rft_id=https%3A%2F%2Flink.springer.com%2Fjournal%2F10994%2F28%2F1%2Fpage%2F1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Caruana, R., "Multitask Learning", pp. 95-134 in <a href="#CITEREFPrattThrun1998">Pratt &amp; Thrun 1998</a> <span class="error harv-error" style="display: inline; font-size:100%">harvnb error: no target: CITEREFPrattThrun1998 (<a href="/wiki/Category:Harv_and_Sfn_template_errors" title="Category:Harv and Sfn template errors">help</a>)</span></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Baxter, J., "Theoretical Models of Learning to Learn", pp. 71-95 <a href="#CITEREFPrattThrun1998">Pratt &amp; Thrun 1998</a> <span class="error harv-error" style="display: inline; font-size:100%">harvnb error: no target: CITEREFPrattThrun1998 (<a href="/wiki/Category:Harv_and_Sfn_template_errors" title="Category:Harv and Sfn template errors">help</a>)</span></span>
+</li>
+<li id="cite_note-FOOTNOTEThrunPratt2012-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-FOOTNOTEThrunPratt2012_9-0">^</a></b></span> <span class="reference-text"><a href="#CITEREFThrunPratt2012">Thrun &amp; Pratt 2012</a>.</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation journal">Pratt, L. (1996). <a rel="nofollow" class="external text" href="http://www.tandfonline.com/toc/ccos20/8/2">"Special Issue: Reuse of Neural Networks through Transfer"</a>. <i>Connection Science</i>. <b>8</b> (2)<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-08-10</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Connection+Science&amp;rft.atitle=Special+Issue%3A+Reuse+of+Neural+Networks+through+Transfer&amp;rft.volume=8&amp;rft.issue=2&amp;rft.date=1996&amp;rft.aulast=Pratt&amp;rft.aufirst=L.&amp;rft_id=http%3A%2F%2Fwww.tandfonline.com%2Ftoc%2Fccos20%2F8%2F2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Lin,_Jung_2017-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-Lin,_Jung_2017_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Lin,_Jung_2017_11-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Lin, Yuan-Pin; Jung, Tzyy-Ping (27 June 2017). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5486154">"Improving EEG-Based Emotion Classification Using Conditional Transfer Learning"</a>. <i>Frontiers in Human Neuroscience</i>. <b>11</b>: 334. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.3389%2Ffnhum.2017.00334">10.3389/fnhum.2017.00334</a>. <a href="/wiki/PubMed_Central" title="PubMed Central">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC5486154">5486154</a></span>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/28701938">28701938</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Frontiers+in+Human+Neuroscience&amp;rft.atitle=Improving+EEG-Based+Emotion+Classification+Using+Conditional+Transfer+Learning&amp;rft.volume=11&amp;rft.pages=334&amp;rft.date=2017-06-27&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5486154&amp;rft_id=info%3Apmid%2F28701938&amp;rft_id=info%3Adoi%2F10.3389%2Ffnhum.2017.00334&amp;rft.aulast=Lin&amp;rft.aufirst=Yuan-Pin&amp;rft.au=Jung%2C+Tzyy-Ping&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC5486154&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> <a href="/wiki/File:CC-BY_icon.svg" class="image"><img alt="CC-BY icon.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/CC-BY_icon.svg/50px-CC-BY_icon.svg.png" decoding="async" width="50" height="18" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/CC-BY_icon.svg/75px-CC-BY_icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/16/CC-BY_icon.svg/100px-CC-BY_icon.svg.png 2x" data-file-width="88" data-file-height="31" /></a> Material was copied from this source, which is available under a <a rel="nofollow" class="external text" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite id="CITEREFMihalkovaHuynhMooney2007" class="citation">Mihalkova, Lilyana; Huynh, Tuyen; Mooney, Raymond J. (July 2007), <a rel="nofollow" class="external text" href="http://www.cs.utexas.edu/users/ml/papers/mihalkova-aaai07.pdf">"Mapping and Revising Markov Logic Networks for Transfer"</a> <span class="cs1-format">(PDF)</span>, <i>Learning Proceedings of the 22nd AAAI Conference on Artificial Intelligence (AAAI-2007)</i>, Vancouver, BC, pp.&#160;608–614<span class="reference-accessdate">, retrieved <span class="nowrap">2007-08-05</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Mapping+and+Revising+Markov+Logic+Networks+for+Transfer&amp;rft.btitle=Learning+Proceedings+of+the+22nd+AAAI+Conference+on+Artificial+Intelligence+%28AAAI-2007%29&amp;rft.place=Vancouver%2C+BC&amp;rft.pages=608-614&amp;rft.date=2007-07&amp;rft.aulast=Mihalkova&amp;rft.aufirst=Lilyana&amp;rft.au=Huynh%2C+Tuyen&amp;rft.au=Mooney%2C+Raymond+J.&amp;rft_id=http%3A%2F%2Fwww.cs.utexas.edu%2Fusers%2Fml%2Fpapers%2Fmihalkova-aaai07.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite id="CITEREFNiculescu-MizilCaruana2007" class="citation">Niculescu-Mizil, Alexandru; Caruana, Rich (March 21–24, 2007), <a rel="nofollow" class="external text" href="http://www.stat.umn.edu/~aistat/proceedings/data/papers/043.pdf">"Inductive Transfer for Bayesian Network Structure Learning"</a> <span class="cs1-format">(PDF)</span>, <i>Proceedings of the Eleventh International Conference on Artificial Intelligence and Statistics (AISTATS 2007)</i><span class="reference-accessdate">, retrieved <span class="nowrap">2007-08-05</span></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Inductive+Transfer+for+Bayesian+Network+Structure+Learning&amp;rft.btitle=Proceedings+of+the+Eleventh+International+Conference+on+Artificial+Intelligence+and+Statistics+%28AISTATS+2007%29&amp;rft.date=2007-03-21%2F2007-03-24&amp;rft.aulast=Niculescu-Mizil&amp;rft.aufirst=Alexandru&amp;rft.au=Caruana%2C+Rich&amp;rft_id=http%3A%2F%2Fwww.stat.umn.edu%2F~aistat%2Fproceedings%2Fdata%2Fpapers%2F043.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-:bmdl-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-:bmdl_14-0">^</a></b></span> <span class="reference-text">Hajiramezanali, E. &amp; Dadaneh, S. Z. &amp; Karbalayghareh, A. &amp; Zhou, Z. &amp; Qian, X. Bayesian multi-domain learning for cancer subtype discovery from next-generation sequencing count data. 32nd Conference on Neural Information Processing Systems (NeurIPS 2018), Montréal, Canada. <a rel="nofollow" class="external free" href="https://arxiv.org/pdf/1810.09433.pdf">https://arxiv.org/pdf/1810.09433.pdf</a></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation conference">Arief-Ang, I.B.; Salim, F.D.; Hamilton, M. (2017-11-08). <a rel="nofollow" class="external text" href="https://dl.acm.org/citation.cfm?id=3137146"><i>DA-HOC: semi-supervised domain adaptation for room occupancy prediction using CO2 sensor data</i></a>. 4th ACM International Conference on Systems for Energy-Efficient Built Environments (BuildSys). Delft, Netherlands. pp.&#160;1–10. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F3137133.3137146">10.1145/3137133.3137146</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4503-5544-5" title="Special:BookSources/978-1-4503-5544-5"><bdi>978-1-4503-5544-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=DA-HOC%3A+semi-supervised+domain+adaptation+for+room+occupancy+prediction+using+CO2+sensor+data&amp;rft.place=Delft%2C+Netherlands&amp;rft.pages=1-10&amp;rft.date=2017-11-08&amp;rft_id=info%3Adoi%2F10.1145%2F3137133.3137146&amp;rft.isbn=978-1-4503-5544-5&amp;rft.aulast=Arief-Ang&amp;rft.aufirst=I.B.&amp;rft.au=Salim%2C+F.D.&amp;rft.au=Hamilton%2C+M.&amp;rft_id=https%3A%2F%2Fdl.acm.org%2Fcitation.cfm%3Fid%3D3137146&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation journal">Arief-Ang, I.B.; Hamilton, M.; Salim, F.D. (2018-12-01). "A Scalable Room Occupancy Prediction with Transferable Time Series Decomposition of CO2 Sensor Data". <i>ACM Transactions on Sensor Networks</i>. <b>14</b> (3–4): 21:1–21:28. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F3217214">10.1145/3217214</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+Transactions+on+Sensor+Networks&amp;rft.atitle=A+Scalable+Room+Occupancy+Prediction+with+Transferable+Time+Series+Decomposition+of+CO2+Sensor+Data&amp;rft.volume=14&amp;rft.issue=3%E2%80%934&amp;rft.pages=21%3A1-21%3A28&amp;rft.date=2018-12-01&amp;rft_id=info%3Adoi%2F10.1145%2F3217214&amp;rft.aulast=Arief-Ang&amp;rft.aufirst=I.B.&amp;rft.au=Hamilton%2C+M.&amp;rft.au=Salim%2C+F.D.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text">Banerjee, Bikramjit, and Peter Stone. "<a rel="nofollow" class="external text" href="http://www.aaai.org/Papers/IJCAI/2007/IJCAI07-107.pdf">General Game Learning Using Knowledge Transfer</a>." IJCAI. 2007.</span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation conference">Do, Chuong B.; Ng, Andrew Y. (2005). "Transfer learning for text classification". <a rel="nofollow" class="external text" href="http://papers.nips.cc/paper/2843-transfer-learning-for-text-classification.pdf"><i>Neural Information Processing Systems Foundation, NIPS*2005</i></a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Transfer+learning+for+text+classification&amp;rft.btitle=Neural+Information+Processing+Systems+Foundation%2C+NIPS%2A2005&amp;rft.date=2005&amp;rft.aulast=Do&amp;rft.aufirst=Chuong+B.&amp;rft.au=Ng%2C+Andrew+Y.&amp;rft_id=http%3A%2F%2Fpapers.nips.cc%2Fpaper%2F2843-transfer-learning-for-text-classification.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation conference">Rajat, Raina; Ng, Andrew Y.; Koller, Daphne (2006). "Constructing Informative Priors using Transfer Learning". <a rel="nofollow" class="external text" href="https://ai.stanford.edu/~ang/papers/icml06-transferinformativepriors.pdf"><i>Twenty-third International Conference on Machine Learning</i></a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Constructing+Informative+Priors+using+Transfer+Learning&amp;rft.btitle=Twenty-third+International+Conference+on+Machine+Learning&amp;rft.date=2006&amp;rft.aulast=Rajat&amp;rft.aufirst=Raina&amp;rft.au=Ng%2C+Andrew+Y.&amp;rft.au=Koller%2C+Daphne&amp;rft_id=https%3A%2F%2Fai.stanford.edu%2F~ang%2Fpapers%2Ficml06-transferinformativepriors.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation journal">Maitra, D. S.; Bhattacharya, U.; Parui, S. K. (August 2015). "CNN based common approach to handwritten character recognition of multiple scripts". <i>2015 13th International Conference on Document Analysis and Recognition (ICDAR)</i>: 1021–1025. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FICDAR.2015.7333916">10.1109/ICDAR.2015.7333916</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4799-1805-8" title="Special:BookSources/978-1-4799-1805-8"><bdi>978-1-4799-1805-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=2015+13th+International+Conference+on+Document+Analysis+and+Recognition+%28ICDAR%29&amp;rft.atitle=CNN+based+common+approach+to+handwritten+character+recognition+of+multiple+scripts&amp;rft.pages=1021-1025&amp;rft.date=2015-08&amp;rft_id=info%3Adoi%2F10.1109%2FICDAR.2015.7333916&amp;rft.isbn=978-1-4799-1805-8&amp;rft.aulast=Maitra&amp;rft.aufirst=D.+S.&amp;rft.au=Bhattacharya%2C+U.&amp;rft.au=Parui%2C+S.+K.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation conference">Bickel, Steffen (2006). "ECML-PKDD Discovery Challenge 2006 Overview". <a rel="nofollow" class="external text" href="http://www.ecmlpkdd2006.org/discovery_challenge2006_overview.pdf"><i>ECML-PKDD Discovery Challenge Workshop</i></a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-08-05</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=ECML-PKDD+Discovery+Challenge+2006+Overview&amp;rft.btitle=ECML-PKDD+Discovery+Challenge+Workshop&amp;rft.date=2006&amp;rft.aulast=Bickel&amp;rft.aufirst=Steffen&amp;rft_id=http%3A%2F%2Fwww.ecmlpkdd2006.org%2Fdiscovery_challenge2006_overview.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Sources">Sources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Transfer_learning&amp;action=edit&amp;section=6" title="Edit section: Sources">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFThrunPratt2012" class="citation book">Thrun, Sebastian; Pratt, Lorien (6 December 2012). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=X_jpBwAAQBAJ"><i>Learning to Learn</i></a>. Springer Science &amp; Business Media. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4615-5529-2" title="Special:BookSources/978-1-4615-5529-2"><bdi>978-1-4615-5529-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Learning+to+Learn&amp;rft.pub=Springer+Science+%26+Business+Media&amp;rft.date=2012-12-06&amp;rft.isbn=978-1-4615-5529-2&amp;rft.aulast=Thrun&amp;rft.aufirst=Sebastian&amp;rft.au=Pratt%2C+Lorien&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DX_jpBwAAQBAJ&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATransfer+learning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1329
+Cached time: 20200327233011
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.376 seconds
+Real time usage: 0.519 seconds
+Preprocessor visited node count: 1206/1000000
+Post‐expand include size: 37372/2097152 bytes
+Template argument size: 293/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 59740/5000000 bytes
+Number of Wikibase entities loaded: 4/400
+Lua time usage: 0.209/10.000 seconds
+Lua memory usage: 5.03 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  411.246      1 -total
+ 74.10%  304.736      1 Template:Reflist
+ 25.51%  104.915      5 Template:Cite_journal
+ 22.01%   90.499      3 Template:Cite_web
+ 14.38%   59.126      1 Template:Undue_weight_section
+  6.40%   26.318      4 Template:Cite_conference
+  6.02%   24.746      1 Template:Sfn
+  5.10%   20.982      3 Template:Citation
+  5.07%   20.831      1 Template:Ambox
+  4.97%   20.423      2 Template:Cite_book
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:3920550-0!canonical!math=5 and timestamp 20200327233011 and revision id 942693334
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Transfer_learning&amp;oldid=942693334">https://en.wikipedia.org/w/index.php?title=Transfer_learning&amp;oldid=942693334</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Machine_learning" title="Category:Machine learning">Machine learning</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Harv_and_Sfn_template_errors" title="Category:Harv and Sfn template errors">Harv and Sfn template errors</a></li><li><a href="/wiki/Category:Articles_needing_POV-check_from_June_2019" title="Category:Articles needing POV-check from June 2019">Articles needing POV-check from June 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Transfer+learning" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Transfer+learning" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Transfer_learning" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Transfer_learning" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Transfer_learning">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Transfer_learning&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Transfer_learning&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Transfer_learning" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Transfer_learning" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Transfer_learning&amp;oldid=942693334" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Transfer_learning&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6027324" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Transfer_learning&amp;id=942693334&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Transfer+learning">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Transfer+learning&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Transfer_learning&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Apprentissage_par_transfert" title="Apprentissage par transfert – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/%C3%8Env%C4%83%C8%9Bare_prin_transfer" title="Învățare prin transfer – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0" title="迁移学习 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q6027324#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 26 February 2020, at 06:59<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Transfer_learning&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.376","walltime":"0.519","ppvisitednodes":{"value":1206,"limit":1000000},"postexpandincludesize":{"value":37372,"limit":2097152},"templateargumentsize":{"value":293,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":59740,"limit":5000000},"entityaccesscount":{"value":4,"limit":400},"timingprofile":["100.00%  411.246      1 -total"," 74.10%  304.736      1 Template:Reflist"," 25.51%  104.915      5 Template:Cite_journal"," 22.01%   90.499      3 Template:Cite_web"," 14.38%   59.126      1 Template:Undue_weight_section","  6.40%   26.318      4 Template:Cite_conference","  6.02%   24.746      1 Template:Sfn","  5.10%   20.982      3 Template:Citation","  5.07%   20.831      1 Template:Ambox","  4.97%   20.423      2 Template:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.209","limit":"10.000"},"limitreport-memusage":{"value":5273772,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n  [\"CITEREFMihalkovaHuynhMooney2007\"] = 1,\n  [\"CITEREFNiculescu-MizilCaruana2007\"] = 1,\n  [\"CITEREFThrunPratt2012\"] = 1,\n}\n"},"cachereport":{"origin":"mw1329","timestamp":"20200327233011","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Transfer learning","url":"https:\/\/en.wikipedia.org\/wiki\/Transfer_learning","sameAs":"http:\/\/www.wikidata.org\/entity\/Q6027324","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q6027324","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-02-01T13:32:07Z","dateModified":"2020-02-26T06:59:19Z","headline":"subfield of machine learning"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":124,"wgHostname":"mw1332"});});</script></body></html>

@@ -1,0 +1,793 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Combinatorial optimization - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn9XZgpAEKIAAxHA0kAAAABS","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Combinatorial_optimization","wgTitle":"Combinatorial optimization","wgCurRevisionId":942912562,"wgRevisionId":942912562,"wgArticleId":420555,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from March 2019","Articles with unsourced statements from January 2018","Commons category link from Wikidata","Combinatorial optimization","Computational complexity theory","Theoretical computer science"],
+"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Combinatorial_optimization","wgRelevantArticleId":420555,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1333872","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":
+"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","ext.scribunto.logs","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Minimum_spanning_tree.svg/1200px-Minimum_spanning_tree.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Combinatorial_optimization&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Combinatorial_optimization&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Combinatorial_optimization"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Combinatorial_optimization rootpage-Combinatorial_optimization skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Combinatorial optimization</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Minimum_spanning_tree.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Minimum_spanning_tree.svg/300px-Minimum_spanning_tree.svg.png" decoding="async" width="300" height="242" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Minimum_spanning_tree.svg/450px-Minimum_spanning_tree.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Minimum_spanning_tree.svg/600px-Minimum_spanning_tree.svg.png 2x" data-file-width="300" data-file-height="242" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Minimum_spanning_tree.svg" class="internal" title="Enlarge"></a></div>A <a href="/wiki/Minimum_spanning_tree" title="Minimum spanning tree">minimum spanning tree</a> of a weighted <a href="/wiki/Planar_graph" title="Planar graph">planar graph</a>. Finding a minimum spanning tree is a common problem involving combinatorial optimization.</div></div></div>
+<p>In <a href="/wiki/Operations_research" title="Operations research">operations research</a>, <a href="/wiki/Applied_mathematics" title="Applied mathematics">applied mathematics</a> and <a href="/wiki/Theoretical_computer_science" title="Theoretical computer science">theoretical computer science</a>, <b>combinatorial optimization</b>  is a topic that consists of finding an optimal object from a <a href="/wiki/Finite_set" title="Finite set">finite set</a> of objects.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> In many such problems, <a href="/wiki/Exhaustive_search" class="mw-redirect" title="Exhaustive search">exhaustive search</a> is not tractable. It operates on the domain of those optimization problems in which the set of <a href="/wiki/Candidate_solution" class="mw-redirect" title="Candidate solution">feasible solutions</a> is <a href="/wiki/Discrete_set" class="mw-redirect" title="Discrete set">discrete</a> or can be reduced to discrete, and in which the goal is to find the best solution.  Some common problems involving combinatorial optimization are the <a href="/wiki/Travelling_salesman_problem" title="Travelling salesman problem">travelling salesman problem</a> ("TSP"), the <a href="/wiki/Minimum_spanning_tree" title="Minimum spanning tree">minimum spanning tree problem</a> ("MST"), and the <a href="/wiki/Knapsack_problem" title="Knapsack problem">knapsack problem</a>.
+</p><p>Combinatorial optimization is a subset of <a href="/wiki/Mathematical_optimization" title="Mathematical optimization">mathematical optimization</a> that is related to <a href="/wiki/Operations_research" title="Operations research">operations research</a>, <a href="/wiki/Algorithm" title="Algorithm">algorithm theory</a>, and <a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">computational complexity theory</a>. It has important applications in several fields, including <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a>, <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a>, <a href="/wiki/Auction_theory" title="Auction theory">auction theory</a>, and <a href="/wiki/Software_engineering" title="Software engineering">software engineering</a>.
+</p><p>Some research literature<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> considers <a href="/wiki/Discrete_optimization" title="Discrete optimization">discrete optimization</a> to consist of <a href="/wiki/Integer_programming" title="Integer programming">integer programming</a> together with combinatorial optimization (which in turn is composed of <a href="/wiki/Optimization_problem" title="Optimization problem">optimization problems</a> dealing with <a href="/wiki/Graph_(discrete_mathematics)" title="Graph (discrete mathematics)">graph structures</a>) although all of these topics have closely intertwined research literature. It often involves determining the way to efficiently allocate resources used to find solutions to mathematical problems.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Applications"><span class="tocnumber">1</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Methods"><span class="tocnumber">2</span> <span class="toctext">Methods</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Formal_definition"><span class="tocnumber">3</span> <span class="toctext">Formal definition</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#NP_optimization_problem"><span class="tocnumber">4</span> <span class="toctext">NP optimization problem</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Specific_problems"><span class="tocnumber">5</span> <span class="toctext">Specific problems</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Notes"><span class="tocnumber">7</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=1" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Applications for combinatorial optimization include, but are not limited to:
+</p>
+<ul><li><a href="/wiki/Logistics" title="Logistics">Logistics</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li>
+<li><a href="/wiki/Supply_chain_optimization" title="Supply chain optimization">Supply chain optimization</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup></li>
+<li>Developing the best airline network of spokes and destinations</li>
+<li>Deciding which taxis in a fleet to route to pick up fares</li>
+<li>Determining the optimal way to deliver packages</li>
+<li>Working out the best allocation of jobs to people</li></ul>
+<h2><span class="mw-headline" id="Methods">Methods</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=2" title="Edit section: Methods">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There is a large amount of literature on <a href="/wiki/Polynomial-time_algorithm" class="mw-redirect" title="Polynomial-time algorithm">polynomial-time algorithms</a> for certain special classes of discrete optimization, a considerable amount of it unified by the theory of <a href="/wiki/Linear_programming" title="Linear programming">linear programming</a>. Some examples of combinatorial optimization problems that fall into this framework are <a href="/wiki/Shortest_path" class="mw-redirect" title="Shortest path">shortest paths</a> and <a href="/wiki/Shortest-path_tree" title="Shortest-path tree">shortest-path trees</a>, <a href="/wiki/Flow_network" title="Flow network">flows and circulations</a>, <a href="/wiki/Spanning_tree" title="Spanning tree">spanning trees</a>, <a href="/wiki/Matching_(graph_theory)" title="Matching (graph theory)">matching</a>, and <a href="/wiki/Matroid" title="Matroid">matroid</a> problems.
+</p><p>For <a href="/wiki/NP-complete" class="mw-redirect" title="NP-complete">NP-complete</a> discrete optimization problems, current research literature includes the following topics:
+</p>
+<ul><li>polynomial-time exactly solvable special cases of the problem at hand (e.g. see <a href="/wiki/Fixed-parameter_tractable" class="mw-redirect" title="Fixed-parameter tractable">fixed-parameter tractable</a>)</li>
+<li>algorithms that perform well on "random" instances (e.g. for <a href="/wiki/Traveling_salesman_problem#TSP_path_length_for_random_pointset_in_a_square" class="mw-redirect" title="Traveling salesman problem">TSP</a>)</li>
+<li><a href="/wiki/Approximation_algorithm" title="Approximation algorithm">approximation algorithms</a> that run in polynomial time and find a solution that is "close" to optimal</li>
+<li>solving real-world instances that arise in practice and do not necessarily exhibit the worst-case behavior inherent in NP-complete problems (e.g. TSP instances with tens of thousands of nodes<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>).</li></ul>
+<p>Combinatorial optimization problems can be viewed as searching for the best element of some set of discrete items; therefore, in principle, any sort of <a href="/wiki/Search_algorithm" title="Search algorithm">search algorithm</a> or <a href="/wiki/Metaheuristic" title="Metaheuristic">metaheuristic</a> can be used to solve them. Perhaps the most universally applicable approaches are <a href="/wiki/Branch_and_bound" title="Branch and bound">branch-and-bound</a> (an exact algorithm which can be stopped at any point in time to serve as heuristic), <a href="/wiki/Branch_and_cut" title="Branch and cut">branch-and-cut</a> (uses linear optimisation to generate bounds), <a href="/wiki/Dynamic_programming" title="Dynamic programming">dynamic programming</a> (a recursive solution construction with limited search window) and <a href="/wiki/Tabu_search" title="Tabu search">tabu search</a> (a greedy-type swapping algorithm). However, generic search algorithms are not guaranteed to find an optimal solution first, nor are they guaranteed to run quickly (in polynomial time). Since some discrete optimization problems are <a href="/wiki/NP-complete" class="mw-redirect" title="NP-complete">NP-complete</a>, such as the traveling salesman problem<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="TSP is NP-hard, not NP-complete (March 2019)">citation needed</span></a></i>&#93;</sup>, this is expected unless <a href="/wiki/P%3DNP" class="mw-redirect" title="P=NP">P=NP</a>.
+</p>
+<h2><span class="mw-headline" id="Formal_definition">Formal definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=3" title="Edit section: Formal definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Formally, a <a class="mw-selflink selflink">combinatorial optimization</a> problem <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle A}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>A</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle A}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7daff47fa58cdfd29dc333def748ff5fa4c923e3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.743ex; height:2.176ex;" alt="A"/></span> is a quadruple<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2018)">citation needed</span></a></i>&#93;</sup> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (I,f,m,g)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <mi>I</mi>
+        <mo>,</mo>
+        <mi>f</mi>
+        <mo>,</mo>
+        <mi>m</mi>
+        <mo>,</mo>
+        <mi>g</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (I,f,m,g)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe5eeda25607f6efeee2efcffa9dbf0171bf5878" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.518ex; height:2.843ex;" alt="(I,f,m,g)"/></span>, where
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/535ea7fc4134a31cbe2251d9d3511374bc41be9f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.172ex; height:2.176ex;" alt="I"/></span> is a <a href="/wiki/Set_(mathematics)" title="Set (mathematics)">set</a> of instances;</li>
+<li>given an instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x\in I}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>I</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x\in I}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dec8caa8f241cb38a5348d7937b538227ad32c48" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.342ex; height:2.176ex;" alt="x\in I"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/202945cce41ecebb6f643f31d119c514bec7a074" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.418ex; height:2.843ex;" alt="f(x)"/></span> is the finite set of feasible solutions;</li>
+<li>given an instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> and a feasible solution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;" alt="y"/></span> of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span>, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m(x,y)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m(x,y)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5516fe25201a7099d4d24add76c3e0f6e1c22343" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.369ex; height:2.843ex;" alt="m(x,y)"/></span> denotes the <a href="/wiki/Measure_(mathematics)" title="Measure (mathematics)">measure</a> of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;" alt="y"/></span>, which is usually a <a href="/wiki/Positive_(mathematics)" class="mw-redirect" title="Positive (mathematics)">positive</a> <a href="/wiki/Real_number" title="Real number">real</a>.</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3556280e66fe2c0d0140df20935a6f057381d77" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.116ex; height:2.009ex;" alt="g"/></span> is the goal function, and is either <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \min }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo movablelimits="true" form="prefix">min</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \min }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/695d28931288a686335c3969dfd15bb76ea873db" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.875ex; height:2.176ex;" alt="\min "/></span> or <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \max }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo movablelimits="true" form="prefix">max</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \max }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8e49fca3e322708b32d21eaa8b095dc05f09538" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:4.326ex; height:1.676ex;" alt="\max "/></span>.</li></ul>
+<p>The goal is then to find for some instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> an <i>optimal solution</i>, that is, a feasible solution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b8a6208ec717213d4317e666f1ae872e00620a0d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.155ex; height:2.009ex;" alt="y"/></span> with
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m(x,y)=g\{m(x,y')\mid y'\in f(x)\}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>g</mi>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>m</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <msup>
+          <mi>y</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <msup>
+          <mi>y</mi>
+          <mo>&#x2032;</mo>
+        </msup>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo fence="false" stretchy="false">}</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m(x,y)=g\{m(x,y')\mid y'\in f(x)\}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/70563e418d95742d62779e643663e8b00a1e5222" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:33.654ex; height:3.009ex;" alt="m(x,y)=g\{m(x,y&#039;)\mid y&#039;\in f(x)\}."/></span></dd></dl>
+<p>For each combinatorial optimization problem, there is a corresponding <a href="/wiki/Decision_problem" title="Decision problem">decision problem</a> that asks whether there is a feasible solution for some particular measure <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m_{0}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>m</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m_{0}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a6ff51ee949104fe6fae553cfbdfba29d5fac1e" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.095ex; height:2.009ex;" alt="m_{0}"/></span>. For example, if there is a <a href="/wiki/Graph_(discrete_mathematics)" title="Graph (discrete mathematics)">graph</a> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle G}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle G}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f5f3c8921a3b352de45446a6789b104458c9f90b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.827ex; height:2.176ex;" alt="G"/></span> which contains vertices <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle u}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>u</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle u}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3e6bb763d22c20916ed4f0bb6bd49d7470cffd8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="u"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.128ex; height:1.676ex;" alt="v"/></span>, an optimization problem might be "find a path from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle u}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>u</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle u}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3e6bb763d22c20916ed4f0bb6bd49d7470cffd8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="u"/></span> to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.128ex; height:1.676ex;" alt="v"/></span> that uses the fewest edges". This problem might have an answer of, say, 4. A corresponding decision problem would be "is there a path from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle u}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>u</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle u}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c3e6bb763d22c20916ed4f0bb6bd49d7470cffd8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="u"/></span> to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle v}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>v</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle v}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e07b00e7fc0847fbd16391c778d65bc25c452597" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.128ex; height:1.676ex;" alt="v"/></span> that uses 10 or fewer edges?" This problem can be answered with a simple 'yes' or 'no'.
+</p><p>In the field of <a href="/wiki/Approximation_algorithm" title="Approximation algorithm">approximation algorithms</a>, algorithms are designed to find near-optimal solutions to hard problems. The usual decision version is then an inadequate definition of the problem since it only specifies acceptable solutions. Even though we could introduce suitable decision problems, the problem is more naturally characterized as an optimization problem.<sup id="cite_ref-Ausiello03_6-0" class="reference"><a href="#cite_note-Ausiello03-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="NP_optimization_problem">NP optimization problem</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=4" title="Edit section: NP optimization problem">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>An <i>NP-optimization problem</i> (NPO) is a combinatorial optimization problem with the following additional conditions.<sup id="cite_ref-Hromkovic02_7-0" class="reference"><a href="#cite_note-Hromkovic02-7">&#91;7&#93;</a></sup> Note that the below referred <a href="/wiki/Polynomial" title="Polynomial">polynomials</a> are functions of the size of the respective functions' inputs, not the size of some implicit set of input instances.
+</p>
+<ul><li>the size of every feasible solution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y\in f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y\in f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7563c0df4d0a6bb0a1d1033a55b14a6848f7ef9a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.414ex; height:2.843ex;" alt="{\displaystyle y\in f(x)}"/></span> is polynomially <a href="/wiki/Bounded_set" title="Bounded set">bounded</a> in the size of the given instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span>,</li>
+<li>the languages <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{\,x\,\mid \,x\in I\,\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mspace width="thinmathspace" />
+        <mi>x</mi>
+        <mspace width="thinmathspace" />
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mspace width="thinmathspace" />
+        <mi>x</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>I</mi>
+        <mspace width="thinmathspace" />
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{\,x\,\mid \,x\in I\,\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c5ca0508b1f7c40a1f3dcd1da0c1e31f679406f1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.482ex; height:2.843ex;" alt="{\displaystyle \{\,x\,\mid \,x\in I\,\}}"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \{\,(x,y)\,\mid \,y\in f(x)\,\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo fence="false" stretchy="false">{</mo>
+        <mspace width="thinmathspace" />
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+        <mspace width="thinmathspace" />
+        <mo>&#x2223;<!-- ∣ --></mo>
+        <mspace width="thinmathspace" />
+        <mi>y</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mspace width="thinmathspace" />
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \{\,(x,y)\,\mid \,y\in f(x)\,\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ae2dc71b9f4e13dc3a667e50a965502e8ddd89a2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:19.553ex; height:2.843ex;" alt="{\displaystyle \{\,(x,y)\,\mid \,y\in f(x)\,\}}"/></span> can be <a href="/wiki/Decidable_language" class="mw-redirect" title="Decidable language">recognized</a> in <a href="/wiki/Polynomial_time" class="mw-redirect" title="Polynomial time">polynomial time</a>, and</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0a07d98bb302f3856cbabc47b2b9016692e3f7bc" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.04ex; height:1.676ex;" alt="m"/></span> is <a href="/wiki/Polynomial_time" class="mw-redirect" title="Polynomial time">polynomial-time computable</a>.</li></ul>
+<p>This implies that the corresponding decision problem is in <a href="/wiki/NP_(complexity)" title="NP (complexity)">NP</a>. In computer science, interesting optimization problems usually have the above properties and are therefore NPO problems. A problem is additionally called a P-optimization (PO) problem, if there exists an algorithm which finds optimal solutions in polynomial time. Often, when dealing with the class NPO, one is interested in optimization problems for which the decision versions are <a href="/wiki/NP-completeness" title="NP-completeness">NP-complete</a>. Note that hardness relations are always with respect to some reduction. Due to the connection between approximation algorithms and computational optimization problems, reductions which preserve approximation in some respect are for this subject preferred than the usual <a href="/wiki/Turing_reduction" title="Turing reduction">Turing</a> and <a href="/wiki/Karp_reduction" class="mw-redirect" title="Karp reduction">Karp reductions</a>. An example of such a reduction would be the <a href="/wiki/L-reduction" title="L-reduction">L-reduction</a>. For this reason, optimization problems with NP-complete decision versions are not necessarily called NPO-complete.<sup id="cite_ref-Kann92_8-0" class="reference"><a href="#cite_note-Kann92-8">&#91;8&#93;</a></sup>
+</p><p>NPO is divided into the following subclasses according to their approximability:<sup id="cite_ref-Hromkovic02_7-1" class="reference"><a href="#cite_note-Hromkovic02-7">&#91;7&#93;</a></sup>
+</p>
+<ul><li><i>NPO(I)</i>: Equals <a href="/wiki/FPTAS" class="mw-redirect" title="FPTAS">FPTAS</a>. Contains the <a href="/wiki/Knapsack_problem" title="Knapsack problem">Knapsack problem</a>.</li>
+<li><i>NPO(II)</i>: Equals <a href="/wiki/Polynomial-time_approximation_scheme" title="Polynomial-time approximation scheme">PTAS</a>. Contains the <a href="/wiki/Makespan" title="Makespan">Makespan</a> scheduling problem.</li>
+<li><i>NPO(III)</i>: :The class of NPO problems that have polynomial-time algorithms which computes solutions with a cost at most <i>c</i> times the optimal cost (for minimization problems) or a cost at least <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 1/c}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 1/c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ea4ccea7e8b651b718456ef2203efc251a58ca84" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:3.332ex; height:2.843ex;" alt="1/c"/></span> of the optimal cost (for maximization problems). In <a href="/wiki/Juraj_Hromkovi%C4%8D" title="Juraj Hromkovič">Hromkovič</a>'s book, excluded from this class are all NPO(II)-problems save if P=NP. Without the exclusion, equals APX. Contains <a href="/wiki/MAX-SAT" class="mw-redirect" title="MAX-SAT">MAX-SAT</a> and metric <a href="/wiki/Travelling_salesman_problem" title="Travelling salesman problem">TSP</a>.</li>
+<li><i>NPO(IV)</i>: :The class of NPO problems with polynomial-time algorithms approximating the optimal solution by a ratio that is polynomial in a logarithm of the size of the input. In Hromkovic's book, all NPO(III)-problems are excluded from this class unless P=NP. Contains the <a href="/wiki/Set_cover" class="mw-redirect" title="Set cover">set cover</a> problem.</li>
+<li><i>NPO(V)</i>: :The class of NPO problems with polynomial-time algorithms approximating the optimal solution by a ratio bounded by some function on n. In Hromkovic's book, all NPO(IV)-problems  are excluded from this class unless P=NP. Contains the <a href="/wiki/Travelling_salesman_problem" title="Travelling salesman problem">TSP</a> and <a href="/wiki/Clique_problem" title="Clique problem">Max Clique problems</a>.</li></ul>
+<p>An NPO problem is called <i>polynomially bounded</i> (PB) if, for every instance <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span> and for every solution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y\in f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y\in f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7563c0df4d0a6bb0a1d1033a55b14a6848f7ef9a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.414ex; height:2.843ex;" alt="{\displaystyle y\in f(x)}"/></span>, the measure <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle m(x,y)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>m</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle m(x,y)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5516fe25201a7099d4d24add76c3e0f6e1c22343" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.369ex; height:2.843ex;" alt="{\displaystyle m(x,y)}"/></span>is bounded by a polynomial function of the size of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/87f9e315fd7e2ba406057a97300593c4802b53e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.33ex; height:1.676ex;" alt="x"/></span>. The class NPOPB is the class of NPO problems that are polynomially-bounded.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Specific_problems">Specific problems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=5" title="Edit section: Specific problems">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:202px;"><a href="/wiki/File:TSP_Deutschland_3.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/TSP_Deutschland_3.png/200px-TSP_Deutschland_3.png" decoding="async" width="200" height="215" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/TSP_Deutschland_3.png/300px-TSP_Deutschland_3.png 1.5x, //upload.wikimedia.org/wikipedia/commons/c/c4/TSP_Deutschland_3.png 2x" data-file-width="328" data-file-height="352" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:TSP_Deutschland_3.png" class="internal" title="Enlarge"></a></div>An optimal traveling salesperson tour through <a href="/wiki/Germany" title="Germany">Germany</a>’s 15 largest cities. It is the shortest among 43,589,145,600<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> possible tours visiting each city exactly once.</div></div></div>
+<ul><li><a href="/wiki/Assignment_problem" title="Assignment problem">Assignment problem</a></li>
+<li><a href="/wiki/Closure_problem" title="Closure problem">Closure problem</a></li>
+<li><a href="/wiki/Constraint_satisfaction_problem" title="Constraint satisfaction problem">Constraint satisfaction problem</a></li>
+<li><a href="/wiki/Cutting_stock_problem" title="Cutting stock problem">Cutting stock problem</a></li>
+<li><a href="/wiki/Dominating_set" title="Dominating set">Dominating set</a> problem</li>
+<li><a href="/wiki/Integer_programming" title="Integer programming">Integer programming</a></li>
+<li><a href="/wiki/Knapsack_problem" title="Knapsack problem">Knapsack problem</a></li>
+<li><a href="/wiki/Minimum_relevant_variables_in_linear_system" title="Minimum relevant variables in linear system">Minimum relevant variables in linear system</a></li>
+<li><a href="/wiki/Minimum_spanning_tree" title="Minimum spanning tree">Minimum spanning tree</a></li>
+<li><a href="/wiki/Nurse_scheduling_problem" title="Nurse scheduling problem">Nurse scheduling problem</a></li>
+<li><a href="/wiki/Set_cover_problem" title="Set cover problem">Set cover problem</a></li>
+<li><a href="/wiki/Traveling_salesman_problem" class="mw-redirect" title="Traveling salesman problem">Traveling salesman problem</a></li>
+<li><a href="/wiki/Vehicle_rescheduling_problem" title="Vehicle rescheduling problem">Vehicle rescheduling problem</a></li>
+<li><a href="/wiki/Vehicle_routing_problem" title="Vehicle routing problem">Vehicle routing problem</a></li>
+<li><a href="/wiki/Weapon_target_assignment_problem" title="Weapon target assignment problem">Weapon target assignment problem</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Constraint_composite_graph" title="Constraint composite graph">Constraint composite graph</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=7" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a href="#CITEREFSchrijver2006">Schrijver 2006</a>, p.&#160;1.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="http://www.elsevier.com/locate/disopt"><i>Discrete Optimization</i></a>. Elsevier<span class="reference-accessdate">. Retrieved <span class="nowrap">2009-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Discrete+Optimization&amp;rft.pub=Elsevier&amp;rft_id=http%3A%2F%2Fwww.elsevier.com%2Flocate%2Fdisopt&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal">Sbihi, Abdelkader; Eglese, Richard W. (2007). <a rel="nofollow" class="external text" href="https://hal.archives-ouvertes.fr/hal-00644076/file/COGL_4or.pdf">"Combinatorial optimization and Green Logistics"</a> <span class="cs1-format">(PDF)</span>. <i>4Or</i>. <b>5</b> (2): 99–116. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fs10288-007-0047-3">10.1007/s10288-007-0047-3</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=4Or&amp;rft.atitle=Combinatorial+optimization+and+Green+Logistics&amp;rft.volume=5&amp;rft.issue=2&amp;rft.pages=99-116&amp;rft.date=2007&amp;rft_id=info%3Adoi%2F10.1007%2Fs10288-007-0047-3&amp;rft.aulast=Sbihi&amp;rft.aufirst=Abdelkader&amp;rft.au=Eglese%2C+Richard+W.&amp;rft_id=https%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-00644076%2Ffile%2FCOGL_4or.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">Eskandarpour, Majid; Dejax, Pierre; Miemczyk, Joe; Péton, Olivier (2015). <a rel="nofollow" class="external text" href="https://hal.archives-ouvertes.fr/hal-01154605/file/eskandarpour-et-al%20review%20R2.pdf">"Sustainable supply chain network design: An optimization-oriented review"</a> <span class="cs1-format">(PDF)</span>. <i>Omega</i>. <b>54</b>: 11–32. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.omega.2015.01.006">10.1016/j.omega.2015.01.006</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Omega&amp;rft.atitle=Sustainable+supply+chain+network+design%3A+An+optimization-oriented+review&amp;rft.volume=54&amp;rft.pages=11-32&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.1016%2Fj.omega.2015.01.006&amp;rft.aulast=Eskandarpour&amp;rft.aufirst=Majid&amp;rft.au=Dejax%2C+Pierre&amp;rft.au=Miemczyk%2C+Joe&amp;rft.au=P%C3%A9ton%2C+Olivier&amp;rft_id=https%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-01154605%2Ffile%2Feskandarpour-et-al%2520review%2520R2.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a href="#CITEREFCook2016">Cook 2016</a>.</span>
+</li>
+<li id="cite_note-Ausiello03-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ausiello03_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFAusiello2003" class="citation">Ausiello, Giorgio;  et al. (2003), <i>Complexity and Approximation</i> (Corrected ed.), Springer, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-65431-5" title="Special:BookSources/978-3-540-65431-5"><bdi>978-3-540-65431-5</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Complexity+and+Approximation&amp;rft.edition=Corrected&amp;rft.pub=Springer&amp;rft.date=2003&amp;rft.isbn=978-3-540-65431-5&amp;rft.aulast=Ausiello&amp;rft.aufirst=Giorgio&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Hromkovic02-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-Hromkovic02_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Hromkovic02_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFHromkovic2002" class="citation">Hromkovic, Juraj (2002), <i>Algorithmics for Hard Problems</i>, Texts in Theoretical Computer Science (2nd ed.), Springer, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-44134-2" title="Special:BookSources/978-3-540-44134-2"><bdi>978-3-540-44134-2</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Algorithmics+for+Hard+Problems&amp;rft.series=Texts+in+Theoretical+Computer+Science&amp;rft.edition=2nd&amp;rft.pub=Springer&amp;rft.date=2002&amp;rft.isbn=978-3-540-44134-2&amp;rft.aulast=Hromkovic&amp;rft.aufirst=Juraj&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Kann92-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-Kann92_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFKann1992" class="citation">Kann, Viggo (1992), <i>On the Approximability of NP-complete Optimization Problems</i>, Royal Institute of Technology, Sweden, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/91-7170-082-X" title="Special:BookSources/91-7170-082-X"><bdi>91-7170-082-X</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=On+the+Approximability+of+NP-complete+Optimization+Problems&amp;rft.pub=Royal+Institute+of+Technology%2C+Sweden&amp;rft.date=1992&amp;rft.isbn=91-7170-082-X&amp;rft.aulast=Kann&amp;rft.aufirst=Viggo&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">Take one city, and take all possible orders of the other 14 cities. Then divide by two because it does not matter in which direction in time they come after each other: 14!/2 = 43,589,145,600.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFBeasley" class="citation web">Beasley, J. E. <a rel="nofollow" class="external text" href="http://people.brunel.ac.uk/~mastjjb/jeb/or/ip.html">"Integer programming"</a> (lecture notes).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Integer+programming&amp;rft.aulast=Beasley&amp;rft.aufirst=J.+E.&amp;rft_id=http%3A%2F%2Fpeople.brunel.ac.uk%2F~mastjjb%2Fjeb%2For%2Fip.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFCookCunninghamPulleyblankSchrijver1997" class="citation book"><a href="/wiki/William_J._Cook" title="William J. Cook">Cook, William J.</a>; Cunningham, William H.; <a href="/wiki/William_R._Pulleyblank" title="William R. Pulleyblank">Pulleyblank, William R.</a>; <a href="/wiki/Alexander_Schrijver" title="Alexander Schrijver">Schrijver, Alexander</a> (1997). <i>Combinatorial Optimization</i>. Wiley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-55894-X" title="Special:BookSources/0-471-55894-X"><bdi>0-471-55894-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Combinatorial+Optimization&amp;rft.pub=Wiley&amp;rft.date=1997&amp;rft.isbn=0-471-55894-X&amp;rft.aulast=Cook&amp;rft.aufirst=William+J.&amp;rft.au=Cunningham%2C+William+H.&amp;rft.au=Pulleyblank%2C+William+R.&amp;rft.au=Schrijver%2C+Alexander&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFCook2016" class="citation web">Cook, William (2016). <a rel="nofollow" class="external text" href="http://www.tsp.gatech.edu/optimal/index.html">"Optimal TSP Tours"</a>. <a href="/wiki/University_of_Waterloo" title="University of Waterloo">University of Waterloo</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Optimal+TSP+Tours&amp;rft.pub=University+of+Waterloo&amp;rft.date=2016&amp;rft.aulast=Cook&amp;rft.aufirst=William&amp;rft_id=http%3A%2F%2Fwww.tsp.gatech.edu%2Foptimal%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> <i>(Information on the largest TSP instances solved to date.)</i></li></ul>
+<ul><li><cite id="CITEREFCrescenziKannHalldórssonKarpinski" class="citation web">Crescenzi, Pierluigi; Kann, Viggo; Halldórsson, Magnús; <a href="/wiki/Marek_Karpinski" title="Marek Karpinski">Karpinski, Marek</a>; <a href="/wiki/Gerhard_J._Woeginger" title="Gerhard J. Woeginger">Woeginger, Gerhard</a> (eds.). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/%7Eviggo/wwwcompendium/">"A Compendium of NP Optimization Problems"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Compendium+of+NP+Optimization+Problems&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2F%257Eviggo%2Fwwwcompendium%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> <i>(This is a continuously updated catalog of approximability results for NP optimization problems.)</i></li></ul>
+<ul><li><cite id="CITEREFDasChakrabarti2005" class="citation book">Das, Arnab; <a href="/wiki/Bikas_K_Chakrabarti" class="mw-redirect" title="Bikas K Chakrabarti">Chakrabarti, Bikas K</a>, eds. (2005). <i>Quantum Annealing and Related Optimization Methods</i>. Lecture Notes in Physics. <b>679</b>. Springer. <a href="/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2005qnro.book.....D">2005qnro.book.....D</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Quantum+Annealing+and+Related+Optimization+Methods&amp;rft.series=Lecture+Notes+in+Physics&amp;rft.pub=Springer&amp;rft.date=2005&amp;rft_id=info%3Abibcode%2F2005qnro.book.....D&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFDasChakrabarti2008" class="citation journal">Das, Arnab; Chakrabarti, Bikas K (2008). "Colloquium: Quantum annealing and analog quantum computation". <i>Rev. Mod. Phys</i>. <b>80</b> (3): 1061. <a href="/wiki/ArXiv" title="ArXiv">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/0801.2193">0801.2193</a></span>. <a href="/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2008RvMP...80.1061D">2008RvMP...80.1061D</a>. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.563.9990">10.1.1.563.9990</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1103%2FRevModPhys.80.1061">10.1103/RevModPhys.80.1061</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Rev.+Mod.+Phys.&amp;rft.atitle=Colloquium%3A+Quantum+annealing+and+analog+quantum+computation&amp;rft.volume=80&amp;rft.issue=3&amp;rft.pages=1061&amp;rft.date=2008&amp;rft_id=info%3Aarxiv%2F0801.2193&amp;rft_id=info%3Adoi%2F10.1103%2FRevModPhys.80.1061&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.563.9990&amp;rft_id=info%3Abibcode%2F2008RvMP...80.1061D&amp;rft.aulast=Das&amp;rft.aufirst=Arnab&amp;rft.au=Chakrabarti%2C+Bikas+K&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFLawler2001" class="citation book"><a href="/wiki/Eugene_Lawler" title="Eugene Lawler">Lawler, Eugene</a> (2001). <i>Combinatorial Optimization: Networks and Matroids</i>. Dover. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-486-41453-1" title="Special:BookSources/0-486-41453-1"><bdi>0-486-41453-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Combinatorial+Optimization%3A+Networks+and+Matroids&amp;rft.pub=Dover&amp;rft.date=2001&amp;rft.isbn=0-486-41453-1&amp;rft.aulast=Lawler&amp;rft.aufirst=Eugene&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFLee2004" class="citation book"><a href="/wiki/Jon_Lee_(mathematician)" title="Jon Lee (mathematician)">Lee, Jon</a> (2004). <a rel="nofollow" class="external text" href="https://books.google.com/?id=3pL1B7WVYnAC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>A First Course in Combinatorial Optimization</i></a>. Cambridge University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-521-01012-8" title="Special:BookSources/0-521-01012-8"><bdi>0-521-01012-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+First+Course+in+Combinatorial+Optimization&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2004&amp;rft.isbn=0-521-01012-8&amp;rft.aulast=Lee&amp;rft.aufirst=Jon&amp;rft_id=https%3A%2F%2Fbooks.google.com%2F%3Fid%3D3pL1B7WVYnAC%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFPapadimitriouSteiglitz1998" class="citation book">Papadimitriou, Christos H.; <a href="/wiki/Kenneth_Steiglitz" title="Kenneth Steiglitz">Steiglitz, Kenneth</a> (July 1998). <i>Combinatorial Optimization&#160;: Algorithms and Complexity</i>. Dover. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-486-40258-4" title="Special:BookSources/0-486-40258-4"><bdi>0-486-40258-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Combinatorial+Optimization+%3A+Algorithms+and+Complexity&amp;rft.pub=Dover&amp;rft.date=1998-07&amp;rft.isbn=0-486-40258-4&amp;rft.aulast=Papadimitriou&amp;rft.aufirst=Christos+H.&amp;rft.au=Steiglitz%2C+Kenneth&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFSchrijver2003" class="citation book">Schrijver, Alexander (2003). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=mqGeSQ6dJycC&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>Combinatorial Optimization: Polyhedra and Efficiency</i></a>. Algorithms and Combinatorics. <b>24</b>. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9783540443896" title="Special:BookSources/9783540443896"><bdi>9783540443896</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Combinatorial+Optimization%3A+Polyhedra+and+Efficiency&amp;rft.series=Algorithms+and+Combinatorics&amp;rft.pub=Springer&amp;rft.date=2003&amp;rft.isbn=9783540443896&amp;rft.aulast=Schrijver&amp;rft.aufirst=Alexander&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DmqGeSQ6dJycC%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFSchrijver2005" class="citation book">Schrijver, Alexander (2005). <a rel="nofollow" class="external text" href="http://homepages.cwi.nl/~lex/files/histco.pdf">"On the history of combinatorial optimization (till 1960)"</a> <span class="cs1-format">(PDF)</span>.  In <a href="/wiki/Karen_Aardal" title="Karen Aardal">Aardal, K.</a>; Nemhauser, G.L.; Weismantel, R. (eds.). <i>Handbook of Discrete Optimization</i>. Elsevier. pp.&#160;1–68.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=On+the+history+of+combinatorial+optimization+%28till+1960%29&amp;rft.btitle=Handbook+of+Discrete+Optimization&amp;rft.pages=1-68&amp;rft.pub=Elsevier&amp;rft.date=2005&amp;rft.aulast=Schrijver&amp;rft.aufirst=Alexander&amp;rft_id=http%3A%2F%2Fhomepages.cwi.nl%2F~lex%2Ffiles%2Fhistco.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFSchrijver2006" class="citation book">Schrijver, Alexander (February 1, 2006). <a rel="nofollow" class="external text" href="http://homepages.cwi.nl/~lex/files/dict.pdf"><i>A Course in Combinatorial Optimization</i></a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Course+in+Combinatorial+Optimization&amp;rft.date=2006-02-01&amp;rft.aulast=Schrijver&amp;rft.aufirst=Alexander&amp;rft_id=http%3A%2F%2Fhomepages.cwi.nl%2F~lex%2Ffiles%2Fdict.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFSierksmaGhosh2010" class="citation book"><a href="/w/index.php?title=Gerard_Sierksma&amp;action=edit&amp;redlink=1" class="new" title="Gerard Sierksma (page does not exist)">Sierksma, Gerard</a>; Ghosh, Diptesh (2010). <i>Networks in Action; Text and Computer Exercises in Network Optimization</i>. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4419-5512-8" title="Special:BookSources/978-1-4419-5512-8"><bdi>978-1-4419-5512-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Networks+in+Action%3B+Text+and+Computer+Exercises+in+Network+Optimization&amp;rft.pub=Springer&amp;rft.date=2010&amp;rft.isbn=978-1-4419-5512-8&amp;rft.aulast=Sierksma&amp;rft.aufirst=Gerard&amp;rft.au=Ghosh%2C+Diptesh&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite class="citation book">Gerard Sierksma; Yori Zwols (2015). <i>Linear and Integer Optimization: Theory and Practice</i>. CRC Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-498-71016-9" title="Special:BookSources/978-1-498-71016-9"><bdi>978-1-498-71016-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Linear+and+Integer+Optimization%3A+Theory+and+Practice&amp;rft.pub=CRC+Press&amp;rft.date=2015&amp;rft.isbn=978-1-498-71016-9&amp;rft.au=Gerard+Sierksma&amp;rft.au=Yori+Zwols&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<ul><li><cite id="CITEREFPintea2014" class="citation book">Pintea, C-M. (2014). <a rel="nofollow" class="external text" href="https://www.springer.com/la/book/9783642401787"><i>Advances in Bio-inspired Computing for Combinatorial Optimization Problem</i></a>. Intelligent Systems Reference Library. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-642-40178-7" title="Special:BookSources/978-3-642-40178-7"><bdi>978-3-642-40178-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Advances+in+Bio-inspired+Computing+for+Combinatorial+Optimization+Problem&amp;rft.series=Intelligent+Systems+Reference+Library&amp;rft.pub=Springer&amp;rft.date=2014&amp;rft.isbn=978-3-642-40178-7&amp;rft.aulast=Pintea&amp;rft.aufirst=C-M.&amp;rft_id=https%3A%2F%2Fwww.springer.com%2Fla%2Fbook%2F9783642401787&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACombinatorial+optimization" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Combinatorial_optimization" class="extiw" title="commons:Category:Combinatorial optimization"><span style="">Combinatorial optimization</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://www.springer.com/mathematics/journal/10878">Journal of Combinatorial Optimization</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.iasi.cnr.it/aussois">The Aussois Combinatorial Optimization Workshop</a></li>
+<li><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/jcop/">Java Combinatorial Optimization Platform</a> (open source code)</li>
+<li><a rel="nofollow" class="external text" href="https://www.mjc2.com/staff-planning-complexity.htm">Why is scheduling people hard?</a></li>
+<li><a rel="nofollow" class="external text" href="https://www7.in.tum.de/~kugele/files/jobsis.pdf">Complexity classes for optimization problems / Stefan Kugele</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1265
+Cached time: 20200327233246
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.432 seconds
+Real time usage: 0.612 seconds
+Preprocessor visited node count: 1559/1000000
+Post‐expand include size: 39901/2097152 bytes
+Template argument size: 1424/2097152 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 6/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 51724/5000000 bytes
+Number of Wikibase entities loaded: 5/400
+Lua time usage: 0.234/10.000 seconds
+Lua memory usage: 4.86 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  451.578      1 -total
+ 39.07%  176.436      1 Template:Reflist
+ 29.81%  134.636     12 Template:Cite_book
+ 17.24%   77.837      3 Template:Cite_journal
+ 17.16%   77.485      1 Template:Cn
+ 13.71%   61.932      2 Template:Fix
+ 13.04%   58.872      1 Template:Commonscat
+ 10.08%   45.501      1 Template:Commons
+  9.60%   43.349      1 Template:Sister_project
+  9.55%   43.119      4 Template:Category_handler
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:420555-0!canonical!math=5 and timestamp 20200327233245 and revision id 942912562
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Combinatorial_optimization&amp;oldid=942912562">https://en.wikipedia.org/w/index.php?title=Combinatorial_optimization&amp;oldid=942912562</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Combinatorial_optimization" title="Category:Combinatorial optimization">Combinatorial optimization</a></li><li><a href="/wiki/Category:Computational_complexity_theory" title="Category:Computational complexity theory">Computational complexity theory</a></li><li><a href="/wiki/Category:Theoretical_computer_science" title="Category:Theoretical computer science">Theoretical computer science</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_March_2019" title="Category:Articles with unsourced statements from March 2019">Articles with unsourced statements from March 2019</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_January_2018" title="Category:Articles with unsourced statements from January 2018">Articles with unsourced statements from January 2018</a></li><li><a href="/wiki/Category:Commons_category_link_from_Wikidata" title="Category:Commons category link from Wikidata">Commons category link from Wikidata</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Combinatorial+optimization" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Combinatorial+optimization" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Combinatorial_optimization" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Combinatorial_optimization" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Combinatorial_optimization">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Combinatorial_optimization&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Combinatorial_optimization&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Combinatorial_optimization" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Combinatorial_optimization" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Combinatorial_optimization&amp;oldid=942912562" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Combinatorial_optimization&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1333872" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Combinatorial_optimization&amp;id=942912562&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Combinatorial_optimization" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Combinatorial+optimization">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Combinatorial+optimization&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Combinatorial_optimization&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D9%85%D8%AB%D8%A7%D9%84_%D8%AA%D9%88%D8%A7%D9%81%D9%82%D9%8A" title="استمثال توافقي – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0_%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Комбинаторна оптимизация – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Kombinatorische_Optimierung" title="Kombinatorische Optimierung – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Optimizaci%C3%B3n_combinatoria" title="Optimización combinatoria – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Diskreta_optimumigo" title="Diskreta optimumigo – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D9%87%DB%8C%D9%86%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%DB%8C%D8%A7%D8%AA%DB%8C" title="بهینه‌سازی ترکیبیاتی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Optimisation_combinatoire" title="Optimisation combinatoire – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%A1%B0%ED%95%A9%EC%B5%9C%EC%A0%81%ED%99%94" title="조합최적화 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E7%B5%84%E5%90%88%E3%81%9B%E6%9C%80%E9%81%A9%E5%8C%96" title="組合せ最適化 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Otimiza%C3%A7%C3%A3o_combinat%C3%B3ria" title="Otimização combinatória – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F_%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F" title="Комбинаторная оптимизация – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Combinatorial_optimization" title="Combinatorial optimization – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0_%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D1%96%D0%B7%D0%B0%D1%86%D1%96%D1%8F" title="Комбінаторна оптимізація – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%BB%84%E5%90%88%E4%BC%98%E5%8C%96" title="组合优化 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1333872#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 27 February 2020, at 17:20<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Combinatorial_optimization&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.432","walltime":"0.612","ppvisitednodes":{"value":1559,"limit":1000000},"postexpandincludesize":{"value":39901,"limit":2097152},"templateargumentsize":{"value":1424,"limit":2097152},"expansiondepth":{"value":16,"limit":40},"expensivefunctioncount":{"value":6,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":51724,"limit":5000000},"entityaccesscount":{"value":5,"limit":400},"timingprofile":["100.00%  451.578      1 -total"," 39.07%  176.436      1 Template:Reflist"," 29.81%  134.636     12 Template:Cite_book"," 17.24%   77.837      3 Template:Cite_journal"," 17.16%   77.485      1 Template:Cn"," 13.71%   61.932      2 Template:Fix"," 13.04%   58.872      1 Template:Commonscat"," 10.08%   45.501      1 Template:Commons","  9.60%   43.349      1 Template:Sister_project","  9.55%   43.119      4 Template:Category_handler"]},"scribunto":{"limitreport-timeusage":{"value":"0.234","limit":"10.000"},"limitreport-memusage":{"value":5096183,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n  [\"CITEREFAusiello2003\"] = 1,\n  [\"CITEREFBeasley\"] = 1,\n  [\"CITEREFCook2016\"] = 1,\n  [\"CITEREFCookCunninghamPulleyblankSchrijver1997\"] = 1,\n  [\"CITEREFCrescenziKannHalldórssonKarpinski\"] = 1,\n  [\"CITEREFDasChakrabarti2005\"] = 1,\n  [\"CITEREFDasChakrabarti2008\"] = 1,\n  [\"CITEREFHromkovic2002\"] = 1,\n  [\"CITEREFKann1992\"] = 1,\n  [\"CITEREFLawler2001\"] = 1,\n  [\"CITEREFLee2004\"] = 1,\n  [\"CITEREFPapadimitriouSteiglitz1998\"] = 1,\n  [\"CITEREFPintea2014\"] = 1,\n  [\"CITEREFSchrijver2003\"] = 1,\n  [\"CITEREFSchrijver2005\"] = 1,\n  [\"CITEREFSchrijver2006\"] = 1,\n  [\"CITEREFSierksmaGhosh2010\"] = 1,\n}\n"},"cachereport":{"origin":"mw1265","timestamp":"20200327233246","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Combinatorial optimization","url":"https:\/\/en.wikipedia.org\/wiki\/Combinatorial_optimization","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1333872","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1333872","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-01-04T20:46:26Z","dateModified":"2020-02-27T17:20:41Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/d\/d2\/Minimum_spanning_tree.svg","headline":"subset of mathematical optimization"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":108,"wgHostname":"mw1401"});});</script></body></html>

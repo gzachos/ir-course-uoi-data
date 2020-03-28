@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Cellular evolutionary algorithm - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn6R-gpAIHkAA3SpuNsAAACG","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Cellular_evolutionary_algorithm","wgTitle":"Cellular evolutionary algorithm","wgCurRevisionId":913351702,"wgRevisionId":913351702,"wgArticleId":33418313,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Evolutionary algorithms"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Cellular_evolutionary_algorithm","wgRelevantArticleId":33418313,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q5058361","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":
+"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/76/Evolution_of_several_cEAs.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Cellular_evolutionary_algorithm"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Cellular_evolutionary_algorithm rootpage-Cellular_evolutionary_algorithm skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Cellular evolutionary algorithm</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A <b>cellular evolutionary algorithm</b> (<b>cEA</b>) is a kind of <a href="/wiki/Evolutionary_algorithm" title="Evolutionary algorithm">evolutionary algorithm</a> (EA) in which individuals cannot mate arbitrarily, but every one interacts with its closer neighbors on which a basic EA is applied (selection, variation, replacement).
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:454px;"><a href="/wiki/File:Evolution_of_several_cEAs.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Evolution_of_several_cEAs.png/452px-Evolution_of_several_cEAs.png" decoding="async" width="452" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Evolution_of_several_cEAs.png/678px-Evolution_of_several_cEAs.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/76/Evolution_of_several_cEAs.png/904px-Evolution_of_several_cEAs.png 2x" data-file-width="1113" data-file-height="739" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Evolution_of_several_cEAs.png" class="internal" title="Enlarge"></a></div><b>Example evolution of a cEA depending on the shape of the population, from squared (left) to unidimensional ring (right). Darker colors mean better solutions. Observe how shapes different from the traditional square keep diversity (higher exploration) for a longer time. Four snapshots of cEAs at generations 0-50-100-150.</b></div></div></div>
+<p>The cellular model simulates natural evolution from the point of view of
+the individual, which encodes a tentative (optimization, learning, search) problem solution. The essential idea of this model is to provide the EA population
+with a special structure defined as a connected graph, in which each vertex is an individual who communicates with his
+nearest neighbors. Particularly, individuals are conceptually set in a toroidal
+mesh, and are only allowed to recombine with close individuals. This leads us
+to a kind of locality known as <i>isolation by distance</i>. The set of potential mates
+of an individual is called its <i>neighborhood</i>. It is known that, in this kind
+of algorithm, similar individuals tend to cluster creating niches, and these groups
+operate as if they were separate sub-populations (islands). Anyway, there is no
+clear borderline between adjacent groups, and close niches could be easily
+colonized by competitive niches and maybe merge solution contents during the process. Simultaneously,
+farther niches can be affected more slowly.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Synchronous_versus_asynchronous"><span class="tocnumber">2</span> <span class="toctext">Synchronous versus asynchronous</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Parallelism"><span class="tocnumber">3</span> <span class="toctext">Parallelism</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Introduction">Introduction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=1" title="Edit section: Introduction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A cellular evolutionary algorithm (cEA) usually evolves a structured bidimensional
+grid of individuals, although other topologies are also possible. In this grid, clusters of similar individuals are naturally created during evolution, promoting exploration in their boundaries, while exploitation is mainly performed by direct competition and merging inside them.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:330px;"><a href="/wiki/File:CEA_neighborhood_types.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/CEA_neighborhood_types.png/328px-CEA_neighborhood_types.png" decoding="async" width="328" height="200" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/CEA_neighborhood_types.png/493px-CEA_neighborhood_types.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/7b/CEA_neighborhood_types.png/657px-CEA_neighborhood_types.png 2x" data-file-width="909" data-file-height="554" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:CEA_neighborhood_types.png" class="internal" title="Enlarge"></a></div><b>Example models of neighborhoods in cellular EAs: linear, compact, diamond and... any other!</b></div></div></div>
+<p>The grid is usually 2D toroidal structure, although
+the number of dimensions can be easily extended (to 3D) or reduced (to 1D, e.g. a ring).
+The neighborhood of a particular point of the grid (where an individual is
+placed) is defined in terms of the <i>Manhattan</i> distance from it to others in the population. Each point of the grid has a neighborhood that overlaps the neighborhoods of nearby individuals. In the basic algorithm, all the neighborhoods have the same size and identical shapes. The two
+most commonly used neighborhoods are L5, also called
+<i>Von Neumann</i> or NEWS (North, East, West and South), and C9, also known as <i>Moore</i> neighborhood. Here, <i>L</i> stands for <i>Linear</i> while <i>C</i> stands for <i>Compact</i>.
+</p><p>In cEAs, the individuals can only interact with their neighbors in the reproductive
+cycle where the variation operators are applied. This reproductive
+cycle is executed inside the neighborhood of each individual and, generally,
+consists in selecting two parents among its neighbors according to a certain
+criterion, applying the variation operators to them (recombination and mutation
+for example), and replacing the considered individual by the recently
+created offspring following a given criterion, for instance, replace if the offspring
+represents a better solution than the considered individual.
+</p>
+<h2><span class="mw-headline" id="Synchronous_versus_asynchronous">Synchronous versus asynchronous</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=2" title="Edit section: Synchronous versus asynchronous">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a regular <b>synchronous</b> cEA, the algorithm proceeds from the very first top left individual to the right and then to the several rows by using the information in the population to create a new temporary population. After finishing with the bottom-right last individual the temporary population is full with the newly computed individuals, and the replacement step starts. In it, the old population is completely and synchronously replaced with the newly computed one according to some criterion. Usually, the replacement keeps the best individual in the same position of both populations, that is, elitism is used.
+</p><p>We must notice that according to the update policy of the population used, we could also define an <b>asynchronous</b> cEA. This is also a well-known issue in <a href="/wiki/Cellular_automata" class="mw-redirect" title="Cellular automata">cellular automata</a>. In asynchronous cEAs the order in which the individuals in the grid are update changes depending on the criterion used: line sweep, fixed random sweep, new random sweep, and uniform choice. These are the four most usual ways of updating the population. All of them keep using the newly computed individual (or the original if better) for the computations of its neighbors immediately. This makes the population to hold at any time individual in different states of evolution, defining a very interesting new line of research.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:508px;"><a href="/wiki/File:Ratio_concept_in_cEAs.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ratio_concept_in_cEAs.png/506px-Ratio_concept_in_cEAs.png" decoding="async" width="506" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ratio_concept_in_cEAs.png/758px-Ratio_concept_in_cEAs.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/45/Ratio_concept_in_cEAs.png/1011px-Ratio_concept_in_cEAs.png 2x" data-file-width="1105" data-file-height="656" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Ratio_concept_in_cEAs.png" class="internal" title="Enlarge"></a></div><b>The ratio between the radii of the neighborhood to the topology defines the exploration/exploitation capability of the cEA. This could be even tuned during the run of the algorithm, giving the researcher a unique mechanism to search in very complex landscapes.</b></div></div></div>
+<p>The overlap of the neighborhoods provides an implicit mechanism of solution migration
+to the cEA. Since the best solutions spread smoothly through the
+whole population, genetic diversity in the population is preserved longer than
+in non structured EAs. This soft dispersion of the best solutions through the
+population is one of the main issues of the good tradeoff between <i>exploration</i>
+and <i>exploitation</i> that cEAs perform during the search. It is then easy to see
+that we could <i>tune this tradeoff</i> (and hence, tune the genetic diversity level along
+the evolution) by modifying (for instance) the size of the neighborhood used, as
+the overlap degree between the neighborhoods grows according to the size of
+the neighborhood.
+</p><p>A cEA can be seen as a <a href="/wiki/Cellular_automaton" title="Cellular automaton">cellular automaton</a> (CA) with probabilistic
+rewritable rules, where the alphabet of the CA is equivalent to the potential
+number of solutions of the problem. Hence, if we see cEAs as a kind of CA,
+it is possible to import knowledge from the field of CAs to cEAs, and in fact this is an interesting open research line.
+</p>
+<h2><span class="mw-headline" id="Parallelism">Parallelism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=3" title="Edit section: Parallelism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Cellular EAs are very amenable to parallelism, thus usually found in the literature of <a href="/wiki/Parallel_metaheuristics" class="mw-redirect" title="Parallel metaheuristics">parallel metaheuristics</a>. In particular, fine grain parallelism can be use to assign independent threads of execution to every individual, thus allowing the whole cEA to run on a concurrent or actually parallel hardware platform. In this way, large time reductions can be obtained when running cEAs on <a href="/wiki/FPGAs" class="mw-redirect" title="FPGAs">FPGAs</a> or <a href="/wiki/GPUs" class="mw-redirect" title="GPUs">GPUs</a>.
+</p><p>However, it is important to stress that cEAs are a model of search, in many senses different from traditional EAs. Also, they can be run in sequential and parallel platforms, reinforcing the fact that the model and the implementation are two different concepts.
+</p><p>See <a rel="nofollow" class="external text" href="https://www.springer.com/business/operations+research/book/978-0-387-77609-5">here</a> for a complete description on the fundamentals for the understanding, design, and application of cEAs.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Cellular_automaton" title="Cellular automaton">Cellular automaton</a></li>
+<li><a href="/wiki/Dual-phase_evolution" title="Dual-phase evolution">Dual-phase evolution</a></li>
+<li><a href="/wiki/Enrique_Alba" title="Enrique Alba">Enrique Alba</a></li>
+<li><a href="/wiki/Evolutionary_algorithm" title="Evolutionary algorithm">Evolutionary algorithm</a></li>
+<li><a href="/wiki/Metaheuristic" title="Metaheuristic">Metaheuristic</a></li>
+<li><a href="/wiki/Parallel_metaheuristic" title="Parallel metaheuristic">Parallel metaheuristic</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<ul><li><a rel="nofollow" class="external text" href="https://www.springer.com/business/operations+research/book/978-0-387-77609-5">E. Alba, B. Dorronsoro, <i>Cellular Genetic Algorithms</i></a>, Springer-Verlag, <style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-387-77609-5" title="Special:BookSources/978-0-387-77609-5">978-0-387-77609-5</a>, 2008</li>
+<li>A.J. Neighbor, J.J. Durillo, F. Luna, B. Dorronsoro, E. Alba, MOCell: A New Cellular Genetic Algorithm for Multiobjective Optimization, International Journal of Intelligent Systems, 24:726-746, 2009</li>
+<li>E. Alba, B. Dorronsoro, F. Luna, A.J. Neighbor, P. Bouvry, L. Hogie, <a rel="nofollow" class="external text" href="http://www.lcc.uma.es/~eat/pdf/comcom07.pdf">A Cellular Multi-Objective Genetic Algorithm for Optimal Broadcasting Strategy in Metropolitan MANETs</a>, Computer Communications, 30(4):685-697, 2007</li>
+<li>E. Alba, B. Dorronsoro, <a rel="nofollow" class="external text" href="http://atarazanas.sci.uma.es/docs/articulos/16603096.pdf">Computing Nine New Best-So-Far Solutions for Capacitated VRP with a Cellular GA</a>, Information Processing Letters, Elsevier, 98(6):225-230, 30 June 2006</li>
+<li>M. Giacobini, M. Tomassini, A. Tettamanzi, E. Alba, <a rel="nofollow" class="external text" href="https://www.researchgate.net/profile/Andrea_Tettamanzi/publication/3418844_Selection_Intensity_in_Cellular_Evolutionary_Algorithms_for_Regular_Lattices/links/00463525c395463b1b000000/Selection-Intensity-in-Cellular-Evolutionary-Algorithms-for-Regular-Lattices.pdf">The Selection Intensity in Cellular Evolutionary Algorithms for Regular Lattices</a>, IEEE Transactions on Evolutionary Computation, IEEE Press, 9(5):489-505, 2005</li>
+<li>E. Alba, B. Dorronsoro, <a rel="nofollow" class="external text" href="http://atarazanas.sci.uma.es/docs/tesisuma/1661480x.pdf">The Exploration/Exploitation Tradeoff in Dynamic Cellular Genetic Algorithms</a>, IEEE Transactions on Evolutionary Computation, IEEE Press, 9(2)126-142, 2005</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://neo.lcc.uma.es/cEA-web/">The site on Cellular Evolutionary Algorithms</a></li>
+<li><a rel="nofollow" class="external text" href="http://neo.lcc.uma.es">NEO Research Group at University of Málaga, Spain</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Evolutionary_computation" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Evolutionary_computation" title="Template:Evolutionary computation"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Evolutionary_computation" title="Template talk:Evolutionary computation"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Evolutionary_computation&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Evolutionary_computation" style="font-size:114%;margin:0 4em"><a href="/wiki/Evolutionary_computation" title="Evolutionary computation">Evolutionary computation</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Main Topics</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Convergence_(evolutionary_computing)" title="Convergence (evolutionary computing)">Convergence (evolutionary computing)</a></li>
+<li><a href="/wiki/Evolutionary_algorithm" title="Evolutionary algorithm">Evolutionary algorithm</a></li>
+<li><a href="/wiki/Evolutionary_data_mining" title="Evolutionary data mining">Evolutionary data mining</a></li>
+<li><a href="/wiki/Evolutionary_multimodal_optimization" title="Evolutionary multimodal optimization">Evolutionary multimodal optimization</a></li>
+<li><a href="/wiki/Human-based_evolutionary_computation" title="Human-based evolutionary computation">Human-based evolutionary computation</a></li>
+<li><a href="/wiki/Interactive_evolutionary_computation" title="Interactive evolutionary computation">Interactive evolutionary computation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Algorithm" title="Algorithm">Algorithms</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Cellular evolutionary algorithm</a></li>
+<li><a href="/wiki/CMA-ES" title="CMA-ES">Covariance Matrix Adaptation Evolution Strategy (CMA-ES)</a></li>
+<li><a href="/wiki/Differential_evolution" title="Differential evolution">Differential evolution</a></li>
+<li><a href="/wiki/Evolutionary_programming" title="Evolutionary programming">Evolutionary programming</a></li>
+<li><a href="/wiki/Genetic_algorithm" title="Genetic algorithm">Genetic algorithm</a></li>
+<li><a href="/wiki/Genetic_programming" title="Genetic programming">Genetic programming</a></li>
+<li><a href="/wiki/Gene_expression_programming" title="Gene expression programming">Gene expression programming</a></li>
+<li><a href="/wiki/Evolution_strategy" title="Evolution strategy">Evolution strategy</a></li>
+<li><a href="/wiki/Natural_evolution_strategy" title="Natural evolution strategy">Natural evolution strategy</a></li>
+<li><a href="/wiki/Neuroevolution" title="Neuroevolution">Neuroevolution</a></li>
+<li><a href="/wiki/Learning_classifier_system" title="Learning classifier system">Learning classifier system</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related techniques</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Swarm_intelligence" title="Swarm intelligence">Swarm intelligence</a></li>
+<li><a href="/wiki/Ant_colony_optimization" class="mw-redirect" title="Ant colony optimization">Ant colony optimization</a></li>
+<li><a href="/wiki/Bees_algorithm" title="Bees algorithm">Bees algorithm</a></li>
+<li><a href="/wiki/Cuckoo_search" title="Cuckoo search">Cuckoo search</a></li>
+<li><a href="/wiki/Particle_swarm_optimization" title="Particle swarm optimization">Particle swarm optimization</a></li>
+<li><a href="/wiki/Bacterial_Colony_Optimization" class="mw-redirect" title="Bacterial Colony Optimization">Bacterial Colony Optimization</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Metaheuristic" title="Metaheuristic">Metaheuristic methods</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/w/index.php?title=Grey_Wolf_Optimizer&amp;action=edit&amp;redlink=1" class="new" title="Grey Wolf Optimizer (page does not exist)">Grey Wolf Optimizer</a></li>
+<li><a href="/wiki/Firefly_algorithm" title="Firefly algorithm">Firefly algorithm</a></li>
+<li><a href="/wiki/Harmony_search" class="mw-redirect" title="Harmony search">Harmony search</a></li>
+<li><a href="/wiki/Gaussian_adaptation" title="Gaussian adaptation">Gaussian adaptation</a></li>
+<li><a href="/wiki/Memetic_algorithm" title="Memetic algorithm">Memetic algorithm</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related topics</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Artificial_development" title="Artificial development">Artificial development</a></li>
+<li><a href="/wiki/Artificial_intelligence" title="Artificial intelligence">Artificial intelligence</a></li>
+<li><a href="/wiki/Artificial_life" title="Artificial life">Artificial life</a></li>
+<li><a href="/wiki/Digital_organism" title="Digital organism">Digital organism</a></li>
+<li><a href="/wiki/Evolutionary_robotics" title="Evolutionary robotics">Evolutionary robotics</a></li>
+<li><a href="/wiki/Fitness_function" title="Fitness function">Fitness function</a></li>
+<li><a href="/wiki/Fitness_landscape" title="Fitness landscape">Fitness landscape</a></li>
+<li><a href="/wiki/Fitness_approximation" title="Fitness approximation">Fitness approximation</a></li>
+<li><a href="/wiki/Genetic_operators" class="mw-redirect" title="Genetic operators">Genetic operators</a></li>
+<li><a href="/wiki/Interactive_evolutionary_computation" title="Interactive evolutionary computation">Interactive evolutionary computation</a></li>
+<li><a href="/wiki/No_free_lunch_in_search_and_optimization" title="No free lunch in search and optimization">No free lunch in search and optimization</a></li>
+<li><a href="/wiki/Machine_learning" title="Machine learning">Machine learning</a></li>
+<li><a href="/wiki/Mating_pool" title="Mating pool">Mating pool</a></li>
+<li><a href="/wiki/Program_synthesis" title="Program synthesis">Program synthesis</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Academic_journal" title="Academic journal">Journals</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Evolutionary_Computation_(journal)" title="Evolutionary Computation (journal)">Evolutionary Computation (journal)</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1227
+Cached time: 20200228045213
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.116 seconds
+Real time usage: 0.162 seconds
+Preprocessor visited node count: 393/1000000
+Post‐expand include size: 14148/2097152 bytes
+Template argument size: 654/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 2027/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.012/10.000 seconds
+Lua memory usage: 956 KB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  123.111      1 -total
+ 64.14%   78.959      1 Template:ISBN
+ 43.89%   54.031      1 Template:Catalog_lookup_link
+ 23.20%   28.559      1 Template:Reflist
+ 12.51%   15.403      1 Template:Evolutionary_computation
+  9.93%   12.230      1 Template:Navbox
+  9.69%   11.933      1 Template:Error-small
+  7.71%    9.494      1 Template:Small
+  5.71%    7.025      3 Template:Yesno-no
+  3.23%    3.978      3 Template:Yesno
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:33418313-0!canonical and timestamp 20200228045213 and revision id 913351702
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Cellular_evolutionary_algorithm&amp;oldid=913351702">https://en.wikipedia.org/w/index.php?title=Cellular_evolutionary_algorithm&amp;oldid=913351702</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Evolutionary_algorithms" title="Category:Evolutionary algorithms">Evolutionary algorithms</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Cellular+evolutionary+algorithm" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Cellular+evolutionary+algorithm" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Cellular_evolutionary_algorithm" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Cellular_evolutionary_algorithm" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Cellular_evolutionary_algorithm">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Cellular_evolutionary_algorithm" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Cellular_evolutionary_algorithm" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;oldid=913351702" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5058361" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Cellular_evolutionary_algorithm&amp;id=913351702&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cellular+evolutionary+algorithm">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Cellular+evolutionary+algorithm&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Cellular_evolutionary_algorithm&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5058361#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 31 August 2019, at 15:23<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Cellular_evolutionary_algorithm&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.116","walltime":"0.162","ppvisitednodes":{"value":393,"limit":1000000},"postexpandincludesize":{"value":14148,"limit":2097152},"templateargumentsize":{"value":654,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":2027,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  123.111      1 -total"," 64.14%   78.959      1 Template:ISBN"," 43.89%   54.031      1 Template:Catalog_lookup_link"," 23.20%   28.559      1 Template:Reflist"," 12.51%   15.403      1 Template:Evolutionary_computation","  9.93%   12.230      1 Template:Navbox","  9.69%   11.933      1 Template:Error-small","  7.71%    9.494      1 Template:Small","  5.71%    7.025      3 Template:Yesno-no","  3.23%    3.978      3 Template:Yesno"]},"scribunto":{"limitreport-timeusage":{"value":"0.012","limit":"10.000"},"limitreport-memusage":{"value":978915,"limit":52428800}},"cachereport":{"origin":"mw1227","timestamp":"20200228045213","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Cellular evolutionary algorithm","url":"https:\/\/en.wikipedia.org\/wiki\/Cellular_evolutionary_algorithm","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5058361","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5058361","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2011-10-15T14:27:06Z","dateModified":"2019-08-31T15:23:55Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/7\/76\/Evolution_of_several_cEAs.png"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":93,"wgHostname":"mw1405"});});</script></body></html>

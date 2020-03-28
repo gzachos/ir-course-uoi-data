@@ -1,0 +1,656 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>NuttX - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn@hDgpAAMMAAiRDtwgAAACS","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"NuttX","wgTitle":"NuttX","wgCurRevisionId":941249452,"wgRevisionId":941249452,"wgArticleId":37698148,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with a promotional tone from December 2017","All articles with a promotional tone","Official website different in Wikidata and Wikipedia","Real-time operating systems","Embedded operating systems","Free software operating systems","ARM operating systems","Software using the BSD license",
+"Microkernel-based operating systems","Microkernels"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"NuttX","wgRelevantArticleId":37698148,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q7070560","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready",
+"user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b0/NuttX_logo.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=NuttX&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=NuttX&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/NuttX"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-NuttX rootpage-NuttX skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">NuttX</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-Advert plainlinks metadata ambox ambox-content ambox-Advert" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>contains content that is written like <a href="/wiki/Wikipedia:What_Wikipedia_is_not#Wikipedia_is_not_a_soapbox_or_means_of_promotion" title="Wikipedia:What Wikipedia is not">an advertisement</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=NuttX&amp;action=edit">improve it</a> by removing <a href="/wiki/Wikipedia:Spam" title="Wikipedia:Spam">promotional content</a> and inappropriate <a href="/wiki/Wikipedia:External_links" title="Wikipedia:External links">external links</a>, and by adding encyclopedic content written from a <a href="/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>.</span>  <small class="date-container"><i>(<span class="date">December 2017</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="infobox vevent" style="width:22em"><caption class="summary">NuttX</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:NuttX_logo.png" class="image"><img alt="NuttX logo.png" src="//upload.wikimedia.org/wikipedia/commons/b/b0/NuttX_logo.png" decoding="async" width="250" height="250" data-file-width="160" data-file-height="160" /></a><div>NuttX logo</div></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer</a></th><td>Gregory Nutt</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Programming_language" title="Programming language">Written in</a></th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="/wiki/C%2B%2B" title="C++">C++</a>, <a href="/wiki/Assembly_language" title="Assembly language">assembly</a></td></tr><tr><th scope="row" style="white-space: nowrap;">OS family</th><td><a href="/wiki/Real-time_operating_system" title="Real-time operating system">Real-time operating systems</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Working state</th><td>Current</td></tr><tr><th scope="row" style="white-space: nowrap;">Source model</th><td><a href="/wiki/Open-source_software" title="Open-source software">Open source</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Initial release</th><td>2007<span class="noprint">&#59;&#32;13&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2007</span>)</span></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Latest release</a></th><td>8.2 / November&#160;16, 2019<span class="noprint">&#59;&#32;4 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2019-11-16</span>)</span> <sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></td></tr><tr><th scope="row" style="white-space: nowrap;">Marketing target</th><td><a href="/wiki/Embedded_system" title="Embedded system">Embedded systems</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Platforms</th><td><a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a>, <a href="/wiki/Atmel_AVR" class="mw-redirect" title="Atmel AVR">AVR</a>, <a href="/wiki/AVR32" title="AVR32">AVR32</a>, <a href="/wiki/HCS12" class="mw-redirect" title="HCS12">HCS12</a>, <a href="/wiki/LatticeMico32" title="LatticeMico32">LM32</a>, <a href="/wiki/MIPS_architecture" title="MIPS architecture">MIPS</a>, <a href="/wiki/RISC-V" title="RISC-V">RISC-V</a>, <a href="/wiki/SuperH" title="SuperH">SuperH</a>, <a href="/wiki/Tensilica" title="Tensilica">Xtensa XL6</a>, <a href="/wiki/Zilog_Z80" title="Zilog Z80">Z80</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">Kernel</a> type</th><td><a href="/wiki/Microkernel" title="Microkernel">Microkernel</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/BSD_licenses" title="BSD licenses">BSD</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Official website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://www.nuttx.org">www<wbr />.nuttx<wbr />.org</a></span></td></tr></tbody></table>
+<p><b>NuttX</b> is a <a href="/wiki/Real-time_operating_system" title="Real-time operating system">real-time operating system</a> (<a href="/wiki/RTOS" class="mw-redirect" title="RTOS">RTOS</a>) with an emphasis on <a href="/wiki/Technical_standard" title="Technical standard">technical standards</a> compliance and small size. Scalable from <a href="/wiki/8-bit" class="mw-redirect" title="8-bit">8-bit</a> to <a href="/wiki/32-bit" class="mw-redirect" title="32-bit">32-bit</a> <a href="/wiki/Microcontroller" title="Microcontroller">microcontroller</a> environments, the main governing standards in NuttX are from the <i>Portable Operating System Interface</i> (<a href="/wiki/POSIX" title="POSIX">POSIX</a>) and the <i><a href="/wiki/American_National_Standards_Institute" title="American National Standards Institute">American National Standards Institute</a></i> (ANSI). Further standard <a href="/wiki/Application_programming_interface" title="Application programming interface">application programming interfaces</a> (APIs) from <a href="/wiki/Unix" title="Unix">Unix</a> and other common RTOSes (such as <a href="/wiki/VxWorks" title="VxWorks">VxWorks</a>) are adopted for functions unavailable under these standards, or inappropriate for deeply embedded environments, such as a <a href="/wiki/Fork_(system_call)" title="Fork (system call)">fork</a>.
+</p><p>NuttX was first released in 2007 by Gregory Nutt as <a href="/wiki/Free_and_open-source_software" title="Free and open-source software">free and open-source software</a> under the permissive <a href="/wiki/BSD_licenses" title="BSD licenses">BSD license</a>. It is currently undergoing incubation at <a href="/wiki/The_Apache_Software_Foundation" title="The Apache Software Foundation">The Apache Software Foundation</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Implementation"><span class="tocnumber">1</span> <span class="toctext">Implementation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Key_features"><span class="tocnumber">2</span> <span class="toctext">Key features</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Supported_platforms"><span class="tocnumber">3</span> <span class="toctext">Supported platforms</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#File_system"><span class="tocnumber">4</span> <span class="toctext">File system</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Device_drivers"><span class="tocnumber">5</span> <span class="toctext">Device drivers</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#C/C++_library"><span class="tocnumber">6</span> <span class="toctext">C/C++ library</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Networking"><span class="tocnumber">7</span> <span class="toctext">Networking</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Flash_support"><span class="tocnumber">8</span> <span class="toctext">Flash support</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#USB_support"><span class="tocnumber">9</span> <span class="toctext">USB support</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Host"><span class="tocnumber">9.1</span> <span class="toctext">Host</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Device"><span class="tocnumber">9.2</span> <span class="toctext">Device</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Graphics_support"><span class="tocnumber">10</span> <span class="toctext">Graphics support</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Projects_using_it"><span class="tocnumber">11</span> <span class="toctext">Projects using it</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">12</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">13</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=1" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>NuttX is written almost exclusively in the programming language <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and uses <a href="/wiki/Kconfig" class="mw-redirect" title="Kconfig">Kconfig</a> to configure and generate GNU <a href="/wiki/Makefile" title="Makefile">makefiles</a> for the system. The program distribution combines the <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">kernel</a> and a substantial amount of <a href="/wiki/Middleware" title="Middleware">middleware</a> and code for board support and <a href="/wiki/Device_driver" title="Device driver">device drivers</a>. The kernel and much of the other code was written by the original author, Gregory Nutt. He maintains the <a href="/wiki/Source_code" title="Source code">source code</a> exclusively, and must approve all community contributions.
+</p>
+<h2><span class="mw-headline" id="Key_features">Key features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=2" title="Edit section: Key features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Standards compliant</li>
+<li>Core task management</li>
+<li>Modular design</li>
+<li>Fully <a href="/wiki/Preemption_(computing)" title="Preemption (computing)">preemptible</a></li>
+<li>Naturally scalable</li>
+<li>Highly configurable</li>
+<li>Easily extensible to new processor architectures, SoC architecture, or board architectures</li>
+<li>Scheduling: first in, first out (<a href="/wiki/FIFO_(computing_and_electronics)" title="FIFO (computing and electronics)">FIFO</a>) and <a href="/wiki/Round-robin_scheduling" title="Round-robin scheduling">round-robin</a> (RR)</li>
+<li><a href="/wiki/Real-time_data" title="Real-time data">Real-time</a>, deterministic, with support for priority inheritance</li>
+<li>Tickless operation</li>
+<li>POSIX/ANSI-like task controls, named <a href="/wiki/Message_queue" title="Message queue">message queues</a>, counting <a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">semaphores</a>, clocks/timers, signals, <a href="/wiki/POSIX_Threads" title="POSIX Threads">POSIX Threads</a> (pthreads), <a href="/wiki/Environment_variable" title="Environment variable">environment variables</a></li>
+<li>Multiple <a href="/wiki/File_system" title="File system">file systems</a></li>
+<li><a href="/wiki/VxWorks" title="VxWorks">VxWorks</a>-like task management and watchdog timers</li>
+<li><a href="/wiki/BSD" class="mw-redirect" title="BSD">BSD</a> socket interface</li>
+<li>Extensions to manage preemption</li>
+<li>Optional tasks with address environments (processes)</li>
+<li><a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">Symmetric multiprocessing</a> (SMP)</li>
+<li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Loadable kernel modules</a></li>
+<li>Memory configurations: (1) flat embedded build, (2) protected build with MPU, and (3) kernel build with MMU</li>
+<li>Memory allocators: (1) standard heap memory allocation, (2) granule allocator, (3) shared memory, and (4) dynamically sized, per-process heaps</li>
+<li>Thread local storage (TLS)</li>
+<li>Inheritable <i>controlling terminals</i>, <a href="/wiki/Pseudoterminal" title="Pseudoterminal">pseudoterminals</a> (PTY) and <a href="/wiki/Input/output" title="Input/output">input/output</a> (I/O) redirection</li>
+<li>On-demand paging</li>
+<li>System logging</li>
+<li>May be built either as an open, flat embedded RTOS or as a separately built, secure kernel with a system call gate interface</li>
+<li>Built-in, per-thread CPU load measurements</li>
+<li>Custom NuttX C <a href="/wiki/Library_(computing)" title="Library (computing)">library</a></li></ul>
+<h2><span class="mw-headline" id="Supported_platforms">Supported platforms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=3" title="Edit section: Supported platforms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a>
+<ul><li><a href="/wiki/ARM7" title="ARM7">ARM7</a>TDMI (TI TMS320 C6571, Calypso, MoxART, NXP LPC214x, LPC2378, STMicro STR71x)</li>
+<li><a href="/wiki/ARM9" title="ARM9">ARM9</a>20T (Freescale i.MX1)</li>
+<li><a href="/wiki/ARM9" title="ARM9">ARM9</a>26EJS (TI DM320, NXP LPC31xx)</li>
+<li><a href="/wiki/ARM_Cortex-A" title="ARM Cortex-A">ARM Cortex-A</a>5 (Atmel SAMA5D2, SAMA5D3, SAMA5D4)</li>
+<li><a href="/wiki/ARM_Cortex-A" title="ARM Cortex-A">ARM Cortex-A</a>8 (Allwinner A10)</li>
+<li><a href="/wiki/ARM_Cortex-A" title="ARM Cortex-A">ARM Cortex-A</a>9 (NXP/Freescale i.MX6)</li>
+<li><a href="/wiki/ARM_Cortex-R" title="ARM Cortex-R">ARM Cortex-R</a>4/R4F (TI TMS570, Samsung Artik)</li>
+<li><a href="/wiki/ARM_Cortex-M" title="ARM Cortex-M">ARM Cortex-M</a>0 (nuvoTon: NUC120, NXP: KL25Z, KL26Z, LPC11xx, Atmel: SAMD20/21, SAML21, ST Micro STM32 F0)</li>
+<li><a href="/wiki/ARM_Cortex-M" title="ARM Cortex-M">ARM Cortex-M</a>3 (<a href="/wiki/STMicroelectronics" title="STMicroelectronics">ST Micro</a> <a href="/wiki/STM32" title="STM32">STM32</a> F1/F2/L1, TI/Stellaris LM3S, NXP LPC17xx, Atmel SAM3U/3X, SiliconLabs EFM32)</li>
+<li><a href="/wiki/ARM_Cortex-M" title="ARM Cortex-M">ARM Cortex-M</a>4 (with/without floating point unit: ST Micro STM32 F3/F4/L4/L4+, TI/Stellaris LM4F/TM4C, NXP LPC43xx/LPC54xx, Freescale Kinetis K20/K28/K40/60/64/66, Atmel SAM4C/4E/4S/4L, Infineon XMC4xxx, Nordic NRF52xxx, Sony CXD5602/Spresense<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>)</li>
+<li><a href="/wiki/ARM_Cortex-M" title="ARM Cortex-M">ARM Cortex-M</a>7 (Atmel SAMV71/SAME70, ST Micro STM32 F7/H7, NXP i.MX RT)</li></ul></li>
+<li><a href="/wiki/Atmel_AVR" class="mw-redirect" title="Atmel AVR">Atmel AVR</a>
+<ul><li>Atmel 8-bit AVR (AT90USB, ATmega)</li>
+<li><a href="/wiki/AVR32" title="AVR32">AVR32</a></li></ul></li>
+<li>Freescale M68HCS12</li>
+<li>Intel
+<ul><li><a href="/wiki/X86" title="X86">80x86</a></li></ul></li>
+<li>MIPS
+<ul><li>MicroChip PIC32MX (MIPS32 24Kc)</li>
+<li>MicroChip PIC32MZ (MIPS32 M14k)</li></ul></li>
+<li>Misoc
+<ul><li>LM32 (Qemu)</li></ul></li>
+<li>OpenRISC
+<ul><li>mor1kx</li></ul></li>
+<li>Renesas/Hitachi
+<ul><li>Renesas/Hitachi <a href="/wiki/SuperH" title="SuperH">SuperH</a></li>
+<li>Renesas M16C/26</li></ul></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a>
+<ul><li>NEXT RISC-V NR5Mxx (RV32IM)</li>
+<li>GreenWaves GAP8 (RV32IM)</li></ul></li>
+<li>Xtensa LX6
+<ul><li>Expressif ESP32</li></ul></li>
+<li><a href="/wiki/Zilog" title="Zilog">Zilog</a>
+<ul><li>Zilog Z16F</li>
+<li><a href="/wiki/Zilog_eZ80" title="Zilog eZ80">Zilog eZ80</a> Acclaim!</li>
+<li><a href="/wiki/Z8_Encore!" title="Z8 Encore!">Zilog Z8Encore!</a></li>
+<li><a href="/wiki/Zilog_Z80" title="Zilog Z80">Zilog Z80</a></li></ul></li></ul>
+<h2><span class="mw-headline" id="File_system">File system</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=4" title="Edit section: File system">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Tiny in-memory, root pseudo-file-system</li>
+<li><a href="/wiki/Virtual_file_system" title="Virtual file system">Virtual file system</a> (VFS)</li>
+<li>Mountable volumes. Bind mountpoint, file system, and block device driver</li>
+<li>Generic system logging (SYSLOG) support</li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">File Allocation Table</a> (FAT) 12/16/32 file system support</li>
+<li><a href="/wiki/Network_File_System" title="Network File System">Network File System</a> (NFS) client, supports NFS, version 3, UDP</li>
+<li>NXFFS: a tiny wear-leveling <a href="/wiki/Flash_memory" title="Flash memory">flash memory</a> file system</li>
+<li>SMART: flash file system from Ken Pettit</li>
+<li>Generic driver for SPI-based cards: <a href="/wiki/MultiMediaCard" title="MultiMediaCard">MultiMediaCard</a> (MMC) and <a href="/wiki/SD_card" title="SD card">Secure Digital</a> (SD/SDHC)</li>
+<li><a href="/wiki/Romfs" title="Romfs">Romfs</a> file system support</li>
+<li>BINFS pseudo-file system support</li>
+<li>HOSTFS file system support (simulation only)</li>
+<li>Union file system: supports combining and overlaying file systems</li>
+<li>PROCFS (/proc) pseudo-file system</li>
+<li>A Binary Loader with support for the following formats:
+<ul><li>Separately linked <a href="/wiki/Executable_and_Linkable_Format" title="Executable and Linkable Format">Executable and Linkable Format</a> (ELF) modules</li>
+<li>Separately linked modules for NXFLAT: a binary format that can be XIP from a file system</li></ul></li>
+<li>PATH variable support</li>
+<li>File transfers via TFTP and FTP (get and put), HTML (wget), and Zmodem (sz and rz)</li>
+<li>Intel HEX conversions</li></ul>
+<h2><span class="mw-headline" id="Device_drivers">Device drivers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=5" title="Edit section: Device drivers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>VFS supports character and block drivers</li>
+<li><a href="/wiki/Asynchronous_I/O" title="Asynchronous I/O">Asynchronous I/O</a> (AIO)</li>
+<li><a href="/wiki/Computer_network" title="Computer network">Network</a>, <a href="/wiki/USB" title="USB">USB</a> (host), USB (device), <a href="/wiki/Serial_cable" title="Serial cable">serial</a>, I2C, I2S, NAND, Controller Area Network (<a href="/wiki/CAN_bus" title="CAN bus">CAN bus</a>), ADC, DAC, PWM, Quadrature Encoder, and watchdog timer driver architectures</li>
+<li><a href="/wiki/RAM_drive" title="RAM drive">RAM drive</a> or disk, pipes, FIFO, /dev/null, /dev/zero drivers</li>
+<li>Generic driver for SPI-based or SDIO-based MMC/SD/SDH cards</li>
+<li>Power management subsystem</li>
+<li><a href="/wiki/Modbus" title="Modbus">Modbus</a> support provided by built-in FreeModBus version 1.5.0</li>
+<li>Graphics devices: <a href="/wiki/Framebuffer" title="Framebuffer">framebuffer</a> drivers, graphic and segment LCD drivers</li>
+<li>Audio subsystem: <a href="/wiki/Codec" title="Codec">Codecs</a>, audio input and output drivers. Command line and graphic media player applications</li>
+<li>Cryptographic subsystem</li>
+<li>Input devices: touchscreen, USB keyboard, USB mouse, GPIO-based buttons and keypads</li>
+<li>Memory technology devices</li>
+<li>Analog devices: support for <a href="/wiki/Analog-to-digital_converter" title="Analog-to-digital converter">analog-to-digital converter</a> (ADC), <a href="/wiki/Digital-to-analog_converter" title="Digital-to-analog converter">digital-to-analog converter</a> (DAC), multiplexers, and amplifiers</li>
+<li>System logging devices</li>
+<li>Porting guide<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li></ul>
+<h2><span id="C.2FC.2B.2B_library"></span><span class="mw-headline" id="C/C++_library">C/C++ library</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=6" title="Edit section: C/C++ library">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Standard C <a href="/wiki/Library_(computing)" title="Library (computing)">library</a> fully integrated into the OS</li>
+<li>Includes floating point support via a Standard Math Library</li>
+<li>Add-on uClibc++<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> module provides Standard <a href="/wiki/C%2B%2B" title="C++">C++</a> Library supporting <a href="/wiki/Input/output_(C%2B%2B)" title="Input/output (C++)">input/output (C++)</a> (iostreams), <a href="/wiki/String_(computer_science)" title="String (computer science)">strings</a>, <a href="/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL), <a href="/wiki/Run-time_type_information" title="Run-time type information">run-time type information</a> (RTTI), <a href="/wiki/Exception_handling" title="Exception handling">exceptions</a>, etc. (<a href="/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">LGPL</a>)</li></ul>
+<h2><span class="mw-headline" id="Networking">Networking</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=7" title="Edit section: Networking">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The network stack included with NuttX is derived from <a href="/wiki/UIP_(micro_IP)" title="UIP (micro IP)">uIP (micro IP)</a>, originally developed by <a href="/wiki/Adam_Dunkels" title="Adam Dunkels">Adam Dunkels</a>.
+</p>
+<ul><li>Multiple network interface support; multiple network link layer support</li>
+<li>IPv4, IPv6,<a href="/wiki/Internet_protocol_suite" title="Internet protocol suite">Internet protocol suite</a> (TCP/IP), <a href="/wiki/User_Datagram_Protocol" title="User Datagram Protocol">User Datagram Protocol</a> (UDP), <a href="/wiki/Internet_Control_Message_Protocol" title="Internet Control Message Protocol">Internet Control Message Protocol</a> (ICMP), <a href="/wiki/Internet_Group_Management_Protocol" title="Internet Group Management Protocol">Internet Group Management Protocol</a> (IGMP) version 2 (client) stacks</li>
+<li>Stream and datagram sockets</li>
+<li>Raw socket and local, Unix domain socket support</li>
+<li>DNS name resolution, NetDB</li>
+<li>IEEE 802.11 (WiFi) FullMac</li>
+<li>IEEE 802.15.4 MAC + 6loWPAN</li>
+<li><a href="/wiki/Serial_Line_Internet_Protocol" title="Serial Line Internet Protocol">Serial Line Internet Protocol</a> (SLIP), TUN/PPP, local loopback devices</li>
+<li>A cJSON<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> port</li>
+<li>Small size (based on uIP)</li>
+<li>BSD compatible socket layer</li>
+<li>Networking utilities (<a href="/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">Dynamic Host Configuration Protocol</a> (DHCP) server and client, <a href="/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">Simple Mail Transfer Protocol</a> (SMTP) client, <a href="/wiki/Telnet" title="Telnet">Telnet</a> client, <a href="/wiki/File_Transfer_Protocol" title="File Transfer Protocol">File Transfer Protocol</a> (FTP) server and client, <a href="/wiki/Trivial_File_Transfer_Protocol" title="Trivial File Transfer Protocol">Trivial File Transfer Protocol</a> (TFTP) client, <a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol</a> (HTTP) server and client, <a href="/wiki/Network_Time_Protocol" title="Network Time Protocol">Network Time Protocol</a> (NTP) client); inheritable <a href="/wiki/Telnet" title="Telnet">Telnet</a> sessions (as <i>controlling terminal</i>). VNC server</li>
+<li><a href="/wiki/Network_File_System" title="Network File System">Network File System</a> (NFS) client, supports NFS, version 3, UDP</li>
+<li>ICMPv6 autonomous auto-configuration</li>
+<li>A NuttX port of Jef Poskanzer's <a href="/wiki/Thttpd" title="Thttpd">thttpd</a> HTTP server integrated with NXFLAT to provide embedded CGI</li>
+<li>PHY link status management</li>
+<li>UDP network discovery, XML RPC server</li>
+<li>XML RPC server</li>
+<li>Support for network modules (such as the TI CC3000 WLAN module)</li></ul>
+<h2><span class="mw-headline" id="Flash_support">Flash support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=8" title="Edit section: Flash support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Memory_Technology_Device" title="Memory Technology Device">Memory Technology Device</a> (MTD) inspired interface for MTD devices</li>
+<li><a href="/wiki/Flash_file_system#Translation_layers" title="Flash file system">FTL</a>: simple flash Translation Layer support file systems on Flash</li>
+<li>NAND Support</li>
+<li>NXFFS: a wear-leveling <a href="/wiki/Flash_memory" title="Flash memory">flash memory</a> file system</li>
+<li>Support for <a href="/wiki/Serial_Peripheral_Interface" title="Serial Peripheral Interface">Serial Peripheral Interface</a> (SPI) bus based flash devices</li></ul>
+<h2><span class="mw-headline" id="USB_support">USB support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=9" title="Edit section: USB support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Host">Host</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=10" title="Edit section: Host">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>USB host architecture for USB host controller drivers and device-dependent USB class drivers.</li>
+<li>USB host controller drivers available for the Atmel SAMA5Dx, NXP LPC17xx, LPC31xx, and STmicro STM32.</li>
+<li>Device-dependent USB class drivers available for USB mass storage and HID keyboard.</li>
+<li>Seamless support for USB hubs.</li></ul>
+<h3><span class="mw-headline" id="Device">Device</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=11" title="Edit section: Device">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Gadget-like architecture for USB device controller drivers and device-dependent USB class drivers</li>
+<li>USB device controller drivers available for the PIC32, Atmel AVR, SAM3, SAM4, and SAMA5Dx, NXP LPC17xx, LPC214x, LPC313x, and LPC43xx, Silicon Laboraties EFM32, STMicro STM32 F1, F2, F3, and F4, and TI DM320.</li>
+<li>Device-dependent USB class drivers available for USB serial and for USB mass storage</li>
+<li>Built-in USB trace functionality for USB debug</li></ul>
+<h2><span class="mw-headline" id="Graphics_support">Graphics support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=12" title="Edit section: Graphics support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Framebuffer" title="Framebuffer">Framebuffer</a> drivers</li>
+<li><a href="/wiki/Liquid-crystal_display" title="Liquid-crystal display">Liquid-crystal display</a> (LCD) drivers for both parallel and SPI LCDs and organic light-emitting diode (<a href="/wiki/OLED" title="OLED">OLED</a>)</li>
+<li>Segment LCD drivers</li>
+<li>VNC Server</li>
+<li>NX Graphics Subsystem: A graphics library, windowing system, and font support that works with either framebuffer or LCD drivers</li>
+<li>NuttX Widgets:<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> A <a href="/wiki/Graphical_user_interface" title="Graphical user interface">graphical user interface</a> (GUI) written in conservative <a href="/wiki/C%2B%2B" title="C++">C++</a> that integrates with NX graphics</li>
+<li>NuttX <a href="/wiki/Window_manager" title="Window manager">window manager</a>:<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> tiny, based on the NX graphics subsystem and NuttX widgets</li></ul>
+<h2><span class="mw-headline" id="Projects_using_it">Projects using it</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=13" title="Edit section: Projects using it">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Thingsee <a href="/wiki/Internet_of_things" title="Internet of things">Internet of things</a> (IoT) development device.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup></li>
+<li><a href="/wiki/PX4_autopilot" title="PX4 autopilot">PX4 autopilot</a> uses NuttX to control a variety of autonomous platforms.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup></li>
+<li>Biffer Board supports many RTOSs including NuttX.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup></li>
+<li><a href="/wiki/MP3" title="MP3">MP3</a> player implemented with NuttX.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup></li>
+<li><a href="/wiki/OsmocomBB" title="OsmocomBB">OsmocomBB</a> uses NuttX to develop an operating system for cell phones.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup></li>
+<li>A homebrew steer-by-wire system implemented using NuttX.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup></li>
+<li>Video Performance Measurement Device.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup></li>
+<li>Low Power Embedded Software Optimization for the NuttX RTOS.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup></li>
+<li>Motorola Moto Z.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup></li>
+<li><a href="/wiki/Sony" title="Sony">Sony</a> uses NuttX in their audio processors.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup></li>
+<li>Samsung announces TizenRT based on NuttX RTOS.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://raw.githubusercontent.com/apache/incubator-nuttx/master/ReleaseNotes">"NuttX-8.2 Released"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2020-02-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=NuttX-8.2+Released&amp;rft_id=https%3A%2F%2Fraw.githubusercontent.com%2Fapache%2Fincubator-nuttx%2Fmaster%2FReleaseNotes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://developer.sony.com/develop/spresense/">"Spresense combines multi-core and power efficiency"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">September 5,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Spresense+combines+multi-core+and+power+efficiency&amp;rft_id=https%3A%2F%2Fdeveloper.sony.com%2Fdevelop%2Fspresense%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://nuttx.org/doku.php?id=documentation:portingguide.">"Porting Guide"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Porting+Guide&amp;rft_id=http%3A%2F%2Fnuttx.org%2Fdoku.php%3Fid%3Ddocumentation%3Aportingguide.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://cxx.uclibc.org">"uClibc++"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=uClibc%2B%2B&amp;rft_id=http%3A%2F%2Fcxx.uclibc.org&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://sourceforge.net/projects/cjson/">"cJSON"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=cJSON&amp;rft_id=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fcjson%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://nuttx.org/doku.php?id=wiki:graphics:nxwidgets">"NuttX Widgets"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=NuttX+Widgets&amp;rft_id=http%3A%2F%2Fnuttx.org%2Fdoku.php%3Fid%3Dwiki%3Agraphics%3Anxwidgets&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://nuttx.org/doku.php?id=wiki:graphics:nxwm">"NxWM"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=NxWM&amp;rft_id=http%3A%2F%2Fnuttx.org%2Fdoku.php%3Fid%3Dwiki%3Agraphics%3Anxwm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.thingsee.com/">"Thingsee"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 July</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Thingsee&amp;rft_id=http%3A%2F%2Fwww.thingsee.com%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://dev.px4.io/en/concept/architecture.html">"Autopilot PX4"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">3 May</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Autopilot+PX4&amp;rft_id=https%3A%2F%2Fdev.px4.io%2Fen%2Fconcept%2Farchitecture.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://sites.google.com/site/bifferboard/Home/rtos">"Bifferboard"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bifferboard&amp;rft_id=https%3A%2F%2Fsites.google.com%2Fsite%2Fbifferboard%2FHome%2Frtos&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=A39rsIf07AA">"Nuttx playing MP3 in Detron Board"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Nuttx+playing+MP3+in+Detron+Board&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DA39rsIf07AA&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://bb.osmocom.org/trac/wiki/nuttx-bb">"OsmocomBB"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=OsmocomBB&amp;rft_id=http%3A%2F%2Fbb.osmocom.org%2Ftrac%2Fwiki%2Fnuttx-bb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=z_-RAFdQd0s">"A Homebrew Steer-by-Wire System"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Homebrew+Steer-by-Wire+System&amp;rft_id=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dz_-RAFdQd0s&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dspace.cc.tut.fi/dpub/bitstream/handle/123456789/22051/Aimonen.pdf">"Design of an Embedded System for Video Performance Measurements. Petteri Aimonen's Master Thesis"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">22 July</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Design+of+an+Embedded+System+for+Video+Performance+Measurements.+Petteri+Aimonen%27s+Master+Thesis&amp;rft_id=http%3A%2F%2Fdspace.cc.tut.fi%2Fdpub%2Fbitstream%2Fhandle%2F123456789%2F22051%2FAimonen.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://repositoriotec.tec.ac.cr/bitstream/handle/2238/3051/FinalReport.pdf">"Low Power Embedded Software Optimization for the NuttX RTOS. Diego Sánchez López's Monograph of Electric Engineering Graduation"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">12 July</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Low+Power+Embedded+Software+Optimization+for+the+NuttX+RTOS.+Diego+S%C3%A1nchez+L%C3%B3pez%27s+Monograph+of+Electric+Engineering+Graduation&amp;rft_id=http%3A%2F%2Frepositoriotec.tec.ac.cr%2Fbitstream%2Fhandle%2F2238%2F3051%2FFinalReport.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://developer.motorola.com/explore/firmware">"Moto Mods Firmware: Overview"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 December</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Moto+Mods+Firmware%3A+Overview&amp;rft_id=https%3A%2F%2Fdeveloper.motorola.com%2Fexplore%2Ffirmware&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://hackerboards.com/modular-moto-z-android-phone-supports-diy-and-rpi-hat-add-ons/">"Modular Moto Z Android phone supports DIY and RPi HAT add-ons"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 August</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Modular+Moto+Z+Android+phone+supports+DIY+and+RPi+HAT+add-ons&amp;rft_id=http%3A%2F%2Fhackerboards.com%2Fmodular-moto-z-android-phone-supports-diy-and-rpi-hat-add-ons%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/save/_embed/http://events.linuxfoundation.org/sites/events/files/slides/DevelopingAudioProductsWithCortexM3NuttXC%2B%2B11_LFELC_OpenIoT_ishikawa_20161209_0.pdf">"Developing Audio Products with Cortex-M3/NuttX/C++11"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">20 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Developing+Audio+Products+with+Cortex-M3%2FNuttX%2FC%2B%2B11&amp;rft_id=https%3A%2F%2Fweb.archive.org%2Fsave%2F_embed%2Fhttp%3A%2F%2Fevents.linuxfoundation.org%2Fsites%2Fevents%2Ffiles%2Fslides%2FDevelopingAudioProductsWithCortexM3NuttXC%252B%252B11_LFELC_OpenIoT_ishikawa_20161209_0.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wiki.tizen.org/wiki/Tizen_RT">"Tizen RT"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">21 February</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Tizen+RT&amp;rft_id=https%3A%2F%2Fwiki.tizen.org%2Fwiki%2FTizen_RT&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANuttX" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=NuttX&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.nuttx.org">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://lists.apache.org/list.html?dev@nuttx.apache.org">Official NuttX user group</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.linuxjournal.com/article/10785#mpart4">Linux Journal mentioned NuttX</a> This citation bring NuttX attention to my Linux developers on 2010-09-01</li>
+<li><a rel="nofollow" class="external text" href="http://www.nodesignlab.net/weio/compiling-nuttx-nsh-for-micropendousx/">Compiling NuttX to micropendousX open hardware board</a></li>
+<li><a rel="nofollow" class="external text" href="http://dangerousprototypes.com/2011/10/09/nuttx-rtos/">Dangerous Prototypes post about NuttX</a> Dangerous Prototypes is creator of famous <a href="/wiki/Bus_Pirate" title="Bus Pirate">Bus Pirate</a> board sniffer.</li>
+<li><a rel="nofollow" class="external text" href="http://forum.osdev.org/viewtopic.php?f=2&amp;t=23307">Port of NuttX to x86</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Real-time_operating_systems_(RTOS)" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Real-time_operating_systems" title="Template:Real-time operating systems"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Real-time_operating_systems" title="Template talk:Real-time operating systems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Real-time_operating_systems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Real-time_operating_systems_(RTOS)" style="font-size:114%;margin:0 4em"><a href="/wiki/Real-time_operating_system" title="Real-time operating system">Real-time operating systems</a> (RTOS)</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Comparison_of_real-time_operating_systems">
+<ul><li><a href="/wiki/Comparison_of_real-time_operating_systems" title="Comparison of real-time operating systems">Comparison of real-time operating systems</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Open-source_model" title="Open-source model">Open-source</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/BeRTOS" title="BeRTOS">BeRTOS</a></li>
+<li><a href="/wiki/ChibiOS/RT" title="ChibiOS/RT">ChibiOS/RT</a></li>
+<li><a href="/wiki/Contiki" title="Contiki">Contiki</a></li>
+<li><a href="/wiki/ECos" title="ECos">eCos</a></li>
+<li><a href="/wiki/ERIKA_Enterprise" title="ERIKA Enterprise">ERIKA Enterprise</a></li>
+<li><a href="/wiki/FreeRTOS" title="FreeRTOS">FreeRTOS</a></li>
+<li><a href="/wiki/Google_Fuchsia" title="Google Fuchsia">Fuchsia</a></li>
+<li><a href="/wiki/FunkOS" title="FunkOS">FunkOS</a></li>
+<li><a href="/wiki/Apache_Mynewt" title="Apache Mynewt">Mynewt</a></li>
+<li><a href="/wiki/Nano-RK" title="Nano-RK">Nano-RK</a></li>
+<li><a class="mw-selflink selflink">NuttX</a></li>
+<li><a href="/wiki/RIOT_(operating_system)" title="RIOT (operating system)">RIOT</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/RTEMS" title="RTEMS">RTEMS</a></li>
+<li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RT-Thread" title="RT-Thread">RT-Thread</a></li>
+<li><a href="/wiki/SeL4" class="mw-redirect" title="SeL4">seL4</a></li>
+<li><a href="/wiki/TI-RTOS" title="TI-RTOS">TI-RTOS</a></li>
+<li><a href="/wiki/TRON_project" title="TRON project">TRON</a></li>
+<li><a href="/wiki/Wombat_OS" title="Wombat OS">Wombat OS</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Zephyr_(operating_system)" title="Zephyr (operating system)">Zephyr</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Proprietary_software" title="Proprietary software">Proprietary</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/4690_Operating_System" title="4690 Operating System">4690 OS</a></li>
+<li><a href="/wiki/DioneOS" title="DioneOS">DioneOS</a></li>
+<li><a href="/wiki/EmbOS" class="mw-redirect" title="EmbOS">embOS</a></li>
+<li><a href="/wiki/Integrity_(operating_system)" title="Integrity (operating system)">Integrity</a></li>
+<li><a href="/wiki/Junos_OS" title="Junos OS">Junos OS</a></li>
+<li><a href="/wiki/LynxOS" title="LynxOS">LynxOS</a></li>
+<li><a href="/wiki/Micro-Controller_Operating_Systems" title="Micro-Controller Operating Systems">µC/OS-II</a></li>
+<li><a href="/wiki/MQX" title="MQX">MQX</a></li>
+<li><a href="/wiki/Nucleus_RTOS" title="Nucleus RTOS">Nucleus RTOS</a></li>
+<li><a href="/wiki/OpenComRTOS" title="OpenComRTOS">OpenComRTOS</a></li>
+<li><a href="/wiki/Operating_System_Embedded" title="Operating System Embedded">OSE</a></li>
+<li><a href="/wiki/OS-9" title="OS-9">OS-9</a></li>
+<li><a href="/wiki/OS2000" title="OS2000">OS2000</a></li>
+<li><a href="/wiki/PikeOS" title="PikeOS">PikeOS</a></li>
+<li><a href="/wiki/QNX" title="QNX">QNX</a></li>
+<li><a href="/wiki/REAL/32" class="mw-redirect" title="REAL/32">REAL/32</a></li>
+<li><a href="/wiki/REX_OS" title="REX OS">REX OS</a></li>
+<li><a href="/wiki/ScreenOS" title="ScreenOS">ScreenOS</a></li>
+<li><a href="/wiki/ThreadX" title="ThreadX">ThreadX</a></li>
+<li><a href="/wiki/Transaction_Processing_Facility" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="/wiki/Versatile_Real-Time_Executive" title="Versatile Real-Time Executive">VRTX</a></li>
+<li><a href="/wiki/VxWorks" title="VxWorks">VxWorks</a></li>
+<li><a href="/wiki/Windows_Embedded_Compact" title="Windows Embedded Compact">Windows Embedded Compact</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Historic</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/4680_OS" class="mw-redirect" title="4680 OS">4680 OS</a></li>
+<li><a href="/wiki/Concurrent_DOS" class="mw-redirect" title="Concurrent DOS">Concurrent DOS</a></li>
+<li><a href="/wiki/DNIX" title="DNIX">DNIX</a></li>
+<li><a href="/wiki/DSOS" title="DSOS">DSOS</a></li>
+<li><a href="/wiki/EROS_(microkernel)" title="EROS (microkernel)">EROS</a></li>
+<li><a href="/wiki/FlexOS" title="FlexOS">FlexOS</a></li>
+<li><a href="/wiki/Multi-Environment_Real-Time" title="Multi-Environment Real-Time">MERT – UNIX-RT</a></li>
+<li><a href="/wiki/Multiuser_DOS" title="Multiuser DOS">Multiuser DOS</a></li>
+<li><a href="/wiki/PSOS_(real-time_operating_system)" title="PSOS (real-time operating system)">pSOS</a></li>
+<li><a href="/wiki/RMX_(operating_system)" title="RMX (operating system)">RMX</a></li>
+<li><a href="/wiki/RSX-11" title="RSX-11">RSX-11</a></li>
+<li><a href="/wiki/RT-11" title="RT-11">RT-11</a></li>
+<li><a href="/wiki/Sintran_III" title="Sintran III">Sintran III</a></li>
+<li><a href="/wiki/Symbian" title="Symbian">Symbian</a></li>
+<li><a href="/wiki/THEOS" title="THEOS">THEOS</a></li>
+<li><a href="/wiki/UNOS_(operating_system)" title="UNOS (operating system)">UNOS</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><a href="/wiki/Category:Real-time_operating_systems" title="Category:Real-time operating systems">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Microkernels-nanokernels" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Microkernel" title="Template:Microkernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Microkernel" title="Template talk:Microkernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Microkernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Microkernels-nanokernels" style="font-size:114%;margin:0 4em"><a href="/wiki/Microkernel" title="Microkernel">Microkernels</a>-<a href="/wiki/Microkernel#Nanokernel" title="Microkernel">nanokernels</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">Kernels</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Adaptive_Domain_Environment_for_Operating_Systems" title="Adaptive Domain Environment for Operating Systems">ADEOS</a></li>
+<li><a href="/wiki/Symbian#Symbian_kernel" title="Symbian">EPOC</a>
+<ul><li><a href="/wiki/EKA1" title="EKA1">EKA1</a></li>
+<li><a href="/wiki/EKA2" title="EKA2">EKA2</a></li></ul></li>
+<li><a href="/wiki/Eumel" title="Eumel">Eumel</a></li>
+<li><a href="/wiki/Exec_(Amiga)" title="Exec (Amiga)">Exec</a>
+<ul><li><a href="/wiki/Exec_(Amiga)#ExecSG" title="Exec (Amiga)">ExecSG</a></li></ul></li>
+<li><a href="/wiki/EROS_(microkernel)" title="EROS (microkernel)">EROS</a></li>
+<li><a href="/wiki/K42" title="K42">K42</a></li>
+<li><a href="/wiki/L3_microkernel" class="mw-redirect" title="L3 microkernel">L3</a></li>
+<li><a href="/wiki/L4_microkernel_family" title="L4 microkernel family">L4</a></li>
+<li>Little Kernel</li>
+<li><a href="/wiki/Mac_OS_nanokernel" title="Mac OS nanokernel">Mac OS nanokernel</a></li>
+<li><a href="/wiki/Mach_(kernel)" title="Mach (kernel)">Mach</a>
+<ul><li><a href="/wiki/GNU_Mach" title="GNU Mach">GNU Mach</a></li></ul></li>
+<li><a href="/wiki/MicroEmpix" title="MicroEmpix">MicroEmpix</a></li>
+<li><a href="/wiki/Green_Hills_Software#Real-time_operating_systems" title="Green Hills Software">µ-velOSity</a></li>
+<li><a href="/wiki/Spring_(operating_system)#The_nucleus" title="Spring (operating system)">nucleus</a></li>
+<li><a href="/wiki/NuKernel" class="mw-redirect" title="NuKernel">NuKernel</a></li>
+<li>Off++</li>
+<li><a href="/wiki/Taligent#Pink_system" title="Taligent">Opus</a></li>
+<li><a href="/wiki/PowerUP_(accelerator)#PowerUP_software" title="PowerUP (accelerator)">PowerUP</a></li>
+<li><a href="/wiki/Quark_(kernel)" title="Quark (kernel)">Quark</a></li>
+<li><a href="/wiki/TI-RTOS#RTOS_kernel_overview" title="TI-RTOS">TI-RTOS kernel</a></li>
+<li><a href="/wiki/Vanguard_(microkernel)" title="Vanguard (microkernel)">Vanguard</a></li>
+<li><a href="/wiki/WarpOS" title="WarpOS">WarpOS</a></li>
+<li>Zircon</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Operating_system" title="Operating system">Operating<br />systems</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AmigaOS" title="AmigaOS">AmigaOS</a></li>
+<li><a href="/wiki/Amoeba_(operating_system)" title="Amoeba (operating system)">Amoeba</a></li>
+<li><a href="/wiki/AROS_Research_Operating_System" title="AROS Research Operating System">AROS</a>
+<ul><li><a href="/wiki/AROS_Research_Operating_System#AspireOS" title="AROS Research Operating System">AspireOS</a></li>
+<li><a href="/wiki/AROS_Research_Operating_System#Broadway" title="AROS Research Operating System">Broadway</a></li>
+<li><a href="/wiki/AROS_Research_Operating_System#Icaros_Desktop" title="AROS Research Operating System">Icaros Desktop</a></li></ul></li>
+<li><a href="/wiki/ARX_(operating_system)" title="ARX (operating system)">ARX</a></li>
+<li><a href="/wiki/BeRTOS" title="BeRTOS">BeRTOS</a></li>
+<li><a href="/wiki/ChibiOS/RT" title="ChibiOS/RT">ChibiOS/RT</a></li>
+<li><a href="/wiki/ChorusOS" title="ChorusOS">ChorusOS</a></li>
+<li><a href="/wiki/Copland_(operating_system)" title="Copland (operating system)">Copland</a></li>
+<li><a href="/wiki/Cosmos_(operating_system)" title="Cosmos (operating system)">Cosmos</a></li>
+<li><a href="/wiki/EROS_(microkernel)" title="EROS (microkernel)">EROS</a></li>
+<li><a href="/wiki/FreeRTOS" title="FreeRTOS">FreeRTOS</a></li>
+<li><a href="/wiki/Google_Fuchsia" title="Google Fuchsia">Fuchsia</a></li>
+<li><a href="/wiki/Genode" title="Genode">Genode</a></li>
+<li><a href="/wiki/GNOSIS" title="GNOSIS">GNOSIS</a></li>
+<li><a href="/wiki/GNU_Hurd" title="GNU Hurd">GNU Hurd</a></li>
+<li><a href="/wiki/HelenOS" title="HelenOS">HelenOS</a></li>
+<li><a href="/wiki/Hydra_(operating_system)" title="Hydra (operating system)">Hydra</a></li>
+<li><a href="/wiki/Integrity_(operating_system)" title="Integrity (operating system)">Integrity</a></li>
+<li><a href="/wiki/JX_(operating_system)" title="JX (operating system)">JX</a></li>
+<li><a href="/wiki/JavaOS" title="JavaOS">JavaOS</a></li>
+<li><a href="/wiki/KeyKOS" title="KeyKOS">KeyKOS</a></li>
+<li><a href="/wiki/Lites" title="Lites">Lites</a></li>
+<li><a href="/wiki/Mac_OS_8#Mac_OS_8.6" title="Mac OS 8">Classic Mac OS</a> (<a href="/wiki/PowerPC" title="PowerPC">PowerPC</a> kernel)</li>
+<li><a href="/wiki/MachTen" title="MachTen">MachTen</a></li>
+<li><a href="/wiki/MacMach" title="MacMach">MacMach</a></li>
+<li><a href="/wiki/Meiko_Scientific#MeikOS" title="Meiko Scientific">MeikOS</a></li>
+<li><a href="/wiki/Multi-Environment_Real-Time" title="Multi-Environment Real-Time">MERT</a></li>
+<li><a href="/wiki/Micro-Controller_Operating_Systems" title="Micro-Controller Operating Systems">µC/OS</a></li>
+<li><a href="/wiki/Midori_(operating_system)" title="Midori (operating system)">Midori</a></li>
+<li><a href="/wiki/MINIX" title="MINIX">MINIX</a>
+<ul><li><a href="/wiki/Minix-vmd" title="Minix-vmd">Minix-vmd</a></li>
+<li><a href="/wiki/MINIX_3" title="MINIX 3">MINIX 3</a></li></ul></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/MorphOS" title="MorphOS">MorphOS</a></li>
+<li><a href="/wiki/MQX" title="MQX">MQX</a></li>
+<li><a href="/wiki/NLTSS" title="NLTSS">NLTSS</a></li>
+<li><a href="/wiki/Nucleus_RTOS" title="Nucleus RTOS">Nucleus RTOS</a></li>
+<li><a class="mw-selflink selflink">NuttX</a></li>
+<li><a href="/wiki/OS2000" title="OS2000">OS2000</a></li>
+<li><a href="/wiki/Operating_System_Embedded" title="Operating System Embedded">OSE</a></li>
+<li><a href="/wiki/Phantom_OS" title="Phantom OS">Phantom OS</a></li>
+<li><a href="/wiki/PikeOS" title="PikeOS">PikeOS</a></li>
+<li><a href="/wiki/QNX" title="QNX">QNX</a></li>
+<li><a href="/wiki/RC_4000_multiprogramming_system" title="RC 4000 multiprogramming system">RC 4000</a></li>
+<li><a href="/wiki/Redox_(operating_system)" title="Redox (operating system)">Redox</a></li>
+<li><a href="/wiki/REX_OS" title="REX OS">REX OS</a></li>
+<li><a href="/wiki/RIOT_(operating_system)" title="RIOT (operating system)">RIOT</a></li>
+<li><a href="/wiki/SharpOS_(operating_system)" class="mw-redirect" title="SharpOS (operating system)">SharpOS</a></li>
+<li><a href="/wiki/Singularity_(operating_system)" title="Singularity (operating system)">Singularity</a></li>
+<li><a href="/wiki/SPIN_(operating_system)" title="SPIN (operating system)">SPIN</a></li>
+<li><a href="/wiki/Spring_(operating_system)" title="Spring (operating system)">Spring</a></li>
+<li><a href="/wiki/Symbian" title="Symbian">Symbian</a></li>
+<li><a href="/wiki/Taligent" title="Taligent"> Taligent OS</a></li>
+<li><a href="/wiki/ThreadX" title="ThreadX">ThreadX</a></li>
+<li><a href="/wiki/TI-RTOS" title="TI-RTOS">TI-RTOS</a></li>
+<li><a href="/wiki/Tinix" title="Tinix">Tinix</a></li>
+<li><a href="/wiki/UNICOS" title="UNICOS">UNICOS</a></li>
+<li><a href="/wiki/V_(operating_system)" title="V (operating system)">V</a></li>
+<li><a href="/wiki/Verve_(operating_system)" title="Verve (operating system)">Verve</a></li>
+<li><a href="/wiki/Versatile_Real-Time_Executive" title="Versatile Real-Time Executive">VRTX</a></li>
+<li><a href="/wiki/VSTa" title="VSTa">VSTa</a></li>
+<li><a href="/wiki/Wombat_OS" title="Wombat OS">Wombat OS</a></li>
+<li><a href="/wiki/Workplace_OS" title="Workplace OS">Workplace OS</a></li>
+<li><a href="/wiki/Zephyr_(operating_system)" title="Zephyr (operating system)">Zephyr</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1408
+Cached time: 20200327221715
+Cache expiry: 86400
+Dynamic content: true
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.364 seconds
+Real time usage: 0.805 seconds
+Preprocessor visited node count: 1718/1000000
+Post‐expand include size: 60281/2097152 bytes
+Template argument size: 1607/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 54811/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.163/10.000 seconds
+Lua memory usage: 4.97 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  702.672      1 -total
+ 43.81%  307.860      1 Template:Real-time_operating_systems
+ 22.48%  157.944      1 Template:Reflist
+ 19.63%  137.960     19 Template:Cite_web
+ 16.53%  116.152      1 Template:Infobox_OS
+ 15.65%  109.959      1 Template:Infobox
+ 10.90%   76.558      1 Template:Advert
+  6.26%   43.970      2 Template:Start_date_and_age
+  6.11%   42.917      1 Template:Ambox
+  5.13%   36.055      2 Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:37698148-0!canonical and timestamp 20200327221714 and revision id 941249452
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=NuttX&amp;oldid=941249452">https://en.wikipedia.org/w/index.php?title=NuttX&amp;oldid=941249452</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Real-time_operating_systems" title="Category:Real-time operating systems">Real-time operating systems</a></li><li><a href="/wiki/Category:Embedded_operating_systems" title="Category:Embedded operating systems">Embedded operating systems</a></li><li><a href="/wiki/Category:Free_software_operating_systems" title="Category:Free software operating systems">Free software operating systems</a></li><li><a href="/wiki/Category:ARM_operating_systems" title="Category:ARM operating systems">ARM operating systems</a></li><li><a href="/wiki/Category:Software_using_the_BSD_license" title="Category:Software using the BSD license">Software using the BSD license</a></li><li><a href="/wiki/Category:Microkernel-based_operating_systems" title="Category:Microkernel-based operating systems">Microkernel-based operating systems</a></li><li><a href="/wiki/Category:Microkernels" title="Category:Microkernels">Microkernels</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_a_promotional_tone_from_December_2017" title="Category:Articles with a promotional tone from December 2017">Articles with a promotional tone from December 2017</a></li><li><a href="/wiki/Category:All_articles_with_a_promotional_tone" title="Category:All articles with a promotional tone">All articles with a promotional tone</a></li><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=NuttX" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=NuttX" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/NuttX" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:NuttX" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/NuttX">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=NuttX&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=NuttX&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/NuttX" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/NuttX" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=NuttX&amp;oldid=941249452" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=NuttX&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7070560" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=NuttX&amp;id=941249452&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=NuttX">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=NuttX&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=NuttX&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/NuttX" title="NuttX – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/NuttX" title="NuttX – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/NuttX" title="NuttX – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7070560#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 February 2020, at 13:13<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=NuttX&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.364","walltime":"0.805","ppvisitednodes":{"value":1718,"limit":1000000},"postexpandincludesize":{"value":60281,"limit":2097152},"templateargumentsize":{"value":1607,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":54811,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  702.672      1 -total"," 43.81%  307.860      1 Template:Real-time_operating_systems"," 22.48%  157.944      1 Template:Reflist"," 19.63%  137.960     19 Template:Cite_web"," 16.53%  116.152      1 Template:Infobox_OS"," 15.65%  109.959      1 Template:Infobox"," 10.90%   76.558      1 Template:Advert","  6.26%   43.970      2 Template:Start_date_and_age","  6.11%   42.917      1 Template:Ambox","  5.13%   36.055      2 Template:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.163","limit":"10.000"},"limitreport-memusage":{"value":5211140,"limit":52428800}},"cachereport":{"origin":"mw1408","timestamp":"20200327221715","ttl":86400,"transientcontent":true}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"NuttX","url":"https:\/\/en.wikipedia.org\/wiki\/NuttX","sameAs":"http:\/\/www.wikidata.org\/entity\/Q7070560","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q7070560","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2012-11-20T17:06:03Z","dateModified":"2020-02-17T13:13:20Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/b0\/NuttX_logo.png","headline":"operating system"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":183,"wgHostname":"mw1391"});});</script></body></html>

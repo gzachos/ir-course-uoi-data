@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Fixed-point arithmetic - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn9t-wpAAEQAAJ7o@TQAAADX","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Fixed-point_arithmetic","wgTitle":"Fixed-point arithmetic","wgCurRevisionId":933284613,"wgRevisionId":933284613,"wgArticleId":449736,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Articles to be merged from November 2019","All articles to be merged","Articles that may contain original research from September 2019","All articles that may contain original research","Articles with too many examples from August 2018",
+"All articles with too many examples","Wikipedia articles with style issues from August 2018","Computer arithmetic","Data types","Primitive types"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Fixed-point_arithmetic","wgRelevantArticleId":449736,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q649900","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready",
+"site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming",
+"ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Fixed-point_arithmetic rootpage-Fixed-point_arithmetic skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Fixed-point arithmetic</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Computer format for representing real numbers</div>
+<div role="note" class="hatnote navigation-not-searchable">This article is about a form of fixed-precision arithmetic in computing. For the invariant points of a mathematical function, see <a href="/wiki/Fixed_point_(mathematics)" title="Fixed point (mathematics)">Fixed point (mathematics)</a>.</div>
+<table class="box-Merge_from plainlinks metadata ambox ambox-move" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/50px-Mergefrom.svg.png" decoding="async" width="50" height="20" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/75px-Mergefrom.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Mergefrom.svg/100px-Mergefrom.svg.png 2x" data-file-width="50" data-file-height="20" /></div></td><td class="mbox-text"><div class="mbox-text-span">It has been suggested that <i><a href="/wiki/Q_(number_format)" title="Q (number format)">Q (number format)</a></i> be <a href="/wiki/Wikipedia:Merging" title="Wikipedia:Merging">merged</a> into this article. (<a href="/wiki/Talk:Fixed-point_arithmetic" title="Talk:Fixed-point arithmetic">Discuss</a>)<small><i> Proposed since November 2019.</i></small></div></td></tr></tbody></table>
+<table class="box-Original_research plainlinks metadata ambox ambox-content ambox-Original_research" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>possibly contains <a href="/wiki/Wikipedia:No_original_research" title="Wikipedia:No original research">original research</a></b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Fixed-point_arithmetic&amp;action=edit">improve it</a> by <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verifying</a> the claims made and adding <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a>. Statements consisting only of original research should be removed.</span>  <small class="date-container"><i>(<span class="date">September 2019</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computing" title="Computing">computing</a>, a <b>fixed-point number</b> representation is a <a href="/wiki/Real_data_type" title="Real data type">real data type</a> for a number that has a fixed number of digits after (and sometimes also before) the <a href="/wiki/Radix_point" title="Radix point">radix point</a> (after the decimal point '.' in English decimal notation). Fixed-point number representation can be compared to the more complicated (and more computationally demanding) <a href="/wiki/Floating_point" class="mw-redirect" title="Floating point">floating-point</a> number representation.
+</p><p>Fixed-point numbers are useful for representing <a href="/wiki/Fraction_(mathematics)" title="Fraction (mathematics)">fractional values</a>, usually in base 2 or base 10, when the executing <a href="/wiki/Central_processing_unit" title="Central processing unit">processor</a> has no <a href="/wiki/Floating_point_unit" class="mw-redirect" title="Floating point unit">floating point unit</a> (FPU) or if fixed-point provides improved performance or accuracy for the application at hand. Older or low-cost <a href="/wiki/Embedded_system" title="Embedded system">embedded</a> <a href="/wiki/Microprocessor" title="Microprocessor">microprocessors</a> and <a href="/wiki/Microcontroller" title="Microcontroller">microcontrollers</a> do not have an FPU.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Representation"><span class="tocnumber">1</span> <span class="toctext">Representation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operations"><span class="tocnumber">2</span> <span class="toctext">Operations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Binary_vs._decimal"><span class="tocnumber">3</span> <span class="toctext">Binary vs. decimal</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notation"><span class="tocnumber">4</span> <span class="toctext">Notation</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Precision_loss_and_overflow"><span class="tocnumber">5</span> <span class="toctext">Precision loss and overflow</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Computer_language_implementations"><span class="tocnumber">6</span> <span class="toctext">Computer language implementations</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Software_application_examples"><span class="tocnumber">7</span> <span class="toctext">Software application examples</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#Further_reading"><span class="tocnumber">10</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Representation">Representation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=1" title="Edit section: Representation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A value of a fixed-point data type is essentially an <a href="/wiki/Integer" title="Integer">integer</a> that is scaled by an implicit specific factor determined by the type. For example, the value 1.23 can be represented as 1230 in a fixed-point data type with scaling factor of 1/1000, and the value 1,230,000 can be represented as 1230 with a scaling factor of 1000.  Unlike floating-point data types, the scaling factor is the same for all values of the same type, and does not change during the entire computation.
+</p><p>The scaling factor is usually a <a href="/wiki/Power_(mathematics)" class="mw-redirect" title="Power (mathematics)">power</a> of 10 (for human convenience) or a power of 2 (for computational efficiency).  However, other scaling factors may be used occasionally, e.g. a time value in hours may be represented as a fixed-point type with a scale factor of 1/3600 to obtain values with one-second accuracy.
+</p><p>The maximum value of a fixed-point type is simply the largest value that can be represented in the underlying integer type multiplied by the scaling factor; and similarly for the minimum value.
+</p>
+<h2><span class="mw-headline" id="Operations">Operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=2" title="Edit section: Operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>To convert a number from a fixed point type with scaling factor <i>R</i> to another type with scaling factor <i>S</i>, the underlying integer must be multiplied by <i>R</i> and divided by <i>S</i>; that is, multiplied by the ratio <i>R</i>/<i>S</i>.  Thus, for example, to convert the value 1.23 = 123/100 from a type with scaling factor <i>R</i>=1/100 to one with scaling factor <i>S</i>=1/1000, the underlying integer 123 must be multiplied by (1/100)/(1/1000) = 10, yielding the representation 1230/1000.  If <i>S</i> does not divide <i>R</i> (in particular, if the new scaling factor <i>S</i> is greater than the original <i>R</i>), the new integer will have to be <a href="/wiki/Rounding" title="Rounding">rounded</a>.  The rounding rules and methods are usually part of the language's specification.
+</p><p>To add or subtract two values of the same fixed-point type, it is sufficient to add or subtract the underlying integers, and keep their common scaling factor.  The result can be exactly represented in the same type, as long as no <a href="/wiki/Arithmetic_overflow" class="mw-redirect" title="Arithmetic overflow">overflow</a> occurs (i.e. provided that the sum of the two integers fits in the underlying integer type). If the numbers have different fixed-point types, with different scaling factors, then one of them must be converted to the other before the sum.
+</p><p>To multiply two fixed-point numbers, it suffices to multiply the two underlying integers, and assume that the scaling factor of the result is the product of their scaling factors. This operation involves no rounding. For example, multiplying the numbers 123 scaled by 1/1000 (0.123) and 25 scaled by 1/10 (2.5) yields the integer 123×25 = 3075 scaled by (1/1000)×(1/10) = 1/10000, that is 3075/10000 = 0.3075. If the two operands belong to the same fixed-point type, and the result is also to be represented in that type, then the product of the two integers must be explicitly multiplied by the common scaling factor; in this case the result may have to be rounded, and overflow may occur. For example, if the common scaling factor is 1/100, multiplying 1.23 by 0.25 entails multiplying 123 by 25 to yield 3075 with an intermediate scaling factor of 1/10000.  This then must be multiplied by 1/100 to yield either 31 (0.31) or 30 (0.30), depending on the rounding method used, to result in a final scale factor of 1/100.
+</p><p>To divide two fixed-point numbers, one takes the integer quotient of their underlying integers, and assumes that the scaling factor is the quotient of their scaling factors. The first division involves rounding in general. For example, division of 3456 scaled by 1/100 (34.56) and 1234 scaled by 1/1000 (1.234) yields the integer 3456÷1234 = 3 (rounded) with scale factor (1/100)/(1/1000) = 10, that is, 30.  One can obtain a more accurate result by first converting the <a href="/wiki/Dividend" title="Dividend">dividend</a> to a more precise type: in the same example, converting 3456 scaled by 1/100 (34.56) to 3,456,000 scaled by 1/100000, before dividing by 1234 scaled by 1/1000 (1.234), would yield 3456000÷1234 = 2801 (rounded) with scaling factor (1/100000)/(1/1000) = 1/100, that is 28.01 (instead of 30).  If both operands and the desired result all have the same scaling factor, then the quotient of the two integers must be explicitly multiplied by that common scaling factor.
+</p>
+<h2><span class="mw-headline" id="Binary_vs._decimal">Binary vs. decimal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=3" title="Edit section: Binary vs. decimal">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The two most common classes of fixed-point types are decimal and binary. Decimal fixed-point types have a scaling factor that is a power of ten; for binary fixed-point types it is a power of two.
+</p><p>Binary fixed-point types are most commonly used, because the rescaling operations can be implemented as fast <a href="/wiki/Bit_shift" class="mw-redirect" title="Bit shift">bit shifts</a>. Binary fixed-point numbers can represent fractional powers of two exactly, but, like binary floating-point numbers, cannot exactly represent fractional powers of ten.  If exact fractional powers of ten are desired, then a decimal format should be used.  For example, one-tenth (0.1) and one-hundredth (0.01) can be represented only approximately by binary fixed-point or binary floating-point representations, while they can be represented exactly in decimal fixed-point or decimal floating-point representations.  These representations may be encoded in many ways, including <a href="/wiki/Binary-coded_decimal" title="Binary-coded decimal">binary-coded decimal</a> (BCD).
+</p>
+<h2><span class="mw-headline" id="Notation">Notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=4" title="Edit section: Notation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Q_(number_format)" title="Q (number format)">Q (number format)</a></div>
+<p>There are various notations used to represent word length and radix point in a binary fixed-point number. In the following list, <i>f</i> represents the number of fractional bits, <i>m</i> the number of magnitude or integer bits, <i>s</i> the number of sign bits, and <i>b</i> the total number of bits.
+</p>
+<ul><li><b>Q</b><i>f</i>: The "Q" prefix. For example, Q15 represents a number with 15 fractional bits. This notation is ambiguous since it does not specify the word length, however it is usually assumed that the word length is either 16 or 32 bits depending on the target processor in use.<sup id="cite_ref-ti_1-0" class="reference"><a href="#cite_note-ti-1">&#91;1&#93;</a></sup></li>
+<li><b>Q</b><i>m</i><b>.</b><i>f</i>: The unambiguous form of the "Q" notation. Since the entire word is a 2's complement integer, a sign bit is implied.  For example, Q1.30 describes a number with 1 integer bit and 30 fractional bits stored as a 32-bit 2's complement integer.<sup id="cite_ref-ti_1-1" class="reference"><a href="#cite_note-ti-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup></li>
+<li><b>fx</b><i>m</i><b>.</b><i>b</i>: The "fx" prefix is similar to the above, but uses the word length as the second item in the dotted pair. For example, fx1.16 describes a number with 1 magnitude bit and 15 fractional bits in a 16 bit word.<sup id="cite_ref-vsi_3-0" class="reference"><a href="#cite_note-vsi-3">&#91;3&#93;</a></sup></li>
+<li><i>s</i><b>:</b><i>m</i><b>:</b><i>f</i>: Yet other notations include a sign bit, such as this one used in the <a href="/wiki/PlayStation_2" title="PlayStation 2">PS2</a> GS User's Guide.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> It also differs from conventional usage by using a colon instead of a period as the separator. For example, in this notation, 0:8:0 represents an unsigned 8-bit integer.</li>
+<li><b>(p,q)</b> Used in the <i>PL/I</i> programming language, to specify <b>p</b> total digits (not including sign) with <b>q</b> after the radix point.  <b>q</b> can be positive or negative, and the radix binary or decimal.</li></ul>
+<h2><span class="mw-headline" id="Precision_loss_and_overflow">Precision loss and overflow</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=5" title="Edit section: Precision loss and overflow">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Because fixed point operations can produce results that have more digits than the <a href="/wiki/Operand" title="Operand">operands</a>, information loss is possible. For instance, the result of fixed point multiplication could potentially have as many digits as the sum of the number of digits in the two operands. In order to fit the result into the same number of digits as the operands, the answer must be <a href="/wiki/Rounding" title="Rounding">rounded</a> or <a href="/wiki/Truncation" title="Truncation">truncated</a>. If this is the case, the choice of which digits to keep is very important. When multiplying two fixed point numbers with the same format, for instance with <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle I}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>I</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle I}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/535ea7fc4134a31cbe2251d9d3511374bc41be9f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.172ex; height:2.176ex;" alt="I"/></span> integer digits, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle Q}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Q</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle Q}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8752c7023b4b3286800fe3238271bbca681219ed" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.838ex; height:2.509ex;" alt="Q"/></span> fractional digits, the answer could have up to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2I}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>2</mn>
+        <mi>I</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2I}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5dbd6170826fcd1a6f8c7b3505344307cb48d0d3" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:2.334ex; height:2.176ex;" alt="2I"/></span> integer digits, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle 2Q}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mn>2</mn>
+        <mi>Q</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle 2Q}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/79b9cb3f2ee7ff5ab0576094c67e97e13820c1ad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:3.001ex; height:2.509ex;" alt="2Q"/></span> fractional digits.
+</p><p>For simplicity, many fixed-point multiply procedures use the same result format as the operands. This has the effect of keeping the middle digits; the <var>I</var>-number of least significant integer digits, and the <var>Q</var>-number of most significant fractional digits. Fractional digits lost below this value represent a precision loss which is common in fractional multiplication. If any integer digits are lost, however, the value will be radically inaccurate. Some model-based fixed-point packages<sup id="cite_ref-vsi-fp_5-0" class="reference"><a href="#cite_note-vsi-fp-5">&#91;5&#93;</a></sup> allow specifying a result format different from the input formats, enabling the user to maximize precision and avoid overflow.
+</p><p>Some operations, like divide, often have built-in result limiting so that any positive overflow results in the largest possible number that can be represented by the current format. Likewise, negative overflow results in the largest negative number represented by the current format. This built in limiting is often referred to as <i>saturation</i>.
+</p><p>Some processors support a hardware <a href="/wiki/Overflow_flag" title="Overflow flag">overflow flag</a> that can generate an <a href="/wiki/Exception_handling" title="Exception handling">exception</a> on the occurrence of an overflow, but it is usually too late to salvage the proper result at this point.
+</p>
+<h2><span class="mw-headline" id="Computer_language_implementations">Computer language implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=6" title="Edit section: Computer language implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Very few computer languages include built-in support for fixed point values other than with the radix point immediately to the right of the least significant digit, because for most applications, binary or decimal floating-point representations are usually simpler to use and accurate enough. Floating-point representations are easier to use than fixed-point representations, because they can handle a wider dynamic range and do not require programmers to specify the number of digits after the radix point.  However, if they are needed, fixed-point numbers can be implemented even in programming languages like <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a>, which do not commonly include such support.
+</p><p>A common use of fixed-point <a href="/wiki/Binary-coded_decimal" title="Binary-coded decimal">BCD</a> numbers is for storing monetary values, where the inexact values of binary floating-point numbers are often a liability. Historically, fixed-point representations were the norm for decimal data types; for example, in <a href="/wiki/PL/I" title="PL/I">PL/I</a> or <a href="/wiki/COBOL" title="COBOL">COBOL</a>. The <a href="/wiki/Ada_programming_language" class="mw-redirect" title="Ada programming language">Ada programming language</a> includes built-in support for both fixed-point (binary and decimal) and floating-point. <a href="/wiki/JOVIAL_programming_language" class="mw-redirect" title="JOVIAL programming language">JOVIAL</a> and <a href="/wiki/Coral_66" title="Coral 66">Coral 66</a> also provide both floating- and fixed-point types.
+</p><p>ISO/IEC TR 18037<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> specifies fixed-point data types for the C programming language; vendors are expected to implement the language extensions for fixed point arithmetic in coming years. Fixed-point support is implemented in <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p><p>Fixed-point should not be confused with <a href="/wiki/Decimal_floating_point" title="Decimal floating point">Decimal floating point</a> in programming languages like <a href="/wiki/C_Sharp_language" class="mw-redirect" title="C Sharp language">C#</a> and <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>.
+</p><p>Almost all relational <a href="/wiki/Database" title="Database">databases</a>, and the <a href="/wiki/SQL" title="SQL">SQL</a>, support fixed-point decimal arithmetic and storage of numbers. <a href="/wiki/PostgreSQL" title="PostgreSQL">PostgreSQL</a> has a special <tt>numeric</tt> type for exact storage of numbers with up to 1000 digits.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Software_application_examples">Software application examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=7" title="Edit section: Software application examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Example_farm plainlinks metadata ambox ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>may contain <a href="/wiki/Wikipedia:What_Wikipedia_is_not#Wikipedia_is_not_an_indiscriminate_collection_of_information" title="Wikipedia:What Wikipedia is not">indiscriminate</a>, <a href="/wiki/Wikipedia:Manual_of_Style/Embedded_lists#List_size" class="mw-redirect" title="Wikipedia:Manual of Style/Embedded lists">excessive</a>, or <a href="/wiki/Wikipedia:Neutral_point_of_view#Due_and_undue_weight" title="Wikipedia:Neutral point of view">irrelevant</a> examples</b>.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Fixed-point_arithmetic&amp;action=edit">improve the article</a> by adding more descriptive text and removing <a href="/wiki/Wikipedia:Example_cruft" title="Wikipedia:Example cruft">less pertinent examples</a>. See Wikipedia's <a href="/wiki/Wikipedia:Writing_better_articles" title="Wikipedia:Writing better articles">guide to writing better articles</a> for further suggestions.</span>  <small class="date-container"><i>(<span class="date">August 2018</span>)</i></small></div></td></tr></tbody></table>
+<ul><li><a href="/wiki/Libfixmath" title="Libfixmath">libfixmath</a> is a recent open-source library for the manipulation of fixed point numbers,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> it currently supports <a href="/wiki/Q_(number_format)" title="Q (number format)">Q16.16</a> and <a href="/wiki/Q_(number_format)" title="Q (number format)">Q0.32</a> formats and provides an interface similar to <a href="/wiki/Math.h" class="mw-redirect" title="Math.h">math.h</a>.</li>
+<li>The <a rel="nofollow" class="external text" href="https://github.com/nestlabs/nlutilities">Nest Labs Utilities library</a>, provides a limited set of macros and functions for fixed point numbers, particularly when dealing with those numbers in the context of sensor sampling and sensor outputs.</li>
+<li><a href="/wiki/GnuCash" title="GnuCash">GnuCash</a> is an application for tracking money which is written in C. It switched from a floating-point representation of money to a fixed-point implementation as of version 1.6. This change was made to trade the less predictable rounding errors of floating-point representations for more control over rounding (for example, to the nearest <a href="/wiki/Cent_(currency)" title="Cent (currency)">cent</a>).</li>
+<li><a href="/wiki/Tremor_(software)" title="Tremor (software)">Tremor</a>, <a href="/w/index.php?title=Toast_(GSM)&amp;action=edit&amp;redlink=1" class="new" title="Toast (GSM) (page does not exist)">Toast</a> and <a href="/wiki/MPEG_Audio_Decoder" title="MPEG Audio Decoder">MAD</a> are software libraries which decode the <a href="/wiki/Vorbis" title="Vorbis">Ogg Vorbis</a>, <a href="/wiki/Full_Rate" title="Full Rate">GSM Full Rate</a> and <a href="/wiki/MP3" title="MP3">MP3</a> audio formats respectively. These codecs use fixed-point arithmetic because many audio decoding hardware devices do not have an FPU (partly to save money, but primarily to save power - integer units are much smaller in silicon area than an FPU) and audio decoding requires performance to the extent a software implementation of floating-point on low-speed devices would not produce output in real time.</li>
+<li>All <a href="/wiki/3D_computer_graphics" title="3D computer graphics">3D graphics</a> engines on Sony's original <a href="/wiki/PlayStation" title="PlayStation">PlayStation</a>, Sega's <a href="/wiki/Sega_Saturn" title="Sega Saturn">Saturn</a>, Nintendo's <a href="/wiki/Game_Boy_Advance" title="Game Boy Advance">Game Boy Advance</a> (only <a href="/wiki/2D_computer_graphics" title="2D computer graphics">2D</a>), <a href="/wiki/Nintendo_DS" title="Nintendo DS">Nintendo DS</a> (2D and 3D), <a href="/wiki/Nintendo_Gamecube" class="mw-redirect" title="Nintendo Gamecube">Nintendo Gamecube</a><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> and <a href="/wiki/GP2X_Wiz" title="GP2X Wiz">GP2X Wiz</a> video game systems use fixed-point arithmetic for the same reason as Tremor and Toast: to gain throughput on an architecture without an FPU (e.g. the PlayStation included hardware support for 4.12bit values in its transformation coprocessor).</li>
+<li>The <a href="/wiki/OpenGL_ES" title="OpenGL ES">OpenGL ES</a> 1.x specification includes a fixed point profile, as it is an API aimed for embedded systems, which do not always have an FPU.</li>
+<li><a href="/wiki/TeX_font_metric" title="TeX font metric">TeX font metric</a> files use 32-bit signed fixed-point numbers, with 12 bits to the left of the decimal, extensively.</li>
+<li>The <a href="/wiki/Dc_(computer_program)" title="Dc (computer program)">dc</a> and <a href="/wiki/Bc_programming_language" class="mw-redirect" title="Bc programming language">bc</a> programs are <a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">arbitrary precision</a> calculators, but only keep track of a (user-specified) fixed number of fractional digits.</li>
+<li><a href="/wiki/VisSim" title="VisSim">VisSim</a> A visually programmed block diagram language supporting a fixed-point block set to allow simulation and automatic code generation of fixed-point operations. Both word size and radix point can be specified on an operator basis.</li>
+<li><a href="/wiki/Fractint" title="Fractint">Fractint</a> represents numbers as <a href="/wiki/Q_(number_format)" title="Q (number format)">Q2.29</a> fixed-point numbers,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> to speed up drawing on old PCs with <a href="/wiki/Intel_80386" title="Intel 80386">386</a> or <a href="/wiki/Intel_80486SX" title="Intel 80486SX">486SX</a> processors, which lacked an FPU.</li>
+<li><i><a href="/wiki/Doom_(1993_video_game)" title="Doom (1993 video game)">Doom</a></i> was the last <a href="/wiki/First-person_shooter" title="First-person shooter">first-person shooter</a> title by <a href="/wiki/Id_Software" title="Id Software">id Software</a> to use a 16.16 fixed point representation for all of its non-integer computations, including map system, geometry, rendering, player movement etc. This was done in order for the game to be playable on 386 and 486SX CPUs without an FPU. For compatibility reasons, this representation is still used in modern <a href="/wiki/List_of_Doom_source_ports" title="List of Doom source ports"><i>Doom</i> source ports</a>.</li>
+<li><a href="/wiki/SystemC" title="SystemC">SystemC</a> provides signed and unsigned fixed point data types.</li>
+<li><a href="/wiki/WavPack" title="WavPack">Wavpack</a> is a fixed-point, lossless audio compressor. Its creator, David Bryant, justifies the decision to implement fixed instead of floating point: " I believe that integer operations are less susceptible to subtle chip to chip variations that could corrupt the lossless nature of the compression."<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup></li>
+<li>fixed point numbers are sometimes used for storing and manipulating images and video frames. Processors with <a href="/wiki/SIMD" title="SIMD">SIMD</a> units aimed at image processing may include instructions suitable for handling packed fixed point data.</li>
+<li>The <a href="/wiki/Q_Sharp" title="Q Sharp">Q#</a> programming language for the <a href="/wiki/Microsoft_Azure" title="Microsoft Azure">Azure</a> <a href="/wiki/Quantum_computer" class="mw-redirect" title="Quantum computer">quantum computers</a>, that implement <a href="/wiki/Quantum_logic_gates" class="mw-redirect" title="Quantum logic gates">quantum logic gates</a>, contains a standard numeric library for performing fixed-point arithmetic on registers of <a href="/wiki/Qubit" title="Qubit">qubits</a>.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Binary_scaling" title="Binary scaling">Binary scaling</a></li>
+<li><a href="/wiki/Q_(number_format)" title="Q (number format)">Q (number format)</a></li>
+<li><a href="/wiki/Libfixmath" title="Libfixmath">Libfixmath</a> - a library written in C for fixed-point math</li>
+<li><a href="/wiki/Floating-point_arithmetic" title="Floating-point arithmetic">Floating-point arithmetic</a></li>
+<li><a href="/wiki/Logarithmic_number_system" title="Logarithmic number system">Logarithmic number system</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-ti-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-ti_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ti_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Texas Instruments, <a rel="nofollow" class="external text" href="http://focus.ti.com/lit/ug/spru565b/spru565b.pdf">TMS320C64x DSP Library Programmer's Reference</a>, Appendix A.2</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.mathworks.com/help/toolbox/fixedpoint/ref/bp7g699.html#f6811">"MathWorks Fixed-Point Toolbox Documentation Glossary"</a>. <i>mathworks.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=mathworks.com&amp;rft.atitle=MathWorks+Fixed-Point+Toolbox+Documentation+Glossary&amp;rft_id=http%3A%2F%2Fwww.mathworks.com%2Fhelp%2Ftoolbox%2Ffixedpoint%2Fref%2Fbp7g699.html%23f6811&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-vsi-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-vsi_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Inc., solidThinking. <a rel="nofollow" class="external text" href="http://www.vissim.com/products/addons/vissim/fixed-point.html">"VisSim is now solidThinking Embed"</a>. <i>www.vissim.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.vissim.com&amp;rft.atitle=VisSim+is+now+solidThinking+Embed&amp;rft.aulast=Inc.&amp;rft.aufirst=solidThinking&amp;rft_id=http%3A%2F%2Fwww.vissim.com%2Fproducts%2Faddons%2Fvissim%2Ffixed-point.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">PS2 GS User's Guide, Chapter 7.1 "Explanatory Notes"</span>
+</li>
+<li id="cite_note-vsi-fp-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-vsi-fp_5-0">^</a></b></span> <span class="reference-text">VisSim Fixed-Point User Guide|<a rel="nofollow" class="external free" href="http://www.vissim.com/downloads/doc/EmbeddedControlsDeveloper_UGv80.pdf">http://www.vissim.com/downloads/doc/EmbeddedControlsDeveloper_UGv80.pdf</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">JTC1/SC22/WG14, <a rel="nofollow" class="external text" href="http://www.open-std.org/JTC1/SC22/WG14/www/projects#18037">status of TR 18037: Embedded C</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">GCC wiki, <a rel="nofollow" class="external text" href="https://gcc.gnu.org/wiki/FixedPointArithmetic">Fixed-Point Arithmetic Support</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Using GCC, <a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/Fixed-Point.html">section 5.13 Fixed-Point Types</a></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">PostgreSQL manual, <a rel="nofollow" class="external text" href="http://www.postgresql.org/docs/8.3/static/datatype-numeric.html#DATATYPE-NUMERIC-DECIMAL">section 8.1.2. Arbitrary Precision Numbers</a></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://code.google.com/p/libfixmath">"Google Code Archive - Long-term storage for Google Code Project Hosting"</a>. <i>code.google.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=code.google.com&amp;rft.atitle=Google+Code+Archive+-+Long-term+storage+for+Google+Code+Project+Hosting.&amp;rft_id=https%3A%2F%2Fcode.google.com%2Fp%2Flibfixmath&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dolphin-emu.org/blog/2014/03/15/pixel-processing-problems/">"Dolphin Emulator"</a>. <i>Dolphin Emulator</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Dolphin+Emulator&amp;rft.atitle=Dolphin+Emulator&amp;rft_id=http%3A%2F%2Fdolphin-emu.org%2Fblog%2F2014%2F03%2F15%2Fpixel-processing-problems%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://spanky.triumf.ca/www/fractint/periodicity.html#integer_math_anchor">Fractint, A Little Code</a></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.wavpack.com/technical.htm">"WavPack Technical Description"</a>. <i>www.wavpack.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-07-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.wavpack.com&amp;rft.atitle=WavPack+Technical+Description&amp;rft_id=http%3A%2F%2Fwww.wavpack.com%2Ftechnical.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/quantum/libraries/numerics/?view=qsharp-preview">"Introduction to the Quantum Numerics Library"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-11-13</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Introduction+to+the+Quantum+Numerics+Library&amp;rft_id=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fquantum%2Flibraries%2Fnumerics%2F%3Fview%3Dqsharp-preview&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=10" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">Warren Jr., Henry S. (2013). <i><a href="/wiki/Hacker%27s_Delight" title="Hacker&#39;s Delight">Hacker's Delight</a></i> (2 ed.). <a href="/wiki/Addison_Wesley" class="mw-redirect" title="Addison Wesley">Addison Wesley</a> - <a href="/wiki/Pearson_Education,_Inc." class="mw-redirect" title="Pearson Education, Inc.">Pearson Education, Inc.</a> <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-321-84268-8" title="Special:BookSources/978-0-321-84268-8"><bdi>978-0-321-84268-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Hacker%27s+Delight&amp;rft.edition=2&amp;rft.pub=Addison+Wesley+-+Pearson+Education%2C+Inc.&amp;rft.date=2013&amp;rft.isbn=978-0-321-84268-8&amp;rft.aulast=Warren+Jr.&amp;rft.aufirst=Henry+S.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFixed-point+arithmetic" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/Floating_Point" class="extiw" title="wikibooks:Floating Point">Floating Point</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Floating_Point/Fixed-Point_Numbers" class="extiw" title="wikibooks:Floating Point/Fixed-Point Numbers">Fixed-Point Numbers</a></b></i></td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/Embedded_Systems" class="extiw" title="wikibooks:Embedded Systems">Embedded Systems</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Embedded_Systems/Embedded_System_Basics#Fixed-Point_Arithmetic" class="extiw" title="wikibooks:Embedded Systems/Embedded System Basics">Fixed-Point Arithmetic</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://spin.atomicobject.com/2012/03/15/simple-fixed-point-math/">Simple Fixed-Point Math</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20150912013429/http://www.digitalsignallabs.com/fp.pdf">Fixed-Point Arithmetic - An Introduction</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.superkits.net/whitepapers/Fixed%20Point%20Representation%20&amp;%20Fractional%20Math.pdf">Fixed Point Representation and Fractional Math</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20020611080806/http://www.embedded.com/98/9804fe2.htm">A Calculated Look at Fixed-Point Arithmetic</a>, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20111005183025/http://www.eetindia.co.in/ARTICLES/1998APR/PDF/EEIOL_1998APR03_EMS_TA.pdf">(PDF)</a></li>
+<li><a rel="nofollow" class="external text" href="http://archive.adaic.com/standards/83rat/html/ratl-05-03.html#5.3.2">Ada '83 Rationale, 5.3.2: Fixed Point Types</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Data_types" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Data_types" title="Template:Data types"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Data_types" title="Template talk:Data types"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Data_types&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Data_types" style="font-size:114%;margin:0 4em"><a href="/wiki/Data_type" title="Data type">Data types</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Units_of_information" title="Units of information">Uninterpreted</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bit" title="Bit">Bit</a></li>
+<li><a href="/wiki/Byte" title="Byte">Byte</a></li>
+<li><a href="/wiki/Ternary_numeral_system" title="Ternary numeral system">Trit</a></li>
+<li><a href="/wiki/Ternary_numeral_system#Tryte" title="Ternary numeral system">Tryte</a></li>
+<li><a href="/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li>
+<li><a href="/wiki/Bit_array" title="Bit array">Bit array</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Numeric</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Arbitrary-precision_arithmetic" title="Arbitrary-precision arithmetic">Arbitrary-precision or bignum</a></li>
+<li><a href="/wiki/Complex_data_type" title="Complex data type">Complex</a></li>
+<li><a href="/wiki/Decimal_data_type" title="Decimal data type">Decimal</a></li>
+<li><a class="mw-selflink selflink">Fixed point</a></li>
+<li><a href="/wiki/Floating-point_arithmetic" title="Floating-point arithmetic">Floating point</a>
+<ul><li><a href="/wiki/Double-precision_floating-point_format" title="Double-precision floating-point format">Double precision</a></li>
+<li><a href="/wiki/Extended_precision" title="Extended precision">Extended precision</a></li>
+<li><a href="/wiki/Long_double" title="Long double">Long double</a></li>
+<li><a href="/wiki/Octuple-precision_floating-point_format" title="Octuple-precision floating-point format">Octuple precision</a></li>
+<li><a href="/wiki/Quadruple-precision_floating-point_format" title="Quadruple-precision floating-point format">Quadruple precision</a></li>
+<li><a href="/wiki/Single-precision_floating-point_format" title="Single-precision floating-point format">Single precision</a></li>
+<li>Reduced precision
+<ul><li><a href="/wiki/Minifloat" title="Minifloat">Minifloat</a></li>
+<li><a href="/wiki/Half-precision_floating-point_format" title="Half-precision floating-point format">Half precision</a></li>
+<li><a href="/wiki/Bfloat16_floating-point_format" title="Bfloat16 floating-point format">bfloat16</a></li></ul></li></ul></li>
+<li><a href="/wiki/Integer_(computer_science)" title="Integer (computer science)">Integer</a>
+<ul><li><a href="/wiki/Signedness" title="Signedness">signedness</a></li></ul></li>
+<li><a href="/wiki/Interval_arithmetic#Implementations" title="Interval arithmetic">Interval</a></li>
+<li><a href="/wiki/Rational_data_type" title="Rational data type">Rational</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">Pointer</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Memory_address" title="Memory address">Address</a>
+<ul><li><a href="/wiki/Physical_address" title="Physical address">physical</a></li>
+<li><a href="/wiki/Virtual_address_space" title="Virtual address space">virtual</a></li></ul></li>
+<li><a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">Reference</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Plain_text" title="Plain text">Text</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Character_(computing)" title="Character (computing)">Character</a></li>
+<li><a href="/wiki/String_(computer_science)" title="String (computer science)">String</a>
+<ul><li><a href="/wiki/Null-terminated_string" title="Null-terminated string">null-terminated</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Composite_data_type" title="Composite data type">Composite</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Algebraic_data_type" title="Algebraic data type">Algebraic data type</a>
+<ul><li><a href="/wiki/Generalized_algebraic_data_type" title="Generalized algebraic data type">generalized</a></li></ul></li>
+<li><a href="/wiki/Array_data_type" title="Array data type">Array</a></li>
+<li><a href="/wiki/Associative_array" title="Associative array">Associative array</a></li>
+<li><a href="/wiki/Class_(computer_programming)" title="Class (computer programming)">Class</a></li>
+<li><a href="/wiki/Dependent_type" title="Dependent type">Dependent</a></li>
+<li><a href="/wiki/Intuitionistic_type_theory#Equality_type" title="Intuitionistic type theory">Equality</a></li>
+<li><a href="/wiki/Inductive_type" title="Inductive type">Inductive</a></li>
+<li><a href="/wiki/Intersection_type" title="Intersection type">Intersection</a></li>
+<li><a href="/wiki/List_(abstract_data_type)" title="List (abstract data type)">List</a></li>
+<li><a href="/wiki/Object_(computer_science)" title="Object (computer science)">Object</a>
+<ul><li><a href="/wiki/Metaobject" title="Metaobject">metaobject</a></li></ul></li>
+<li><a href="/wiki/Option_type" title="Option type">Option type</a></li>
+<li><a href="/wiki/Product_type" title="Product type">Product</a></li>
+<li><a href="/wiki/Record_(computer_science)" title="Record (computer science)">Record or Struct</a></li>
+<li><a href="/wiki/Refinement_type" title="Refinement type">Refinement</a></li>
+<li><a href="/wiki/Set_(abstract_data_type)" title="Set (abstract data type)">Set</a></li>
+<li><a href="/wiki/Union_type" title="Union type">Union</a>
+<ul><li><a href="/wiki/Tagged_union" title="Tagged union">tagged</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Boolean_data_type" title="Boolean data type">Boolean</a></li>
+<li><a href="/wiki/Bottom_type" title="Bottom type">Bottom type</a></li>
+<li><a href="/wiki/Container_(abstract_data_type)" title="Container (abstract data type)">Collection</a></li>
+<li><a href="/wiki/Enumerated_type" title="Enumerated type">Enumerated type</a></li>
+<li><a href="/wiki/Exception_handling" title="Exception handling">Exception</a></li>
+<li><a href="/wiki/Function_type" title="Function type">Function type</a></li>
+<li><a href="/wiki/Opaque_data_type" title="Opaque data type">Opaque data type</a></li>
+<li><a href="/wiki/Recursive_data_type" title="Recursive data type">Recursive data type</a></li>
+<li><a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">Semaphore</a></li>
+<li><a href="/wiki/Stream_(computing)" title="Stream (computing)">Stream</a></li>
+<li><a href="/wiki/Top_type" title="Top type">Top type</a></li>
+<li><a href="/wiki/Type_class" title="Type class">Type class</a></li>
+<li><a href="/wiki/Unit_type" title="Unit type">Unit type</a></li>
+<li><a href="/wiki/Void_type" title="Void type">Void</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related<br />topics</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Abstract_data_type" title="Abstract data type">Abstract data type</a></li>
+<li><a href="/wiki/Data_structure" title="Data structure">Data structure</a></li>
+<li><a href="/wiki/Generic_programming" title="Generic programming">Generic</a></li>
+<li><a href="/wiki/Kind_(type_theory)" title="Kind (type theory)">Kind</a>
+<ul><li><a href="/wiki/Metaclass" title="Metaclass">metaclass</a></li></ul></li>
+<li><a href="/wiki/Object_type_(object-oriented_programming)" title="Object type (object-oriented programming)">Object type</a></li>
+<li><a href="/wiki/Parametric_polymorphism" title="Parametric polymorphism">Parametric polymorphism</a></li>
+<li><a href="/wiki/Primitive_data_type" title="Primitive data type">Primitive data type</a></li>
+<li><a href="/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">Protocol</a>
+<ul><li><a href="/wiki/Interface_(computing)#Software_interfaces_in_object-oriented_languages" title="Interface (computing)">interface</a></li></ul></li>
+<li><a href="/wiki/Subtyping" title="Subtyping">Subtyping</a></li>
+<li><a href="/wiki/Type_constructor" title="Type constructor">Type constructor</a></li>
+<li><a href="/wiki/Type_conversion" title="Type conversion">Type conversion</a></li>
+<li><a href="/wiki/Type_system" title="Type system">Type system</a></li>
+<li><a href="/wiki/Type_theory" title="Type theory">Type theory</a></li>
+<li><a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">Variable</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>See also <a href="/wiki/Template:Information_units" title="Template:Information units">platform-dependent and independent units of information</a></div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1330
+Cached time: 20200306195521
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.300 seconds
+Real time usage: 0.454 seconds
+Preprocessor visited node count: 1286/1000000
+Post‐expand include size: 45438/2097152 bytes
+Template argument size: 1952/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 22885/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.126/10.000 seconds
+Lua memory usage: 4.14 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  351.065      1 -total
+ 30.25%  106.209      1 Template:Reflist
+ 25.20%   88.480      6 Template:Cite_web
+ 18.38%   64.528      1 Template:Mergefrom
+ 16.63%   58.389      1 Template:Short_description
+ 11.78%   41.347      1 Template:Pagetype
+ 10.54%   37.015      1 Template:Original_research
+  9.52%   33.436      2 Template:Ambox
+  9.15%   32.105      1 Template:Mbox
+  5.27%   18.517      1 Template:DMC
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:449736-0!canonical!math=5 and timestamp 20200306195520 and revision id 933284613
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Fixed-point_arithmetic&amp;oldid=933284613">https://en.wikipedia.org/w/index.php?title=Fixed-point_arithmetic&amp;oldid=933284613</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Computer_arithmetic" title="Category:Computer arithmetic">Computer arithmetic</a></li><li><a href="/wiki/Category:Data_types" title="Category:Data types">Data types</a></li><li><a href="/wiki/Category:Primitive_types" title="Category:Primitive types">Primitive types</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Articles_to_be_merged_from_November_2019" title="Category:Articles to be merged from November 2019">Articles to be merged from November 2019</a></li><li><a href="/wiki/Category:All_articles_to_be_merged" title="Category:All articles to be merged">All articles to be merged</a></li><li><a href="/wiki/Category:Articles_that_may_contain_original_research_from_September_2019" title="Category:Articles that may contain original research from September 2019">Articles that may contain original research from September 2019</a></li><li><a href="/wiki/Category:All_articles_that_may_contain_original_research" title="Category:All articles that may contain original research">All articles that may contain original research</a></li><li><a href="/wiki/Category:Articles_with_too_many_examples_from_August_2018" title="Category:Articles with too many examples from August 2018">Articles with too many examples from August 2018</a></li><li><a href="/wiki/Category:All_articles_with_too_many_examples" title="Category:All articles with too many examples">All articles with too many examples</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_style_issues_from_August_2018" title="Category:Wikipedia articles with style issues from August 2018">Wikipedia articles with style issues from August 2018</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Fixed-point+arithmetic" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Fixed-point+arithmetic" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Fixed-point_arithmetic" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Fixed-point_arithmetic" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Fixed-point_arithmetic">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Fixed-point_arithmetic" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Fixed-point_arithmetic" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Fixed-point_arithmetic&amp;oldid=933284613" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Fixed-point_arithmetic&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q649900" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Fixed-point_arithmetic&amp;id=933284613&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Fixed-point+arithmetic">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Fixed-point+arithmetic&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Fixed-point_arithmetic&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Coma_fixa" title="Coma fixa – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Festkommazahl" title="Festkommazahl – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Coma_fija" title="Coma fija – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Virgule_fixe" title="Virgule fixe – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%A0%95%EC%86%8C%EC%88%98%EC%A0%90" title="고정소수점 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A0%D7%A7%D7%95%D7%93%D7%94_%D7%A7%D7%91%D7%95%D7%A2%D7%94" title="נקודה קבועה – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lmo"><a href="https://lmo.wikipedia.org/wiki/Virgola_fissa" title="Virgola fissa – Lombard" lang="lmo" hreflang="lmo" class="interlanguage-link-target">Lumbaart</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Fixpontos_sz%C3%A1m%C3%A1br%C3%A1zol%C3%A1s" title="Fixpontos számábrázolás – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Vastekommagetal" title="Vastekommagetal – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E5%9B%BA%E5%AE%9A%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0" title="固定小数点数 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Kod_sta%C5%82opozycyjny" title="Kod stałopozycyjny – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D1%81_%D1%84%D0%B8%D0%BA%D1%81%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B9_%D0%B7%D0%B0%D0%BF%D1%8F%D1%82%D0%BE%D0%B9" title="Число с фиксированной запятой – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/Fiksna_vejica" title="Fiksna vejica – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Fixpunktsaritmetik" title="Fixpunktsaritmetik – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D1%83%D1%85%D0%BE%D0%BC%D0%B0_%D0%BA%D0%BE%D0%BC%D0%B0" title="Нерухома кома – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%AE%9A%E7%82%B9%E6%95%B0" title="定点数 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q649900#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 31 December 2019, at 01:07<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Fixed-point_arithmetic&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.300","walltime":"0.454","ppvisitednodes":{"value":1286,"limit":1000000},"postexpandincludesize":{"value":45438,"limit":2097152},"templateargumentsize":{"value":1952,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":22885,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  351.065      1 -total"," 30.25%  106.209      1 Template:Reflist"," 25.20%   88.480      6 Template:Cite_web"," 18.38%   64.528      1 Template:Mergefrom"," 16.63%   58.389      1 Template:Short_description"," 11.78%   41.347      1 Template:Pagetype"," 10.54%   37.015      1 Template:Original_research","  9.52%   33.436      2 Template:Ambox","  9.15%   32.105      1 Template:Mbox","  5.27%   18.517      1 Template:DMC"]},"scribunto":{"limitreport-timeusage":{"value":"0.126","limit":"10.000"},"limitreport-memusage":{"value":4336638,"limit":52428800}},"cachereport":{"origin":"mw1330","timestamp":"20200306195521","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Fixed-point arithmetic","url":"https:\/\/en.wikipedia.org\/wiki\/Fixed-point_arithmetic","sameAs":"http:\/\/www.wikidata.org\/entity\/Q649900","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q649900","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-01-31T23:07:06Z","dateModified":"2019-12-31T01:07:21Z","headline":"computer format for representing real numbers"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":92,"wgHostname":"mw1273"});});</script></body></html>

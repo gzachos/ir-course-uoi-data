@@ -1,0 +1,1448 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Hopfield network - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn94XApAMNUAAmKowcIAAABT","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Hopfield_network","wgTitle":"Hopfield network","wgCurRevisionId":937035994,"wgRevisionId":937035994,"wgArticleId":1170097,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from July 2019","Wikipedia articles needing clarification from July 2019","Artificial neural networks"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Hopfield_network","wgRelevantArticleId":
+1170097,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1407668","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":
+"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Hopfield_network&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Hopfield_network&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Hopfield_network"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Hopfield_network rootpage-Hopfield_network skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Hopfield network</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A <b>Hopfield network</b> is a form of <a href="/wiki/Recurrent_neural_network" title="Recurrent neural network">recurrent</a> <a href="/wiki/Artificial_neural_network" title="Artificial neural network">artificial neural network</a> popularized by <a href="/wiki/John_Hopfield" title="John Hopfield">John Hopfield</a> in 1982, but described earlier by Little in 1974.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> Hopfield nets serve as <a href="/wiki/Content-addressable_memory" title="Content-addressable memory">content-addressable ("associative") memory</a> systems with <a href="/wiki/Binary_numeral_system" class="mw-redirect" title="Binary numeral system">binary</a> threshold <a href="/wiki/Artificial_neuron" title="Artificial neuron">nodes</a>. They are guaranteed to converge to a <a href="/wiki/Local_minimum" class="mw-redirect" title="Local minimum">local minimum</a> and, therefore, may converge to a false pattern (wrong local minimum) rather than the stored pattern (expected local minimum)<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2019)">citation needed</span></a></i>&#93;</sup>. Hopfield networks also provide a model for understanding human memory <sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Structure"><span class="tocnumber">1</span> <span class="toctext">Structure</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Updating"><span class="tocnumber">2</span> <span class="toctext">Updating</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Neurons_&quot;attract_or_repel_each_other&quot;_in_state-space"><span class="tocnumber">2.1</span> <span class="toctext">Neurons "attract or repel each other" in state-space</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Energy"><span class="tocnumber">3</span> <span class="toctext">Energy</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Initialization_and_running"><span class="tocnumber">4</span> <span class="toctext">Initialization and running</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Training"><span class="tocnumber">5</span> <span class="toctext">Training</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Learning_rules"><span class="tocnumber">5.1</span> <span class="toctext">Learning rules</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Hebbian_learning_rule_for_Hopfield_networks"><span class="tocnumber">5.2</span> <span class="toctext">Hebbian learning rule for Hopfield networks</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#The_Storkey_learning_rule"><span class="tocnumber">5.3</span> <span class="toctext">The Storkey learning rule</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Spurious_patterns"><span class="tocnumber">6</span> <span class="toctext">Spurious patterns</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Capacity"><span class="tocnumber">7</span> <span class="toctext">Capacity</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Human_memory"><span class="tocnumber">8</span> <span class="toctext">Human memory</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">9</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Structure">Structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=1" title="Edit section: Structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Hopfield-net.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hopfield-net.png/220px-Hopfield-net.png" decoding="async" width="220" height="229" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/95/Hopfield-net.png/330px-Hopfield-net.png 1.5x, //upload.wikimedia.org/wikipedia/commons/9/95/Hopfield-net.png 2x" data-file-width="406" data-file-height="423" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Hopfield-net.png" class="internal" title="Enlarge"></a></div>A Hopfield net with four units.</div></div></div>
+<p>The units in Hopfield nets are binary threshold units, i.e. the units only take on two different values for their states and the value is determined by whether or not the units' input exceeds their threshold. Hopfield nets normally have units that take on values of 1 or -1, and this convention will be used throughout this article. However, other literature might use units that take values of 0 and 1.
+</p><p>Every pair of units <i>i</i> and <i>j</i> in a Hopfield network has a connection that is described by the connectivity weight <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3302ff355269436b43bc2fbe180303881c09321" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:3.141ex; height:2.343ex;" alt="w_{{ij}}"/></span>. In this sense, the Hopfield network can be formally described as a complete undirected graph <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle G=\langle V,f\rangle }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>G</mi>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">&#x27E8;<!-- ⟨ --></mo>
+        <mi>V</mi>
+        <mo>,</mo>
+        <mi>f</mi>
+        <mo fence="false" stretchy="false">&#x27E9;<!-- ⟩ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle G=\langle V,f\rangle }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3b0fc27adee1f14e146fbc182d6b122d2e14c122" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.834ex; height:2.843ex;" alt="G=\langle V,f\rangle "/></span>, where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle V}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>V</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle V}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/af0f6064540e84211d0ffe4dac72098adfa52845" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.787ex; height:2.176ex;" alt="V"/></span> is a set of <a href="/wiki/Artificial_neuron" title="Artificial neuron">McCulloch-Pitts neurons</a> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f:V^{2}\rightarrow \mathbb {R} }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>:</mo>
+        <msup>
+          <mi>V</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msup>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mi mathvariant="double-struck">R</mi>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f:V^{2}\rightarrow \mathbb {R} }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ddd92351d260120e57fb5c2f9be8d8a0607fe2e4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:11.479ex; height:3.009ex;" alt="{\displaystyle f:V^{2}\rightarrow \mathbb {R} }"/></span> is a function that links pairs of units to a real value, the connectivity weight.
+</p><p>The connections in a Hopfield net typically have the following restrictions:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ii}=0,\forall i}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>0</mn>
+        <mo>,</mo>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>i</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ii}=0,\forall i}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/97b6fdca1fe8f81547faf645e8c33d78cd99cb17" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:10.421ex; height:2.509ex;" alt="w_{{ii}}=0,\forall i"/></span> (no unit has a connection with itself)</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}=w_{ji},\forall i,j}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <mi mathvariant="normal">&#x2200;<!-- ∀ --></mi>
+        <mi>i</mi>
+        <mo>,</mo>
+        <mi>j</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}=w_{ji},\forall i,j}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b4ae69ab089ae9946147b0e777c2b59de0ad3cc5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:14.502ex; height:2.843ex;" alt="w_{{ij}}=w_{{ji}},\forall i,j"/></span> (connections are symmetric)</li></ul>
+<p>The constraint that weights are symmetric guarantees that the energy function decreases monotonically while following the activation rules.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> A network with asymmetric weights may exhibit some periodic or chaotic behaviour; however, Hopfield found that this behavior is confined to relatively small parts of the phase space and does not impair the network's ability to act as a content-addressable associative memory system.
+</p>
+<h2><span class="mw-headline" id="Updating">Updating</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=2" title="Edit section: Updating">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Updating one unit (node in the graph simulating the artificial neuron) in the Hopfield network is performed using the following rule:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}\leftarrow \left\{{\begin{array}{ll}+1&amp;{\mbox{if }}\sum _{j}{w_{ij}s_{j}}\geq \theta _{i},\\-1&amp;{\mbox{otherwise.}}\end{array}}\right.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2190;<!-- ← --></mo>
+        <mrow>
+          <mo>{</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtable columnalign="left left" rowspacing="4pt" columnspacing="1em">
+              <mtr>
+                <mtd>
+                  <mo>+</mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mstyle displaystyle="false" scriptlevel="0">
+                      <mtext>if&#xA0;</mtext>
+                    </mstyle>
+                  </mrow>
+                  <munder>
+                    <mo>&#x2211;<!-- ∑ --></mo>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>j</mi>
+                    </mrow>
+                  </munder>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <msub>
+                      <mi>w</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>i</mi>
+                        <mi>j</mi>
+                      </mrow>
+                    </msub>
+                    <msub>
+                      <mi>s</mi>
+                      <mrow class="MJX-TeXAtom-ORD">
+                        <mi>j</mi>
+                      </mrow>
+                    </msub>
+                  </mrow>
+                  <mo>&#x2265;<!-- ≥ --></mo>
+                  <msub>
+                    <mi>&#x03B8;<!-- θ --></mi>
+                    <mrow class="MJX-TeXAtom-ORD">
+                      <mi>i</mi>
+                    </mrow>
+                  </msub>
+                  <mo>,</mo>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mo>&#x2212;<!-- − --></mo>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mstyle displaystyle="false" scriptlevel="0">
+                      <mtext>otherwise.</mtext>
+                    </mstyle>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo fence="true" stretchy="true" symmetric="true"></mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}\leftarrow \left\{{\begin{array}{ll}+1&amp;{\mbox{if }}\sum _{j}{w_{ij}s_{j}}\geq \theta _{i},\\-1&amp;{\mbox{otherwise.}}\end{array}}\right.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/51bde00a098863746803bf9dabc2d0601c4367fd" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:30.146ex; height:6.509ex;" alt="s_{i}\leftarrow \left\{{\begin{array}{ll}+1&amp;{\mbox{if }}\sum _{{j}}{w_{{ij}}s_{j}}\geq \theta _{i},\\-1&amp;{\mbox{otherwise.}}\end{array}}\right."/></span>
+</p><p>where:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3302ff355269436b43bc2fbe180303881c09321" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:3.141ex; height:2.343ex;" alt="w_{ij}"/></span> is the strength of the connection weight from unit j to unit i (the weight of the connection).</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cfda82668232cbdc0874ed28ab8b6079420d1ffe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.89ex; height:2.009ex;" alt="s_{i}"/></span> is the state of unit i.</li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \theta _{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03B8;<!-- θ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \theta _{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/302b19204ed378e99ff4575341a67eebdbe5a555" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.89ex; height:2.509ex;" alt="\theta _{i}"/></span> is the threshold of unit i.</li></ul>
+<p>Updates in the Hopfield network can be performed in two different ways:
+</p>
+<ul><li><b>Asynchronous</b>: Only one unit is updated at a time. This unit can be picked at random, or a pre-defined order can be imposed from the very beginning.</li>
+<li><b>Synchronous</b>: All units are updated at the same time. This requires a central clock to the system in order to maintain synchronization. This method is viewed by some as less realistic, based on an absence of observed global clock influencing analogous biological or physical systems of interest.</li></ul>
+<h3><span id="Neurons_.22attract_or_repel_each_other.22_in_state-space"></span><span class="mw-headline" id="Neurons_&quot;attract_or_repel_each_other&quot;_in_state-space">Neurons "attract or repel each other" in state-space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=3" title="Edit section: Neurons &quot;attract or repel each other&quot; in state-space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The weight between two units has a powerful impact upon the values of the neurons. Consider the connection weight <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3302ff355269436b43bc2fbe180303881c09321" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:3.141ex; height:2.343ex;" alt="w_{ij}"/></span> between two neurons i and j. If <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}&gt;0}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>&gt;</mo>
+        <mn>0</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}&gt;0}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7b36b172a1955f56135fcdd26187a2f0d3bfef27" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:7.402ex; height:2.843ex;" alt="w_{{ij}}&gt;0"/></span>, the updating rule implies that:
+</p>
+<ul><li>when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{j}=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{j}=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/407881f6b506cb6736f786ab8f50f6b104ee0cbf" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:6.261ex; height:2.843ex;" alt="s_{{j}}=1"/></span>, the contribution of j in the weighted sum is positive. Thus, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cfda82668232cbdc0874ed28ab8b6079420d1ffe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.89ex; height:2.009ex;" alt="s_{{i}}"/></span> is pulled by j towards its value <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}=1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}=1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8757dc8386d9685bf56c6f638c028507ce3845aa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:6.151ex; height:2.509ex;" alt="{\displaystyle s_{i}=1}"/></span></li>
+<li>when <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{j}=-1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{j}=-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e6377c66e7078f6d238fe861a66945600bbfd8c7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:8.069ex; height:2.843ex;" alt="s_{{j}}=-1"/></span>, the contribution of j in the weighted sum is negative. Then again, <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cfda82668232cbdc0874ed28ab8b6079420d1ffe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.89ex; height:2.009ex;" alt="s_{{i}}"/></span> is pushed by j towards its value <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle s_{i}=-1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>s</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle s_{i}=-1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d04af9f3edaf64b95037f92d379da7586bf91836" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.959ex; height:2.509ex;" alt="{\displaystyle s_{i}=-1}"/></span></li></ul>
+<p>Thus, the values of neurons i and j will converge if the weight between them is positive. Similarly, they will diverge if the weight is negative.
+</p>
+<h2><span class="mw-headline" id="Energy">Energy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=4" title="Edit section: Energy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:502px;"><a href="/wiki/File:Energy_landscape.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Energy_landscape.png/500px-Energy_landscape.png" decoding="async" width="500" height="177" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/49/Energy_landscape.png/750px-Energy_landscape.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/49/Energy_landscape.png/1000px-Energy_landscape.png 2x" data-file-width="1581" data-file-height="560" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Energy_landscape.png" class="internal" title="Enlarge"></a></div>Energy Landscape of a Hopfield Network, highlighting the current state of the network (up the hill), an attractor state to which it will eventually converge, a minimum energy level and a basin of attraction shaded in green. Note how the update of the Hopfield Network is always going down in Energy.</div></div></div>
+<p>Hopfield nets have a scalar value associated with each state of the network, referred to as the "energy", E, of the network, where:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle E=-{\frac {1}{2}}\sum _{i,j}{w_{ij}{s_{i}}{s_{j}}}+\sum _{i}{\theta _{i}}{s_{i}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>E</mi>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>,</mo>
+            <mi>j</mi>
+          </mrow>
+        </munder>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>w</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+              <mi>j</mi>
+            </mrow>
+          </msub>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>s</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>s</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>j</mi>
+              </mrow>
+            </msub>
+          </mrow>
+        </mrow>
+        <mo>+</mo>
+        <munder>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </munder>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>&#x03B8;<!-- θ --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msub>
+            <mi>s</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle E=-{\frac {1}{2}}\sum _{i,j}{w_{ij}{s_{i}}{s_{j}}}+\sum _{i}{\theta _{i}}{s_{i}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/76ad57f7823ca1b74ab67b5f3dadbc83d24da7c2" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:30.204ex; height:6.676ex;" alt="E=-{\frac  12}\sum _{{i,j}}{w_{{ij}}{s_{i}}{s_{j}}}+\sum _{i}{\theta _{i}}{s_{i}}"/></span></dd></dl>
+<p>This quantity is called "energy" because it either decreases or stays the same upon network units being updated. Furthermore, under repeated updating the network will eventually converge to a state which is a <a href="/wiki/Local_minimum" class="mw-redirect" title="Local minimum">local minimum</a> in the energy function<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2019)">citation needed</span></a></i>&#93;</sup> (which is considered to be a <a href="/wiki/Lyapunov_function" title="Lyapunov function">Lyapunov function</a>). Thus, if a state is a local minimum in the energy function it is a stable state for the network. Note that this energy function belongs to a general class of models in <a href="/wiki/Physics" title="Physics">physics</a> under the name of <a href="/wiki/Ising_model" title="Ising model">Ising models</a>; these in turn are a special case of <a href="/wiki/Markov_networks" class="mw-redirect" title="Markov networks">Markov networks</a>, since the associated <a href="/wiki/Probability_measure" title="Probability measure">probability measure</a>, the <a href="/wiki/Gibbs_measure" title="Gibbs measure">Gibbs measure</a>, has the <a href="/wiki/Markov_property" title="Markov property">Markov property</a>.
+</p>
+<h2><span class="mw-headline" id="Initialization_and_running">Initialization and running</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=5" title="Edit section: Initialization and running">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Initialization of the Hopfield Networks is done by setting the values of the units to the desired start pattern. Repeated updates are then performed until the network converges to an attractor pattern.  Convergence is generally assured, as Hopfield proved that the attractors of this <a href="/wiki/Nonlinear_dynamical_system" class="mw-redirect" title="Nonlinear dynamical system">nonlinear dynamical system</a> are stable, not periodic or chaotic as in some other systems<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2019)">citation needed</span></a></i>&#93;</sup>.  Therefore, in the context of Hopfield Networks, an attractor pattern is a final stable state, a pattern that cannot change any value within it under updating<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2019)">citation needed</span></a></i>&#93;</sup>.
+</p>
+<h2><span class="mw-headline" id="Training">Training</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=6" title="Edit section: Training">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Training a Hopfield net involves lowering the energy of states that the net should "remember". This allows the net to serve as a content addressable memory system, that is to say, the network will converge to a "remembered" state if it is given only part of the state. The net can be used to recover from a distorted input to the trained state that is most similar to that input. This is called associative memory because it recovers memories on the basis of similarity. For example, if we train a Hopfield net with five units so that the state (1, -1, 1, -1, 1) is an energy minimum, and we give the network the state (1, -1, -1, -1, 1) it will converge to (1, -1, 1, -1, 1). Thus, the network is properly trained when the energy of states which the network should remember are local minima. Note that, in contrast to <a href="/wiki/Perceptron#Learning_algorithm" title="Perceptron">Perceptron</a> training, the thresholds of the neurons are never updated.
+</p>
+<h3><span class="mw-headline" id="Learning_rules">Learning rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=7" title="Edit section: Learning rules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are various different <a href="/wiki/Learning_rule" title="Learning rule">learning rules</a> that can be used to store information in the memory of the Hopfield Network. It is desirable for a learning rule to have both of the following two properties:
+</p>
+<ul><li><i>Local</i>: A learning rule is <i>local</i> if each weight is updated using information available to neurons on either side of the connection that is associated with that particular weight.</li>
+<li><i>Incremental</i>: New patterns can be learned without using information from the old patterns that have been also used for training. That is, when a new pattern is used for training, the new values for the weights only depend on the old values and on the new pattern.<sup id="cite_ref-storkey1991basins_6-0" class="reference"><a href="#cite_note-storkey1991basins-6">&#91;6&#93;</a></sup></li></ul>
+<p>These properties are desirable, since a learning rule satisfying them is more biologically plausible. For example, since the human brain is always learning new concepts, one can reason that human learning is incremental. A learning system that was not incremental would generally be trained only once, with a huge batch of training data.
+</p>
+<h3><span class="mw-headline" id="Hebbian_learning_rule_for_Hopfield_networks">Hebbian learning rule for Hopfield networks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=8" title="Edit section: Hebbian learning rule for Hopfield networks">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="/wiki/Hebbian_theory" title="Hebbian theory">Hebbian Theory</a> was introduced by Donald Hebb in 1949, in order to explain "associative learning", in which simultaneous activation of neuron cells leads to pronounced increases in synaptic strength between those cells.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> It is often summarized as "Neurons that fire together, wire together. Neurons that fire out of sync, fail to link".
+</p><p>The Hebbian rule is both local and incremental. For the Hopfield Networks, it is implemented in the following manner, when learning <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.395ex; height:1.676ex;" alt="n"/></span>
+binary patterns:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}={\frac {1}{n}}\sum _{\mu =1}^{n}\epsilon _{i}^{\mu }\epsilon _{j}^{\mu }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+        </mrow>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}={\frac {1}{n}}\sum _{\mu =1}^{n}\epsilon _{i}^{\mu }\epsilon _{j}^{\mu }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8905ae2c3d4c95f6f7d5983e40005ee0df12c3f9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.338ex; width:16.935ex; height:7.176ex;" alt="w_{{ij}}={\frac  {1}{n}}\sum _{{\mu =1}}^{{n}}\epsilon _{{i}}^{\mu }\epsilon _{{j}}^{\mu }"/></span>
+</p><p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon _{i}^{\mu }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon _{i}^{\mu }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cdfce56a4cf94f01865ed5001b98e0c10174b96a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:2.168ex; height:3.176ex;" alt="\epsilon _{i}^{\mu }"/></span> represents bit i from pattern <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BC;<!-- μ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fd47b2a39f7a7856952afec1f1db72c67af6161" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.402ex; height:2.176ex;" alt="\mu "/></span>.
+</p><p>If the bits corresponding to neurons i and j are equal in pattern <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03BC;<!-- μ --></mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9fd47b2a39f7a7856952afec1f1db72c67af6161" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:1.402ex; height:2.176ex;" alt="\mu "/></span>, then the product  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon _{i}^{\mu }\epsilon _{j}^{\mu }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BC;<!-- μ --></mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon _{i}^{\mu }\epsilon _{j}^{\mu }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8fa27c1d69953fddf52b6bcccf2820b14831d58a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.338ex; width:4.335ex; height:3.509ex;" alt="\epsilon _{{i}}^{\mu }\epsilon _{{j}}^{\mu }"/></span> will be positive. This would, in turn, have a positive effect on the weight <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d3302ff355269436b43bc2fbe180303881c09321" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:3.141ex; height:2.343ex;" alt="w_{ij} "/></span> and the values of i and j will tend to become equal. The opposite happens if the bits corresponding to neurons i and j are different.
+</p>
+<h3><span class="mw-headline" id="The_Storkey_learning_rule">The Storkey learning rule</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=9" title="Edit section: The Storkey learning rule">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This rule was introduced by <a href="/w/index.php?title=Amos_Storkey&amp;action=edit&amp;redlink=1" class="new" title="Amos Storkey (page does not exist)">Amos Storkey</a> in 1997 and is both local and incremental. Storkey also showed that a Hopfield network trained using this rule has a greater capacity than a corresponding network trained using the Hebbian rule.<sup id="cite_ref-storkey1997_8-0" class="reference"><a href="#cite_note-storkey1997-8">&#91;8&#93;</a></sup> The weight matrix of an attractor neural network<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="What is an attractor NN? (July 2019)">clarification needed</span></a></i>&#93;</sup> is said to follow the Storkey learning rule if it obeys:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{ij}^{\nu }=w_{ij}^{\nu -1}+{\frac {1}{n}}\epsilon _{i}^{\nu }\epsilon _{j}^{\nu }-{\frac {1}{n}}\epsilon _{i}^{\nu }h_{ji}^{\nu }-{\frac {1}{n}}\epsilon _{j}^{\nu }h_{ij}^{\nu }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <msubsup>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msubsup>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+        </mrow>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+        </mrow>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>h</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>n</mi>
+          </mfrac>
+        </mrow>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>h</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{ij}^{\nu }=w_{ij}^{\nu -1}+{\frac {1}{n}}\epsilon _{i}^{\nu }\epsilon _{j}^{\nu }-{\frac {1}{n}}\epsilon _{i}^{\nu }h_{ji}^{\nu }-{\frac {1}{n}}\epsilon _{j}^{\nu }h_{ij}^{\nu }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e0b194a405a470e54aacef9e75ced89d02f60844" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:40.144ex; height:5.176ex;" alt="w_{{ij}}^{{\nu }}=w_{{ij}}^{{\nu -1}}+{\frac  {1}{n}}\epsilon _{{i}}^{{\nu }}\epsilon _{{j}}^{{\nu }}-{\frac  {1}{n}}\epsilon _{{i}}^{{\nu }}h_{{ji}}^{{\nu }}-{\frac  {1}{n}}\epsilon _{{j}}^{{\nu }}h_{{ij}}^{{\nu }}"/></span>
+</p><p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle h_{ij}^{\nu }=\sum _{k=1~:~i\neq k\neq j}^{n}w_{ik}^{\nu -1}\epsilon _{k}^{\nu }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>h</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+            <mtext>&#xA0;</mtext>
+            <mo>:</mo>
+            <mtext>&#xA0;</mtext>
+            <mi>i</mi>
+            <mo>&#x2260;<!-- ≠ --></mo>
+            <mi>k</mi>
+            <mo>&#x2260;<!-- ≠ --></mo>
+            <mi>j</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <msubsup>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mi>k</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msubsup>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03BD;<!-- ν --></mi>
+          </mrow>
+        </msubsup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h_{ij}^{\nu }=\sum _{k=1~:~i\neq k\neq j}^{n}w_{ik}^{\nu -1}\epsilon _{k}^{\nu }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec367064374a97b424358138bc69a7ebf441ab0d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.505ex; width:22.452ex; height:7.343ex;" alt="{\displaystyle h_{ij}^{\nu }=\sum _{k=1~:~i\neq k\neq j}^{n}w_{ik}^{\nu -1}\epsilon _{k}^{\nu }}"/></span> is a form of <i>local field</i> <sup id="cite_ref-storkey1991basins_6-1" class="reference"><a href="#cite_note-storkey1991basins-6">&#91;6&#93;</a></sup> at neuron i.
+</p><p>This learning rule is local, since the synapses take into account only neurons at their sides. The rule makes use of more information from the patterns and weights than the generalized Hebbian rule, due to the effect of the local field.
+</p>
+<h2><span class="mw-headline" id="Spurious_patterns">Spurious patterns</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=10" title="Edit section: Spurious patterns">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Patterns that the network uses for training (called <i>retrieval states</i>) become attractors of the system. Repeated updates would eventually lead to convergence to one of the retrieval states. However, sometimes the network will converge to spurious patterns (different from the training patterns).<sup id="cite_ref-hertz1991neural_9-0" class="reference"><a href="#cite_note-hertz1991neural-9">&#91;9&#93;</a></sup> The energy in these spurious patterns is also a local minimum. For each stored pattern x, the negation -x is also a spurious pattern.
+</p><p>A spurious state can also be a <a href="/wiki/Linear_combination" title="Linear combination">linear combination</a> of an odd number of retrieval states. For example, when using 3 patterns <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \mu _{1},\mu _{2},\mu _{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>&#x03BC;<!-- μ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>&#x03BC;<!-- μ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>&#x03BC;<!-- μ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \mu _{1},\mu _{2},\mu _{3}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b7434d597455fa305d991ff425cbe073237bc6e7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.436ex; height:2.176ex;" alt="\mu _{1},\mu _{2},\mu _{3}"/></span>, one can get the following spurious state:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \epsilon _{i}^{\rm {mix}}=\pm \operatorname {sgn}(\pm \epsilon _{i}^{\mu _{1}}\pm \epsilon _{i}^{\mu _{2}}\pm \epsilon _{i}^{\mu _{3}})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi mathvariant="normal">m</mi>
+              <mi mathvariant="normal">i</mi>
+              <mi mathvariant="normal">x</mi>
+            </mrow>
+          </mrow>
+        </msubsup>
+        <mo>=</mo>
+        <mo>&#x00B1;<!-- ± --></mo>
+        <mi>sgn</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x00B1;<!-- ± --></mo>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>1</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </msubsup>
+        <mo>&#x00B1;<!-- ± --></mo>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </msubsup>
+        <mo>&#x00B1;<!-- ± --></mo>
+        <msubsup>
+          <mi>&#x03F5;<!-- ϵ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msub>
+              <mi>&#x03BC;<!-- μ --></mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>3</mn>
+              </mrow>
+            </msub>
+          </mrow>
+        </msubsup>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \epsilon _{i}^{\rm {mix}}=\pm \operatorname {sgn}(\pm \epsilon _{i}^{\mu _{1}}\pm \epsilon _{i}^{\mu _{2}}\pm \epsilon _{i}^{\mu _{3}})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fdf25205434b94205cd870294843b82ab6265f14" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.005ex; width:30.831ex; height:3.176ex;" alt="{\displaystyle \epsilon _{i}^{\rm {mix}}=\pm \operatorname {sgn}(\pm \epsilon _{i}^{\mu _{1}}\pm \epsilon _{i}^{\mu _{2}}\pm \epsilon _{i}^{\mu _{3}})}"/></span>
+</p><p>Spurious patterns that have an even number of states cannot exist, since they might sum up to zero <sup id="cite_ref-hertz1991neural_9-1" class="reference"><a href="#cite_note-hertz1991neural-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Capacity">Capacity</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=11" title="Edit section: Capacity">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Network capacity of the Hopfield network model is determined by neuron amounts and connections within a given network. Therefore, the number of memories that are able to be stored is dependent on neurons and connections. Furthermore, it was shown that the recall accuracy between vectors and nodes was 0.138 (approximately 138 vectors can be recalled from storage for every 1000 nodes) (Hertz et al., 1991). Therefore, it is evident that many mistakes will occur if one tries to store a large number of vectors. When the Hopfield model does not recall the right pattern, it is possible that an intrusion has taken place, since semantically related items tend to confuse the individual, and recollection of the wrong pattern occurs. Therefore, the Hopfield network model is shown to confuse one stored item with that of another upon retrieval. Perfect recalls and high capacity, &gt;0.14, can be loaded in the network by Storkey learning method; ETAM<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>, ETAM experiments also in <sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>. Ulterior models inspired by the Hopfield network were later devised to raise the storage limit and reduce the retrieval error rate, with some being capable of <a href="/wiki/One-shot_learning" title="One-shot learning">one-shot learning</a>.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Human_memory">Human memory</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=12" title="Edit section: Human memory">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Hopfield model accounts for <a href="/wiki/Association_(psychology)" title="Association (psychology)">associative</a> <a href="/wiki/Memory" title="Memory">memory</a> through the incorporation of memory vectors. Memory vectors can be slightly used, and this would spark the retrieval of the most similar vector in the network. However, we will find out that due to this process, intrusions can occur. In associative memory for the Hopfield network, there are two types of operations: auto-association and hetero-association. The first being when a vector is associated with itself, and the latter being when two different vectors are associated in storage. Furthermore, both types of operations are possible to store within a single memory matrix, but only if that given representation matrix is not one or the other of the operations, but rather the combination (auto-associative and hetero-associative) of the two. It is important to note that Hopfield's network model utilizes the same learning rule as <a href="/wiki/Hebbian_theory" title="Hebbian theory">Hebb's (1949) learning rule</a>, which basically tried to show that learning occurs as a result of the strengthening of the weights by when activity is occurring.
+</p><p>Rizzuto and Kahana (2001) were able to show that the neural network model can account for repetition on recall accuracy by incorporating a probabilistic-learning algorithm. During the retrieval process, no learning occurs. As a result, the weights of the network remain fixed, showing that the model is able to switch from a learning stage to a recall stage. By adding contextual drift they were able to show the rapid forgetting that occurs in a Hopfield model during a cued-recall task. The entire network contributes to the change in the activation of any single node.
+</p><p>McCulloch and Pitts' (1943) dynamical rule, which describes the behavior of neurons, does so in a way that shows how the activations of multiple neurons map onto the activation of a new neuron's firing rate, and how the weights of the neurons strengthen the synaptic connections between the new activated neuron (and those that activated it). Hopfield would use McCulloch-Pitts's dynamical rule in order to show how retrieval is possible in the Hopfield network. However, it is important to note that Hopfield would do so in a repetitious fashion. Hopfield would use a nonlinear activation function, instead of using a linear function. This would therefore create the Hopfield dynamical rule and with this, Hopfield was able to show that with the nonlinear activation function, the dynamical rule will always modify the values of the state vector in the direction of one of the stored patterns.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Associative_memory_(disambiguation)" class="mw-redirect mw-disambig" title="Associative memory (disambiguation)">Associative memory (disambiguation)</a></li>
+<li><a href="/wiki/Autoassociative_memory" title="Autoassociative memory">Autoassociative memory</a></li>
+<li><a href="/wiki/Boltzmann_machine" title="Boltzmann machine">Boltzmann machine</a> – like a Hopfield net but uses annealed Gibbs sampling instead of gradient descent</li>
+<li><a href="/wiki/Cognitive_model#Associative_memory" title="Cognitive model">Dynamical systems model of cognition</a></li>
+<li><a href="/wiki/Ising_model" title="Ising model">Ising model</a></li>
+<li><a href="/wiki/Hebbian_theory" title="Hebbian theory">Hebbian theory</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation book">Gurney, Kevin (2002). <i>An Introduction to Neural Networks</i>. Routledge. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1857285031" title="Special:BookSources/978-1857285031"><bdi>978-1857285031</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=An+Introduction+to+Neural+Networks&amp;rft.pub=Routledge&amp;rft.date=2002&amp;rft.isbn=978-1857285031&amp;rft.aulast=Gurney&amp;rft.aufirst=Kevin&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation arxiv">Sathasivam, Saratha (2008). "Logic Learning in Hopfield Networks". <a href="/wiki/ArXiv" title="ArXiv">arXiv</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//arxiv.org/abs/0804.4075">0804.4075</a></span> [<a rel="nofollow" class="external text" href="//arxiv.org/archive/cs.LO">cs.LO</a>].</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=preprint&amp;rft.jtitle=arXiv&amp;rft.atitle=Logic+Learning+in+Hopfield+Networks&amp;rft.date=2008&amp;rft_id=info%3Aarxiv%2F0804.4075&amp;rft.aulast=Sathasivam&amp;rft.aufirst=Saratha&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">Amit, Daniel J. Modeling brain function: The world of attractor neural networks. Cambridge university press, 1992</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Rolls, Edmund T. Cerebral cortex: principles of operation. Oxford University Press, 2016</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/David_J.C._MacKay" class="mw-redirect" title="David J.C. MacKay">MacKay, David J. C.</a> (2003). "42. Hopfield Networks". <i>Information Theory, Inference and Learning Algorithms</i>. <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a>. p.&#160;508. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0521642989" title="Special:BookSources/978-0521642989"><bdi>978-0521642989</bdi></a>. <q>This convergence proof depends crucially on the fact that the Hopfield network's connections are <i>symmetric</i>. It also depends on the updates being made asynchronously.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=42.+Hopfield+Networks&amp;rft.btitle=Information+Theory%2C+Inference+and+Learning+Algorithms&amp;rft.pages=508&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2003&amp;rft.isbn=978-0521642989&amp;rft.aulast=MacKay&amp;rft.aufirst=David+J.+C.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-storkey1991basins-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-storkey1991basins_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-storkey1991basins_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Storkey, Amos J., and Romain Valabregue. "The basins of attraction of a new Hopfield learning rule." Neural Networks 12.6 (1999): <a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.19.4681&amp;rep=rep1&amp;type=pdf">869-876</a>.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text">Hebb, Donald Olding. The organization of behavior: A neuropsychological theory. Lawrence Erlbaum, 2002.</span>
+</li>
+<li id="cite_note-storkey1997-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-storkey1997_8-0">^</a></b></span> <span class="reference-text">Storkey, Amos. "Increasing the capacity of a Hopfield network without sacrificing functionality." Artificial Neural Networks – ICANN'97 (1997): <a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.33.103&amp;rep=rep1&amp;type=pdf">451-456</a>.</span>
+</li>
+<li id="cite_note-hertz1991neural-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-hertz1991neural_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-hertz1991neural_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Hertz, John A., Anders S. Krogh, and Richard G. Palmer. Introduction to the theory of neural computation. Vol. 1. Westview press, 1991.</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation journal">Liou, C.-Y.; Lin, S.-L. (2006). "Finite memory loading in hairy neurons". <i>Natural Computing</i>. <b>5</b> (1): 15–42. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fs11047-004-5490-x">10.1007/s11047-004-5490-x</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Natural+Computing&amp;rft.atitle=Finite+memory+loading+in+hairy+neurons&amp;rft.volume=5&amp;rft.issue=1&amp;rft.pages=15-42&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1007%2Fs11047-004-5490-x&amp;rft.aulast=Liou&amp;rft.aufirst=C.-Y.&amp;rft.au=Lin%2C+S.-L.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation journal">Liou, C.-Y.; Yuan, S.-K. (1999). "Error Tolerant Associative Memory". <i>Biological Cybernetics</i>. <b>81</b> (4): 331–342. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2Fs004220050566">10.1007/s004220050566</a>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/10541936">10541936</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Biological+Cybernetics&amp;rft.atitle=Error+Tolerant+Associative+Memory&amp;rft.volume=81&amp;rft.issue=4&amp;rft.pages=331-342&amp;rft.date=1999&amp;rft_id=info%3Adoi%2F10.1007%2Fs004220050566&amp;rft_id=info%3Apmid%2F10541936&amp;rft.aulast=Liou&amp;rft.aufirst=C.-Y.&amp;rft.au=Yuan%2C+S.-K.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation thesis">Yuan, S.-K. (June 1997). <a rel="nofollow" class="external text" href="https://ntu.primo.exlibrisgroup.com/discovery/fulldisplay?vid=886NTU_INST:886NTU_INST&amp;search_scope=MyInstitution&amp;tab=LibraryCatalog&amp;docid=alma991010725609704786&amp;lang=en&amp;context=L&amp;adaptor=Local%20Search%20Engine&amp;query=any,contains,%E5%8A%89%E9%95%B7%E9%81%A0&amp;facet=rtype,include,manuscripts&amp;facet=searchcreationdate,include,1977%7C,%7C2019&amp;facet=searchcreationdate,include,1992%7C,%7C2010&amp;offset=0"><i>Expanding basins of attraction of the associative memory</i></a> (Master thesis). National Taiwan University. 991010725609704786.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.title=Expanding+basins+of+attraction+of+the+associative+memory&amp;rft.degree=Master&amp;rft.inst=National+Taiwan+University&amp;rft.date=1997-06&amp;rft.aulast=Yuan&amp;rft.aufirst=S.-K.&amp;rft_id=https%3A%2F%2Fntu.primo.exlibrisgroup.com%2Fdiscovery%2Ffulldisplay%3Fvid%3D886NTU_INST%3A886NTU_INST%26search_scope%3DMyInstitution%26tab%3DLibraryCatalog%26docid%3Dalma991010725609704786%26lang%3Den%26context%3DL%26adaptor%3DLocal%2520Search%2520Engine%26query%3Dany%2Ccontains%2C%25E5%258A%2589%25E9%2595%25B7%25E9%2581%25A0%26facet%3Drtype%2Cinclude%2Cmanuscripts%26facet%3Dsearchcreationdate%2Cinclude%2C1977%257C%2C%257C2019%26facet%3Dsearchcreationdate%2Cinclude%2C1992%257C%2C%257C2010%26offset%3D0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation journal">ABOUDIB, Ala; GRIPON, Vincent; JIANG, Xiaoran (2014). <a rel="nofollow" class="external text" href="https://hal.archives-ouvertes.fr/hal-01058303/">"A study of retrieval algorithms of sparse messages in networks of neural cliques"</a>. <i>COGNITIVE 2014&#160;: The 6th International Conference on Advanced Cognitive Technologies and Applications</i>: 140–146.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=COGNITIVE+2014+%3A+The+6th+International+Conference+on+Advanced+Cognitive+Technologies+and+Applications&amp;rft.atitle=A+study+of+retrieval+algorithms+of+sparse+messages+in+networks+of+neural+cliques&amp;rft.pages=140-146&amp;rft.date=2014&amp;rft.aulast=ABOUDIB&amp;rft.aufirst=Ala&amp;rft.au=GRIPON%2C+Vincent&amp;rft.au=JIANG%2C+Xiaoran&amp;rft_id=https%3A%2F%2Fhal.archives-ouvertes.fr%2Fhal-01058303%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<style data-mw-deduplicate="TemplateStyles:r886047268">.mw-parser-output .refbegin{font-size:90%;margin-bottom:0.5em}.mw-parser-output .refbegin-hanging-indents>ul{list-style-type:none;margin-left:0}.mw-parser-output .refbegin-hanging-indents>ul>li,.mw-parser-output .refbegin-hanging-indents>dl>dd{margin-left:0;padding-left:3.2em;text-indent:-3.2em;list-style:none}.mw-parser-output .refbegin-100{font-size:100%}</style><div class="refbegin reflist" style="">
+<ul><li>J. J. Hopfield, <a rel="nofollow" class="external text" href="https://www.pnas.org/content/pnas/79/8/2554.full.pdf">"Neural networks and physical systems with emergent collective computational abilities"</a>, <i>Proceedings of the National Academy of Sciences of the USA</i>, vol. 79 no. 8 pp.&#160;2554–2558, April 1982.</li>
+<li>Hebb, D.O. (1949). Organization of behavior. New York: Wiley</li>
+<li>Hertz, J., Krogh, A., &amp; Palmer, R.G. (1991). Introduction to the theory of neural computation. Redwood City, CA: Addison-Wesley.</li>
+<li><cite class="citation journal">McCulloch, W.S.; Pitts, W.H. (1943). "A logical calculus of the ideas immanent in nervous activity". <i>Bulletin of Mathematical Biophysics</i>. <b>5</b> (4): 115–133. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2FBF02478259">10.1007/BF02478259</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Bulletin+of+Mathematical+Biophysics&amp;rft.atitle=A+logical+calculus+of+the+ideas+immanent+in+nervous+activity&amp;rft.volume=5&amp;rft.issue=4&amp;rft.pages=115-133&amp;rft.date=1943&amp;rft_id=info%3Adoi%2F10.1007%2FBF02478259&amp;rft.aulast=McCulloch&amp;rft.aufirst=W.S.&amp;rft.au=Pitts%2C+W.H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation journal">Polyn, S.M.; Kahana, M.J. (2008). <a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2839453">"Memory search and the neural representation of context"</a>. <i>Trends in Cognitive Sciences</i>. <b>12</b> (1): 24–30. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.tics.2007.10.010">10.1016/j.tics.2007.10.010</a>. <a href="/wiki/PubMed_Central" title="PubMed Central">PMC</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//www.ncbi.nlm.nih.gov/pmc/articles/PMC2839453">2839453</a></span>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/18069046">18069046</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Trends+in+Cognitive+Sciences&amp;rft.atitle=Memory+search+and+the+neural+representation+of+context&amp;rft.volume=12&amp;rft.issue=1&amp;rft.pages=24-30&amp;rft.date=2008&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2839453&amp;rft_id=info%3Apmid%2F18069046&amp;rft_id=info%3Adoi%2F10.1016%2Fj.tics.2007.10.010&amp;rft.aulast=Polyn&amp;rft.aufirst=S.M.&amp;rft.au=Kahana%2C+M.J.&amp;rft_id=%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2839453&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation journal">Rizzuto, D.S.; Kahana, M.J. (2001). "An autoassociative neural network model of paired-associate learning". <i>Neural Computation</i>. <b>13</b> (9): 2075–2092. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.45.7929">10.1.1.45.7929</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1162%2F089976601750399317">10.1162/089976601750399317</a>. <a href="/wiki/PubMed_Identifier" class="mw-redirect" title="PubMed Identifier">PMID</a>&#160;<a rel="nofollow" class="external text" href="//pubmed.ncbi.nlm.nih.gov/11516358">11516358</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Neural+Computation&amp;rft.atitle=An+autoassociative+neural+network+model+of+paired-associate+learning&amp;rft.volume=13&amp;rft.issue=9&amp;rft.pages=2075-2092&amp;rft.date=2001&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.45.7929&amp;rft_id=info%3Apmid%2F11516358&amp;rft_id=info%3Adoi%2F10.1162%2F089976601750399317&amp;rft.aulast=Rizzuto&amp;rft.aufirst=D.S.&amp;rft.au=Kahana%2C+M.J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHopfield+network" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li>Kruse, Borgelt, Klawonn, Moewes, Russ, Steinbrecher (2011). Computational Intelligence.</li></ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Hopfield_network&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Hopfield_net" class="extiw" title="commons:Hopfield net">Hopfield net</a></b></i>.</td></tr>
+</tbody></table>
+<ul><li>Chapter 13 <a rel="nofollow" class="external text" href="http://page.mi.fu-berlin.de/rojas/neural/chapter/K13.pdf">The Hopfield model</a> of <a rel="nofollow" class="external text" href="http://page.mi.fu-berlin.de/rojas/neural/index.html.html"><i>Neural Networks - A Systematic Introduction</i></a> by Raul Rojas (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-60505-8" title="Special:BookSources/978-3-540-60505-8">978-3-540-60505-8</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://www.heatonresearch.com/aifh/vol3/hopfield.html">Hopfield Network Javascript</a></li>
+<li><a rel="nofollow" class="external text" href="http://to-campos.planetaclix.pt/neural/hope.html">The Travelling Salesman Problem</a> - Hopfield Neural Network JAVA Applet</li>
+<li><a rel="nofollow" class="external text" href="http://www.scholarpedia.org/article/Hopfield_network">scholarpedia.org- Hopfield network</a> - Article on Hopfield Networks by John Hopfield</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20111005202201/http://www.tristanfletcher.co.uk/DLVHopfield.pdf">Hopfield Network Learning Using Deterministic Latent Variables</a> - Tutorial by Tristan Fletcher</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20121025125326/http://gna.org/projects/neurallab/">Neural Lab Graphical Interface</a> - Hopfield Neural Network graphical interface (Python &amp; gtk)</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Stochastic_processes" style="padding:3px"><table class="nowraplinks mw-collapsible uncollapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Stochastic_processes" title="Template:Stochastic processes"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Stochastic_processes" title="Template talk:Stochastic processes"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Stochastic_processes&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Stochastic_processes" style="font-size:114%;margin:0 4em"><a href="/wiki/Stochastic_process" title="Stochastic process">Stochastic processes</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Discrete-time_stochastic_process" class="mw-redirect" title="Discrete-time stochastic process">Discrete time</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bernoulli_process" title="Bernoulli process">Bernoulli process</a></li>
+<li><a href="/wiki/Branching_process" title="Branching process">Branching process</a></li>
+<li><a href="/wiki/Chinese_restaurant_process" title="Chinese restaurant process">Chinese restaurant process</a></li>
+<li><a href="/wiki/Galton%E2%80%93Watson_process" title="Galton–Watson process">Galton–Watson process</a></li>
+<li><a href="/wiki/Independent_and_identically_distributed_random_variables" title="Independent and identically distributed random variables">Independent and identically distributed random variables</a></li>
+<li><a href="/wiki/Markov_chain" title="Markov chain">Markov chain</a></li>
+<li><a href="/wiki/Moran_process" title="Moran process">Moran process</a></li>
+<li><a href="/wiki/Random_walk" title="Random walk">Random walk</a>
+<ul><li><a href="/wiki/Loop-erased_random_walk" title="Loop-erased random walk">Loop-erased</a></li>
+<li><a href="/wiki/Self-avoiding_walk" title="Self-avoiding walk">Self-avoiding</a></li>
+<li><a href="/wiki/Biased_random_walk_on_a_graph" title="Biased random walk on a graph"> Biased</a></li>
+<li><a href="/wiki/Maximal_Entropy_Random_Walk" class="mw-redirect" title="Maximal Entropy Random Walk">Maximal entropy</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Continuous-time_stochastic_process" title="Continuous-time stochastic process">Continuous time</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bessel_process" title="Bessel process">Bessel process</a></li>
+<li><a href="/wiki/Birth%E2%80%93death_process" title="Birth–death process">Birth–death process</a></li>
+<li><a href="/wiki/Wiener_process" title="Wiener process">Brownian motion</a>
+<ul><li><a href="/wiki/Brownian_bridge" title="Brownian bridge">Bridge</a></li>
+<li><a href="/wiki/Brownian_excursion" title="Brownian excursion">Excursion</a></li>
+<li><a href="/wiki/Fractional_Brownian_motion" title="Fractional Brownian motion">Fractional</a></li>
+<li><a href="/wiki/Geometric_Brownian_motion" title="Geometric Brownian motion">Geometric</a></li>
+<li><a href="/wiki/Brownian_meander" title="Brownian meander">Meander</a></li></ul></li>
+<li><a href="/wiki/Cauchy_process" title="Cauchy process">Cauchy process</a></li>
+<li><a href="/wiki/Contact_process_(mathematics)" title="Contact process (mathematics)">Contact process</a></li>
+<li><a href="/wiki/Continuous-time_random_walk" title="Continuous-time random walk">Continuous-time random walk</a></li>
+<li><a href="/wiki/Cox_process" title="Cox process">Cox process</a></li>
+<li><a href="/wiki/Diffusion_process" title="Diffusion process">Diffusion process</a></li>
+<li><a href="/wiki/Empirical_process" title="Empirical process">Empirical process</a></li>
+<li><a href="/wiki/Feller_process" title="Feller process">Feller process</a></li>
+<li><a href="/wiki/Fleming%E2%80%93Viot_process" title="Fleming–Viot process">Fleming–Viot process</a></li>
+<li><a href="/wiki/Gamma_process" title="Gamma process">Gamma process</a></li>
+<li><a href="/wiki/Geometric_process" title="Geometric process">Geometric process</a></li>
+<li><a href="/wiki/Hunt_process" title="Hunt process">Hunt process</a></li>
+<li><a href="/wiki/Interacting_particle_system" title="Interacting particle system">Interacting particle systems</a></li>
+<li><a href="/wiki/It%C3%B4_diffusion" title="Itô diffusion">Itô diffusion</a></li>
+<li><a href="/wiki/It%C3%B4_process" class="mw-redirect" title="Itô process">Itô process</a></li>
+<li><a href="/wiki/Jump_diffusion" title="Jump diffusion">Jump diffusion</a></li>
+<li><a href="/wiki/Jump_process" title="Jump process">Jump process</a></li>
+<li><a href="/wiki/L%C3%A9vy_process" title="Lévy process">Lévy process</a></li>
+<li><a href="/wiki/Local_time_(mathematics)" title="Local time (mathematics)">Local time</a></li>
+<li><a href="/wiki/Markov_additive_process" title="Markov additive process">Markov additive process</a></li>
+<li><a href="/wiki/McKean%E2%80%93Vlasov_process" title="McKean–Vlasov process">McKean–Vlasov process</a></li>
+<li><a href="/wiki/Ornstein%E2%80%93Uhlenbeck_process" title="Ornstein–Uhlenbeck process">Ornstein–Uhlenbeck process</a></li>
+<li><a href="/wiki/Poisson_process" class="mw-redirect" title="Poisson process">Poisson process</a>
+<ul><li><a href="/wiki/Compound_Poisson_process" title="Compound Poisson process">Compound</a></li>
+<li><a href="/wiki/Non-homogeneous_Poisson_process" class="mw-redirect" title="Non-homogeneous Poisson process">Non-homogeneous</a></li>
+<li><a href="/wiki/Poisson_point_process" title="Poisson point process">Point process</a></li></ul></li>
+<li><a href="/wiki/Schramm%E2%80%93Loewner_evolution" title="Schramm–Loewner evolution">Schramm–Loewner evolution</a></li>
+<li><a href="/wiki/Semimartingale" title="Semimartingale">Semimartingale</a></li>
+<li><a href="/wiki/Sigma-martingale" title="Sigma-martingale">Sigma-martingale</a></li>
+<li><a href="/wiki/Stable_process" title="Stable process">Stable process</a></li>
+<li><a href="/wiki/Superprocess" title="Superprocess">Superprocess</a></li>
+<li><a href="/wiki/Telegraph_process" title="Telegraph process">Telegraph process</a></li>
+<li><a href="/wiki/Variance_gamma_process" title="Variance gamma process">Variance gamma process</a></li>
+<li><a href="/wiki/Wiener_process" title="Wiener process">Wiener process</a></li>
+<li><a href="/wiki/Wiener_sausage" title="Wiener sausage">Wiener sausage</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Both</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Branching_process" title="Branching process">Branching process</a></li>
+<li><a href="/wiki/Galves%E2%80%93L%C3%B6cherbach_model" title="Galves–Löcherbach model">Galves–Löcherbach model</a></li>
+<li><a href="/wiki/Gaussian_process" title="Gaussian process">Gaussian process</a></li>
+<li><a href="/wiki/Hidden_Markov_model" title="Hidden Markov model">Hidden Markov model (HMM)</a></li>
+<li><a href="/wiki/Markov_process" class="mw-redirect" title="Markov process">Markov process</a></li>
+<li><a href="/wiki/Martingale_(probability_theory)" title="Martingale (probability theory)">Martingale</a>
+<ul><li><a href="/wiki/Martingale_difference_sequence" title="Martingale difference sequence">Differences</a></li>
+<li><a href="/wiki/Local_martingale" title="Local martingale">Local</a></li>
+<li><a href="/wiki/Submartingale" class="mw-redirect" title="Submartingale">Sub-</a></li>
+<li><a href="/wiki/Supermartingale" class="mw-redirect" title="Supermartingale">Super-</a></li></ul></li>
+<li><a href="/wiki/Random_dynamical_system" title="Random dynamical system">Random dynamical system</a></li>
+<li><a href="/wiki/Regenerative_process" title="Regenerative process">Regenerative process</a></li>
+<li><a href="/wiki/Renewal_process" class="mw-redirect" title="Renewal process">Renewal process</a></li>
+<li><a href="/wiki/Stochastic_chains_with_memory_of_variable_length" title="Stochastic chains with memory of variable length">Stochastic chains with memory of variable length</a></li>
+<li><a href="/wiki/White_noise" title="White noise">White noise</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Fields and other</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Dirichlet_process" title="Dirichlet process">Dirichlet process</a></li>
+<li><a href="/wiki/Gaussian_random_field" title="Gaussian random field">Gaussian random field</a></li>
+<li><a href="/wiki/Gibbs_measure" title="Gibbs measure">Gibbs measure</a></li>
+<li><a href="/wiki/Hopfield_model" class="mw-redirect" title="Hopfield model">Hopfield model</a></li>
+<li><a href="/wiki/Ising_model" title="Ising model">Ising model</a>
+<ul><li><a href="/wiki/Potts_model" title="Potts model">Potts model</a></li>
+<li><a href="/wiki/Boolean_network" title="Boolean network">Boolean network</a></li></ul></li>
+<li><a href="/wiki/Markov_random_field" title="Markov random field">Markov random field</a></li>
+<li><a href="/wiki/Percolation_theory" title="Percolation theory">Percolation</a></li>
+<li><a href="/wiki/Pitman%E2%80%93Yor_process" title="Pitman–Yor process">Pitman–Yor process</a></li>
+<li><a href="/wiki/Point_process" title="Point process">Point process</a>
+<ul><li><a href="/wiki/Point_process#Cox_point_process" title="Point process">Cox</a></li>
+<li><a href="/wiki/Poisson_point_process" title="Poisson point process">Poisson</a></li></ul></li>
+<li><a href="/wiki/Random_field" title="Random field">Random field</a></li>
+<li><a href="/wiki/Random_graph" title="Random graph">Random graph</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Time_series" title="Time series">Time series models</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Autoregressive conditional heteroskedasticity (ARCH) model</a></li>
+<li><a href="/wiki/Autoregressive_integrated_moving_average" title="Autoregressive integrated moving average">Autoregressive integrated moving average (ARIMA) model</a></li>
+<li><a href="/wiki/Autoregressive_model" title="Autoregressive model">Autoregressive (AR) model</a></li>
+<li><a href="/wiki/Autoregressive%E2%80%93moving-average_model" title="Autoregressive–moving-average model">Autoregressive–moving-average (ARMA) model</a></li>
+<li><a href="/wiki/Autoregressive_conditional_heteroskedasticity" title="Autoregressive conditional heteroskedasticity">Generalized autoregressive conditional heteroskedasticity (GARCH) model</a></li>
+<li><a href="/wiki/Moving-average_model" title="Moving-average model">Moving-average (MA) model</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Financial models</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Black%E2%80%93Derman%E2%80%93Toy_model" title="Black–Derman–Toy model">Black–Derman–Toy</a></li>
+<li><a href="/wiki/Black%E2%80%93Karasinski_model" title="Black–Karasinski model">Black–Karasinski</a></li>
+<li><a href="/wiki/Black%E2%80%93Scholes_model" title="Black–Scholes model">Black–Scholes</a></li>
+<li><a href="/wiki/Chen_model" title="Chen model">Chen</a></li>
+<li><a href="/wiki/Constant_elasticity_of_variance_model" title="Constant elasticity of variance model">Constant elasticity of variance (CEV)</a></li>
+<li><a href="/wiki/Cox%E2%80%93Ingersoll%E2%80%93Ross_model" title="Cox–Ingersoll–Ross model">Cox–Ingersoll–Ross (CIR)</a></li>
+<li><a href="/wiki/Garman%E2%80%93Kohlhagen_model" class="mw-redirect" title="Garman–Kohlhagen model">Garman–Kohlhagen</a></li>
+<li><a href="/wiki/Heath%E2%80%93Jarrow%E2%80%93Morton_framework" title="Heath–Jarrow–Morton framework">Heath–Jarrow–Morton (HJM)</a></li>
+<li><a href="/wiki/Heston_model" title="Heston model">Heston</a></li>
+<li><a href="/wiki/Ho%E2%80%93Lee_model" title="Ho–Lee model">Ho–Lee</a></li>
+<li><a href="/wiki/Hull%E2%80%93White_model" title="Hull–White model">Hull–White</a></li>
+<li><a href="/wiki/LIBOR_market_model" title="LIBOR market model">LIBOR market</a></li>
+<li><a href="/wiki/Rendleman%E2%80%93Bartter_model" title="Rendleman–Bartter model">Rendleman–Bartter</a></li>
+<li><a href="/wiki/SABR_volatility_model" title="SABR volatility model">SABR volatility</a></li>
+<li><a href="/wiki/Vasicek_model" title="Vasicek model">Vašíček</a></li>
+<li><a href="/wiki/Wilkie_investment_model" title="Wilkie investment model">Wilkie</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Actuarial_mathematics" class="mw-redirect" title="Actuarial mathematics">Actuarial models</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/B%C3%BChlmann_model" title="Bühlmann model">Bühlmann</a></li>
+<li><a href="/wiki/Cram%C3%A9r%E2%80%93Lundberg_model" class="mw-redirect" title="Cramér–Lundberg model">Cramér–Lundberg</a></li>
+<li><a href="/wiki/Risk_process" class="mw-redirect" title="Risk process">Risk process</a></li>
+<li><a href="/wiki/Sparre%E2%80%93Anderson_model" class="mw-redirect" title="Sparre–Anderson model">Sparre–Anderson</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Queueing_model" class="mw-redirect" title="Queueing model">Queueing models</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bulk_queue" title="Bulk queue">Bulk</a></li>
+<li><a href="/wiki/Fluid_queue" title="Fluid queue">Fluid</a></li>
+<li><a href="/wiki/G-network" title="G-network">Generalized queueing network</a></li>
+<li><a href="/wiki/M/G/1_queue" title="M/G/1 queue">M/G/1</a></li>
+<li><a href="/wiki/M/M/1_queue" title="M/M/1 queue">M/M/1</a></li>
+<li><a href="/wiki/M/M/c_queue" title="M/M/c queue">M/M/c</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Properties</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%C3%A0dl%C3%A0g" title="Càdlàg">Càdlàg paths</a></li>
+<li><a href="/wiki/Continuous_stochastic_process" title="Continuous stochastic process">Continuous</a></li>
+<li><a href="/wiki/Sample-continuous_process" title="Sample-continuous process">Continuous paths</a></li>
+<li><a href="/wiki/Ergodicity" title="Ergodicity">Ergodic</a></li>
+<li><a href="/wiki/Exchangeable_random_variables" title="Exchangeable random variables">Exchangeable</a></li>
+<li><a href="/wiki/Feller-continuous_process" title="Feller-continuous process">Feller-continuous</a></li>
+<li><a href="/wiki/Gauss%E2%80%93Markov_process" title="Gauss–Markov process">Gauss–Markov</a></li>
+<li><a href="/wiki/Markov_property" title="Markov property">Markov</a></li>
+<li><a href="/wiki/Mixing_(mathematics)" title="Mixing (mathematics)">Mixing</a></li>
+<li><a href="/wiki/Piecewise_deterministic_Markov_process" class="mw-redirect" title="Piecewise deterministic Markov process">Piecewise deterministic</a></li>
+<li><a href="/wiki/Predictable_process" title="Predictable process">Predictable</a></li>
+<li><a href="/wiki/Progressively_measurable_process" title="Progressively measurable process">Progressively measurable</a></li>
+<li><a href="/wiki/Self-similar_process" title="Self-similar process">Self-similar</a></li>
+<li><a href="/wiki/Stationary_process" title="Stationary process">Stationary</a></li>
+<li><a href="/wiki/Time_reversibility" title="Time reversibility">Time-reversible</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Limit theorems</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Central_limit_theorem" title="Central limit theorem">Central limit theorem</a></li>
+<li><a href="/wiki/Donsker%27s_theorem" title="Donsker&#39;s theorem">Donsker's theorem</a></li>
+<li><a href="/wiki/Doob%27s_martingale_convergence_theorems" title="Doob&#39;s martingale convergence theorems">Doob's martingale convergence theorems</a></li>
+<li><a href="/wiki/Ergodic_theorem" class="mw-redirect" title="Ergodic theorem">Ergodic theorem</a></li>
+<li><a href="/wiki/Fisher%E2%80%93Tippett%E2%80%93Gnedenko_theorem" title="Fisher–Tippett–Gnedenko theorem">Fisher–Tippett–Gnedenko theorem</a></li>
+<li><a href="/wiki/Large_deviation_principle" class="mw-redirect" title="Large deviation principle">Large deviation principle</a></li>
+<li><a href="/wiki/Law_of_large_numbers" title="Law of large numbers">Law of large numbers (weak/strong)</a></li>
+<li><a href="/wiki/Law_of_the_iterated_logarithm" title="Law of the iterated logarithm">Law of the iterated logarithm</a></li>
+<li><a href="/wiki/Maximal_ergodic_theorem" title="Maximal ergodic theorem">Maximal ergodic theorem</a></li>
+<li><a href="/wiki/Sanov%27s_theorem" title="Sanov&#39;s theorem">Sanov's theorem</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_inequalities#Probability_theory_and_statistics" title="List of inequalities">Inequalities</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Burkholder%E2%80%93Davis%E2%80%93Gundy_inequalities" class="mw-redirect" title="Burkholder–Davis–Gundy inequalities">Burkholder–Davis–Gundy</a></li>
+<li><a href="/wiki/Doob%27s_martingale_inequality" title="Doob&#39;s martingale inequality">Doob's martingale</a></li>
+<li><a href="/wiki/Kunita%E2%80%93Watanabe_inequality" title="Kunita–Watanabe inequality">Kunita–Watanabe</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Tools</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cameron%E2%80%93Martin_formula" class="mw-redirect" title="Cameron–Martin formula">Cameron–Martin formula</a></li>
+<li><a href="/wiki/Convergence_of_random_variables" title="Convergence of random variables">Convergence of random variables</a></li>
+<li><a href="/wiki/Dol%C3%A9ans-Dade_exponential" title="Doléans-Dade exponential">Doléans-Dade exponential</a></li>
+<li><a href="/wiki/Doob_decomposition_theorem" title="Doob decomposition theorem">Doob decomposition theorem</a></li>
+<li><a href="/wiki/Doob%E2%80%93Meyer_decomposition_theorem" title="Doob–Meyer decomposition theorem">Doob–Meyer decomposition theorem</a></li>
+<li><a href="/wiki/Doob%27s_optional_stopping_theorem" class="mw-redirect" title="Doob&#39;s optional stopping theorem">Doob's optional stopping theorem</a></li>
+<li><a href="/wiki/Dynkin%27s_formula" title="Dynkin&#39;s formula">Dynkin's formula</a></li>
+<li><a href="/wiki/Feynman%E2%80%93Kac_formula" title="Feynman–Kac formula">Feynman–Kac formula</a></li>
+<li><a href="/wiki/Filtration_(probability_theory)" title="Filtration (probability theory)">Filtration</a></li>
+<li><a href="/wiki/Girsanov_theorem" title="Girsanov theorem">Girsanov theorem</a></li>
+<li><a href="/wiki/Infinitesimal_generator_(stochastic_processes)" title="Infinitesimal generator (stochastic processes)">Infinitesimal generator</a></li>
+<li><a href="/wiki/It%C3%B4_integral" class="mw-redirect" title="Itô integral">Itô integral</a></li>
+<li><a href="/wiki/It%C3%B4%27s_lemma" title="Itô&#39;s lemma">Itô's lemma</a></li>
+<li><a href="/wiki/Karhunen%E2%80%93Lo%C3%A8ve_theorem" title="Karhunen–Loève theorem">Karhunen–Loève_theorem</a></li>
+<li><a href="/wiki/Kolmogorov_continuity_theorem" title="Kolmogorov continuity theorem">Kolmogorov continuity theorem</a></li>
+<li><a href="/wiki/Kolmogorov_extension_theorem" title="Kolmogorov extension theorem">Kolmogorov extension theorem</a></li>
+<li><a href="/wiki/L%C3%A9vy%E2%80%93Prokhorov_metric" title="Lévy–Prokhorov metric">Lévy–Prokhorov metric</a></li>
+<li><a href="/wiki/Malliavin_calculus" title="Malliavin calculus">Malliavin calculus</a></li>
+<li><a href="/wiki/Martingale_representation_theorem" title="Martingale representation theorem">Martingale representation theorem</a></li>
+<li><a href="/wiki/Optional_stopping_theorem" title="Optional stopping theorem">Optional stopping theorem</a></li>
+<li><a href="/wiki/Prokhorov%27s_theorem" title="Prokhorov&#39;s theorem">Prokhorov's theorem</a></li>
+<li><a href="/wiki/Quadratic_variation" title="Quadratic variation">Quadratic variation</a></li>
+<li><a href="/wiki/Reflection_principle_(Wiener_process)" title="Reflection principle (Wiener process)">Reflection principle</a></li>
+<li><a href="/wiki/Skorokhod_integral" title="Skorokhod integral">Skorokhod integral</a></li>
+<li><a href="/wiki/Skorokhod%27s_representation_theorem" title="Skorokhod&#39;s representation theorem">Skorokhod's representation theorem</a></li>
+<li><a href="/wiki/Skorokhod_space" class="mw-redirect" title="Skorokhod space">Skorokhod space</a></li>
+<li><a href="/wiki/Snell_envelope" title="Snell envelope">Snell envelope</a></li>
+<li><a href="/wiki/Stochastic_differential_equation" title="Stochastic differential equation">Stochastic differential equation</a>
+<ul><li><a href="/wiki/Tanaka_equation" title="Tanaka equation">Tanaka</a></li></ul></li>
+<li><a href="/wiki/Stopping_time" title="Stopping time">Stopping time</a></li>
+<li><a href="/wiki/Stratonovich_integral" title="Stratonovich integral">Stratonovich integral</a></li>
+<li><a href="/wiki/Uniform_integrability" title="Uniform integrability">Uniform integrability</a></li>
+<li><a href="/wiki/Usual_hypotheses" class="mw-redirect" title="Usual hypotheses">Usual hypotheses</a></li>
+<li><a href="/wiki/Wiener_space" class="mw-redirect" title="Wiener space">Wiener space</a>
+<ul><li><a href="/wiki/Classical_Wiener_space" title="Classical Wiener space">Classical</a></li>
+<li><a href="/wiki/Abstract_Wiener_space" title="Abstract Wiener space">Abstract</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Disciplines</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Actuarial_mathematics" class="mw-redirect" title="Actuarial mathematics">Actuarial mathematics</a></li>
+<li><a href="/wiki/Econometrics" title="Econometrics">Econometrics</a></li>
+<li><a href="/wiki/Ergodic_theory" title="Ergodic theory">Ergodic theory</a></li>
+<li><a href="/wiki/Extreme_value_theory" title="Extreme value theory">Extreme value theory (EVT)</a></li>
+<li><a href="/wiki/Large_deviations_theory" title="Large deviations theory">Large deviations theory</a></li>
+<li><a href="/wiki/Mathematical_finance" title="Mathematical finance">Mathematical finance</a></li>
+<li><a href="/wiki/Mathematical_statistics" title="Mathematical statistics">Mathematical statistics</a></li>
+<li><a href="/wiki/Probability_theory" title="Probability theory">Probability theory</a></li>
+<li><a href="/wiki/Queueing_theory" title="Queueing theory">Queueing theory</a></li>
+<li><a href="/wiki/Renewal_theory" title="Renewal theory">Renewal theory</a></li>
+<li><a href="/wiki/Ruin_theory" title="Ruin theory">Ruin theory</a></li>
+<li><a href="/wiki/Statistics" title="Statistics">Statistics</a></li>
+<li><a href="/wiki/System_on_a_chip" title="System on a chip">System on Chip</a> design</li>
+<li><a href="/wiki/Stochastic_analysis" class="mw-redirect" title="Stochastic analysis">Stochastic analysis</a></li>
+<li><a href="/wiki/Time_series_analysis" class="mw-redirect" title="Time series analysis">Time series analysis</a></li>
+<li><a href="/wiki/Machine_learning" title="Machine learning">Machine learning</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><a href="/wiki/List_of_stochastic_processes_topics" title="List of stochastic processes topics">List of topics</a></li>
+<li><a href="/wiki/Category:Stochastic_processes" title="Category:Stochastic processes">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1326
+Cached time: 20200306195155
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.432 seconds
+Real time usage: 0.695 seconds
+Preprocessor visited node count: 1851/1000000
+Post‐expand include size: 66847/2097152 bytes
+Template argument size: 3026/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 6/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 35288/5000000 bytes
+Number of Wikibase entities loaded: 4/400
+Lua time usage: 0.209/10.000 seconds
+Lua memory usage: 4.93 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  473.005      1 -total
+ 45.05%  213.083      1 Template:Reflist
+ 22.74%  107.545      2 Template:Cite_book
+ 18.45%   87.251      4 Template:Citation_needed
+ 18.09%   85.583      6 Template:Cite_journal
+ 14.75%   69.783      4 Template:Fix
+ 10.28%   48.627     10 Template:Category_handler
+  8.82%   41.704      1 Template:Cite_arXiv
+  8.72%   41.265      1 Template:ISBN
+  4.39%   20.765      5 Template:Delink
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1170097-0!canonical!math=5 and timestamp 20200306195155 and revision id 937035994
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Hopfield_network&amp;oldid=937035994">https://en.wikipedia.org/w/index.php?title=Hopfield_network&amp;oldid=937035994</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Artificial_neural_networks" title="Category:Artificial neural networks">Artificial neural networks</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2019" title="Category:Articles with unsourced statements from July 2019">Articles with unsourced statements from July 2019</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_July_2019" title="Category:Wikipedia articles needing clarification from July 2019">Wikipedia articles needing clarification from July 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Hopfield+network" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Hopfield+network" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Hopfield_network" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Hopfield_network" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Hopfield_network">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Hopfield_network&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Hopfield_network&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Hopfield_network" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Hopfield_network" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Hopfield_network&amp;oldid=937035994" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Hopfield_network&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1407668" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Hopfield_network&amp;id=937035994&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Hopfield+network">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Hopfield+network&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Hopfield_network&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B4%D8%A8%D9%83%D8%A9_%D9%87%D9%88%D8%A8%D9%81%D9%8A%D9%84%D8%AF" title="شبكة هوبفيلد – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Xarxa_de_Hopfield" title="Xarxa de Hopfield – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Hopfield-Netz" title="Hopfield-Netz – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Hopfield_(RNA)" title="Hopfield (RNA) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B4%D8%A8%DA%A9%D9%87_%D9%87%D8%A7%D9%BE%D9%81%DB%8C%D9%84%D8%AF" title="شبکه هاپفیلد – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_de_Hopfield" title="Réseau de neurones de Hopfield – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Rete_di_Hopfield" title="Rete di Hopfield – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ka"><a href="https://ka.wikipedia.org/wiki/%E1%83%B0%E1%83%9D%E1%83%9E%E1%83%A4%E1%83%98%E1%83%9A%E1%83%93%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A1%E1%83%94%E1%83%9A%E1%83%98" title="ჰოპფილდის ქსელი – Georgian" lang="ka" hreflang="ka" class="interlanguage-link-target">ქართული</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Hopf%C4%ABlda_t%C4%ABkls" title="Hopfīlda tīkls – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%B9%E0%B5%8B%E0%B4%AA%E0%B5%8D%E2%80%8C%E0%B4%AB%E0%B5%80%E0%B5%BD%E0%B4%A1%E0%B5%8D_%E0%B4%B6%E0%B5%83%E0%B4%82%E0%B4%96%E0%B4%B2" title="ഹോപ്‌ഫീൽഡ് ശൃംഖല – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Hopfield-netwerk" title="Hopfield-netwerk – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%83%E3%83%97%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="ホップフィールド・ネットワーク – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Sie%C4%87_asocjacyjna" title="Sieć asocjacyjna – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Modelo_de_Hopfield" title="Modelo de Hopfield – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C_%D0%A5%D0%BE%D0%BF%D1%84%D0%B8%D0%BB%D0%B4%D0%B0" title="Нейронная сеть Хопфилда – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Hopfieldn%C3%A4t" title="Hopfieldnät – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D0%B0_%D0%93%D0%BE%D0%BF%D1%84%D1%96%D0%BB%D0%B4%D0%B0" title="Нейронна мережа Гопфілда – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/M%E1%BA%A1ng_Hopfield" title="Mạng Hopfield – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Hopfield%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C" title="Hopfield神经网络 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1407668#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 22 January 2020, at 15:19<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Hopfield_network&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.432","walltime":"0.695","ppvisitednodes":{"value":1851,"limit":1000000},"postexpandincludesize":{"value":66847,"limit":2097152},"templateargumentsize":{"value":3026,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":6,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":35288,"limit":5000000},"entityaccesscount":{"value":4,"limit":400},"timingprofile":["100.00%  473.005      1 -total"," 45.05%  213.083      1 Template:Reflist"," 22.74%  107.545      2 Template:Cite_book"," 18.45%   87.251      4 Template:Citation_needed"," 18.09%   85.583      6 Template:Cite_journal"," 14.75%   69.783      4 Template:Fix"," 10.28%   48.627     10 Template:Category_handler","  8.82%   41.704      1 Template:Cite_arXiv","  8.72%   41.265      1 Template:ISBN","  4.39%   20.765      5 Template:Delink"]},"scribunto":{"limitreport-timeusage":{"value":"0.209","limit":"10.000"},"limitreport-memusage":{"value":5174040,"limit":52428800}},"cachereport":{"origin":"mw1326","timestamp":"20200306195155","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Hopfield network","url":"https:\/\/en.wikipedia.org\/wiki\/Hopfield_network","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1407668","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1407668","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-11-15T00:26:38Z","dateModified":"2020-01-22T15:19:15Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":88,"wgHostname":"mw1371"});});</script></body></html>

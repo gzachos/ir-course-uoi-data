@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>getaddrinfo - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn@gxApAICIAAKjEkKMAAACB","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Getaddrinfo","wgTitle":"Getaddrinfo","wgCurRevisionId":918870201,"wgRevisionId":918870201,"wgArticleId":2322898,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with example C code","Pages using RFC magic links","Internet Protocol","Network addressing","Domain name system","C POSIX library"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Getaddrinfo","wgRelevantArticleId":2322898,"wgIsProbablyEditable":!0,
+"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q15995093","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready",
+"ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Getaddrinfo&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Getaddrinfo&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Getaddrinfo"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Getaddrinfo rootpage-Getaddrinfo skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">getaddrinfo</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><span></span>
+The  <a href="/wiki/Function_(computer_science)" class="mw-redirect" title="Function (computer science)">functions</a> <i><b>getaddrinfo()</b></i> and <i><b>getnameinfo()</b></i>  convert <a href="/wiki/Domain_name" title="Domain name">domain names</a>, <a href="/wiki/Hostname" title="Hostname">hostnames</a>, and <a href="/wiki/IP_address" title="IP address">IP addresses</a> between human-readable text representations and structured binary formats for the <a href="/wiki/Operating_system" title="Operating system">operating system</a>'s networking API. Both functions are contained in the <a href="/wiki/POSIX" title="POSIX">POSIX</a> standard <a href="/wiki/Application_programming_interface" title="Application programming interface">application programming interface</a> (API).
+</p><p>getaddrinfo and getnameinfo are inverse functions of each other. They are network protocol agnostic, and support both <a href="/wiki/IPv4" title="IPv4">IPv4</a> and <a href="/wiki/IPv6" title="IPv6">IPv6</a>. It is the recommended interface for name resolution in building protocol independent applications and for transitioning legacy IPv4 code to the IPv6 Internet.
+</p><p>Internally, the functions perform resolutions using the <a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a> (DNS) by calling other, lower level functions, such as <a href="/wiki/Berkeley_sockets#gethostbyname.28.29_and_gethostbyaddr.28.29" title="Berkeley sockets">gethostbyname()</a>.
+</p><p>On February 16 2016 a security bug was announced in the <a href="/wiki/Glibc" class="mw-redirect" title="Glibc">glibc</a> implementation of getaddrinfo(), using a <a href="/wiki/Buffer_overflow" title="Buffer overflow">buffer overflow</a> technique, that may allow execution of arbitrary code by the attacker.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#struct_addrinfo"><span class="tocnumber">1</span> <span class="toctext">struct addrinfo</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#getaddrinfo()"><span class="tocnumber">2</span> <span class="toctext">getaddrinfo()</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#getnameinfo()"><span class="tocnumber">3</span> <span class="toctext">getnameinfo()</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#freeaddrinfo()"><span class="tocnumber">4</span> <span class="toctext">freeaddrinfo()</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Example"><span class="tocnumber">5</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="struct_addrinfo">struct addrinfo</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=1" title="Edit section: struct addrinfo">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> data structure used to represent addresses and hostnames within the networking API is the following:
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">addrinfo</span> <span class="p">{</span>
+    <span class="kt">int</span>       <span class="n">ai_flags</span><span class="p">;</span>
+    <span class="kt">int</span>       <span class="n">ai_family</span><span class="p">;</span>
+    <span class="kt">int</span>       <span class="n">ai_socktype</span><span class="p">;</span>
+    <span class="kt">int</span>       <span class="n">ai_protocol</span><span class="p">;</span>
+    <span class="kt">socklen_t</span> <span class="n">ai_addrlen</span><span class="p">;</span>
+    <span class="k">struct</span>    <span class="n">sockaddr</span><span class="o">*</span> <span class="n">ai_addr</span><span class="p">;</span>
+    <span class="kt">char</span><span class="o">*</span>     <span class="n">ai_canonname</span><span class="p">;</span>      <span class="cm">/* canonical name */</span>
+    <span class="k">struct</span>    <span class="n">addrinfo</span><span class="o">*</span> <span class="n">ai_next</span><span class="p">;</span> <span class="cm">/* this struct can form a linked list */</span>
+<span class="p">};</span>
+</pre></div>
+<p>In some older systems the type of <i>ai_addrlen</i> is <i>size_t</i> instead of <i>socklen_t</i>. Most socket functions, such as <i>accept()</i> and <i>getpeername()</i>, require the parameter to have type <i>socklen_t * </i> and programmers often pass the address to the <i>ai_addrlen</i> element of the <i>addrinfo</i> structure. If the types are incompatible, e.g., on a 64-bit <a href="/wiki/Solaris_9" class="mw-redirect" title="Solaris 9">Solaris 9</a> system where <i>size_t</i> is 8 bytes and <i>socklen_t</i> is 4 bytes, then run-time errors may result.
+</p><p>The structure contains structures <i>ai_family</i> and <i>sockaddr</i> with its own <i>sa_family</i> field. These are set to the same value when the structure is created with function <i>getaddrinfo</i> in some implementations.
+</p>
+<h2><span id="getaddrinfo.28.29"></span><span class="mw-headline" id="getaddrinfo()">getaddrinfo()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=2" title="Edit section: getaddrinfo()">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>getaddrinfo() converts human-readable text strings representing <a href="/wiki/Hostname" title="Hostname">hostnames</a> or <a href="/wiki/IP_address" title="IP address">IP addresses</a> into a <a href="/wiki/Dynamic_memory_allocation" class="mw-redirect" title="Dynamic memory allocation">dynamically allocated</a> <a href="/wiki/Linked_list" title="Linked list">linked list</a> of struct addrinfo structures.
+The function prototypes for these functions are specified as follows:
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">getaddrinfo</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">hostname</span><span class="p">,</span>
+                <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">service</span><span class="p">,</span>
+                <span class="k">const</span> <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">*</span> <span class="n">hints</span><span class="p">,</span>
+                <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">**</span> <span class="n">res</span><span class="p">);</span>
+</pre></div>
+<dl><dt>hostname</dt>
+<dd>can be either a domain name, such as "example.com", an address string, such as "127.0.0.1", or NULL, in which case the address 0.0.0.0 or 127.0.0.1 is assigned depending on the hints flags.</dd>
+<dt>service</dt>
+<dd>can be a port number passed as string, such as "80", or a service name, e.g. "echo". In the latter case a typical implementation uses <i>getservbyname()</i> to query the file <i>/etc/services</i> to resolve the service to a port number.</dd>
+<dt>hints</dt>
+<dd>can be either NULL or an <i>addrinfo</i> structure with the type of service requested.</dd>
+<dt>res</dt>
+<dd>is a pointer that points to a new <i>addrinfo</i> structure with the information requested after successful completion of the function.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> The function returns 0 upon success and non-zero error value if it fails.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></dd></dl>
+<p>Although implementations vary among platforms, the function first attempts to obtain a port number usually by branching on <i>service</i>. If the string value is a number, it converts it to an integer and calls <i>htons()</i>. If it is a service name, such as <i>www</i>, the service is lookup with <i>getservbyname()</i>, using the protocol derived from <i>hints-&gt;ai_socktype</i> as the second parameter to that function. Then, if <i>hostname</i> is given (not NULL), a call to <i>gethostbyname()</i> resolves it, or otherwise the address <i>0.0.0.0</i> is used, if <i>hints-&gt;ai_flags</i> is set to <i>AI_PASSIVE</i>, and <i>127.0.0.1</i> otherwise. It allocated a new <i>addrinfo</i> structure filled with the appropriate <i>sockaddr_in</i> in one of these conditions and also adds the port retrieved at the beginning to it. Finally, the <i>**res</i> parameter is dereferenced to make it point to a newly allocated <i>addrinfo</i> structure.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> In some implementations, such as the Unix version for Mac OS, the <i>hints-&gt;ai_protocol </i> overrides the <i>hints-&gt;ai_socktype</i> value while in others it is the opposite, so both need to be defined with equivalent values for the code to be work across multiple platforms.
+</p>
+<h2><span id="getnameinfo.28.29"></span><span class="mw-headline" id="getnameinfo()">getnameinfo()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=3" title="Edit section: getnameinfo()">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>getnameinfo()</i> converts the internal binary representation of an IP address in the form of a <i>struct sockaddr</i> pointer into text strings consisting of the hostname or, if the address cannot be resolved into a name, a textual IP address representation, as well as the service port name or number. The function prototype is specified as follows:
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">getnameinfo</span><span class="p">(</span><span class="k">const</span> <span class="k">struct</span> <span class="n">sockaddr</span><span class="o">*</span> <span class="n">sa</span><span class="p">,</span> <span class="kt">socklen_t</span> <span class="n">salen</span><span class="p">,</span>
+                <span class="kt">char</span><span class="o">*</span> <span class="n">host</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">hostlen</span><span class="p">,</span>
+                <span class="kt">char</span><span class="o">*</span> <span class="n">serv</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">servlen</span><span class="p">,</span>
+                <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+</pre></div>
+<h2><span id="freeaddrinfo.28.29"></span><span class="mw-headline" id="freeaddrinfo()">freeaddrinfo()</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=4" title="Edit section: freeaddrinfo()">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This function frees the memory allocated by the <i>getaddrinfo()</i> function. As the result of the latter is a linked list of addrinfo structures, <i> freeaddrinfo()</i> loops through the list and frees each one in turn.
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span> <span class="nf">freeaddrinfo</span><span class="p">(</span><span class="k">struct</span> <span class="n">addrinfo</span> <span class="o">*</span><span class="n">ai</span><span class="p">);</span>
+</pre></div>
+<ul><li><i>ai</i> is the head of the addrinfo list</li></ul>
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following example uses <i>getaddrinfo()</i> to resolve the domain name <i>www.example.com</i> into its list of addresses and then calls <i>getnameinfo()</i> on each result to return the canonical name for the address. In general, this produces the original <a href="/wiki/Hostname" title="Hostname">hostname</a>, unless the particular address has multiple names, in which case the <i>canonical</i> name is returned. In this example, the domain name is printed three times, once for each of the three results obtained.
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#ifndef   NI_MAXHOST</span>
+<span class="cp">#define   NI_MAXHOST 1025</span>
+<span class="cp">#endif</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">*</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">addrinfo</span><span class="o">*</span> <span class="n">res</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">error</span><span class="p">;</span>
+
+    <span class="cm">/* resolve the domain name into a list of addresses */</span>
+<span class="hll">    <span class="n">error</span> <span class="o">=</span> <span class="n">getaddrinfo</span><span class="p">(</span><span class="s">&quot;www.example.com&quot;</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">);</span>
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>   
+        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">==</span> <span class="n">EAI_SYSTEM</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">perror</span><span class="p">(</span><span class="s">&quot;getaddrinfo&quot;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;error in getaddrinfo: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">gai_strerror</span><span class="p">(</span><span class="n">error</span><span class="p">));</span>
+        <span class="p">}</span>   
+        <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+    <span class="p">}</span>   
+
+    <span class="cm">/* loop over all returned results and do inverse lookup */</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">res</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span> <span class="n">res</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="n">res</span> <span class="o">=</span> <span class="n">res</span><span class="o">-&gt;</span><span class="n">ai_next</span><span class="p">)</span> <span class="p">{</span>   
+        <span class="kt">char</span> <span class="n">hostname</span><span class="p">[</span><span class="n">NI_MAXHOST</span><span class="p">];</span>
+<span class="hll">        <span class="n">error</span> <span class="o">=</span> <span class="n">getnameinfo</span><span class="p">(</span><span class="n">res</span><span class="o">-&gt;</span><span class="n">ai_addr</span><span class="p">,</span> <span class="n">res</span><span class="o">-&gt;</span><span class="n">ai_addrlen</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">NI_MAXHOST</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> 
+</span>        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;error in getnameinfo: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">gai_strerror</span><span class="p">(</span><span class="n">error</span><span class="p">));</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">hostname</span> <span class="o">!=</span> <span class="sc">&#39;\0&#39;</span><span class="p">)</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;hostname: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">hostname</span><span class="p">);</span>
+    <span class="p">}</span>   
+
+<span class="hll">    <span class="n">freeaddrinfo</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Network_address" title="Network address">Network address</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://googleonlinesecurity.blogspot.ca/2016/02/cve-2015-7547-glibc-getaddrinfo-stack.html">https://googleonlinesecurity.blogspot.ca/2016/02/cve-2015-7547-glibc-getaddrinfo-stack.html</a></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">Stevens R., Fenner, Rudoff [2003] UNIX® Network Programming Volume 1, Third Edition: The Sockets Networking API. Publisher: Addison-Wesley Professional. Pub. Date: November 14, 2003 p. 256</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://pubs.opengroup.org/onlinepubs/9699919799/">http://pubs.opengroup.org/onlinepubs/9699919799/</a> Accessed 31.5.2018</span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">Hajimu UMEMOTO [2000] getaddrinfo.c Accessed from: <a rel="nofollow" class="external free" href="https://opensource.apple.com/source/passwordserver_sasl/passwordserver_sasl-14/cyrus_sasl/lib/getaddrinfo.c">https://opensource.apple.com/source/passwordserver_sasl/passwordserver_sasl-14/cyrus_sasl/lib/getaddrinfo.c</a></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Getaddrinfo&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc3493">RFC 3493</a>, Basic Socket Interface Extensions for IPv6</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1332
+Cached time: 20200307232001
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.088 seconds
+Real time usage: 1.071 seconds
+Preprocessor visited node count: 185/1000000
+Post‐expand include size: 352/2097152 bytes
+Template argument size: 75/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 11757/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.004/10.000 seconds
+Lua memory usage: 535 KB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1045.413      1 -total
+  3.26%   34.034      1 Template:Reflist
+  0.63%    6.596      1 Template:Lowercase
+  0.37%    3.881      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2322898-0!canonical and timestamp 20200307232000 and revision id 918870201
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Getaddrinfo&amp;oldid=918870201">https://en.wikipedia.org/w/index.php?title=Getaddrinfo&amp;oldid=918870201</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Internet_Protocol" title="Category:Internet Protocol">Internet Protocol</a></li><li><a href="/wiki/Category:Network_addressing" title="Category:Network addressing">Network addressing</a></li><li><a href="/wiki/Category:Domain_name_system" title="Category:Domain name system">Domain name system</a></li><li><a href="/wiki/Category:C_POSIX_library" title="Category:C POSIX library">C POSIX library</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="/wiki/Category:Pages_using_RFC_magic_links" title="Category:Pages using RFC magic links">Pages using RFC magic links</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Getaddrinfo" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Getaddrinfo" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Getaddrinfo" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Getaddrinfo" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Getaddrinfo">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Getaddrinfo&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Getaddrinfo&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Getaddrinfo" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Getaddrinfo" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Getaddrinfo&amp;oldid=918870201" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Getaddrinfo&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q15995093" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Getaddrinfo&amp;id=918870201&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Getaddrinfo">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Getaddrinfo&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Getaddrinfo&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/Getaddrinfo" title="Getaddrinfo – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q15995093#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 30 September 2019, at 17:34<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Getaddrinfo&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.088","walltime":"1.071","ppvisitednodes":{"value":185,"limit":1000000},"postexpandincludesize":{"value":352,"limit":2097152},"templateargumentsize":{"value":75,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":11757,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1045.413      1 -total","  3.26%   34.034      1 Template:Reflist","  0.63%    6.596      1 Template:Lowercase","  0.37%    3.881      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.004","limit":"10.000"},"limitreport-memusage":{"value":547985,"limit":52428800}},"cachereport":{"origin":"mw1332","timestamp":"20200307232001","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Getaddrinfo","url":"https:\/\/en.wikipedia.org\/wiki\/Getaddrinfo","sameAs":"http:\/\/www.wikidata.org\/entity\/Q15995093","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q15995093","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-07-27T22:44:47Z","dateModified":"2019-09-30T17:34:30Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":95,"wgHostname":"mw1332"});});</script></body></html>

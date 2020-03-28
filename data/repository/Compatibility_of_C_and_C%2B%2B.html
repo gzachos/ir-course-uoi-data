@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Compatibility of C and C++ - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn9sWQpAADoAAEDH@dcAAAEF","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Compatibility_of_C_and_C++","wgTitle":"Compatibility of C and C++","wgCurRevisionId":930772727,"wgRevisionId":930772727,"wgArticleId":4573232,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Use dmy dates from January 2015","Articles with example C++ code","Comparison of individual programming languages","C (programming language)","C++"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Compatibility_of_C_and_C++","wgRelevantArticleId":4573232,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q856816","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready",
+"mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Compatibility_of_C_and_C%2B%2B"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Compatibility_of_C_and_C rootpage-Compatibility_of_C_and_C skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Compatibility of C and C++</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Programming language comparisons</a></th></tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">General comparison</a></li>
+<li><a href="/wiki/Assignment_(computer_science)#Notation" title="Assignment (computer science)">Assignment</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(syntax)" title="Comparison of programming languages (syntax)">Basic syntax</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(basic_instructions)" title="Comparison of programming languages (basic instructions)">Basic instructions</a></li>
+<li><a href="/wiki/Comment_(computer_programming)#Comparison" title="Comment (computer programming)">Comments</a></li>
+<li>Control flow
+<ul><li><a href="/wiki/Foreach_loop#Language_support" title="Foreach loop">Foreach loops</a></li>
+<li><a href="/wiki/While_loop#Demonstrating_while_loops" title="While loop">While loops</a></li>
+<li><a href="/wiki/For_loop#Timeline_of_the_for-loop_syntax_in_various_programming_languages" title="For loop">For loops</a></li>
+<li><a href="/wiki/Do_while_loop#Demonstrating_do_while_loops" title="Do while loop">Do-while</a></li></ul></li>
+<li><a href="/wiki/Exception_handling_syntax" title="Exception handling syntax">Exception handling</a></li>
+<li><a href="/wiki/Enumerated_type#Pascal_and_syntactically_similar_languages" title="Enumerated type">Enumerated types</a></li>
+<li><a href="/wiki/Generator_(computer_programming)#Timeline" title="Generator (computer programming)">Generators</a></li>
+<li><a href="/wiki/Anonymous_function#Examples" title="Anonymous function">Anonymous functions</a></li>
+<li><a href="/wiki/%3F:" title="?:">Conditional expressions</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(functional_instructions)" class="mw-redirect" title="Comparison of programming languages (functional instructions)">Functional instructions</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(array)" title="Comparison of programming languages (array)">Arrays</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(associative_arrays)" class="mw-redirect" title="Comparison of programming languages (associative arrays)">Associative arrays</a></li>
+<li><a href="/wiki/Scope_(computer_science)#By_language" title="Scope (computer science)">Scope</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(strings)" title="Comparison of programming languages (strings)">String operations</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(string_functions)" title="Comparison of programming languages (string functions)">String functions</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(higher-order_functions)" class="mw-redirect" title="Comparison of programming languages (higher-order functions)">Higher-order functions</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_by_type_system" title="Comparison of programming languages by type system">Type systems</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(list_comprehension)" title="Comparison of programming languages (list comprehension)">List comprehension</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(object-oriented_programming)" title="Comparison of programming languages (object-oriented programming)">Object-oriented programming</a></li>
+<li><a href="/wiki/Constructor_(object-oriented_programming)" title="Constructor (object-oriented programming)">Object-oriented constructors</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages_(operators)" class="mw-redirect" title="Comparison of programming languages (operators)">Operators</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><a href="/wiki/Evaluation_strategy" title="Evaluation strategy">Evaluation strategy</a></li>
+<li><a href="https://en.wikibooks.org/wiki/Computer_Programming/Hello_world" class="extiw" title="b:Computer Programming/Hello world">List of "Hello World" programs</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><a href="/wiki/Comparision_of_programming_languages_with_dependent_types" class="mw-redirect" title="Comparision of programming languages with dependent types">Languages with dependent types</a></li>
+<li><a href="/wiki/Comparison_of_type_systems" class="mw-redirect" title="Comparison of type systems">Comparison of type systems</a></li></ul></td>
+</tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<hr />
+<div class="NavFrame collapsed" style="border: none; padding: 0;">
+<div class="NavHead" style="font-size: 105%; background: transparent; text-align: left;">Comparison of individual languages</div>
+<ul class="NavContent" style="text-align: left; font-size: 105%; margin-top: 0; margin-bottom: 0; line-height: inherit;"><li style="line-height: inherit; margin: 0"><a href="/wiki/ALGOL_58#ALGOL_58&#39;s_influence_on_ALGOL_60" title="ALGOL 58">ALGOL 58's influence on ALGOL 60</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/ALGOL_60#Comparisons_with_other_languages" title="ALGOL 60">ALGOL 60: Comparisons with other languages</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_ALGOL_68_and_C%2B%2B" title="Comparison of ALGOL 68 and C++">Comparison of ALGOL 68 and C++</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/ALGOL_68#Comparisons_with_other_languages" title="ALGOL 68">ALGOL 68: Comparisons with other languages</a>
+</li><li style="line-height: inherit; margin: 0"><a class="mw-selflink selflink">Compatibility of C and C++</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_Pascal_and_Delphi" title="Comparison of Pascal and Delphi">Comparison of Pascal and Borland Delphi</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_Object_Pascal_and_C" title="Comparison of Object Pascal and C">Comparison of Object Pascal and C</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison of Pascal and C</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_Java_and_C%2B%2B" title="Comparison of Java and C++">Comparison of Java and C++</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_C_Sharp_and_Java" title="Comparison of C Sharp and Java">Comparison of C# and Java</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_C_Sharp_and_Visual_Basic_.NET" title="Comparison of C Sharp and Visual Basic .NET">Comparison of C# and Visual Basic .NET</a>
+</li><li style="line-height: inherit; margin: 0"><a href="/wiki/Comparison_of_Visual_Basic_and_Visual_Basic_.NET" title="Comparison of Visual Basic and Visual Basic .NET">Comparison of Visual Basic and Visual Basic .NET</a>
+</li></ul>
+</div></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Programming_language_comparisons" title="Template:Programming language comparisons"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Programming_language_comparisons" title="Template talk:Programming language comparisons"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Programming_language_comparisons&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>The <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> <a href="/wiki/Programming_languages" class="mw-redirect" title="Programming languages">programming languages</a> are closely related but have many significant differences. C++ began as a fork of an early, pre-<a href="/wiki/ANSI_C" title="ANSI C">standardized</a> C, and was designed to be mostly source-and-link compatible with C compilers of the time.<sup id="cite_ref-overview_1-0" class="reference"><a href="#cite_note-overview-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>  Due to this, development tools for the two languages (such as <a href="/wiki/Integrated_development_environment" title="Integrated development environment">IDEs</a> and <a href="/wiki/Compiler" title="Compiler">compilers</a>) are often integrated into a single product, with the programmer able to specify C or C++ as their source language. 
+</p><p>However, C is not a <a href="/wiki/Subset" title="Subset">subset</a> of C++,<sup id="cite_ref-subset_3-0" class="reference"><a href="#cite_note-subset-3">&#91;3&#93;</a></sup> and nontrivial C programs will not compile as C++ code without modification. Likewise, C++ introduces many features that are not available in C and in practice almost all code written in C++ is not conforming C code. This article, however, focuses on differences that cause conforming C code to be ill-formed C++ code, or to be conforming/well-formed in both languages but to behave differently in C and C++.
+</p><p><a href="/wiki/Bjarne_Stroustrup" title="Bjarne Stroustrup">Bjarne Stroustrup</a>, the creator of C++, has suggested<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> that the incompatibilities between C and C++ should be reduced as much as possible in order to maximize inter-operability between the two languages. Others have argued that since C and C++ are two different languages, compatibility between them is useful but not vital; according to this camp, efforts to reduce incompatibility should not hinder attempts to improve each language in isolation. The official rationale for the 1999 C standard (<a href="/wiki/C99" title="C99">C99</a>) "endorse[d] the principle of maintaining the largest common subset" between C and C++ "while maintaining a distinction between them and allowing them to evolve separately", and stated that the authors were "content to let C++ be the big and ambitious language."<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>Several additions of C99 are not supported in the current C++ standard or conflicted with C++ features, such as <a href="/wiki/Variable_Length_Array" class="mw-redirect" title="Variable Length Array">variable-length arrays</a>, native <a href="/wiki/Complex_data_type" title="Complex data type">complex number</a> types and the <code><a href="/wiki/Restrict" title="Restrict">restrict</a></code> <a href="/wiki/Type_qualifier" title="Type qualifier">type qualifier</a>. On the other hand, C99 reduced some other incompatibilities compared with C89 by incorporating C++ features such as <code>//</code> comments and mixed declarations and code.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Constructs_valid_in_C_but_not_in_C++"><span class="tocnumber">1</span> <span class="toctext">Constructs valid in C but not in C++</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Constructs_that_behave_differently_in_C_and_C++"><span class="tocnumber">2</span> <span class="toctext">Constructs that behave differently in C and C++</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Linking_C_and_C++_code"><span class="tocnumber">3</span> <span class="toctext">Linking C and C++ code</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Constructs_valid_in_C_but_not_in_C.2B.2B"></span><span class="mw-headline" id="Constructs_valid_in_C_but_not_in_C++">Constructs valid in C but not in C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit&amp;section=1" title="Edit section: Constructs valid in C but not in C++">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++ enforces stricter typing rules (no implicit violations of the static type system<sup id="cite_ref-overview_1-1" class="reference"><a href="#cite_note-overview-1">&#91;1&#93;</a></sup>), and initialization requirements (compile-time enforcement that in-scope variables do not have initialization subverted)<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> than C, and so some valid C code is disallowed in C++. A rationale for these is provided in Annex C.1 of the ISO C++ standard.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<ul><li>One commonly encountered difference is C being more <a href="/wiki/Strong_and_weak_typing" title="Strong and weak typing">weakly-typed</a> regarding pointers and enums. Specifically, C allows a <code>void*</code> pointer to be assigned to any pointer type without a cast, while C++ does not; this <a href="/wiki/Programming_idiom" title="Programming idiom">idiom</a> appears often in C code using <code>malloc</code> memory allocation,<sup id="cite_ref-publib.boulder.ibm.com_9-0" class="reference"><a href="#cite_note-publib.boulder.ibm.com-9">&#91;9&#93;</a></sup> or in the passing of context pointers to the <a href="/wiki/Pthreads" class="mw-redirect" title="Pthreads">pthreads</a> API and other frameworks involving <a href="/wiki/Callbacks" class="mw-redirect" title="Callbacks">callbacks</a>.  For example, the following is valid in C but not C++:</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="cm">/* Implicit conversion from void* to int* */</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">i</span> <span class="o">=</span> <span class="n">ptr</span><span class="p">;</span>
+</pre></div>
+<dl><dd>or similarly:</dd></dl>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">j</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="k">sizeof</span> <span class="o">*</span><span class="n">j</span><span class="p">);</span>     <span class="cm">/* Implicit conversion from void* to int* */</span>
+</pre></div>
+<dl><dd>In order to make the code compile as both C and C++, one must use an explicit cast, as follows (with some caveats in both languages<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>):</dd></dl>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">ptr</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="k">sizeof</span> <span class="o">*</span><span class="n">j</span><span class="p">);</span>
+</pre></div>
+<p>Though C++ favors this:<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+<span class="k">auto</span> <span class="n">i</span> <span class="o">=</span> <span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="kt">int</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">j</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+</pre></div>
+<ul><li>C allows implicitly adding additional non-topmost cv-qualifiers where it is safe, while C++ simply gives up.</li></ul>
+<ul><li>C++ changes some <a href="/wiki/C_standard_library" title="C standard library">C standard library</a> functions to add additional overloaded functions with <code><a href="/wiki/Const_(computer_programming)" title="Const (computer programming)">const</a></code> <a href="/wiki/Type_qualifier" title="Type qualifier">type qualifiers</a>, e.g. <code>strchr</code> returns <code>char*</code> in C, while C++ acts as if there were two overloaded functions <code>const char *strchr(const char *)</code> and a <code>char *strchr(char *)</code>.</li></ul>
+<ul><li>C++ is also more strict in conversions to enums: ints cannot be implicitly converted to enums as in C. Also, <a href="/wiki/Enumerated_type#C_and_syntactically_similar_languages" title="Enumerated type">Enumeration constants</a> (<code>enum</code> enumerators) are always of type <code>int</code> in C, whereas they are distinct types in C++ and may have a size different from that of <code>int</code>. C++11 allows the programmer to use custom integer types for the values of an enum.</li></ul>
+<ul><li>In C++ a <code>const</code> variable must be initialized; in C this is not necessary.</li></ul>
+<ul><li>C++ compilers prohibit goto or switch from crossing an initialization, as in the following C99 code:</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="nf">fn</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">goto</span> <span class="n">flack</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nl">flack</span><span class="p">:</span>
+    <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<ul><li>While syntactically valid, a <code>longjmp()</code> results in undefined behaviour in C++ if the jumped-over stack frames include objects with nontrivial destructors<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>. The C++ implementation is free to define the behaviour such that destructors would be called. However, this would preclude some uses of longjmp() which would otherwise be valid, such as implementation of <a href="/wiki/Thread_(computing)" title="Thread (computing)">threads</a> or <a href="/wiki/Coroutines" class="mw-redirect" title="Coroutines">coroutines</a> by longjmping between separate call stacks - when jumping from the lower to the upper call stack in global address space, destructors would be called for every object in the lower call stack. No such issue exists in C.</li></ul>
+<ul><li>C allows for multiple tentative definitions of a single global variable in a single <a href="/wiki/Translation_unit" title="Translation unit">translation unit</a>, which is disallowed as an <a href="/wiki/One_Definition_Rule" title="One Definition Rule">ODR</a> violation in C++.</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</pre></div>
+<ul><li>C allows declaring a new type with the same name as an existing <code>struct</code>, <code>union</code> or <code>enum</code> which is not allowed in C++, as in C <code>struct</code>, <code>union</code>, and <code>enum</code> types must be indicated as such whenever the type is referenced whereas in C++ all declarations of such types carry the typedef implicitly.</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">enum</span> <span class="n">BOOL</span> <span class="p">{</span><span class="n">FALSE</span><span class="p">,</span> <span class="n">TRUE</span><span class="p">};</span>
+<span class="k">typedef</span> <span class="kt">int</span> <span class="n">BOOL</span><span class="p">;</span>
+</pre></div>
+<ul><li>Non-prototype ("K&amp;R"-style) function declarations are not allowed in C++; they are still allowed in C,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> although they have been deemed obsolescent since C's original standardization in 1990. (The term "obsolescent" is a defined term in the ISO C standard, meaning a feature that "may be considered for withdrawal in future revisions" of the standard.) Similarly, implicit function declarations (using functions that have not been declared) are not allowed in C++, and have been disallowed in C since 1999.</li></ul>
+<ul><li>In C, a function prototype without parameters, e.g. <code>int foo();</code>, implies that the parameters are unspecified. Therefore, it is legal to call such a function with one or more <a href="/wiki/Argument_(computer_programming)" class="mw-redirect" title="Argument (computer programming)">arguments</a>, e.g. <code>foo(42, "hello world")</code>. In contrast, in C++ a function prototype without arguments means that the function takes no arguments, and calling such a function with arguments is ill-formed. In C, the correct way to declare a function that takes no arguments is by using 'void', as in <code>int foo(void);</code>, which is also valid in C++. Empty function prototypes are a deprecated feature in C99 (as they were in C89).</li></ul>
+<ul><li>In both C and C++, one can define nested <code><a href="/wiki/Struct_(C_programming_language)" title="Struct (C programming language)">struct</a></code> types, but the scope is interpreted differently: in C++, a nested <code>struct</code> is defined only within the scope/namespace of the outer <code>struct</code>, whereas in C the inner struct is also defined outside the outer struct.</li></ul>
+<p><br />
+<a href="/wiki/C99" title="C99">C99</a> and <a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a> added several additional features to C that have not been incorporated into standard C++, such as complex numbers, variable length arrays (note that complex numbers and variable length arrays are designated as optional extensions in C11), <a href="/wiki/Flexible_array_member" title="Flexible array member">flexible array members</a>, the <a href="/wiki/Restrict" title="Restrict">restrict</a> keyword, array parameter qualifiers, <a href="/wiki/C_syntax#Compound_literals" title="C syntax">compound literals</a>, and <a href="/wiki/C_syntax#Designated_initializers" title="C syntax">designated initializers</a>. 
+</p>
+<ul><li><a href="/wiki/Complex_arithmetic" class="mw-redirect" title="Complex arithmetic">Complex arithmetic</a> using the <code>float complex</code> and <code>double complex</code> primitive data types was added in the <a href="/wiki/C99" title="C99">C99</a> standard, via the <code>_Complex</code> keyword and <code>complex</code> convenience macro. In C++, complex arithmetic can be performed using the complex number class, but the two methods are not code-compatible. (The standards since <a href="/wiki/C%2B%2B11" title="C++11">C++11</a> require binary compatibility, however.)<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup></li></ul>
+<ul><li>Variable length arrays. This feature leads to possibly non-compile time <style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced"><a href="/wiki/Sizeof" title="Sizeof">sizeof</a></span> operator.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup></li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="o">*</span><span class="p">]);</span>  <span class="c1">// VLA declaration</span>
+<span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">])</span> 
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%zu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">a</span><span class="p">);</span> <span class="c1">// same as sizeof(int*)</span>
+    <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">];</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%zu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">s</span><span class="p">);</span> <span class="c1">// will print x*2</span>
+<span class="p">}</span>
+</pre></div>
+<ul><li>The last member of a C99 structure type with more than one member may be a "flexible array member", which takes the syntactic form of an array with unspecified length.  This serves a purpose similar to variable-length arrays, but VLAs cannot appear in type definitions, and unlike VLAs, flexible array members have no defined size.  ISO C++ has no such feature.  Example:</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">X</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">bytes</span><span class="p">[];</span>
+<span class="p">}</span>
+</pre></div>
+<ul><li>The <code><a href="/wiki/Restrict" title="Restrict">restrict</a></code> <a href="/wiki/Type_qualifier" title="Type qualifier">type qualifier</a> defined in C99 was not included in the C++03 standard, but most mainstream compilers such as the <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GNU Compiler Collection</a>,<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Microsoft Visual C++</a>, and <a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a> provide similar functionality as an extension.</li></ul>
+<ul><li>Array parameter qualifiers in functions are supported in C but not C++.</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="k">const</span><span class="p">]);</span>     <span class="c1">// equivalent to int *const a </span>
+<span class="kt">int</span> <span class="nf">bar</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="k">static</span> <span class="mi">5</span><span class="p">]);</span> <span class="c1">// annotates that s is at least 5 chars long</span>
+</pre></div>
+<ul><li>The functionality of <a href="/wiki/C_syntax#Compound_literals" title="C syntax">compound literals</a> in C is generalized to both built-in and user-defined types by the list initialization syntax of C++11, although with some syntactic and semantic differences.</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">X</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">X</span><span class="p">){</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>  <span class="c1">// The equivalent in C++ would be X{4, 6}. The C syntactic form used in C99 is supported as an extension in the GCC and Clang C++ compilers.</span>
+</pre></div>
+<ul><li><a href="/wiki/C_syntax#Designated_initializers" title="C syntax">Designated initializers</a> for structs and arrays are valid only in C, although struct designated initializers are planned for addition in C++2x:</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">X</span> <span class="n">a</span> <span class="o">=</span> <span class="p">{.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="p">.</span><span class="n">m</span> <span class="o">=</span> <span class="mi">6</span><span class="p">};</span>   <span class="c1">// to be allowed in C++2x (requires order of initializers matches declaration order)</span>
+<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="p">{[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;g&#39;</span><span class="p">};</span>  <span class="c1">// allowed in C, not allowed in C++ (nor C++2x)</span>
+</pre></div>
+<ul><li>Functions that do not return can be annotated using a noreturn <a href="/wiki/C%2B%2B11#attributes" title="C++11">attribute</a> in C++ whereas C uses a distinct keyword.</li></ul>
+<ul><li>C allows <code><a href="/wiki/Struct_(C_programming_language)" title="Struct (C programming language)">struct</a></code>, <code><a href="/wiki/Union_(computer_science)" class="mw-redirect" title="Union (computer science)">union</a></code>, and <code><a href="/wiki/Enumerated_type#C_and_syntactically_similar_languages" title="Enumerated type">enum</a></code> types to be declared in function prototypes, whereas C++ does not.</li></ul>
+<p><br />
+C++ adds numerous additional keywords to support its new features. This renders C code using those keywords for identifiers invalid in C++. For example:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">template</span> 
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">new</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">template</span><span class="o">*</span> <span class="n">class</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<dl><dd>is valid C code, but is rejected by a C++ compiler, since the keywords "template", "new" and "class" are reserved.</dd></dl>
+<h2><span id="Constructs_that_behave_differently_in_C_and_C.2B.2B"></span><span class="mw-headline" id="Constructs_that_behave_differently_in_C_and_C++">Constructs that behave differently in C and C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit&amp;section=2" title="Edit section: Constructs that behave differently in C and C++">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are a few syntactical constructs that are valid in both C and C++ but produce different results in the two languages.
+</p>
+<ul><li><a href="/wiki/Character_literal" title="Character literal">Character literals</a> such as <code>'a'</code> are of type <code>int</code> in C and of type <code>char</code> in C++, which means that <code>sizeof 'a'</code> will generally give different results in the two languages: in C++, it will be <code>1</code>, while in C it will be <code>sizeof(int)</code>. As another consequence of this type difference, in C, <code>'a'</code> will always be a signed expression, regardless of whether or not <code>char</code> is a signed or unsigned type, whereas for C++ this is compiler implementation specific.</li>
+<li>C++ assigns internal linkage to namespace-scoped <code>const</code> variables unless they are explicitly declared <code><a href="/wiki/External_variable" title="External variable">extern</a></code>, unlike C in which <code>extern</code> is the default for all file-scoped entities. Note that in practice this does not lead to silent semantic changes between identical C and C++ code but instead will lead to a compile-time or linkage error.</li>
+<li>In C use of inline functions requires manually adding a prototype declaration of the function using the extern keyword in exactly one translation unit to ensure a non-inlined version is linked in, whereas C++ handles this automatically. In more detail, C distinguishes two kinds of definitions of <a href="/wiki/Inline_function" title="Inline function"><code>inline</code> functions</a>: ordinary external definitions (where <b>extern</b> is explicitly used) and inline definitions.  C++, on the other hand, provides only inline definitions for inline functions.  In C, an inline definition is similar to an internal (i.e. static) one, in that it can coexist in the same program with one external definition and any number of internal and inline definitions of the same function in other translation units, all of which can differ.  This is a separate consideration from the <i>linkage</i> of the function, but not an independent one.  C compilers are afforded the discretion to choose between using inline and external definitions of the same function when both are visible.  C++, however, requires that if a function with external linkage is declared <b>inline</b> in any translation unit then it must be so declared (and therefore also defined) in every translation unit where it is used, and that all the definitions of that function be identical, following the ODR. Note that static inline functions behave identically in C and C++.</li>
+<li>Both C99 and C++ have a <a href="/wiki/Boolean_data_type" title="Boolean data type">boolean type</a> <code>bool</code> with constants <code>true</code> and <code>false</code>, but they are defined differently.  In C++, <code>bool</code> is a <a href="/wiki/Primitive_data_type" title="Primitive data type">built-in type</a> and a <a href="/wiki/Reserved_word" title="Reserved word">reserved keyword</a>.  In C99, a new keyword, <code>_Bool</code>, is introduced as the new boolean type.  The header <code>stdbool.h</code> provides macros <code>bool</code>, <code>true</code> and <code>false</code> that are defined as <code>_Bool</code>, <code>1</code> and <code>0</code>, respectively. Therefore, <code>true</code> and <code>false</code> have type <code>int</code> in C.</li></ul>
+<p>Several of the other differences from the previous section can also be exploited to create code that compiles in both languages but behaves differently.  For example, the following function will return different values in C and C++:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">extern</span> <span class="kt">int</span> <span class="n">T</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">size</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">T</span> <span class="p">{</span>  <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>  <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>  <span class="p">};</span>
+    
+    <span class="k">return</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">);</span>
+    <span class="cm">/* C:   return sizeof(int)</span>
+<span class="cm">     * C++: return sizeof(struct T)</span>
+<span class="cm">     */</span>
+<span class="p">}</span>
+</pre></div>
+<p>This is due to C requiring <code>struct</code> in front of structure tags (and so <code>sizeof(T)</code> refers to the variable), but C++ allowing it to be omitted (and so <code>sizeof(T)</code> refers to the implicit <code>typedef</code>). Beware that the outcome is different when the <code>extern</code> declaration is placed inside the function: then the presence of an identifier with same name in the function scope inhibits the implicit <code>typedef</code> to take effect for C++, and the outcome for C and C++ would be the same. Observe also that the ambiguity in the example above is due to the use of the parenthesis with the <code>sizeof</code> operator. Using <code>sizeof T</code> would expect <code>T</code> to be an expression and not a type, and thus the example would not compile with C++.
+</p>
+<h2><span id="Linking_C_and_C.2B.2B_code"></span><span class="mw-headline" id="Linking_C_and_C++_code">Linking C and C++ code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit&amp;section=3" title="Edit section: Linking C and C++ code">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While C and C++ maintain a large degree of source compatibility, the object files their respective compilers produce can have important differences that manifest themselves when intermixing C and C++ code.  Notably:
+</p>
+<ul><li>C compilers do not <a href="/wiki/Name_mangling" title="Name mangling">name mangle</a> symbols in the way that C++ compilers do.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup></li>
+<li>Depending on the compiler and architecture, it also may be the case that <a href="/wiki/Calling_convention" title="Calling convention">calling conventions</a> differ between the two languages.</li></ul>
+<p>For these reasons, for C++ code to call a C function <code>foo()</code>, the C++ code must <a href="/wiki/Function_prototype" title="Function prototype">prototype</a> <code>foo()</code> with <code>extern "C"</code>. Likewise, for C code to call a C++ function <code>bar()</code>, the C++ code for <code>bar()</code> must be declared with <code>extern "C"</code>.
+</p><p>A common practice for <a href="/wiki/Header_file" class="mw-redirect" title="Header file">header files</a> to maintain both C and C++ compatibility is to make its declaration be <code>extern "C"</code> for the scope of the header:<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Header file foo.h */</span>
+<span class="cp">#ifdef __cplusplus </span><span class="cm">/* If this is a C++ compiler, use C linkage */</span><span class="cp"></span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="p">{</span>
+<span class="cp">#endif</span>
+
+<span class="cm">/* These functions get C linkage */</span>
+<span class="kt">void</span> <span class="n">foo</span><span class="p">();</span>
+ 
+<span class="k">struct</span> <span class="n">bar</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">};</span>
+
+<span class="cp">#ifdef __cplusplus </span><span class="cm">/* If this is a C++ compiler, end C linkage */</span><span class="cp"></span>
+<span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>Differences between C and C++ <a href="/wiki/Linkage_(software)" title="Linkage (software)">linkage</a> and calling conventions can also have subtle implications for code that uses <a href="/wiki/Function_pointer" title="Function pointer">function pointers</a>. Some compilers will produce non-working code if a function pointer declared <code>extern "C"</code> points to a C++ function that is not declared <code>extern "C"</code>.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup>
+</p><p>For example, the following code:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno">1 </span><span class="kt">void</span> <span class="nf">my_function</span><span class="p">();</span>
+<span class="lineno">2 </span><span class="hll"><span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="kt">void</span> <span class="n">foo</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">fn_ptr</span><span class="p">)(</span><span class="kt">void</span><span class="p">));</span>
+</span><span class="lineno">3 </span>
+<span class="lineno">4 </span><span class="kt">void</span> <span class="nf">bar</span><span class="p">()</span>
+<span class="lineno">5 </span><span class="p">{</span>
+<span class="lineno">6 </span><span class="hll">   <span class="n">foo</span><span class="p">(</span><span class="n">my_function</span><span class="p">);</span>
+</span><span class="lineno">7 </span><span class="p">}</span>
+</pre></div>
+<p>Using <a href="/wiki/Sun_Microsystems" title="Sun Microsystems">Sun Microsystems</a>' C++ compiler, this produces the following warning:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="hll"> <span class="err">$</span> <span class="n">CC</span> <span class="o">-</span><span class="n">c</span> <span class="n">test</span><span class="p">.</span><span class="n">cc</span>
+</span> <span class="s">&quot;test.cc&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="o">:</span> <span class="n">Warning</span> <span class="p">(</span><span class="n">Anachronism</span><span class="p">)</span><span class="o">:</span> <span class="n">Formal</span> <span class="n">argument</span> <span class="n">fn_ptr</span> <span class="n">of</span> <span class="n">type</span>
+ <span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)()</span> <span class="n">in</span> <span class="n">call</span> <span class="n">to</span> <span class="n">foo</span><span class="p">(</span><span class="k">extern</span> <span class="s">&quot;C&quot;</span> <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)())</span> <span class="n">is</span> <span class="n">being</span> <span class="n">passed</span>
+ <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)().</span>
+</pre></div>
+<p>This is because <code>my_function()</code> is not declared with C linkage and calling conventions, but is being passed to the C function <code>foo()</code>.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-overview-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-overview_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-overview_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a href="/wiki/Bjarne_Stroustrup" title="Bjarne Stroustrup">Stroustrup, Bjarne</a>. <a rel="nofollow" class="external text" href="http://www.stroustrup.com/crc.pdf">"An Overview of the C++ Programming Language in The Handbook of Object Technology (Editor: Saba Zamir). CRC Press LLC, Boca Raton. 1999. ISBN 0-8493-3135-8"</a> <span class="cs1-format">(PDF)</span>. p.&#160;4. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120816122304/http://www.stroustrup.com/crc.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 16 August 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">12 August</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=An+Overview+of+the+C%2B%2B+Programming+Language+in+The+Handbook+of+Object+Technology+%28Editor%3A+Saba+Zamir%29.+CRC+Press+LLC%2C+Boca+Raton.+1999.+&#73;SBN+0-8493-3135-8.&amp;rft.pages=4&amp;rft.aulast=Stroustrup&amp;rft.aufirst=Bjarne&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fcrc.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web">B.Stroustrup. <a rel="nofollow" class="external text" href="http://www.stroustrup.com/siblings_short.pdf">"C and C++: Siblings. The C/C++ Users Journal. July 2002"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">17 March</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=C+and+C%2B%2B%3A+Siblings.+The+C%2FC%2B%2B+Users+Journal.+July+2002.&amp;rft.au=B.Stroustrup&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fsiblings_short.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-subset-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-subset_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.stroustrup.com/bs_faq.html#C-is-subset">"Bjarne Stroustrup's FAQ&#160;– Is C a subset of C++?"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">22 September</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bjarne+Stroustrup%27s+FAQ+%E2%80%93+Is+C+a+subset+of+C%2B%2B%3F&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fbs_faq.html%23C-is-subset&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">B. Stroustrup. <a rel="nofollow" class="external text" href="http://www.stroustrup.com/compat_short.pdf">"C and C++: A Case for Compatibility. The C/C++ Users Journal. August 2002"</a> <span class="cs1-format">(PDF)</span>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120722012742/http://www2.research.att.com/~bs/compat_short.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 22 July 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">18 August</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=C+and+C%2B%2B%3A+A+Case+for+Compatibility.+The+C%2FC%2B%2B+Users+Journal.+August+2002.&amp;rft.au=B.+Stroustrup&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fcompat_short.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">Rationale for International Standard—Programming Languages—C</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160606072228/http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">Archived</a> 6 June 2016 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, revision 5.10 (April 2003).</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html">"C Dialect Options - Using the GNU Compiler Collection (GCC)"</a>. <i>gnu.org</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20140326130603/http://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html">Archived</a> from the original on 26 March 2014.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=gnu.org&amp;rft.atitle=C+Dialect+Options+-+Using+the+GNU+Compiler+Collection+%28GCC%29&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc%2FC-Dialect-Options.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">"N4659: Working Draft, Standard for Programming Language C++"</a> <span class="cs1-format">(PDF)</span>. §Annex C.1. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20171207092618/http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 7 December 2017.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=N4659%3A+Working+Draft%2C+Standard+for+Programming+Language+C%2B%2B&amp;rft.pages=%C2%A7Annex+C.1&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg21%2Fdocs%2Fpapers%2F2017%2Fn4659.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> ("It is invalid to jump past a declaration with explicit or implicit initializer (except across entire block not entered). … With this simple compile-time rule, C++ assures that if an initialized variable is in scope, then it has assuredly been initialized.")</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">"N4659: Working Draft, Standard for Programming Language C++"</a> <span class="cs1-format">(PDF)</span>. §Annex C.1. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20171207092618/http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 7 December 2017.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=N4659%3A+Working+Draft%2C+Standard+for+Programming+Language+C%2B%2B&amp;rft.pages=%C2%A7Annex+C.1&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg21%2Fdocs%2Fpapers%2F2017%2Fn4659.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-publib.boulder.ibm.com-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-publib.boulder.ibm.com_9-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://publib.boulder.ibm.com/infocenter/macxhelp/v6v81/index.jsp?topic=%2Fcom.ibm.vacpp6m.doc%2Flanguage%2Fref%2Fclrc07cplr243.htm">"IBM Knowledge Center"</a>. <i>ibm.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ibm.com&amp;rft.atitle=IBM+Knowledge+Center&amp;rft_id=http%3A%2F%2Fpublib.boulder.ibm.com%2Finfocenter%2Fmacxhelp%2Fv6v81%2Findex.jsp%3Ftopic%3D%252Fcom.ibm.vacpp6m.doc%252Flanguage%252Fref%252Fclrc07cplr243.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://faq.cprogramming.com/cgi-bin/smartfaq.cgi?id=1043284351&amp;answer=1047673478">"FAQ &gt; Casting malloc - Cprogramming.com"</a>. <i>faq.cprogramming.com</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070405121807/http://faq.cprogramming.com/cgi-bin/smartfaq.cgi?answer=1047673478&amp;id=1043284351">Archived</a> from the original on 5 April 2007.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=faq.cprogramming.com&amp;rft.atitle=FAQ+%3E+Casting+malloc+-+Cprogramming.com&amp;rft_id=http%3A%2F%2Ffaq.cprogramming.com%2Fcgi-bin%2Fsmartfaq.cgi%3Fid%3D1043284351%26answer%3D1047673478&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.learncpp.com/cpp-tutorial/4-4a-explicit-type-conversion-casting/">"4.4a — Explicit type conversion (casting)"</a>. 16 April 2015. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160925003229/http://www.learncpp.com/cpp-tutorial/4-4a-explicit-type-conversion-casting/">Archived</a> from the original on 25 September 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=4.4a+%E2%80%94+Explicit+type+conversion+%28casting%29&amp;rft.date=2015-04-16&amp;rft_id=http%3A%2F%2Fwww.learncpp.com%2Fcpp-tutorial%2F4-4a-explicit-type-conversion-casting%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://wiki.c2.com/?CstyleCasts">http://wiki.c2.com/?CstyleCasts</a></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.cplusplus.com/reference/csetjmp/longjmp/">"longjmp - C++ Reference"</a>. <i>www.cplusplus.com</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121308440900/http://www.cplusplus.com/reference/csetjmp/longjmp/">Archived</a> from the original on 12 May 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.cplusplus.com&amp;rft.atitle=longjmp+-+C%2B%2B+Reference&amp;rft_id=http%3A%2F%2Fwww.cplusplus.com%2Freference%2Fcsetjmp%2Flongjmp%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/JTC1/sc22/wg14/www/docs/n1570.pdf">"2011 ISO C draft standard"</a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=2011+ISO+C+draft+standard&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2FJTC1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1570.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/cpp/numeric/complex">"std::complex - cppreference.com"</a>. <i>en.cppreference.com</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170715125445/http://en.cppreference.com/w/cpp/numeric/complex">Archived</a> from the original on 15 July 2017.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=en.cppreference.com&amp;rft.atitle=std%3A%3Acomplex+-+cppreference.com&amp;rft_id=http%3A%2F%2Fen.cppreference.com%2Fw%2Fcpp%2Fnumeric%2Fcomplex&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://david.tribble.com/text/cdiffs.htm#C90-vs-CPP98">"Incompatibilities Between  ISO C and ISO C++"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20060409075755/http://david.tribble.com/text/cdiffs.htm#C90-vs-CPP98">Archived</a> from the original on 9 April 2006.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Incompatibilities+Between++ISO+C+and+ISO+C%2B%2B&amp;rft_id=http%3A%2F%2Fdavid.tribble.com%2Ftext%2Fcdiffs.htm%23C90-vs-CPP98&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/Restricted-Pointers.html#Restricted-Pointers">Restricted Pointers</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160806092010/http://gcc.gnu.org/onlinedocs/gcc/Restricted-Pointers.html">Archived</a> 6 August 2016 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a> from <i>Using the GNU Compiler Collection (GCC)</i></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://publib.boulder.ibm.com/infocenter/macxhelp/v6v81/index.jsp?topic=%2Fcom.ibm.vacpp6m.doc%2Flanguage%2Fref%2Fclrc01name_mangling.htm">"IBM Knowledge Center"</a>. <i>ibm.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ibm.com&amp;rft.atitle=IBM+Knowledge+Center&amp;rft_id=http%3A%2F%2Fpublib.boulder.ibm.com%2Finfocenter%2Fmacxhelp%2Fv6v81%2Findex.jsp%3Ftopic%3D%252Fcom.ibm.vacpp6m.doc%252Flanguage%252Fref%252Fclrc01name_mangling.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://publib.boulder.ibm.com/infocenter/comphelp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8a.doc%2Fstandlib%2Fref%2Fstdcpplib.htm">"IBM Knowledge Center"</a>. <i>ibm.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ibm.com&amp;rft.atitle=IBM+Knowledge+Center&amp;rft_id=http%3A%2F%2Fpublib.boulder.ibm.com%2Finfocenter%2Fcomphelp%2Fv8v101%2Findex.jsp%3Ftopic%3D%252Fcom.ibm.xlcpp8a.doc%252Fstandlib%252Fref%252Fstdcpplib.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.sun.com/source/819-3689/Ch3.Std.html#pgfId-18503">"Oracle Documentation"</a>. Docs.sun.com. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20090403134627/http://docs.sun.com/source/819-3689/Ch3.Std.html#pgfId-18503">Archived</a> from the original on 3 April 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">18 August</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Oracle+Documentation&amp;rft.pub=Docs.sun.com&amp;rft_id=http%3A%2F%2Fdocs.sun.com%2Fsource%2F819-3689%2FCh3.Std.html%23pgfId-18503&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompatibility+of+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/C%2B%2B_Programming" class="extiw" title="wikibooks:C++ Programming">C++ Programming</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/C%2B%2B_Programming/Programming_Languages/Comparisons/C" class="extiw" title="wikibooks:C++ Programming/Programming Languages/Comparisons/C">Programming Languages/Comparisons/C</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.coding-guidelines.com/cbook/c90c++.pdf">Detailed comparison</a>, sentence by sentence, from a C89 Standard perspective.</li>
+<li><a rel="nofollow" class="external text" href="http://david.tribble.com/text/cdiffs.htm">Incompatibilities Between ISO C and ISO C++</a>, David R. Tribble (August 2001).</li>
+<li><a rel="nofollow" class="external text" href="http://docs.oracle.com/cd/E19422-01/819-3689/Ch3.Std.html#pgfId-18041">Oracle (Sun Microsystems) C++ Migration Guide, section 3.11</a>, Oracle/Sun compiler docs on linkage scope.</li>
+<li><a rel="nofollow" class="external text" href="http://www.oracle.com/technetwork/articles/servers-storage-dev/mixingcandcpluspluscode-305840.html">Oracle: Mixing C and C++ Code in the Same Program</a>, overview by Steve Clamage (ANSI C++ Committee chair).</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_programming_language" title="Template:C programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_programming_language" title="Template talk:C programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*ANSI_C&amp;#10;**C89_and_C90&amp;#10;*C99&amp;#10;*C11&amp;#10;*C18&amp;#10;*C2x&amp;#10;*Embedded_C&amp;#10;*MISRA_C">
+<ul><li><a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>
+<ul><li><a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C89 and C90</a></li></ul></li>
+<li><a href="/wiki/C99" title="C99">C99</a></li>
+<li><a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a></li>
+<li><a href="/wiki/C18_(C_standard_revision)" title="C18 (C standard revision)">C18</a></li>
+<li><a href="/wiki/C2x" title="C2x">C2x</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subroutine" title="Subroutine">Functions</a></li>
+<li><a href="/wiki/Include_directive#C" title="Include directive">Header files</a></li>
+<li><a href="/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String</a></li>
+<li><a href="/wiki/C_syntax" title="C syntax">Syntax</a></li>
+<li><a href="/wiki/C_preprocessor" title="C preprocessor">Preprocessor</a></li>
+<li><a href="/wiki/C_data_types" title="C data types">Data types</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C_standard_library" title="C standard library">Standard library<br />functions</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_character_classification" title="C character classification">Char (ctype.h)</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File I/O (stdio.h)</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Math (math.h)</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Dynamic memory (stdlib.h)</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String (string.h)</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Time (time.h)</a></li>
+<li><a href="/wiki/Stdarg.h" title="Stdarg.h">Variadic (stdarg.h)</a></li>
+<li><a href="/wiki/C_POSIX_library" title="C POSIX library">POSIX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_standard_library" title="Category:C standard library">Standard<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Microsoft_Windows_library_files#MSVCRT.DLL,_MSVCPP.DLL_and_CRTDLL.DLL" title="Microsoft Windows library files">Microsoft Run-time Library</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/BSD_libc" class="mw-redirect" title="BSD libc">BSD libc</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C_compilers" title="List of compilers">Comparison of compilers</a></li>
+<li><a href="/wiki/Amsterdam_Compiler_Kit" title="Amsterdam Compiler Kit">ACK</a></li>
+<li><a href="/wiki/Borland_Turbo_C" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">ICC</a></li>
+<li><a href="/wiki/LCC_(compiler)" title="LCC (compiler)">LCC</a></li>
+<li><a href="/wiki/Portable_C_Compiler" title="Portable C Compiler">PCC</a></li>
+<li><a href="/wiki/Small_Device_C_Compiler" title="Small Device C Compiler">SDCC</a></li>
+<li><a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">TCC</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> / <a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Express</a> / <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/GNOME_Builder" title="GNOME Builder">GNOME Builder</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison with<br />other languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Compatibility of C and C++</a></li>
+<li>Comparison with <a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison with Pascal</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Descendant<br />languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Alef_(programming_language)" title="Alef (programming language)">Alef</a></li>
+<li><a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Vala_(programming_language)" title="Vala (programming language)">Vala</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="C++" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C%2B%2B_programming_language" title="Template:C++ programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C%2B%2B_programming_language" title="Template talk:C++ programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C%2B%2B_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C++" style="font-size:114%;margin:0 4em"><a href="/wiki/C%2B%2B" title="C++">C++</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*C++&amp;#10;*C++98&amp;#10;*C++03&amp;#10;*C++11&amp;#10;*C++14&amp;#10;*C++17&amp;#10;*C++20&amp;#10;*C++23">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C%2B%2B#Standardization" title="C++">C++98</a></li>
+<li><a href="/wiki/C%2B%2B03" title="C++03">C++03</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a href="/wiki/C%2B%2B20" title="C++20">C++20</a></li>
+<li><a href="/wiki/C%2B%2B23" title="C++23">C++23</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B_classes" title="C++ classes">Classes</a></li>
+<li><a href="/wiki/C%2B%2B#Exception_handling" title="C++">Exception handling</a></li>
+<li><a href="/wiki/Function_overloading" title="Function overloading">Function overloading</a></li>
+<li><a href="/wiki/New_and_delete_(C%2B%2B)" title="New and delete (C++)">new and delete</a></li>
+<li><a href="/wiki/Operator_overloading" title="Operator overloading">Operator overloading</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a href="/wiki/Template_(C%2B%2B)" title="Template (C++)">Templates</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C%2B%2B_Standard_Library" title="C++ Standard Library">Standard Library</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Input/output_(C%2B%2B)" title="Input/output (C++)">I/O Streams</a></li>
+<li><a href="/wiki/Smart_pointer" title="Smart pointer">Smart pointers</a></li>
+<li><a href="/wiki/Standard_Template_Library" title="Standard Template Library">STL</a></li>
+<li><a href="/wiki/C%2B%2B_string_handling" title="C++ string handling">Strings</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C%2B%2B_compilers" title="Category:C++ compilers">Compilers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C++_compilers" title="List of compilers">Comparison of C++ compilers</a></li>
+<li><a href="/wiki/Borland_C%2B%2B" title="Borland C++">Borland C++</a></li>
+<li><a href="/wiki/Borland_C%2B%2B" title="Borland C++">Borland Turbo C++</a></li>
+<li><a href="/wiki/C%2B%2BBuilder" title="C++Builder">C++Builder</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a></li>
+<li><a href="/wiki/Oracle_Developer_Studio" title="Oracle Developer Studio">Oracle Solaris Studio</a></li>
+<li><a href="/wiki/Visual_C%2B%2B" class="mw-redirect" title="Visual C++">Visual C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of C IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/CLion" class="mw-redirect" title="CLion">CLion</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li>
+<li><a href="/wiki/KDevelop" title="KDevelop">KDevelop</a></li>
+<li><a href="/wiki/Qt_Creator" title="Qt Creator">Qt Creator</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Superset languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Objective-C%2B%2B" class="mw-redirect" title="Objective-C++">Objective-C++</a></li>
+<li><a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a></li>
+<li>( <a href="/wiki/C%2B%2B/CX" title="C++/CX">C++/CX</a> )</li>
+<li><a href="/wiki/Ch_(computer_programming)" title="Ch (computer programming)">Ch</a></li>
+<li><a href="/wiki/SYCL" title="SYCL">SYCL</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Dialects</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Embedded_C%2B%2B" title="Embedded C++"> Embedded C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Relative to<br />other languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">Compatibility of C and C++</a></li>
+<li><a href="/wiki/Comparison_of_Java_and_C%2B%2B" title="Comparison of Java and C++">Comparison of Java and C++</a></li>
+<li><a href="/wiki/Comparison_of_ALGOL_68_and_C%2B%2B" title="Comparison of ALGOL 68 and C++">Comparison of ALGOL 68 and C++</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C%2B%2B_programming_language_family" title="Category:C++ programming language family">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<p class="mw-empty-elt">
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1238
+Cached time: 20200306203046
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.436 seconds
+Real time usage: 0.563 seconds
+Preprocessor visited node count: 1387/1000000
+Post‐expand include size: 79254/2097152 bytes
+Template argument size: 980/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 68483/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.160/10.000 seconds
+Lua memory usage: 4.19 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  392.313      1 -total
+ 54.88%  215.317      1 Template:Reflist
+ 41.07%  161.132     17 Template:Cite_web
+ 10.95%   42.961      1 Template:ProgLangCompare
+  9.10%   35.683      1 Template:Sidebar
+  8.02%   31.461      1 Template:CProLang
+  7.85%   30.798      2 Template:Navbox
+  7.56%   29.651      1 Template:Wikibooks
+  6.28%   24.655      1 Template:Sister_project
+  6.18%   24.252      1 Template:Use_dmy_dates
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4573232-0!canonical and timestamp 20200306203045 and revision id 930772727
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;oldid=930772727">https://en.wikipedia.org/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;oldid=930772727</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison of individual programming languages</a></li><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:C%2B%2B" title="Category:C++">C++</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_January_2015" title="Category:Use dmy dates from January 2015">Use dmy dates from January 2015</a></li><li><a href="/wiki/Category:Articles_with_example_C%2B%2B_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Compatibility+of+C+and+C%2B%2B" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Compatibility+of+C+and+C%2B%2B" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Compatibility_of_C_and_C%2B%2B" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Compatibility_of_C_and_C%2B%2B">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Compatibility_of_C_and_C%2B%2B" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Compatibility_of_C_and_C%2B%2B" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;oldid=930772727" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q856816" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Compatibility_of_C_and_C%2B%2B&amp;id=930772727&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/C%2B%2B_Programming/Programming_Languages/Comparisons/C" hreflang="en">Wikibooks</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Compatibility+of+C+and+C%2B%2B">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Compatibility+of+C+and+C%2B%2B&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/C_r%C3%A9szhalmaz_(C%2B%2B)" title="C részhalmaz (C++) – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q856816#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 14 December 2019, at 20:55<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Compatibility_of_C_and_C%2B%2B&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.436","walltime":"0.563","ppvisitednodes":{"value":1387,"limit":1000000},"postexpandincludesize":{"value":79254,"limit":2097152},"templateargumentsize":{"value":980,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":68483,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  392.313      1 -total"," 54.88%  215.317      1 Template:Reflist"," 41.07%  161.132     17 Template:Cite_web"," 10.95%   42.961      1 Template:ProgLangCompare","  9.10%   35.683      1 Template:Sidebar","  8.02%   31.461      1 Template:CProLang","  7.85%   30.798      2 Template:Navbox","  7.56%   29.651      1 Template:Wikibooks","  6.28%   24.655      1 Template:Sister_project","  6.18%   24.252      1 Template:Use_dmy_dates"]},"scribunto":{"limitreport-timeusage":{"value":"0.160","limit":"10.000"},"limitreport-memusage":{"value":4390813,"limit":52428800}},"cachereport":{"origin":"mw1238","timestamp":"20200306203046","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Compatibility of C and C++","url":"https:\/\/en.wikipedia.org\/wiki\/Compatibility_of_C_and_C%2B%2B","sameAs":"http:\/\/www.wikidata.org\/entity\/Q856816","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q856816","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-03-30T22:38:15Z","dateModified":"2019-12-14T20:55:32Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":98,"wgHostname":"mw1263"});});</script></body></html>

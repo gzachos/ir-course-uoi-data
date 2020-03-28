@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Motion planning - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XndUBwpAAEUAAAec0g8AAAAB","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Motion_planning","wgTitle":"Motion planning","wgCurRevisionId":945942287,"wgRevisionId":945942287,"wgArticleId":4562875,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Articles needing additional references from June 2013","All articles needing additional references","Use dmy dates from October 2019","Use American English from February 2019","All Wikipedia articles written in American English","Commons category link is on Wikidata",
+"Robot kinematics","Theoretical computer science","Automated planning and scheduling"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Motion_planning","wgRelevantArticleId":4562875,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q366872","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready",
+"ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP"
+,"ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Motion_planning&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Motion_planning&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Motion_planning"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Motion_planning rootpage-Motion_planning skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Motion planning</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Robotics problem</div>
+<table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Motion_planning&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Motion+planning%22">"Motion planning"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Motion+planning%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Motion+planning%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Motion+planning%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Motion+planning%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Motion+planning%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">June 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>
+
+<b>Motion planning</b> (also known as the <b>navigation problem</b> or the <b>piano mover's problem</b>) is a term used in <a href="/wiki/Robotics" title="Robotics">robotics</a> is to find a sequence of 
+valid configurations that moves the 
+robot from the source to destination.
+</p><p>For example, consider navigating a <a href="/wiki/Mobile_robot" title="Mobile robot">mobile robot</a> inside a building to a distant waypoint.  It should execute this task while avoiding walls and not falling down stairs.  A motion planning algorithm would take a description of these tasks as input, and produce the speed and turning commands sent to the robot's wheels.  Motion planning algorithms might address robots with a larger number of joints (e.g., industrial manipulators), more complex tasks (e.g. manipulation of objects), different constraints (e.g., a car that can only drive forward), and uncertainty (e.g. imperfect models of the environment or robot).
+</p><p>Motion planning has several robotics applications, such as <a href="/wiki/Autonomous_robot" title="Autonomous robot">autonomy</a>, <a href="/wiki/Automation" title="Automation">automation</a>, and robot design in <a href="/wiki/CAD_software" class="mw-redirect" title="CAD software">CAD software</a>, as well as applications in other fields, such as animating <a href="/wiki/Digital_character" class="mw-redirect" title="Digital character">digital characters</a>, <a href="/wiki/Video_game" title="Video game">video game</a>, <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a>, <a href="/wiki/Architectural_design" class="mw-redirect" title="Architectural design">architectural design</a>, <a href="/wiki/Robotic_surgery" class="mw-redirect" title="Robotic surgery">robotic surgery</a>, and the study of <a href="/wiki/Biological_molecule" class="mw-redirect" title="Biological molecule">biological molecules</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Concepts"><span class="tocnumber">1</span> <span class="toctext">Concepts</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Configuration_space"><span class="tocnumber">1.1</span> <span class="toctext">Configuration space</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Free_space"><span class="tocnumber">1.2</span> <span class="toctext">Free space</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Target_space"><span class="tocnumber">1.3</span> <span class="toctext">Target space</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Obstacle_space"><span class="tocnumber">1.4</span> <span class="toctext">Obstacle space</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Algorithms"><span class="tocnumber">2</span> <span class="toctext">Algorithms</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Grid-based_search"><span class="tocnumber">2.1</span> <span class="toctext">Grid-based search</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Interval-based_search"><span class="tocnumber">2.2</span> <span class="toctext">Interval-based search</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Geometric_algorithms"><span class="tocnumber">2.3</span> <span class="toctext">Geometric algorithms</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Reward-based_algorithms"><span class="tocnumber">2.4</span> <span class="toctext">Reward-based algorithms</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Artificial_potential_fields"><span class="tocnumber">2.5</span> <span class="toctext">Artificial potential fields</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Sampling-based_algorithms"><span class="tocnumber">2.6</span> <span class="toctext">Sampling-based algorithms</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#List_of_notable_algorithms"><span class="tocnumber">2.7</span> <span class="toctext">List of notable algorithms</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Completeness_and_performance"><span class="tocnumber">3</span> <span class="toctext">Completeness and performance</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Problem_variants"><span class="tocnumber">4</span> <span class="toctext">Problem variants</span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Differential_constraints"><span class="tocnumber">4.1</span> <span class="toctext">Differential constraints</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Optimality_constraints"><span class="tocnumber">4.2</span> <span class="toctext">Optimality constraints</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Hybrid_systems"><span class="tocnumber">4.3</span> <span class="toctext">Hybrid systems</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Uncertainty"><span class="tocnumber">4.4</span> <span class="toctext">Uncertainty</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-20"><a href="#Applications"><span class="tocnumber">5</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Concepts">Concepts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=1" title="Edit section: Concepts">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_workspace_1.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Motion_planning_workspace_1.svg/220px-Motion_planning_workspace_1.svg.png" decoding="async" width="220" height="137" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Motion_planning_workspace_1.svg/330px-Motion_planning_workspace_1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Motion_planning_workspace_1.svg/440px-Motion_planning_workspace_1.svg.png 2x" data-file-width="728" data-file-height="453" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_workspace_1.svg" class="internal" title="Enlarge"></a></div>Example of a workspace.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_workspace_1_configuration_space_1.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Motion_planning_workspace_1_configuration_space_1.svg/220px-Motion_planning_workspace_1_configuration_space_1.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Motion_planning_workspace_1_configuration_space_1.svg/330px-Motion_planning_workspace_1_configuration_space_1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/90/Motion_planning_workspace_1_configuration_space_1.svg/440px-Motion_planning_workspace_1_configuration_space_1.svg.png 2x" data-file-width="261" data-file-height="261" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_workspace_1_configuration_space_1.svg" class="internal" title="Enlarge"></a></div>Configuration space of a point-sized robot. White = <i>C<sub>free</sub></i>, gray = <i>C<sub>obs</sub></i>.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_workspace_1_configuration_space_2.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Motion_planning_workspace_1_configuration_space_2.svg/220px-Motion_planning_workspace_1_configuration_space_2.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Motion_planning_workspace_1_configuration_space_2.svg/330px-Motion_planning_workspace_1_configuration_space_2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Motion_planning_workspace_1_configuration_space_2.svg/440px-Motion_planning_workspace_1_configuration_space_2.svg.png 2x" data-file-width="261" data-file-height="261" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_workspace_1_configuration_space_2.svg" class="internal" title="Enlarge"></a></div>Configuration space for a rectangular translating robot (pictured red). White = <i>C<sub>free</sub></i>, gray = <i>C<sub>obs</sub></i>, where dark gray = the objects, light gray = configurations where the robot would touch an object or leave the workspace.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_configuration_space_curved_valid_path.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Motion_planning_configuration_space_curved_valid_path.svg/220px-Motion_planning_configuration_space_curved_valid_path.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Motion_planning_configuration_space_curved_valid_path.svg/330px-Motion_planning_configuration_space_curved_valid_path.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Motion_planning_configuration_space_curved_valid_path.svg/440px-Motion_planning_configuration_space_curved_valid_path.svg.png 2x" data-file-width="261" data-file-height="261" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_configuration_space_curved_valid_path.svg" class="internal" title="Enlarge"></a></div>Example of a valid path.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_configuration_space_curved_invalid_path.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Motion_planning_configuration_space_curved_invalid_path.svg/220px-Motion_planning_configuration_space_curved_invalid_path.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Motion_planning_configuration_space_curved_invalid_path.svg/330px-Motion_planning_configuration_space_curved_invalid_path.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Motion_planning_configuration_space_curved_invalid_path.svg/440px-Motion_planning_configuration_space_curved_invalid_path.svg.png 2x" data-file-width="261" data-file-height="261" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_configuration_space_curved_invalid_path.svg" class="internal" title="Enlarge"></a></div>Example of an invalid path.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Motion_planning_configuration_space_road_map_path.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Motion_planning_configuration_space_road_map_path.svg/220px-Motion_planning_configuration_space_road_map_path.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/db/Motion_planning_configuration_space_road_map_path.svg/330px-Motion_planning_configuration_space_road_map_path.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/db/Motion_planning_configuration_space_road_map_path.svg/440px-Motion_planning_configuration_space_road_map_path.svg.png 2x" data-file-width="261" data-file-height="261" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Motion_planning_configuration_space_road_map_path.svg" class="internal" title="Enlarge"></a></div>Example of a road map.</div></div></div>
+<p>A basic motion planning problem is to compute a continuous path that connects a start configuration S and a goal configuration G, while avoiding collision with known obstacles.  The robot and obstacle geometry is described in a 2D or 3D <i>workspace</i>, while the motion is represented as a path in (possibly higher-dimensional) <a href="/wiki/Configuration_space_(physics)" title="Configuration space (physics)">configuration space</a>.
+</p>
+<h3><span class="mw-headline" id="Configuration_space">Configuration space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=2" title="Edit section: Configuration space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A configuration describes the pose of the robot, and the <a href="/wiki/Configuration_space_(physics)" title="Configuration space (physics)">configuration space</a> C is the set of all possible configurations.  For example:
+</p>
+<ul><li>If the robot is a single point (zero-sized) translating in a 2-dimensional plane (the workspace), C is a plane, and a configuration can be represented using two parameters (x, y).</li>
+<li>If the robot is a 2D shape that can translate and rotate, the workspace is still 2-dimensional.   However, C is the special Euclidean group <b>SE</b>(2) = <b>R</b><sup>2</sup> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \times }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x00D7;<!-- × --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \times }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ffafff1ad26cbe49045f19a67ce532116a32703" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.019ex; margin-bottom: -0.19ex; width:1.808ex; height:1.509ex;" alt="\times "/></span> <b>SO</b>(2) (where <b>SO</b>(2) is the <a href="/wiki/Special_orthogonal_group" class="mw-redirect" title="Special orthogonal group">special orthogonal group</a> of 2D rotations), and a configuration can be represented using 3 parameters (x, y, θ).</li>
+<li>If the robot is a solid 3D shape that can translate and rotate, the workspace is 3-dimensional, but C is the special Euclidean group <b>SE(3)</b> = <b>R</b><sup>3</sup> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \times }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x00D7;<!-- × --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \times }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0ffafff1ad26cbe49045f19a67ce532116a32703" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.019ex; margin-bottom: -0.19ex; width:1.808ex; height:1.509ex;" alt="\times "/></span> <b>SO</b>(3), and a configuration requires 6 parameters: (x, y, z) for translation, and <a href="/wiki/Euler_angles" title="Euler angles">Euler angles</a> (α, β, γ).</li>
+<li>If the robot is a fixed-base manipulator with N revolute joints (and no closed-loops), C is N-dimensional.</li></ul>
+<h3><span class="mw-headline" id="Free_space">Free space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=3" title="Edit section: Free space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The set of configurations that avoids collision with obstacles is called the free space C<sub>free</sub>.  The complement of C<sub>free</sub> in C is called the obstacle or forbidden region.
+</p><p>Often, it is prohibitively difficult to explicitly compute the shape of C<sub>free</sub>.  However, testing whether a given configuration is in C<sub>free</sub> is efficient.  First, <a href="/wiki/Forward_kinematics" title="Forward kinematics">forward kinematics</a> determine the position of the robot's geometry, and <a href="/wiki/Collision_detection" title="Collision detection">collision detection</a> tests if the robot's geometry collides with the environment's geometry.
+</p>
+<h3><span class="mw-headline" id="Target_space">Target space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=4" title="Edit section: Target space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Target space is a subspace of free space which denotes where we want the robot to move to. In global motion planning, target space is observable by the robot's sensors. However, in local motion planning, the robot cannot observe the target space in some states. To solve this problem, the robot goes through several virtual target spaces, each of which is located within the observable area (around the robot). A virtual target space is called a sub-goal.
+</p>
+<h3><span class="mw-headline" id="Obstacle_space">Obstacle space</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=5" title="Edit section: Obstacle space">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Obstacle space is a space that the robot can not move to. Obstacle space <b>is not</b> opposite of free space.
+</p>
+<h2><span class="mw-headline" id="Algorithms">Algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=6" title="Edit section: Algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Low-dimensional problems can be solved with grid-based algorithms that overlay a grid on top of configuration space, or geometric algorithms that compute the shape and connectivity of C<sub>free</sub>.
+</p><p>Exact motion planning for high-dimensional systems under complex constraints is computationally <a href="/wiki/Computational_complexity_theory#Intractability" title="Computational complexity theory">intractable</a>.  Potential-field algorithms are efficient, but fall prey to local minima (an exception is the harmonic potential fields).  Sampling-based algorithms avoid the problem of local minima, and solve many problems quite quickly.
+They are unable to determine that no path exists, but they have a probability of failure that decreases to zero as more time is spent.
+</p><p>Sampling-based algorithms are currently considered state-of-the-art for motion planning in high-dimensional spaces, and have been applied to problems which have dozens or even hundreds of dimensions (robotic manipulators, biological molecules, animated digital characters, and <a href="/wiki/Legged_robot" title="Legged robot">legged robots</a>).
+</p>
+<h3><span class="mw-headline" id="Grid-based_search">Grid-based search</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=7" title="Edit section: Grid-based search">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Grid-based approaches overlay a grid on configuration space, and assume each configuration is identified with a grid point.  At each grid point, the robot is allowed to move to adjacent grid points as long as the line between them is completely contained within C<sub>free</sub> (this is tested with collision detection).  This discretizes the set of actions, and <a href="/wiki/Search_algorithms" class="mw-redirect" title="Search algorithms">search algorithms</a> (like <a href="/wiki/A*_search_algorithm" title="A* search algorithm">A*</a>) are used to find a path from the start to the goal.
+</p><p>These approaches require setting a grid resolution.  Search is faster with coarser grids, but the algorithm will fail to find paths through narrow portions of C<sub>free</sub>.  Furthermore, the number of points on the grid grows exponentially in the configuration space dimension, which make them inappropriate for high-dimensional problems.
+</p><p>Traditional grid-based approaches produce paths whose heading changes are constrained to multiples of a given base angle, often resulting in suboptimal paths. <a href="/wiki/Any-angle_path_planning" title="Any-angle path planning">Any-angle path planning</a> approaches find shorter paths by propagating information along grid edges (to search fast) without constraining their paths to grid edges (to find short paths).
+</p><p>Grid-based approaches often need to search repeatedly, for example, when the knowledge of the robot about the configuration space changes or the configuration space itself changes during path following. <a href="/wiki/Incremental_heuristic_search" title="Incremental heuristic search">Incremental heuristic search</a> algorithms replan fast by using experience with the previous similar path-planning problems to speed up their search for the current one.
+</p>
+<h3><span class="mw-headline" id="Interval-based_search">Interval-based search</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=8" title="Edit section: Interval-based search">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These approaches are similar to grid-based search approaches except that they generate a paving covering entirely the configuration space instead of a grid.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> The paving is decomposed into two <a href="/wiki/Subpaving" title="Subpaving">subpavings</a> X<sup>−</sup>,X<sup>+</sup> made with boxes such that X<sup>−</sup> ⊂ C<sub>free</sub> ⊂ X<sup>+</sup>. Characterizing C<sub>free</sub> amounts to solve a <a href="/wiki/Set_inversion" title="Set inversion">set inversion problem</a>. <a href="/wiki/Interval_arithmetic" title="Interval arithmetic">Interval analysis</a> could thus be used when C<sub>free</sub> cannot be described by linear inequalities in order to have a guaranteed enclosure.
+</p><p>The robot is thus allowed to move freely in X<sup>−</sup>, and cannot go outside X<sup>+</sup>. To both subpavings, a neighbor graph is built and paths can be found using algorithms such as <a href="/wiki/Dijkstra%27s_algorithm" title="Dijkstra&#39;s algorithm">Dijkstra</a> or <a href="/wiki/A*_search_algorithm" title="A* search algorithm">A*</a>. When a path is feasible in X<sup>−</sup>, it is also feasible in C<sub>free</sub>. When no path exists in X<sup>+</sup> from one initial configuration to the goal, we have the guarantee that no feasible path exists in C<sub>free</sub>. As for the grid-based approach, the interval approach is inappropriate for high-dimensional problems, due to the fact that the number of boxes to be generated grows exponentially with respect to the dimension of configuration space.
+</p><p>
+An illustration is provided by the three figures on the right where a hook with two degrees of freedom has to move from the left to the right, avoiding two horizontal small segments. </p><div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Graph2displaycolor.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graph2displaycolor.jpg/220px-Graph2displaycolor.jpg" decoding="async" width="220" height="125" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graph2displaycolor.jpg/330px-Graph2displaycolor.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/da/Graph2displaycolor.jpg/440px-Graph2displaycolor.jpg 2x" data-file-width="793" data-file-height="452" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Graph2displaycolor.jpg" class="internal" title="Enlarge"></a></div>Motion from the initial configuration (blue) to the final configuration of the hook, avoiding the two obstacles (red segments). The left-bottom corner of the hook has to stay on the horizontal line, which makes the hook two degrees of freedom.</div></div></div> 
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Graph1sivia.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Graph1sivia.jpg/220px-Graph1sivia.jpg" decoding="async" width="220" height="155" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Graph1sivia.jpg/330px-Graph1sivia.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/Graph1sivia.jpg/440px-Graph1sivia.jpg 2x" data-file-width="1024" data-file-height="721" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Graph1sivia.jpg" class="internal" title="Enlarge"></a></div>Decomposition with boxes covering the configuration space: The subpaving X<sup>−</sup> is the union all red boxes and the subpaving X<sup>+</sup> is the union of red and green boxes. The path corresponds to the motion represented above.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Graph3cameleon.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Graph3cameleon.jpg/220px-Graph3cameleon.jpg" decoding="async" width="220" height="155" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Graph3cameleon.jpg/330px-Graph3cameleon.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Graph3cameleon.jpg/440px-Graph3cameleon.jpg 2x" data-file-width="1024" data-file-height="721" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Graph3cameleon.jpg" class="internal" title="Enlarge"></a></div>This figure corresponds to the same path as above but obtained with many fewer boxes.The algorithm avoids bisecting boxes in parts of the configuration space that do not influence the final result.</div></div></div>
+<p>The decomposition with subpavings using interval analysis also makes it possible to characterize the topology of C<sub>free</sub> such as counting its number of connected components.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Geometric_algorithms">Geometric algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=9" title="Edit section: Geometric algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Point robots among polygonal obstacles
+</p>
+<ul><li><a href="/wiki/Visibility_graph" title="Visibility graph">Visibility graph</a></li>
+<li><a href="/wiki/Boustrophedon_cell_decomposition" title="Boustrophedon cell decomposition">Cell decomposition</a></li></ul>
+<p>Translating objects among obstacles
+</p>
+<ul><li><a href="/wiki/Minkowski_sum" class="mw-redirect" title="Minkowski sum">Minkowski sum</a></li></ul>
+<p>Finding the way out of a building
+</p>
+<ul><li>farthest ray trace</li></ul>
+<p>Given a bundle of rays around the current position attributed with their length hitting a wall, the robot moves into the direction of the longest ray unless a door is identified. Such an algorithm was used for modeling emergency egress from buildings.
+</p>
+<h3><span class="mw-headline" id="Reward-based_algorithms">Reward-based algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=10" title="Edit section: Reward-based algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Reward-based algorithms assume that the robot in each state (position and internal state, including direction) can choose between different actions (motion). However, the result of each action is not definite. In other words, outcomes (displacement) are partly random and partly under the control of the robot. The robot gets positive reward when it reaches the target and gets negative reward if it collides with an obstacle. These algorithms try to find a path which maximizes cumulative future rewards. The <a href="/wiki/Markov_decision_process" title="Markov decision process">Markov decision process</a> (MDP) is a popular mathematical framework that is used in many reward-based algorithms. The advantage of MDPs over other reward-based algorithms is that they generate the optimal path. The disadvantage of MDPs is that they limit the robot to choose from a finite set of actions. Therefore, the path is not smooth (similar to grid-based approaches). Fuzzy Markov decision processes (FDMPs)is an extension of MDPs which generate smooth path with using an <a href="/w/index.php?title=Fuzzy_inference_system&amp;action=edit&amp;redlink=1" class="new" title="Fuzzy inference system (page does not exist)">fuzzy inference system</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Artificial_potential_fields">Artificial potential fields</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=11" title="Edit section: Artificial potential fields">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One approach is to treat the robot's configuration as a point in a potential field that combines attraction to the goal, and repulsion from obstacles.  The resulting trajectory is output as the path.  This approach has advantages in that the trajectory is produced with little computation.  However, they can become trapped in <a href="/wiki/Local_minima" class="mw-redirect" title="Local minima">local minima</a> of the potential field and fail to find a path, or can find a non-optimal path. The artificial potential fields can be treated as continuum equations similar to electrostatic potential fields (treating the robot like a point charge), or motion through the field can be discretized using a set of linguistic rules.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Sampling-based_algorithms">Sampling-based algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=12" title="Edit section: Sampling-based algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Sampling-based algorithms represent the configuration space with a roadmap of sampled configurations.
+A basic algorithm samples N configurations in C, and retains those in C<sub>free</sub> to use as <i>milestones</i>.  A roadmap is then constructed that connects two milestones P and Q if the line segment PQ is completely in C<sub>free</sub>.  Again, collision detection is used to test inclusion in C<sub>free</sub>.  To find a path that connects S and G, they are added to the roadmap.  If a path in the roadmap links S and G, the planner succeeds, and returns that path.  If not, the reason is not definitive: either there is no path in C<sub>free</sub>, or the planner did not sample enough milestones.
+</p><p>These algorithms work well for high-dimensional configuration spaces, because unlike combinatorial algorithms, their running time is not (explicitly) exponentially dependent on the dimension of C.  They are also (generally) substantially easier to implement.  They are probabilistically complete, meaning the probability that they will produce a solution approaches 1 as more time is spent.  However, they cannot determine if no solution exists.
+</p><p>Given basic <i>visibility</i> conditions on C<sub>free</sub>, it has been proven that as the number of configurations N grows higher, the probability that the above algorithm finds a solution approaches 1 exponentially.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> Visibility is not explicitly dependent on the dimension of C; it is possible to have a high-dimensional space with "good" visibility or a low-dimensional space with "poor" visibility.  The experimental success of sample-based methods suggests that most commonly seen spaces have good visibility.
+</p><p>There are many variants of this basic scheme:
+</p>
+<ul><li>It is typically much faster to only test segments between nearby pairs of milestones, rather than all pairs.</li>
+<li>Nonuniform sampling distributions attempt to place more milestones in areas that improve the connectivity of the roadmap.</li>
+<li><a href="/wiki/Quasirandom" class="mw-redirect" title="Quasirandom">Quasirandom</a> samples typically produce a better covering of configuration space than <a href="/wiki/Pseudorandom" class="mw-redirect" title="Pseudorandom">pseudorandom</a> ones, though some recent work argues that the effect of the source of randomness is minimal compared to the effect of the sampling distribution.</li>
+<li>It is possible to substantially reduce the number of milestones needed to solve a given problem by allowing curved eye sights (for example by crawling on the obstacles that block the way between two milestones<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>).</li>
+<li>If only one or a few planning queries are needed, it is not always necessary to construct a roadmap of the entire space.  Tree-growing variants are typically faster for this case (single-query planning).  Roadmaps are still useful if many queries are to be made on the same space (multi-query planning)</li></ul>
+<h3><span class="mw-headline" id="List_of_notable_algorithms">List of notable algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=13" title="Edit section: List of notable algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/A*_search_algorithm" title="A* search algorithm">A*</a></li>
+<li><a href="/wiki/D*" title="D*">D*</a></li>
+<li><a href="/wiki/Rapidly-exploring_random_tree" title="Rapidly-exploring random tree">Rapidly-exploring random tree</a></li>
+<li><a href="/wiki/Probabilistic_roadmap" title="Probabilistic roadmap">Probabilistic roadmap</a></li></ul>
+<h2><span class="mw-headline" id="Completeness_and_performance">Completeness and performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=14" title="Edit section: Completeness and performance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A motion planner is said to be complete if the planner in finite time either produces a solution or correctly reports that there is none. Most complete algorithms are geometry-based. The performance of a complete planner is assessed by its <a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">computational complexity</a>.
+</p><p><i>Resolution completeness</i> is the property that the planner is guaranteed to find a path if the resolution of an underlying grid is fine enough.  Most resolution complete planners are grid-based or interval-based.  The computational complexity of resolution complete planners is dependent on the number of points in the underlying grid, which is O(1/h<sup>d</sup>), where h is the resolution (the length of one side of a grid cell) and d is the configuration space dimension.
+</p><p><i>Probabilistic completeness</i> is the property that as more "work" is performed, the probability that the planner fails to find a path, if one exists, asymptotically approaches zero.  Several sample-based methods are probabilistically complete.  The performance of a probabilistically complete planner is measured by the rate of convergence.
+</p><p><i>Incomplete</i> planners do not always produce a feasible path when one exists.  Sometimes incomplete planners do work well in practice.
+</p>
+<h2><span class="mw-headline" id="Problem_variants">Problem variants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=15" title="Edit section: Problem variants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many algorithms have been developed to handle variants of this basic problem.
+</p>
+<h3><span class="mw-headline" id="Differential_constraints">Differential constraints</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=16" title="Edit section: Differential constraints">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Degrees_of_freedom_(engineering)" class="mw-redirect" title="Degrees of freedom (engineering)">Holonomic</a>
+</p>
+<ul><li>Manipulator arms (with dynamics)</li></ul>
+<p><a href="/wiki/Nonholonomic" class="mw-redirect" title="Nonholonomic">Nonholonomic</a>
+</p>
+<ul><li>Cars</li>
+<li>Unicycles</li>
+<li>Planes</li>
+<li>Acceleration bounded systems</li>
+<li>Moving obstacles (time cannot go backward)</li>
+<li>Bevel-tip steerable needle</li>
+<li>Differential Drive Robots</li></ul>
+<h3><span class="mw-headline" id="Optimality_constraints">Optimality constraints</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=17" title="Edit section: Optimality constraints">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h3><span class="mw-headline" id="Hybrid_systems">Hybrid systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=18" title="Edit section: Hybrid systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Hybrid_systems" class="mw-redirect" title="Hybrid systems">Hybrid systems</a> are those that mix discrete and continuous behavior.  Examples of such systems are:
+</p>
+<ul><li><a href="/wiki/Robotics" title="Robotics">Robotic manipulation</a></li>
+<li><a href="/wiki/Design_for_Assembly" class="mw-redirect" title="Design for Assembly">Mechanical assembly</a></li>
+<li>Legged robot locomotion</li>
+<li><a href="/wiki/Self-Reconfiguring_Modular_Robotics" class="mw-redirect" title="Self-Reconfiguring Modular Robotics">Reconfigurable robots</a></li></ul>
+<h3><span class="mw-headline" id="Uncertainty">Uncertainty</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=19" title="Edit section: Uncertainty">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li>Motion uncertainty</li>
+<li>Missing information</li>
+<li>Active sensing</li>
+<li>Sensorless planning</li></ul>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=20" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Robot_navigation" title="Robot navigation">Robot navigation</a></li>
+<li><a href="/wiki/Automation" title="Automation">Automation</a></li>
+<li>The <a href="/wiki/Driverless_car" class="mw-redirect" title="Driverless car">driverless car</a></li>
+<li><a href="/wiki/Robotic_surgery" class="mw-redirect" title="Robotic surgery">Robotic surgery</a></li>
+<li><a href="/wiki/Computer_animation" title="Computer animation">Digital character animation</a></li>
+<li><a href="/wiki/Protein_folding" title="Protein folding">Protein folding</a><sup id="cite_ref-LaValle2006_8-0" class="reference"><a href="#cite_note-LaValle2006-8">&#91;8&#93;</a></sup></li>
+<li>Safety and accessibility in <a href="/wiki/Computer-aided_architectural_design" title="Computer-aided architectural design">computer-aided architectural design</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=21" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Gimbal_lock" title="Gimbal lock">Gimbal lock</a> – similar traditional issue in mechanical engineering</li>
+<li><a href="/wiki/Kinodynamic_planning" title="Kinodynamic planning">Kinodynamic planning</a></li>
+<li><a href="/wiki/Mountain_climbing_problem" title="Mountain climbing problem">Mountain climbing problem</a></li>
+<li><a href="/wiki/OMPL" title="OMPL">OMPL</a> - The Open Motion Planning Library</li>
+<li><a href="/wiki/Pathfinding" title="Pathfinding">Pathfinding</a></li>
+<li><a href="/wiki/Pebble_motion_problems" title="Pebble motion problems">Pebble motion problems</a> – multi-robot motion planning</li>
+<li><a href="/wiki/Shortest_path_problem" title="Shortest path problem">Shortest path problem</a></li>
+<li><a href="/wiki/Velocity_obstacle" title="Velocity obstacle">Velocity obstacle</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=22" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation journal">Jaulin, L. (2001). <a rel="nofollow" class="external text" href="http://www.ensta-bretagne.fr/jaulin/paper_cameleon.pdf">"Path planning using intervals and graphs"</a> <span class="cs1-format">(PDF)</span>. <i>Reliable Computing</i>. <b>7</b> (1).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Reliable+Computing&amp;rft.atitle=Path+planning+using+intervals+and+graphs&amp;rft.volume=7&amp;rft.issue=1&amp;rft.date=2001&amp;rft.aulast=Jaulin&amp;rft.aufirst=L.&amp;rft_id=http%3A%2F%2Fwww.ensta-bretagne.fr%2Fjaulin%2Fpaper_cameleon.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Delanoue, N.; Jaulin, L.; Cottenceau, B. (2006). <a rel="nofollow" class="external text" href="http://www.ensta-bretagne.fr/jaulin/delanoueCounting.pdf"><i>Counting the Number of Connected Components of a Set and Its Application to Robotics</i></a> <span class="cs1-format">(PDF)</span>. <i>Applied Parallel Computing, Lecture Notes in Computer Science</i>. Lecture Notes in Computer Science. <b>3732</b>. pp.&#160;93–101. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.123.6764">10.1.1.123.6764</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F11558958_11">10.1007/11558958_11</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-29067-4" title="Special:BookSources/978-3-540-29067-4"><bdi>978-3-540-29067-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Counting+the+Number+of+Connected+Components+of+a+Set+and+Its+Application+to+Robotics&amp;rft.series=Lecture+Notes+in+Computer+Science&amp;rft.pages=93-101&amp;rft.date=2006&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.123.6764&amp;rft_id=info%3Adoi%2F10.1007%2F11558958_11&amp;rft.isbn=978-3-540-29067-4&amp;rft.aulast=Delanoue&amp;rft.aufirst=N.&amp;rft.au=Jaulin%2C+L.&amp;rft.au=Cottenceau%2C+B.&amp;rft_id=http%3A%2F%2Fwww.ensta-bretagne.fr%2Fjaulin%2FdelanoueCounting.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal">Fakoor, Mahdi; Kosari, Amirreza; Jafarzadeh, Mohsen (2016). "Humanoid robot path planning with fuzzy Markov decision processes". <i>Journal of Applied Research and Technology</i>. <b>14</b> (5): 300–310. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fj.jart.2016.06.006">10.1016/j.jart.2016.06.006</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Applied+Research+and+Technology&amp;rft.atitle=Humanoid+robot+path+planning+with+fuzzy+Markov+decision+processes&amp;rft.volume=14&amp;rft.issue=5&amp;rft.pages=300-310&amp;rft.date=2016&amp;rft_id=info%3Adoi%2F10.1016%2Fj.jart.2016.06.006&amp;rft.aulast=Fakoor&amp;rft.aufirst=Mahdi&amp;rft.au=Kosari%2C+Amirreza&amp;rft.au=Jafarzadeh%2C+Mohsen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">Fakoor, Mahdi; Kosari, Amirreza; Jafarzadeh, Mohsen (2015). "Revision on fuzzy artificial potential field for humanoid robot path planning in unknown environment". <i>International Journal of Advanced Mechatronic Systems</i>. <b>6</b> (4): 174–183. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1504%2FIJAMECHS.2015.072707">10.1504/IJAMECHS.2015.072707</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Advanced+Mechatronic+Systems&amp;rft.atitle=Revision+on+fuzzy+artificial+potential+field+for+humanoid+robot+path+planning+in+unknown+environment&amp;rft.volume=6&amp;rft.issue=4&amp;rft.pages=174-183&amp;rft.date=2015&amp;rft_id=info%3Adoi%2F10.1504%2FIJAMECHS.2015.072707&amp;rft.aulast=Fakoor&amp;rft.aufirst=Mahdi&amp;rft.au=Kosari%2C+Amirreza&amp;rft.au=Jafarzadeh%2C+Mohsen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation journal">Wolf, Joerg Christian; Robinson, Paul; Davies, Mansel (2004). "Vector Field path planning and control of an autonomous robot in a dynamic environment". <i>Proc. 2004 FIRA Robot World Congress</i>. Busan, South Korea: Paper 151.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proc.+2004+FIRA+Robot+World+Congress&amp;rft.atitle=Vector+Field+path+planning+and+control+of+an+autonomous+robot+in+a+dynamic+environment&amp;rft.pages=Paper+151&amp;rft.date=2004&amp;rft.aulast=Wolf&amp;rft.aufirst=Joerg+Christian&amp;rft.au=Robinson%2C+Paul&amp;rft.au=Davies%2C+Mansel&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book">Hsu, D.; <a href="/wiki/Jean-Claude_Latombe" title="Jean-Claude Latombe">J.C. Latombe</a>, J.C.; Motwani, R. (1997). "Path planning in expansive configuration spaces". <i>Proceedings of International Conference on Robotics and Automation</i>. <b>3</b>. pp.&#160;2719–2726. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FROBOT.1997.619371">10.1109/ROBOT.1997.619371</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7803-3612-4" title="Special:BookSources/978-0-7803-3612-4"><bdi>978-0-7803-3612-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Path+planning+in+expansive+configuration+spaces&amp;rft.btitle=Proceedings+of+International+Conference+on+Robotics+and+Automation&amp;rft.pages=2719-2726&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1109%2FROBOT.1997.619371&amp;rft.isbn=978-0-7803-3612-4&amp;rft.aulast=Hsu&amp;rft.aufirst=D.&amp;rft.au=J.C.+Latombe%2C+J.C.&amp;rft.au=Motwani%2C+R.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal">Shvalb, N.; Ben Moshe, B.; Medina, O. (2013). "A real-time motion planning algorithm for a hyper-redundant set of mechanisms". <i>Robotica</i>. <b>31</b> (8): 1327–1335. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.473.7966">10.1.1.473.7966</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1017%2FS0263574713000489">10.1017/S0263574713000489</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Robotica&amp;rft.atitle=A+real-time+motion+planning+algorithm+for+a+hyper-redundant+set+of+mechanisms.&amp;rft.volume=31&amp;rft.issue=8&amp;rft.pages=1327-1335&amp;rft.date=2013&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.473.7966&amp;rft_id=info%3Adoi%2F10.1017%2FS0263574713000489&amp;rft.aulast=Shvalb&amp;rft.aufirst=N.&amp;rft.au=Ben+Moshe%2C+B.&amp;rft.au=Medina%2C+O.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-LaValle2006-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-LaValle2006_8-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Steven M. LaValle (29 May 2006). <a rel="nofollow" class="external text" href="https://books.google.com/?id=-PwLBAAAQBAJ&amp;printsec=frontcover&amp;dq=%22protein+folding%22+%22motion+planning%22#v=onepage&amp;q=%22protein%20folding%22&amp;f=false"><i>Planning Algorithms</i></a>. Cambridge University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-139-45517-6" title="Special:BookSources/978-1-139-45517-6"><bdi>978-1-139-45517-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Planning+Algorithms&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2006-05-29&amp;rft.isbn=978-1-139-45517-6&amp;rft.au=Steven+M.+LaValle&amp;rft_id=https%3A%2F%2Fbooks.google.com%2F%3Fid%3D-PwLBAAAQBAJ%26printsec%3Dfrontcover%26dq%3D%2522protein%2Bfolding%2522%2B%2522motion%2Bplanning%2522%23v%3Donepage%26q%3D%2522protein%2520folding%2522%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=23" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">Latombe, Jean-Claude (2012). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=nQ7aBwAAQBAJ"><i>Robot Motion Planning</i></a>. Springer Science &amp; Business Media. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4615-4022-9" title="Special:BookSources/978-1-4615-4022-9"><bdi>978-1-4615-4022-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Robot+Motion+Planning&amp;rft.pub=Springer+Science+%26+Business+Media&amp;rft.date=2012&amp;rft.isbn=978-1-4615-4022-9&amp;rft.aulast=Latombe&amp;rft.aufirst=Jean-Claude&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DnQ7aBwAAQBAJ&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><i><a rel="nofollow" class="external text" href="http://planning.cs.uiuc.edu/">Planning Algorithms</a></i>, Steven M. LaValle, 2006, Cambridge University Press, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-521-86205-1" title="Special:BookSources/0-521-86205-1">0-521-86205-1</a>.</li>
+<li><i><a rel="nofollow" class="external text" href="https://books.google.com/books?id=S3biKR21i-QC">Principles of Robot Motion: Theory, Algorithms, and Implementation</a></i>, H. Choset,  W. Burgard, S. Hutchinson, G. Kantor, <a href="/wiki/Lydia_Kavraki" title="Lydia Kavraki">L. E. Kavraki</a>, K. Lynch, and S. Thrun, MIT Press, April 2005.</li>
+<li><cite class="citation book">Mark de Berg; Marc van Kreveld; <a href="/wiki/Mark_Overmars" title="Mark Overmars">Mark Overmars</a> &amp; Otfried Schwarzkopf (2000). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/computationalgeo00berg"><i>Computational Geometry</i></a></span> (2nd revised ed.). <a href="/wiki/Springer-Verlag" class="mw-redirect" title="Springer-Verlag">Springer-Verlag</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-65620-3" title="Special:BookSources/978-3-540-65620-3"><bdi>978-3-540-65620-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computational+Geometry&amp;rft.edition=2nd+revised&amp;rft.pub=Springer-Verlag&amp;rft.date=2000&amp;rft.isbn=978-3-540-65620-3&amp;rft.au=Mark+de+Berg&amp;rft.au=Marc+van+Kreveld&amp;rft.au=Mark+Overmars&amp;rft.au=Otfried+Schwarzkopf&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcomputationalgeo00berg&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMotion+planning" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> Chapter 13: Robot Motion Planning: pp.&#160;267&#8211;290.</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Motion_planning&amp;action=edit&amp;section=24" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Motion_planning" class="extiw" title="commons:Category:Motion planning"><span style="">Motion planning</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li>"Open Robotics Automation Virtual Environment", <a rel="nofollow" class="external free" href="http://openrave.org/">http://openrave.org/</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070929091715/http://www.researchchannel.org/prog/displayevent.aspx?rID=2132&amp;fID=567">Jean-Claude Latombe talks about his work with robots and motion planning, 5 April 2000</a></li>
+<li>"Open Motion Planning Library (<a href="/wiki/OMPL" title="OMPL">OMPL</a>)", <a rel="nofollow" class="external free" href="http://ompl.kavrakilab.org">http://ompl.kavrakilab.org</a></li>
+<li>"Motion Strategy Library", <a rel="nofollow" class="external free" href="http://msl.cs.uiuc.edu/msl/">http://msl.cs.uiuc.edu/msl/</a></li>
+<li>"Motion Planning Kit", <a rel="nofollow" class="external free" href="https://ai.stanford.edu/~mitul/mpk">https://ai.stanford.edu/~mitul/mpk</a></li>
+<li>"Simox", <a rel="nofollow" class="external free" href="http://simox.sourceforge.net">http://simox.sourceforge.net</a></li>
+<li>"Robot Motion Planning and Control", <a rel="nofollow" class="external free" href="http://www.laas.fr/%7Ejpl/book.html">http://www.laas.fr/%7Ejpl/book.html</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1278
+Cached time: 20200317023351
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.376 seconds
+Real time usage: 0.547 seconds
+Preprocessor visited node count: 1336/1000000
+Post‐expand include size: 33382/2097152 bytes
+Template argument size: 1567/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 33062/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.202/10.000 seconds
+Lua memory usage: 6.26 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  463.705      1 -total
+ 44.41%  205.931      1 Template:Reflist
+ 25.71%  119.202      5 Template:Cite_journal
+ 17.78%   82.450      5 Template:Cite_book
+ 14.78%   68.552      1 Template:Refimprove
+ 12.81%   59.381      1 Template:Ambox
+ 11.65%   54.015      1 Template:Short_description
+  8.93%   41.417      1 Template:Commons_category
+  8.55%   39.656      1 Template:Pagetype
+  8.00%   37.119      1 Template:ISBN
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4562875-0!canonical!math=5 and timestamp 20200317023443 and revision id 945942287
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Motion_planning&amp;oldid=945942287">https://en.wikipedia.org/w/index.php?title=Motion_planning&amp;oldid=945942287</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Robot_kinematics" title="Category:Robot kinematics">Robot kinematics</a></li><li><a href="/wiki/Category:Theoretical_computer_science" title="Category:Theoretical computer science">Theoretical computer science</a></li><li><a href="/wiki/Category:Automated_planning_and_scheduling" title="Category:Automated planning and scheduling">Automated planning and scheduling</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_June_2013" title="Category:Articles needing additional references from June 2013">Articles needing additional references from June 2013</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_October_2019" title="Category:Use dmy dates from October 2019">Use dmy dates from October 2019</a></li><li><a href="/wiki/Category:Use_American_English_from_February_2019" title="Category:Use American English from February 2019">Use American English from February 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">All Wikipedia articles written in American English</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Motion+planning" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Motion+planning" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Motion_planning" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Motion_planning" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Motion_planning">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Motion_planning&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Motion_planning&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Motion_planning" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Motion_planning" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Motion_planning&amp;oldid=945942287" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Motion_planning&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q366872" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Motion_planning&amp;id=945942287&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Motion_planning" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Motion+planning">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Motion+planning&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Motion_planning&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%AE%D8%B7%D9%8A%D8%B7_%D8%A7%D9%84%D8%AD%D8%B1%D9%83%D8%A9" title="تخطيط الحركة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Planificaci%C3%B3n_de_movimiento" title="Planificación de movimiento – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D8%B1%DB%8C%D8%B2%DB%8C_%D8%AD%D8%B1%DA%A9%D8%AA" title="برنامه‌ریزی حرکت – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Planification_de_mouvement" title="Planification de mouvement – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bewegingsplanning" title="Bewegingsplanning – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Planowanie_trasy_robot%C3%B3w_mobilnych" title="Planowanie trasy robotów mobilnych – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%84%E0%B8%A5%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88" title="การวางแผนการเคลื่อนที่ – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F_%D1%80%D1%83%D1%85%D1%83" title="Планування руху – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Ho%E1%BA%A1ch_%C4%91%E1%BB%8Bnh_chuy%E1%BB%83n_%C4%91%E1%BB%99ng" title="Hoạch định chuyển động – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E8%BF%90%E5%8A%A8%E8%A7%84%E5%88%92" title="运动规划 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q366872#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 March 2020, at 02:34<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Motion_planning&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.376","walltime":"0.547","ppvisitednodes":{"value":1336,"limit":1000000},"postexpandincludesize":{"value":33382,"limit":2097152},"templateargumentsize":{"value":1567,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":33062,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  463.705      1 -total"," 44.41%  205.931      1 Template:Reflist"," 25.71%  119.202      5 Template:Cite_journal"," 17.78%   82.450      5 Template:Cite_book"," 14.78%   68.552      1 Template:Refimprove"," 12.81%   59.381      1 Template:Ambox"," 11.65%   54.015      1 Template:Short_description","  8.93%   41.417      1 Template:Commons_category","  8.55%   39.656      1 Template:Pagetype","  8.00%   37.119      1 Template:ISBN"]},"scribunto":{"limitreport-timeusage":{"value":"0.202","limit":"10.000"},"limitreport-memusage":{"value":6565538,"limit":52428800}},"cachereport":{"origin":"mw1278","timestamp":"20200317023351","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Motion planning","url":"https:\/\/en.wikipedia.org\/wiki\/Motion_planning","sameAs":"http:\/\/www.wikidata.org\/entity\/Q366872","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q366872","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-03-30T02:23:04Z","dateModified":"2020-03-17T02:34:43Z","headline":"robotics problem"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":121,"wgHostname":"mw1274"});});</script></body></html>

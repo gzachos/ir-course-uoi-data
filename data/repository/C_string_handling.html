@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>C string handling - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn6IRgpAEJkABBmqfHwAAABH","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"C_string_handling","wgTitle":"C string handling","wgCurRevisionId":947624608,"wgRevisionId":947624608,"wgArticleId":33691376,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from February 2015","CS1 maint: location","Use dmy dates from January 2012","All articles with specifically marked weasel-worded phrases","Articles with specifically marked weasel-worded phrases from January 2017",
+"C (programming language)","C standard library","String (computer science)"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"C_string_handling","wgRelevantArticleId":33691376,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q845796","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user"
+:"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP",
+"ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=C_string_handling&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=C_string_handling&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/C_string_handling"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-C_string_handling rootpage-C_string_handling skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">C string handling</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">"C string" redirects here. For other uses, see <a href="/wiki/C_string_(disambiguation)" class="mw-disambig" title="C string (disambiguation)">C string (disambiguation)</a>.</div>
+<p class="mw-empty-elt">
+</p>
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/C_standard_library" title="C standard library">C standard library</a></th></tr><tr><th style="padding:0.1em">
+General topics</th></tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><a href="/wiki/C_data_types" title="C data types">Data types</a></li>
+<li><a href="/wiki/C_character_classification" title="C character classification">Character classification</a></li>
+<li><a class="mw-selflink selflink">Strings</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Mathematics</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File input/output</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Date/time</a></li>
+<li><a href="/wiki/C_localization_functions" title="C localization functions">Localization</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Memory allocation</a></li>
+<li><a href="/wiki/C_process_control" title="C process control">Process control</a></li>
+<li><a href="/wiki/C_signal_handling" title="C signal handling">Signals</a></li>
+<li><a href="/wiki/C_alternative_tokens" title="C alternative tokens">Alternative tokens</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Miscellaneous headers</th></tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">&lt;<a href="/wiki/Assert.h" title="Assert.h">assert.h</a>&gt;</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">&lt;<a href="/wiki/Errno.h" title="Errno.h">errno.h</a>&gt;</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">&lt;<a href="/wiki/Setjmp.h" title="Setjmp.h">setjmp.h</a>&gt;</span></li>
+<li><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">&lt;<a href="/wiki/Stdarg.h" title="Stdarg.h">stdarg.h</a>&gt;</span></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_standard_library" title="Template:C standard library"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_standard_library" title="Template talk:C standard library"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_standard_library&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>The <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> programming language has a set of functions implementing operations on <a href="/wiki/String_(computer_science)" title="String (computer science)">strings</a> (character strings and byte strings) in its <a href="/wiki/C_standard_library" title="C standard library">standard library</a>. Various operations, such as copying, <a href="/wiki/Concatenation" title="Concatenation">concatenation</a>, <a href="/wiki/Tokenization_(lexical_analysis)" class="mw-redirect" title="Tokenization (lexical analysis)">tokenization</a> and searching are supported. For character strings, the standard library uses the convention that strings are <a href="/wiki/Null-terminated_string" title="Null-terminated string">null-terminated</a>: a string of <span class="texhtml mvar" style="font-style:italic;">n</span> characters is represented as an <a href="/wiki/Array_(data_structure)" class="mw-redirect" title="Array (data structure)">array</a> of <span class="texhtml"><i>n</i> + 1</span> elements, the last of which is a "NUL" character.
+</p><p>The only support for strings in the programming language proper is that the compiler translates quoted <a href="/wiki/String_literal" title="String literal">string constants</a> into null-terminated strings.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definitions"><span class="tocnumber">1</span> <span class="toctext">Definitions</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Character_encodings"><span class="tocnumber">2</span> <span class="toctext">Character encodings</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Overview_of_functions"><span class="tocnumber">3</span> <span class="toctext">Overview of functions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Constants_and_types"><span class="tocnumber">3.1</span> <span class="toctext">Constants and types</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Functions"><span class="tocnumber">3.2</span> <span class="toctext">Functions</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Multibyte_functions"><span class="tocnumber">3.2.1</span> <span class="toctext">Multibyte functions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="#Numeric_conversions"><span class="tocnumber">3.3</span> <span class="toctext">Numeric conversions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Popular_extensions"><span class="tocnumber">4</span> <span class="toctext">Popular extensions</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Replacements"><span class="tocnumber">5</span> <span class="toctext">Replacements</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Notes"><span class="tocnumber">7</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definitions">Definitions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=1" title="Edit section: Definitions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A string is defined as a contiguous sequence of <a href="/wiki/Code_unit" class="mw-redirect" title="Code unit">code units</a> terminated by the first zero code unit (often called the <i>NUL</i> code unit).<sup id="cite_ref-open-std1_1-0" class="reference"><a href="#cite_note-open-std1-1">&#91;1&#93;</a></sup> This means a string cannot contain the zero code unit, as the first one seen marks the end of the string. The <i>length</i> of a string is the number of code units before the zero code unit.<sup id="cite_ref-open-std1_1-1" class="reference"><a href="#cite_note-open-std1-1">&#91;1&#93;</a></sup> The memory occupied by a string is always one more code unit than the length, as space is needed to store the zero terminator.
+</p><p>Generally, the term <i>string</i> means a string where the code unit is of type <code>char</code>, which is exactly 8 bits on all modern machines. <a href="/wiki/C90_(C_version)" class="mw-redirect" title="C90 (C version)">C90</a> defines <i>wide strings</i><sup id="cite_ref-open-std1_1-2" class="reference"><a href="#cite_note-open-std1-1">&#91;1&#93;</a></sup> which use a code unit of type <code>wchar_t</code>, which is 16 or 32 bits on modern machines. This was intended for <a href="/wiki/Unicode" title="Unicode">Unicode</a> but it is increasingly common to use <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a> in normal strings for Unicode instead.
+</p><p>Strings are passed to functions by passing a pointer to the first code unit. Since <code>char*</code> and <code>wchar_t*</code> are different types, the functions that process wide strings are different than the ones processing normal strings and have different names.
+</p><p><a href="/wiki/String_literal" title="String literal">String literals</a> (<code>"text"</code> in the C source code) are converted to arrays during compilation.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> The result is an array of code units containing all the characters plus a trailing zero code unit. In C90 <code>L"text"</code> produces a wide string. A string literal can contain the zero code unit (one way is to put <code>\0</code> into the source), but this will cause the string to end at that point. The rest of the literal will be placed in memory (with another zero code unit added to the end) but it is impossible to know those code units were translated from the string literal, therefore such source code is <i>not</i> a string literal.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Character_encodings">Character encodings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=2" title="Edit section: Character encodings">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Each string ends at the first occurrence of the zero code unit of the appropriate kind (<code>char</code> or <code>wchar_t</code>). Consequently, a byte string (<code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">char*</code>) can contain non-<a href="/wiki/Null_character" title="Null character">NUL</a> characters in <a href="/wiki/ASCII" title="ASCII">ASCII</a> or any <a href="/wiki/Extended_ASCII" title="Extended ASCII">ASCII extension</a>, but not characters in encodings such as <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> (even though a 16-bit code unit might be nonzero, its high or low byte might be zero). The encodings that can be stored in wide strings are defined by the width of <code>wchar_t</code>. In most implementations, <code>wchar_t</code> is at least 16 bits, and so all 16-bit encodings, such as <a href="/wiki/UCS-2" class="mw-redirect" title="UCS-2">UCS-2</a>, can be stored. If <code>wchar_t</code> is 32-bits, then 32-bit encodings, such as <a href="/wiki/UTF-32" title="UTF-32">UTF-32</a>, can be stored. (The standard requires a "type that holds any wide character", which on Windows no longer holds true since the UCS-2 to UTF-16 shift.) C++11 and C11 add two types with explicit widths <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">char16_t</code> and <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">char32_t</code>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p><a href="/wiki/Variable-width_encoding" title="Variable-width encoding">Variable-width encodings</a> can be used in both byte strings and wide strings. String length and offsets are measured in bytes or <code>wchar_t</code>, not in "characters", which can be confusing to beginning programmers. <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a> and <a href="/wiki/Shift_JIS" title="Shift JIS">Shift JIS</a> are often used in C byte strings, while <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> is often used in C wide strings when <code>wchar_t</code> is 16 bits. Truncating strings with variable length characters using functions like <code>strncpy</code> can produce invalid sequences at the end of the string. This can be unsafe if the truncated parts are interpreted by code that assumes the input is valid.
+</p><p>Support for Unicode literals such as <code>char foo[512] = "φωωβαρ";</code>(UTF-8) or <code>wchar_t foo[512] = L"φωωβαρ";</code> (UTF-16 or UTF-32, depends on <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">wchar_t</code>) is implementation defined,<sup id="cite_ref-open-std_5-0" class="reference"><a href="#cite_note-open-std-5">&#91;5&#93;</a></sup> and may require that the source code be in the same encoding, especially for <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">char</code> where compilers might just copy whatever is between the quotes. Some compilers or editors will require entering all non-ASCII characters as <code>\xNN</code> sequences for each byte of UTF-8, and/or <code>\uNNNN</code> for each word of UTF-16. Since C11 (and C++11), a new <code>char foo[512] = u8"φωωβαρ";</code> literal syntax is available that guarantees UTF-8 for a bytestring literal.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Overview_of_functions">Overview of functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=3" title="Edit section: Overview of functions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Most of the functions that operate on C strings are declared in the <code>string.h</code> header (<code>cstring</code> in C++), while functions that operate on C wide strings are declared in the <code>wchar.h</code> header (<code>cwchar</code> in C++). These headers also contain declarations of functions used for handling memory buffers; the name is thus something of a misnomer.
+</p><p>Functions declared in <code>string.h</code> are extremely popular since, as a part of the <a href="/wiki/C_standard_library" title="C standard library">C standard library</a>, they are guaranteed to work on any platform which supports C. However, some security issues exist with these functions, such as potential <a href="/wiki/Buffer_overflow" title="Buffer overflow">buffer overflows</a> when not used carefully and properly, causing the programmers to prefer safer and possibly less portable variants, out of which some popular ones are listed below. Some of these functions also violate <a href="/wiki/Const-correctness" class="mw-redirect" title="Const-correctness">const-correctness</a> by accepting a <code>const</code> string pointer and returning a non-<code>const</code> pointer within the string. To correct this, some have been separated into two <a href="/wiki/Function_overloading" title="Function overloading">overloaded functions</a> in the C++ version of the standard library.
+</p><p>In historical documentation the term "character" was often used instead of "byte" for C strings, which leads many<sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Manual_of_Style/Words_to_watch#Unsupported_attributions" title="Wikipedia:Manual of Style/Words to watch"><span title="The material near this tag possibly uses too-vague attribution or weasel words. (January 2017)">who?</span></a></i>&#93;</sup> to believe that these functions somehow do not work for <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a>. In fact all lengths are defined as being in bytes and this is true in all implementations, and these functions work as well with UTF-8 as with single-byte encodings. The BSD documentation has been fixed to make this clear, but POSIX, Linux, and Windows documentation still uses "character" in many places where "byte" or "wchar_t" is the correct term.
+</p><p>Functions for handling memory buffers can process sequences of bytes that include null-byte as part of the data. Names of these functions typically start with <code>mem</code>, as opposite to the <code>str</code> prefix.
+</p>
+<h3><span class="mw-headline" id="Constants_and_types">Constants and types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=4" title="Edit section: Constants and types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Name</th>
+<th>Notes
+</th></tr>
+<tr>
+<td><code>NULL</code></td>
+<td>Macro expanding to the <a href="/wiki/Null_pointer" title="Null pointer">null pointer</a> constant; that is, a constant representing a pointer value which is guaranteed <b>not</b> to be a valid address of an object in memory.
+</td></tr>
+<tr>
+<td><span id="wchar_t"></span><code>wchar_t</code></td>
+<td>Type used for a code unit in wide strings, usually an unsigned 16 bit or 32 bit value. No specific interpretation is specified for these code units; the C standard only requires that <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span> be wide enough to hold the widest character set among the supported system <a href="/wiki/C_localization_functions" title="C localization functions">locales</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> Theoretically, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span> can be the same size as <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">char</span>, and thus not capable of holding <a href="/wiki/UTF-32" title="UTF-32">UTF-32</a> or <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> code units.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</td></tr>
+<tr>
+<td><span id="wint_t"></span><code>wint_t</code></td>
+<td>Integer type that can hold any value of a wchar_t as well as the value of the macro WEOF. This type is unchanged by integral promotions. Usually a 32 bit signed value.
+</td></tr>
+<tr>
+<td><span id="mbstate_t"></span><code>mbstate_t</code></td>
+<td>Contains all the information about the conversion state required from one call to a function to the other.
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Functions">Functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=5" title="Edit section: Functions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable">
+
+<tbody><tr>
+<th>
+</th>
+<th>Byte<br />string
+</th>
+<th>Wide<br />string
+</th>
+<th>Description<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;note 1&#93;</a></sup>
+</th></tr>
+<tr>
+<th rowspan="5">String<br />manipulation
+</th>
+<td><span id="strcpy"></span><code>strcpy</code><sup id="cite_ref-strcpy-cppreference_10-0" class="reference"><a href="#cite_note-strcpy-cppreference-10">&#91;9&#93;</a></sup>
+</td>
+<td><span id="wcscpy"></span><code>wcscpy</code><sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;10&#93;</a></sup>
+</td>
+<td>Copies one string to another
+</td></tr>
+<tr>
+<td><span id="strncpy"></span><code>strncpy</code><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;11&#93;</a></sup>
+</td>
+<td><span id="wcsncpy"></span><code>wcsncpy</code><sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;12&#93;</a></sup>
+</td>
+<td>Writes exactly <span class="texhtml mvar" style="font-style:italic;">n</span> bytes, copying from source or adding nulls
+</td></tr>
+<tr>
+<td><span id="strcat"></span><code>strcat</code><sup id="cite_ref-strcat-cppreference_14-0" class="reference"><a href="#cite_note-strcat-cppreference-14">&#91;13&#93;</a></sup>
+</td>
+<td><span id="wcscat"></span><code>wcscat</code><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;14&#93;</a></sup>
+</td>
+<td>Appends one string to another
+</td></tr>
+<tr>
+<td><span id="strncat"></span><code>strncat</code><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;15&#93;</a></sup>
+</td>
+<td><span id="wcsncat"></span><code>wcsncat</code><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;16&#93;</a></sup>
+</td>
+<td>Appends no more than <span class="texhtml mvar" style="font-style:italic;">n</span> bytes from one string to another
+</td></tr>
+<tr>
+<td><span id="strxfrm"></span><code>strxfrm</code><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;17&#93;</a></sup>
+</td>
+<td><span id="wcsxfrm"></span><code>wcsxfrm</code><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;18&#93;</a></sup>
+</td>
+<td>Transforms a string according to the current locale
+</td></tr>
+<tr>
+<th rowspan="11">String<br /> examination
+</th>
+<td><span id="strlen"></span><code>strlen</code><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;19&#93;</a></sup>
+</td>
+<td><span id="wcslen"></span><code>wcslen</code><sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;20&#93;</a></sup>
+</td>
+<td>Returns the length of the string
+</td></tr>
+<tr>
+<td><span id="strcmp"></span><code>strcmp</code><sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;21&#93;</a></sup>
+</td>
+<td><span id="wcscmp"></span><code>wcscmp</code><sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;22&#93;</a></sup>
+</td>
+<td>Compares two strings (<a href="/wiki/Three-way_comparison" title="Three-way comparison">three-way comparison</a>)
+</td></tr>
+<tr>
+<td><span id="strncmp"></span><code>strncmp</code><sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;23&#93;</a></sup>
+</td>
+<td><span id="wcsncmp"></span><code>wcsncmp</code><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;24&#93;</a></sup>
+</td>
+<td>Compares a specific number of bytes in two strings
+</td></tr>
+<tr>
+<td><span id="strcoll"></span><code>strcoll</code><sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;25&#93;</a></sup>
+</td>
+<td><span id="wcscoll"></span><code>wcscoll</code><sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;26&#93;</a></sup>
+</td>
+<td>Compares two strings according to the current locale
+</td></tr>
+<tr>
+<td><span id="strchr"></span><code>strchr</code><sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;27&#93;</a></sup>
+</td>
+<td><span id="wcschr"></span><code>wcschr</code><sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;28&#93;</a></sup>
+</td>
+<td>Finds the first occurrence of a byte in a string
+</td></tr>
+<tr>
+<td><span id="strrchr"></span><code>strrchr</code><sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;29&#93;</a></sup>
+</td>
+<td><span id="wcsrchr"></span><code>wcsrchr</code><sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;30&#93;</a></sup>
+</td>
+<td>Finds the last occurrence of a byte in a string
+</td></tr>
+<tr>
+<td><span id="strspn"></span><code>strspn</code><sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;31&#93;</a></sup>
+</td>
+<td><span id="wcsspn"></span><code>wcsspn</code><sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;32&#93;</a></sup>
+</td>
+<td>Returns the number of initial bytes in a string that are in a second string
+</td></tr>
+<tr>
+<td><span id="strcspn"></span><code>strcspn</code><sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;33&#93;</a></sup>
+</td>
+<td><span id="wcscspn"></span><code>wcscspn</code><sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;34&#93;</a></sup>
+</td>
+<td>Returns the number of initial bytes in a string that are not in a second string
+</td></tr>
+<tr>
+<td><span id="strpbrk"></span><code>strpbrk</code><sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;35&#93;</a></sup>
+</td>
+<td><span id="wcspbrk"></span><code>wcspbrk</code><sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;36&#93;</a></sup>
+</td>
+<td>Finds in a string the first occurrence of a byte in a set
+</td></tr>
+<tr>
+<td><span id="strstr"></span><code>strstr</code><sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;37&#93;</a></sup>
+</td>
+<td><span id="wcsstr"></span><code>wcsstr</code><sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;38&#93;</a></sup>
+</td>
+<td>Finds the first occurrence of a substring in a string
+</td></tr>
+<tr>
+<td><span id="strtok"></span><code>strtok</code><sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;39&#93;</a></sup>
+</td>
+<td><span id="wcstok"></span><code>wcstok</code><sup id="cite_ref-41" class="reference"><a href="#cite_note-41">&#91;40&#93;</a></sup>
+</td>
+<td>Splits a string into tokens
+</td></tr>
+<tr>
+<th>Miscellaneous
+</th>
+<td><span id="strerror"></span><code>strerror</code><sup id="cite_ref-42" class="reference"><a href="#cite_note-42">&#91;41&#93;</a></sup>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td>Returns a string containing a message derived from an <a href="/wiki/Errno.h" title="Errno.h">error code</a>
+</td></tr>
+<tr>
+<th rowspan="5">Memory<br />manipulation
+</th>
+<td><span id="memset"></span><code>memset</code><sup id="cite_ref-43" class="reference"><a href="#cite_note-43">&#91;42&#93;</a></sup>
+</td>
+<td><span id="wmemset"></span><code>wmemset</code><sup id="cite_ref-44" class="reference"><a href="#cite_note-44">&#91;43&#93;</a></sup>
+</td>
+<td>Fills a buffer with a repeated byte
+</td></tr>
+<tr>
+<td><span id="memcpy"></span><code>memcpy</code><sup id="cite_ref-memcpy-cppreference_45-0" class="reference"><a href="#cite_note-memcpy-cppreference-45">&#91;44&#93;</a></sup>
+</td>
+<td><span id="wmemcpy"></span><code>wmemcpy</code><sup id="cite_ref-46" class="reference"><a href="#cite_note-46">&#91;45&#93;</a></sup>
+</td>
+<td>Copies one buffer to another
+</td></tr>
+<tr>
+<td><span id="memmove"></span><code>memmove</code><sup id="cite_ref-memmove-cppreference_47-0" class="reference"><a href="#cite_note-memmove-cppreference-47">&#91;46&#93;</a></sup>
+</td>
+<td><span id="wmemmove"></span><code>wmemmove</code><sup id="cite_ref-48" class="reference"><a href="#cite_note-48">&#91;47&#93;</a></sup>
+</td>
+<td>Copies one buffer to another, possibly overlapping, buffer
+</td></tr>
+<tr>
+<td><span id="memcmp"></span><code>memcmp</code><sup id="cite_ref-49" class="reference"><a href="#cite_note-49">&#91;48&#93;</a></sup>
+</td>
+<td><span id="wmemcmp"></span><code>wmemcmp</code><sup id="cite_ref-50" class="reference"><a href="#cite_note-50">&#91;49&#93;</a></sup>
+</td>
+<td>Compares two buffers (three-way comparison)
+</td></tr>
+<tr>
+<td><span id="memchr"></span><code>memchr</code><sup id="cite_ref-51" class="reference"><a href="#cite_note-51">&#91;50&#93;</a></sup>
+</td>
+<td><span id="wmemchr"></span><code>wmemchr</code><sup id="cite_ref-52" class="reference"><a href="#cite_note-52">&#91;51&#93;</a></sup>
+</td>
+<td>Finds the first occurrence of a byte in a buffer
+</td></tr>
+<tr>
+<td colspan="4"><div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text">For wide string functions substitute <code>wchar_t</code> for "byte" in the description</span>
+</li>
+</ol></div>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Multibyte_functions">Multibyte functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=6" title="Edit section: Multibyte functions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<table class="wikitable floatleft" style="margin-right: 1.5em;">
+
+<tbody><tr>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td><span id="mblen"></span><code>mblen</code><sup id="cite_ref-53" class="reference"><a href="#cite_note-53">&#91;52&#93;</a></sup>
+</td>
+<td>Returns the number of bytes in the next multibyte character
+</td></tr>
+<tr>
+<td><span id="mbtowc"></span><code>mbtowc</code><sup id="cite_ref-54" class="reference"><a href="#cite_note-54">&#91;53&#93;</a></sup>
+</td>
+<td>Converts the next multibyte character to a wide character
+</td></tr>
+<tr>
+<td><span id="wctomb"></span><code>wctomb</code><sup id="cite_ref-55" class="reference"><a href="#cite_note-55">&#91;54&#93;</a></sup>
+</td>
+<td>Converts a wide character to its multibyte representation
+</td></tr>
+<tr>
+<td><span id="mbstowcs"></span><code>mbstowcs</code><sup id="cite_ref-56" class="reference"><a href="#cite_note-56">&#91;55&#93;</a></sup>
+</td>
+<td>Converts a multibyte string to a wide string
+</td></tr>
+<tr>
+<td><span id="wcstombs"></span><code>wcstombs</code><sup id="cite_ref-57" class="reference"><a href="#cite_note-57">&#91;56&#93;</a></sup>
+</td>
+<td>Converts a wide string to a multibyte string
+</td></tr>
+<tr>
+<td><span id="btowc"></span><code>btowc</code><sup id="cite_ref-58" class="reference"><a href="#cite_note-58">&#91;57&#93;</a></sup>
+</td>
+<td>Convert a single-byte character to wide character, if possible
+</td></tr>
+<tr>
+<td><span id="wctob"></span><code>wctob</code><sup id="cite_ref-59" class="reference"><a href="#cite_note-59">&#91;58&#93;</a></sup>
+</td>
+<td>Convert a wide character to a single-byte character, if possible
+</td></tr>
+<tr>
+<td><span id="mbsinit"></span><code>mbsinit</code><sup id="cite_ref-60" class="reference"><a href="#cite_note-60">&#91;59&#93;</a></sup>
+</td>
+<td>Checks if a state object represents initial state
+</td></tr>
+<tr>
+<td><span id="mbrlen"></span><code>mbrlen</code><sup id="cite_ref-61" class="reference"><a href="#cite_note-61">&#91;60&#93;</a></sup>
+</td>
+<td>Returns the number of bytes in the next multibyte character, given state
+</td></tr>
+<tr>
+<td><span id="mbrtowc"></span><code>mbrtowc</code><sup id="cite_ref-62" class="reference"><a href="#cite_note-62">&#91;61&#93;</a></sup>
+</td>
+<td>Converts the next multibyte character to a wide character, given state
+</td></tr>
+<tr>
+<td><span id="wcrtomb"></span><code>wcrtomb</code><sup id="cite_ref-63" class="reference"><a href="#cite_note-63">&#91;62&#93;</a></sup>
+</td>
+<td>Converts a wide character to its multibyte representation, given state
+</td></tr>
+<tr>
+<td><span id="mbsrtowcs"></span><code>mbsrtowcs</code><sup id="cite_ref-64" class="reference"><a href="#cite_note-64">&#91;63&#93;</a></sup>
+</td>
+<td>Converts a multibyte string to a wide string, given state
+</td></tr>
+<tr>
+<td><span id="wcsrtombs"></span><code>wcsrtombs</code><sup id="cite_ref-65" class="reference"><a href="#cite_note-65">&#91;64&#93;</a></sup>
+</td>
+<td>Converts a wide string to a multibyte string, given state
+</td></tr></tbody></table>
+<p>These functions all take a pointer to a <samp>mbstate_t</samp> object that the caller must maintain. This was originally intended to track shift states in the <samp>mb</samp> encodings, but modern ones such as UTF-8 do not need this. However these functions were designed on the assumption that the <samp>wc</samp> encoding is not a <a href="/wiki/Variable-width_encoding" title="Variable-width encoding">variable-width encoding</a> and thus are designed to deal with exactly one <samp>wchar_t</samp> at a time, passing it by value rather than using a string pointer. As UTF-16 is a variable-width encoding, the <samp>mbstate_t</samp> has been reused to keep track of surrogate pairs in the wide encoding, though the caller must still detect and call <samp>mbtowc</samp> twice for a single character.<sup id="cite_ref-66" class="reference"><a href="#cite_note-66">&#91;65&#93;</a></sup><sup id="cite_ref-67" class="reference"><a href="#cite_note-67">&#91;66&#93;</a></sup><sup id="cite_ref-68" class="reference"><a href="#cite_note-68">&#91;67&#93;</a></sup>
+</p>
+<div style="clear:both;"></div>
+<h3><span class="mw-headline" id="Numeric_conversions"><span id="stdlib.h"></span>Numeric conversions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=7" title="Edit section: Numeric conversions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable floatleft" style="margin-right: 1.5em;">
+
+<tbody><tr>
+<th>Byte<br />string
+</th>
+<th>Wide<br />string
+</th>
+<th>Description<sup id="cite_ref-69" class="reference"><a href="#cite_note-69">&#91;note 1&#93;</a></sup>
+</th></tr>
+<tr>
+<td><span id="atof"></span><code>atof</code><sup id="cite_ref-70" class="reference"><a href="#cite_note-70">&#91;68&#93;</a></sup>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td>converts a string to a floating-point value
+</td></tr>
+<tr>
+<td><span id="atoi"></span><span id="atol"></span><span id="atoll"></span><code>atoi</code><br /><code>atol</code><br /><code>atoll</code><sup id="cite_ref-71" class="reference"><a href="#cite_note-71">&#91;69&#93;</a></sup>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td>converts a string to an integer (<a href="/wiki/C99" title="C99">C99</a>)
+</td></tr>
+<tr>
+<td><span id="strtof"></span><span id="strtod"></span><span id="strtold"></span><code>strtof</code> (<a href="/wiki/C99" title="C99">C99</a>)<sup id="cite_ref-72" class="reference"><a href="#cite_note-72">&#91;70&#93;</a></sup><br /><code>strtod</code><sup id="cite_ref-73" class="reference"><a href="#cite_note-73">&#91;71&#93;</a></sup><br /><code>strtold</code> (<a href="/wiki/C99" title="C99">C99</a>)<sup id="cite_ref-74" class="reference"><a href="#cite_note-74">&#91;72&#93;</a></sup>
+</td>
+<td><span id="wcstof"></span><span id="wcstod"></span><span id="wcstold"></span><code>wcstof</code> (<a href="/wiki/C99" title="C99">C99</a>)<sup id="cite_ref-75" class="reference"><a href="#cite_note-75">&#91;73&#93;</a></sup><br /><code>wcstod</code><sup id="cite_ref-76" class="reference"><a href="#cite_note-76">&#91;74&#93;</a></sup><br /><code>wcstold</code> (<a href="/wiki/C99" title="C99">C99</a>)<sup id="cite_ref-77" class="reference"><a href="#cite_note-77">&#91;75&#93;</a></sup>
+</td>
+<td>converts a string to a floating-point value
+</td></tr>
+<tr>
+<td><span id="strtol"></span><span id="strtoll"></span><code>strtol</code><br /><code>strtoll</code><sup id="cite_ref-78" class="reference"><a href="#cite_note-78">&#91;76&#93;</a></sup>
+</td>
+<td><span id="wcstol"></span><span id="wcstoll"></span><code>wcstol</code><br /><code>wcstoll</code><sup id="cite_ref-79" class="reference"><a href="#cite_note-79">&#91;77&#93;</a></sup>
+</td>
+<td>converts a string to a signed integer
+</td></tr>
+<tr>
+<td><span id="strtoul"></span><span id="strtoull"></span><code>strtoul</code><br /><code>strtoull</code><sup id="cite_ref-80" class="reference"><a href="#cite_note-80">&#91;78&#93;</a></sup>
+</td>
+<td><span id="wcstoul"></span><span id="wcstoull"></span><code>wcstoul</code><br /><code>wcstoull</code><sup id="cite_ref-81" class="reference"><a href="#cite_note-81">&#91;79&#93;</a></sup>
+</td>
+<td>converts a string to an unsigned integer
+</td></tr>
+<tr>
+<td colspan="3"><div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-69"><span class="mw-cite-backlink"><b><a href="#cite_ref-69">^</a></b></span> <span class="reference-text">Here <i>string</i> refers either to byte string or wide string</span>
+</li>
+</ol></div>
+</td></tr></tbody></table>
+<p>The C standard library contains several functions for numeric conversions. The functions that deal with byte strings are defined in the <code>stdlib.h</code> header (<code>cstdlib</code> header in C++). The functions that deal with wide strings are defined in the <code>wchar.h</code> header (<code>cwchar</code> header in C++).
+</p><p>The <code>strtoxxx</code> functions are not <a href="/wiki/Const-correctness" class="mw-redirect" title="Const-correctness">const-correct</a>, since they accept a <code>const</code> string pointer and return a non-<code>const</code> pointer within the string.
+</p><p>
+Also, since the Normative Amendment 1 (C95), <code>atoxx</code> functions are considered subsumed by <code>strtoxxx</code> functions, for which reason neither C95 nor any later standard provides wide-character versions of these functions. The argument against <code>atoxx</code> is that they do not differentiate between an error and a <code>0</code>.<sup id="cite_ref-82" class="reference"><a href="#cite_note-82">&#91;80&#93;</a></sup></p><div style="clear:both;"></div>
+<h2><span class="mw-headline" id="Popular_extensions">Popular extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=8" title="Edit section: Popular extensions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Name</th>
+<th>Platform</th>
+<th>Description
+</th></tr>
+<tr>
+<td><span id="bzero"></span><code>bzero</code><sup id="cite_ref-83" class="reference"><a href="#cite_note-83">&#91;81&#93;</a></sup><sup id="cite_ref-explicit_bzero_84-0" class="reference"><a href="#cite_note-explicit_bzero-84">&#91;82&#93;</a></sup>
+</td>
+<td><a href="/wiki/POSIX" title="POSIX">POSIX</a>, <a href="/wiki/BSD" class="mw-redirect" title="BSD">BSD</a>
+</td>
+<td>Fills a buffer with zero bytes, deprecated by <code>memset</code>
+</td></tr>
+<tr>
+<td><span id="memccpy"></span><code>memccpy</code><sup id="cite_ref-85" class="reference"><a href="#cite_note-85">&#91;83&#93;</a></sup>
+</td>
+<td><a href="/wiki/System_V_Interface_Definition" title="System V Interface Definition">SVID</a>, POSIX
+</td>
+<td>copies up to specified number of bytes between two memory areas, which must not overlap, stopping when a given byte is found.
+</td></tr>
+<tr>
+<td><span id="mempcpy"></span><code>mempcpy</code><sup id="cite_ref-86" class="reference"><a href="#cite_note-86">&#91;84&#93;</a></sup>
+</td>
+<td>GNU
+</td>
+<td>a variant of <a href="#memcpy"><code>memcpy</code></a> returning a pointer to the byte following the last written byte
+</td></tr>
+<tr>
+<td><span id="strcasecmp"></span><code>strcasecmp</code><sup id="cite_ref-87" class="reference"><a href="#cite_note-87">&#91;85&#93;</a></sup>
+</td>
+<td>POSIX, BSD
+</td>
+<td>case-insensitive versions of <code>strcmp</code>
+</td></tr>
+<tr>
+<td><span id="strcat_s"></span><code>strcat_s</code><sup id="cite_ref-strcat_s_88-0" class="reference"><a href="#cite_note-strcat_s-88">&#91;86&#93;</a></sup>
+</td>
+<td>Windows
+</td>
+<td>a variant of <a href="#strcat"><code>strcat</code></a> that checks the destination buffer size before copying
+</td></tr>
+<tr>
+<td><span id="strcpy_s"></span><code>strcpy_s</code><sup id="cite_ref-strcat_s_88-1" class="reference"><a href="#cite_note-strcat_s-88">&#91;86&#93;</a></sup>
+</td>
+<td>Windows
+</td>
+<td>a variant of <a href="#strcpy"><code>strcpy</code></a> that checks the destination buffer size before copying
+</td></tr>
+<tr>
+<td><span id="strdup"></span><code>strdup</code><sup id="cite_ref-89" class="reference"><a href="#cite_note-89">&#91;87&#93;</a></sup>
+</td>
+<td>POSIX
+</td>
+<td>allocates and duplicates a string
+</td></tr>
+<tr>
+<td><span id="strerror_r"></span><code>strerror_r</code><sup id="cite_ref-90" class="reference"><a href="#cite_note-90">&#91;88&#93;</a></sup>
+</td>
+<td>POSIX 1, GNU
+</td>
+<td>a variant of <a href="#strerror"><code>strerror</code></a> that is thread-safe. The GNU version is incompatible with the POSIX one.
+</td></tr>
+<tr>
+<td><span id="stricmp"></span><code>stricmp</code><sup id="cite_ref-91" class="reference"><a href="#cite_note-91">&#91;89&#93;</a></sup>
+</td>
+<td>Windows
+</td>
+<td>case-insensitive versions of <code>strcmp</code>
+</td></tr>
+<tr>
+<td><span id="strlcpy"></span><code>strlcpy</code><sup id="cite_ref-strlcat_strlcpy_92-0" class="reference"><a href="#cite_note-strlcat_strlcpy-92">&#91;90&#93;</a></sup>
+</td>
+<td>BSD, Solaris
+</td>
+<td>a variant of <a href="#strcpy"><code>strcpy</code></a> that truncates the result to fit in the destination buffer<sup id="cite_ref-strl_93-0" class="reference"><a href="#cite_note-strl-93">&#91;91&#93;</a></sup>
+</td></tr>
+<tr>
+<td><span id="strlcat"></span><code>strlcat</code><sup id="cite_ref-strlcat_strlcpy_92-1" class="reference"><a href="#cite_note-strlcat_strlcpy-92">&#91;90&#93;</a></sup>
+</td>
+<td>BSD, Solaris
+</td>
+<td>a variant of <a href="#strcat"><code>strcat</code></a> that truncates the result to fit in the destination buffer<sup id="cite_ref-strl_93-1" class="reference"><a href="#cite_note-strl-93">&#91;91&#93;</a></sup>
+</td></tr>
+<tr>
+<td><span id="strsignal"></span><code>strsignal</code><sup id="cite_ref-94" class="reference"><a href="#cite_note-94">&#91;92&#93;</a></sup>
+</td>
+<td><a href="/wiki/POSIX" title="POSIX">POSIX:2008</a>
+</td>
+<td>returns string representation of a <a href="/wiki/Signal_(computing)" class="mw-redirect" title="Signal (computing)">signal code</a>. Not thread safe.
+</td></tr>
+<tr>
+<td><span id="strtok_r"></span><code>strtok_r</code><sup id="cite_ref-95" class="reference"><a href="#cite_note-95">&#91;93&#93;</a></sup>
+</td>
+<td>POSIX
+</td>
+<td>a variant of <a href="#strtok"><code>strtok</code></a> that is thread-safe
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Replacements">Replacements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=9" title="Edit section: Replacements">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Despite <a href="/wiki/C_standard_library#Buffer_overflow_vulnerabilities" title="C standard library">the well-established need</a> to replace <code>strcat</code><sup id="cite_ref-strcat-cppreference_14-1" class="reference"><a href="#cite_note-strcat-cppreference-14">&#91;13&#93;</a></sup> and <code>strcpy</code><sup id="cite_ref-strcpy-cppreference_10-1" class="reference"><a href="#cite_note-strcpy-cppreference-10">&#91;9&#93;</a></sup> with functions that do not allow buffer overflows, no accepted standard has arisen. This is partly due to the mistaken belief by many C programmers that <code>strncat</code> and <code>strncpy</code> have the desired behavior; however, neither function was designed for this (they were intended to manipulate null-padded fixed-size string buffers, a data format less commonly used in modern software), and the behavior and arguments are non-intuitive and often written incorrectly even by expert programmers.<sup id="cite_ref-strl_93-2" class="reference"><a href="#cite_note-strl-93">&#91;91&#93;</a></sup>
+</p><p>The most popular<sup id="cite_ref-96" class="reference"><a href="#cite_note-96">&#91;a&#93;</a></sup> replacement are the <code>strlcat</code> and <code>strlcpy</code> functions, which appeared in <a href="/wiki/OpenBSD" title="OpenBSD">OpenBSD</a> 2.4 in December, 1998.<sup id="cite_ref-strl_93-3" class="reference"><a href="#cite_note-strl-93">&#91;91&#93;</a></sup> These functions always write one NUL to the destination buffer, truncating the result if necessary, and return the size of buffer that would be needed, which allows detection of the truncation and provides a size for creating a new buffer that will not truncate. They have been criticized on the basis of allegedly being inefficient<sup id="cite_ref-97" class="reference"><a href="#cite_note-97">&#91;94&#93;</a></sup>, encouraging the use of C strings (instead of some superior alternative form of string),<sup id="cite_ref-libc-alpha-discussion-1_98-0" class="reference"><a href="#cite_note-libc-alpha-discussion-1-98">&#91;95&#93;</a></sup><sup id="cite_ref-99" class="reference"><a href="#cite_note-99">&#91;96&#93;</a></sup> and hiding other potential errors.<sup id="cite_ref-100" class="reference"><a href="#cite_note-100">&#91;97&#93;</a></sup><sup id="cite_ref-101" class="reference"><a href="#cite_note-101">&#91;98&#93;</a></sup> Consequently, they have not been included in the <a href="/wiki/GNU_C_library" class="mw-redirect" title="GNU C library">GNU C library</a> (used by software on Linux), although they are implemented in the C libraries for OpenBSD, <a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a>, <a href="/wiki/NetBSD" title="NetBSD">NetBSD</a>, <a href="/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a>, <a href="/wiki/OS_X" class="mw-redirect" title="OS X">OS X</a>, and <a href="/wiki/QNX" title="QNX">QNX</a>, as well as in alternative C libraries for Linux, such as <a href="/wiki/Musl" title="Musl">musl</a> introduced in 2011.<sup id="cite_ref-102" class="reference"><a href="#cite_note-102">&#91;99&#93;</a></sup><sup id="cite_ref-103" class="reference"><a href="#cite_note-103">&#91;100&#93;</a></sup> The lack of GNU C library support has not stopped various software authors from using it and bundling a replacement, among other <a href="/wiki/Specification_and_Description_Language" title="Specification and Description Language">SDL</a>, <a href="/wiki/GLib" title="GLib">GLib</a>, <a href="/wiki/FFmpeg" title="FFmpeg">ffmpeg</a>, <a href="/wiki/Rsync" title="Rsync">rsync</a>, and even internally in the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>. Open source implementations for these functions are available.<sup id="cite_ref-104" class="reference"><a href="#cite_note-104">&#91;101&#93;</a></sup><sup id="cite_ref-105" class="reference"><a href="#cite_note-105">&#91;102&#93;</a></sup>
+</p><p>Sometimes <code>memcpy</code><sup id="cite_ref-memcpy-cppreference_45-1" class="reference"><a href="#cite_note-memcpy-cppreference-45">&#91;44&#93;</a></sup> or <code>memmove</code><sup id="cite_ref-memmove-cppreference_47-1" class="reference"><a href="#cite_note-memmove-cppreference-47">&#91;46&#93;</a></sup> are used, as they may be more efficient than <code>strcpy</code> as they do not repeatedly check for NUL (this is less true on modern processors). Since they need a buffer length as a parameter, correct setting of this parameter can avoid buffer overflows.
+</p><p>As part of its 2004 <a href="/wiki/Microsoft_Security_Development_Lifecycle" title="Microsoft Security Development Lifecycle">Security Development Lifecycle</a>, Microsoft introduced a family of "secure" functions including <code>strcpy_s</code> and <code>strcat_s</code> (along with many others).<sup id="cite_ref-106" class="reference"><a href="#cite_note-106">&#91;103&#93;</a></sup> These functions were standardized with some minor changes as part of the optional <a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11 (Annex K)</a> proposed by ISO/IEC WDTR 24731. These functions perform various checks including whether the string is too long to fit in the buffer. If the checks fail, a user-specified "runtime-constraint handler" function is called,<sup id="cite_ref-107" class="reference"><a href="#cite_note-107">&#91;104&#93;</a></sup> which usually aborts the program.<sup id="cite_ref-108" class="reference"><a href="#cite_note-108">&#91;105&#93;</a></sup><sup id="cite_ref-109" class="reference"><a href="#cite_note-109">&#91;106&#93;</a></sup> Some functions perform destructive operations before calling the runtime-constraint handler; for example, <code>strcat_s</code> sets the destination to the empty string,<sup id="cite_ref-110" class="reference"><a href="#cite_note-110">&#91;107&#93;</a></sup> which can make it difficult to recover from error conditions or debug them. These functions attracted considerable criticism because initially they were implemented only on Windows and at the same time warning messages started to be produced by <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Microsoft Visual C++</a> suggesting the programmers to use these functions instead of standard ones. This has been speculated by some to be an attempt by Microsoft to lock developers into its platform.<sup id="cite_ref-111" class="reference"><a href="#cite_note-111">&#91;108&#93;</a></sup> Although open-source implementations of these functions are available, these functions are not present in common Unix C libraries.<sup id="cite_ref-112" class="reference"><a href="#cite_note-112">&#91;109&#93;</a></sup> Experience with these functions has shown significant problems with their adoption and errors in usage, so the removal of Annex K is proposed for the next revision of the C standard.<sup id="cite_ref-113" class="reference"><a href="#cite_note-113">&#91;110&#93;</a></sup> Usage of <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">memset_s</code> has also been suggested as a way to avoid unwanted compiler optimizations.<sup id="cite_ref-114" class="reference"><a href="#cite_note-114">&#91;111&#93;</a></sup><sup id="cite_ref-115" class="reference"><a href="#cite_note-115">&#91;112&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/C_syntax#Strings" title="C syntax">C syntax §&#160;Strings</a>&#160;&#8211;&#32; source code syntax, including backslash escape sequences</li>
+<li><a href="/wiki/String_functions" class="mw-redirect" title="String functions">String functions</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=11" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-96"><span class="mw-cite-backlink"><b><a href="#cite_ref-96">^</a></b></span> <span class="reference-text">On GitHub, there are 7,813,206 uses of <code>strlcpy</code>, versus 38,644 uses of <code>strcpy_s</code> (and 15,286,150 uses of <code>strcpy</code>).<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2015)">citation needed</span></a></i>&#93;</sup></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-open-std1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-open-std1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-open-std1_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-open-std1_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">"The C99 standard draft + TC3"</a> <span class="cs1-format">(PDF)</span>. §7.1.1p1<span class="reference-accessdate">. Retrieved <span class="nowrap">7 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C99+standard+draft+%2B+TC3&amp;rft.place=%C2%A77.1.1p1&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">"The C99 standard draft + TC3"</a> <span class="cs1-format">(PDF)</span>. §6.4.5p7<span class="reference-accessdate">. Retrieved <span class="nowrap">7 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C99+standard+draft+%2B+TC3&amp;rft.place=%C2%A76.4.5p7&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">"The C99 standard draft + TC3"</a> <span class="cs1-format">(PDF)</span>. Section 6.4.5 footnote 66<span class="reference-accessdate">. Retrieved <span class="nowrap">7 January</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C99+standard+draft+%2B+TC3&amp;rft.place=Section+6.4.5+footnote+66&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/cpp/language/types">"Fundamental types"</a>. <i>en.cppreference.com</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=en.cppreference.com&amp;rft.atitle=Fundamental+types&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fcpp%2Flanguage%2Ftypes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-open-std-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-open-std_5-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">"The C99 standard draft + TC3"</a> <span class="cs1-format">(PDF)</span>. §5.1.1.2 <i>Translation phases</i>, p1<span class="reference-accessdate">. Retrieved <span class="nowrap">23 December</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C99+standard+draft+%2B+TC3&amp;rft.place=%C2%A75.1.1.2+%27%27Translation+phases%27%27%2C+p1&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/language/string_literal">"string literals"</a>. <i>en.cppreference.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">23 December</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=en.cppreference.com&amp;rft.atitle=string+literals&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Flanguage%2Fstring_literal&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/007908775/xsh/stddef.h.html">"stddef.h - standard type definitions"</a>. The Open Group<span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=stddef.h+-+standard+type+definitions&amp;rft.pub=The+Open+Group&amp;rft_id=https%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F007908775%2Fxsh%2Fstddef.h.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book">Gillam, Richard (2003). <a rel="nofollow" class="external text" href="https://books.google.no/books?id=wn5sXG8bEAcC&amp;pg=PA714"><i>Unicode Demystified: A Practical Programmer's Guide to the Encoding Standard</i></a>. Addison-Wesley Professional. p.&#160;714.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Unicode+Demystified%3A+A+Practical+Programmer%27s+Guide+to+the+Encoding+Standard&amp;rft.pages=714&amp;rft.pub=Addison-Wesley+Professional&amp;rft.date=2003&amp;rft.aulast=Gillam&amp;rft.aufirst=Richard&amp;rft_id=https%3A%2F%2Fbooks.google.no%2Fbooks%3Fid%3Dwn5sXG8bEAcC%26pg%3DPA714&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-strcpy-cppreference-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-strcpy-cppreference_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-strcpy-cppreference_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strcpy">"strcpy - cppreference.com"</a>. En.cppreference.com. 2 January 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-01-02&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrcpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcscpy">"wcscpy - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcscpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcscpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strncpy">"strncpy - cppreference.com"</a>. En.cppreference.com. 4 October 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strncpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-10-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrncpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsncpy">"wcsncpy - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsncpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsncpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-strcat-cppreference-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-strcat-cppreference_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-strcat-cppreference_14-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strcat">"strcat - cppreference.com"</a>. En.cppreference.com. 8 October 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcat+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-10-08&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrcat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcscat">"wcscat - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcscat+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcscat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strncat">"strncat - cppreference.com"</a>. En.cppreference.com. 1 July 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strncat+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-07-01&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrncat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsncat">"wcsncat - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsncat+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsncat&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strxfrm">"strxfrm - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strxfrm+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrxfrm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsxfrm">"wcsxfrm - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsxfrm+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsxfrm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strlen">"strlen - cppreference.com"</a>. En.cppreference.com. 27 December 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strlen+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-12-27&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrlen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcslen">"wcslen - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcslen+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcslen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strcmp">"strcmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrcmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcscmp">"wcscmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcscmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcscmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strncmp">"strncmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strncmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrncmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsncmp">"wcsncmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsncmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsncmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strcoll">"strcoll - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcoll+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrcoll&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcscoll">"wcscoll - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcscoll+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcscoll&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strchr">"strchr - cppreference.com"</a>. En.cppreference.com. 23 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strchr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-23&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrchr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcschr">"wcschr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcschr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcschr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strrchr">"strrchr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strrchr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrrchr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsrchr">"wcsrchr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsrchr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsrchr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strspn">"strspn - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strspn+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrspn&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsspn">"wcsspn - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsspn+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsspn&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strcspn">"strcspn - cppreference.com"</a>. En.cppreference.com. 31 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcspn+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-05-31&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrcspn&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcscspn">"wcscspn - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcscspn+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcscspn&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strpbrk">"strpbrk - cppreference.com"</a>. En.cppreference.com. 31 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strpbrk+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-05-31&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrpbrk&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcspbrk">"wcspbrk - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcspbrk+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcspbrk&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strstr">"strstr - cppreference.com"</a>. En.cppreference.com. 16 October 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strstr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-10-16&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrstr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcsstr">"wcsstr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsstr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcsstr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtok">"strtok - cppreference.com"</a>. En.cppreference.com. 3 September 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtok+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-09-03&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtok&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcstok">"wcstok - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstok+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstok&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strerror">"strerror - cppreference.com"</a>. En.cppreference.com. 31 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strerror+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-05-31&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrerror&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/memset">"memset - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memset+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fmemset&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wmemset">"wmemset - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wmemset+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwmemset&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-memcpy-cppreference-45"><span class="mw-cite-backlink">^ <a href="#cite_ref-memcpy-cppreference_45-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-memcpy-cppreference_45-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/memcpy">"memcpy - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memcpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fmemcpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-46"><span class="mw-cite-backlink"><b><a href="#cite_ref-46">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wmemcpy">"wmemcpy - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wmemcpy+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwmemcpy&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-memmove-cppreference-47"><span class="mw-cite-backlink">^ <a href="#cite_ref-memmove-cppreference_47-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-memmove-cppreference_47-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/memmove">"memmove - cppreference.com"</a>. En.cppreference.com. 25 January 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memmove+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-01-25&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fmemmove&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-48"><span class="mw-cite-backlink"><b><a href="#cite_ref-48">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wmemmove">"wmemmove - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wmemmove+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwmemmove&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-49"><span class="mw-cite-backlink"><b><a href="#cite_ref-49">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/memcmp">"memcmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memcmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fmemcmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-50"><span class="mw-cite-backlink"><b><a href="#cite_ref-50">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wmemcmp">"wmemcmp - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wmemcmp+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwmemcmp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-51"><span class="mw-cite-backlink"><b><a href="#cite_ref-51">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/memchr">"memchr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memchr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fmemchr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-52"><span class="mw-cite-backlink"><b><a href="#cite_ref-52">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wmemchr">"wmemchr - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wmemchr+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwmemchr&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-53"><span class="mw-cite-backlink"><b><a href="#cite_ref-53">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mblen">"mblen - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mblen+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmblen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-54"><span class="mw-cite-backlink"><b><a href="#cite_ref-54">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbtowc">"mbtowc - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbtowc+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbtowc&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-55"><span class="mw-cite-backlink"><b><a href="#cite_ref-55">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/wctomb">"wctomb - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wctomb+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fwctomb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-56"><span class="mw-cite-backlink"><b><a href="#cite_ref-56">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbstowcs">"mbstowcs - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbstowcs+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbstowcs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-57"><span class="mw-cite-backlink"><b><a href="#cite_ref-57">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/wcstombs">"wcstombs - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstombs+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fwcstombs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-58"><span class="mw-cite-backlink"><b><a href="#cite_ref-58">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/btowc">"btowc - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=btowc+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fbtowc&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-59"><span class="mw-cite-backlink"><b><a href="#cite_ref-59">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/wctob">"wctob - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wctob+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fwctob&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-60"><span class="mw-cite-backlink"><b><a href="#cite_ref-60">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbsinit">"mbsinit - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbsinit+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbsinit&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-61"><span class="mw-cite-backlink"><b><a href="#cite_ref-61">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbrlen">"mbrlen - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbrlen+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbrlen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-62"><span class="mw-cite-backlink"><b><a href="#cite_ref-62">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbrtowc">"mbrtowc - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbrtowc+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbrtowc&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-63"><span class="mw-cite-backlink"><b><a href="#cite_ref-63">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/wcrtomb">"wcrtomb - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcrtomb+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fwcrtomb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-64"><span class="mw-cite-backlink"><b><a href="#cite_ref-64">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/mbsrtowcs">"mbsrtowcs - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mbsrtowcs+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fmbsrtowcs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-65"><span class="mw-cite-backlink"><b><a href="#cite_ref-65">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/multibyte/wcsrtombs">"wcsrtombs - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcsrtombs+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fmultibyte%2Fwcsrtombs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-66"><span class="mw-cite-backlink"><b><a href="#cite_ref-66">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/libc/manual/html_node/Keeping-the-state.html">"6.3.2 Representing the state of the conversion"</a>. <i>"The GNU C Library"</i><span class="reference-accessdate">. Retrieved <span class="nowrap">31 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=%22The+GNU+C+Library%22&amp;rft.atitle=6.3.2+Representing+the+state+of+the+conversion&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Flibc%2Fmanual%2Fhtml_node%2FKeeping-the-state.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-67"><span class="mw-cite-backlink"><b><a href="#cite_ref-67">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://git.musl-libc.org/cgit/musl/tree/src/multibyte/c16rtomb.c">"root/src/multibyte/c16rtomb.c"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">31 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=root%2Fsrc%2Fmultibyte%2Fc16rtomb.c&amp;rft_id=https%3A%2F%2Fgit.musl-libc.org%2Fcgit%2Fmusl%2Ftree%2Fsrc%2Fmultibyte%2Fc16rtomb.c&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-68"><span class="mw-cite-backlink"><b><a href="#cite_ref-68">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://svnweb.freebsd.org/base/stable/11/lib/libc/locale/c16rtomb.c?view=markup">"Contents of /stable/11/lib/libc/locale/c16rtomb.c"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">31 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Contents+of+%2Fstable%2F11%2Flib%2Flibc%2Flocale%2Fc16rtomb.c&amp;rft_id=https%3A%2F%2Fsvnweb.freebsd.org%2Fbase%2Fstable%2F11%2Flib%2Flibc%2Flocale%2Fc16rtomb.c%3Fview%3Dmarkup&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-70"><span class="mw-cite-backlink"><b><a href="#cite_ref-70">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/atof">"atof - cppreference.com"</a>. En.cppreference.com. 31 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=atof+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2013-05-31&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fatof&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-71"><span class="mw-cite-backlink"><b><a href="#cite_ref-71">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/atoi">"atoi, atol, atoll - cppreference.com"</a>. En.cppreference.com. 18 January 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=atoi%2C+atol%2C+atoll+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-01-18&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fatoi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-72"><span class="mw-cite-backlink"><b><a href="#cite_ref-72">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtof">"strtof, strtod, strtold - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtof%2C+strtod%2C+strtold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtof&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-73"><span class="mw-cite-backlink"><b><a href="#cite_ref-73">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtod">"strtof, strtod, strtold - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtof%2C+strtod%2C+strtold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtod&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-74"><span class="mw-cite-backlink"><b><a href="#cite_ref-74">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtold">"strtof, strtod, strtold - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtof%2C+strtod%2C+strtold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtold&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-75"><span class="mw-cite-backlink"><b><a href="#cite_ref-75">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcstof">"wcstof, wcstod, wcstold - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstof%2C+wcstod%2C+wcstold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstof&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-76"><span class="mw-cite-backlink"><b><a href="#cite_ref-76">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcstod">"wcstof, wcstod, wcstold - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstof%2C+wcstod%2C+wcstold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstod&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-77"><span class="mw-cite-backlink"><b><a href="#cite_ref-77">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://en.cppreference.com/w/c/string/wide/wcstold">"wcstof, wcstod, wcstold - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstof%2C+wcstod%2C+wcstold+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=http%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstold&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-78"><span class="mw-cite-backlink"><b><a href="#cite_ref-78">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtol">"strtol, strtoll - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtol%2C+strtoll+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtol&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-79"><span class="mw-cite-backlink"><b><a href="#cite_ref-79">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcstol">"wcstol, wcstoll - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstol%2C+wcstoll+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstol&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-80"><span class="mw-cite-backlink"><b><a href="#cite_ref-80">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/byte/strtoul">"strtoul, strtoull - cppreference.com"</a>. En.cppreference.com. 4 February 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtoul%2C+strtoull+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft.date=2014-02-04&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fbyte%2Fstrtoul&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-81"><span class="mw-cite-backlink"><b><a href="#cite_ref-81">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/string/wide/wcstoul">"wcstoul, wcstoull - cppreference.com"</a>. En.cppreference.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=wcstoul%2C+wcstoull+-+cppreference.com&amp;rft.pub=En.cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Fstring%2Fwide%2Fwcstoul&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-82"><span class="mw-cite-backlink"><b><a href="#cite_ref-82">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">C99 Rationale, 7.20.1.1</a></span>
+</li>
+<li id="cite_note-83"><span class="mw-cite-backlink"><b><a href="#cite_ref-83">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/009695399/functions/bzero.html">"bzero"</a>. <a href="/wiki/The_Open_Group" title="The Open Group">The Open Group</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 November</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=bzero&amp;rft.pub=The+Open+Group&amp;rft_id=http%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F009695399%2Ffunctions%2Fbzero.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-explicit_bzero-84"><span class="mw-cite-backlink"><b><a href="#cite_ref-explicit_bzero_84-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://man.openbsd.org/explicit_bzero.3">"bzero(3)"</a>. <a href="/wiki/OpenBSD" title="OpenBSD">OpenBSD</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 November</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=bzero%283%29&amp;rft.pub=OpenBSD&amp;rft_id=https%3A%2F%2Fman.openbsd.org%2Fexplicit_bzero.3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-85"><span class="mw-cite-backlink"><b><a href="#cite_ref-85">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/009695399/functions/memccpy.html">"memccpy"</a>. Pubs.opengroup.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=memccpy&amp;rft.pub=Pubs.opengroup.org&amp;rft_id=http%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F009695399%2Ffunctions%2Fmemccpy.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-86"><span class="mw-cite-backlink"><b><a href="#cite_ref-86">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/man-pages/online/pages/man3/mempcpy.3.html">"mempcpy(3) - Linux manual page"</a>. Kernel.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=mempcpy%283%29+-+Linux+manual+page&amp;rft.pub=Kernel.org&amp;rft_id=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2Fonline%2Fpages%2Fman3%2Fmempcpy.3.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-87"><span class="mw-cite-backlink"><b><a href="#cite_ref-87">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/man-pages/online/pages/man3/strcasecmp.3.html">"strcasecmp(3) - Linux manual page"</a>. Kernel.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcasecmp%283%29+-+Linux+manual+page&amp;rft.pub=Kernel.org&amp;rft_id=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2Fonline%2Fpages%2Fman3%2Fstrcasecmp.3.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-strcat_s-88"><span class="mw-cite-backlink">^ <a href="#cite_ref-strcat_s_88-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-strcat_s_88-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/man-pages/online/pages/man3/strcasecmp.3.html">"strcat_s, wcscat_s, _mbscat_s"</a>. Msdn.microsoft.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strcat_s%2C+wcscat_s%2C+_mbscat_s&amp;rft.pub=Msdn.microsoft.com&amp;rft_id=https%3A%2F%2Fwww.kernel.org%2Fdoc%2Fman-pages%2Fonline%2Fpages%2Fman3%2Fstrcasecmp.3.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-89"><span class="mw-cite-backlink"><b><a href="#cite_ref-89">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://pubs.opengroup.org/onlinepubs/009695399/functions/strdup.html">"strdup"</a>. Pubs.opengroup.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strdup&amp;rft.pub=Pubs.opengroup.org&amp;rft_id=http%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F009695399%2Ffunctions%2Fstrdup.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-90"><span class="mw-cite-backlink"><b><a href="#cite_ref-90">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man3/strerror.3.html">"strerror(3) - Linux manual page"</a>. man7.org<span class="reference-accessdate">. Retrieved <span class="nowrap">3 November</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strerror%283%29+-+Linux+manual+page&amp;rft.pub=man7.org&amp;rft_id=http%3A%2F%2Fman7.org%2Flinux%2Fman-pages%2Fman3%2Fstrerror.3.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-91"><span class="mw-cite-backlink"><b><a href="#cite_ref-91">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.cprogrammingexpert.com/C/Tutorial/strings/stricmp.aspx">"String &#124; stricmp()"</a>. C Programming Expert.com<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=String+%26%23124%3B+stricmp%28%29&amp;rft.pub=C+Programming+Expert.com&amp;rft_id=http%3A%2F%2Fwww.cprogrammingexpert.com%2FC%2FTutorial%2Fstrings%2Fstricmp.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-strlcat_strlcpy-92"><span class="mw-cite-backlink">^ <a href="#cite_ref-strlcat_strlcpy_92-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-strlcat_strlcpy_92-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://man.openbsd.org/OpenBSD-5.9/man3/strlcat.3">"strlcpy, strlcat — size-bounded string copying and concatenation"</a>. <a href="/wiki/OpenBSD" title="OpenBSD">OpenBSD</a><span class="reference-accessdate">. Retrieved <span class="nowrap">26 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strlcpy%2C+strlcat+%E2%80%94+size-bounded+string+copying+and+concatenation&amp;rft.pub=OpenBSD&amp;rft_id=https%3A%2F%2Fman.openbsd.org%2FOpenBSD-5.9%2Fman3%2Fstrlcat.3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-strl-93"><span class="mw-cite-backlink">^ <a href="#cite_ref-strl_93-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-strl_93-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-strl_93-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-strl_93-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Todd C. Miller; Theo de Raadt (1999). <a rel="nofollow" class="external text" href="https://www.sudo.ws/todd/papers/strlcpy.html">"strlcpy and strlcat – consistent, safe, string copy and concatenation"</a>. USENIX '99.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strlcpy+and+strlcat+%E2%80%93+consistent%2C+safe%2C+string+copy+and+concatenation.&amp;rft.pub=USENIX+%2799&amp;rft.date=1999&amp;rft.au=Todd+C.+Miller&amp;rft.au=Theo+de+Raadt&amp;rft_id=https%3A%2F%2Fwww.sudo.ws%2Ftodd%2Fpapers%2Fstrlcpy.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-94"><span class="mw-cite-backlink"><b><a href="#cite_ref-94">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/strsignal.html">"strsignal"</a>. Pubs.opengroup.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strsignal&amp;rft.pub=Pubs.opengroup.org&amp;rft_id=https%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F9699919799%2Ffunctions%2Fstrsignal.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-95"><span class="mw-cite-backlink"><b><a href="#cite_ref-95">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://pubs.opengroup.org/onlinepubs/009695399/functions/strtok.html">"strtok"</a>. Pubs.opengroup.org<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=strtok&amp;rft.pub=Pubs.opengroup.org&amp;rft_id=https%3A%2F%2Fpubs.opengroup.org%2Fonlinepubs%2F009695399%2Ffunctions%2Fstrtok.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-97"><span class="mw-cite-backlink"><b><a href="#cite_ref-97">^</a></b></span> <span class="reference-text"><cite class="citation web">Miller, Damien (October 2005). <a rel="nofollow" class="external text" href="https://www.openbsd.org/papers/portability.pdf">"Secure Portability"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">26 June</span> 2016</span>. <q>This [strlcpy and strlcat] API has been adopted by most modern operating systems and many standalone software packages [...]. The notable exception is the GNU standard C library, glibc, whose maintainer steadfastly refuses to include these improved APIs, labelling them “horribly inefficient BSD crap”, despite prior evidence that they are faster is most cases than the APIs they replace.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Secure+Portability&amp;rft.date=2005-10&amp;rft.aulast=Miller&amp;rft.aufirst=Damien&amp;rft_id=https%3A%2F%2Fwww.openbsd.org%2Fpapers%2Fportability.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-libc-alpha-discussion-1-98"><span class="mw-cite-backlink"><b><a href="#cite_ref-libc-alpha-discussion-1_98-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://sources.redhat.com/ml/libc-alpha/">libc-alpha mailing list</a>, selected messages from 8 August 2000 thread: <a rel="nofollow" class="external text" href="https://www.sourceware.org/ml/libc-alpha/2000-08/msg00053.html">53</a>, <a rel="nofollow" class="external text" href="https://www.sourceware.org/ml/libc-alpha/2000-08/msg00060.html">60</a>, <a rel="nofollow" class="external text" href="https://www.sourceware.org/ml/libc-alpha/2000-08/msg00061.html">61</a></span>
+</li>
+<li id="cite_note-99"><span class="mw-cite-backlink"><b><a href="#cite_ref-99">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://lwn.net/Articles/507319/">The ups and downs of strlcpy(); LWN.net</a></span>
+</li>
+<li id="cite_note-100"><span class="mw-cite-backlink"><b><a href="#cite_ref-100">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://lwn.net/Articles/612244/">"Adding strlcpy() to glibc"</a>. <i>lwn.net</i>. <q>Correct string handling means that you always know how long your strings are and therefore you can you memcpy (instead of strcpy).</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=lwn.net&amp;rft.atitle=Adding+strlcpy%28%29+to+glibc&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F612244%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-101"><span class="mw-cite-backlink"><b><a href="#cite_ref-101">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://www.mankier.com/3/strlcpy">strlcpy(3)</a></code></span>&#160;–&#160;<a href="/wiki/Linux" title="Linux">Linux</a> Library Functions <a href="/wiki/Man_page" title="Man page">Manual</a>  "However, one may question the validity of such optimizations, as they defeat the whole purpose of strlcpy() and strlcat(). As a matter of fact, the first version of this manual page got it wrong."</span>
+</li>
+<li id="cite_note-102"><span class="mw-cite-backlink"><b><a href="#cite_ref-102">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://git.musl-libc.org/cgit/musl/tree/src/string/strlcpy.c">"root/src/string/strlcpy.c"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=root%2Fsrc%2Fstring%2Fstrlcpy.c&amp;rft_id=https%3A%2F%2Fgit.musl-libc.org%2Fcgit%2Fmusl%2Ftree%2Fsrc%2Fstring%2Fstrlcpy.c&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-103"><span class="mw-cite-backlink"><b><a href="#cite_ref-103">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://git.musl-libc.org/cgit/musl/tree/src/string/strlcat.c">"root/src/string/strlcat.c"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">28 January</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=root%2Fsrc%2Fstring%2Fstrlcat.c&amp;rft_id=https%3A%2F%2Fgit.musl-libc.org%2Fcgit%2Fmusl%2Ftree%2Fsrc%2Fstring%2Fstrlcat.c&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-104"><span class="mw-cite-backlink"><b><a href="#cite_ref-104">^</a></b></span> <span class="reference-text"><cite class="citation web">Todd C. Miller. <a rel="nofollow" class="external text" href="http://bxr.su/OpenBSD/lib/libc/string/strlcpy.c">"strlcpy.c"</a>. <i>BSD Cross Reference</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=BSD+Cross+Reference&amp;rft.atitle=strlcpy.c&amp;rft.au=Todd+C.+Miller&amp;rft_id=http%3A%2F%2Fbxr.su%2FOpenBSD%2Flib%2Flibc%2Fstring%2Fstrlcpy.c&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-105"><span class="mw-cite-backlink"><b><a href="#cite_ref-105">^</a></b></span> <span class="reference-text"><cite class="citation web">Todd C. Miller. <a rel="nofollow" class="external text" href="http://bxr.su/OpenBSD/lib/libc/string/strlcat.c">"strlcat.c"</a>. <i>BSD Cross Reference</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=BSD+Cross+Reference&amp;rft.atitle=strlcat.c&amp;rft.au=Todd+C.+Miller&amp;rft_id=http%3A%2F%2Fbxr.su%2FOpenBSD%2Flib%2Flibc%2Fstring%2Fstrlcat.c&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-106"><span class="mw-cite-backlink"><b><a href="#cite_ref-106">^</a></b></span> <span class="reference-text"><cite class="citation web">Lovell, Martyn. <a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/magazine/cc163794.aspx">"Repel Attacks on Your Code with the Visual Studio 2005 Safe C and C++ Libraries"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Repel+Attacks+on+Your+Code+with+the+Visual+Studio+2005+Safe+C+and+C%2B%2B+Libraries&amp;rft.aulast=Lovell&amp;rft.aufirst=Martyn&amp;rft_id=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Fmagazine%2Fcc163794.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-107"><span class="mw-cite-backlink"><b><a href="#cite_ref-107">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1548.pdf">"The C11 standard draft"</a> <span class="cs1-format">(PDF)</span>. §K.3.1.4p2<span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C11+standard+draft&amp;rft.place=%C2%A7K.3.1.4p2&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1548.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-108"><span class="mw-cite-backlink"><b><a href="#cite_ref-108">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1548.pdf">"The C11 standard draft"</a> <span class="cs1-format">(PDF)</span>. §K.3.6.1.1p4<span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C11+standard+draft&amp;rft.place=%C2%A7K.3.6.1.1p4&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1548.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-109"><span class="mw-cite-backlink"><b><a href="#cite_ref-109">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://msdn.microsoft.com/en-us/library/ksazx244.aspx">"Parameter Validation"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Parameter+Validation&amp;rft_id=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fksazx244.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-110"><span class="mw-cite-backlink"><b><a href="#cite_ref-110">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1548.pdf">"The C11 standard draft"</a> <span class="cs1-format">(PDF)</span>. §K.3.7.2.1p4<span class="reference-accessdate">. Retrieved <span class="nowrap">13 February</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C11+standard+draft&amp;rft.place=%C2%A7K.3.7.2.1p4&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1548.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-111"><span class="mw-cite-backlink"><b><a href="#cite_ref-111">^</a></b></span> <span class="reference-text"><cite class="citation web">Danny Kalev. <a rel="nofollow" class="external text" href="http://www.informit.com/blogs/blog.aspx?uk=Theyre-at-it-again">"They're at it again"</a>. InformIT<span class="reference-accessdate">. Retrieved <span class="nowrap">10 November</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=They%27re+at+it+again&amp;rft.pub=InformIT&amp;rft.au=Danny+Kalev&amp;rft_id=http%3A%2F%2Fwww.informit.com%2Fblogs%2Fblog.aspx%3Fuk%3DTheyre-at-it-again&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-112"><span class="mw-cite-backlink"><b><a href="#cite_ref-112">^</a></b></span> <span class="reference-text"><cite class="citation web">Safe C Library. <a rel="nofollow" class="external text" href="http://safeclib.sourceforge.net/">"The Safe C Library provides bound checking memory and string functions per ISO/IEC TR24731"</a>. Sourceforge<span class="reference-accessdate">. Retrieved <span class="nowrap">6 March</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Safe+C+Library+provides+bound+checking+memory+and+string+functions+per+ISO%2FIEC+TR24731&amp;rft.pub=Sourceforge&amp;rft.au=Safe+C+Library&amp;rft_id=http%3A%2F%2Fsafeclib.sourceforge.net%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-113"><span class="mw-cite-backlink"><b><a href="#cite_ref-113">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1967.htm">"Field Experience With Annex K — Bounds Checking Interfaces"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">5 November</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Field+Experience+With+Annex+K+%E2%80%94+Bounds+Checking+Interfaces&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2Fdocs%2Fn1967.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-114"><span class="mw-cite-backlink"><b><a href="#cite_ref-114">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wiki.sei.cmu.edu/confluence/display/c/MSC06-C.+Beware+of+compiler+optimizations">"MSC06-C. Beware of compiler optimizations"</a>. <i>SEI CERT C Coding Standard</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=SEI+CERT+C+Coding+Standard&amp;rft.atitle=MSC06-C.+Beware+of+compiler+optimizations&amp;rft_id=https%3A%2F%2Fwiki.sei.cmu.edu%2Fconfluence%2Fdisplay%2Fc%2FMSC06-C.%2BBeware%2Bof%2Bcompiler%2Boptimizations&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+string+handling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-115"><span class="mw-cite-backlink"><b><a href="#cite_ref-115">^</a></b></span> <span class="reference-text"><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="//www.freebsd.org/cgi/man.cgi?query=memset_s&amp;sektion=3">memset_s(3)</a></code></span>&#160;–&#160;<a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a> Library Functions <a href="/wiki/Man_page" title="Man page">Manual</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_string_handling&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/C_Programming" class="extiw" title="wikibooks:C Programming">C Programming</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/C_Programming/Strings" class="extiw" title="wikibooks:C Programming/Strings">C Programming/Strings</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.danielvik.com/2010/02/fast-memcpy-in-c.html">Fast memcpy in C</a>, multiple C coding examples to target different types of CPU instruction architectures</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_programming_language" title="Template:C programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_programming_language" title="Template talk:C programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*ANSI_C_**C89_and_C90_*C99_*C11_*C18_*C2x_*Embedded_C_*MISRA_C">
+<ul><li><a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>
+<ul><li><a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C89 and C90</a></li></ul></li>
+<li><a href="/wiki/C99" title="C99">C99</a></li>
+<li><a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a></li>
+<li><a href="/wiki/C18_(C_standard_revision)" title="C18 (C standard revision)">C18</a></li>
+<li><a href="/wiki/C2x" title="C2x">C2x</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subroutine" title="Subroutine">Functions</a></li>
+<li><a href="/wiki/Include_directive#C" title="Include directive">Header files</a></li>
+<li><a href="/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a class="mw-selflink selflink">String</a></li>
+<li><a href="/wiki/C_syntax" title="C syntax">Syntax</a></li>
+<li><a href="/wiki/C_preprocessor" title="C preprocessor">Preprocessor</a></li>
+<li><a href="/wiki/C_data_types" title="C data types">Data types</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C_standard_library" title="C standard library">Standard library<br />functions</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_character_classification" title="C character classification">Char (ctype.h)</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File I/O (stdio.h)</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Math (math.h)</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Dynamic memory (stdlib.h)</a></li>
+<li><a class="mw-selflink selflink">String (string.h)</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Time (time.h)</a></li>
+<li><a href="/wiki/Stdarg.h" title="Stdarg.h">Variadic (stdarg.h)</a></li>
+<li><a href="/wiki/C_POSIX_library" title="C POSIX library">POSIX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_standard_library" title="Category:C standard library">Standard<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Microsoft_Windows_library_files#MSVCRT.DLL,_MSVCPP.DLL_and_CRTDLL.DLL" title="Microsoft Windows library files">Microsoft Run-time Library</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/BSD_libc" class="mw-redirect" title="BSD libc">BSD libc</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C_compilers" title="List of compilers">Comparison of compilers</a></li>
+<li><a href="/wiki/Amsterdam_Compiler_Kit" title="Amsterdam Compiler Kit">ACK</a></li>
+<li><a href="/wiki/Borland_Turbo_C" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">ICC</a></li>
+<li><a href="/wiki/LCC_(compiler)" title="LCC (compiler)">LCC</a></li>
+<li><a href="/wiki/Portable_C_Compiler" title="Portable C Compiler">PCC</a></li>
+<li><a href="/wiki/Small_Device_C_Compiler" title="Small Device C Compiler">SDCC</a></li>
+<li><a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">TCC</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> / <a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Express</a> / <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/GNOME_Builder" title="GNOME Builder">GNOME Builder</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison with<br />other languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="Compatibility of C and C++">Compatibility of C and C++</a></li>
+<li>Comparison with <a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison with Pascal</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Descendant<br />languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Alef_(programming_language)" title="Alef (programming language)">Alef</a></li>
+<li><a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Vala_(programming_language)" title="Vala (programming language)">Vala</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1375
+Cached time: 20200327134452
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 1.072 seconds
+Real time usage: 1.233 seconds
+Preprocessor visited node count: 5746/1000000
+Post‐expand include size: 174054/2097152 bytes
+Template argument size: 3401/2097152 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 323770/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.601/10.000 seconds
+Lua memory usage: 6.01 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1109.595      1 -total
+ 60.11%  667.018      2 Template:Reflist
+ 49.41%  548.235    106 Template:Cite_web
+  6.65%   73.771     81 Template:Anchor
+  5.62%   62.332      2 Template:Fix
+  5.44%   60.388      1 Template:Who?
+  4.16%   46.212      1 Template:C_Standard_Library
+  3.75%   41.609      3 Template:Category_handler
+  3.67%   40.667      1 Template:Sidebar
+  3.48%   38.586      1 Template:Use_dmy_dates
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:33691376-0!canonical and timestamp 20200327134502 and revision id 947624608
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=C_string_handling&amp;oldid=947624608">https://en.wikipedia.org/w/index.php?title=C_string_handling&amp;oldid=947624608</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:C_standard_library" title="Category:C standard library">C standard library</a></li><li><a href="/wiki/Category:String_(computer_science)" title="Category:String (computer science)">String (computer science)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_February_2015" title="Category:Articles with unsourced statements from February 2015">Articles with unsourced statements from February 2015</a></li><li><a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">CS1 maint: location</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_January_2012" title="Category:Use dmy dates from January 2012">Use dmy dates from January 2012</a></li><li><a href="/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases" title="Category:All articles with specifically marked weasel-worded phrases">All articles with specifically marked weasel-worded phrases</a></li><li><a href="/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_January_2017" title="Category:Articles with specifically marked weasel-worded phrases from January 2017">Articles with specifically marked weasel-worded phrases from January 2017</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=C+string+handling" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=C+string+handling" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/C_string_handling" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:C_string_handling" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/C_string_handling">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=C_string_handling&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=C_string_handling&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/C_string_handling" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/C_string_handling" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=C_string_handling&amp;oldid=947624608" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=C_string_handling&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q845796" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=C_string_handling&amp;id=947624608&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=C+string+handling">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=C+string+handling&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=C_string_handling&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/C_string" title="C string – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA_%D8%B1%D8%B4%D8%AA%D9%87_%D8%AF%D8%B1_%D8%B3%DB%8C" title="مدیریت رشته در سی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/C_%EB%AC%B8%EC%9E%90%EC%97%B4_%EC%B2%98%EB%A6%AC" title="C 문자열 처리 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%B2%E0%B8%A2%E0%B8%AD%E0%B8%B1%E0%B8%81%E0%B8%82%E0%B8%A3%E0%B8%B0%E0%B9%83%E0%B8%99%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%8B%E0%B8%B5" title="การจัดการสายอักขระในภาษาซี – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/C%E5%AD%97%E4%B8%B2%E5%87%BD%E5%BC%8F%E5%BA%AB" title="C字串函式庫 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q845796#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 27 March 2020, at 13:45<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=C_string_handling&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"1.072","walltime":"1.233","ppvisitednodes":{"value":5746,"limit":1000000},"postexpandincludesize":{"value":174054,"limit":2097152},"templateargumentsize":{"value":3401,"limit":2097152},"expansiondepth":{"value":16,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":323770,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1109.595      1 -total"," 60.11%  667.018      2 Template:Reflist"," 49.41%  548.235    106 Template:Cite_web","  6.65%   73.771     81 Template:Anchor","  5.62%   62.332      2 Template:Fix","  5.44%   60.388      1 Template:Who?","  4.16%   46.212      1 Template:C_Standard_Library","  3.75%   41.609      3 Template:Category_handler","  3.67%   40.667      1 Template:Sidebar","  3.48%   38.586      1 Template:Use_dmy_dates"]},"scribunto":{"limitreport-timeusage":{"value":"0.601","limit":"10.000"},"limitreport-memusage":{"value":6300176,"limit":52428800}},"cachereport":{"origin":"mw1375","timestamp":"20200327134452","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"C string handling","url":"https:\/\/en.wikipedia.org\/wiki\/C_string_handling","sameAs":"http:\/\/www.wikidata.org\/entity\/Q845796","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q845796","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2011-11-09T17:46:24Z","dateModified":"2020-03-27T13:45:02Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":92,"wgHostname":"mw1395"});});</script></body></html>

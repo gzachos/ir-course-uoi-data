@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Earliest deadline first scheduling - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XnzJsApAMM4AAISR1mAAAACO","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Earliest_deadline_first_scheduling","wgTitle":"Earliest deadline first scheduling","wgCurRevisionId":929043109,"wgRevisionId":929043109,"wgArticleId":33719526,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from May 2016","All articles lacking in-text citations","Processor scheduling algorithms","Real-time computing"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Earliest_deadline_first_scheduling",
+"wgRelevantArticleId":33719526,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q666365","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":"ready",
+"skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Earliest_deadline_first_scheduling"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Earliest_deadline_first_scheduling rootpage-Earliest_deadline_first_scheduling skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Earliest deadline first scheduling</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">May 2016</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p><b>Earliest deadline first</b> (<b>EDF</b>) or <b>least time to go</b> is a dynamic priority <a href="/wiki/Scheduling_algorithm" class="mw-redirect" title="Scheduling algorithm">scheduling algorithm</a> used in <a href="/wiki/Real-time_operating_system" title="Real-time operating system">real-time operating systems</a> to place processes in a <a href="/wiki/Priority_queue" title="Priority queue">priority queue</a>. Whenever a scheduling event occurs (task finishes, new task released, etc.) the queue will be searched for the process closest to its deadline. This process is the next to be scheduled for execution.
+</p><p>EDF is an <i>optimal</i> scheduling algorithm on preemptive uniprocessors, in the following sense: if a collection of independent <i>jobs,</i> each characterized by an arrival time, an execution requirement and a deadline, can be scheduled (by any algorithm) in a way that ensures all the jobs complete by their deadline, the <b>EDF</b> will schedule this collection of jobs so they all complete by their deadline.
+</p><p>With scheduling periodic processes that have deadlines equal to their periods, <b>EDF</b> has a utilization bound of 100%. Thus, the <a rel="nofollow" class="external text" href="http://portal.acm.org/citation.cfm?id=78285">schedulability test</a> for <b>EDF</b> is:
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle U=\sum _{i=1}^{n}{\frac {C_{i}}{T_{i}}}\leq 1,}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>U</mi>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msub>
+              <mi>C</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <msub>
+              <mi>T</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+          </mfrac>
+        </mrow>
+        <mo>&#x2264;<!-- ≤ --></mo>
+        <mn>1</mn>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle U=\sum _{i=1}^{n}{\frac {C_{i}}{T_{i}}}\leq 1,}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8a8a9cf8c953cadbd42b0fab263eab0db56b9664" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:16.829ex; height:6.843ex;" alt="U = \sum_{i=1}^{n} \frac{C_i}{T_i} \leq 1,"/></span></dd></dl>
+<p>where the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \left\{C_{i}\right\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>{</mo>
+          <msub>
+            <mi>C</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>}</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left\{C_{i}\right\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/390c8d63e9315d6db2b6918ee5d24e29a5319c6c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.786ex; height:2.843ex;" alt="\left\{C_i\right\}"/></span> are the worst-case computation-times of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a601995d55609f2d9f5e233e36fbe9ea26011b3b" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.395ex; height:1.676ex;" alt="n"/></span> processes and the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \left\{T_{i}\right\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>{</mo>
+          <msub>
+            <mi>T</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mi>i</mi>
+            </mrow>
+          </msub>
+          <mo>}</mo>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left\{T_{i}\right\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f9afbd76d0b0c6bd4fad3bd142335969a3f31e5" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.482ex; height:2.843ex;" alt="\left\{T_i\right\}"/></span> are their respective inter-arrival periods (assumed to  be equal to the relative deadlines).
+</p><p>That is, EDF can guarantee that all deadlines are met provided that the total <a href="/wiki/Central_processing_unit" title="Central processing unit">CPU</a> utilization is not more than 100%. Compared to fixed priority scheduling techniques like <a href="/wiki/Rate-monotonic_scheduling" title="Rate-monotonic scheduling">rate-monotonic scheduling</a>, <b>EDF</b> can guarantee all the deadlines in the system at higher loading.
+</p><p>However, when the system is overloaded, the set of  processes that will miss deadlines is largely unpredictable (it will be a function of the exact deadlines and time at which the overload occurs.)  This is a considerable disadvantage to a real time systems designer. The algorithm is also difficult to implement in <a href="/wiki/Computer_hardware" title="Computer hardware">hardware</a> and there is a tricky issue of representing deadlines in different ranges (deadlines can't be more precise than the granularity of the clock used for the scheduling). If a modular arithmetic is used to calculate future deadlines relative to now, the field storing a future relative deadline must accommodate at least the value of the (("duration" {of the longest expected time to completion} * 2) + "now"). Therefore <b>EDF</b> is not commonly found in industrial real-time computer systems.
+</p><p>Instead, most real-time computer systems use <a href="/wiki/Fixed_priority_pre-emptive_scheduling" class="mw-redirect" title="Fixed priority pre-emptive scheduling">fixed priority scheduling</a> (usually <a href="/wiki/Rate-monotonic_scheduling" title="Rate-monotonic scheduling">rate-monotonic scheduling</a>). With fixed priorities, it is easy to predict that overload conditions will cause the low-priority processes to miss deadlines, while the highest-priority process will still meet its deadline.
+</p><p>There is a significant body of research dealing with <b>EDF</b> scheduling in <a href="/wiki/Real-time_computing" title="Real-time computing">real-time computing</a>; it is possible to calculate worst case response times of processes in <b>EDF</b>, to deal with other types of processes than periodic processes and to use servers to regulate overloads.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Example"><span class="tocnumber">1</span> <span class="toctext">Example</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Timing_diagram"><span class="tocnumber">1.1</span> <span class="toctext">Timing diagram</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Utilization"><span class="tocnumber">1.2</span> <span class="toctext">Utilization</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Deadline_interchange"><span class="tocnumber">2</span> <span class="toctext">Deadline interchange</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Heavy_traffic_analysis_for_EDF_queues_with_reneging"><span class="tocnumber">3</span> <span class="toctext">Heavy traffic analysis for EDF queues with reneging</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Comparison_with_Fixed-priority_schedulers"><span class="tocnumber">4</span> <span class="toctext">Comparison with Fixed-priority schedulers</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Kernels_implementing_EDF_scheduling"><span class="tocnumber">5</span> <span class="toctext">Kernels implementing EDF scheduling</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=1" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Consider 3 periodic processes scheduled on a preemptive uniprocessor. The execution times and periods are as shown in the following table:
+</p>
+<table class="wikitable" cellpadding="20">
+<caption><b>Process Timing Data</b>
+</caption>
+<tbody><tr align="center">
+<th>Process</th>
+<th>Execution Time</th>
+<th>Period
+</th></tr>
+<tr align="center">
+<td>P1</td>
+<td>1</td>
+<td>8
+</td></tr>
+<tr align="center">
+<td>P2</td>
+<td>2</td>
+<td>5
+</td></tr>
+<tr align="center">
+<td>P3</td>
+<td>4</td>
+<td>10
+</td></tr></tbody></table>
+<p>In this example, the units of time may be considered to be schedulable <a href="/wiki/Time_slice" class="mw-redirect" title="Time slice">time slices</a>. The deadlines are that each periodic process must complete within its period.
+</p>
+<h3><span class="mw-headline" id="Timing_diagram">Timing diagram</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=2" title="Edit section: Timing diagram">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:EDF_Example_Timing_Diagram.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/EDF_Example_Timing_Diagram.png/220px-EDF_Example_Timing_Diagram.png" decoding="async" width="220" height="47" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/EDF_Example_Timing_Diagram.png/330px-EDF_Example_Timing_Diagram.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3f/EDF_Example_Timing_Diagram.png/440px-EDF_Example_Timing_Diagram.png 2x" data-file-width="1513" data-file-height="320" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:EDF_Example_Timing_Diagram.png" class="internal" title="Enlarge"></a></div><b>Timing Diagram</b> showing part of one possible schedule for the example.</div></div></div>
+<p>In the timing diagram, the columns represent time slices with time increasing to the right, and the processes all start their periods at time slice 0.  The timing diagram's alternating blue and white shading indicates each process's periods, with deadlines at the color changes.
+</p><p>The first process scheduled by EDF is P2, because its period is shortest, and therefore it has the earliest deadline.  Likewise, when P2 completes, P1 is scheduled, followed by P3.
+</p><p>At time slice 5, both P2 and P3 have the same deadline, needing to complete before time slice 10, so EDF may schedule either one.
+</p>
+<h3><span class="mw-headline" id="Utilization">Utilization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=3" title="Edit section: Utilization">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The utilization will be:
+</p><p><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \left({\frac {1}{8}}+{\frac {2}{5}}+{\frac {4}{10}}\right)=\left({\frac {37}{40}}\right)=0.925={\mathbf {92.5\%} }}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mn>8</mn>
+              </mfrac>
+            </mrow>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>2</mn>
+                <mn>5</mn>
+              </mfrac>
+            </mrow>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>4</mn>
+                <mn>10</mn>
+              </mfrac>
+            </mrow>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mn>37</mn>
+              <mn>40</mn>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mn>0.925</mn>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn mathvariant="bold">92.5</mn>
+            <mi mathvariant="bold">&#x0025;<!-- % --></mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \left({\frac {1}{8}}+{\frac {2}{5}}+{\frac {4}{10}}\right)=\left({\frac {37}{40}}\right)=0.925={\mathbf {92.5\%} }}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/cf5e6182c7c3578c9ad2ff5f7cf74082807aa081" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.505ex; width:44.413ex; height:6.176ex;" alt=" \left ( \frac{1}{8} + \frac{2}{5} + \frac{4}{10} \right ) = \left ( \frac{37}{40} \right ) = 0.925 = {\mathbf{92.5\%}} "/></span>
+</p><p>Since the <a href="/wiki/Least_common_multiple" title="Least common multiple">least common multiple</a> of the periods is 40, the scheduling pattern can repeat every 40 time slices.  But, only 37 of those 40 time slices are used by P1, P2, or P3.  Since the utilization, 92.5%, is not greater than 100%, the system is schedulable with EDF.
+</p>
+<h2><span class="mw-headline" id="Deadline_interchange">Deadline interchange</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=4" title="Edit section: Deadline interchange">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Priority_inheritance" title="Priority inheritance">Priority inheritance</a></div>
+<p>Undesirable deadline interchanges may occur with EDF scheduling. A process may use a shared resource inside a <a href="/wiki/Critical_section" title="Critical section">critical section</a>, to prevent it from being pre-emptively descheduled in favour of another process with an earlier deadline. If so, it becomes important for the scheduler to assign the running process the earliest deadline from among the other processes waiting for the resource. Otherwise the processes with earlier deadlines might miss them.
+</p><p>This is especially important if the process running the critical section has a much longer time to complete and its exit from its critical section, which will delay releasing the shared resource. But the process might still be pre-empted in favour of others that have earlier deadlines but do not share the critical resource. This hazard of deadline interchange is analogous to <a href="/wiki/Priority_inversion" title="Priority inversion">priority inversion</a> when using <a href="/wiki/Fixed_priority_pre-emptive_scheduling" class="mw-redirect" title="Fixed priority pre-emptive scheduling">fixed priority pre-emptive scheduling</a>.
+</p><p>To speed up the deadline search within the ready queue, the queue entries be sorted according to their deadlines. When a new process or a periodic process is given a new deadline, it is inserted before the first process with a later deadline. This way, the processes with the earliest deadlines are always at the beginning of the queue.
+</p>
+<h2><span class="mw-headline" id="Heavy_traffic_analysis_for_EDF_queues_with_reneging">Heavy traffic analysis for EDF queues with reneging</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=5" title="Edit section: Heavy traffic analysis for EDF queues with reneging">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a heavy-traffic analysis of the behavior of a single-server queue under an <a rel="nofollow" class="external text" href="http://www.math.cmu.edu/users/shreve/Reneging.pdf">Earliest-Deadline-First (EDF) scheduling policy with reneging</a>, the processes have deadlines and are served only until their deadlines elapse. The fraction of “reneged work,” defined as the residual work not serviced due to elapsed deadlines, is an important performance measure.
+</p>
+<h2><span class="mw-headline" id="Comparison_with_Fixed-priority_schedulers">Comparison with Fixed-priority schedulers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=6" title="Edit section: Comparison with Fixed-priority schedulers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>It is commonly accepted that an implementation of a <a href="/wiki/Fixed-priority_pre-emptive_scheduling" title="Fixed-priority pre-emptive scheduling">Fixed-priority pre-emptive scheduling</a> (FPS) is simpler than a dynamic priority scheduler, like the EDF. However, when comparing the maximum usage of an optimal scheduling under fixed priority (with the priority of each thread given by the <a href="/wiki/Rate-monotonic_scheduling" title="Rate-monotonic scheduling">Rate-monotonic scheduling</a>), the EDF can reach 100% while the theorical maximum value for <a href="/wiki/Rate-monotonic_scheduling" title="Rate-monotonic scheduling">Rate-monotonic scheduling</a> is around 69%.
+</p><p>Note that EDF does not make any specific assumption on the periodicity of the tasks; hence, it can be used for scheduling periodic as well as aperiodic tasks<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>.
+</p>
+<h2><span class="mw-headline" id="Kernels_implementing_EDF_scheduling">Kernels implementing EDF scheduling</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=7" title="Edit section: Kernels implementing EDF scheduling">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Although EDF implementations are not common in commercial real-time kernels, here are a few links of open-source and real-time kernels implementing EDF:
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://shark.sssup.it">SHARK</a> The SHaRK RTOS, implementing various versions of EDF scheduling and resource reservation scheduling algorithms</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090123013029/http://www.evidence.eu.com/content/view/27/254/">ERIKA Enterprise</a> ERIKA Enterprise, which provides an implementation of EDF optimized for small microcontrollers with an API similar to the <a href="/wiki/OSEK" title="OSEK">OSEK</a> API.</li>
+<li><a rel="nofollow" class="external text" href="http://www.barrywatson.se/?p=3">The Everyman Kernel</a> The Everyman Kernel implements either EDF or Deadline Monotonic scheduling depending on the user's configuration.</li>
+<li><a rel="nofollow" class="external text" href="http://marte.unican.es/">MaRTE OS</a> MaRTE OS acts as a runtime for Ada applications and implements a wide range of scheduling algorithms including EDF.</li>
+<li>The <a href="/wiki/AQuoSA" title="AQuoSA">AQuoSA</a> project constitutes a modification to the Linux kernel enriching the process scheduler with EDF scheduling capabilities. The timing of the scheduling cannot be as precise as in the case of the above hard real-time Operating Systems, yet it is sufficiently precise so as to greatly enhance predictability, and thus fulfill the real-time requirements, of multimedia applications. AQuoSA is one of a few projects that provides real-time scheduling capabilities to unprivileged users on a system in a controlled way, by means of a properly designed access-control model.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup></li>
+<li>The <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a> has an earliest deadline first implementation named <a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED DEADLINE</a> which is available since the release 3.14.</li>
+<li>The <a rel="nofollow" class="external text" href="http://retis.sssup.it/~tommaso/eng/publications.html#L_OSPERT09-HMPR">real-time scheduler</a> developed in the context of the <a rel="nofollow" class="external text" href="http://www.irmosproject.eu/">IRMOS</a> European Project is a multi-processor real-time scheduler for the Linux kernel, particularly suitable for temporal isolation and provisioning of QoS guarantees to complex multi-threaded software components and also entire <a href="/wiki/Virtual_machine" title="Virtual machine">virtual machines</a>. For example, when using Linux as host OS and <a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a> as hypervisor, IRMOS can be used to provide scheduling guarantees to indidivual VMs and at the same time <a href="/wiki/Temporal_isolation_among_virtual_machines" title="Temporal isolation among virtual machines">isolate their performance</a> so as to avoid undesired temporal interferences. IRMOS features a combined EDF/FP <a href="/w/index.php?title=Hierarchical_scheduler&amp;action=edit&amp;redlink=1" class="new" title="Hierarchical scheduler (page does not exist)">hierarchical scheduler</a>. At the outer level there is a  partitioned EDF scheduler on the available CPUs. However, reservations are multi-CPU, and global FP over multi-processors is used at the inner level in order to schedule the threads (and/or processes) attached to each outer EDF reservation. See also <a rel="nofollow" class="external text" href="https://lwn.net/Articles/398470/">this article on lwn.net</a> for a general overview and a short tutorial about the subject.</li>
+<li>Xen has had an EDF scheduler for some time now. The <a rel="nofollow" class="external text" href="http://man.cx/xm(1)">man page</a> contains a short description.</li>
+<li>The <a rel="nofollow" class="external text" href="http://doc.cat-v.org/plan_9/">Plan 9 OS from Bell Labs</a> incorporates EDFI, a "lightweight real-time scheduling protocol that combines EDF with deadline inheritance over shared resources."<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li>
+<li><a rel="nofollow" class="external text" href="https://www.rtems.org/">RTEMS</a>: The EDF scheduler will be available in version 4.11. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160306154953/https://docs.rtems.org/doxygen/cpukit/html/group__ScoreSchedulerEDF.html">RTEMS SuperCore</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.litmus-rt.org/">Litmus-RT</a> is a real-time extension of the Linux kernel with a focus on multiprocessor real-time scheduling and synchronization. Its set of real-time algorithms include Partitioned-EDF, Global-EDF, and Clustered-EDF schedulers.</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Dynamic_priority_scheduling" title="Dynamic priority scheduling">Dynamic priority scheduling</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFButtazzo2011" class="citation">Buttazzo, Giorgio (2011), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=h6q-e4Q_rzgC&amp;printsec=frontcover#v=snippet&amp;q=%22earliest%20deadline%20first%22&amp;f=false"><i>Hard Real-Time Computing Systems: Predictable Scheduling Algorithms and Applications</i></a> (Third ed.), New York, NY: Springer, p.&#160;100, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781461406761" title="Special:BookSources/9781461406761"><bdi>9781461406761</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Hard+Real-Time+Computing+Systems%3A+Predictable+Scheduling+Algorithms+and+Applications&amp;rft.place=New+York%2C+NY&amp;rft.pages=100&amp;rft.edition=Third&amp;rft.pub=Springer&amp;rft.date=2011&amp;rft.isbn=9781461406761&amp;rft.aulast=Buttazzo&amp;rft.aufirst=Giorgio&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dh6q-e4Q_rzgC%26printsec%3Dfrontcover%23v%3Dsnippet%26q%3D%2522earliest%2520deadline%2520first%2522%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEarliest+deadline+first+scheduling" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Cucinotta, Tommaso (2008). "Access Control for Adaptive Reservations on Multi-User Systems". <i>2008 IEEE Real-Time and Embedded Technology and Applications Symposium</i>. pp.&#160;387–396. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FRTAS.2008.16">10.1109/RTAS.2008.16</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7695-3146-5" title="Special:BookSources/978-0-7695-3146-5"><bdi>978-0-7695-3146-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Access+Control+for+Adaptive+Reservations+on+Multi-User+Systems&amp;rft.btitle=2008+IEEE+Real-Time+and+Embedded+Technology+and+Applications+Symposium&amp;rft.pages=387-396&amp;rft.date=2008&amp;rft_id=info%3Adoi%2F10.1109%2FRTAS.2008.16&amp;rft.isbn=978-0-7695-3146-5&amp;rft.aulast=Cucinotta&amp;rft.aufirst=Tommaso&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEarliest+deadline+first+scheduling" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://doc.cat-v.org/plan_9/real_time/edfi/">Pierre G. Jansen, Sape J. Mullender, Paul J.M. Havinga, Hans Scholten. Lightweight EDF Scheduling with Deadline Inheritance</a></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Parsed by mw1387
+Cached time: 20200322065027
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.176 seconds
+Real time usage: 0.274 seconds
+Preprocessor visited node count: 379/1000000
+Post‐expand include size: 9225/2097152 bytes
+Template argument size: 215/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7522/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.093/10.000 seconds
+Lua memory usage: 2.59 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  214.560      1 -total
+ 55.37%  118.793      1 Template:Reflist
+ 37.59%   80.661      1 Template:Citation
+ 35.97%   77.174      1 Template:More_footnotes
+ 22.53%   48.346      1 Template:Ambox
+ 11.84%   25.400      1 Template:Cite_book
+  6.53%   14.015      1 Template:Main_article
+  2.21%    4.741      2 Template:Yesno-no
+  1.40%    3.009      2 Template:Main_other
+  1.13%    2.430      2 Template:Yesno
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:33719526-0!canonical!math=5 and timestamp 20200322065027 and revision id 929043109
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Earliest_deadline_first_scheduling&amp;oldid=929043109">https://en.wikipedia.org/w/index.php?title=Earliest_deadline_first_scheduling&amp;oldid=929043109</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Processor_scheduling_algorithms" title="Category:Processor scheduling algorithms">Processor scheduling algorithms</a></li><li><a href="/wiki/Category:Real-time_computing" title="Category:Real-time computing">Real-time computing</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_May_2016" title="Category:Articles lacking in-text citations from May 2016">Articles lacking in-text citations from May 2016</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Earliest+deadline+first+scheduling" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Earliest+deadline+first+scheduling" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Earliest_deadline_first_scheduling" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Earliest_deadline_first_scheduling" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Earliest_deadline_first_scheduling">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Earliest_deadline_first_scheduling" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Earliest_deadline_first_scheduling" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;oldid=929043109" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q666365" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Earliest_deadline_first_scheduling&amp;id=929043109&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Earliest+deadline+first+scheduling">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Earliest+deadline+first+scheduling&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Earliest_deadline_first_scheduling&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Earliest_deadline_first" title="Earliest deadline first – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Earliest_Deadline_First" title="Earliest Deadline First – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B2%D9%85%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C_%D8%A7%D9%88%D9%84%D9%88%DB%8C%D8%AA_%D8%A8%D8%A7_%D8%B2%D9%88%D8%AF%D8%AA%D8%B1%DB%8C%D9%86_%D8%B6%D8%B1%D8%A8%E2%80%8C%D8%A7%D9%84%D8%A7%D8%AC%D9%84" title="زمان‌بندی اولویت با زودترین ضرب‌الاجل – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Earliest_deadline_first_scheduling" title="Earliest deadline first scheduling – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%B5%9C%EB%8B%A8_%EB%A7%88%EA%B0%90_%EC%9A%B0%EC%84%A0_%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81" title="최단 마감 우선 스케줄링 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Algoritmo_di_scheduling_EDF" title="Algoritmo di scheduling EDF – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Earliest_deadline_first_scheduling" title="Earliest deadline first scheduling – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Earliest_Deadline_First" title="Earliest Deadline First – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Earliest_deadline_first_skedulering" title="Earliest deadline first skedulering – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Algorytm_EDF" title="Algorytm EDF – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D0%BE_%D0%B1%D0%BB%D0%B8%D0%B6%D0%B0%D0%B9%D1%88%D0%B5%D0%BC%D1%83_%D1%81%D1%80%D0%BE%D0%BA%D1%83_%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%B8%D1%8F" title="Алгоритм планирования по ближайшему сроку завершения – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Earliest_deadline_first" title="Earliest deadline first – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E6%97%A9%E6%88%AA%E6%AD%A2%E6%97%B6%E9%97%B4%E4%BC%98%E5%85%88%E8%B0%83%E5%BA%A6" title="最早截止时间优先调度 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q666365#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 3 December 2019, at 08:38<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Earliest_deadline_first_scheduling&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.176","walltime":"0.274","ppvisitednodes":{"value":379,"limit":1000000},"postexpandincludesize":{"value":9225,"limit":2097152},"templateargumentsize":{"value":215,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":7522,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  214.560      1 -total"," 55.37%  118.793      1 Template:Reflist"," 37.59%   80.661      1 Template:Citation"," 35.97%   77.174      1 Template:More_footnotes"," 22.53%   48.346      1 Template:Ambox"," 11.84%   25.400      1 Template:Cite_book","  6.53%   14.015      1 Template:Main_article","  2.21%    4.741      2 Template:Yesno-no","  1.40%    3.009      2 Template:Main_other","  1.13%    2.430      2 Template:Yesno"]},"scribunto":{"limitreport-timeusage":{"value":"0.093","limit":"10.000"},"limitreport-memusage":{"value":2710821,"limit":52428800}},"cachereport":{"origin":"mw1387","timestamp":"20200322065027","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Earliest deadline first scheduling","url":"https:\/\/en.wikipedia.org\/wiki\/Earliest_deadline_first_scheduling","sameAs":"http:\/\/www.wikidata.org\/entity\/Q666365","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q666365","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-31T05:03:55Z","dateModified":"2019-12-03T08:38:48Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":96,"wgHostname":"mw1364"});});</script></body></html>

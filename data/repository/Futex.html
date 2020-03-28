@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Futex - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xni7IgpAMFYAAHx8NWoAAAAM","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Futex","wgTitle":"Futex","wgCurRevisionId":928935980,"wgRevisionId":928935980,"wgArticleId":680285,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Concurrency control","Linux kernel features"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Futex","wgRelevantArticleId":680285,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,
+"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1475447","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":
+"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Futex&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Futex&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Futex"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Futex rootpage-Futex skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Futex</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>In <a href="/wiki/Computing" title="Computing">computing</a>, a <b>futex</b> (short for "fast userspace <a href="/wiki/Mutual_exclusion" title="Mutual exclusion">mutex</a>") is a <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">kernel</a> <a href="/wiki/System_call" title="System call">system call</a> that <a href="/wiki/Programmer" title="Programmer">programmers</a> can use to implement basic <a href="/wiki/Lock_(computer)" class="mw-redirect" title="Lock (computer)">locking</a>, or as a building block for higher-level locking abstractions such as <a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">semaphores</a> and <a href="/wiki/POSIX" title="POSIX">POSIX</a> mutexes or <a href="/wiki/Condition_variable" class="mw-redirect" title="Condition variable">condition variables</a>.
+</p><p>A futex consists of a <a href="/wiki/Kernel_(computing)" class="mw-redirect" title="Kernel (computing)">kernelspace</a> <i>wait queue</i> that is attached to an <a href="/wiki/Atomic_operations" class="mw-redirect" title="Atomic operations">atomic</a> <a href="/wiki/Integer" title="Integer">integer</a> in <a href="/wiki/Userspace" class="mw-redirect" title="Userspace">userspace</a>.  Multiple <a href="/wiki/Process_(computing)" title="Process (computing)">processes</a> or <a href="/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">threads</a> operate on the integer entirely in userspace (using <a href="/wiki/Atomic_operation" class="mw-redirect" title="Atomic operation">atomic operations</a> to avoid interfering with one another), and only resort to relatively expensive <a href="/wiki/System_call" title="System call">system calls</a> to request operations on the wait queue (for example to wake up waiting processes, or to put the current process on the wait queue).  A properly programmed futex-based lock will not use system calls except when the lock is contended; since most operations do not require arbitration between processes,  this will not happen in most cases.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Operations"><span class="tocnumber">2</span> <span class="toctext">Operations</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History"><span id="BENAPHORE"></span>History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Futex&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>On <a href="/wiki/Linux" title="Linux">Linux</a>, Hubertus Franke (<a href="/wiki/IBM" title="IBM">IBM</a> <a href="/wiki/Thomas_J._Watson_Research_Center" title="Thomas J. Watson Research Center">Thomas J. Watson Research Center</a>), Matthew Kirkwood, <a href="/wiki/Ingo_Moln%C3%A1r" title="Ingo Molnár">Ingo Molnár</a> (<a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a>) and <a href="/wiki/Rusty_Russell" title="Rusty Russell">Rusty Russell</a> (<a href="/wiki/IBM_Linux_Technology_Center" class="mw-redirect" title="IBM Linux Technology Center">IBM Linux Technology Center</a>) originated the futex mechanism. Futexes appeared for the first time in version 2.5.7 of the Linux kernel development series; the semantics stabilized as of version 2.5.40, and futexes have been part of the <a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Linux kernel mainline</a> since the December 2003 release of 2.6.x stable kernel series.
+</p><p>In 2002 discussions took place on a proposal to make futexes accessible via the file system by creating a special node in <code>/dev</code> or <code>/proc</code>. However, <a href="/wiki/Linus_Torvalds" title="Linus Torvalds">Linus Torvalds</a> strongly opposed this idea and rejected any related patches.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p>Futexes have been implemented in Microsoft Windows since Windows 8 or Windows Server 2012 under the name WaitOnAddress.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>In 2013 Microsoft patented futexes and the patent was granted in 2014.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>In May 2014 the <a href="/wiki/Common_Vulnerabilities_and_Exposures" title="Common Vulnerabilities and Exposures">CVE</a> system announced a vulnerability discovered in the Linux kernel's futex subsystem that allowed denial-of-service attacks or local privilege escalation.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>In May 2015 the <a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">Linux kernel</a> introduced a deadlock bug via <a rel="nofollow" class="external text" href="https://github.com/torvalds/linux/commit/b0c29f79ecea">Commit b0c29f79ecea</a> that caused a hang in user applications. The bug affected many enterprise Linux distributions, including 3.x and 4.x kernels, and Red Hat Enterprise Linux version 5, 6 and 7, SUSE Linux 12 and Amazon Linux.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>Futexes have been implemented in OpenBSD since 2016.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>The futex mechanism is one of the core concepts of the Zircon kernel<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> in <a href="/wiki/Google" title="Google">Google</a>'s <a href="/wiki/Google_Fuchsia" title="Google Fuchsia">Fuchsia operating system</a> since at least April 2018.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Operations">Operations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Futex&amp;action=edit&amp;section=2" title="Edit section: Operations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Futexes have two basic operations, <code>WAIT</code> and <code>WAKE</code>. A third operation called <code>REQUEUE</code> is available and functions as a more generic <code>WAKE</code> operation that can move threads between waiting queues. <sup id="cite_ref-Ulrich_Drepper_10-0" class="reference"><a href="#cite_note-Ulrich_Drepper-10">&#91;10&#93;</a></sup>
+</p>
+<ul><li><code>WAIT(addr, val)</code></li></ul>
+<dl><dd>If the value stored at the address <code>addr</code> is <code>val</code>, puts the current thread to sleep.</dd></dl>
+<ul><li><code>WAKE(addr, num)</code></li></ul>
+<dl><dd>Wakes up <code>num</code> number of threads waiting on the address <code>addr</code>.</dd></dl>
+<ul><li><code>CMP_REQUEUE(old_addr, new_addr, num_wake, num_move, val)</code></li></ul>
+<dl><dd>If the value stored at the address <code>old_addr</code> is <code>val</code>, wakes <code>num_wake</code> threads waiting on the address <code>old_addr</code>, and enqueues <code>num_move</code> threads waiting on the address <code>old_addr</code> to now wait on the address <code>new_addr</code>. This can be used to avoid the <a href="/wiki/Thundering_herd_problem" title="Thundering herd problem">thundering herd problem</a> on wake <sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup></dd></dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Futex&amp;action=edit&amp;section=3" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+<li><a href="/wiki/Fetch-and-add" title="Fetch-and-add">Fetch-and-add</a></li>
+<li><a href="/wiki/Compare_and_swap" class="mw-redirect" title="Compare and swap">Compare and swap</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Futex&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text">
+<cite class="citation web">Torvalds, Linus. <a rel="nofollow" class="external text" href="http://yarchive.net/comp/linux/everything_is_file.html">"Futex Asynchronous Interface"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Futex+Asynchronous+Interface&amp;rft.aulast=Torvalds&amp;rft.aufirst=Linus&amp;rft_id=http%3A%2F%2Fyarchive.net%2Fcomp%2Flinux%2Feverything_is_file.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitonaddress">"WaitOnAddress function"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-11-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=WaitOnAddress+function&amp;rft_id=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fwindows%2Fwin32%2Fapi%2Fsynchapi%2Fnf-synchapi-waitonaddress&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://patents.google.com/patent/US8782674B2/en">"US8782674B2 Wait on address synchronization interface"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-11-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=US8782674B2+Wait+on+address+synchronization+interface&amp;rft_id=https%3A%2F%2Fpatents.google.com%2Fpatent%2FUS8782674B2%2Fen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text">
+<a rel="nofollow" class="external text" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3153">CVE-2014-3153</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://lists.debian.org/debian-security-announce/2014/msg00130.html">"&#91;SECURITY&#93; &#91;DSA 2949-1&#93; linux security update"</a>. Lists.debian.org. 2014-06-05<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%5BSECURITY%26%2393%3B+%5BDSA+2949-1%26%2393%3B+linux+security+update&amp;rft.pub=Lists.debian.org&amp;rft.date=2014-06-05&amp;rft_id=https%3A%2F%2Flists.debian.org%2Fdebian-security-announce%2F2014%2Fmsg00130.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!topic/mechanical-sympathy/QbmpZxp6C64">"Linux futex_wait() bug..."</a> 2015-05-13<span class="reference-accessdate">. Retrieved <span class="nowrap">2018-03-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Linux+futex_wait%28%29+bug...&amp;rft.date=2015-05-13&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fforum%2F%23%21topic%2Fmechanical-sympathy%2FQbmpZxp6C64&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web">Mazurek, Michal. <a rel="nofollow" class="external text" href="https://marc.info/?l=openbsd-tech&amp;m=147282346309815&amp;w=2">"<span class="cs1-kern-left">'</span>Futexes for OpenBSD' - MARC"</a>. <i>marc.info</i><span class="reference-accessdate">. Retrieved <span class="nowrap">30 April</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=marc.info&amp;rft.atitle=%27Futexes+for+OpenBSD%27+-+MARC&amp;rft.aulast=Mazurek&amp;rft.aufirst=Michal&amp;rft_id=https%3A%2F%2Fmarc.info%2F%3Fl%3Dopenbsd-tech%26m%3D147282346309815%26w%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://fuchsia.dev/fuchsia-src/zircon/concepts#futexes">"Zircon Kernel Concepts"</a>. <i>fuchsia.dev</i><span class="reference-accessdate">. Retrieved <span class="nowrap">20 October</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=fuchsia.dev&amp;rft.atitle=Zircon+Kernel+Concepts&amp;rft_id=https%3A%2F%2Ffuchsia.dev%2Ffuchsia-src%2Fzircon%2Fconcepts%23futexes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://fuchsia.dev/fuchsia-src/reference/syscalls/futex_wait">"zx_futex_wait"</a>. <i>fuchsia.dev</i><span class="reference-accessdate">. Retrieved <span class="nowrap">20 October</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=fuchsia.dev&amp;rft.atitle=zx_futex_wait&amp;rft_id=https%3A%2F%2Ffuchsia.dev%2Ffuchsia-src%2Freference%2Fsyscalls%2Ffutex_wait&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Ulrich_Drepper-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-Ulrich_Drepper_10-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.akkadia.org/drepper/futex.pdf">Futexes Are Tricky</a> Ulrich Drepper (Red Hat, v1.6, 2011)</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man2/futex.2.html">Linux futex(2) man page, FUTEX_CMP_REQUEUE section</a></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://fuchsia.dev/fuchsia-src/reference/syscalls/futex_requeue.md">Zircon zx_futex_requeue documentation</a></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Futex&amp;action=edit&amp;section=5" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man2/futex.2.html">futex(2)</a></code></span> - futex() system call</li>
+<li><span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man7/futex.7.html">futex(7)</a></code></span> - futex semantics and usage</li>
+<li>Hubertus Franke, Rusty Russell, Matthew Kirkwood. <i><a rel="nofollow" class="external text" href="https://www.kernel.org/doc/ols/2002/ols2002-pages-479-495.pdf">Fuss, futexes and furwocks: Fast Userlevel Locking in Linux</a></i>, <a href="/wiki/Ottawa_Linux_Symposium" class="mw-redirect" title="Ottawa Linux Symposium">Ottawa Linux Symposium</a> 2002.</li>
+<li><cite class="citation web">Drepper, Ulrich (2011). <a rel="nofollow" class="external text" href="https://www.akkadia.org/drepper/futex.pdf">"Futexes are Tricky"</a> <span class="cs1-format">(PDF)</span>. 1.6. Red Hat.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Futexes+are+Tricky&amp;rft.series=1.6&amp;rft.pub=Red+Hat&amp;rft.date=2011&amp;rft.aulast=Drepper&amp;rft.aufirst=Ulrich&amp;rft_id=https%3A%2F%2Fwww.akkadia.org%2Fdrepper%2Ffutex.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFutex" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li>Bert Hubert (2004). <a rel="nofollow" class="external text" href="http://ds9a.nl/futex-manpages/">Unofficial Futex manpages</a></li>
+<li>Ingo Molnar. "<a rel="nofollow" class="external text" href="https://www.kernel.org/doc/Documentation/robust-futexes.txt">Robust Futexes</a>", <i>Linux Kernel Documentation</i></li>
+<li>"<a rel="nofollow" class="external text" href="https://www.kernel.org/doc/Documentation/pi-futex.txt">Priority Inheritance Futexes</a>", <i>Linux Kernel Documentation</i></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Linux_kernel" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux_kernel" title="Template talk:Linux kernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux_kernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux_kernel" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organization</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Kernel" scope="row" class="navbox-group" style="width:1%">Kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO disputes</a></li>
+<li><a href="/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="/wiki/GNU_General_Public_License#Version_2" title="GNU General Public License">GNU GPL v2</a></li>
+<li><a href="/wiki/Menuconfig" title="Menuconfig">menuconfig</a></li>
+<li><a href="/wiki/List_of_Linux-supported_computer_architectures" title="List of Linux-supported computer architectures">Supported computer architectures</a></li>
+<li><a href="/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">Kernel names</a></li>
+<li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Support</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Developers
+<ul><li><i><a href="/wiki/The_Linux_Programming_Interface" title="The Linux Programming Interface">The Linux Programming Interface</a></i></li>
+<li><a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a></li>
+<li><a href="/wiki/Linux_kernel_mailing_list" title="Linux kernel mailing list">LKML</a></li>
+<li><a href="/wiki/Linux_conference" class="mw-redirect" title="Linux conference">Linux conferences</a></li></ul></li>
+<li>Users
+<ul><li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Technical</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Debugging</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CRIU" title="CRIU">CRIU</a></li>
+<li><a href="/wiki/Ftrace" title="Ftrace">ftrace</a></li>
+<li><a href="/wiki/Kdump_(Linux)" title="Kdump (Linux)">kdump</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+<li><a href="/wiki/Berkeley_Packet_Filter" title="Berkeley Packet Filter">BPF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_startup_process" title="Linux startup process">Startup</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="/wiki/System.map" title="System.map">System.map</a></li>
+<li><a href="/wiki/Dracut_(software)" title="Dracut (software)">dracut</a></li>
+<li><a href="/wiki/Initrd" class="mw-redirect" title="Initrd">initrd</a></li>
+<li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">ABIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a></li>
+<li><a href="/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Of<br /><a href="/wiki/User_space" title="User space">userspace</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtual_file_system" title="Virtual file system">FS</a>,<br /><a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemons</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Devfs" class="mw-redirect" title="Devfs">devfs</a></li>
+<li><a href="/wiki/Devpts" title="Devpts">devpts</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Systemd" title="Systemd">systemd</a>
+<ul><li><a href="/wiki/Udev" title="Udev">udev</a></li></ul></li>
+<li><a href="/wiki/Kmscon" title="Kmscon">Kmscon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Wrapper_library" title="Wrapper library">Wrapper<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_standard_library" title="C standard library">C standard library</a>
+<ul><li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li></ul></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">libcgroup</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a></li>
+<li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">libevdev</a></li>
+<li><a href="/wiki/Libusb" title="Libusb">libusb</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Of<br />kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#SCI" title="Linux kernel interfaces">System Call<br />Interface</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/POSIX" title="POSIX">POSIX</a>
+<ul><li><a href="/wiki/Ioctl" title="Ioctl">ioctl</a></li>
+<li><a href="/wiki/Select_(Unix)" title="Select (Unix)">select</a></li>
+<li><a href="/wiki/Open_(system_call)" title="Open (system call)">open</a></li>
+<li><a href="/wiki/Read_(system_call)" title="Read (system call)">read</a></li>
+<li><a href="/wiki/Close_(system_call)" title="Close (system call)">close</a></li>
+<li><a href="/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a></li>
+<li>…</li></ul></li>
+<li>Linux-only
+<ul><li><a class="mw-selflink selflink">futex</a></li>
+<li><a href="/wiki/Epoll" title="Epoll">epoll</a></li>
+<li><a href="/wiki/Splice_(system_call)" title="Splice (system call)">splice</a></li>
+<li><a href="/wiki/Dnotify" title="Dnotify">dnotify</a></li>
+<li><a href="/wiki/Inotify" title="Inotify">inotify</a></li>
+<li><a href="/wiki/Readahead" title="Readahead">readahead</a></li>
+<li>…</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#In–kernel_APIs" title="Linux kernel interfaces">In-kernel</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="/wiki/Crypto_API_(Linux)" title="Crypto API (Linux)">Crypto API</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/Kernfs_(Linux)" title="Kernfs (Linux)">kernfs</a></li>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/New_API" title="New API">New API</a></li>
+<li><a href="/wiki/Read-copy-update" title="Read-copy-update">RCU</a></li>
+<li><a href="/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="/wiki/BlueZ" class="mw-redirect" title="BlueZ">BlueZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/EDAC_(Linux)" class="mw-redirect" title="EDAC (Linux)">EDAC</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/LIO_(SCSI_target)" title="LIO (SCSI target)">LIO</a></li>
+<li><a href="/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a href="/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux)">LVM</a></li>
+<li><a href="/wiki/KMS_driver" class="mw-redirect" title="KMS driver">KMS driver</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="/wiki/Netlink" title="Netlink">Netlink</a></li>
+<li><a href="/wiki/Nftables" title="Nftables">nftables</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Perf_(Linux)" title="Perf (Linux)">perf</a></li>
+<li><a href="/wiki/SLUB_(software)" title="SLUB (software)">SLUB</a></li>
+<li><a href="/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="/wiki/Zswap" title="Zswap">zswap</a></li></ul>
+<ul><li><a href="/wiki/Scheduling_(computing)#Linux" title="Scheduling (computing)">Process and I/O schedulers</a>:</li>
+<li><a href="/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a></li>
+<li><a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a href="/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> (CFQ)</li>
+<li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/Noop_scheduler" title="Noop scheduler">Noop scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<ul><li><a href="/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a>
+<ul><li><a href="/wiki/PaX" title="PaX">PaX</a></li></ul></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="/wiki/Smack_(software)" title="Smack (software)">Smack</a></li>
+<li><a href="/wiki/Tomoyo_Linux" title="Tomoyo Linux">Tomoyo Linux</a></li>
+<li><a href="/wiki/Linux_PAM" title="Linux PAM">Linux PAM</a></li></ul>
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device drivers</a>
+<ul><li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">802.11</a></li>
+<li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">graphics</a></li></ul></li>
+<li><a href="/wiki/Raw_device" title="Raw device">Raw device</a></li></ul>
+<ul><li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li>
+<li><a href="/wiki/KernelCare" title="KernelCare">KernelCare</a></li>
+<li><a href="/wiki/Kexec" title="Kexec">kexec</a></li>
+<li><a href="/wiki/KGraft" title="KGraft">kGraft</a></li>
+<li><a href="/wiki/Kpatch" title="Kpatch">kpatch</a></li>
+<li><a href="/wiki/Ksplice" title="Ksplice">Ksplice</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Mainline</a>
+<ul><li><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li></ul></li>
+<li><a href="/wiki/High-performance_computing" class="mw-redirect" title="High-performance computing">High-performance computing</a>
+<ul><li><a href="/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="/wiki/Slurm_Workload_Manager" title="Slurm Workload Manager">SLURM</a></li></ul></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul><li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li></ul></li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li></ul></li></ul>
+ </div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Virtualization" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul><li><a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul></li>
+<li><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level virtualization</a>
+<ul><li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li></ul></li>
+<li>Other
+<ul><li><a href="/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Rangeof_use" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range<br />of use</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul><li><a href="/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="/wiki/Thinstation" title="Thinstation">Thinstation</a></li></ul></li>
+<li>Server:
+<ul><li><a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME-LYCE</a></li></ul></li>
+<li><a href="/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Adopters</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel" title="Category:Linux kernel">Category</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Linux_kernel" class="extiw" title="commons:Linux kernel">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="https://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" decoding="async" title="Wikiversity page" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800" /> <b><a href="https://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1335
+Cached time: 20200321084716
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.224 seconds
+Real time usage: 0.293 seconds
+Preprocessor visited node count: 819/1000000
+Post‐expand include size: 79193/2097152 bytes
+Template argument size: 309/2097152 bytes
+Highest expansion depth: 10/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 27056/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.097/10.000 seconds
+Lua memory usage: 3.46 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  210.500      1 -total
+ 53.69%  113.008      1 Template:Reflist
+ 47.84%  100.704      9 Template:Cite_web
+ 30.24%   63.645      8 Template:Navbox
+ 20.97%   44.139      1 Template:Linux_kernel
+ 14.02%   29.516      1 Template:Anchor
+  7.29%   15.354      5 Template:Icon
+  4.84%   10.186      2 Template:Man
+  3.47%    7.298      2 Template:Man/format
+  1.71%    3.591      4 Template:Man/Linux
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:680285-0!canonical and timestamp 20200321084716 and revision id 928935980
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Futex&amp;oldid=928935980">https://en.wikipedia.org/w/index.php?title=Futex&amp;oldid=928935980</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Concurrency_control" title="Category:Concurrency control">Concurrency control</a></li><li><a href="/wiki/Category:Linux_kernel_features" title="Category:Linux kernel features">Linux kernel features</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Futex" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Futex" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Futex" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Futex" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Futex">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Futex&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Futex&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Futex" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Futex" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Futex&amp;oldid=928935980" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Futex&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1475447" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Futex&amp;id=928935980&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Futex">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Futex&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Futex&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Futex" title="Futex – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Futex" title="Futex – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/Futex" title="Futex – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%8C%D1%8E%D1%82%D0%B5%D0%BA%D1%81" title="Фьютекс – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A4%27%D1%8E%D1%82%D0%B5%D0%BA%D1%81" title="Ф&#039;ютекс – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Futex" title="Futex – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1475447#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 2 December 2019, at 16:44<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Futex&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.224","walltime":"0.293","ppvisitednodes":{"value":819,"limit":1000000},"postexpandincludesize":{"value":79193,"limit":2097152},"templateargumentsize":{"value":309,"limit":2097152},"expansiondepth":{"value":10,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":27056,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  210.500      1 -total"," 53.69%  113.008      1 Template:Reflist"," 47.84%  100.704      9 Template:Cite_web"," 30.24%   63.645      8 Template:Navbox"," 20.97%   44.139      1 Template:Linux_kernel"," 14.02%   29.516      1 Template:Anchor","  7.29%   15.354      5 Template:Icon","  4.84%   10.186      2 Template:Man","  3.47%    7.298      2 Template:Man/format","  1.71%    3.591      4 Template:Man/Linux"]},"scribunto":{"limitreport-timeusage":{"value":"0.097","limit":"10.000"},"limitreport-memusage":{"value":3631567,"limit":52428800}},"cachereport":{"origin":"mw1335","timestamp":"20200321084716","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Futex","url":"https:\/\/en.wikipedia.org\/wiki\/Futex","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1475447","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1475447","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-05-25T22:53:53Z","dateModified":"2019-12-02T16:44:43Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":197,"wgHostname":"mw1251"});});</script></body></html>

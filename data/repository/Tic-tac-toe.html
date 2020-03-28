@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Tic-tac-toe - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XnmlSQpAMMEAAW1qQcYAAAAT","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Tic-tac-toe","wgTitle":"Tic-tac-toe","wgCurRevisionId":945031860,"wgRevisionId":945031860,"wgArticleId":31609,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using deprecated image syntax","Articles needing additional references from August 2018","All articles needing additional references","Articles needing additional references from May 2017","Commons category link is on Wikidata","Tic-tac-toe","Abstract strategy games","Positional games",
+"Paper-and-pencil games","Solved games"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Tic-tac-toe","wgRelevantArticleId":31609,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q210339","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":
+"ready","user.tokens":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/1200px-Tic_tac_toe.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Tic-tac-toe&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Tic-tac-toe&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Tic-tac-toe"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Tic-tac-toe rootpage-Tic-tac-toe skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Tic-tac-toe</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">"Tic Tac Toe" and "Noughts and crosses" redirect here. For other uses, see <a href="/wiki/Tic_Tac_Toe_(disambiguation)" class="mw-disambig" title="Tic Tac Toe (disambiguation)">Tic Tac Toe (disambiguation)</a> and <a href="/wiki/Noughts_and_crosses_(disambiguation)" class="mw-redirect mw-disambig" title="Noughts and crosses (disambiguation)">Noughts and crosses (disambiguation)</a>.</div>
+<table class="infobox" style="width:22em"><caption>Tic-tac-toe</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Tic_tac_toe.svg" class="image"><img alt="Tic tac toe.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/200px-Tic_tac_toe.svg.png" decoding="async" width="200" height="178" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/300px-Tic_tac_toe.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/400px-Tic_tac_toe.svg.png 2x" data-file-width="522" data-file-height="464" /></a><div>A completed game of Tic-tac-toe</div></td></tr><tr><th scope="row">Genre(s)</th><td><a href="/wiki/Paper-and-pencil_game" title="Paper-and-pencil game">Paper-and-pencil game</a></td></tr><tr><th scope="row">Players</th><td>2</td></tr><tr><th scope="row">Setup time</th><td>Minimal</td></tr><tr><th scope="row">Playing time</th><td>~1 minute</td></tr><tr><th scope="row">Random chance</th><td>None</td></tr><tr><th scope="row">Skill(s) required</th><td><a href="/wiki/Strategy_game" title="Strategy game">Strategy</a>, tactics, observation</td></tr><tr><th scope="row">Synonym(s)</th><td>Noughts and crosses <br />Xs and Os</td></tr></tbody></table>
+<p><b>Tic-tac-toe</b> (<a href="/wiki/American_English" title="American English">American English</a>), <b>noughts and crosses</b> (<a href="/wiki/British_English" title="British English">British English</a>), or <b>Xs and Os</b> is a <a href="/wiki/Paper-and-pencil_game" title="Paper-and-pencil game">paper-and-pencil game</a> for two players, <i>X</i> and <i>O</i>, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
+</p><p>The following example game is won by the first player, X:
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:Tic-tac-toe-game-1.svg" class="image" title="Game of Tic-tac-toe, won by X"><img alt="Game of Tic-tac-toe, won by X" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tic-tac-toe-game-1.svg/479px-Tic-tac-toe-game-1.svg.png" decoding="async" width="479" height="56" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tic-tac-toe-game-1.svg/719px-Tic-tac-toe-game-1.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tic-tac-toe-game-1.svg/958px-Tic-tac-toe-game-1.svg.png 2x" data-file-width="479" data-file-height="56" /></a></div></div>
+<p>Players soon discover that the <a href="/wiki/Best_response" title="Best response">best play</a> from both parties leads to a <a href="/wiki/Draw_(tie)" class="mw-redirect" title="Draw (tie)">draw</a>. Hence, tic-tac-toe is most often played by young children, who often have not yet discovered the optimal strategy.
+</p><p>Because of the simplicity of tic-tac-toe, it is often used as a <a href="/wiki/Pedagogical" class="mw-redirect" title="Pedagogical">pedagogical</a> tool for teaching the concepts of good <a href="/wiki/Sportsmanship" title="Sportsmanship">sportsmanship</a> and the branch of <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a> that deals with the searching of <a href="/wiki/Game_tree" title="Game tree">game trees</a>. It is straightforward to write a <a href="/wiki/Computer_program" title="Computer program">computer program</a> to play tic-tac-toe perfectly or to enumerate the 765 essentially different positions (the <a href="/wiki/State_space_complexity" class="mw-redirect" title="State space complexity">state space complexity</a>) or the 26,830 possible games <a href="/wiki/Up_to" title="Up to">up to</a> rotations and reflections (the <a href="/wiki/Game_tree_complexity" class="mw-redirect" title="Game tree complexity">game tree complexity</a>) on this space.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p>The game can be generalized to an <a href="/wiki/M,n,k-game" title="M,n,k-game">m,n,k-game</a> in which two players alternate placing stones of their own color on an <i>m</i>×<i>n</i> board, with the goal of getting <i>k</i> of their own color in a row. Tic-tac-toe is the (3,3,3)-game.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> <a href="/wiki/Harary%27s_generalized_tic-tac-toe" title="Harary&#39;s generalized tic-tac-toe">Harary's generalized tic-tac-toe</a> is an even broader generalization of tic-tac-toe. It can also be generalized as a <a href="/wiki/Nd_game" title="Nd game">n<sup>d</sup> game</a>. Tic-tac-toe is the game where n equals 3 and d equals 2.<sup id="cite_ref-gh02_3-0" class="reference"><a href="#cite_note-gh02-3">&#91;3&#93;</a></sup> If played properly, the game will end in a draw, making tic-tac-toe a <a href="/wiki/Futile_game" title="Futile game">futile game</a>.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Combinatorics"><span class="tocnumber">2</span> <span class="toctext">Combinatorics</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Strategy"><span class="tocnumber">3</span> <span class="toctext">Strategy</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Further_details"><span class="tocnumber">3.1</span> <span class="toctext">Further details</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Variations"><span class="tocnumber">4</span> <span class="toctext">Variations</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#English_names"><span class="tocnumber">5</span> <span class="toctext">English names</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#In_popular_culture"><span class="tocnumber">6</span> <span class="toctext">In popular culture</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Games played on three-in-a-row boards can be traced back to <a href="/wiki/Ancient_Egypt" title="Ancient Egypt">ancient Egypt</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> where such game boards have been found on roofing tiles dating from around 1300 BCE.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p><p>An early variation of tic-tac-toe was played in the <a href="/wiki/Roman_Empire" title="Roman Empire">Roman Empire</a>, around the first century BC. It was called <i>terni lapilli</i> (<i>three pebbles at a time</i>) and instead of having any number of pieces, each player only had three, thus they had to move them around to empty spaces to keep playing.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> The game's grid markings have been found chalked all over Rome. Another closely related ancient game is <a href="/wiki/Three_men%27s_morris" title="Three men&#39;s morris">three men's morris</a> which is also played on a simple grid and requires three pieces in a row to finish,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> and <a href="/wiki/Picaria" title="Picaria">Picaria</a>, a game of the <a href="/wiki/Puebloans" title="Puebloans">Puebloans</a>.
+</p><p>The different names of the game are more recent. The first print reference to "noughts and crosses" (<a href="/wiki/Nought" class="mw-redirect" title="Nought">nought</a> being an alternative word for zero), the British name, appeared in 1858, in an issue of <i><a href="/wiki/Notes_and_Queries" title="Notes and Queries">Notes and Queries</a></i>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> The first print reference to a game called "tick-tack-toe" occurred in 1884, but referred to "a children's game played on a slate, consisting in trying with the eyes shut to bring the pencil down on one of the numbers of a set, the number hit being scored". "Tic-tac-toe" may also derive from "tick-tack", the name of an old version of <a href="/wiki/Backgammon" title="Backgammon">backgammon</a> first described in 1558. The US renaming of "noughts and crosses" as "tic-tac-toe" occurred in the 20th century.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>In 1952, <i><a href="/wiki/OXO" title="OXO">OXO</a></i> (or <i>Noughts and Crosses</i>), developed by British computer scientist <a href="/wiki/Sandy_Douglas" title="Sandy Douglas">Sandy Douglas</a> for the <a href="/wiki/EDSAC" title="EDSAC">EDSAC</a> computer at the <a href="/wiki/University_of_Cambridge" title="University of Cambridge">University of Cambridge</a>, became one of the first known <a href="/wiki/Video_game" title="Video game">video games</a>.<sup id="cite_ref-EDSAC_11-0" class="reference"><a href="#cite_note-EDSAC-11">&#91;11&#93;</a></sup><sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> The computer player could play perfect games of tic-tac-toe against a human opponent.<sup id="cite_ref-EDSAC_11-1" class="reference"><a href="#cite_note-EDSAC-11">&#91;11&#93;</a></sup>
+</p><p>In 1975, tic-tac-toe was also used by <a href="/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">MIT</a> students to demonstrate the computational power of <a href="/wiki/Tinkertoy" title="Tinkertoy">Tinkertoy</a> elements. The Tinkertoy computer, made out of (almost) only Tinkertoys, is able to play tic-tac-toe perfectly.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> It is currently on display at the <a href="/wiki/Museum_of_Science,_Boston" class="mw-redirect" title="Museum of Science, Boston">Museum of Science, Boston</a>.
+</p>
+<h2><span class="mw-headline" id="Combinatorics">Combinatorics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=2" title="Edit section: Combinatorics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When considering only the state of the board, and after taking into account board symmetries (i.e. rotations and reflections), there are only 138 terminal board positions. A <a href="/wiki/Combinatorics" title="Combinatorics">combinatorics</a> study of the game shows that when "X" makes the first move every time, the game is won as follows:<sup id="cite_ref-:0_14-0" class="reference"><a href="#cite_note-:0-14">&#91;14&#93;</a></sup>
+</p>
+<ul><li>91 distinct positions are won by (X)</li>
+<li>44 distinct positions are won by (O)</li>
+<li>3 distinct positions are drawn (often called a "cat's game"<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>)</li></ul>
+<h2><span class="mw-headline" id="Strategy">Strategy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=3" title="Edit section: Strategy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Tictactoe-X.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tictactoe-X.svg/220px-Tictactoe-X.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tictactoe-X.svg/330px-Tictactoe-X.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/de/Tictactoe-X.svg/440px-Tictactoe-X.svg.png 2x" data-file-width="512" data-file-height="512" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Tictactoe-X.svg" class="internal" title="Enlarge"></a></div>Optimal strategy for player X if starting in a corner. In each grid, the shaded red X denotes the optimal move, and the location of O's next move gives the next subgrid to examine. Note that only two sequences of moves by O (both starting with center, top-right, left-mid) lead to a draw, with the remaining sequences leading to wins from X.</div></div></div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Tictactoe-O.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tictactoe-O.svg/220px-Tictactoe-O.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tictactoe-O.svg/330px-Tictactoe-O.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tictactoe-O.svg/440px-Tictactoe-O.svg.png 2x" data-file-width="512" data-file-height="512" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Tictactoe-O.svg" class="internal" title="Enlarge"></a></div>Optimal strategy for player O. Player O can only force a win or draw by playing in the centre first.</div></div></div>
+<p>A player can play a <a href="/wiki/Solved_game#Perfect_play" title="Solved game">perfect game</a> of tic-tac-toe (to win or at least, draw) if each time it is their turn to play, they choose the first available move from the following list, as used in Newell and Simon's 1972 tic-tac-toe program.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p>
+<ol><li><b>Win</b>: If the player has two in a row, they can place a third to get three in a row.</li>
+<li><b>Block</b>: If the opponent has two in a row, the player must play the third themselves to block the opponent.</li>
+<li><b>Fork</b>: Create an opportunity where the player has two ways to win (two non-blocked lines of 2).</li>
+<li><b>Blocking an opponent's fork</b>: If there is only one possible fork for the opponent, the player should block it. Otherwise, the player should block all forks in any way that simultaneously allows them to create two in a row. Otherwise, the player should create a two in a row to force the opponent into defending, as long as it doesn't result in them creating a fork. For example, if "X" has two opposite corners and "O" has the center, "O" must not play a corner in order to win. (Playing a corner in this scenario creates a fork for "X" to win.)</li>
+<li><b>Center</b>: A player marks the center. (If it is the first move of the game, playing on a corner gives the second player more opportunities to make a mistake and may therefore be the better choice; however, it makes no difference between perfect players.)</li>
+<li><b>Opposite corner</b>: If the opponent is in the corner, the player plays the opposite corner.</li>
+<li><b>Empty corner</b>: The player plays in a corner square.</li>
+<li><b>Empty side</b>: The player plays in a middle square on any of the 4 sides.</li></ol>
+<p>The first player, who shall be designated "X", has 3 possible positions to mark during the first turn. Superficially, it might seem that there are 9 possible positions, corresponding to the 9 squares in the grid. However, by rotating the board, we will find that in the first turn, every corner mark is strategically equivalent to every other corner mark. The same is true of every edge (side middle) mark. For strategy purposes, there are therefore only three possible first marks: corner, edge, or center. Player X can win or force a draw from any of these starting marks; however, playing the corner gives the opponent the smallest choice of squares which must be played to avoid losing.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> This might suggest that the corner is the best opening move for X, however another study<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> shows that if the players are not perfect, an opening move in the center is best for X.
+</p><p>The second player, who shall be designated "O", must respond to X's opening mark in such a way as to avoid the forced win.  Player O must always respond to a corner opening with a center mark, and to a center opening with a corner mark.  An edge opening must be answered either with a center mark, a corner mark next to the X, or an edge mark opposite the X.  Any other responses will allow X to force the win.  Once the opening is completed, O's task is to follow the above list of priorities in order to force the draw, or else to gain a win if X makes a weak play.
+</p><p>More detailed, to guarantee a draw, O should adopt the following strategies:
+</p>
+<ul><li>If X plays corner opening move, O should take center, and then an edge, forcing X to block in the next move. This will stop any forks from happening. When both X and O are perfect players and X chooses to start by marking a corner, O takes the center, and X takes the corner opposite the original. In that case, O is free to choose any edge as its second move. However, if X is not a perfect player and has played a corner and then an edge, O should not play the opposite edge as its second move, because then X is not forced to block in the next move and can fork.</li>
+<li>If X plays edge opening move, O should take center or one of the corners adjacent to X, and then follow the above list of priorities, mainly paying attention to block forks.</li>
+<li>If X plays center opening move, O should take corner, and then follow the above list of priorities, mainly paying attention to block forks.</li></ul>
+<p>When X plays corner first, and O is not a perfect player, the following may happen:
+</p>
+<ul><li>If O responds with a center mark (best move for them), a perfect X player will take the corner opposite the original. Then O should play an edge. However, if O plays a corner as its second move, a perfect X player will mark the remaining corner, blocking O's 3-in-a-row and making their own fork.</li>
+<li>If O responds with a corner mark, X is guaranteed to win, by simply taking any of the other two corners and then the last, a fork. (since when X takes the third corner, O can only take the position between the two X's. Then X can take the only remaining corner to win)</li>
+<li>If O responds with an edge mark, X is guaranteed to win, by taking center, then O can only take the corner opposite the corner which X plays first. Finally, X can take a corner to create a fork and then X will win on the next move.</li></ul>
+<h3><span class="mw-headline" id="Further_details">Further details</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=4" title="Edit section: Further details">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Consider a board with the nine positions numbered as follows:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<td><big>1</big>
+</td>
+<td><big>2</big>
+</td>
+<td><big>3</big>
+</td></tr>
+<tr>
+<td><big>4</big>
+</td>
+<td><big>5</big>
+</td>
+<td><big>6</big>
+</td></tr>
+<tr>
+<td><big>7</big>
+</td>
+<td><big>8</big>
+</td>
+<td><big>9</big>
+</td></tr></tbody></table>
+<p>When X plays 1 as their opening move, then O should take 5. Then X takes 9 (in this situation, O should not take 3 or 7, O should take 2, 4, 6 or 8):
+</p>
+<ul><li>X1 → O5 → X9 → O2 → X8 → O7 → X3 → O6 → X4, this game will be a draw.</li></ul>
+<p>or 6 (in this situation, O should not take 4 or 7, O should take 2, 3, 8 or 9. In fact, taking 9 is the best move, since a non-perfect player X may take 4, then O can take 7 to win).
+</p>
+<ul><li>X1 → O5 → X6 → O2 → X8, then O should not take 3, or X can take 7 to win, and O should not take 4, or X can take 9 to win, O should take 7 or 9.
+<ul><li>X1 → O5 → X6 → O2 → X8 → O7 → X3 → O9 → X4, this game will be a draw.</li>
+<li>X1 → O5 → X6 → O2 → X8 → O9 → X4 (7) → O7 (4) → X3, this game will be a draw.</li></ul></li>
+<li>X1 → O5 → X6 → O3 → X7 → O4 → X8 (9) → O9 (8) → X2, this game will be a draw.</li>
+<li>X1 → O5 → X6 → O8 → X2 → O3 → X7 → O4 → X9, this game will be a draw.</li>
+<li>X1 → O5 → X6 → O9, then X should not take 4, or O can take 7 to win, X should take 2, 3, 7 or 8.
+<ul><li>X1 → O5 → X6 → O9 → X2 → O3 → X7 → O4 → X8, this game will be a draw.</li>
+<li>X1 → O5 → X6 → O9 → X3 → O2 → X8 → O4 (7) → X7 (4), this game will be a draw.</li>
+<li>X1 → O5 → X6 → O9 → X7 → O4 → X2 (3) → O3 (2) → X8, this game will be a draw.</li>
+<li>X1 → O5 → X6 → O9 → X8 → O2 (3, 4, 7) → X4/7 (4/7, 2/3, 2/3) → O7/4 (7/4, 3/2, 3/2) → X3 (2, 7, 4), this game will be a draw.</li></ul></li></ul>
+<p>In both of these situations (X takes 9 or 6 as second move), X has a <span role="math" class="sfrac nowrap tion" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span class="num" style="display:block; line-height:1em; margin:0 0.1em;">1</span><span class="slash visualhide">/</span><span class="den" style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;">3</span></span> property to win.
+</p><p>If X is not a perfect player, X may take 2 or 3 as second move. Then this game will be a draw, X cannot win.
+</p>
+<ul><li>X1 → O5 → X2 → O3 → X7 → O4 → X6 → O8 (9) → X9 (8), this game will be a draw.</li>
+<li>X1 → O5 → X3 → O2 → X8 → O4 (6) → X6 (4) → O9 (7) → X7 (9), this game will be a draw.</li></ul>
+<p>If X plays 1 opening move, and O is not a perfect player, the following may happen:
+</p><p>Although O takes the only good position (5) as first move, but O takes a bad position as second move:
+</p>
+<ul><li>X1 → O5 → X9 → O3 → X7, then X can take 4 or 8 to win.</li>
+<li>X1 → O5 → X6 → O4 → X3, then X can take 2 or 9 to win.</li>
+<li>X1 → O5 → X6 → O7 → X3, then X can take 2 or 9 to win.</li></ul>
+<p>Although O takes good positions as the first two moves, but O takes a bad position as third move:
+</p>
+<ul><li>X1 → O5 → X6 → O2 → X8 → O3 → X7, then X can take 4 or 9 to win.</li>
+<li>X1 → O5 → X6 → O2 → X8 → O4 → X9, then X can take 3 or 7 to win.</li></ul>
+<p>O takes a bad position as first move (except of 5, all other positions are bad):
+</p>
+<ul><li>X1 → O3 → X7 → O4 → X9, then X can take 5 or 8 to win.</li>
+<li>X1 → O9 → X3 → O2 → X7, then X can take 4 or 5 to win.</li>
+<li>X1 → O2 → X5 → O9 → X7, then X can take 3 or 4 to win.</li>
+<li>X1 → O6 → X5 → O9 → X3, then X can take 2 or 7 to win.</li></ul>
+<h2><span class="mw-headline" id="Variations">Variations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=5" title="Edit section: Variations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Tic-tac-toe_variants" title="Tic-tac-toe variants">Tic-tac-toe variants</a></div><p>Many <a href="/wiki/Board_game" title="Board game">board games</a> share the element of trying to be the first to get <i>n</i>-in-a-row, including <a href="/wiki/Three_men%27s_morris" title="Three men&#39;s morris">three men's morris</a>, <a href="/wiki/Nine_men%27s_morris" title="Nine men&#39;s morris">nine men's morris</a>, <a href="/wiki/Pente" title="Pente">pente</a>, <a href="/wiki/Gomoku" title="Gomoku">gomoku</a>, <a href="/wiki/Qubic" class="mw-redirect" title="Qubic">Qubic</a>, <a href="/wiki/Connect_Four" title="Connect Four">Connect Four</a>, <a href="/wiki/Quarto_(board_game)" title="Quarto (board game)">Quarto</a>, <a href="/wiki/Gobblet" title="Gobblet">Gobblet</a>, <a href="/wiki/Order_and_Chaos" title="Order and Chaos">Order and Chaos</a>, <a href="/wiki/Toss_Across" title="Toss Across">Toss Across</a>, and <a href="/wiki/Mojo_(board_game)" title="Mojo (board game)">Mojo</a>. Tic-tac-toe is  an instance of an <a href="/wiki/M,n,k-game" title="M,n,k-game">m,n,k-game</a>, where two players alternate taking turns on an <i>m</i>×<i>n</i> board until one of them gets <i>k</i> in a row. <a href="/wiki/Harary%27s_generalized_tic-tac-toe" title="Harary&#39;s generalized tic-tac-toe">Harary's generalized tic-tac-toe</a> is an even broader generalization.
+</p><p>Other variations of tic-tac-toe include:
+</p>
+<ul><li>3-dimensional tic-tac-toe on a 3×3×3 board. In this game, the first player has an easy win by playing in the centre if 2 people are playing.</li></ul>
+<p>One can play on a board of 4x4 squares, winning in several ways. Winning can include: 4 in a straight line, 4 in a diagonal line, 4 in a diamond, or 4 to make a square.
+</p><p>Another variant, <a href="/wiki/Qubic" class="mw-redirect" title="Qubic">Qubic</a>, is played on a 4×4×4 board; it was <a href="/wiki/Solved_board_games" class="mw-redirect" title="Solved board games">solved</a> by <a href="/wiki/Oren_Patashnik" title="Oren Patashnik">Oren Patashnik</a> in 1980 (the first player can force a win).<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> Higher dimensional variations are also possible.<sup id="cite_ref-gh02_3-1" class="reference"><a href="#cite_note-gh02-3">&#91;3&#93;</a></sup>
+</p>
+<ul><li>In <a href="/wiki/Mis%C3%A8re" title="Misère">misère</a> tic-tac-toe, the player wins if the opponent gets <i>n</i> in a row.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> A 3×3 game is a draw. More generally, the first player can draw or win on any board (of any dimension) whose side length is odd, by playing first in the central cell and then mirroring the opponent's moves.<sup id="cite_ref-gh02_3-2" class="reference"><a href="#cite_note-gh02-3">&#91;3&#93;</a></sup></li></ul>
+<div class="floatright"><a href="/wiki/File:Magicsquareexample.svg" class="image"><img alt="Magicsquareexample.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/100px-Magicsquareexample.svg.png" decoding="async" width="100" height="78" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/150px-Magicsquareexample.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Magicsquareexample.svg/200px-Magicsquareexample.svg.png 2x" data-file-width="180" data-file-height="140" /></a></div>
+<ul><li>In "wild" tic-tac-toe, players can choose to place either X or O on each move.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup><sup id="cite_ref-:02_22-0" class="reference"><a href="#cite_note-:02-22">&#91;22&#93;</a></sup><sup id="cite_ref-:1_23-0" class="reference"><a href="#cite_note-:1-23">&#91;23&#93;</a></sup></li>
+<li><a href="/wiki/Number_Scrabble" title="Number Scrabble">Number Scrabble</a> or Pick15<sup id="cite_ref-:8_24-0" class="reference"><a href="#cite_note-:8-24">&#91;24&#93;</a></sup> is <a href="/wiki/Isomorphic" class="mw-redirect" title="Isomorphic">isomorphic</a> to tic-tac-toe but on the surface appears completely different.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup> Two players in turn say a number between one and nine. A particular number may not be repeated. The game is won by the player who has said three numbers whose sum is 15.<sup id="cite_ref-:8_24-1" class="reference"><a href="#cite_note-:8-24">&#91;24&#93;</a></sup><sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup> If all the numbers are used and no one gets three numbers that add up to 15 then the game is a draw.<sup id="cite_ref-:8_24-2" class="reference"><a href="#cite_note-:8-24">&#91;24&#93;</a></sup> Plotting these numbers on a 3×3 <a href="/wiki/Magic_square" title="Magic square">magic square</a> shows that the game exactly corresponds with tic-tac-toe, since three numbers will be arranged in a straight line if and only if they total 15.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup></li></ul>
+<table class="infobox" border="0" cellpadding="0" cellspacing="0" style="background:white;font:100% monospace;text-align:center;">
+<tbody><tr>
+<td rowspan="3">
+</td>
+<th><span style="color: red;">e</span><span style="color:aqua">a</span><span style="color:teal">t</span>
+</th>
+<th><span style="color:blue">b</span><span style="color: red;">ee</span>
+</th>
+<th><span style="color:lime">l</span><span style="color: red;">e</span><span style="color:silver">ss</span>
+</th>
+<th>→<span style="color: red;">e</span>
+</th></tr>
+<tr>
+<th><span style="color:aqua">a</span><span style="color:fuchsia">i</span>r
+</th>
+<th><span style="color:blue">b</span><span style="color:fuchsia">i</span><span style="color:teal">t</span><span style="color:silver">s</span>
+</th>
+<th><span style="color:lime">l</span><span style="color:fuchsia">i</span>p
+</th>
+<th>→<span style="color:fuchsia">i</span>
+</th></tr>
+<tr>
+<th><span style="color:silver">s</span><span style="color:orange">o</span>d<span style="color:aqua">a</span>
+</th>
+<th><span style="color:blue">b</span><span style="color:orange">oo</span>k
+</th>
+<th><span style="color:lime">l</span><span style="color:orange">o</span><span style="color:teal">t</span>
+</th>
+<th>→<span style="color:orange">o</span>
+</th></tr>
+<tr>
+<th>↙
+<p><span style="color:silver">s</span>&#160;&#160;
+</p>
+</th>
+<th>↓
+<p><span style="color:aqua">a</span>
+</p>
+</th>
+<th>↓
+<p><span style="color:blue">b</span>
+</p>
+</th>
+<th>↓
+<p><span style="color:lime">l</span>
+</p>
+</th>
+<th>↘
+<p>&#160;&#160;<span style="color:teal">t</span>
+</p>
+</th></tr></tbody></table>
+<ul><li>Another isomorphic game uses a list of nine carefully chosen words, for instance "eat", "bee", "less", "air", "bits", "lip", "soda", "book", and "lot". Each player picks one word in turn and to win, a player must select three words with the same letter. The words may be plotted on a tic-tac-toe grid in such a way that a three-in-a-row line wins.<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup></li>
+<li>Numerical Tic Tac Toe is a variation invented by the mathematician <a href="/wiki/Ronald_Graham" title="Ronald Graham">Ronald Graham</a>. The numbers 1 to 9 are used in this game. The first player plays with the odd numbers, the second player plays with the even numbers. All numbers can be used only once. The player who puts down 15 points in a line wins (sum of 3 numbers).</li>
+<li>In the 1970s, there was a two player game made by <a href="/wiki/Tri-ang" class="mw-redirect" title="Tri-ang">Tri-ang</a> Toys &amp; Games called <i><b>Check Lines</b></i>, in which the board consisted of eleven holes arranged in a <a href="/wiki/Geometrical" class="mw-redirect" title="Geometrical">geometrical</a> pattern of twelve straight lines each containing three of the holes. Each player had exactly five tokens and played in turn placing one token in any of the holes. The winner was the first player whose tokens were arranged in <b>two lines of three</b> (which by definition were <a href="/wiki/Line-line_intersection" class="mw-redirect" title="Line-line intersection">intersecting</a> lines).  If neither player had won by the tenth turn, subsequent turns consisted of moving one of one's own tokens to the remaining empty hole, with the constraint that this move could only be from an adjacent hole.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup></li>
+<li><a href="/wiki/Quantum_tic_tac_toe" class="mw-redirect" title="Quantum tic tac toe">Quantum tic tac toe</a> allows players to place a quantum superposition of numbers on the board, i.e. the players' moves are "superpositions" of plays in the original classical game. This variation was invented by Allan Goff of Novatia Labs.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="English_names">English names</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=6" title="Edit section: English names">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Unreferenced_section plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>does not <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">cite</a> any <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">sources</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Tic-tac-toe&amp;action=edit">improve this section</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and <a href="/wiki/Wikipedia:Verifiability#Burden_of_evidence" title="Wikipedia:Verifiability">removed</a>.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Tic-tac-toe%22">"Tic-tac-toe"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Tic-tac-toe%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Tic-tac-toe%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Tic-tac-toe%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Tic-tac-toe%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Tic-tac-toe%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">August 2018</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>The game has a number of English names.
+</p>
+<ul><li>Tick-tack-toe, tic-tac-toe, tick-tat-toe, or tit-tat-toe (<a href="/wiki/United_States" title="United States">United States</a>, <a href="/wiki/Canada" title="Canada">Canada</a>)</li>
+<li>Noughts and crosses or naughts and crosses (<a href="/wiki/United_Kingdom" title="United Kingdom">United Kingdom</a>, <a href="/wiki/Republic_of_Ireland" title="Republic of Ireland">Republic of Ireland</a>, <a href="/wiki/Australia" title="Australia">Australia</a>, <a href="/wiki/New_Zealand" title="New Zealand">New Zealand</a>, <a href="/wiki/South_Africa" title="South Africa">South Africa</a>, <a href="/wiki/Zimbabwe" title="Zimbabwe">Zimbabwe</a>, <a href="/wiki/India" title="India">India</a>)</li>
+<li>Exy-ozies (verbal name only) (<a href="/wiki/Northern_Ireland" title="Northern Ireland">Northern Ireland</a>)</li>
+<li>Xs and Os (Ireland, Zimbabwe, Canada)</li></ul>
+<p>Sometimes, the games tic-tac-toe (where players keep adding "pieces") and <a href="/wiki/Three_men%27s_morris" title="Three men&#39;s morris">three men's morris</a> (where pieces start to move after a certain number have been placed) are confused with each other.
+</p>
+<h2><span class="mw-headline" id="In_popular_culture">In popular culture</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=7" title="Edit section: In popular culture">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-More_citations_needed_section plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Tic-tac-toe&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22Tic-tac-toe%22">"Tic-tac-toe"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22Tic-tac-toe%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22Tic-tac-toe%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22Tic-tac-toe%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22Tic-tac-toe%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22Tic-tac-toe%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">May 2017</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<ul><li><a href="/wiki/William_Wordsworth" title="William Wordsworth">William Wordsworth</a> alludes to tic-tac-toe in his <i><a href="/wiki/The_Prelude" title="The Prelude">The Prelude</a></i> (1799).</li>
+<li>In the movie <i><a href="/wiki/WarGames" title="WarGames">WarGames</a></i>, a computer learns through a tic-tac-toe analogy that <a href="/wiki/Nuclear_war" class="mw-redirect" title="Nuclear war">nuclear war</a> is unwinnable.</li>
+<li>The BBC's <a href="/wiki/Test_Card_F" title="Test Card F">Test Card F</a> image includes a picture of a game. In the updated version, <a href="/wiki/Test_Card_J" class="mw-redirect" title="Test Card J">Test Card J</a>, the game's X indicates the exact center of the screen.</li>
+<li><a href="/wiki/George_Cooper_(poet)" title="George Cooper (poet)">George Cooper</a> wrote the words and <a href="/wiki/John_Rogers_Thomas" title="John Rogers Thomas">John Rogers Thomas</a> wrote the music for a song "Tit, Tac, Toe"<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup> in 1876.</li>
+<li>The <a href="/wiki/Adventure_game" title="Adventure game">adventure game</a> <i><a href="/wiki/Sam_%26_Max_Save_the_World" title="Sam &amp; Max Save the World">Sam &amp; Max Save the World</a></i> features an arcade version called <i>Tic-Tac-Doom</i>, but its <a href="/wiki/Artificial_intelligence" title="Artificial intelligence">artificial intelligence</a> is intentionally poor. Rather than beating the game, the player must lose it in order to progress.</li>
+<li>Episode 452 of <i><a href="/wiki/This_American_Life" title="This American Life">This American Life</a></i><sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup> recounts the true story of a <a href="/wiki/Criminal_defense_lawyer" title="Criminal defense lawyer">legal defense team</a> that sought to overturn the <a href="/wiki/Florida" title="Florida">state of Florida's</a> decision to <a href="/wiki/Capital_punishment_in_the_United_States" title="Capital punishment in the United States">execute</a> a mentally ill <a href="/wiki/Murder" title="Murder">murderer</a> by eliciting a tic-tac-toe playing <a href="/wiki/Chicken" title="Chicken">chicken</a> as <a href="/wiki/Evidence_(law)" title="Evidence (law)">evidence</a>. Arcade games with tic-tac-toe-playing chickens were popular in the mid 1970s; the animals were trained using <a href="/wiki/Operant_conditioning" title="Operant conditioning">operant conditioning</a>,<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup> with the moves being chosen by computer and indicated to the chicken with a light invisible to the human player.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup></li>
+<li>In the 1957 film version of <i><a href="/wiki/Twelve_Angry_Men" title="Twelve Angry Men">Twelve Angry Men</a></i> there is a small scene where two jurors are playing the game in order to pass the time.</li>
+<li>In the <a href="/wiki/The_Three_Stooges" title="The Three Stooges">Three Stooges</a> short <i><a href="/wiki/Disorder_in_the_Court" title="Disorder in the Court">Disorder in the Court</a></i>, <a href="/wiki/Moe_Howard" title="Moe Howard">Moe</a> and <a href="/wiki/Larry_Fine" title="Larry Fine">Larry</a> are seen playing tic-tac-toe in a couple of different scenes. (One with <a href="/wiki/Curly_Howard" title="Curly Howard">Curly</a> playing <a href="/wiki/Knucklebones" title="Knucklebones">jacks</a> over it.)</li>
+<li><a href="/wiki/Elle_King" title="Elle King">Elle King</a>'s debut solo single "<a href="/wiki/Ex%27s_%26_Oh%27s" title="Ex&#39;s &amp; Oh&#39;s">Ex's &amp; Oh's</a>" references another name for Tic-Tac-Toe, with a punning allusion to her <i>exes</i>; and how accumulating former partners who never seem to leave her alone is a pointless, unwinnable exercise.</li></ul>
+<p>Various <a href="/wiki/Game_show" title="Game show">game shows</a> have been based on tic-tac-toe and its variants:
+</p>
+<ul><li>On <i><a href="/wiki/Hollywood_Squares" title="Hollywood Squares">Hollywood Squares</a></i>, nine celebrities filled the cells of the tic-tac-toe grid; players put symbols on the board by correctly agreeing or disagreeing with a celebrity's answer to a question. Variations of the show include <i><a href="/wiki/Storybook_Squares" title="Storybook Squares">Storybook Squares</a></i> and <i><a href="/wiki/Hip_Hop_Squares" title="Hip Hop Squares">Hip Hop Squares</a></i>. The British version was <i><a href="/wiki/Celebrity_Squares" title="Celebrity Squares">Celebrity Squares</a></i>. Australia had various versions under the names of Celebrity Squares, <a href="/wiki/Personality_Squares" title="Personality Squares">Personality Squares</a> &amp; <a href="/wiki/All-Star_Squares" title="All-Star Squares">All Star Squares</a>.</li>
+<li>In <i><a href="/wiki/Tic-Tac-Dough" title="Tic-Tac-Dough">Tic-Tac-Dough</a></i>, players put symbols up on the board by answering questions in various categories, which shuffle after both players have taken both turns.</li>
+<li>In <i><a href="/wiki/Beat_the_Teacher" title="Beat the Teacher">Beat the Teacher</a></i>, contestants answer questions to win a turn to influence a tic-tac-toe grid.</li>
+<li>On <i><a href="/wiki/The_Price_Is_Right" title="The Price Is Right">The Price Is Right</a></i>, several national variants feature a <a href="/wiki/Pricing_game" class="mw-redirect" title="Pricing game">pricing game</a> called "Secret X", in which players must guess prices of two small prizes to win Xs (in addition to one free X) to place on a blank board. They must place the X's in position to guess the location of the titular "secret X" hidden in the center column of the board and form a tic-tac-toe line across or diagonally (no vertical lines allowed). There are no Os in this variant of the game.</li>
+<li>On <i><a href="/wiki/Minute_to_Win_It" title="Minute to Win It">Minute to Win It</a></i>, the game Ping Tac Toe has one contestant playing the game with nine water-filled glasses and white and orange ping-pong balls, trying to get three in a row of either color. He must alternate colors after each successful landing and must be careful not to block himself.</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Hales%E2%80%93Jewett_theorem" title="Hales–Jewett theorem">Hales–Jewett theorem</a></li>
+<li><a href="/wiki/Notakto" title="Notakto">Notakto</a></li>
+<li><a href="/wiki/Pick_15" class="mw-redirect" title="Pick 15">Pick 15</a></li>
+<li><a href="/wiki/SOS_(game)" title="SOS (game)">SOS (game)</a></li>
+<li><a href="/wiki/Ultimate_tic-tac-toe" title="Ultimate tic-tac-toe">Ultimate tic-tac-toe</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Schaefer, Steve (2002). <a rel="nofollow" class="external text" href="http://www.mathrec.org/old/2002jan/solutions.html">"MathRec Solutions (Tic-Tac-Toe)"</a>. <i>Mathematical Recreations</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2015-09-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Mathematical+Recreations&amp;rft.atitle=MathRec+Solutions+%28Tic-Tac-Toe%29&amp;rft.date=2002&amp;rft.aulast=Schaefer&amp;rft.aufirst=Steve&amp;rft_id=http%3A%2F%2Fwww.mathrec.org%2Fold%2F2002jan%2Fsolutions.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation book">Pham, Duc-Nghia; Park, Seong-Bae (12 November 2014). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=1vdWBQAAQBAJ&amp;pg=PA735"><i>PRICAI 2014: Trends in Artificial Intelligence: 13th Pacific Rim International Conference on Artificial Intelligence</i></a>. Springer. p.&#160;735. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-319-13560-1" title="Special:BookSources/978-3-319-13560-1"><bdi>978-3-319-13560-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=PRICAI+2014%3A+Trends+in+Artificial+Intelligence%3A+13th+Pacific+Rim+International+Conference+on+Artificial+Intelligence&amp;rft.pages=735&amp;rft.pub=Springer&amp;rft.date=2014-11-12&amp;rft.isbn=978-3-319-13560-1&amp;rft.aulast=Pham&amp;rft.aufirst=Duc-Nghia&amp;rft.au=Park%2C+Seong-Bae&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D1vdWBQAAQBAJ%26pg%3DPA735&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-gh02-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-gh02_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-gh02_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-gh02_3-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Golomb, Solomon W.; Hales, Alfred W. (2002). <a rel="nofollow" class="external text" href="http://library.msri.org/books/Book42/files/golomb.pdf">"Hypercube tic-tac-toe"</a> <span class="cs1-format">(PDF)</span>. <i>More Games of No Chance (Berkeley, CA, 2000)</i>. Math. Sci. Res. Inst. Publ. Cambridge Univ. Press. <b>42</b>: 167–182. <a href="/wiki/Mathematical_Reviews" title="Mathematical Reviews">MR</a>&#160;<a rel="nofollow" class="external text" href="//www.ams.org/mathscinet-getitem?mr=1973012">1973012</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=More+Games+of+No+Chance+%28Berkeley%2C+CA%2C+2000%29&amp;rft.atitle=Hypercube+tic-tac-toe&amp;rft.volume=42&amp;rft.pages=167-182&amp;rft.date=2002&amp;rft_id=%2F%2Fwww.ams.org%2Fmathscinet-getitem%3Fmr%3D1973012&amp;rft.aulast=Golomb&amp;rft.aufirst=Solomon+W.&amp;rft.au=Hales%2C+Alfred+W.&amp;rft_id=http%3A%2F%2Flibrary.msri.org%2Fbooks%2FBook42%2Ffiles%2Fgolomb.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">W., Weisstein, Eric. <a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/Tic-Tac-Toe.html">"Tic-Tac-Toe"</a>. <i>mathworld.wolfram.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-05-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=mathworld.wolfram.com&amp;rft.atitle=Tic-Tac-Toe&amp;rft.aulast=W.&amp;rft.aufirst=Weisstein%2C+Eric&amp;rft_id=http%3A%2F%2Fmathworld.wolfram.com%2FTic-Tac-Toe.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book">Zaslavsky, Claudia (1982). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/tictactoeothert00zasl"><i>Tic Tac Toe: And Other Three-In-A Row Games from Ancient Egypt to the Modern Computer</i></a></span>. Crowell. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-690-04316-3" title="Special:BookSources/0-690-04316-3"><bdi>0-690-04316-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Tic+Tac+Toe%3A+And+Other+Three-In-A+Row+Games+from+Ancient+Egypt+to+the+Modern+Computer&amp;rft.pub=Crowell&amp;rft.date=1982&amp;rft.isbn=0-690-04316-3&amp;rft.aulast=Zaslavsky&amp;rft.aufirst=Claudia&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Ftictactoeothert00zasl&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book">Parker, Marla (1995). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=N4nmGjq5dWsC&amp;pg=PA153"><i>She Does Math!: Real-life Problems from Women on the Job</i></a>. Mathematical Association of America. p.&#160;153. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-88385-702-1" title="Special:BookSources/978-0-88385-702-1"><bdi>978-0-88385-702-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=She+Does+Math%21%3A+Real-life+Problems+from+Women+on+the+Job&amp;rft.pages=153&amp;rft.pub=Mathematical+Association+of+America&amp;rft.date=1995&amp;rft.isbn=978-0-88385-702-1&amp;rft.aulast=Parker&amp;rft.aufirst=Marla&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DN4nmGjq5dWsC%26pg%3DPA153&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.sweetoothdesign.com/games-tic-tac-toe">"Tic tac toe Ancient Roman 1st century BCE"</a>. <i>Sweetooth Design Company</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-12-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Sweetooth+Design+Company&amp;rft.atitle=Tic+tac+toe+Ancient+Roman+1st+century+BCE&amp;rft_id=http%3A%2F%2Fwww.sweetoothdesign.com%2Fgames-tic-tac-toe&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www-cs.canisius.edu/~salley/SCA/Games/morris.html">"Morris Games"</a>. <i>www-cs.canisius.edu</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www-cs.canisius.edu&amp;rft.atitle=Morris+Games&amp;rft_id=http%3A%2F%2Fwww-cs.canisius.edu%2F~salley%2FSCA%2FGames%2Fmorris.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation"><i><a href="https://en.wikisource.org/wiki/Notes_and_Queries" class="extiw" title="s:Notes and Queries">Notes and Queries</a></i>. Series 2. <b>VI</b>. p.&#160;152 &#8211; via <a href="/wiki/Wikisource" title="Wikisource">Wikisource</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Notes+and+Queries&amp;rft.series=Series+2&amp;rft.pages=152&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>&#160;[<span style="font-size:90%;"><a href="https://en.wikisource.org/wiki/Page:Notes_and_Queries_%E2%80%93_Series_2_%E2%80%93_Volume_6.djvu/441" class="extiw" title="wikisource:Page:Notes and Queries – Series 2 – Volume 6.djvu/441"><style data-mw-deduplicate="TemplateStyles:r886049405">'"`UNIQ--templatestyles-00000033-QINU`"'</style><span class="noitalic">scan</span></a></span>&#160;<a href="/wiki/File:Wikisource-logo.svg" class="image"><img alt="Wikisource link" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png" decoding="async" width="12" height="13" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/18px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/24px-Wikisource-logo.svg.png 2x" data-file-width="410" data-file-height="430" /></a>]</span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><a href="/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</a> entries for "Noughts and Crosses", "Tick-Tack" and "Tick-Tack-Toe", <a rel="nofollow" class="external text" href="http://dictionary.oed.com/">dictionary.oed.com</a></span>
+</li>
+<li id="cite_note-EDSAC-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-EDSAC_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-EDSAC_11-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Wolf, Mark J. P. (2012-08-16). <i>Encyclopedia of Video Games: The Culture, Technology, and Art of Gaming</i>. <a href="/wiki/Greenwood_Publishing_Group" title="Greenwood Publishing Group">Greenwood Publishing Group</a>. pp.&#160;3–7. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-313-37936-9" title="Special:BookSources/978-0-313-37936-9"><bdi>978-0-313-37936-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Encyclopedia+of+Video+Games%3A+The+Culture%2C+Technology%2C+and+Art+of+Gaming&amp;rft.pages=3-7&amp;rft.pub=Greenwood+Publishing+Group&amp;rft.date=2012-08-16&amp;rft.isbn=978-0-313-37936-9&amp;rft.aulast=Wolf&amp;rft.aufirst=Mark+J.+P.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Cohen, D.S. (2019-03-12). <a rel="nofollow" class="external text" href="https://www.lifewire.com/oxo-aka-noughts-and-crosses-729624">"OXO aka Noughts and Crosses"</a>. <i>Lifewire</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Lifewire&amp;rft.atitle=OXO+aka+Noughts+and+Crosses&amp;rft.date=2019-03-12&amp;rft.aulast=Cohen&amp;rft.aufirst=D.S.&amp;rft_id=https%3A%2F%2Fwww.lifewire.com%2Foxo-aka-noughts-and-crosses-729624&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070824200126/http://www.rci.rutgers.edu/~cfs/472_html/Intro/TinkertoyComputer/TinkerToy.html">"Tinkertoys and tic-tac-toe"</a>. Archived from <a rel="nofollow" class="external text" href="http://www.rci.rutgers.edu/~cfs/472_html/Intro/TinkertoyComputer/TinkerToy.html">the original</a> on August 24, 2007<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-09-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Tinkertoys+and+tic-tac-toe&amp;rft_id=http%3A%2F%2Fwww.rci.rutgers.edu%2F~cfs%2F472_html%2FIntro%2FTinkertoyComputer%2FTinkerToy.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-:0-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-:0_14-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Bolon, Thomas (2013). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=oG-qvnEj_QkC&amp;pg=PP7"><i>How to never lose at Tic-Tac-Toe</i></a>. BookCountry. p.&#160;7. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4630-0192-6" title="Special:BookSources/978-1-4630-0192-6"><bdi>978-1-4630-0192-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=How+to+never+lose+at+Tic-Tac-Toe&amp;rft.pages=7&amp;rft.pub=BookCountry&amp;rft.date=2013&amp;rft.isbn=978-1-4630-0192-6&amp;rft.aulast=Bolon&amp;rft.aufirst=Thomas&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DoG-qvnEj_QkC%26pg%3DPP7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation news"><a rel="nofollow" class="external text" href="https://www.timesdaily.com/opinion/columnists/bernie_delinski/searching-for-the-cat-in-tic-tac-toe/article_b3b90782-8328-11e3-9f53-001a4bcf6878.html">"Searching for the cat in tic tac toe"</a>. <i>TimesDaily</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-12-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=TimesDaily&amp;rft.atitle=Searching+for+the+cat+in+tic+tac+toe&amp;rft_id=https%3A%2F%2Fwww.timesdaily.com%2Fopinion%2Fcolumnists%2Fbernie_delinski%2Fsearching-for-the-cat-in-tic-tac-toe%2Farticle_b3b90782-8328-11e3-9f53-001a4bcf6878.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation journal">Kevin Crowley, Robert S. Siegler (1993). "Flexible Strategy Use in Young Children's Tic-Tac-Toe". <i>Cognitive Science</i>. <b>17</b> (4): 531–561. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2F0364-0213%2893%2990003-Q">10.1016/0364-0213(93)90003-Q</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Cognitive+Science&amp;rft.atitle=Flexible+Strategy+Use+in+Young+Children%27s+Tic-Tac-Toe&amp;rft.volume=17&amp;rft.issue=4&amp;rft.pages=531-561&amp;rft.date=1993&amp;rft_id=info%3Adoi%2F10.1016%2F0364-0213%2893%2990003-Q&amp;rft.au=Kevin+Crowley%2C+Robert+S.+Siegler&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation book">Gardner, Martin (1988). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=QpPlxwSa8akC"><i>Hexaflexagons and Other Mathematical Diversions</i></a>. University of Chicago Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-226-28254-1" title="Special:BookSources/978-0-226-28254-1"><bdi>978-0-226-28254-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Hexaflexagons+and+Other+Mathematical+Diversions&amp;rft.pub=University+of+Chicago+Press&amp;rft.date=1988&amp;rft.isbn=978-0-226-28254-1&amp;rft.aulast=Gardner&amp;rft.aufirst=Martin&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DQpPlxwSa8akC&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web">Kutschera, Ant (2018-04-07). <a rel="nofollow" class="external text" href="http://blog.maxant.co.uk/pebble/2018/04/07/1523086680000.html">"The best opening move in a game of tic-tac-toe"</a>. <i>The Kitchen in the Zoo</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Kitchen+in+the+Zoo&amp;rft.atitle=The+best+opening+move+in+a+game+of+tic-tac-toe&amp;rft.date=2018-04-07&amp;rft.aulast=Kutschera&amp;rft.aufirst=Ant&amp;rft_id=http%3A%2F%2Fblog.maxant.co.uk%2Fpebble%2F2018%2F04%2F07%2F1523086680000.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation journal">Patashnik, Oren (1980-09-01). "Qubic: 4 × 4 × 4 Tic-Tac-Toe". <i>Mathematics Magazine</i>. <b>53</b> (4): 202–216. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2689613">10.2307/2689613</a>. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0025-570X">0025-570X</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2689613">2689613</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Mathematics+Magazine&amp;rft.atitle=Qubic%3A+4+%C3%97+4+%C3%97+4+Tic-Tac-Toe&amp;rft.volume=53&amp;rft.issue=4&amp;rft.pages=202-216&amp;rft.date=1980-09-01&amp;rft.issn=0025-570X&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2689613&amp;rft_id=info%3Adoi%2F10.2307%2F2689613&amp;rft.aulast=Patashnik&amp;rft.aufirst=Oren&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation book">Averbach, Bonnie; Chein, Orin (2000). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=xRJxJ7L9sq8C&amp;pg=PA252"><i>Problem Solving Through Recreational Mathematics</i></a>. Dover Publications. p.&#160;252. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-486-40917-7" title="Special:BookSources/978-0-486-40917-7"><bdi>978-0-486-40917-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Problem+Solving+Through+Recreational+Mathematics&amp;rft.pages=252&amp;rft.pub=Dover+Publications&amp;rft.date=2000&amp;rft.isbn=978-0-486-40917-7&amp;rft.aulast=Averbach&amp;rft.aufirst=Bonnie&amp;rft.au=Chein%2C+Orin&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DxRJxJ7L9sq8C%26pg%3DPA252&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation book">Mendelson, Elliott (2016). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=akCBCwAAQBAJ&amp;pg=PA19"><i>Introducing Game Theory and its Applications</i></a>. CRC Press. p.&#160;19. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-4822-8587-1" title="Special:BookSources/978-1-4822-8587-1"><bdi>978-1-4822-8587-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Introducing+Game+Theory+and+its+Applications&amp;rft.pages=19&amp;rft.pub=CRC+Press&amp;rft.date=2016&amp;rft.isbn=978-1-4822-8587-1&amp;rft.aulast=Mendelson&amp;rft.aufirst=Elliott&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DakCBCwAAQBAJ%26pg%3DPA19&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-:02-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-:02_22-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://puzzles.com/puzzlesineducation/HandsOnPuzzles/WildTicTacToe.htm">"Wild Tic-Tac-Toe"</a>. <i>Puzzles in Education</i>. 2007-12-11<span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Puzzles+in+Education&amp;rft.atitle=Wild+Tic-Tac-Toe&amp;rft.date=2007-12-11&amp;rft_id=http%3A%2F%2Fpuzzles.com%2Fpuzzlesineducation%2FHandsOnPuzzles%2FWildTicTacToe.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-:1-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-:1_23-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Epstein, Richard A. (28 December 2012). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=g5YWIpHTTW8C&amp;pg=PA450"><i>The Theory of Gambling and Statistical Logic</i></a>. Academic Press. p.&#160;450. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-12-397870-7" title="Special:BookSources/978-0-12-397870-7"><bdi>978-0-12-397870-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Theory+of+Gambling+and+Statistical+Logic&amp;rft.pages=450&amp;rft.pub=Academic+Press&amp;rft.date=2012-12-28&amp;rft.isbn=978-0-12-397870-7&amp;rft.aulast=Epstein&amp;rft.aufirst=Richard+A.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dg5YWIpHTTW8C%26pg%3DPA450&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-:8-24"><span class="mw-cite-backlink">^ <a href="#cite_ref-:8_24-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:8_24-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-:8_24-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Juul, Jesper (2011). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=mZP6AQAAQBAJ&amp;pg=PA51"><i>Half-Real: Video Games Between Real Rules and Fictional Worlds</i></a>. MIT Press. p.&#160;51. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-262-51651-8" title="Special:BookSources/978-0-262-51651-8"><bdi>978-0-262-51651-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Half-Real%3A+Video+Games+Between+Real+Rules+and+Fictional+Worlds&amp;rft.pages=51&amp;rft.pub=MIT+Press&amp;rft.date=2011&amp;rft.isbn=978-0-262-51651-8&amp;rft.aulast=Juul&amp;rft.aufirst=Jesper&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DmZP6AQAAQBAJ%26pg%3DPA51&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation journal">Michon, John A. (1967-01-01). "The Game of JAM: An Isomorph of Tic-Tac-Toe". <i>The American Journal of Psychology</i>. <b>80</b> (1): 137–140. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F1420555">10.2307/1420555</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/1420555">1420555</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+American+Journal+of+Psychology&amp;rft.atitle=The+Game+of+JAM%3A+An+Isomorph+of+Tic-Tac-Toe&amp;rft.volume=80&amp;rft.issue=1&amp;rft.pages=137-140&amp;rft.date=1967-01-01&amp;rft_id=info%3Adoi%2F10.2307%2F1420555&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F1420555&amp;rft.aulast=Michon&amp;rft.aufirst=John+A.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://people.sc.fsu.edu/~jburkardt/m_src/exm_pdf/tictactoe.pdf">"TicTacToe Magic"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">December 17,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=TicTacToe+Magic&amp;rft_id=https%3A%2F%2Fpeople.sc.fsu.edu%2F~jburkardt%2Fm_src%2Fexm_pdf%2Ftictactoe.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://ohboyigettodomath.blogspot.com/2015/05/tic-tac-toe-as-magic-square.html">"Tic-Tac-Toe as a Magic Square"</a>. <i>Oh Boy! I Get to do Math!</i>. 2015-05-30<span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Oh+Boy%21+I+Get+to+do+Math%21&amp;rft.atitle=Tic-Tac-Toe+as+a+Magic+Square&amp;rft.date=2015-05-30&amp;rft_id=http%3A%2F%2Fohboyigettodomath.blogspot.com%2F2015%2F05%2Ftic-tac-toe-as-magic-square.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation book">Schumer, Peter D. (2004). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=tV__OQ8LZcgC&amp;pg=PA71"><i>Mathematical Journeys</i></a>. John Wiley &amp; Sons. pp.&#160;71–72. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-471-22066-4" title="Special:BookSources/978-0-471-22066-4"><bdi>978-0-471-22066-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Mathematical+Journeys&amp;rft.pages=71-72&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2004&amp;rft.isbn=978-0-471-22066-4&amp;rft.aulast=Schumer&amp;rft.aufirst=Peter+D.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DtV&#95;_OQ8LZcgC%26pg%3DPA71&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://boardgamegeek.com/boardgame/19584/check-lines">"Check Lines"</a>. <i>BoardGameGeek</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=BoardGameGeek&amp;rft.atitle=Check+Lines&amp;rft_id=https%3A%2F%2Fboardgamegeek.com%2Fboardgame%2F19584%2Fcheck-lines&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation journal">Goff, Allan (November 2006). "Quantum tic-tac-toe: A teaching metaphor for superposition in quantum mechanics". <i>American Journal of Physics</i>. College Park, MD: American Association of Physics Teachers. <b>74</b> (11): 962–973. <a href="/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="https://ui.adsabs.harvard.edu/abs/2006AmJPh..74..962G">2006AmJPh..74..962G</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1119%2F1.2213635">10.1119/1.2213635</a>. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0002-9505">0002-9505</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=American+Journal+of+Physics&amp;rft.atitle=Quantum+tic-tac-toe%3A+A+teaching+metaphor+for+superposition+in+quantum+mechanics&amp;rft.volume=74&amp;rft.issue=11&amp;rft.pages=962-973&amp;rft.date=2006-11&amp;rft.issn=0002-9505&amp;rft_id=info%3Adoi%2F10.1119%2F1.2213635&amp;rft_id=info%3Abibcode%2F2006AmJPh..74..962G&amp;rft.aulast=Goff&amp;rft.aufirst=Allan&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.loc.gov/item/sm1876.02044/">"Tit, tat, toe"</a>. <i>The Library of Congress</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Library+of+Congress&amp;rft.atitle=Tit%2C+tat%2C+toe&amp;rft_id=https%3A%2F%2Fwww.loc.gov%2Fitem%2Fsm1876.02044%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.thisamericanlife.org/radio-archives/episode/452/poultry-slam-2011?act=1">"452: Poultry Slam 2011"</a>. <i>This American Life</i>. 2011-12-02<span class="reference-accessdate">. Retrieved <span class="nowrap">28 May</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=This+American+Life&amp;rft.atitle=452%3A+Poultry+Slam+2011&amp;rft.date=2011-12-02&amp;rft_id=http%3A%2F%2Fwww.thisamericanlife.org%2Fradio-archives%2Fepisode%2F452%2Fpoultry-slam-2011%3Fact%3D1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation news">Trillin, Calvin (1999-02-01). <a rel="nofollow" class="external text" href="https://www.newyorker.com/magazine/1999/02/08/the-chicken-vanishes">"The Chicken Vanishes"</a>. <i>The New Yorker</i>. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0028-792X">0028-792X</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2019-08-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+Yorker&amp;rft.atitle=The+Chicken+Vanishes&amp;rft.date=1999-02-01&amp;rft.issn=0028-792X&amp;rft.aulast=Trillin&amp;rft.aufirst=Calvin&amp;rft_id=https%3A%2F%2Fwww.newyorker.com%2Fmagazine%2F1999%2F02%2F08%2Fthe-chicken-vanishes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.startribune.com/why-did-the-chicken-win-the-game-conditioning/491895961/">"Why did the chicken win the game? Conditioning"</a>. <i>Star Tribune</i>. 28 August 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">2019-09-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Star+Tribune&amp;rft.atitle=Why+did+the+chicken+win+the+game%3F+Conditioning&amp;rft.date=2018-08-28&amp;rft_id=http%3A%2F%2Fwww.startribune.com%2Fwhy-did-the-chicken-win-the-game-conditioning%2F491895961%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/File:Wiktionary-logo-en-v2.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/16px-Wiktionary-logo-en-v2.svg.png" decoding="async" width="16" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/24px-Wiktionary-logo-en-v2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wiktionary-logo-en-v2.svg/32px-Wiktionary-logo-en-v2.svg.png 2x" data-file-width="512" data-file-height="512" /></a> The dictionary definition of <a href="https://en.wiktionary.org/wiki/Special:Search/tic-tac-toe" class="extiw" title="wiktionary:Special:Search/tic-tac-toe"><i>tic-tac-toe</i></a> at Wiktionary</li>
+<li><a href="/wiki/File:Commons-logo.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Tic_Tac_Toe" class="extiw" title="commons:Category:Tic Tac Toe"><span style="">Tic Tac Toe</span></a> at Wikimedia Commons</li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="http://mathworld.wolfram.com/Tic-Tac-Toe.html">"Tic-Tac-Toe"</a>. <i>Wolfram MathWorld</i>. 2002-03-11.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Wolfram+MathWorld&amp;rft.atitle=Tic-Tac-Toe&amp;rft.date=2002-03-11&amp;rft_id=http%3A%2F%2Fmathworld.wolfram.com%2FTic-Tac-Toe.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="https://english.stackexchange.com/questions/155621/why-is-a-tie-in-tic-tac-toe-called-a-cats-game">"etymology – Why is a tie in Tic-Tac-Toe called a "Cat's Game?<span class="cs1-kern-right">"</span>"</a>. <i>English Language &amp; Usage Stack Exchange</i>. 2014-03-05.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=English+Language+%26+Usage+Stack+Exchange&amp;rft.atitle=etymology+%E2%80%93+Why+is+a+tie+in+Tic-Tac-Toe+called+a+%22Cat%27s+Game%3F%22&amp;rft.date=2014-03-05&amp;rft_id=https%3A%2F%2Fenglish.stackexchange.com%2Fquestions%2F155621%2Fwhy-is-a-tie-in-tic-tac-toe-called-a-cats-game&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ATic-tac-toe" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> - Discussion about the term "cat's game" for a drawn game of tic-tac-toe</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Tic-Tac-Toe" style="padding:3px"><table class="nowraplinks mw-collapsible expanded navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="3"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Tic-Tac-Toe" title="Template:Tic-Tac-Toe"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Tic-Tac-Toe" title="Template talk:Tic-Tac-Toe"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Tic-Tac-Toe&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Tic-Tac-Toe" style="font-size:114%;margin:0 4em"><a class="mw-selflink selflink">Tic-Tac-Toe</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Tic-tac-toe_variants" title="Tic-tac-toe variants">Tic-Tac-Toe variants</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/3D_tic-tac-toe" title="3D tic-tac-toe">3D tic-tac-toe</a></li>
+<li><a href="/wiki/Gomoku" title="Gomoku">Gomoku</a></li>
+<li><a href="/wiki/Notakto" title="Notakto">Notakto</a></li>
+<li><a href="/wiki/Number_Scrabble" title="Number Scrabble">Number Scrabble</a></li>
+<li><a href="/wiki/Order_and_Chaos" title="Order and Chaos">Order and Chaos</a></li>
+<li><a href="/wiki/Pente" title="Pente">Pente</a></li>
+<li><a href="/wiki/Quantum_tic-tac-toe" title="Quantum tic-tac-toe">Quantum tic-tac-toe</a></li>
+<li><a href="/wiki/Renju" title="Renju">Renju</a></li>
+<li><a href="/wiki/SOS_(game)" title="SOS (game)">SOS</a></li>
+<li><a href="/wiki/Treblecross" title="Treblecross">Treblecross</a></li>
+<li><a href="/wiki/Ultimate_tic-tac-toe" title="Ultimate tic-tac-toe">Ultimate tic-tac-toe</a></li>
+<li><a href="/wiki/Wild_tic-tac-toe" title="Wild tic-tac-toe">Wild tic-tac-toe</a></li>
+<li><a href="/wiki/Tic-tac-toe_variants" title="Tic-tac-toe variants">List</a></li></ul>
+</div></td><td class="navbox-image" rowspan="3" style="width:1px;padding:0px 0px 0px 2px"><div><a href="/wiki/File:Tic_tac_toe.svg" class="image" title="Frameless"><img alt="Frameless" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/120px-Tic_tac_toe.svg.png" decoding="async" width="120" height="107" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/180px-Tic_tac_toe.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/32/Tic_tac_toe.svg/240px-Tic_tac_toe.svg.png 2x" data-file-width="522" data-file-height="464" /></a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related concepts</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/M,n,k-game" title="M,n,k-game">m,n,k-game</a></li>
+<li><a href="/wiki/Nd_game" title="Nd game">n<sup>d</sup> game</a></li>
+<li><a href="/wiki/Kaplansky%27s_game" title="Kaplansky&#39;s game">Kaplansky's game</a></li>
+<li><a href="/wiki/Harary%27s_generalized_tic-tac-toe" title="Harary&#39;s generalized tic-tac-toe">Harary's generalized tic-tac-toe</a></li>
+<li><a href="/wiki/Hales%E2%80%93Jewett_theorem" title="Hales–Jewett theorem">Hales–Jewett theorem</a></li>
+<li><a href="/wiki/Strategy-stealing_argument" title="Strategy-stealing argument">Strategy-stealing argument</a></li>
+<li><a href="/wiki/Futile_game" title="Futile game">Futile game</a></li>
+<li><a href="/wiki/Paper-and-pencil_game" title="Paper-and-pencil game">Paper-and-pencil game</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Similar games</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Nine_men%27s_morris" title="Nine men&#39;s morris">Nine men's morris</a></li>
+<li><a href="/wiki/Score_Four" title="Score Four">Score Four</a>
+<ul><li>Tic-Stac-Toe</li></ul></li>
+<li><a href="/wiki/Gobblet" title="Gobblet">Gobblet</a></li>
+<li><i><a href="/wiki/Quarto_(board_game)" title="Quarto (board game)">Quarto</a></i></li>
+<li><a href="/wiki/Three_men%27s_morris" title="Three men&#39;s morris">Three men's morris</a></li>
+<li><a href="/wiki/Nine_Holes" title="Nine Holes">Nine Holes</a></li>
+<li><a href="/wiki/Achi_(game)" title="Achi (game)">Achi</a></li>
+<li><a href="/wiki/Connect_Four" title="Connect Four">Connect Four</a></li>
+<li><a href="/wiki/Connect6" title="Connect6">Connect6</a></li>
+<li><a href="/wiki/OXO" title="OXO">OXO</a></li>
+<li><a href="/wiki/Toss_Across" title="Toss Across">Toss Across</a></li>
+<li><a href="/wiki/Pentago" title="Pentago">Pentago</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Topics_in_game_theory" style="padding:3px"><table class="nowraplinks mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Game_theory" title="Template:Game theory"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Game_theory" title="Template talk:Game theory"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Game_theory&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Topics_in_game_theory" style="font-size:114%;margin:0 4em">Topics in <a href="/wiki/Game_theory" title="Game theory">game theory</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Definitions</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cooperative_game_theory" title="Cooperative game theory">Cooperative game</a></li>
+<li><a href="/wiki/Determinacy" title="Determinacy">Determinacy</a></li>
+<li><a href="/wiki/Escalation_of_commitment" title="Escalation of commitment">Escalation of commitment</a></li>
+<li><a href="/wiki/Extensive-form_game" title="Extensive-form game">Extensive-form game</a></li>
+<li><a href="/wiki/First-player_and_second-player_win" title="First-player and second-player win">First-player and second-player win</a></li>
+<li><a href="/wiki/Game_complexity" title="Game complexity">Game complexity</a></li>
+<li><a href="/wiki/Graphical_game_theory" title="Graphical game theory">Graphical game</a></li>
+<li><a href="/wiki/Hierarchy_of_beliefs" title="Hierarchy of beliefs">Hierarchy of beliefs</a></li>
+<li><a href="/wiki/Information_set_(game_theory)" title="Information set (game theory)">Information set</a></li>
+<li><a href="/wiki/Normal-form_game" title="Normal-form game">Normal-form game</a></li>
+<li><a href="/wiki/Preference_(economics)" title="Preference (economics)">Preference</a></li>
+<li><a href="/wiki/Sequential_game" title="Sequential game">Sequential game</a></li>
+<li><a href="/wiki/Simultaneous_game" title="Simultaneous game">Simultaneous game</a></li>
+<li><a href="/wiki/Simultaneous_action_selection" title="Simultaneous action selection">Simultaneous action selection</a></li>
+<li><a href="/wiki/Solved_game" title="Solved game">Solved game</a></li>
+<li><a href="/wiki/Succinct_game" title="Succinct game">Succinct game</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Economic_equilibrium" title="Economic equilibrium">Equilibrium</a><br /><a href="/wiki/Solution_concept" title="Solution concept">concepts</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Nash_equilibrium" title="Nash equilibrium">Nash equilibrium</a></li>
+<li><a href="/wiki/Subgame_perfect_equilibrium" title="Subgame perfect equilibrium">Subgame perfection</a></li>
+<li><a href="/wiki/Mertens-stable_equilibrium" title="Mertens-stable equilibrium">Mertens-stable equilibrium</a></li>
+<li><a href="/wiki/Bayesian_Nash_equilibrium" class="mw-redirect" title="Bayesian Nash equilibrium">Bayesian Nash equilibrium</a></li>
+<li><a href="/wiki/Perfect_Bayesian_equilibrium" title="Perfect Bayesian equilibrium">Perfect Bayesian equilibrium</a></li>
+<li><a href="/wiki/Trembling_hand_perfect_equilibrium" title="Trembling hand perfect equilibrium">Trembling hand</a></li>
+<li><a href="/wiki/Proper_equilibrium" title="Proper equilibrium">Proper equilibrium</a></li>
+<li><a href="/wiki/Epsilon-equilibrium" title="Epsilon-equilibrium">Epsilon-equilibrium</a></li>
+<li><a href="/wiki/Correlated_equilibrium" title="Correlated equilibrium">Correlated equilibrium</a></li>
+<li><a href="/wiki/Sequential_equilibrium" title="Sequential equilibrium">Sequential equilibrium</a></li>
+<li><a href="/wiki/Quasi-perfect_equilibrium" title="Quasi-perfect equilibrium">Quasi-perfect equilibrium</a></li>
+<li><a href="/wiki/Evolutionarily_stable_strategy" title="Evolutionarily stable strategy">Evolutionarily stable strategy</a></li>
+<li><a href="/wiki/Risk_dominance" title="Risk dominance">Risk dominance</a></li>
+<li><a href="/wiki/Core_(game_theory)" title="Core (game theory)"> Core</a></li>
+<li><a href="/wiki/Shapley_value" title="Shapley value">Shapley value</a></li>
+<li><a href="/wiki/Pareto_efficiency" title="Pareto efficiency">Pareto efficiency</a></li>
+<li><a href="/wiki/Potential_game#Bounded_Rational_Models" title="Potential game">Gibbs equilibrium</a></li>
+<li><a href="/wiki/Quantal_response_equilibrium" title="Quantal response equilibrium">Quantal response equilibrium</a></li>
+<li><a href="/wiki/Self-confirming_equilibrium" title="Self-confirming equilibrium">Self-confirming equilibrium</a></li>
+<li><a href="/wiki/Strong_Nash_equilibrium" title="Strong Nash equilibrium">Strong Nash equilibrium</a></li>
+<li><a href="/wiki/Markov_perfect_equilibrium" title="Markov perfect equilibrium">Markov perfect equilibrium</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Strategy_(game_theory)" title="Strategy (game theory)">Strategies</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Strategic_dominance" title="Strategic dominance">Dominant strategies</a></li>
+<li><a href="/wiki/Strategy_(game_theory)" title="Strategy (game theory)">Pure strategy</a></li>
+<li><a href="/wiki/Strategy_(game_theory)#Mixed_strategy" title="Strategy (game theory)">Mixed strategy</a></li>
+<li><a href="/wiki/Strategy-stealing_argument" title="Strategy-stealing argument">Strategy-stealing argument</a></li>
+<li><a href="/wiki/Tit_for_tat" title="Tit for tat">Tit for tat</a></li>
+<li><a href="/wiki/Grim_trigger" title="Grim trigger">Grim trigger</a></li>
+<li><a href="/wiki/Collusion" title="Collusion">Collusion</a></li>
+<li><a href="/wiki/Backward_induction" title="Backward induction">Backward induction</a></li>
+<li><a href="/wiki/Forward_induction" class="mw-redirect" title="Forward induction">Forward induction</a></li>
+<li><a href="/wiki/Markov_strategy" title="Markov strategy">Markov strategy</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Game_theory_game_classes" title="Category:Game theory game classes">Classes<br />of games</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Symmetric_game" title="Symmetric game">Symmetric game</a></li>
+<li><a href="/wiki/Perfect_information" title="Perfect information">Perfect information</a></li>
+<li><a href="/wiki/Repeated_game" title="Repeated game">Repeated game</a></li>
+<li><a href="/wiki/Signaling_game" title="Signaling game">Signaling game</a></li>
+<li><a href="/wiki/Screening_game" title="Screening game">Screening game</a></li>
+<li><a href="/wiki/Cheap_talk" title="Cheap talk">Cheap talk</a></li>
+<li><a href="/wiki/Zero-sum_game" title="Zero-sum game">Zero-sum game</a></li>
+<li><a href="/wiki/Mechanism_design" title="Mechanism design">Mechanism design</a></li>
+<li><a href="/wiki/Bargaining_problem" title="Bargaining problem">Bargaining problem</a></li>
+<li><a href="/wiki/Stochastic_game" title="Stochastic game">Stochastic game</a></li>
+<li><a href="/wiki/N-player_game" title="N-player game"><i>n</i>-player game</a></li>
+<li><a href="/wiki/Poisson_games" title="Poisson games">Large Poisson game</a></li>
+<li><a href="/wiki/Nontransitive_game" title="Nontransitive game">Nontransitive game</a></li>
+<li><a href="/wiki/Global_game" title="Global game">Global game</a></li>
+<li><a href="/wiki/Strictly_determined_game" title="Strictly determined game">Strictly determined game</a></li>
+<li><a href="/wiki/Potential_game" title="Potential game">Potential game</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_games_in_game_theory" title="List of games in game theory">Games</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Go_(game)" title="Go (game)">Go</a></li>
+<li><a href="/wiki/Chess" title="Chess">Chess</a></li>
+<li><a href="/wiki/Infinite_chess" title="Infinite chess">Infinite chess</a></li>
+<li><a href="/wiki/Draughts" title="Draughts">Checkers</a></li>
+<li><a class="mw-selflink selflink">Tic-tac-toe</a></li>
+<li><a href="/wiki/Prisoner%27s_dilemma" title="Prisoner&#39;s dilemma">Prisoner's dilemma</a></li>
+<li><a href="/wiki/Optional_prisoner%27s_dilemma" title="Optional prisoner&#39;s dilemma">Optional prisoner's dilemma</a></li>
+<li><a href="/wiki/Traveler%27s_dilemma" title="Traveler&#39;s dilemma">Traveler's dilemma</a></li>
+<li><a href="/wiki/Coordination_game" title="Coordination game">Coordination game</a></li>
+<li><a href="/wiki/Chicken_(game)" title="Chicken (game)">Chicken</a></li>
+<li><a href="/wiki/Centipede_game" title="Centipede game">Centipede game</a></li>
+<li><a href="/wiki/Volunteer%27s_dilemma" title="Volunteer&#39;s dilemma">Volunteer's dilemma</a></li>
+<li><a href="/wiki/Dollar_auction" title="Dollar auction">Dollar auction</a></li>
+<li><a href="/wiki/Battle_of_the_sexes_(game_theory)" title="Battle of the sexes (game theory)">Battle of the sexes</a></li>
+<li><a href="/wiki/Stag_hunt" title="Stag hunt">Stag hunt</a></li>
+<li><a href="/wiki/Matching_pennies" title="Matching pennies">Matching pennies</a></li>
+<li><a href="/wiki/Ultimatum_game" title="Ultimatum game">Ultimatum game</a></li>
+<li><a href="/wiki/Rock_paper_scissors" title="Rock paper scissors">Rock paper scissors</a></li>
+<li><a href="/wiki/Pirate_game" title="Pirate game">Pirate game</a></li>
+<li><a href="/wiki/Dictator_game" title="Dictator game">Dictator game</a></li>
+<li><a href="/wiki/Public_goods_game" title="Public goods game">Public goods game</a></li>
+<li><a href="/wiki/Blotto_game" title="Blotto game">Blotto game</a></li>
+<li><a href="/wiki/War_of_attrition_(game)" title="War of attrition (game)">War of attrition</a></li>
+<li><a href="/wiki/El_Farol_Bar_problem" title="El Farol Bar problem">El Farol Bar problem</a></li>
+<li><a href="/wiki/Fair_division" title="Fair division">Fair division</a></li>
+<li><a href="/wiki/Fair_cake-cutting" title="Fair cake-cutting">Fair cake-cutting</a></li>
+<li><a href="/wiki/Cournot_competition" title="Cournot competition">Cournot game</a></li>
+<li><a href="/wiki/Deadlock_(game_theory)" title="Deadlock (game theory)">Deadlock</a></li>
+<li><a href="/wiki/Unscrupulous_diner%27s_dilemma" title="Unscrupulous diner&#39;s dilemma">Diner's dilemma</a></li>
+<li><a href="/wiki/Guess_2/3_of_the_average" title="Guess 2/3 of the average">Guess 2/3 of the average</a></li>
+<li><a href="/wiki/Kuhn_poker" title="Kuhn poker">Kuhn poker</a></li>
+<li><a href="/wiki/Bargaining_problem" title="Bargaining problem">Nash bargaining game</a></li>
+<li><a href="/wiki/Prisoners_and_hats_puzzle" class="mw-redirect" title="Prisoners and hats puzzle">Prisoners and hats puzzle</a></li>
+<li><a href="/wiki/Dictator_game#Trust_game" title="Dictator game">Trust game</a></li>
+<li><a href="/wiki/Princess_and_Monster_game" title="Princess and Monster game">Princess and Monster game</a></li>
+<li><a href="/wiki/Rendezvous_problem" title="Rendezvous problem">Rendezvous problem</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Theorems</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Arrow%27s_impossibility_theorem" title="Arrow&#39;s impossibility theorem">Arrow's impossibility theorem</a></li>
+<li><a href="/wiki/Aumann%27s_agreement_theorem" title="Aumann&#39;s agreement theorem">Aumann's agreement theorem</a></li>
+<li><a href="/wiki/Folk_theorem_(game_theory)" title="Folk theorem (game theory)">Folk theorem</a></li>
+<li><a href="/wiki/Minimax" title="Minimax">Minimax theorem</a></li>
+<li><a href="/wiki/Nash_equilibrium" title="Nash equilibrium">Nash's theorem</a></li>
+<li><a href="/wiki/Purification_theorem" title="Purification theorem">Purification theorem</a></li>
+<li><a href="/wiki/Revelation_principle" title="Revelation principle">Revelation principle</a></li>
+<li><a href="/wiki/Zermelo%27s_theorem_(game_theory)" title="Zermelo&#39;s theorem (game theory)">Zermelo's theorem</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Key<br />figures</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Albert_W._Tucker" title="Albert W. Tucker">Albert W. Tucker</a></li>
+<li><a href="/wiki/Amos_Tversky" title="Amos Tversky">Amos Tversky</a></li>
+<li><a href="/wiki/Ariel_Rubinstein" title="Ariel Rubinstein">Ariel Rubinstein</a></li>
+<li><a href="/wiki/Claude_Shannon" title="Claude Shannon">Claude Shannon</a></li>
+<li><a href="/wiki/Daniel_Kahneman" title="Daniel Kahneman">Daniel Kahneman</a></li>
+<li><a href="/wiki/David_K._Levine" title="David K. Levine">David K. Levine</a></li>
+<li><a href="/wiki/David_M._Kreps" title="David M. Kreps">David M. Kreps</a></li>
+<li><a href="/wiki/Donald_B._Gillies" title="Donald B. Gillies">Donald B. Gillies</a></li>
+<li><a href="/wiki/Drew_Fudenberg" title="Drew Fudenberg">Drew Fudenberg</a></li>
+<li><a href="/wiki/Eric_Maskin" title="Eric Maskin">Eric Maskin</a></li>
+<li><a href="/wiki/Harold_W._Kuhn" title="Harold W. Kuhn">Harold W. Kuhn</a></li>
+<li><a href="/wiki/Herbert_A._Simon" title="Herbert A. Simon">Herbert Simon</a></li>
+<li><a href="/wiki/Herv%C3%A9_Moulin" title="Hervé Moulin">Hervé Moulin</a></li>
+<li><a href="/wiki/Jean_Tirole" title="Jean Tirole">Jean Tirole</a></li>
+<li><a href="/wiki/Jean-Fran%C3%A7ois_Mertens" title="Jean-François Mertens">Jean-François Mertens</a></li>
+<li><a href="/wiki/Jennifer_Tour_Chayes" title="Jennifer Tour Chayes">Jennifer Tour Chayes</a></li>
+<li><a href="/wiki/John_Harsanyi" title="John Harsanyi">John Harsanyi</a></li>
+<li><a href="/wiki/John_Maynard_Smith" title="John Maynard Smith">John Maynard Smith</a></li>
+<li><a href="/wiki/Antoine_Augustin_Cournot" title="Antoine Augustin Cournot">Antoine Augustin Cournot</a></li>
+<li><a href="/wiki/John_Forbes_Nash_Jr." title="John Forbes Nash Jr.">John Nash</a></li>
+<li><a href="/wiki/John_von_Neumann" title="John von Neumann">John von Neumann</a></li>
+<li><a href="/wiki/Kenneth_Arrow" title="Kenneth Arrow">Kenneth Arrow</a></li>
+<li><a href="/wiki/Kenneth_Binmore" title="Kenneth Binmore">Kenneth Binmore</a></li>
+<li><a href="/wiki/Leonid_Hurwicz" title="Leonid Hurwicz">Leonid Hurwicz</a></li>
+<li><a href="/wiki/Lloyd_Shapley" title="Lloyd Shapley">Lloyd Shapley</a></li>
+<li><a href="/wiki/Melvin_Dresher" title="Melvin Dresher">Melvin Dresher</a></li>
+<li><a href="/wiki/Merrill_M._Flood" title="Merrill M. Flood">Merrill M. Flood</a></li>
+<li><a href="/wiki/Olga_Bondareva" title="Olga Bondareva">Olga Bondareva</a></li>
+<li><a href="/wiki/Oskar_Morgenstern" title="Oskar Morgenstern">Oskar Morgenstern</a></li>
+<li><a href="/wiki/Paul_Milgrom" title="Paul Milgrom">Paul Milgrom</a></li>
+<li><a href="/wiki/Peyton_Young" title="Peyton Young">Peyton Young</a></li>
+<li><a href="/wiki/Reinhard_Selten" title="Reinhard Selten">Reinhard Selten</a></li>
+<li><a href="/wiki/Robert_Axelrod" title="Robert Axelrod">Robert Axelrod</a></li>
+<li><a href="/wiki/Robert_Aumann" title="Robert Aumann">Robert Aumann</a></li>
+<li><a href="/wiki/Robert_B._Wilson" title="Robert B. Wilson">Robert B. Wilson</a></li>
+<li><a href="/wiki/Roger_Myerson" title="Roger Myerson">Roger Myerson</a></li>
+<li><a href="/wiki/Samuel_Bowles_(economist)" title="Samuel Bowles (economist)"> Samuel Bowles</a></li>
+<li><a href="/wiki/Suzanne_Scotchmer" title="Suzanne Scotchmer">Suzanne Scotchmer</a></li>
+<li><a href="/wiki/Thomas_Schelling" title="Thomas Schelling">Thomas Schelling</a></li>
+<li><a href="/wiki/William_Vickrey" title="William Vickrey">William Vickrey</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">See also</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/All-pay_auction" title="All-pay auction">All-pay auction</a></li>
+<li><a href="/wiki/Alpha%E2%80%93beta_pruning" title="Alpha–beta pruning">Alpha–beta pruning</a></li>
+<li><a href="/wiki/Bertrand_paradox_(economics)" title="Bertrand paradox (economics)">Bertrand paradox</a></li>
+<li><a href="/wiki/Bounded_rationality" title="Bounded rationality">Bounded rationality</a></li>
+<li><a href="/wiki/Combinatorial_game_theory" title="Combinatorial game theory">Combinatorial game theory</a></li>
+<li><a href="/wiki/Confrontation_analysis" title="Confrontation analysis">Confrontation analysis</a></li>
+<li><a href="/wiki/Coopetition" title="Coopetition">Coopetition</a></li>
+<li><a href="/wiki/Evolutionary_game_theory" title="Evolutionary game theory">Evolutionary game theory</a></li>
+<li><a href="/wiki/First-move_advantage_in_chess" title="First-move advantage in chess">First-move advantage in chess</a></li>
+<li><a href="/wiki/Game_mechanics" title="Game mechanics">Game mechanics</a></li>
+<li><a href="/wiki/Glossary_of_game_theory" title="Glossary of game theory">Glossary of game theory</a></li>
+<li><a href="/wiki/List_of_game_theorists" title="List of game theorists">List of game theorists</a></li>
+<li><a href="/wiki/List_of_games_in_game_theory" title="List of games in game theory">List of games in game theory</a></li>
+<li><a href="/wiki/No-win_situation" title="No-win situation">No-win situation</a></li>
+<li><a href="/wiki/Solving_chess" title="Solving chess">Solving chess</a></li>
+<li><a href="/wiki/Topological_game" title="Topological game">Topological game</a></li>
+<li><a href="/wiki/Tragedy_of_the_commons" title="Tragedy of the commons">Tragedy of the commons</a></li>
+<li><a href="/wiki/Tyranny_of_small_decisions" title="Tyranny of small decisions">Tyranny of small decisions</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1250
+Cached time: 20200323223934
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.664 seconds
+Real time usage: 0.895 seconds
+Preprocessor visited node count: 2720/1000000
+Post‐expand include size: 114661/2097152 bytes
+Template argument size: 1430/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 8/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 108441/5000000 bytes
+Number of Wikibase entities loaded: 6/400
+Lua time usage: 0.356/10.000 seconds
+Lua memory usage: 7.31 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  758.003      1 -total
+ 56.74%  430.125      1 Template:Reflist
+ 21.10%  159.933     16 Template:Cite_web
+ 15.43%  116.934      5 Template:Cite_journal
+  9.92%   75.214      1 Template:Unreferenced_section
+  9.32%   70.621      1 Template:Unreferenced
+  9.21%   69.809      2 Template:Ambox
+  7.89%   59.817     11 Template:Cite_book
+  6.68%   50.658      1 Template:Infobox_game
+  5.48%   41.570      1 Template:Cite_wikisource
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:31609-0!canonical and timestamp 20200323223933 and revision id 945031860
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Tic-tac-toe&amp;oldid=945031860">https://en.wikipedia.org/w/index.php?title=Tic-tac-toe&amp;oldid=945031860</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Tic-tac-toe" title="Category:Tic-tac-toe">Tic-tac-toe</a></li><li><a href="/wiki/Category:Abstract_strategy_games" title="Category:Abstract strategy games">Abstract strategy games</a></li><li><a href="/wiki/Category:Positional_games" title="Category:Positional games">Positional games</a></li><li><a href="/wiki/Category:Paper-and-pencil_games" title="Category:Paper-and-pencil games">Paper-and-pencil games</a></li><li><a href="/wiki/Category:Solved_games" title="Category:Solved games">Solved games</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Pages_using_deprecated_image_syntax" title="Category:Pages using deprecated image syntax">Pages using deprecated image syntax</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_August_2018" title="Category:Articles needing additional references from August 2018">Articles needing additional references from August 2018</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Articles_needing_additional_references_from_May_2017" title="Category:Articles needing additional references from May 2017">Articles needing additional references from May 2017</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Tic-tac-toe" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Tic-tac-toe" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Tic-tac-toe" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Tic-tac-toe" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Tic-tac-toe">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Tic-tac-toe&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Tic-tac-toe&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Tic-tac-toe" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Tic-tac-toe" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Tic-tac-toe&amp;oldid=945031860" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Tic-tac-toe&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q210339" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Tic-tac-toe&amp;id=945031860&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Tic_Tac_Toe" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Tic-tac-toe">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Tic-tac-toe&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Tic-tac-toe&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%84%D8%B9%D8%A8%D8%A9_%D8%A5%D9%83%D8%B3-%D8%A3%D9%88" title="لعبة إكس-أو – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/%D0%9A%D1%80%D1%8B%D0%B6%D1%8B%D0%BA%D1%96-%D0%BD%D1%83%D0%BB%D1%96%D0%BA%D1%96" title="Крыжыкі-нулікі – Belarusian" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="https://be-x-old.wikipedia.org/wiki/%D0%9A%D1%80%D1%8B%D0%B6%D1%8B%D0%BA%D1%96-%D0%BD%D1%83%D0%BB%D1%96%D0%BA%D1%96" title="Крыжыкі-нулікі – Belarusian (Taraškievica orthography)" lang="be-tarask" hreflang="be-tarask" class="interlanguage-link-target">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Tres_en_ratlla" title="Tres en ratlla – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Pi%C5%A1kvorky" title="Piškvorky – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Kryds_og_bolle" title="Kryds og bolle – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Tic-Tac-Toe" title="Tic-Tac-Toe – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Tres_en_l%C3%ADnea" title="Tres en línea – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Tiktakto" title="Tiktakto – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Hiruko_artzain-joko" title="Hiruko artzain-joko – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%DA%A9%D8%B3_%D8%A7%D9%88" title="ایکس او – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Tic-tac-toe" title="Tic-tac-toe – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Pai_fillo_nai" title="Pai fillo nai – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%ED%8B%B1%ED%83%9D%ED%86%A0" title="틱택토 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="https://hy.wikipedia.org/wiki/%D4%BB%D6%84%D5%BD-%D5%B6%D5%B8%D5%AC%D5%AB%D5%AF" title="Իքս-նոլիկ – Armenian" lang="hy" hreflang="hy" class="interlanguage-link-target">Հայերեն</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Kru%C5%BEi%C4%87_i_kri%C5%BEi%C4%87" title="Kružić i križić – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Silang-bulat-silang" title="Silang-bulat-silang – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Tris_(gioco)" title="Tris (gioco) – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%A7%D7%A1_%D7%A2%D7%99%D7%92%D7%95%D7%9C" title="איקס עיגול – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-la"><a href="https://la.wikipedia.org/wiki/Cruces_et_circuli" title="Cruces et circuli – Latin" lang="la" hreflang="la" class="interlanguage-link-target">Latina</a></li><li class="interlanguage-link interwiki-lb"><a href="https://lb.wikipedia.org/wiki/Tic_Tac_Toe" title="Tic Tac Toe – Luxembourgish" lang="lb" hreflang="lb" class="interlanguage-link-target">Lëtzebuergesch</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/Kry%C5%BEiukai-nuliukai" title="Kryžiukai-nuliukai – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-lfn"><a href="https://lfn.wikipedia.org/wiki/Tictacto" title="Tictacto – Lingua Franca Nova" lang="lfn" hreflang="lfn" class="interlanguage-link-target">Lingua Franca Nova</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Tic-tac-toe" title="Tic-tac-toe – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Tic-tac-toe" title="Tic-tac-toe – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Boter-kaas-en-eieren" title="Boter-kaas-en-eieren – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E4%B8%89%E7%9B%AE%E4%B8%A6%E3%81%B9" title="三目並べ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Tripp-trapp-tresko" title="Tripp-trapp-tresko – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-or"><a href="https://or.wikipedia.org/wiki/%E0%AC%9B%E0%AC%95%E0%AC%BF-%E0%AC%B6%E0%AD%81%E0%AC%A8" title="ଛକି-ଶୁନ – Odia" lang="or" hreflang="or" class="interlanguage-link-target">ଓଡ଼ିଆ</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/K%C3%B3%C5%82ko_i_krzy%C5%BCyk" title="Kółko i krzyżyk – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Jogo_da_velha" title="Jogo da velha – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/X_%C8%99i_0" title="X și 0 – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D0%BD%D0%BE%D0%BB%D0%B8%D0%BA%D0%B8" title="Крестики-нолики – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-stq"><a href="https://stq.wikipedia.org/wiki/Tik_Tak_Tul" title="Tik Tak Tul – Saterland Frisian" lang="stq" hreflang="stq" class="interlanguage-link-target">Seeltersk</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Pi%C5%A1kvorky" title="Piškvorky – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-ckb"><a href="https://ckb.wikipedia.org/wiki/%D8%A6%DB%8C%DA%A9%D8%B3_%D8%A6%DB%86" title="ئیکس ئۆ – Central Kurdish" lang="ckb" hreflang="ckb" class="interlanguage-link-target">کوردی</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%98%D0%BA%D1%81-%D0%BE%D0%BA%D1%81_(%D0%B8%D0%B3%D1%80%D0%B0)" title="Икс-окс (игра) – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Iks-oks_(igra)" title="Iks-oks (igra) – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Ristinolla" title="Ristinolla – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Tre_i_rad" title="Tre i rad – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%9F%E0%AE%BF%E0%AE%95%E0%AF%8D_%E0%AE%9F%E0%AF%87%E0%AE%95%E0%AF%8D_%E0%AE%9F%E0%AF%8B" title="டிக் டேக் டோ – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%82%E0%B8%AD%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C" title="โอเอกซ์ – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A5%D1%80%D0%B5%D1%81%D1%82%D0%B8%D0%BA%D0%B8-%D0%BD%D1%83%D0%BB%D0%B8%D0%BA%D0%B8" title="Хрестики-нулики – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Tic-tac-toe" title="Tic-tac-toe – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/%E4%BA%95%E5%AD%97%E9%81%8E%E4%B8%89%E9%97%9C" title="井字過三關 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E4%BA%95%E5%AD%97%E6%A3%8B" title="井字棋 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q210339#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 11 March 2020, at 12:08<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Tic-tac-toe&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.664","walltime":"0.895","ppvisitednodes":{"value":2720,"limit":1000000},"postexpandincludesize":{"value":114661,"limit":2097152},"templateargumentsize":{"value":1430,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":108441,"limit":5000000},"entityaccesscount":{"value":6,"limit":400},"timingprofile":["100.00%  758.003      1 -total"," 56.74%  430.125      1 Template:Reflist"," 21.10%  159.933     16 Template:Cite_web"," 15.43%  116.934      5 Template:Cite_journal","  9.92%   75.214      1 Template:Unreferenced_section","  9.32%   70.621      1 Template:Unreferenced","  9.21%   69.809      2 Template:Ambox","  7.89%   59.817     11 Template:Cite_book","  6.68%   50.658      1 Template:Infobox_game","  5.48%   41.570      1 Template:Cite_wikisource"]},"scribunto":{"limitreport-timeusage":{"value":"0.356","limit":"10.000"},"limitreport-memusage":{"value":7668473,"limit":52428800}},"cachereport":{"origin":"mw1250","timestamp":"20200323223934","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Tic-tac-toe","url":"https:\/\/en.wikipedia.org\/wiki\/Tic-tac-toe","sameAs":"http:\/\/www.wikidata.org\/entity\/Q210339","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q210339","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-01-24T12:58:33Z","dateModified":"2020-03-11T12:08:34Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/3\/32\/Tic_tac_toe.svg","headline":"paper-and-pencil game for two players"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":98,"wgHostname":"mw1351"});});</script></body></html>

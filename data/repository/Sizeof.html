@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>sizeof - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn86ugpAAEQAAIpQTMsAAADR","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Sizeof","wgTitle":"Sizeof","wgCurRevisionId":930870552,"wgRevisionId":930870552,"wgArticleId":4487955,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use dmy dates from January 2012","Articles with example C code","C (programming language)","C++","Operators (programming)","Unary operations"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Sizeof","wgRelevantArticleId":4487955,"wgIsProbablyEditable":!0,
+"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q3266463","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.pygments":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready",
+"ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Sizeof&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Sizeof&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Sizeof"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Sizeof rootpage-Sizeof skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">sizeof</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><span></span>
+In the programming languages <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a>, the <a href="/wiki/Unary_operator" class="mw-redirect" title="Unary operator">unary operator</a> <b>sizeof</b>  generates the size of an expression or a <a href="/wiki/Data_type" title="Data type">data type</a>, measured in the number of <i>char</i>-sized storage units required for the type. Consequently, the construct <i>sizeof (char)</i> is guaranteed to be 1. The actual number of <a href="/wiki/Bit" title="Bit">bits</a> of type char is specified by the <a href="/wiki/Preprocessor_macro" class="mw-redirect" title="Preprocessor macro">preprocessor macro</a> <style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">CHAR_BIT</span>, defined in the standard <a href="/wiki/Include_file" class="mw-redirect" title="Include file">include file</a> <a href="/wiki/Limits.h" class="mw-redirect" title="Limits.h">limits.h</a>. On most modern systems this is eight bits. The result of <i>sizeof</i> has an unsigned integral type that is usually denoted by <a href="/wiki/Size_t" class="mw-redirect" title="Size t">size_t</a>.
+</p><p>The operator has a single operand, which is either an expression or a data type cast. A cast is a data type enclosed in parenthesis. Data types may not only be <a href="/wiki/Primitive_types" class="mw-redirect" title="Primitive types">primitive types</a>, such as <a href="/wiki/Integer_(computer_science)" title="Integer (computer science)">integer</a> and <a href="/wiki/IEEE_floating-point_standard" class="mw-redirect" title="IEEE floating-point standard">floating-point</a> types, but also <a href="/wiki/Data_pointer" class="mw-redirect" title="Data pointer">pointer</a> types, and compound datatypes (<a href="/wiki/Union_(computer_science)" class="mw-redirect" title="Union (computer science)">unions</a>, <a href="/wiki/Struct_(C_programming_language)" title="Struct (C programming language)">structs</a>, and C++ <a href="/wiki/Class_(computer_science)" class="mw-redirect" title="Class (computer science)">classes</a>).
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Need"><span class="tocnumber">1</span> <span class="toctext">Need</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Use"><span class="tocnumber">2</span> <span class="toctext">Use</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Application_to_arrays"><span class="tocnumber">2.1</span> <span class="toctext">Application to arrays</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Incomplete_types"><span class="tocnumber">2.2</span> <span class="toctext">Incomplete types</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Object_members"><span class="tocnumber">2.3</span> <span class="toctext">Object members</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Variadic_template_packs"><span class="tocnumber">2.4</span> <span class="toctext">Variadic template packs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Implementation"><span class="tocnumber">3</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Structure_padding"><span class="tocnumber">3.1</span> <span class="toctext">Structure padding</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Need">Need</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=1" title="Edit section: Need">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Many programs must know the storage size of a particular datatype. Though for any given <a href="/wiki/Programming_language_implementation" title="Programming language implementation">implementation</a> of C or C++ the size of a particular datatype is constant, the sizes of even primitive types in C and C++ may be defined differently for different platforms of implementation. For example, runtime allocation of array space may use the following code, in which the sizeof operator is applied to the cast of the type <i>int</i>:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">pointer</span> <span class="o">=</span>  <span class="n">malloc</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="k">sizeof</span> <span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</pre></div>
+<p>In this example, function <i>malloc</i> allocates memory and returns a pointer to the memory block. The size of the block allocated is equal to the number of bytes for a single object of type <i>int</i> multiplied by 10, providing space for ten integers.
+</p><p>It is generally not safe to assume the size of any datatype. For example, even though most implementations of C and C++ on <a href="/wiki/32-bit" class="mw-redirect" title="32-bit">32-bit</a> systems define type <i>int</i> to be four octets, this size may change when code is <a href="/wiki/Porting" title="Porting">ported</a> to a different system, breaking the code. The exception to this is the data type <i>char</i>, which always has the size <i>1</i> in any standards-compliant C implementation. In addition, it is frequently difficult to predict the sizes of compound datatypes such as a <i>struct</i> or <i>union</i>, due to padding. The use of <i>sizeof</i> enhances readability, since it avoids unnamed numeric constants (<a href="/wiki/Magic_number_(programming)#Unnamed_numerical_constants" title="Magic number (programming)">magic numbers</a>).
+</p><p>An equivalent syntax for allocating the same array space results from using the dereferenced form of the pointer to the storage address, this time applied the operator to a pointer variable:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="o">*</span><span class="n">pointer</span> <span class="o">=</span>  <span class="n">malloc</span><span class="p">(</span><span class="mi">10</span> <span class="o">*</span> <span class="k">sizeof</span> <span class="o">*</span><span class="n">pointer</span><span class="p">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="Use">Use</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=2" title="Edit section: Use">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <i>sizeof</i> operator computes the required memory storage space of its operand. The operand is written following the keyword <i>sizeof</i> and may be the symbol of a storage space, e.g., a variable, type name, or an <a href="/wiki/Expression_(programming)" class="mw-redirect" title="Expression (programming)">expression</a>. If it is a type name, it must be enclosed in parentheses. The result of the operation is the size of the operand in bytes, or the size of the memory representation. For expressions it evaluates to the representation size for the type that would result from evaluation of the expression, which is not performed. 
+</p><p>For example, since <i>sizeof (char)</i> is defined to be 1<sup id="cite_ref-sizeof-char_1-0" class="reference"><a href="#cite_note-sizeof-char-1">&#91;1&#93;</a></sup> and assuming the integer type is four bytes long, the following code prints <samp style="padding-left:0.4em; padding-right:0.4em; color: #666666;">1,4</samp>:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* the following code fragment illustrates the use of sizeof</span>
+<span class="cm"> * with variables and expressions (no parentheses needed),</span>
+<span class="cm"> * and with type names (parentheses needed)</span>
+<span class="cm"> */</span>
+<span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%zu,%zu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">c</span><span class="p">,</span> <span class="k">sizeof</span> <span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+</pre></div>
+<p>Certain standard header files, such as <i>stddef.h</i>, define <i><a href="/wiki/Size_t" class="mw-redirect" title="Size t">size_t</a></i> to denote the <a href="/wiki/Signedness" title="Signedness">unsigned</a> integral type of the result of a <i>sizeof</i> expression. The <i>printf</i> width specifier <i>z</i> is intended to format that type.
+</p><p><i>sizeof</i> cannot be used in <a href="/wiki/C_preprocessor" title="C preprocessor">C preprocessor</a> expressions, such as <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">#if</span>, because the preprocessor has no data types.
+</p><p>The example below in C++ shows use of sizeof... operator with variadic templates. 
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">GetSize</span> <span class="p">(</span><span class="n">Args</span><span class="o">&amp;&amp;</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="cm">/* Get size of parameter pack.*/</span>
+    <span class="n">std</span><span class="o">::</span><span class="kt">size_t</span> <span class="n">Count</span><span class="o">=</span> <span class="k">sizeof</span><span class="p">...(</span><span class="n">Args</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">Count</span><span class="p">;</span>           
+<span class="p">}</span>
+</pre></div>
+<p><i>sizeof...</i> can be used with variadic templates in C++11 and above on a parameter pack to determine number of arguments.
+</p>
+<h3><span class="mw-headline" id="Application_to_arrays">Application to arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=3" title="Edit section: Application to arrays">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays#sizeof" class="extiw" title="wikibooks:C Programming/Pointers and arrays">Wikibooks:C Programming/Pointers and arrays §&#160;sizeof</a></div>
+<p>When <i>sizeof</i> is applied to the name of an array, the result is the number of bytes required to store the entire array. This is one of the few exceptions to the rule that the name of an array is converted to a pointer to the first element of the array, and is possible just because the actual array size is fixed and known at compile time, when the <i>sizeof</i> operator is evaluated. The following program uses <i>sizeof</i> to determine the size of a declared array, avoiding a <a href="/wiki/Buffer_overflow" title="Buffer overflow">buffer overflow</a> when copying characters:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno"> 1 </span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="lineno"> 2 </span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="lineno"> 5 </span><span class="p">{</span>
+<span class="lineno"> 6 </span>  <span class="kt">char</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span> <span class="cm">/* Array of 10 chars */</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span>  <span class="cm">/* Copy at most 9 characters from argv[1] into buffer. */</span>
+<span class="lineno"> 9 </span><span class="hll">  <span class="n">strncpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="k">sizeof</span> <span class="n">buffer</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class="lineno">10 </span>
+<span class="lineno">11 </span>  <span class="cm">/* Ensure that the buffer is null-terminated: */</span>
+<span class="lineno">12 </span>  <span class="n">buffer</span><span class="p">[</span><span class="k">sizeof</span> <span class="n">buffer</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+<span class="lineno">13 </span>
+<span class="lineno">14 </span>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">15 </span><span class="p">}</span>
+</pre></div>
+<p>Here, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sizeof buffer</span> is equivalent to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">10 * sizeof buffer[0]</span>, which evaluates to 10, because the size of the type <i>char</i> is defined as 1.
+</p><p><a href="/wiki/C99" title="C99">C99</a> adds support for flexible array members to structures.  This form of array declaration is allowed as the last element in structures only, and differs from normal arrays in that no length is specified to the compiler.  For a structure named <i>s</i> containing a flexible array member named <i>a</i>, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sizeof s</span> is therefore equivalent to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced"><a href="/wiki/Offsetof" title="Offsetof">offsetof</a>(s, a)</span>:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno"> 1 </span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="k">struct</span> <span class="n">flexarray</span> <span class="p">{</span>
+<span class="lineno"> 4 </span>    <span class="kt">char</span> <span class="n">val</span><span class="p">;</span>
+<span class="lineno"> 5 </span>    <span class="kt">int</span> <span class="n">array</span><span class="p">[];</span>  <span class="cm">/* Flexible array member; must be last element of struct */</span>
+<span class="lineno"> 6 </span><span class="p">};</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="lineno"> 9 </span><span class="p">{</span>
+<span class="lineno">10 </span><span class="hll">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;sizeof (struct flexarray) == %zu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="p">(</span><span class="k">struct</span> <span class="n">flexarray</span><span class="p">));</span>
+</span><span class="lineno">11 </span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">12 </span><span class="p">}</span>
+</pre></div>
+<p>In this case the <i>sizeof</i> operator returns the size of the structure, including any padding, but without any storage allowed for the array. Most platforms produce the following output:
+</p>
+<dl><dd><samp style="padding-left:0.4em; padding-right:0.4em; color: #666666;">sizeof (struct flexarray) == 4</samp></dd></dl>
+<p><a href="/wiki/C99" title="C99">C99</a> also allows variable length arrays that have the length specified at runtime,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> although the feature is considered an optional implementation in later versions of the C standard. In such cases, the <i>sizeof</i> operator is evaluated in part at runtime to determine the storage occupied by the array.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stddef.h&gt;</span><span class="cp"></span>
+
+<span class="kt">size_t</span> <span class="nf">flexsize</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">char</span> <span class="n">b</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">3</span><span class="p">];</span>      <span class="cm">/* Variable length array */</span>
+   <span class="k">return</span> <span class="k">sizeof</span> <span class="n">b</span><span class="p">;</span>  <span class="cm">/* Execution time sizeof */</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">size_t</span> <span class="n">size</span> <span class="o">=</span> <span class="n">flexsize</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="cm">/* flexsize returns 13 */</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p><i>sizeof</i> can be used to determine the number of elements in an array, by dividing the size of the entire array by the size of a single element:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="kt">int</span> <span class="n">tab</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number of elements in the array: %zu</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="n">tab</span> <span class="o">/</span> <span class="k">sizeof</span> <span class="n">tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="cm">/* yields 10 */</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Incomplete_types">Incomplete types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=4" title="Edit section: Incomplete types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>sizeof</i> can only be applied to "completely" defined types. With arrays, this means that the dimensions of the array must be present in its <a href="/wiki/Declaration_(computer_science)" class="mw-redirect" title="Declaration (computer science)">declaration</a>, and that the type of the elements must be completely defined. For <i>struct</i>s and <i>union</i>s, this means that there must be a member list of completely defined types. For example, consider the following two source files:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* file1.c */</span>
+<span class="kt">int</span> <span class="n">arr</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="k">struct</span> <span class="n">x</span> <span class="p">{</span><span class="kt">int</span> <span class="n">one</span><span class="p">;</span> <span class="kt">int</span> <span class="n">two</span><span class="p">;};</span>
+<span class="cm">/* more code */</span>
+
+<span class="cm">/* file2.c */</span>
+<span class="k">extern</span> <span class="kt">int</span> <span class="n">arr</span><span class="p">[];</span>
+<span class="k">struct</span> <span class="n">x</span><span class="p">;</span>
+<span class="cm">/* more code */</span>
+</pre></div>
+<p>Both files are perfectly legal C, and code in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">file1.c</span> can apply <i>sizeof</i> to <i>arr</i> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">struct x</span>. However, it is illegal for code in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">file2.c</span> to do this, because the definitions in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">file2.c</span> are not complete. In the case of <i>arr</i>, the code does not specify the dimension of the array; without this information, the compiler has no way of knowing how many elements are in the array, and cannot calculate the array's overall size. Likewise, the compiler cannot calculate the size of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">struct x</span> because it does not know what members it is made up of, and therefore cannot calculate the sum of the sizes of the structure's members (and padding). If the programmer provided the size of the array in its declaration in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced"> file2.c</span>, or completed the definition of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">struct x</span> by supplying a member list, this would allow the application of <i>sizeof</i> to <i>arr</i> or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">struct x</span> in that source file.
+</p>
+<h3><span class="mw-headline" id="Object_members">Object members</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=5" title="Edit section: Object members">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++11 introduced the possibility to apply the <i>sizeof</i> parameter to specific members of a class without the necessity to instantiate the object to achieve this.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> The following example for instance yields <samp style="padding-left:0.4em; padding-right:0.4em; color: #666666;">4</samp> and <samp style="padding-left:0.4em; padding-right:0.4em; color: #666666;">8</samp> on most platforms.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">struct</span> <span class="n">foo</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span> <span class="n">foo</span><span class="o">::</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Variadic_template_packs">Variadic template packs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=6" title="Edit section: Variadic template packs">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++11 introduced <a href="/wiki/Variadic_template" title="Variadic template">variadic templates</a>; the keyword <i>sizeof</i> followed by <a href="/wiki/Ellipsis" title="Ellipsis">ellipsis</a> returns the number of elements in a parameter pack.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="kr">typename</span><span class="p">...</span> <span class="n">Args</span><span class="o">&gt;</span>
+<span class="kt">void</span> <span class="n">print_size</span><span class="p">(</span><span class="n">Args</span><span class="p">...</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">...(</span><span class="n">args</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">print_size</span><span class="p">();</span> <span class="c1">// outputs 0</span>
+  <span class="n">print_size</span><span class="p">(</span><span class="s">&quot;Is the answer&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span> <span class="c1">// outputs 3</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=7" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When applied to a fixed-length datatype or variable, expressions with the operator <i>sizeof</i> are evaluated during program compilation; they are replaced by constant result-values. The <a href="/wiki/C99" title="C99">C99</a> standard introduced <a href="/wiki/Variable-length_array" title="Variable-length array">variable-length arrays</a> (VLAs), which required evaluation for such expressions during program execution. In many cases, the implementation specifics may be documented in an <a href="/wiki/Application_binary_interface" title="Application binary interface">application binary interface</a> (ABI) document for the platform, specifying formats, padding, and alignment for the data types, to which the compiler must conform.
+</p>
+<h3><span class="mw-headline" id="Structure_padding">Structure padding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=8" title="Edit section: Structure padding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>When calculating the size of any object type, the compiler must take into account any required <a href="/wiki/Data_structure_alignment" title="Data structure alignment">data structure alignment</a> to meet efficiency or architectural constraints.  Many <a href="/wiki/Computer_architecture" title="Computer architecture">computer architectures</a> do not support multiple-byte access starting at any byte address that is not a multiple of the word size, and even when the architecture allows it, usually the <a href="/wiki/Central_processing_unit" title="Central processing unit">processor</a> can fetch a <a href="/wiki/Data_structure_alignment" title="Data structure alignment">word-aligned object</a> faster than it can fetch an object that straddles multiple words in memory.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>  Therefore, compilers usually align data structures to at least a <a href="/wiki/Word_(data_type)" class="mw-redirect" title="Word (data type)">word</a> boundary, and also align individual members to their respective boundaries.  In the following example, the structure <i>student</i> is likely to be aligned on a word boundary, which is also where the member <i>grade</i> begins, and the member <i>age</i> is likely to start at the next word address.  The compiler accomplishes the latter by inserting padding bytes between members as needed to satisfy the alignment requirements.  There may also be padding at the end of a structure to ensure proper alignment in case the structure is used as an element of an array.
+</p><p>Thus, the aggregate size of a structure in C can be greater than the sum of the sizes of its individual members. For example, on many systems the following code prints <samp style="padding-left:0.4em; padding-right:0.4em; color: #666666;">8</samp>:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">student</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">grade</span><span class="p">;</span> <span class="cm">/* char is 1 byte long */</span>
+  <span class="kt">int</span> <span class="n">age</span><span class="p">;</span> <span class="cm">/* int is 4 bytes long */</span>
+<span class="p">};</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%zu&quot;</span><span class="p">,</span> <span class="k">sizeof</span> <span class="p">(</span><span class="k">struct</span> <span class="n">student</span><span class="p">));</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Typeof" title="Typeof">typeof</a></li>
+<li><a href="/wiki/Offsetof" title="Offsetof">offsetof</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Sizeof&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-sizeof-char-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-sizeof-char_1-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf">"C99 standard (ISO/IEC9899)"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/International_Electrotechnical_Commission" title="International Electrotechnical Commission">ISO/IEC</a>. 7 September 2007. 6.5.3.4.3, p.&#160;80<span class="reference-accessdate">. Retrieved <span class="nowrap">31 October</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=C99+standard+%28ISO%2FIEC9899%29&amp;rft.pages=6.5.3.4.3%2C+p.-80&amp;rft.pub=ISO%2FIEC&amp;rft.date=2007-09-07&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2FWG14%2Fwww%2Fdocs%2Fn1256.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASizeof" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/JTC1/SC22/wg14/www/docs/n1124.pdf">"WG14/N1124 Committee Draft ISO/IEC 9899"</a> <span class="cs1-format">(PDF)</span>. 6 May 2005. 6 May 2005. 6.5.3.4 The <i>sizeof</i> operator.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=WG14%2FN1124+Committee+Draft+ISO%2FIEC+9899&amp;rft.pages=6.5.3.4+The+%27%27sizeof%27%27+operator&amp;rft.pub=6+May+2005&amp;rft.date=2005-05-06&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2FJTC1%2FSC22%2Fwg14%2Fwww%2Fdocs%2Fn1124.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASizeof" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2253.html">http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2007/n2253.html</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web">Rentzsch, Jonathan (8 February 2005). <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/library/pa-dalign/">"Data alignment: Straighten up and fly right"</a>. www.ibm.com<span class="reference-accessdate">. Retrieved <span class="nowrap">29 September</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Data+alignment%3A+Straighten+up+and+fly+right&amp;rft.pub=www.ibm.com&amp;rft.date=2005-02-08&amp;rft.aulast=Rentzsch&amp;rft.aufirst=Jonathan&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fpa-dalign%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASizeof" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<p class="mw-empty-elt">
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1264
+Cached time: 20200306201722
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.268 seconds
+Real time usage: 2.589 seconds
+Preprocessor visited node count: 934/1000000
+Post‐expand include size: 9042/2097152 bytes
+Template argument size: 1025/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 25472/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.058/10.000 seconds
+Lua memory usage: 2.23 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 2534.236      1 -total
+  3.77%   95.552      1 Template:Reflist
+  3.08%   77.977      3 Template:Cite_web
+  1.36%   34.438      1 Template:See_also
+  1.05%   26.610      1 Template:Use_dmy_dates
+  0.78%   19.856     14 Template:Mono
+  0.67%   17.022      1 Template:DMCA
+  0.59%   15.018      1 Template:Dated_maintenance_category
+  0.58%   14.818     14 Template:Ifsubst
+  0.41%   10.468      1 Template:FULLROOTPAGENAME
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4487955-0!canonical and timestamp 20200306201719 and revision id 930870552
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Sizeof&amp;oldid=930870552">https://en.wikipedia.org/w/index.php?title=Sizeof&amp;oldid=930870552</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:C%2B%2B" title="Category:C++">C++</a></li><li><a href="/wiki/Category:Operators_(programming)" title="Category:Operators (programming)">Operators (programming)</a></li><li><a href="/wiki/Category:Unary_operations" title="Category:Unary operations">Unary operations</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Use_dmy_dates_from_January_2012" title="Category:Use dmy dates from January 2012">Use dmy dates from January 2012</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Sizeof" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Sizeof" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Sizeof" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Sizeof" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Sizeof">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Sizeof&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Sizeof&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Sizeof" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Sizeof" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Sizeof&amp;oldid=930870552" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Sizeof&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3266463" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Sizeof&amp;id=930870552&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Sizeof">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Sizeof&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Sizeof&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Sizeof" title="Sizeof – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Sizeof" title="Sizeof – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Operator_rozmiaru" title="Operator rozmiaru – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Sizeof" title="Sizeof – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q3266463#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 15 December 2019, at 14:13<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Sizeof&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.268","walltime":"2.589","ppvisitednodes":{"value":934,"limit":1000000},"postexpandincludesize":{"value":9042,"limit":2097152},"templateargumentsize":{"value":1025,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":25472,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 2534.236      1 -total","  3.77%   95.552      1 Template:Reflist","  3.08%   77.977      3 Template:Cite_web","  1.36%   34.438      1 Template:See_also","  1.05%   26.610      1 Template:Use_dmy_dates","  0.78%   19.856     14 Template:Mono","  0.67%   17.022      1 Template:DMCA","  0.59%   15.018      1 Template:Dated_maintenance_category","  0.58%   14.818     14 Template:Ifsubst","  0.41%   10.468      1 Template:FULLROOTPAGENAME"]},"scribunto":{"limitreport-timeusage":{"value":"0.058","limit":"10.000"},"limitreport-memusage":{"value":2339449,"limit":52428800}},"cachereport":{"origin":"mw1264","timestamp":"20200306201722","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Sizeof","url":"https:\/\/en.wikipedia.org\/wiki\/Sizeof","sameAs":"http:\/\/www.wikidata.org\/entity\/Q3266463","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q3266463","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-03-23T13:58:51Z","dateModified":"2019-12-15T14:13:40Z","headline":"unary operator"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":91,"wgHostname":"mw1273"});});</script></body></html>

@@ -1,0 +1,911 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Bash (Unix shell) - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7CKgpAIC8AAEF2v10AAABD","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Bash_(Unix_shell)","wgTitle":"Bash (Unix shell)","wgCurRevisionId":945648570,"wgRevisionId":945648570,"wgArticleId":4547,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Use mdy dates from March 2014","Articles needing cleanup from January 2019","All pages needing cleanup","Articles containing how-to sections","Commons category link is on Wikidata","Unix shells","1989 software","Cross-platform free software",
+"Domain-specific programming languages","Free software programmed in C","GNU Project software","Scripting languages","Text-oriented programming languages"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Bash_(Unix_shell)","wgRelevantArticleId":4547,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Bash_(shell)","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Bash_(Unix_shell)","wgWikibaseItemId":"Q189248","wgCentralAuthMobileDomain":!1,
+"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init",
+"ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/e7/Bash_screenshot.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Bash_Unix_shell rootpage-Bash_Unix_shell skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Bash (Unix shell)</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Bash_(shell)&amp;redirect=no" class="mw-redirect" title="Bash (shell)">Bash (shell)</a>)</span></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">GNU replacement for the Bourne shell</div>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox vevent" style="width:22em"><caption class="summary">Bash</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Gnu-bash-logo.svg" class="image"><img alt="Gnu-bash-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/152px-Gnu-bash-logo.svg.png" decoding="async" width="152" height="64" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/228px-Gnu-bash-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gnu-bash-logo.svg/304px-Gnu-bash-logo.svg.png 2x" data-file-width="216" data-file-height="91" /></a></td></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Bash_screenshot.png" class="image" title="Screenshot of a Bash session"><img alt="Screenshot of a Bash session" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Bash_screenshot.png/300px-Bash_screenshot.png" decoding="async" width="300" height="408" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Bash_screenshot.png/450px-Bash_screenshot.png 1.5x, //upload.wikimedia.org/wikipedia/commons/e/e7/Bash_screenshot.png 2x" data-file-width="562" data-file-height="765" /></a><div>Screenshot of a Bash session</div></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td><a href="/wiki/Brian_Fox_(computer_programmer)" title="Brian Fox (computer programmer)">Brian Fox</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Initial release</th><td>June&#160;8, 1989<span class="noprint">&#59;&#32;30 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">1989-06-08</span>)</span></td></tr><tr style="display: none;"><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td>5.0 (January&#160;7, 2019<span class="noprint">&#59;&#32;14 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2019-01-07</span>)</span>)&#32;<span class="plainlinks"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/Bash&amp;action=edit">&#91;±&#93;</a></span><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th><td><div class="plainlist"><ul><li><span class="url"><a rel="nofollow" class="external text" href="https://git.savannah.gnu.org/cgit/bash.git">git<wbr />.savannah<wbr />.gnu<wbr />.org<wbr />/cgit<wbr />/bash<wbr />.git</a></span></li></ul>
+</div> <a href="https://www.wikidata.org/wiki/Q189248#P1324" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><div class="plainlist">
+<ul><li><a href="/wiki/Unix-like" title="Unix-like">Unix-like</a>,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li>
+<li><a href="/wiki/MacOS" title="MacOS">macOS</a> (only latest <a href="/wiki/GNU_GPL#Version_2" class="mw-redirect" title="GNU GPL">GPLv2</a> release; GPLv3 releases available through third parties</li>
+<li><a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a> (newer <a href="/wiki/GNU_GPL#Version_3" class="mw-redirect" title="GNU GPL">GPLv3+</a> version)<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup></li></ul>
+</div></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Computing_platform" title="Computing platform">Platform</a></th><td><a href="/wiki/GNU" title="GNU">GNU</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Available in</th><td>Multilingual (<a href="/wiki/Gettext" title="Gettext">gettext</a>)</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Unix_shell" title="Unix shell">Unix shell</a>, <a href="/wiki/Command_language" title="Command language">command language</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/GNU_GPL#Version_3" class="mw-redirect" title="GNU GPL">GPLv3+</a><sup id="cite_ref-license_6-0" class="reference"><a href="#cite_note-license-6">&#91;6&#93;</a></sup></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/">www<wbr />.gnu<wbr />.org<wbr />/software<wbr />/bash<wbr />/</a></span></td></tr></tbody></table>
+<p><b>GNU Bash</b> or simply <b>Bash</b> is a <a href="/wiki/Unix_shell" title="Unix shell">Unix shell</a> and <a href="/wiki/Command_language" title="Command language">command language</a> written by <a href="/wiki/Brian_Fox_(computer_programmer)" title="Brian Fox (computer programmer)">Brian Fox</a> for the <a href="/wiki/GNU_Project" title="GNU Project">GNU Project</a> as a <a href="/wiki/Free_software" title="Free software">free software</a> replacement for the <a href="/wiki/Bourne_shell" title="Bourne shell">Bourne shell</a>.<sup id="cite_ref-GNUBSD_7-0" class="reference"><a href="#cite_note-GNUBSD-7">&#91;7&#93;</a></sup><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> First released in 1989,<sup id="cite_ref-BashBeta_9-0" class="reference"><a href="#cite_note-BashBeta-9">&#91;9&#93;</a></sup> it has been used widely as the default <a href="/wiki/Login" title="Login">login</a> shell for most <a href="/wiki/Linux" title="Linux">Linux</a> distributions and <a href="/wiki/Apple_Inc." title="Apple Inc.">Apple's</a> <a href="/wiki/MacOS_Mojave" title="MacOS Mojave">macOS Mojave</a> and earlier versions. A version <a href="/wiki/Windows_Subsystem_for_Linux" title="Windows Subsystem for Linux">is also available for Windows 10</a>.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> It is also the default user shell in <a href="/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a> 11.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p><p>Bash is a <a href="/wiki/Command-line_interpreter" class="mw-redirect" title="Command-line interpreter">command processor</a> that typically runs in a <a href="/wiki/Terminal_emulator" title="Terminal emulator">text window</a> where the user types commands that cause actions. Bash can also read and execute commands from a file, called a <a href="/wiki/Shell_script" title="Shell script">shell script</a>. Like all Unix shells, it supports filename <a href="/wiki/Glob_(programming)" title="Glob (programming)">globbing</a> (wildcard matching), <a href="/wiki/Pipeline_(Unix)" title="Pipeline (Unix)">piping</a>, <a href="/wiki/Here_document" title="Here document">here documents</a>, <a href="/wiki/Command_substitution" title="Command substitution">command substitution</a>, <a href="/wiki/Variable_(programming)" class="mw-redirect" title="Variable (programming)">variables</a>, and <a href="/wiki/Control_flow" title="Control flow">control structures</a> for <a href="/wiki/Conditional_(programming)" class="mw-redirect" title="Conditional (programming)">condition-testing</a> and <a href="/wiki/Iteration" title="Iteration">iteration</a>. The <a href="/wiki/Keyword_(computer_programming)" class="mw-redirect" title="Keyword (computer programming)">keywords</a>, <a href="/wiki/Syntax_(programming_languages)" title="Syntax (programming languages)">syntax</a>, <a href="/wiki/Scope_(computer_science)#Dynamic_scoping" title="Scope (computer science)">dynamically scoped</a> variables and other basic features of the <a href="/wiki/Language_(computer_science)" class="mw-redirect" title="Language (computer science)">language</a> are all copied from <a href="/wiki/Bourne_shell" title="Bourne shell">sh</a>. Other features, e.g., <a href="/wiki/C_shell#History" title="C shell">history</a>, are copied from <a href="/wiki/C_shell" title="C shell">csh</a> and <a href="/wiki/Korn_shell" class="mw-redirect" title="Korn shell">ksh</a>. Bash is a <a href="/wiki/POSIX" title="POSIX">POSIX</a>-compliant shell, but with a number of extensions.
+</p><p>The shell's name is an acronym for <i>Bourne-again shell</i>, a <a href="/wiki/Pun" title="Pun">pun</a> on the name of the <a href="/wiki/Bourne_shell" title="Bourne shell">Bourne shell</a> that it replaces<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> and the notion of being "<a href="/wiki/Born_again" title="Born again">born again</a>".<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup><sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup>
+</p><p>A <a href="/wiki/Shellshock_(software_bug)" title="Shellshock (software bug)">security hole</a> in Bash dating from version 1.03 (August 1989),<sup id="cite_ref-Seclists-20141004_15-0" class="reference"><a href="#cite_note-Seclists-20141004-15">&#91;15&#93;</a></sup> dubbed <a href="/wiki/Shellshock_(software_bug)" title="Shellshock (software bug)">Shellshock</a>, was discovered in early September 2014 and quickly led to a range of <a href="/wiki/Attack_(computing)" class="mw-redirect" title="Attack (computing)">attacks</a> across the <a href="/wiki/Internet" title="Internet">Internet</a>.<sup id="cite_ref-TR-20140924_16-0" class="reference"><a href="#cite_note-TR-20140924-16">&#91;16&#93;</a></sup><sup id="cite_ref-NYT-20140925-NP_17-0" class="reference"><a href="#cite_note-NYT-20140925-NP-17">&#91;17&#93;</a></sup><sup id="cite_ref-ZDN-20140929_18-0" class="reference"><a href="#cite_note-ZDN-20140929-18">&#91;18&#93;</a></sup> Patches to fix the bugs were made available soon after the bugs were identified.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Features"><span class="tocnumber">2</span> <span class="toctext">Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Brace_expansion"><span class="tocnumber">2.1</span> <span class="toctext">Brace expansion</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Startup_scripts"><span class="tocnumber">2.2</span> <span class="toctext">Startup scripts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Execution_order_of_startup_files"><span class="tocnumber">2.2.1</span> <span class="toctext">Execution order of startup files</span></a>
+<ul>
+<li class="toclevel-4 tocsection-6"><a href="#When_started_as_an_interactive_login_shell"><span class="tocnumber">2.2.1.1</span> <span class="toctext">When started as an interactive login shell</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="#When_a_login_shell_exits"><span class="tocnumber">2.2.1.2</span> <span class="toctext">When a login shell exits</span></a></li>
+<li class="toclevel-4 tocsection-8"><a href="#When_started_as_an_interactive_shell_(but_not_a_login_shell)"><span class="tocnumber">2.2.1.3</span> <span class="toctext">When started as an interactive shell (but not a login shell)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-9"><a href="#Comparison_with_the_Bourne_shell_and_csh_startup_sequences"><span class="tocnumber">2.2.2</span> <span class="toctext">Comparison with the Bourne shell and csh startup sequences</span></a>
+<ul>
+<li class="toclevel-4 tocsection-10"><a href="#Setting_inheritable_environment_variables"><span class="tocnumber">2.2.2.1</span> <span class="toctext">Setting inheritable environment variables</span></a></li>
+<li class="toclevel-4 tocsection-11"><a href="#Aliases_and_functions"><span class="tocnumber">2.2.2.2</span> <span class="toctext">Aliases and functions</span></a></li>
+<li class="toclevel-4 tocsection-12"><a href="#Commands_performed_only_at_login_and_logout"><span class="tocnumber">2.2.2.3</span> <span class="toctext">Commands performed only at login and logout</span></a></li>
+<li class="toclevel-4 tocsection-13"><a href="#Legacy-compatible_Bash_startup_example"><span class="tocnumber">2.2.2.4</span> <span class="toctext">Legacy-compatible Bash startup example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-14"><a href="#Operating_system_issues_in_Bash_startup"><span class="tocnumber">2.2.3</span> <span class="toctext">Operating system issues in Bash startup</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-15"><a href="#Portability"><span class="tocnumber">2.3</span> <span class="toctext">Portability</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Keyboard_shortcuts"><span class="tocnumber">2.4</span> <span class="toctext">Keyboard shortcuts</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Process_management"><span class="tocnumber">2.5</span> <span class="toctext">Process management</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Conditional_execution"><span class="tocnumber">2.6</span> <span class="toctext">Conditional execution</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Bug_reporting"><span class="tocnumber">2.7</span> <span class="toctext">Bug reporting</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Programmable_completion"><span class="tocnumber">2.8</span> <span class="toctext">Programmable completion</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#Release_History"><span class="tocnumber">3</span> <span class="toctext">Release History</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Brian_Fox_(computer_programmer)" title="Brian Fox (computer programmer)">Brian Fox</a> began <a href="/wiki/Computer_programming" title="Computer programming">coding</a> Bash on January 10, 1988<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup> after <a href="/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a> became dissatisfied with the lack of progress being made by a prior developer.<sup id="cite_ref-GNUBSD_7-1" class="reference"><a href="#cite_note-GNUBSD-7">&#91;7&#93;</a></sup> Stallman and the <a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a> (FSF) considered a free shell that could run existing shell scripts so strategic to a completely free system built from BSD and GNU code that this was one of the few projects they funded themselves, with Fox undertaking the work as an employee of FSF.<sup id="cite_ref-GNUBSD_7-2" class="reference"><a href="#cite_note-GNUBSD-7">&#91;7&#93;</a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> Fox released Bash as a beta, version .99, on June 8, 1989<sup id="cite_ref-BashBeta_9-1" class="reference"><a href="#cite_note-BashBeta-9">&#91;9&#93;</a></sup> and remained the primary maintainer until sometime between mid-1992<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup> and mid-1994,<sup id="cite_ref-Bourne_shell_grammar_22-0" class="reference"><a href="#cite_note-Bourne_shell_grammar-22">&#91;22&#93;</a></sup> when he was laid off from FSF<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> and his responsibility was transitioned to another early contributor, Chet Ramey.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup><sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup>
+</p><p>Since then, Bash has become by far the most popular shell among users of Linux, becoming the default interactive shell on that operating system's various distributions<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup><sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup> (although <a href="/wiki/Almquist_shell" title="Almquist shell">Almquist shell</a> may be the default scripting shell) and on Apple's macOS releases before <a href="/wiki/MacOS_Catalina" title="MacOS Catalina">Catalina</a> in October 2019.<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup><sup id="cite_ref-zsh1_30-0" class="reference"><a href="#cite_note-zsh1-30">&#91;30&#93;</a></sup><sup id="cite_ref-zsh2_31-0" class="reference"><a href="#cite_note-zsh2-31">&#91;31&#93;</a></sup> Bash has also been ported to <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a> and distributed with <a href="/wiki/Cygwin" title="Cygwin">Cygwin</a> and <a href="/wiki/MinGW" title="MinGW">MinGW</a>, to <a href="/wiki/DOS" title="DOS">DOS</a> by the <a href="/wiki/DJGPP" title="DJGPP">DJGPP</a> project, to <a href="/wiki/Novell_NetWare" class="mw-redirect" title="Novell NetWare">Novell NetWare</a> and to <a href="/wiki/Android_(operating_system)" title="Android (operating system)">Android</a> via various terminal emulation applications.
+</p><p>In September 2014, Stéphane Chazelas, a Unix/Linux specialist,<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup> discovered a <a href="/wiki/Security_bug" title="Security bug">security bug</a> in the program. The bug, first disclosed on September 24, was named <a href="/wiki/Shellshock_(software_bug)" title="Shellshock (software bug)">Shellshock</a> and assigned the numbers <a rel="nofollow" class="external text" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271">CVE-2014-6271</a>, <a rel="nofollow" class="external text" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=2014-6277">CVE-2014-6277</a> and <a rel="nofollow" class="external text" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7169">CVE-2014-7169</a>. The bug was regarded as severe, since <a href="/wiki/Common_Gateway_Interface" title="Common Gateway Interface">CGI</a> scripts using Bash could be vulnerable, enabling <a href="/wiki/Arbitrary_code_execution" title="Arbitrary code execution">arbitrary code execution</a>. The bug was related to how Bash passes function definitions to subshells through <a href="/wiki/Environment_variable" title="Environment variable">environment variables</a>.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=2" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Bash <a href="/wiki/Command_(computing)" title="Command (computing)">command</a> syntax is a <a href="/wiki/Superset" class="mw-redirect" title="Superset">superset</a> of the Bourne shell command syntax. Bash supports <a href="/wiki/Brace_expansion" class="mw-redirect" title="Brace expansion">brace expansion</a>, <a href="/wiki/Command_line_completion" class="mw-redirect" title="Command line completion">command line completion</a> (Programmable Completion),<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup> basic debugging<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;35&#93;</a></sup> and <a href="/wiki/Signal_(IPC)" title="Signal (IPC)">signal handling</a> (using <code>trap</code>) since bash 2.05a<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;36&#93;</a></sup> among other features. Bash can execute the vast majority of Bourne shell scripts without modification, with the exception of Bourne shell scripts stumbling into fringe syntax behavior interpreted differently in Bash or attempting to run a system command matching a newer Bash builtin, etc. Bash command syntax includes ideas drawn from the <a href="/wiki/Korn_shell" class="mw-redirect" title="Korn shell">Korn shell</a> (ksh) and the <a href="/wiki/C_shell" title="C shell">C shell</a> (csh) such as command line editing, <a href="/wiki/Command_history" title="Command history">command history</a> (<code>history</code> command),<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;37&#93;</a></sup> the directory stack, the <code>$RANDOM</code> and <code>$PPID</code> variables, and POSIX <a href="/wiki/Command_substitution" title="Command substitution">command substitution</a> syntax <code>$(…)</code>.
+</p><p>When a user presses the <a href="/wiki/Tab_key" title="Tab key">tab key</a> within an interactive command-shell, Bash automatically uses <a href="/wiki/Command_line_completion" class="mw-redirect" title="Command line completion">command line completion</a>, since beta version 2.04,<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;38&#93;</a></sup> to match partly typed program names, filenames and variable names. The Bash command-line completion system is very flexible and customizable, and is often packaged with functions that complete arguments and filenames for specific programs and tasks.
+</p><p>Bash's syntax has many extensions lacking in the Bourne shell. Bash can perform integer calculations ("arithmetic evaluation") without spawning external processes. It uses the <code>((…))</code> command and the <code>$((…))</code> variable syntax for this purpose. Its syntax simplifies <a href="/wiki/Redirection_(computing)" title="Redirection (computing)">I/O redirection</a>. For example, it can redirect <a href="/wiki/Standard_out" class="mw-redirect" title="Standard out">standard output</a> (stdout) and <a href="/wiki/Standard_error_stream" class="mw-redirect" title="Standard error stream">standard error</a> (stderr) at the same time using the <code>&amp;&gt;</code> operator. This is simpler to type than the Bourne shell equivalent '<code>command &gt; file 2&gt;&amp;1</code>'. Bash supports <a href="/wiki/Process_substitution" title="Process substitution">process substitution</a> using the <code>&lt;(command)</code> and <code>&gt;(command)</code>syntax, which substitutes the output of (or input to) a command where a filename is normally used. (This is implemented through <i>/proc/fd/</i> unnamed pipes on systems that support that, or via temporary <a href="/wiki/Named_pipe" title="Named pipe">named pipes</a> where necessary).
+</p><p>When using the 'function' keyword, Bash function declarations are not compatible with Bourne/Korn/POSIX scripts (the Korn shell has the same problem when using 'function'), but Bash accepts the same function declaration syntax as the Bourne and Korn shells, and is POSIX-conformant. Because of these and other differences, Bash shell scripts are rarely runnable under the Bourne or Korn shell interpreters unless deliberately written with that compatibility in mind, which is becoming less common as Linux becomes more widespread. But in POSIX mode, Bash conforms with POSIX more closely.<sup id="cite_ref-GNUBASHREF_39-0" class="reference"><a href="#cite_note-GNUBASHREF-39">&#91;39&#93;</a></sup>
+</p><p>Bash supports <a href="/wiki/Here_document" title="Here document">here documents</a>. Since version 2.05b Bash can redirect <a href="/wiki/Stdin" class="mw-redirect" title="Stdin">standard input</a> (stdin) from a "here string" using the <code>&lt;&lt;&lt;</code> operator.
+</p><p>Bash 3.0 supports in-process <a href="/wiki/Regular_expression" title="Regular expression">regular expression</a> matching using a syntax reminiscent of <a href="/wiki/Perl" title="Perl">Perl</a>.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;40&#93;</a></sup><sup id="cite_ref-41" class="reference"><a href="#cite_note-41">&#91;41&#93;</a></sup>
+</p><p>In February 2009,<sup id="cite_ref-42" class="reference"><a href="#cite_note-42">&#91;42&#93;</a></sup> Bash 4.0 introduced support for <a href="/wiki/Associative_arrays" class="mw-redirect" title="Associative arrays">associative arrays</a>.<sup id="cite_ref-GNUBASHREF_39-1" class="reference"><a href="#cite_note-GNUBASHREF-39">&#91;39&#93;</a></sup><sup id="cite_ref-43" class="reference"><a href="#cite_note-43">&#91;43&#93;</a></sup> Associative array indices are strings, in a manner similar to <a href="/wiki/AWK" title="AWK">AWK</a> or <a href="/wiki/Tcl" title="Tcl">Tcl</a>.  Numeric and multidimensional indices are treated as strings. Bash 4.x has not been integrated in newer version of MacOS due to license restrictions.<sup id="cite_ref-44" class="reference"><a href="#cite_note-44">&#91;44&#93;</a></sup> Associative array example:<sup id="cite_ref-45" class="reference"><a href="#cite_note-45">&#91;45&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="nb">declare</span> -A aa        <span class="c1"># declare an associative array &#39;aa&#39; faking a bi-dimensional indexed array</span>
+<span class="gp">$</span> <span class="nv">i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> <span class="nv">j</span><span class="o">=</span><span class="m">2</span>             <span class="c1"># initialize some indices</span>
+<span class="gp">$</span> aa<span class="o">[</span><span class="nv">$i</span>,<span class="nv">$j</span><span class="o">]=</span><span class="m">5</span>          <span class="c1"># associate value &quot;5&quot; to key &quot;$i,$j&quot; (i.e. the string &quot;1,2&quot;)</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="si">${</span><span class="nv">aa</span><span class="p">[</span><span class="nv">$i</span><span class="p">,</span><span class="nv">$j</span><span class="p">]</span><span class="si">}</span>    <span class="c1"># print the stored value at key &quot;$i,$j&quot;</span>
+<span class="go">5</span>
+</pre></div>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Brace_expansion">Brace expansion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=3" title="Edit section: Brace expansion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Brace expansion, also called alternation, is a feature copied from the <a href="/wiki/C_shell" title="C shell">C shell</a>. It generates a set of alternative combinations. Generated results need not exist as files. The results of each expanded string are not sorted and left to right order is preserved:
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> a<span class="o">{</span>p,c,d,b<span class="o">}</span>e
+<span class="go">ape ace ade abe</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span>a,b,c<span class="o">}{</span>d,e,f<span class="o">}</span>
+<span class="go">ad ae af bd be bf cd ce cf</span>
+</pre></div>
+<p>Users should not use brace expansions in portable shell scripts, because the <a href="/wiki/Bourne_shell" title="Bourne shell">Bourne shell</a> does not produce the same output.
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="c1"># A traditional shell does not produce the same output</span>
+<span class="gp">$</span> /bin/sh -c <span class="s1">&#39;echo a{p,c,d,b}e&#39;</span>
+<span class="go">a{p,c,d,b}e</span>
+</pre></div>
+<p>When brace expansion is combined with wildcards, the braces are expanded first, and then the resulting wildcards are substituted normally. Hence, a listing of JPEG and PNG images in the current directory could be obtained using:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>ls *.<span class="o">{</span>jpg,jpeg,png<span class="o">}</span>    <span class="c1"># expands to *.jpg *.jpeg *.png - after which,</span>
+                       <span class="c1"># the wildcards are processed</span>
+<span class="nb">echo</span> *.<span class="o">{</span>png,jp<span class="o">{</span>e,<span class="o">}</span>g<span class="o">}</span>   <span class="c1"># echo just show the expansions -</span>
+                       <span class="c1"># and braces in braces are possible.</span>
+</pre></div>
+<p>In addition to alternation, brace expansion can be used for sequential ranges between two integers or characters separated by double dots. Newer versions of Bash allow a third integer to specify the increment.
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span><span class="m">1</span>..10<span class="o">}</span>
+<span class="go">1 2 3 4 5 6 7 8 9 10</span>
+<span class="gp">$</span> <span class="nb">echo</span> file<span class="o">{</span><span class="m">1</span>..4<span class="o">}</span>.txt
+<span class="go">file1.txt file2.txt file3.txt file4.txt</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span>a..e<span class="o">}</span>
+<span class="go">a b c d e</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span><span class="m">1</span>..10..3<span class="o">}</span>
+<span class="go">1 4 7 10</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span>a..j..3<span class="o">}</span>
+<span class="go">a d g j</span>
+</pre></div>
+<p>When brace expansion is combined with variable expansion the variable expansion is performed <i>after</i> the brace expansion, which in some cases may necessitate the use of the <code>eval</code> built-in, thus:
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="nv">start</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> <span class="nv">end</span><span class="o">=</span><span class="m">10</span>
+<span class="gp">$</span> <span class="nb">echo</span> <span class="o">{</span><span class="nv">$start</span>..<span class="nv">$end</span><span class="o">}</span>  <span class="c1"># fails to expand due to the evaluation order</span>
+<span class="go">{1..10}</span>
+<span class="gp">$</span> <span class="nb">eval</span> <span class="nb">echo</span> <span class="o">{</span><span class="nv">$start</span>..<span class="nv">$end</span><span class="o">}</span> <span class="c1"># variable expansion occurs then resulting string is evaluated</span>
+<span class="go">1 2 3 4 5 6 7 8 9 10</span>
+</pre></div>
+<h3><span class="mw-headline" id="Startup_scripts">Startup scripts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=4" title="Edit section: Startup scripts">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="box-Howto plainlinks metadata ambox ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>contains <a href="/wiki/Wikipedia:What_Wikipedia_is_not#NOTHOWTO" title="Wikipedia:What Wikipedia is not">instructions, advice, or how-to content</a></b>.<span class="hide-when-compact"> The purpose of Wikipedia is to present facts, not to train. Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Bash_(Unix_shell)&amp;action=edit">improve this article</a> either by rewriting the how-to content or by <a href="https://meta.wikimedia.org/wiki/Help:Transwiki" class="extiw" title="m:Help:Transwiki">moving</a> it to <a href="https://en.wikiversity.org/wiki/" class="extiw" title="v:">Wikiversity</a>, <a href="https://en.wikibooks.org/wiki/" class="extiw" title="b:">Wikibooks</a> or <a href="https://en.wikivoyage.org/wiki/" class="extiw" title="voy:">Wikivoyage</a>.</span>  <small class="date-container"><i>(<span class="date">January 2019</span>)</i></small></div></td></tr></tbody></table>
+<p>When Bash starts, it executes the commands in a variety of <a href="/wiki/Hidden_file_and_hidden_directory#Unix_and_Unix-like_environments" title="Hidden file and hidden directory">dot files</a>. Though similar to Bash shell script commands, which have execute permission enabled and an <a href="/wiki/Interpreter_directive" title="Interpreter directive">interpreter directive</a> like <code>#!/bin/bash</code>, the initialization files used by Bash require neither.
+</p>
+<h4><span class="mw-headline" id="Execution_order_of_startup_files">Execution order of startup files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=5" title="Edit section: Execution order of startup files">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div style="margin: 1.5em 3em">
+<h5><span class="mw-headline" id="When_started_as_an_interactive_login_shell">When started as an interactive login shell</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=6" title="Edit section: When started as an interactive login shell">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Bash reads and executes <code>/etc/profile</code> (if it exists). (Often this file calls <code>/etc/bash.bashrc</code>.)
+</p><p>After reading that file, it looks for <code>~/.bash_profile</code>, <code>~/.bash_login</code>, and <code>~/.profile</code> <i>in that order</i>, and reads and executes the first one that exists and is readable.
+</p>
+<h5><span class="mw-headline" id="When_a_login_shell_exits">When a login shell exits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=7" title="Edit section: When a login shell exits">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Bash reads and executes <code>~/.bash_logout</code> (if it exists).
+</p>
+<h5><span id="When_started_as_an_interactive_shell_.28but_not_a_login_shell.29"></span><span class="mw-headline" id="When_started_as_an_interactive_shell_(but_not_a_login_shell)">When started as an interactive shell (but not a login shell)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=8" title="Edit section: When started as an interactive shell (but not a login shell)">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>Bash reads and executes <code>/etc/bash.bashrc</code> and then <code>~/.bashrc</code> (if it exists). This may be inhibited by using the <code>--norc</code> option. The <code>--rcfile file</code> option forces Bash to read and execute commands from <code>file</code> instead of <code>~/.bashrc</code>.
+</p>
+</div>
+<h4><span class="mw-headline" id="Comparison_with_the_Bourne_shell_and_csh_startup_sequences">Comparison with the Bourne shell and csh startup sequences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=9" title="Edit section: Comparison with the Bourne shell and csh startup sequences">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Elements of Bash derive from the <a href="/wiki/Bourne_shell" title="Bourne shell">Bourne shell</a> and <a href="/wiki/C_shell" title="C shell">csh</a>. These allow limited startup file sharing with the Bourne shell and provide some startup features familiar to csh users.
+</p>
+<div style="margin: 1.5em 3em">
+<h5><span class="mw-headline" id="Setting_inheritable_environment_variables">Setting inheritable environment variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=10" title="Edit section: Setting inheritable environment variables">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>The Bourne shell uses the <code>~/.profile</code> at login to set environment variables that subprocesses then inherit. Bash can use the <code>~/.profile</code> in a compatible way, by executing it explicitly from the Bash-specific <code>~/.bash_profile</code> or <code>~/.bash_login</code> with the line below. Bash-specific syntax can be kept out of the <code>~/.profile</code> to keep the latter compatible with the Bourne shell.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>. ~/.profile
+</pre></div>
+<h5><span class="mw-headline" id="Aliases_and_functions">Aliases and functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=11" title="Edit section: Aliases and functions">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>These two facilities, <a href="/wiki/Alias_(command)" title="Alias (command)">aliases</a> from <i>csh</i> and the more general functions that largely supersede them from Bourne shell, were not typically inheritable from the login shell, and had to be redefined in each subshell spawned from the login shell. Although there is an <code>ENV</code> environment variable that could be applied to the problem, both <i>csh</i> and Bash support per-subshell startup files that address it directly. In Bash, the <code>~/.bashrc</code> is called for interactive subshells. If user-defined functions from the <code>~/.bashrc</code> are desired in the login shell as well, the <code>~/.bash_login</code> can include the line below after any setting up of environment variables:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>. ~/.bashrc
+</pre></div>
+<h5><span class="mw-headline" id="Commands_performed_only_at_login_and_logout">Commands performed only at login and logout</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=12" title="Edit section: Commands performed only at login and logout">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>The <i>csh</i> supports a <code>~/.login</code> file for purposes of tasks performed only during initial login, such as displaying system load, disk status, whether email has come in, logging the login time, etc. The Bourne shell can emulate this in the <code>~/.profile</code>, but does not predefine a file name. To achieve similar semantics to the csh model, the <code>~/.bash_profile</code> can contain the line below, after the environment setup and function setup:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>. ~/.bash_login
+</pre></div>
+<p>Likewise, the <i>csh</i> has a <code>~/.logout</code> file run only when the login shell exits. The Bash equivalent is <code>~/.bash_logout</code>, and requires no special setup. In the Bourne shell, the <a href="/wiki/Trap_(computing)" title="Trap (computing)"><code>trap</code></a> built-in can be used to achieve a similar effect.
+</p>
+</div>
+<h5><span class="mw-headline" id="Legacy-compatible_Bash_startup_example">Legacy-compatible Bash startup example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=13" title="Edit section: Legacy-compatible Bash startup example">edit</a><span class="mw-editsection-bracket">]</span></span></h5>
+<p>The skeleton <code>~/.bash_profile</code> below is compatible with the Bourne shell and gives semantics similar to csh for the <code>~/.bashrc</code> and <code>~/.bash_login</code>. The <code>[ -r <i>filename</i> ]</code> are tests to see if the <i>filename</i> exists and is readable, simply skipping the part after the <code>&amp;&amp;</code> if it is not.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="o">[</span> -r ~/.profile <span class="o">]</span> <span class="o">&amp;&amp;</span> . ~/.profile             <span class="c1"># set up environment, once, Bourne-sh syntax only</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&quot;</span><span class="nv">$PS1</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>                       <span class="c1"># are we interactive?</span>
+   <span class="o">[</span> -r ~/.bashrc     <span class="o">]</span> <span class="o">&amp;&amp;</span> . ~/.bashrc        <span class="c1"># tty/prompt/function setup for interactive shells</span>
+   <span class="o">[</span> -r ~/.bash_login <span class="o">]</span> <span class="o">&amp;&amp;</span> . ~/.bash_login    <span class="c1"># any at-login tasks for login shell only</span>
+<span class="k">fi</span>                                            <span class="c1"># End of &quot;if&quot; block</span>
+</pre></div>
+<h4><span class="mw-headline" id="Operating_system_issues_in_Bash_startup">Operating system issues in Bash startup</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=14" title="Edit section: Operating system issues in Bash startup">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Some versions of <a href="/wiki/Unix" title="Unix">Unix</a> and <a href="/wiki/Linux" title="Linux">Linux</a> contain Bash system startup scripts, generally under the <code>/etc</code> directories. Bash calls these as part of its standard initialization, but other startup files can read them in a different order than the documented Bash startup sequence. The default content of the root user's files may also have issues, as well as the skeleton files the system provides to new user accounts upon setup. The startup scripts that launch the <a href="/wiki/X_window_system" class="mw-redirect" title="X window system">X window system</a> may also do surprising things with the user's Bash startup scripts in an attempt to set up user-environment variables before launching the <a href="/wiki/Window_manager" title="Window manager">window manager</a>. These issues can often be addressed using a <code>~/.xsession</code> or <code>~/.xprofile</code> file to read the <code>~/.profile</code> — which provides the environment variables that Bash shell windows spawned from the window manager need, such as <a href="/wiki/Xterm" title="Xterm">xterm</a> or <a href="/wiki/Gnome_Terminal" class="mw-redirect" title="Gnome Terminal">Gnome Terminal</a>.
+</p>
+<h3><span class="mw-headline" id="Portability">Portability</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=15" title="Edit section: Portability">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Invoking Bash with the <code>--posix</code> option or stating <code>set -o posix</code> in a script causes Bash to conform very closely to the <a href="/wiki/Posix#POSIX.2" class="mw-redirect" title="Posix">POSIX 1003.2 standard</a>.<sup id="cite_ref-tldp_46-0" class="reference"><a href="#cite_note-tldp-46">&#91;46&#93;</a></sup>
+Bash shell scripts intended for <a href="/wiki/Portability_(computer_science)" class="mw-redirect" title="Portability (computer science)">portability</a> should at least take into account the Bourne shell it intends to replace. Bash has certain features that the traditional Bourne shell lacks. They include:<sup id="cite_ref-tldp_46-1" class="reference"><a href="#cite_note-tldp-46">&#91;46&#93;</a></sup>
+</p>
+<ul><li>Certain extended invocation options</li>
+<li>Command substitution using $( ) notation (this feature is part of the POSIX 1003.2 standard though)</li>
+<li>Brace expansion</li>
+<li>Certain array operations, and associative arrays</li>
+<li>The double brackets extended test construct</li>
+<li>The double-parentheses arithmetic-evaluation construct</li>
+<li>Certain string-manipulation operations</li>
+<li>Process substitution</li>
+<li>A Regular Expression matching operator</li>
+<li>Bash-specific builtins</li>
+<li><a href="/wiki/Coprocess" title="Coprocess">Coprocesses</a></li></ul>
+<p>A "bashism" is a portion of bash code that does not run properly on other Unix shells.<sup id="cite_ref-47" class="reference"><a href="#cite_note-47">&#91;47&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Keyboard_shortcuts">Keyboard shortcuts</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=16" title="Edit section: Keyboard shortcuts">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/GNU_Readline" title="GNU Readline">GNU Readline</a></div>
+<p>Bash uses readline to provide keyboard shortcuts for command line editing using the default (<a href="/wiki/Emacs" title="Emacs">Emacs</a>) key bindings. <a href="/wiki/Vi-binding" class="mw-redirect" title="Vi-binding">Vi-bindings</a> can be enabled by running <code>set -o vi</code>.<sup id="cite_ref-48" class="reference"><a href="#cite_note-48">&#91;48&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Process_management">Process management</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=17" title="Edit section: Process management">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Bash shell has two modes of execution for commands: <a href="/wiki/Batch_(Unix)" class="mw-redirect" title="Batch (Unix)">batch</a>, and concurrent mode.
+</p><p>To execute commands in batch (i.e., in sequence) they must be separated by the character ";", or on separate lines:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>command1<span class="p">;</span> command2
+</pre></div>
+<p>in this example, when command1 is finished, command2 is executed.
+</p><p>A <a href="/w/index.php?title=Background_execution&amp;action=edit&amp;redlink=1" class="new" title="Background execution (page does not exist)">background execution</a> of command1 can occur using (symbol &amp;) at the end of an execution command, and process will be executed in background returning immediately control to the shell and allowing continued execution of commands.
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>command1 <span class="p">&amp;</span>
+</pre></div>
+<p>Or to have a concurrent execution of two command1 and command2, they must be executed in the Bash shell in the following way:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span>command1 <span class="p">&amp;</span> command2
+</pre></div>
+<p>In this case command1 is executed in the background <i>&amp;</i> symbol, returning immediately control to the shell that executes command2 in the foreground.
+</p><p>A process can be stopped and returned control to bash by typing <kbd class="keyboard-key nowrap" style="border: 1px solid #aaa; -moz-border-radius: 0.2em; -webkit-border-radius: 0.2em; border-radius: 0.2em; -moz-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); -webkit-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); color: #000; padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">Ctrl</kbd>+<kbd class="keyboard-key nowrap" style="border: 1px solid #aaa; -moz-border-radius: 0.2em; -webkit-border-radius: 0.2em; border-radius: 0.2em; -moz-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); -webkit-box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1); background-color: #f9f9f9; background-image: -moz-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -o-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: -webkit-linear-gradient(top, #eee, #f9f9f9, #eee); background-image: linear-gradient(to bottom, #eee, #f9f9f9, #eee); color: #000; padding: 0.1em 0.3em; font-family: inherit; font-size: 0.85em;">z</kbd> while the process is running in the foreground.<sup id="cite_ref-49" class="reference"><a href="#cite_note-49">&#91;49&#93;</a></sup>
+</p><p>A list of all processes, both in the background and stopped, can be achieved by running <code>jobs</code>:
+</p>
+<div class="mw-highlight mw-highlight-lang-console mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">$</span> <span class="nb">jobs</span>
+<span class="go">[1]-  Running                  command1 &amp;</span>
+<span class="go">[2]+  Stopped                  command2</span>
+</pre></div>
+<p>In the output, the number in brackets refers to the job id. The plus sign signifies the default process for <code>bg</code> and <code>fg</code>. The text "Running" and "Stopped" refer to the <a href="/wiki/Process_state" title="Process state">Process state</a>. The last string is the command that started the process. 
+</p><p>The state of a process can be changed using various commands. The <code>fg</code> command brings a process to the foreground, while the <code>bg</code> sets a stopped process running in the background. <code>bg</code> and <code>fg</code> can take a job id as their first argument, to specify the process to act on. Without one, they use the default process, identified by a plus sign in the output of <code>jobs</code>. The <code><a href="/wiki/Kill_(command)" title="Kill (command)">kill</a></code> command can be used to end a process prematurely, by sending it a <a href="/wiki/Signal_(IPC)" title="Signal (IPC)">signal</a>. The job id must be specified after a percent sign:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">kill</span> -s SIGKILL %1 or <span class="nb">kill</span> -9 %1
+</pre></div>
+<h3><span class="mw-headline" id="Conditional_execution">Conditional execution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=18" title="Edit section: Conditional execution">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Bash supplies "conditional execution" command separators that make execution of a command contingent on the <a href="/wiki/Exit_status" title="Exit status">exit code</a> set by a precedent command. For example:
+</p>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$SOMEWHERE</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> ./do_something <span class="o">||</span> <span class="nb">echo</span> <span class="s2">&quot;An error occurred&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+</pre></div>
+<p>Where <i>./do_something</i> is only executed if the <i>cd</i> (change directory) command was "successful" (returned an exit status of zero) and the <i>echo</i> command would only be executed if either the <i>cd</i> or the <i>./do_something</i> command return an "error" (non-zero exit status).
+</p><p>For all commands the exit status is stored in the special variable <code>$?</code>. Bash also supports <code class="mw-highlight mw-highlight-lang-bash" id="" style="" dir="ltr"><span class="k">if</span> ...<span class="p">;</span><span class="k">then</span> ...<span class="p">;</span><span class="k">else</span> ...<span class="p">;</span><span class="k">fi</span></code> and <code class="mw-highlight mw-highlight-lang-bash" id="" style="" dir="ltr"><span class="k">case</span> <span class="nv">$VARIABLE</span> in <span class="nv">$pattern</span><span class="o">)</span>...<span class="p">;;</span><span class="nv">$other_pattern</span><span class="o">)</span>...<span class="p">;;</span> <span class="k">esac</span></code> forms of conditional command evaluation.
+</p>
+<h3><span class="mw-headline" id="Bug_reporting">Bug reporting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=19" title="Edit section: Bug reporting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">"bashbug" redirects here. For the widely reported September 2014 bug found in Bash, see <a href="/wiki/Shellshock_(software_bug)" title="Shellshock (software bug)">Shellshock (software bug)</a>.</div>
+<p>An external command called <i>bashbug</i> reports Bash shell bugs. When the command is invoked, it brings up the user's default editor with a form to fill in. The form is mailed to the Bash maintainers (or optionally to other email addresses).<sup id="cite_ref-50" class="reference"><a href="#cite_note-50">&#91;50&#93;</a></sup><sup id="cite_ref-51" class="reference"><a href="#cite_note-51">&#91;51&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Programmable_completion">Programmable completion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=20" title="Edit section: Programmable completion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Bash programmable completion, <code>complete</code> and <code>compgen</code> commands<sup id="cite_ref-52" class="reference"><a href="#cite_note-52">&#91;52&#93;</a></sup> have been available since the beta version of 2.04<sup id="cite_ref-53" class="reference"><a href="#cite_note-53">&#91;53&#93;</a></sup> in 2000<sup id="cite_ref-54" class="reference"><a href="#cite_note-54">&#91;54&#93;</a></sup> and offers at least Pathname and filename completion.
+</p>
+<h2><span class="mw-headline" id="Release_History">Release History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=21" title="Edit section: Release History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+
+<tbody><tr>
+<th>VERSION
+</th>
+<th>RELEASE DATE
+</th></tr>
+<tr>
+<td>bash-5.0
+</td>
+<td>2019-01-07
+</td></tr>
+<tr>
+<td>bash-5.0-rc1
+</td>
+<td>2018-12-20
+</td></tr>
+<tr>
+<td>bash-5.0-beta2
+</td>
+<td>2018-11-28
+</td></tr>
+<tr>
+<td>bash-5.0-beta
+</td>
+<td>2018-09-17
+</td></tr>
+<tr>
+<td>bash-5.0-alpha
+</td>
+<td>2018-05-22
+</td></tr>
+<tr>
+<td>bash-4.4
+</td>
+<td>2016-09-15
+</td></tr>
+<tr>
+<td>bash-4.4-rc2
+</td>
+<td>2016-08-22
+</td></tr>
+<tr>
+<td>bash-4.4-rc1
+</td>
+<td>2016-02-24
+</td></tr>
+<tr>
+<td>bash-4.4-beta2
+</td>
+<td>2016-07-11
+</td></tr>
+<tr>
+<td>bash-4.4-beta
+</td>
+<td>2015-10-12
+</td></tr>
+<tr>
+<td>bash-4.3
+</td>
+<td>2014-02-26
+</td></tr>
+<tr>
+<td>bash-4.2
+</td>
+<td>2011-02-13
+</td></tr>
+<tr>
+<td>bash-4.1
+</td>
+<td>2009-12-31
+</td></tr>
+<tr>
+<td>bash-4.0
+</td>
+<td>2009-02-20
+</td></tr>
+<tr>
+<td>bash-4.0-rc1
+</td>
+<td>2009-01-12
+</td></tr>
+<tr>
+<td>bash-3.2
+</td>
+<td>2006-10-11
+</td></tr>
+<tr>
+<td>bash-3.1
+</td>
+<td>2005-12-08
+</td></tr>
+<tr>
+<td>bash-3.0
+</td>
+<td>2004-08-03
+</td></tr>
+<tr>
+<td>bash-2.05b
+</td>
+<td>2002-07-17
+</td></tr>
+<tr>
+<td>bash-2.05a
+</td>
+<td>2001-11-16
+</td></tr>
+<tr>
+<td>bash-2.05
+</td>
+<td>2001-04-09
+</td></tr>
+<tr>
+<td>bash-2.04
+</td>
+<td>2000-03-21
+</td></tr>
+<tr>
+<td>bash-2.03
+</td>
+<td>1999-02-19
+</td></tr>
+<tr>
+<td>bash-2.02
+</td>
+<td>1998-04-18
+</td></tr>
+<tr>
+<td>bash-2.01
+</td>
+<td>1997-06-05
+</td></tr>
+<tr>
+<td>bash-2.0
+</td>
+<td>1996-12-31
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=22" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r936637989">.mw-parser-output .portal{border:solid #aaa 1px;padding:0}.mw-parser-output .portal.tleft{margin:0.5em 1em 0.5em 0}.mw-parser-output .portal.tright{margin:0.5em 0 0.5em 1em}.mw-parser-output .portal>ul{display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold}.mw-parser-output .portal>ul>li{display:table-row}.mw-parser-output .portal>ul>li>span:first-child{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portal>ul>li>span:last-child{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}</style><div role="navigation" aria-label="Portals" class="noprint portal plainlist tright">
+<ul>
+<li><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span><a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Free and open-source software portal</a></span></li></ul></div>
+<ul><li><a href="/wiki/Comparison_of_command_shells" title="Comparison of command shells">Comparison of command shells</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=23" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://ftp.gnu.org/gnu/bash/">"Index of /gnu/bash"</a>. <i>ftp.gnu.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 19,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ftp.gnu.org&amp;rft.atitle=Index+of+%2Fgnu%2Fbash&amp;rft_id=https%3A%2F%2Fftp.gnu.org%2Fgnu%2Fbash%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web">Ramey, Chet (January 7, 2019). <a rel="nofollow" class="external text" href="https://lists.gnu.org/archive/html/bug-bash/2019-01/msg00063.html">"Bash-5.0 release available"</a>. <i>lists.gnu.org</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20190109012010/http://lists.gnu.org/archive/html/bug-bash/2019-01/msg00063.html">Archived</a> from the original on January 8, 2019<span class="reference-accessdate">. Retrieved <span class="nowrap">March 19,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=lists.gnu.org&amp;rft.atitle=Bash-5.0+release+available&amp;rft.date=2019-01-07&amp;rft.aulast=Ramey&amp;rft.aufirst=Chet&amp;rft_id=https%3A%2F%2Flists.gnu.org%2Farchive%2Fhtml%2Fbug-bash%2F2019-01%2Fmsg00063.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20180901171316/ftp://ftp.cwru.edu/pub/bash/FAQ">"Bash FAQ, version 4.14"</a>. Archived from <a rel="nofollow" class="external text" href="ftp://ftp.cwru.edu/pub/bash/FAQ">the original</a> on September 1, 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">April 9,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bash+FAQ%2C+version+4.14&amp;rft_id=ftp%3A%2F%2Fftp.cwru.edu%2Fpub%2Fbash%2FFAQ&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/Microsoft/BashOnWindows/issues/107">"Missing source code - GPL compliance? · Issue #107 · Microsoft/WSL"</a>. <i>GitHub</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GitHub&amp;rft.atitle=Missing+source+code+-+GPL+compliance%3F+%C2%B7+Issue+%23107+%C2%B7+Microsoft%2FWSL&amp;rft_id=https%3A%2F%2Fgithub.com%2FMicrosoft%2FBashOnWindows%2Fissues%2F107&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.softpedia.com/get/System/System-Miscellaneous/GNU-Bash.shtml">"GNU Bash"</a>. <i><a href="/wiki/Softpedia" title="Softpedia">Softpedia</a></i>. SoftNews<span class="reference-accessdate">. Retrieved <span class="nowrap">April 9,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Softpedia&amp;rft.atitle=GNU+Bash&amp;rft_id=http%3A%2F%2Fwww.softpedia.com%2Fget%2FSystem%2FSystem-Miscellaneous%2FGNU-Bash.shtml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-license-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-license_6-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a href="/wiki/GNU_Project" title="GNU Project">GNU Project</a>. <a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/">"README file"</a>. <q>Bash is free software, distributed under the terms of the [GNU] General Public License as published by the Free Software Foundation, version 3 of the License (or any later version).</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=README+file&amp;rft.au=GNU+Project&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fbash%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-GNUBSD-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-GNUBSD_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-GNUBSD_7-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-GNUBSD_7-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation newsgroup"><a href="/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a> (forwarded with comments by Chet Ramey) (February 10, 1988). <a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!original/comp.unix.questions/iNjWwkyroR8/yedr9yDWSuQJ">"GNU + BSD =&#160;?"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:comp.unix.questions">comp.unix.questions</a>. <a href="/wiki/Usenet" title="Usenet">Usenet:</a>&#160;<a rel="nofollow" class="external text" href="news:2362@mandrill.CWRU.Edu">2362@mandrill.CWRU.Edu</a><span class="reference-accessdate">. Retrieved <span class="nowrap">March 22,</span> 2011</span>. <q>For a year and a half, the GNU shell was "just about done". The author made repeated promises to deliver what he had done, and never kept them. Finally I could no longer believe he would ever deliver anything. So Foundation staff member Brian Fox is now implementing an imitation of the Bourne shell.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=GNU+%2B+BSD+%3D+%3F&amp;rft.pub=comp.unix.questions&amp;rft.date=1988-02-10&amp;rft_id=news%3A2362%40mandrill.CWRU.Edu&amp;rft.au=Richard+Stallman+%28forwarded+with+comments+by+Chet+Ramey%29&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fforum%2F%23%21original%2Fcomp.unix.questions%2FiNjWwkyroR8%2Fyedr9yDWSuQJ&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">
+<cite id="CITEREFHamilton2008" class="citation">Hamilton, Naomi (May 30, 2008), <a rel="nofollow" class="external text" href="http://www.computerworld.com.au/article/222764/a-z_programming_languages_bash_bourne-again_shell/?pp=2&amp;fp=16&amp;fpid=1">"The A-Z of Programming Languages: BASH/Bourne-Again Shell"</a>, <i>Computerworld</i>: 2<span class="reference-accessdate">, retrieved <span class="nowrap">March 21,</span> 2011</span>, <q>When Richard Stallman decided to create a full replacement for the then-encumbered Unix systems, he knew that he would eventually have to have replacements for all of the common utilities, especially the standard shell, and those replacements would have to have acceptable licensing.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Computerworld&amp;rft.atitle=The+A-Z+of+Programming+Languages%3A+BASH%2FBourne-Again+Shell&amp;rft.pages=2&amp;rft.date=2008-05-30&amp;rft.aulast=Hamilton&amp;rft.aufirst=Naomi&amp;rft_id=http%3A%2F%2Fwww.computerworld.com.au%2Farticle%2F222764%2Fa-z_programming_languages_bash_bourne-again_shell%2F%3Fpp%3D2%26fp%3D16%26fpid%3D1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-BashBeta-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-BashBeta_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-BashBeta_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation newsgroup">Brian Fox (forwarded by Leonard H. Tower Jr.) (June 8, 1989). <a rel="nofollow" class="external text" href="https://groups.google.com/group/gnu.announce/msg/a509f48ffb298c35?hl=en">"Bash is in beta release!"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:gnu.announce">gnu.announce</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 28,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bash+is+in+beta+release%21&amp;rft.pub=gnu.announce&amp;rft.date=1989-06-08&amp;rft.au=Brian+Fox+%28forwarded+by+Leonard+H.+Tower+Jr.%29&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fgnu.announce%2Fmsg%2Fa509f48ffb298c35%3Fhl%3Den&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.windowscentral.com/how-install-bash-shell-command-line-windows-10">"How to install Bash shell command-line tool on Windows 10"</a>. September 28, 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=How+to+install+Bash+shell+command-line+tool+on+Windows+10&amp;rft.date=2016-09-28&amp;rft_id=http%3A%2F%2Fwww.windowscentral.com%2Fhow-install-bash-shell-command-line-windows-10&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://docs.oracle.com/cd/E23824_01/html/E24456/userenv-1.html">"User Environment Feature Changes"</a>. Oracle.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=User+Environment+Feature+Changes&amp;rft.pub=Oracle&amp;rft_id=https%3A%2F%2Fdocs.oracle.com%2Fcd%2FE23824_01%2Fhtml%2FE24456%2Fuserenv-1.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ddj.com/cpp/184404693">C Programming</a> by Al Stevens, <a href="/wiki/Dr._Dobb%27s_Journal" title="Dr. Dobb&#39;s Journal">Dr. Dobb's Journal</a>, July 1, 2001</span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a href="/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a> (November 12, 2010). <a rel="nofollow" class="external text" href="https://www.gnu.org/gnu/thegnuproject.html">"About the GNU Project"</a>. <a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110424064815/https://www.gnu.org/gnu/thegnuproject.html">Archived</a> from the original on April 24, 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">March 13,</span> 2011</span>. <q>"Bourne Again Shell" is a play on the name <i>Bourne Shell</i>, which was the usual shell on Unix.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=About+the+GNU+Project&amp;rft.pub=Free+Software+Foundation&amp;rft.date=2010-11-12&amp;rft.au=Richard+Stallman&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fgnu%2Fthegnuproject.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">
+<cite id="CITEREFGattol2011" class="citation">Gattol, Markus (March 13, 2011), <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110309092607/http://www.markus-gattol.name/ws/bash.html"><i>Bourne-again Shell</i></a>, archived from <a rel="nofollow" class="external text" href="http://www.markus-gattol.name/ws/bash.html">the original</a> on March 9, 2011<span class="reference-accessdate">, retrieved <span class="nowrap">March 13,</span> 2011</span>, <q>The name is a pun on the name of the Bourne shell (sh), an early and important Unix shell written by Stephen Bourne and distributed with Version 7 Unix circa 1978, and the concept of being "born again".</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Bourne-again+Shell&amp;rft.date=2011-03-13&amp;rft.aulast=Gattol&amp;rft.aufirst=Markus&amp;rft_id=http%3A%2F%2Fwww.markus-gattol.name%2Fws%2Fbash.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Seclists-20141004-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Seclists-20141004_15-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Chazelas, Stephane (October 4, 2014). <a rel="nofollow" class="external text" href="http://seclists.org/oss-sec/2014/q4/102">"oss-sec mailing list archives"</a>. <i>Seclists.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">October 4,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Seclists.org&amp;rft.atitle=oss-sec+mailing+list+archives&amp;rft.date=2014-10-04&amp;rft.aulast=Chazelas&amp;rft.aufirst=Stephane&amp;rft_id=http%3A%2F%2Fseclists.org%2Foss-sec%2F2014%2Fq4%2F102&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-TR-20140924-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-TR-20140924_16-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Leyden, John (September 24, 2014). <a rel="nofollow" class="external text" href="https://www.theregister.co.uk/2014/09/24/bash_shell_vuln/">"Patch Bash NOW: 'Shell Shock' bug blasts OS X, Linux systems wide open"</a>. <i><a href="/wiki/The_Register" title="The Register">The Register</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">September 25,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Register&amp;rft.atitle=Patch+Bash+NOW%3A+%27Shell+Shock%27+bug+blasts+OS+X%2C+Linux+systems+wide+open&amp;rft.date=2014-09-24&amp;rft.aulast=Leyden&amp;rft.aufirst=John&amp;rft_id=https%3A%2F%2Fwww.theregister.co.uk%2F2014%2F09%2F24%2Fbash_shell_vuln%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-NYT-20140925-NP-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-NYT-20140925-NP_17-0">^</a></b></span> <span class="reference-text"><cite class="citation news">Perlroth, Nicole (September 25, 2014). <a rel="nofollow" class="external text" href="https://www.nytimes.com/2014/09/26/technology/security-experts-expect-shellshock-software-bug-to-be-significant.html">"Security Experts Expect 'Shellshock' Software Bug in Bash to Be Significant"</a>. <i><a href="/wiki/The_New_York_Times" title="The New York Times">The New York Times</a></i><span class="reference-accessdate">. Retrieved <span class="nowrap">September 25,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=The+New+York+Times&amp;rft.atitle=Security+Experts+Expect+%E2%80%98Shellshock%E2%80%99+Software+Bug+in+Bash+to+Be+Significant&amp;rft.date=2014-09-25&amp;rft.aulast=Perlroth&amp;rft.aufirst=Nicole&amp;rft_id=https%3A%2F%2Fwww.nytimes.com%2F2014%2F09%2F26%2Ftechnology%2Fsecurity-experts-expect-shellshock-software-bug-to-be-significant.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-ZDN-20140929-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-ZDN-20140929_18-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Seltzer, Larry (September 29, 2014). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160514191755/http://www.zdnet.com/article/hackers-jump-on-the-shellshock-bash-bandwagon/">"Shellshock makes Heartbleed look insignificant"</a>. <i><a href="/wiki/ZDNet" title="ZDNet">ZDNet</a></i>. Archived from <a rel="nofollow" class="external text" href="https://www.zdnet.com/shellshock-makes-heartbleed-look-insignificant-7000034143/">the original</a> on May 14, 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ZDNet&amp;rft.atitle=Shellshock+makes+Heartbleed+look+insignificant&amp;rft.date=2014-09-29&amp;rft.aulast=Seltzer&amp;rft.aufirst=Larry&amp;rft_id=http%3A%2F%2Fwww.zdnet.com%2Fshellshock-makes-heartbleed-look-insignificant-7000034143%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text">
+<cite id="CITEREFBrian_Fox1996" class="citation">Brian Fox (August 29, 1996), <a rel="nofollow" class="external text" href="http://ftp.gnu.org/gnu/bash/bash-1.14.7.tar.gz"><i>shell.c</i></a>, <a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a>, <q>Birthdate: Sunday, January 10th, 1988. Initial author: Brian Fox</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=shell.c&amp;rft.pub=Free+Software+Foundation&amp;rft.date=1996-08-29&amp;rft.au=Brian+Fox&amp;rft_id=http%3A%2F%2Fftp.gnu.org%2Fgnu%2Fbash%2Fbash-1.14.7.tar.gz&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a href="/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a> (October 3, 2010). <a rel="nofollow" class="external text" href="https://www.gnu.org/gnu/thegnuproject.html">"About the GNU Project"</a>. <a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110424064815/https://www.gnu.org/gnu/thegnuproject.html">Archived</a> from the original on April 24, 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">March 21,</span> 2011</span>. <q>Free Software Foundation employees have written and maintained a number of GNU software packages. Two notable ones are the C library and the shell. … We funded development of these programs because the GNU Project was not just about tools or a development environment. Our goal was a complete operating system, and these programs were needed for that goal.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=About+the+GNU+Project&amp;rft.pub=Free+Software+Foundation&amp;rft.date=2010-10-03&amp;rft.au=Richard+Stallman&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fgnu%2Fthegnuproject.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text">
+<cite class="citation newsgroup">len (g...@prep.ai.mit.edu) (April 20, 1993). <a rel="nofollow" class="external text" href="https://groups.google.com/group/gnu.misc.discuss/msg/4f42c739cd7e8bd8">"January 1993 GNU's Bulletin"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:gnu.announce">gnu.announce</a>. <a href="/wiki/Usenet" title="Usenet">Usenet:</a>&#160;<a rel="nofollow" class="external text" href="news:gnusenet930421bulletin@prep.ai.mit.edu">gnusenet930421bulletin@prep.ai.mit.edu</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 28,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=January+1993+GNU%27s+Bulletin&amp;rft.pub=gnu.announce&amp;rft.date=1993-04-20&amp;rft_id=news%3Agnusenet930421bulletin%40prep.ai.mit.edu&amp;rft.au=len+%28g...%40prep.ai.mit.edu%29&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fgnu.misc.discuss%2Fmsg%2F4f42c739cd7e8bd8&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Bourne_shell_grammar-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bourne_shell_grammar_22-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Ramey, Chet (August 1, 1994). <a rel="nofollow" class="external text" href="http://www.linuxjournal.com/article/2800#N0xa50890.0xb46380">"Bash - the GNU shell (Reflections and Lessons Learned)"</a>. <i><a href="/wiki/Linux_Journal" title="Linux Journal">Linux Journal</a></i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20081205082152/http://www.linuxjournal.com/article/2800">Archived</a> from the original on December 5, 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">November 13,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Linux+Journal&amp;rft.atitle=Bash+-+the+GNU+shell+%28Reflections+and+Lessons+Learned%29&amp;rft.date=1994-08-01&amp;rft.aulast=Ramey&amp;rft.aufirst=Chet&amp;rft_id=http%3A%2F%2Fwww.linuxjournal.com%2Farticle%2F2800%23N0xa50890.0xb46380&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text">
+<cite id="CITEREFChet_Ramey2010" class="citation">Chet Ramey (October 31, 2010), <a rel="nofollow" class="external text" href="https://www.scribd.com/doc/40556434/2010-10-31-Chet-Ramey-Early-Bash-Dates"><i>Dates in your Computerworld interview</i></a><span class="reference-accessdate">, retrieved <span class="nowrap">October 31,</span> 2010</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Dates+in+your+Computerworld+interview&amp;rft.date=2010-10-31&amp;rft.au=Chet+Ramey&amp;rft_id=https%3A%2F%2Fwww.scribd.com%2Fdoc%2F40556434%2F2010-10-31-Chet-Ramey-Early-Bash-Dates&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text">
+<cite class="citation newsgroup">Chet Ramey (June 12, 1989). <a rel="nofollow" class="external text" href="https://groups.google.com/group/gnu.bash.bug/msg/1fc7b688f5d44438?hl=en">"Bash 0.99 fixes &amp; improvements"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:gnu.bash.bug">gnu.bash.bug</a><span class="reference-accessdate">. Retrieved <span class="nowrap">November 1,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bash+0.99+fixes+%26+improvements&amp;rft.pub=gnu.bash.bug&amp;rft.date=1989-06-12&amp;rft.au=Chet+Ramey&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fgnu.bash.bug%2Fmsg%2F1fc7b688f5d44438%3Fhl%3Den&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text">
+<cite class="citation newsgroup">Chet Ramey (July 24, 1989). <a rel="nofollow" class="external text" href="https://groups.google.com/group/gnu.bash.bug/msg/072a03645663caea?hl=en">"Some bash-1.02 fixes"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:gnu.bash.bug">gnu.bash.bug</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 30,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Some+bash-1.02+fixes&amp;rft.pub=gnu.bash.bug&amp;rft.date=1989-07-24&amp;rft.au=Chet+Ramey&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fgnu.bash.bug%2Fmsg%2F072a03645663caea%3Fhl%3Den&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text">
+<cite class="citation newsgroup">Brian Fox (March 2, 1990). <a rel="nofollow" class="external text" href="https://groups.google.com/group/gnu.bash.bug/msg/e6112ccc8866e2f4?hl=en">"Availability of bash 1.05"</a>. <a href="/wiki/Usenet_newsgroup" title="Usenet newsgroup">Newsgroup</a>:&#160;<a rel="nofollow" class="external text" href="news:gnu.bash.bug">gnu.bash.bug</a><span class="reference-accessdate">. Retrieved <span class="nowrap">October 30,</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Availability+of+bash+1.05&amp;rft.pub=gnu.bash.bug&amp;rft.date=1990-03-02&amp;rft.au=Brian+Fox&amp;rft_id=https%3A%2F%2Fgroups.google.com%2Fgroup%2Fgnu.bash.bug%2Fmsg%2Fe6112ccc8866e2f4%3Fhl%3Den&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text">
+<cite class="citation book">Bresnahan, Christine; Blum, Richard (April 2015). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=2P3zBgAAQBAJ&amp;pg=PA5&amp;dq=%22most+popular%22+linux+shell&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwiDhpnX4JPNAhWCKGMKHQCmCoEQ6AEIRjAH#v=onepage&amp;q=%22most%20popular%22%20linux%20shell&amp;f=false"><i>CompTIA Linux+ Powered by Linux Professional Institute Study Guide: Exam LX0-103 and Exam LX0-104</i></a> (3rd ed.). John Wiley &amp; Sons, Inc. p.&#160;5. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-119-02122-3" title="Special:BookSources/978-1-119-02122-3"><bdi>978-1-119-02122-3</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 6,</span> 2016</span>. <q>In Linux, most users run bash because it is the most popular shell.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CompTIA+Linux%2B+Powered+by+Linux+Professional+Institute+Study+Guide%3A+Exam+LX0-103+and+Exam+LX0-104&amp;rft.pages=5&amp;rft.edition=3rd&amp;rft.pub=John+Wiley+%26+Sons%2C+Inc.&amp;rft.date=2015-04&amp;rft.isbn=978-1-119-02122-3&amp;rft.aulast=Bresnahan&amp;rft.aufirst=Christine&amp;rft.au=Blum%2C+Richard&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D2P3zBgAAQBAJ%26pg%3DPA5%26dq%3D%2522most%2Bpopular%2522%2Blinux%2Bshell%26hl%3Den%26sa%3DX%26ved%3D0ahUKEwiDhpnX4JPNAhWCKGMKHQCmCoEQ6AEIRjAH%23v%3Donepage%26q%3D%2522most%2520popular%2522%2520linux%2520shell%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text">
+<cite class="citation book">Danesh, Arman; Jang, Michael (February 2006). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=tIjrVYbZmUAC&amp;pg=PA363&amp;dq=bash+most+popular+unix+shell&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjnipq_3JPNAhUH52MKHUD-DA04ChDoAQgpMAA#v=onepage&amp;q=bash%20most%20popular%20unix%20shell&amp;f=false"><i>Mastering Linux</i></a>. John Wiley &amp; Sons, Inc. p.&#160;363. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7821-5277-7" title="Special:BookSources/978-0-7821-5277-7"><bdi>978-0-7821-5277-7</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 6,</span> 2016</span>. <q>The Bourne Again Shell (bash) is the most common shell installed with Linux distributions.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Mastering+Linux&amp;rft.pages=363&amp;rft.pub=John+Wiley+%26+Sons%2C+Inc.&amp;rft.date=2006-02&amp;rft.isbn=978-0-7821-5277-7&amp;rft.aulast=Danesh&amp;rft.aufirst=Arman&amp;rft.au=Jang%2C+Michael&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DtIjrVYbZmUAC%26pg%3DPA363%26dq%3Dbash%2Bmost%2Bpopular%2Bunix%2Bshell%26hl%3Den%26sa%3DX%26ved%3D0ahUKEwjnipq_3JPNAhUH52MKHUD-DA04ChDoAQgpMAA%23v%3Donepage%26q%3Dbash%2520most%2520popular%2520unix%2520shell%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text">
+<cite class="citation book">Foster-Johnson, Eric; Welch, John C.; Anderson, Micah (April 2005). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=dwIRERUpQPEC&amp;pg=PA6&amp;dq=bash+most+popular+unix+shell&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwi_3fnR2pPNAhUX3GMKHTEdAZoQ6AEIQTAF#v=onepage&amp;q=bash%20most%20popular%20unix%20shell&amp;f=false"><i>Beginning Shell Scripting</i></a>. John Wiley &amp; Sons, Inc. p.&#160;6. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7645-9791-6" title="Special:BookSources/978-0-7645-9791-6"><bdi>978-0-7645-9791-6</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 6,</span> 2016</span>. <q>Bash is by far the most popular shell and forms the default shell on Linux and Mac OSX systems.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Beginning+Shell+Scripting&amp;rft.pages=6&amp;rft.pub=John+Wiley+%26+Sons%2C+Inc.&amp;rft.date=2005-04&amp;rft.isbn=978-0-7645-9791-6&amp;rft.aulast=Foster-Johnson&amp;rft.aufirst=Eric&amp;rft.au=Welch%2C+John+C.&amp;rft.au=Anderson%2C+Micah&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DdwIRERUpQPEC%26pg%3DPA6%26dq%3Dbash%2Bmost%2Bpopular%2Bunix%2Bshell%26hl%3Den%26sa%3DX%26ved%3D0ahUKEwi_3fnR2pPNAhUX3GMKHTEdAZoQ6AEIQTAF%23v%3Donepage%26q%3Dbash%2520most%2520popular%2520unix%2520shell%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-zsh1-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-zsh1_30-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://support.apple.com/en-us/HT208050">"Use zsh as the default shell on your Mac - Apple Support"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">July 1,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Use+zsh+as+the+default+shell+on+your+Mac+-+Apple+Support&amp;rft_id=https%3A%2F%2Fsupport.apple.com%2Fen-us%2FHT208050&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-zsh2-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-zsh2_31-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Warren, Tom (June 4, 2019). <a rel="nofollow" class="external text" href="https://www.theverge.com/2019/6/4/18651872/apple-macos-catalina-zsh-bash-shell-replacement-features">"Apple replaces bash with zsh as the default shell in macOS Catalina"</a>. <i>The Verge</i><span class="reference-accessdate">. Retrieved <span class="nowrap">June 13,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Verge&amp;rft.atitle=Apple+replaces+bash+with+zsh+as+the+default+shell+in+macOS+Catalina&amp;rft.date=2019-06-04&amp;rft.aulast=Warren&amp;rft.aufirst=Tom&amp;rft_id=https%3A%2F%2Fwww.theverge.com%2F2019%2F6%2F4%2F18651872%2Fapple-macos-catalina-zsh-bash-shell-replacement-features&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation news">Juliana, Cino (June 10, 2017). <a rel="nofollow" class="external text" href="https://www.techolac.com/linux/linux-bash-exit-status-and-how-to-set-exit-status-in-bash/">"Linux bash exit status and how to set exit status in bash - Techolac"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">June 21,</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Linux+bash+exit+status+and+how+to+set+exit+status+in+bash+-+Techolac&amp;rft.date=2017-06-10&amp;rft.aulast=Juliana&amp;rft.aufirst=Cino&amp;rft_id=https%3A%2F%2Fwww.techolac.com%2Flinux%2Flinux-bash-exit-status-and-how-to-set-exit-status-in-bash%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web">Huzaifa Sidhpurwala (September 24, 2014). <a rel="nofollow" class="external text" href="https://securityblog.redhat.com/2014/09/24/bash-specially-crafted-environment-variables-code-injection-attack/">"Bash specially-crafted environment variables code injection attack"</a>. <a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bash+specially-crafted+environment+variables+code+injection+attack&amp;rft.pub=Red+Hat&amp;rft.date=2014-09-24&amp;rft.au=Huzaifa+Sidhpurwala&amp;rft_id=https%3A%2F%2Fsecurityblog.redhat.com%2F2014%2F09%2F24%2Fbash-specially-crafted-environment-variables-code-injection-attack%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.gnu.org/software/bash/manual/bash.html#Programmable-Completion">https://www.gnu.org/software/bash/manual/bash.html#Programmable-Completion</a></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html">"Debugging Bash scripts"</a>. <i>tldp.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=tldp.org&amp;rft.atitle=Debugging+Bash+scripts&amp;rft_id=http%3A%2F%2Ftldp.org%2FLDP%2FBash-Beginners-Guide%2Fhtml%2Fsect_02_03.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://wiki-dev.bash-hackers.org/scripting/bashchanges">https://wiki-dev.bash-hackers.org/scripting/bashchanges</a></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-History-Builtins">https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bash-History-Builtins</a></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.caliban.org/bash/index.shtml">"Working more productively with bash 2.x/3.x"</a>. <i>www.caliban.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.caliban.org&amp;rft.atitle=Working+more+productively+with+bash+2.x%2F3.x&amp;rft_id=http%3A%2F%2Fwww.caliban.org%2Fbash%2Findex.shtml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-GNUBASHREF-39"><span class="mw-cite-backlink">^ <a href="#cite_ref-GNUBASHREF_39-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-GNUBASHREF_39-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/manual/html_node/Bash-POSIX-Mode.html">"6.11 Bash POSIX Mode"</a>, <a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/manual/html_node/index.html"><i>The GNU Bash Reference Manual, for Bash, Version 4.1</i></a>, December 23, 2009, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20101203065400/https://www.gnu.org/software/bash/manual/html_node/index.html">archived</a> from the original on December 3, 2010<span class="reference-accessdate">, retrieved <span class="nowrap">October 26,</span> 2010</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=6.11+Bash+POSIX+Mode&amp;rft.btitle=The+GNU+Bash+Reference+Manual%2C+for+Bash%2C+Version+4.1&amp;rft.date=2009-12-23&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fbash%2Fmanual%2Fhtml_node%2FBash-POSIX-Mode.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.tldp.org/LDP/abs/html/bashver3.html#BASH3REF">"Advanced Bash-Scripting Guide"</a>. <i>www.tldp.org</i>. Section 37.2 (Bash, version 3)<span class="reference-accessdate">. Retrieved <span class="nowrap">March 5,</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.tldp.org&amp;rft.atitle=Advanced+Bash-Scripting+Guide&amp;rft.pages=Section+37.2+%28Bash%2C+version+3%29&amp;rft_id=http%3A%2F%2Fwww.tldp.org%2FLDP%2Fabs%2Fhtml%2Fbashver3.html%23BASH3REF&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-41"><span class="mw-cite-backlink"><b><a href="#cite_ref-41">^</a></b></span> <span class="reference-text">The syntax matches that shown on the <code><a rel="nofollow" class="external text" href="http://www.tin.org/bin/man.cgi?section=7&amp;topic=regex">regex(7)</a></code> <a href="/wiki/Man_page" title="Man page">man page</a>.</span>
+</li>
+<li id="cite_note-42"><span class="mw-cite-backlink"><b><a href="#cite_ref-42">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://tldp.org/LDP/abs/html/bashver4.html">"Bash, version 4"</a>. <i>tldp.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=tldp.org&amp;rft.atitle=Bash%2C+version+4&amp;rft_id=http%3A%2F%2Ftldp.org%2FLDP%2Fabs%2Fhtml%2Fbashver4.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-43"><span class="mw-cite-backlink"><b><a href="#cite_ref-43">^</a></b></span> <span class="reference-text">"The shell provides associative array variables, with the appropriate support to create, delete, assign values to, and expand them." <a rel="nofollow" class="external free" href="http://tiswww.case.edu/php/chet/bash/NEWS">http://tiswww.case.edu/php/chet/bash/NEWS</a></span>
+</li>
+<li id="cite_note-44"><span class="mw-cite-backlink"><b><a href="#cite_ref-44">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://apple.stackexchange.com/questions/193411/update-bash-to-version-4-0-on-osx">"macos - Update bash to version 4.0 on OSX"</a>. <i>Ask Different</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Ask+Different&amp;rft.atitle=macos+-+Update+bash+to+version+4.0+on+OSX&amp;rft_id=https%3A%2F%2Fapple.stackexchange.com%2Fquestions%2F193411%2Fupdate-bash-to-version-4-0-on-osx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-45"><span class="mw-cite-backlink"><b><a href="#cite_ref-45">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/manual/html_node/Arrays.html">"Arrays (Bash Reference Manual)"</a>. <i>www.gnu.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.gnu.org&amp;rft.atitle=Arrays+%28Bash+Reference+Manual%29&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fbash%2Fmanual%2Fhtml_node%2FArrays.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-tldp-46"><span class="mw-cite-backlink">^ <a href="#cite_ref-tldp_46-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-tldp_46-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Mendel Cooper. <a rel="nofollow" class="external text" href="http://tldp.org/LDP/abs/html/portabilityissues.html">"Portability Issues"</a>. <i>The Linux Documentation Project</i>. ibiblio.org.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Linux+Documentation+Project&amp;rft.atitle=Portability+Issues&amp;rft.au=Mendel+Cooper&amp;rft_id=http%3A%2F%2Ftldp.org%2FLDP%2Fabs%2Fhtml%2Fportabilityissues.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-47"><span class="mw-cite-backlink"><b><a href="#cite_ref-47">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://linux.die.net/man/1/checkbashisms">"checkbashisms(1) - Linux man page"</a>. <i>linux.die.net</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=linux.die.net&amp;rft.atitle=checkbashisms%281%29+-+Linux+man+page&amp;rft_id=https%3A%2F%2Flinux.die.net%2Fman%2F1%2Fcheckbashisms&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-48"><span class="mw-cite-backlink"><b><a href="#cite_ref-48">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.hypexr.org/bash_tutorial.php#emacs">"BASH Help - A Bash Tutorial"</a>. Hypexr.org. October 5, 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">July 21,</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=BASH+Help+-+A+Bash+Tutorial&amp;rft.pub=Hypexr.org&amp;rft.date=2012-10-05&amp;rft_id=http%3A%2F%2Fwww.hypexr.org%2Fbash_tutorial.php%23emacs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-49"><span class="mw-cite-backlink"><b><a href="#cite_ref-49">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/manual/bash.html#index-background">"Bash Reference Manual"</a>. <i>www.gnu.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.gnu.org&amp;rft.atitle=Bash+Reference+Manual&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fbash%2Fmanual%2Fbash.html%23index-background&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ABash+%28Unix+shell%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-50"><span class="mw-cite-backlink"><b><a href="#cite_ref-50">^</a></b></span> <span class="reference-text">
+<a rel="nofollow" class="external text" href="http://linux.die.net/man/1/bashbug">bashbug(1)</a>, die.net</span>
+</li>
+<li id="cite_note-51"><span class="mw-cite-backlink"><b><a href="#cite_ref-51">^</a></b></span> <span class="reference-text">
+<a rel="nofollow" class="external text" href="https://developer.apple.com/library/prerelease/mac/documentation/Darwin/Reference/ManPages/man1/bashbug.1.html">"Linux / Unix Command: bashbug"</a>, apple.com</span>
+</li>
+<li id="cite_note-52"><span class="mw-cite-backlink"><b><a href="#cite_ref-52">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://tiswww.case.edu/php/chet/bash/bashref.html#Programmable-Completion">https://tiswww.case.edu/php/chet/bash/bashref.html#Programmable-Completion</a></span>
+</li>
+<li id="cite_note-53"><span class="mw-cite-backlink"><b><a href="#cite_ref-53">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.caliban.org/bash/index.shtml">http://www.caliban.org/bash/index.shtml</a></span>
+</li>
+<li id="cite_note-54"><span class="mw-cite-backlink"><b><a href="#cite_ref-54">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://ftp.swin.edu.au/gnu/bash/">https://ftp.swin.edu.au/gnu/bash/</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit&amp;section=24" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:GNU_Bash" class="extiw" title="commons:Category:GNU Bash"><span style="">Bash</span></a></b></i>.</td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Bash_Shell_Scripting" class="extiw" title="wikibooks:Bash Shell Scripting">Bash Shell Scripting</a></b></i></td></tr>
+</tbody></table>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/bash/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.computerworld.com.au/article/222764/">2008 interview with GNU Bash's maintainer, Chet Ramey</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/lanl/MPI-Bash">MPI-Bash</a>: A <a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a>-enabled plugin for the Bourne-Again Shell by <a href="/wiki/Scott_Pakin" class="mw-redirect" title="Scott Pakin">Scott Pakin</a></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.bash-hackers.org/scripting/bashchanges">List of bash changes</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="GNU_Project" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:GNU" title="Template:GNU"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:GNU" title="Template talk:GNU"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:GNU&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="GNU_Project" style="font-size:114%;margin:0 4em"><a href="/wiki/GNU_Project" title="GNU Project">GNU Project</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">History</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/GNU_Manifesto" title="GNU Manifesto">GNU Manifesto</a></li>
+<li><a href="/wiki/Free_Software_Foundation" title="Free Software Foundation">Free Software Foundation</a>
+<ul><li><a href="/wiki/Free_Software_Foundation_Europe" title="Free Software Foundation Europe">Europe</a></li>
+<li><a href="/wiki/Free_Software_Foundation_of_India" title="Free Software Foundation of India">India</a></li>
+<li><a href="/wiki/Free_Software_Foundation_Latin_America" title="Free Software Foundation Latin America">Latin America</a></li></ul></li>
+<li><a href="/wiki/History_of_free_and_open-source_software" title="History of free and open-source software">History of free software</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Licenses</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GNU General Public License</a>
+<ul><li><a href="/wiki/GPL_linking_exception" title="GPL linking exception">linking exception</a></li>
+<li><a href="/wiki/GPL_font_exception" title="GPL font exception">font exception</a></li></ul></li>
+<li><a href="/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">GNU Lesser General Public License</a></li>
+<li><a href="/wiki/GNU_Affero_General_Public_License" title="GNU Affero General Public License">GNU Affero General Public License</a></li>
+<li><a href="/wiki/GNU_Free_Documentation_License" title="GNU Free Documentation License">GNU Free Documentation License</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/GNU" title="GNU">GNU</a> (<a href="/wiki/GNU_variants" title="GNU variants">variants</a>)</li>
+<li><a href="/wiki/GNU_Hurd" title="GNU Hurd">Hurd</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a class="mw-selflink selflink">Bash</a></li>
+<li><a href="/wiki/GNU_Core_Utilities" title="GNU Core Utilities">coreutils</a></li>
+<li><a href="/wiki/GNU_Find_Utilities" class="mw-redirect" title="GNU Find Utilities">findutils</a></li>
+<li><a href="/wiki/GNU_Build_System" class="mw-redirect" title="GNU Build System">Build System</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/GNU_Binutils" title="GNU Binutils">binutils</a></li>
+<li><a href="/wiki/GNU_Debugger" title="GNU Debugger">GDB</a></li>
+<li><a href="/wiki/GNU_GRUB" title="GNU GRUB">GRUB</a></li>
+<li><a href="/wiki/GNOME" title="GNOME">GNOME</a></li>
+<li><a href="/wiki/GNUstep" title="GNUstep">GNUstep</a></li>
+<li><a href="/wiki/GIMP" title="GIMP">GIMP</a></li>
+<li><a href="/wiki/Jami_(software)" title="Jami (software)">Jami</a></li>
+<li><a href="/wiki/GNU_Emacs" title="GNU Emacs">GNU Emacs</a></li>
+<li><a href="/wiki/GNU_TeXmacs" title="GNU TeXmacs">GNU TeXmacs</a></li>
+<li><a href="/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a></li>
+<li><a href="/wiki/GNU_Taler" title="GNU Taler">GNU Taler</a></li>
+<li><a href="/wiki/R_(programming_language)" title="R (programming language)">GNU R</a></li>
+<li><a href="/wiki/GNU_Scientific_Library" title="GNU Scientific Library">GSL</a></li>
+<li><a href="/wiki/GNU_Multiple_Precision_Arithmetic_Library" title="GNU Multiple Precision Arithmetic Library">GMP</a></li>
+<li><a href="/wiki/Electric_(software)" title="Electric (software)">GNU Electric</a></li>
+<li><a href="/wiki/GNU_Archimedes" title="GNU Archimedes">GNU Archimedes</a></li>
+<li><a href="/wiki/GNUnet" title="GNUnet">GNUnet</a></li>
+<li><a href="/wiki/GNU_Privacy_Guard" title="GNU Privacy Guard">GNU Privacy Guard</a></li>
+<li><a href="/wiki/Gnuzilla" title="Gnuzilla">Gnuzilla</a> (<a href="/wiki/GNU_IceCat" title="GNU IceCat">IceCat</a>)</li>
+<li><a href="/wiki/GNU_Health" title="GNU Health">GNU Health</a></li>
+<li><a href="/wiki/GNUmed" title="GNUmed">GNUmed</a></li>
+<li><a href="/wiki/LilyPond" title="LilyPond">GNU LilyPond</a></li>
+<li><a href="/wiki/GNU_Go" title="GNU Go">GNU Go</a></li>
+<li><a href="/wiki/GNU_Chess" title="GNU Chess">GNU Chess</a></li>
+<li><a href="/wiki/Gnash_(software)" title="Gnash (software)">Gnash</a></li>
+<li><a href="/wiki/GNU_Guix" title="GNU Guix">Guix</a></li>
+<li><a href="/wiki/List_of_GNU_packages" title="List of GNU packages"><i>more...</i></a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Public<br />speakers</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Alexandre_Oliva" title="Alexandre Oliva">Alexandre Oliva</a></li>
+<li><a href="/wiki/Benjamin_Mako_Hill" title="Benjamin Mako Hill">Benjamin Mako Hill</a></li>
+<li><a href="/wiki/Bradley_M._Kuhn" title="Bradley M. Kuhn">Bradley M. Kuhn</a></li>
+<li><a href="/wiki/Federico_Heinz" title="Federico Heinz">Federico Heinz</a></li>
+<li><a href="/w/index.php?title=Fr%C3%A9d%C3%A9ric_Couchet&amp;action=edit&amp;redlink=1" class="new" title="Frédéric Couchet (page does not exist)">Frédéric Couchet</a></li>
+<li><a href="/wiki/Georg_C._F._Greve" title="Georg C. F. Greve">Georg C. F. Greve</a></li>
+<li><a href="/wiki/William_John_Sullivan" title="William John Sullivan">John Sullivan</a></li>
+<li><a href="/w/index.php?title=Jos%C3%A9_E._Marchesi&amp;action=edit&amp;redlink=1" class="new" title="José E. Marchesi (page does not exist)">José E. Marchesi</a></li>
+<li><a href="/w/index.php?title=Joshua_Gay&amp;action=edit&amp;redlink=1" class="new" title="Joshua Gay (page does not exist)">Joshua Gay</a></li>
+<li><a href="/w/index.php?title=Kefah_T._Issa&amp;action=edit&amp;redlink=1" class="new" title="Kefah T. Issa (page does not exist)">Kefah T. Issa</a></li>
+<li><a href="/wiki/Lo%C3%AFc_Dachary" title="Loïc Dachary">Loïc Dachary</a></li>
+<li><a href="/wiki/Nagarjuna_G." title="Nagarjuna G.">Nagarjuna G.</a></li>
+<li><a href="/w/index.php?title=Peter_Heath&amp;action=edit&amp;redlink=1" class="new" title="Peter Heath (page does not exist)">Peter Heath</a></li>
+<li><a href="/wiki/Richard_M._Stallman" class="mw-redirect" title="Richard M. Stallman">Richard M. Stallman</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Other topics</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/GNU/Linux_naming_controversy" title="GNU/Linux naming controversy">GNU/Linux naming controversy</a></li>
+<li><i><a href="/wiki/Revolution_OS" title="Revolution OS">Revolution OS</a></i></li>
+<li><a href="/wiki/Free_Software_Foundation_anti-Windows_campaigns" title="Free Software Foundation anti-Windows campaigns">Free Software Foundation anti-Windows campaigns</a></li>
+<li><a href="/wiki/Defective_by_Design" title="Defective by Design">Defective by Design</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Unix_shells" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Unix_shells" title="Template:Unix shells"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Unix_shells" title="Template talk:Unix shells"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Unix_shells&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Unix_shells" style="font-size:114%;margin:0 4em"><a href="/wiki/Unix_shell" title="Unix shell">Unix shells</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Almquist_shell" title="Almquist shell">Almquist</a></li>
+<li><a class="mw-selflink selflink">Bash</a></li>
+<li><a href="/wiki/Bourne_shell" title="Bourne shell">Bourne</a></li>
+<li><a href="/wiki/C_shell" title="C shell">csh</a></li>
+<li><a href="/wiki/Rc#es" title="Rc">es</a></li>
+<li><a href="/wiki/Friendly_interactive_shell" title="Friendly interactive shell">fish</a></li>
+<li><a href="/wiki/Hamilton_C_shell" title="Hamilton C shell">Hamilton</a></li>
+<li><a href="/wiki/KornShell" title="KornShell">Korn</a></li>
+<li><a href="/wiki/PWB_shell" title="PWB shell">PWB</a></li>
+<li><a href="/wiki/Rc" title="Rc">rc</a></li>
+<li><a href="/wiki/Stand-alone_shell" title="Stand-alone shell">sash</a></li>
+<li><a href="/wiki/Tcsh" title="Tcsh">tcsh</a></li>
+<li><a href="/wiki/Thompson_shell" title="Thompson shell">Thompson</a></li>
+<li><a href="/wiki/Wish_(Unix_shell)" title="Wish (Unix shell)">Wish</a></li>
+<li><a href="/wiki/Z_shell" title="Z shell">Zsh</a></li></ul>
+</div></td></tr></tbody></table></div><div role="navigation" class="navbox" aria-labelledby="Programming_languages" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Programming_languages" title="Template:Programming languages"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Programming_languages" title="Template talk:Programming languages"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Programming_languages&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Programming_languages" style="font-size:114%;margin:0 4em"><a href="/wiki/Programming_language" title="Programming language">Programming languages</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Comparison&amp;#10;*_Timeline&amp;#10;*_History">
+<ul><li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison</a></li>
+<li><a href="/wiki/Timeline_of_programming_languages" title="Timeline of programming languages">Timeline</a></li>
+<li><a href="/wiki/History_of_programming_languages" title="History of programming languages">History</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ALGOL" title="ALGOL">ALGOL</a></li>
+<li><a href="/wiki/APL_(programming_language)" title="APL (programming language)">APL</a></li>
+<li><a href="/wiki/Assembly_language" title="Assembly language">Assembly</a></li>
+<li><a href="/wiki/BASIC" title="BASIC">BASIC</a></li>
+<li><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></li>
+<li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/COBOL" title="COBOL">COBOL</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></li>
+<li><a href="/wiki/Forth_(programming_language)" title="Forth (programming language)">Forth</a></li>
+<li><a href="/wiki/Fortran" title="Fortran">Fortran</a></li>
+<li><a href="/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell</a></li>
+<li><a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a></li>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin</a></li>
+<li><a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a></li>
+<li><a href="/wiki/ML_(programming_language)" title="ML (programming language)">ML</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a></li>
+<li><a href="/wiki/Perl" title="Perl">Perl</a></li>
+<li><a href="/wiki/PHP" title="PHP">PHP</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="/wiki/R_(programming_language)" title="R (programming language)">R</a></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+<li><a href="/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust</a></li>
+<li><a href="/wiki/SQL" title="SQL">SQL</a></li>
+<li><a href="/wiki/Shell_script" title="Shell script">Shell</a></li>
+<li><a href="/wiki/Simula" title="Simula">Simula</a></li>
+<li><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift</a></li>
+<li><i><a href="/wiki/List_of_programming_languages" title="List of programming languages">more...</a></i></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Programming_languages" title="Category:Programming languages">Category</a></b></li>
+<li><img alt="List-Class article" src="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /> <b>Lists</b>
+<ul><li><a href="/wiki/List_of_programming_languages" title="List of programming languages">Alphabetical</a></li>
+<li><a href="/wiki/List_of_programming_languages_by_type" title="List of programming languages by type">Categorical</a></li>
+<li><a href="/wiki/Generational_list_of_programming_languages" title="Generational list of programming languages">Generational</a></li>
+<li><a href="/wiki/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based</a></li></ul></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1341
+Cached time: 20200315085806
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.800 seconds
+Real time usage: 1.039 seconds
+Preprocessor visited node count: 3769/1000000
+Post‐expand include size: 134346/2097152 bytes
+Template argument size: 4149/2097152 bytes
+Highest expansion depth: 30/40
+Expensive parser function count: 7/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 150250/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.372/10.000 seconds
+Lua memory usage: 8.45 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  868.867      1 -total
+ 37.67%  327.272      1 Template:Reflist
+ 25.03%  217.468      2 Template:Infobox
+ 22.69%  197.119      1 Template:Infobox_software
+ 21.57%  187.457     27 Template:Cite_web
+  8.69%   75.533      1 Template:Short_description
+  6.32%   54.946      1 Template:Pagetype
+  5.88%   51.125      2 Template:Wikidata
+  5.29%   46.002      1 Template:Commons_category
+  4.26%   37.021      1 Template:Section_howto
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:4547-0!canonical and timestamp 20200315085805 and revision id 945648570
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Bash_(Unix_shell)&amp;oldid=945648570">https://en.wikipedia.org/w/index.php?title=Bash_(Unix_shell)&amp;oldid=945648570</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Unix_shells" title="Category:Unix shells">Unix shells</a></li><li><a href="/wiki/Category:1989_software" title="Category:1989 software">1989 software</a></li><li><a href="/wiki/Category:Cross-platform_free_software" title="Category:Cross-platform free software">Cross-platform free software</a></li><li><a href="/wiki/Category:Domain-specific_programming_languages" title="Category:Domain-specific programming languages">Domain-specific programming languages</a></li><li><a href="/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li><li><a href="/wiki/Category:GNU_Project_software" title="Category:GNU Project software">GNU Project software</a></li><li><a href="/wiki/Category:Scripting_languages" title="Category:Scripting languages">Scripting languages</a></li><li><a href="/wiki/Category:Text-oriented_programming_languages" title="Category:Text-oriented programming languages">Text-oriented programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Use_mdy_dates_from_March_2014" title="Category:Use mdy dates from March 2014">Use mdy dates from March 2014</a></li><li><a href="/wiki/Category:Articles_needing_cleanup_from_January_2019" title="Category:Articles needing cleanup from January 2019">Articles needing cleanup from January 2019</a></li><li><a href="/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</a></li><li><a href="/wiki/Category:Articles_containing_how-to_sections" title="Category:Articles containing how-to sections">Articles containing how-to sections</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Bash+%28Unix+shell%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Bash+%28Unix+shell%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Bash_(Unix_shell)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Bash_(Unix_shell)" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Bash_(Unix_shell)">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Bash_(Unix_shell)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Bash_(Unix_shell)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Bash_(Unix_shell)&amp;oldid=945648570" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Bash_(Unix_shell)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q189248" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Bash_%28Unix_shell%29&amp;id=945648570&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:GNU_Bash" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/Bash_Shell_Scripting" hreflang="en">Wikibooks</a></li><li class="wb-otherproject-link wb-otherproject-wikiversity"><a href="https://en.wikiversity.org/wiki/Bash_programming" hreflang="en">Wikiversity</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Bash+%28Unix+shell%29">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Bash+%28Unix+shell%29&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Bash_(Unix_shell)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D8%B4_(%D9%8A%D9%88%D9%86%D9%83%D8%B3)" title="باش (يونكس) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Bash" title="Bash – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B6_(%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B8_%E0%A6%B6%E0%A7%87%E0%A6%B2)" title="ব্যাশ (ইউনিক্স শেল) – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Bash" title="Bash – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-bs"><a href="https://bs.wikipedia.org/wiki/Bash" title="Bash – Bosnian" lang="bs" hreflang="bs" class="interlanguage-link-target">Bosanski</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bash" title="Bash – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Bash" title="Bash – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Bash" title="Bash – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Bash_(Shell)" title="Bash (Shell) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Bash" title="Bash – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%9A%CE%AD%CE%BB%CF%85%CF%86%CE%BF%CF%82_bash" title="Κέλυφος bash – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bash" title="Bash – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/Bash" title="Bash – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Bash" title="Bash – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%D9%88%D8%B3%D8%AA%D9%87_Bash" title="پوسته Bash – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Bourne-Again_shell" title="Bourne-Again shell – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/Bash" title="Bash – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%8B%9C_(%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%85%B8)" title="배시 (유닉스 셸) – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Bash" title="Bash – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Bourne-Again_shell" title="Bourne-Again shell – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/Bash" title="Bash – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Bash" title="Bash – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%91%D7%90%D7%A9" title="באש – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Bash" title="Bash – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%AC%E0%B4%BE%E0%B4%B7%E0%B5%8D" title="ബാഷ് – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Bash" title="Bash – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Bash" title="Bash – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Bash" title="Bash – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Bash" title="Bash – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Bash" title="Bash – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Bash" title="Bash – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Bash" title="Bash – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Bash" title="Bash – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Bash" title="Bash – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%91%D0%B0%D1%88_(%D0%88%D1%83%D0%BD%D0%B8%D0%BA%D1%81_%D1%99%D1%83%D1%81%D0%BA%D0%B0)" title="Баш (Јуникс љуска) – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Bash" title="Bash – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Bash" title="Bash – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Bash" title="Bash – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%81%E0%B8%9A%E0%B8%8A" title="แบช – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Bash" title="Bash – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Bash" title="Bash – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Bash" title="Bash – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Bash" title="Bash – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q189248#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 15 March 2020, at 08:58<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Bash_(Unix_shell)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.800","walltime":"1.039","ppvisitednodes":{"value":3769,"limit":1000000},"postexpandincludesize":{"value":134346,"limit":2097152},"templateargumentsize":{"value":4149,"limit":2097152},"expansiondepth":{"value":30,"limit":40},"expensivefunctioncount":{"value":7,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":150250,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  868.867      1 -total"," 37.67%  327.272      1 Template:Reflist"," 25.03%  217.468      2 Template:Infobox"," 22.69%  197.119      1 Template:Infobox_software"," 21.57%  187.457     27 Template:Cite_web","  8.69%   75.533      1 Template:Short_description","  6.32%   54.946      1 Template:Pagetype","  5.88%   51.125      2 Template:Wikidata","  5.29%   46.002      1 Template:Commons_category","  4.26%   37.021      1 Template:Section_howto"]},"scribunto":{"limitreport-timeusage":{"value":"0.372","limit":"10.000"},"limitreport-memusage":{"value":8865308,"limit":52428800}},"cachereport":{"origin":"mw1341","timestamp":"20200315085806","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Bash (Unix shell)","url":"https:\/\/en.wikipedia.org\/wiki\/Bash_(Unix_shell)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q189248","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q189248","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-11-01T10:50:28Z","dateModified":"2020-03-15T08:58:00Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/e\/e7\/Bash_screenshot.png","headline":"GNU replacement for the Bourne shell"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":125,"wgHostname":"mw1326"});});</script></body></html>

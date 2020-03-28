@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Kernel-based Virtual Machine - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn8DwgpAADgAAJ6AZKsAAABO","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Kernel-based_Virtual_Machine","wgTitle":"Kernel-based Virtual Machine","wgCurRevisionId":941736431,"wgRevisionId":941736431,"wgArticleId":8412133,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","All articles with dead external links","Articles with dead external links from January 2018","Articles with permanently dead external links","Articles with short description","Wikipedia articles needing clarification from February 2019",
+"All Wikipedia articles needing clarification","Official website different in Wikidata and Wikipedia","Wikipedia articles with GND identifiers","Free emulation software","Free software programmed in C","Free virtualization software","Linux kernel features","Virtualization software","Virtualization-related software for Linux"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Kernel-based_Virtual_Machine","wgRelevantArticleId":8412133,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English",
+"wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q377539","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups",
+"ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kvm_running_various_guests.png/1200px-Kvm_running_various_guests.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Kernel-based_Virtual_Machine rootpage-Kernel-based_Virtual_Machine skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Kernel-based Virtual Machine</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Virtualization module in the Linux kernel</div>
+<table class="infobox vevent" style="width:22em"><caption class="summary">KVM</caption><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Kvmbanner-logo2_1.png" class="image"><img alt="Kvmbanner-logo2 1.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Kvmbanner-logo2_1.png/160px-Kvmbanner-logo2_1.png" decoding="async" width="160" height="51" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/70/Kvmbanner-logo2_1.png/240px-Kvmbanner-logo2_1.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/70/Kvmbanner-logo2_1.png/320px-Kvmbanner-logo2_1.png 2x" data-file-width="1999" data-file-height="633" /></a></td></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Kvm_running_various_guests.png" class="image" title="Screenshot of QEMU/KVM running NetBSD, OpenSolaris and Kubuntu guests on an Arch Linux host."><img alt="Screenshot of QEMU/KVM running NetBSD, OpenSolaris and Kubuntu guests on an Arch Linux host." src="//upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kvm_running_various_guests.png/300px-Kvm_running_various_guests.png" decoding="async" width="300" height="188" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kvm_running_various_guests.png/450px-Kvm_running_various_guests.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/33/Kvm_running_various_guests.png/600px-Kvm_running_various_guests.png 2x" data-file-width="1440" data-file-height="900" /></a><div>Screenshot of QEMU/KVM running <a href="/wiki/NetBSD" title="NetBSD">NetBSD</a>, <a href="/wiki/OpenSolaris" title="OpenSolaris">OpenSolaris</a> and <a href="/wiki/Kubuntu" title="Kubuntu">Kubuntu</a> guests on an <a href="/wiki/Arch_Linux" title="Arch Linux">Arch Linux</a> host.</div></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td><a href="/wiki/Qumranet" title="Qumranet">Qumranet</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer(s)</a></th><td><a href="/wiki/Open_Virtualization_Alliance" title="Open Virtualization Alliance">Open Virtualization Alliance</a> (OVA)</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th><td><div class="plainlist"><ul><li><span class="url"><a rel="nofollow" class="external text" href="git://git.kernel.org/pub/scm/virt/kvm/kvm.git">git<wbr />.kernel<wbr />.org<wbr />/pub<wbr />/scm<wbr />/virt<wbr />/kvm<wbr />/kvm<wbr />.git</a></span></li></ul>
+</div> <a href="https://www.wikidata.org/wiki/Q377539#P1324" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Unix-like" title="Unix-like">Unix-like</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Computing_platform" title="Computing platform">Platform</a></th><td><a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a>, <a href="/wiki/IA-64" title="IA-64">IA-64</a>, <a href="/wiki/PowerPC" title="PowerPC">PowerPC</a>, <a href="/wiki/IBM_ESA/390" class="mw-redirect" title="IBM ESA/390">S/390</a>, <a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/X86-64" title="X86-64">x86-64</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GNU GPL</a> or <a href="/wiki/GNU_Lesser_General_Public_License" title="GNU Lesser General Public License">LGPL</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://www.linux-kvm.org">www<wbr />.linux-kvm<wbr />.org</a></span></td></tr></tbody></table>
+<div role="note" class="hatnote navigation-not-searchable">Not to be confused with <a href="/wiki/KVM_switch" title="KVM switch">KVM switch</a>.</div>
+<p><b>Kernel-based Virtual Machine</b> (<b>KVM</b>) is a <a href="/wiki/Virtualization" title="Virtualization">virtualization</a> module in the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a> that allows the kernel to function as a <a href="/wiki/Hypervisor" title="Hypervisor">hypervisor</a>. It was merged into the Linux kernel mainline in kernel version 2.6.20, which was released on February 5, 2007.<sup id="cite_ref-2620notes_1-0" class="reference"><a href="#cite_note-2620notes-1">&#91;1&#93;</a></sup> KVM requires a processor with hardware virtualization extensions, such as Intel VT or AMD-V.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> KVM has also been ported to other operating systems such as <a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> and <a href="/wiki/Illumos" title="Illumos">illumos</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> in the form of loadable kernel modules.
+</p><p>KVM was originally designed for <a href="/wiki/X86" title="X86">x86</a> processors and has since been <a href="/wiki/Porting" title="Porting">ported</a> to <a href="/wiki/IBM_ESA/390" class="mw-redirect" title="IBM ESA/390">S/390</a>,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> <a href="/wiki/PowerPC" title="PowerPC">PowerPC</a>,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> <a href="/wiki/IA-64" title="IA-64">IA-64</a>, and <a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a>.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>KVM provides <a href="/wiki/Hardware-assisted_virtualization" title="Hardware-assisted virtualization">hardware-assisted virtualization</a> for a wide variety of guest operating systems including Linux, BSD, <a href="/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a>, <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>, <a href="/wiki/Haiku_(operating_system)" title="Haiku (operating system)">Haiku</a>, <a href="/wiki/ReactOS" title="ReactOS">ReactOS</a>, <a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">Plan 9</a>, <a href="/wiki/AROS_Research_Operating_System" title="AROS Research Operating System">AROS Research Operating System</a><sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> and <a href="/wiki/MacOS" title="MacOS">macOS</a>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> In addition, Android 2.2, GNU/Hurd<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> (Debian K16), <a href="/wiki/MINIX_3" title="MINIX 3">Minix</a> 3.1.2a, Solaris 10 U3 and Darwin 8.0.1, together with other operating systems and some newer versions of these listed, are known to work with certain limitations.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup>
+</p><p>Additionally, KVM provides <a href="/wiki/Paravirtualization" title="Paravirtualization">paravirtualization</a> support for Linux, OpenBSD,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> FreeBSD,<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> NetBSD,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> Plan 9<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> and Windows guests using the VirtIO<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> API. This includes a paravirtual Ethernet card, disk I/O controller,<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup> balloon device, and a VGA graphics interface using <a href="/wiki/SPICE_(protocol)" class="mw-redirect" title="SPICE (protocol)">SPICE</a> or <a href="/wiki/VMware" title="VMware">VMware</a> drivers.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Internals"><span class="tocnumber">2</span> <span class="toctext">Internals</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Features"><span class="tocnumber">3</span> <span class="toctext">Features</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Emulated_hardware"><span class="tocnumber">4</span> <span class="toctext">Emulated hardware</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Graphical_management_tools"><span class="tocnumber">5</span> <span class="toctext">Graphical management tools</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Licensing"><span class="tocnumber">6</span> <span class="toctext">Licensing</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Bibliography"><span class="tocnumber">9</span> <span class="toctext">Bibliography</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Avi Kivity began the development of KVM in mid-2006 at <a href="/wiki/Qumranet" title="Qumranet">Qumranet</a>, a technology <a href="/wiki/Startup_company" title="Startup company">startup company</a><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> that was acquired by <a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a> in 2008.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p><p>KVM surfaced in October, 2006<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> and was merged into the Linux kernel mainline in kernel version 2.6.20, which was released on 5 February 2007.<sup id="cite_ref-2620notes_1-1" class="reference"><a href="#cite_note-2620notes-1">&#91;1&#93;</a></sup>
+</p><p>KVM is maintained by Paolo Bonzini.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Internals">Internals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=2" title="Edit section: Internals">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:402px;"><a href="/wiki/File:Kernel-based_Virtual_Machine.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kernel-based_Virtual_Machine.svg/400px-Kernel-based_Virtual_Machine.svg.png" decoding="async" width="400" height="424" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kernel-based_Virtual_Machine.svg/600px-Kernel-based_Virtual_Machine.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kernel-based_Virtual_Machine.svg/800px-Kernel-based_Virtual_Machine.svg.png 2x" data-file-width="832" data-file-height="881" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Kernel-based_Virtual_Machine.svg" class="internal" title="Enlarge"></a></div>A high-level overview of the KVM/QEMU virtualization environment<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>3</span></sup></div></div></div>
+<p>KVM provides device abstraction but no processor emulation. It exposes the <tt>/dev/kvm</tt> interface, which a user mode host can then use to:
+</p>
+<ul><li>Set up the guest VM's address space. The host must also supply a firmware image (usually a custom BIOS when emulating PCs) that the guest can use to bootstrap into its main OS.</li>
+<li>Feed the guest simulated I/O.</li>
+<li>Map the guest's video display back onto the system host.</li></ul>
+<p>On Linux, <a href="/wiki/QEMU" title="QEMU">QEMU</a> versions 0.10.1 and later is one such userspace host. QEMU uses KVM when available to virtualize guests at near-native speeds, but otherwise falls back to software-only emulation.
+</p><p>Internally, KVM uses <a href="/wiki/SeaBIOS" title="SeaBIOS">SeaBIOS</a> as an open source implementation of a 16-bit x86 <a href="/wiki/BIOS" title="BIOS">BIOS</a>.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=3" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>KVM supports <a href="/w/index.php?title=Hot_plug_vCPUs&amp;action=edit&amp;redlink=1" class="new" title="Hot plug vCPUs (page does not exist)">hot plug vCPUs</a>,<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup> dynamic memory management,<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup> and <a href="/wiki/Live_Migration" class="mw-redirect" title="Live Migration">Live Migration</a> since February 2007.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup><sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup> memory write intensive workload impacts in migration process<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Emulated_hardware">Emulated hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=4" title="Edit section: Emulated hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Confusing plainlinks metadata ambox ambox-style ambox-confusing" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>may be <a href="/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness">confusing or unclear</a> to readers</b>. In particular, previous sections says KVM does no emulate anything by itself, but this section lists emulated hardware. Some clarification from experts is welcome..<span class="hide-when-compact"> Please help us <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarify the article</a>. There might be a discussion about this on <a href="/wiki/Talk:Kernel-based_Virtual_Machine" title="Talk:Kernel-based Virtual Machine">the talk page</a>.</span>  <small class="date-container"><i>(<span class="date">February 2019</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Class</th>
+<th>Device
+</th></tr>
+<tr>
+<td><a href="/wiki/Video_card" title="Video card">Video card</a></td>
+<td>Cirrus CLGD 5446 PCI VGA card, dummy VGA card with <a href="/wiki/Bochs" title="Bochs">Bochs</a> <a href="/wiki/VESA" class="mw-redirect" title="VESA">VESA</a> extensions,<sup id="cite_ref-qemu-doc_29-0" class="reference"><a href="#cite_note-qemu-doc-29">&#91;29&#93;</a></sup> or <a href="/w/index.php?title=Virgil_(software)&amp;action=edit&amp;redlink=1" class="new" title="Virgil (software) (page does not exist)">Virgil</a> as a virtual 3D GPU<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup>
+</td></tr>
+<tr>
+<td><a href="/wiki/PCI_(bus)" class="mw-redirect" title="PCI (bus)">PCI</a></td>
+<td><a href="/wiki/Intel_440FX" title="Intel 440FX">i440FX</a> host <a href="/wiki/Conventional_PCI#PCI_bus_bridges" title="Conventional PCI">PCI bridge</a> and <a href="/wiki/PIIX3" class="mw-redirect" title="PIIX3">PIIX3</a> PCI to ISA bridge<sup id="cite_ref-qemu-doc_29-1" class="reference"><a href="#cite_note-qemu-doc-29">&#91;29&#93;</a></sup>
+</td></tr>
+<tr>
+<td><a href="/wiki/Input_device" title="Input device">Input device</a></td>
+<td><a href="/wiki/PS/2_connector" class="mw-redirect" title="PS/2 connector">PS/2</a> Mouse and Keyboard<sup id="cite_ref-qemu-doc_29-2" class="reference"><a href="#cite_note-qemu-doc-29">&#91;29&#93;</a></sup>
+</td></tr>
+<tr>
+<td><a href="/wiki/Sound_card" title="Sound card">Sound card</a></td>
+<td><a href="/wiki/Sound_Blaster_16" title="Sound Blaster 16">Sound Blaster 16</a>, ENSONIQ AudioPCI <a href="/wiki/ES1370" class="mw-redirect" title="ES1370">ES1370</a>, <a href="/wiki/Gravis_Ultrasound_GF1" class="mw-redirect" title="Gravis Ultrasound GF1">Gravis Ultrasound GF1</a>, CS4231A compatible<sup id="cite_ref-qemu-doc_29-3" class="reference"><a href="#cite_note-qemu-doc-29">&#91;29&#93;</a></sup>
+</td></tr>
+<tr>
+<td><a href="/wiki/Ethernet" title="Ethernet">Ethernet</a> <a href="/wiki/Network_card" class="mw-redirect" title="Network card">Network card</a></td>
+<td>AMD Am79C970A (<a href="/wiki/Am7990" class="mw-redirect" title="Am7990">Am7990</a>), E1000 (Intel 82540EM, 82573L, 82544GC), <a href="/wiki/NE2000" class="mw-redirect" title="NE2000">NE2000</a>, and Realtek <a href="/wiki/RTL8139" title="RTL8139">RTL8139</a>
+</td></tr>
+<tr>
+<td><a href="/wiki/Watchdog_timer" title="Watchdog timer">Watchdog timer</a></td>
+<td>Intel 6300ESB or IB700
+</td></tr>
+<tr>
+<td><a href="/wiki/Random-access_memory" title="Random-access memory">RAM</a></td>
+<td>between 50&#160;MB and 32&#160;TB
+</td></tr>
+<tr>
+<td><a href="/wiki/Central_processing_unit" title="Central processing unit">CPU</a></td>
+<td>1 – 160&#160;CPUs
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Graphical_management_tools">Graphical management tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=5" title="Edit section: Graphical management tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Libvirt_support.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Libvirt_support.svg/300px-Libvirt_support.svg.png" decoding="async" width="300" height="169" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Libvirt_support.svg/450px-Libvirt_support.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Libvirt_support.svg/600px-Libvirt_support.svg.png 2x" data-file-width="640" data-file-height="360" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Libvirt_support.svg" class="internal" title="Enlarge"></a></div><a href="/wiki/Libvirt" title="Libvirt">libvirt</a> supports KVM</div></div></div>
+<ul><li><a href="/wiki/Kimchi_(software)" title="Kimchi (software)">Kimchi</a>&#160;&#8211;&#32; web-based virtualization management tool for KVM</li>
+<li><a href="/wiki/Virtual_Machine_Manager" title="Virtual Machine Manager">Virtual Machine Manager</a>&#160;&#8211;&#32; supports creating, editing, starting, and stopping KVM-based virtual machines, as well as live or cold drag-and-drop migration of VMs between hosts.</li>
+<li><a href="/wiki/Proxmox_Virtual_Environment" title="Proxmox Virtual Environment">Proxmox Virtual Environment</a>&#160;&#8211;&#32; an open-source virtualization management package including KVM and <a href="/wiki/LXC" title="LXC">LXC</a>. It has a bare-metal installer, a web-based remote management GUI, a HA cluster stack, unified storage, flexible network, and optional commercial support.</li>
+<li><a href="/wiki/OpenQRM" title="OpenQRM">OpenQRM</a>&#160;&#8211;&#32; management platform for managing heterogeneous data center infrastructures.</li>
+<li><a href="/wiki/GNOME_Boxes" title="GNOME Boxes">GNOME Boxes</a>&#160;&#8211;&#32; Gnome interface for managing libvirt guests on Linux.</li>
+<li><a href="/wiki/OVirt" title="OVirt">oVirt</a>&#160;&#8211;&#32; open-source virtualization management tool for KVM built on top of libvirt</li></ul>
+<h2><span class="mw-headline" id="Licensing">Licensing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=6" title="Edit section: Licensing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>KVM's parts are licensed under various GNU licenses:<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup>
+</p>
+<ul><li>KVM kernel module: GPL v2</li>
+<li>KVM user module: LGPL v2</li>
+<li>QEMU virtual CPU core library (libqemu.a) and QEMU PC system emulator: LGPL</li>
+<li>Linux user mode QEMU emulator: GPL</li>
+<li>BIOS files (bios.bin, vgabios.bin and vgabios-cirrus.bin): LGPL v2 or later</li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r936637989">.mw-parser-output .portal{border:solid #aaa 1px;padding:0}.mw-parser-output .portal.tleft{margin:0.5em 1em 0.5em 0}.mw-parser-output .portal.tright{margin:0.5em 0 0.5em 1em}.mw-parser-output .portal>ul{display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold}.mw-parser-output .portal>ul>li{display:table-row}.mw-parser-output .portal>ul>li>span:first-child{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portal>ul>li>span:last-child{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}</style><div role="navigation" aria-label="Portals" class="noprint portal plainlist tright">
+<ul>
+<li><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span><a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Free and open-source software portal</a></span></li>
+<li><span><a href="/wiki/File:NewTux.svg" class="image"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/23px-NewTux.svg.png" decoding="async" width="23" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/35px-NewTux.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/47px-NewTux.svg.png 2x" data-file-width="625" data-file-height="750" /></a></span><span><a href="/wiki/Portal:Linux" title="Portal:Linux">Linux portal</a></span></li></ul></div>
+<div class="div-col columns column-width" style="-moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em;">
+<ul><li><a href="/wiki/CloudStack" class="mw-redirect" title="CloudStack">CloudStack</a></li>
+<li><a href="/wiki/Comparison_of_platform_virtualization_software" title="Comparison of platform virtualization software">Comparison of platform virtualization software</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/Libguestfs" title="Libguestfs">libguestfs</a></li>
+<li><a href="/wiki/Libvirt" title="Libvirt">libvirt</a></li>
+<li><a href="/w/index.php?title=Multipass&amp;action=edit&amp;redlink=1" class="new" title="Multipass (page does not exist)">multipass</a></li>
+<li><a href="/wiki/Open_Virtualization_Alliance" title="Open Virtualization Alliance">Open Virtualization Alliance</a></li>
+<li><a href="/wiki/OpenNebula" title="OpenNebula">OpenNebula</a></li>
+<li><a href="/wiki/OpenStack" title="OpenStack">OpenStack</a></li>
+<li><a href="/wiki/OVirt" title="OVirt">oVirt</a></li>
+<li><a href="/wiki/Red_Hat_Virtualization" title="Red Hat Virtualization">Red Hat Virtualization</a></li>
+<li><a href="/wiki/Vx32" title="Vx32">Vx32</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul>
+</div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-2620notes-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-2620notes_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-2620notes_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://kernelnewbies.org/Linux_2_6_20#head-bca4fe7ffe454321118a470387c2be543ee51754">"Linux kernel 2.6.20, Section 2.2. Virtualization support through KVM"</a>. <i>kernelnewbies.org</i>. 2007-02-05<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=kernelnewbies.org&amp;rft.atitle=Linux+kernel+2.6.20%2C+Section+2.2.+Virtualization+support+through+KVM&amp;rft.date=2007-02-05&amp;rft_id=http%3A%2F%2Fkernelnewbies.org%2FLinux_2_6_20%23head-bca4fe7ffe454321118a470387c2be543ee51754&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.linux-kvm.org/page/FAQ#What_do_I_need_to_use_KVM.3F">KVM FAQ: What do I need to use KVM?</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.freebsd.org/news/status/report-2007-07-2007-10.html#Porting-Linux-KVM-to-FreeBSD">"FreeBSD Quarterly Status Report: Porting Linux KVM to FreeBSD"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=FreeBSD+Quarterly+Status+Report%3A+Porting+Linux+KVM+to+FreeBSD&amp;rft_id=http%3A%2F%2Fwww.freebsd.org%2Fnews%2Fstatus%2Freport-2007-07-2007-10.html%23Porting-Linux-KVM-to-FreeBSD&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dtrace.org/blogs/bmc/2011/08/15/kvm-on-illumos/">"KVM on illumos"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=KVM+on+illumos&amp;rft_id=http%3A%2F%2Fdtrace.org%2Fblogs%2Fbmc%2F2011%2F08%2F15%2Fkvm-on-illumos%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070929124348/http://article.gmane.org/gmane.comp.emulators.kvm.devel/2570">"Gmane - Mail To News And Back Again"</a>. Archived from <a rel="nofollow" class="external text" href="http://article.gmane.org/gmane.comp.emulators.kvm.devel/2570">the original</a> on 2007-09-29<span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-07</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Gmane+-+Mail+To+News+And+Back+Again&amp;rft_id=http%3A%2F%2Farticle.gmane.org%2Fgmane.comp.emulators.kvm.devel%2F2570&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://news.gmane.org/gmane.comp.emulators.kvm.devel/2595">Gmane Loom</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070929103042/http://news.gmane.org/gmane.comp.emulators.kvm.devel/2595">Archived</a> 2007-09-29 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130310052146/http://columbia.github.com/linux-kvm-arm/">"KVM/ARM Open Source Project"</a>. Archived from <a rel="nofollow" class="external text" href="https://columbia.github.com/linux-kvm-arm">the original</a> on 2013-03-10<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-11-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=KVM%2FARM+Open+Source+Project&amp;rft_id=https%3A%2F%2Fcolumbia.github.com%2Flinux-kvm-arm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.linux-kvm.org/page/Guest_Support_Status">"KVM wiki: Guest support status"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2007-05-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=KVM+wiki%3A+Guest+support+status&amp;rft_id=http%3A%2F%2Fwww.linux-kvm.org%2Fpage%2FGuest_Support_Status&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.contrib.andrew.cmu.edu/~somlo/OSXKVM/">"Running Mac OS X as a QEMU/KVM Guest"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-08-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Running+Mac+OS+X+as+a+QEMU%2FKVM+Guest&amp;rft_id=http%3A%2F%2Fwww.contrib.andrew.cmu.edu%2F~somlo%2FOSXKVM%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.gnu.org/software/hurd/hurd/status.html">"status"</a>. Gnu.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=status&amp;rft.pub=Gnu.org&amp;rft_id=https%3A%2F%2Fwww.gnu.org%2Fsoftware%2Fhurd%2Fhurd%2Fstatus.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.linux-kvm.org/page/Guest_Support_Status">"Guest Support Status - KVM"</a>. Linux-kvm.org<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Guest+Support+Status+-+KVM&amp;rft.pub=Linux-kvm.org&amp;rft_id=http%3A%2F%2Fwww.linux-kvm.org%2Fpage%2FGuest_Support_Status&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://man.openbsd.org/virtio.4">"OpenBSD man page virtio(4)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2018-02-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=OpenBSD+man+page+virtio%284%29&amp;rft_id=https%3A%2F%2Fman.openbsd.org%2Fvirtio.4&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://people.freebsd.org/~kuriyama/virtio/">"virtio binary packages for FreeBSD"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2012-10-29</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=virtio+binary+packages+for+FreeBSD&amp;rft_id=http%3A%2F%2Fpeople.freebsd.org%2F~kuriyama%2Fvirtio%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://netbsd.gw.com/cgi-bin/man-cgi?virtio++NetBSD-current">"NetBSD man page virtio(4)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-07-15</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=NetBSD+man+page+virtio%284%29&amp;rft_id=http%3A%2F%2Fnetbsd.gw.com%2Fcgi-bin%2Fman-cgi%3Fvirtio%2B%2BNetBSD-current&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://code.google.com/p/plan9front/wiki/qemu">"plan9front"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-02-11</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=plan9front&amp;rft_id=https%3A%2F%2Fcode.google.com%2Fp%2Fplan9front%2Fwiki%2Fqemu&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://lwn.net/Articles/239238/">"An API for virtual I/O: virtio"</a>. <a href="/wiki/LWN.net" title="LWN.net">LWN.net</a>. 2007-07-11<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-04-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=An+API+for+virtual+I%2FO%3A+virtio&amp;rft.pub=LWN.net&amp;rft.date=2007-07-11&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F239238%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://linux-iscsi.org/wiki/vHost">"SCSI target for KVM wiki"</a>. linux-iscsi.org. 2012-08-07<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-08-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=SCSI+target+for+KVM+wiki&amp;rft.pub=linux-iscsi.org&amp;rft.date=2012-08-07&amp;rft_id=http%3A%2F%2Flinux-iscsi.org%2Fwiki%2FvHost&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://kerneltrap.org/node/8088">Interview: Avi Kivity</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070426033902/http://kerneltrap.org/node/8088">Archived</a> 2007-04-26 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a> on <a href="/wiki/KernelTrap" title="KernelTrap">KernelTrap</a></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.redhat.com/en/about/press-releases/qumranet">"Red Hat Advances Virtualization Leadership with Qumranet, Inc. Acquisition"</a>. <a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a>. 4 September 2008<span class="reference-accessdate">. Retrieved <span class="nowrap">16 June</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Red+Hat+Advances+Virtualization+Leadership+with+Qumranet%2C+Inc.+Acquisition&amp;rft.pub=Red+Hat&amp;rft.date=2008-09-04&amp;rft_id=http%3A%2F%2Fwww.redhat.com%2Fen%2Fabout%2Fpress-releases%2Fqumranet&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.itworldcanada.com/article/kvm-15-equipped-with-live-migration/7901">https://www.itworldcanada.com/article/kvm-15-equipped-with-live-migration/7901</a></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web">Libby Clark (7 April 2015). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160315095510/http://www.linux.com/news/featured-blogs/200-libby-clark/821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini">"Git Success Stories and Tips from KVM Maintainer Paolo Bonzini"</a>. <a href="/wiki/Linux.com" title="Linux.com">Linux.com</a>. Archived from <a rel="nofollow" class="external text" href="http://www.linux.com/news/featured-blogs/200-libby-clark/821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini">the original</a> on 15 March 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">17 June</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Git+Success+Stories+and+Tips+from+KVM+Maintainer+Paolo+Bonzini&amp;rft.pub=Linux.com&amp;rft.date=2015-04-07&amp;rft.au=Libby+Clark&amp;rft_id=http%3A%2F%2Fwww.linux.com%2Fnews%2Ffeatured-blogs%2F200-libby-clark%2F821899-git-success-stories-and-tips-from-kvm-maintainer-paolo-bonzini&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web">Khoa Huynh; Stefan Hajnoczi (2010). <a rel="nofollow" class="external text" href="http://www-01.ibm.com/support/knowledgecenter/api/content/nl/en-us/linuxonibm/liaav/LPCKVMSSPV2.1.pdf">"KVM/QEMU Storage Stack Performance Discussion"</a> <span class="cs1-format">(PDF)</span>. <i>IBM</i>. Linux Plumbers Conference<span class="reference-accessdate">. Retrieved <span class="nowrap">January 3,</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IBM&amp;rft.atitle=KVM%2FQEMU+Storage+Stack+Performance+Discussion&amp;rft.date=2010&amp;rft.au=Khoa+Huynh&amp;rft.au=Stefan+Hajnoczi&amp;rft_id=http%3A%2F%2Fwww-01.ibm.com%2Fsupport%2Fknowledgecenter%2Fapi%2Fcontent%2Fnl%2Fen-us%2Flinuxonibm%2Fliaav%2FLPCKVMSSPV2.1.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><sup class="noprint Inline-Template"><span style="white-space: nowrap;">&#91;<i><a href="/wiki/Wikipedia:Link_rot" title="Wikipedia:Link rot"><span title="&#160;Dead link since January 2018">permanent dead link</span></a></i>&#93;</span></sup></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.seabios.org/SeaBIOS">"SeaBIOS"</a>. seabios.org. 2013-12-21<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=SeaBIOS&amp;rft.pub=seabios.org&amp;rft.date=2013-12-21&amp;rft_id=http%3A%2F%2Fwww.seabios.org%2FSeaBIOS&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://access.redhat.com/articles/1339413">https://access.redhat.com/articles/1339413</a></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.linux-kvm.org/page/FAQ#Is_dynamic_memory_management_for_guests_supported.3F">https://www.linux-kvm.org/page/FAQ#Is_dynamic_memory_management_for_guests_supported.3F</a></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://lwn.net/Articles/223754/">https://lwn.net/Articles/223754/</a></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.linux-kvm.org/page/Migration">https://www.linux-kvm.org/page/Migration</a></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://www.berrange.com/posts/2016/05/12/analysis-of-techniques-for-ensuring-migration-completion-with-kvm/">https://www.berrange.com/posts/2016/05/12/analysis-of-techniques-for-ensuring-migration-completion-with-kvm/</a></span>
+</li>
+<li id="cite_note-qemu-doc-29"><span class="mw-cite-backlink">^ <a href="#cite_ref-qemu-doc_29-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-qemu-doc_29-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-qemu-doc_29-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-qemu-doc_29-3"><sup><i><b>d</b></i></sup></a></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://wiki.qemu.org/download/qemu-doc.html">wiki.qemu.org – QEMU Emulator User Documentation</a>, read 2010-05-06</span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130725063318/http://airlied.livejournal.com/77553.html">"Introducing Virgil - 3D virtual GPU for qemu"</a>. 2013-07-18. Archived from <a rel="nofollow" class="external text" href="http://airlied.livejournal.com/77553.html">the original</a> on 2013-07-25.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Introducing+Virgil+-+3D+virtual+GPU+for+qemu&amp;rft.date=2013-07-18&amp;rft_id=http%3A%2F%2Fairlied.livejournal.com%2F77553.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text">Licensing info from Ubuntu 7.04 <tt>/usr/share/doc/kvm/copyright</tt></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Bibliography">Bibliography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=9" title="Edit section: Bibliography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web">Amit Shah (2016-11-02). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/705160/">"Ten years of KVM"</a>. <i>lwn.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2017-02-10</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=lwn.net&amp;rft.atitle=Ten+years+of+KVM&amp;rft.date=2016-11-02&amp;rft.au=Amit+Shah&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F705160%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AKernel-based+Virtual+Machine" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.linux-kvm.org">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://public.dhe.ibm.com/software/dw/linux390/perf/ZSW03346USEN.pdf">Best practices for the Kernel-based Virtual Machine</a>, IBM, second edition, April 2012</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20141021055601/http://www.linux-kvm.org/wiki/images/f/f9/2012-forum-virtio-blk-performance-improvement.pdf">Virtio-blk Performance Improvement</a>, KVM Forum 2012, November 8, 2012, by Asias He</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20101128114720/http://qemu-buch.de/e/Content">Wikibook QEMU &amp; KVM</a></li></ul>
+ <div role="navigation" class="navbox" aria-labelledby="Virtualization_software" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Virtualization_software" title="Template:Virtualization software"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Virtualization_software" title="Template talk:Virtualization software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Virtualization_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Virtualization_software" style="font-size:114%;margin:0 4em"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a> software</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="Comparison_of_platform_virtualization_software"><a href="/wiki/Comparison_of_platform_virtualization_software" title="Comparison of platform virtualization software">Comparison of platform virtualization software</a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Hardware_virtualization" title="Hardware virtualization">Hardware<br />virtualization</a><br />(<a href="/wiki/Hypervisor" title="Hypervisor">hypervisors</a>)</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Native</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Adaptive_Domain_Environment_for_Operating_Systems" title="Adaptive Domain Environment for Operating Systems">Adeos</a></li>
+<li><a href="/wiki/CP/CMS" title="CP/CMS">CP/CMS</a></li>
+<li><a href="/wiki/Hyper-V" title="Hyper-V">Hyper-V</a></li>
+<li><a class="mw-selflink selflink">KVM</a>
+<ul><li><a href="/wiki/Red_Hat_Enterprise_Virtualization" class="mw-redirect" title="Red Hat Enterprise Virtualization">Red Hat Enterprise Virtualization</a></li></ul></li>
+<li><a href="/wiki/Oracle_VM_Server_for_SPARC" title="Oracle VM Server for SPARC">LDoms / Oracle VM Server for SPARC</a></li>
+<li><a href="/wiki/Logical_partition" title="Logical partition">Logical Partition (LPAR)</a></li>
+<li><a href="/wiki/LynxSecure" title="LynxSecure">LynxSecure</a></li>
+<li><a href="/wiki/PikeOS" title="PikeOS">PikeOS</a></li>
+<li><a href="/wiki/Proxmox_VE" class="mw-redirect" title="Proxmox VE">Proxmox VE</a></li>
+<li><a href="/wiki/SIMMON" title="SIMMON">SIMMON</a></li>
+<li><a href="/wiki/VMware_ESXi" title="VMware ESXi">VMware ESXi</a>
+<ul><li><a href="/wiki/VMware_vSphere" title="VMware vSphere">VMware vSphere</a></li>
+<li><a href="/wiki/VCloud_Air" title="VCloud Air">vCloud</a></li></ul></li>
+<li><a href="/wiki/VMware_Infrastructure" title="VMware Infrastructure">VMware Infrastructure</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a>
+<ul><li><a href="/wiki/Oracle_VM_Server_for_x86" title="Oracle VM Server for x86">Oracle VM Server for x86</a></li>
+<li><a href="/wiki/XenServer" class="mw-redirect" title="XenServer">XenServer</a></li></ul></li>
+<li><a href="/wiki/XtratuM" title="XtratuM">XtratuM</a></li>
+<li><a href="/wiki/Z/VM" title="Z/VM">z/VM</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Hosted</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Specialized</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Basilisk_II" title="Basilisk II">Basilisk II</a></li>
+<li><a href="/wiki/Bhyve" title="Bhyve">bhyve</a></li>
+<li><a href="/wiki/Bochs" title="Bochs">Bochs</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">Cooperative Linux</a></li>
+<li><a href="/wiki/DOSBox" title="DOSBox">DOSBox</a></li>
+<li><a href="/wiki/DOSEMU" title="DOSEMU">DOSEMU</a></li>
+<li><a href="/wiki/PCem" title="PCem">PCem</a></li>
+<li><a href="/wiki/PikeOS" title="PikeOS">PikeOS</a></li>
+<li><a href="/wiki/SheepShaver" title="SheepShaver">SheepShaver</a></li>
+<li><a href="/wiki/SIMH" title="SIMH">SIMH</a></li>
+<li><a href="/wiki/Windows_on_Windows" title="Windows on Windows">Windows on Windows</a>
+<ul><li><a href="/wiki/Virtual_DOS_machine" title="Virtual DOS machine">Virtual DOS machine</a></li></ul></li>
+<li><a href="/wiki/Win4Lin" title="Win4Lin">Win4Lin</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Independent</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microsoft_Virtual_Server" title="Microsoft Virtual Server">Microsoft Virtual Server</a></li>
+<li><a href="/wiki/Parallels_Workstation" title="Parallels Workstation">Parallels Workstation</a></li>
+<li><a href="/wiki/Parallels_Desktop_for_Mac" title="Parallels Desktop for Mac">Parallels Desktop for Mac</a></li>
+<li><a href="/wiki/Parallels_Server_for_Mac" title="Parallels Server for Mac">Parallels Server for Mac</a></li>
+<li><a href="/wiki/PearPC" title="PearPC">PearPC</a></li>
+<li><a href="/wiki/QEMU" title="QEMU">QEMU</a></li>
+<li><a href="/wiki/VirtualBox" title="VirtualBox">VirtualBox</a></li>
+<li><a href="/wiki/Virtual_Iron" title="Virtual Iron">Virtual Iron</a></li>
+<li><a href="/wiki/VMware_Fusion" title="VMware Fusion">VMware Fusion</a></li>
+<li><a href="/wiki/VMware_Server" title="VMware Server">VMware Server</a></li>
+<li><a href="/wiki/VMware_Workstation" title="VMware Workstation">VMware Workstation</a> (<a href="/wiki/VMware_Workstation_Player" title="VMware Workstation Player">Player</a>)</li>
+<li><a href="/wiki/Windows_Virtual_PC" title="Windows Virtual PC">Windows Virtual PC</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Tools</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ganeti" title="Ganeti">Ganeti</a></li>
+<li><a href="/wiki/OVirt" title="OVirt">oVirt</a></li>
+<li><a href="/wiki/System_Center_Virtual_Machine_Manager" title="System Center Virtual Machine Manager">System Center Virtual Machine Manager</a></li>
+<li><a href="/wiki/Virtual_Machine_Manager" title="Virtual Machine Manager">Virtual Machine Manager</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level<br />virtualization</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">OS containers</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/FreeBSD_jail" title="FreeBSD jail">FreeBSD jail</a></li>
+<li><a href="/wiki/ICore_Virtual_Accounts" title="ICore Virtual Accounts">iCore Virtual Accounts</a></li>
+<li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li>
+<li><a href="/wiki/Solaris_Containers" title="Solaris Containers">Solaris Containers</a></li>
+<li><a href="/wiki/Virtuozzo_(company)#Software" title="Virtuozzo (company)">Virtuozzo</a></li>
+<li><a href="/wiki/Workload_Partitions" title="Workload Partitions">Workload Partitions</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Application containers</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Docker_(software)" title="Docker (software)">Docker</a></li>
+<li><a href="/wiki/Lmctfy" title="Lmctfy">lmctfy</a></li>
+<li><a href="/wiki/Container_Linux#Overview" title="Container Linux">rkt</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Virtual kernel architectures</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/Vkernel" title="Vkernel">vkernel</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related kernel features</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Solaris_Containers#Branded_zones" title="Solaris Containers">BrandZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Chroot" title="Chroot">chroot</a></li>
+<li><a href="/wiki/Linux_namespaces" title="Linux namespaces">namespaces</a></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Orchestration</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Amazon_Web_Services" title="Amazon Web Services">Amazon ECS</a></li>
+<li><a href="/wiki/Kubernetes" title="Kubernetes">Kubernetes</a></li>
+<li><a href="/wiki/OpenShift" title="OpenShift">OpenShift</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Desktop_virtualization" title="Desktop virtualization">Desktop<br />virtualization</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Citrix_XenApp" class="mw-redirect" title="Citrix XenApp">Citrix XenApp</a></li>
+<li><a href="/wiki/Citrix_XenDesktop" class="mw-redirect" title="Citrix XenDesktop">Citrix XenDesktop</a></li>
+<li><a href="/wiki/Remote_Desktop_Services" title="Remote Desktop Services">Remote Desktop Services</a></li>
+<li><a href="/wiki/VMware_Horizon_View" class="mw-redirect" title="VMware Horizon View">VMware Horizon View</a></li>
+<li><a href="/wiki/Ulteo_Open_Virtual_Desktop" title="Ulteo Open Virtual Desktop">Ulteo Open Virtual Desktop</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Application_virtualization" title="Application virtualization">Application<br />virtualization</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ceedo" title="Ceedo">Ceedo</a></li>
+<li><a href="/wiki/Citrix_XenApp" class="mw-redirect" title="Citrix XenApp">Citrix XenApp</a></li>
+<li><a href="/wiki/Dalvik_(software)" title="Dalvik (software)">Dalvik</a></li>
+<li><a href="/wiki/InstallFree" title="InstallFree">InstallFree</a></li>
+<li><a href="/wiki/Microsoft_App-V" title="Microsoft App-V">Microsoft App-V</a></li>
+<li><a href="/wiki/Remote_Desktop_Services" title="Remote Desktop Services">Remote Desktop Services</a></li>
+<li><a href="/wiki/Symantec_Workspace_Virtualization" title="Symantec Workspace Virtualization">Symantec Workspace Virtualization</a></li>
+<li><a href="/wiki/Turbo_(software)" title="Turbo (software)">Turbo</a></li>
+<li><a href="/wiki/VMware_ThinApp" title="VMware ThinApp">VMware ThinApp</a></li>
+<li><a href="/wiki/ZeroVM" title="ZeroVM">ZeroVM</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Network_virtualization" title="Network virtualization">Network<br />virtualization</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Distributed_Overlay_Virtual_Ethernet" title="Distributed Overlay Virtual Ethernet">Distributed Overlay Virtual Ethernet</a> (DOVE)</li>
+<li><a href="/wiki/Ethernet_VPN" title="Ethernet VPN">Ethernet VPN</a> (EVPN)</li>
+<li><a href="/wiki/Network_Virtualization_using_Generic_Routing_Encapsulation" title="Network Virtualization using Generic Routing Encapsulation">NVGRE</a></li>
+<li><a href="/wiki/Open_vSwitch" title="Open vSwitch">Open vSwitch</a></li>
+<li><a href="/wiki/Virtual_security_switch" title="Virtual security switch">Virtual security switch</a></li>
+<li><a href="/wiki/Virtual_Extensible_LAN" title="Virtual Extensible LAN">Virtual Extensible LAN</a> (VXLAN)</li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>See also: <a href="/wiki/List_of_emulators" title="List of emulators">List of emulators</a></div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Linux_kernel" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux_kernel" title="Template talk:Linux kernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux_kernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux_kernel" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organization</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Kernel" scope="row" class="navbox-group" style="width:1%">Kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO disputes</a></li>
+<li><a href="/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="/wiki/GNU_General_Public_License#Version_2" title="GNU General Public License">GNU GPL v2</a></li>
+<li><a href="/wiki/Menuconfig" title="Menuconfig">menuconfig</a></li>
+<li><a href="/wiki/List_of_Linux-supported_computer_architectures" title="List of Linux-supported computer architectures">Supported computer architectures</a></li>
+<li><a href="/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">Kernel names</a></li>
+<li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Support</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Developers
+<ul><li><i><a href="/wiki/The_Linux_Programming_Interface" title="The Linux Programming Interface">The Linux Programming Interface</a></i></li>
+<li><a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a></li>
+<li><a href="/wiki/Linux_kernel_mailing_list" title="Linux kernel mailing list">LKML</a></li>
+<li><a href="/wiki/Linux_conference" class="mw-redirect" title="Linux conference">Linux conferences</a></li></ul></li>
+<li>Users
+<ul><li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Technical</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Debugging</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CRIU" title="CRIU">CRIU</a></li>
+<li><a href="/wiki/Ftrace" title="Ftrace">ftrace</a></li>
+<li><a href="/wiki/Kdump_(Linux)" title="Kdump (Linux)">kdump</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+<li><a href="/wiki/Berkeley_Packet_Filter" title="Berkeley Packet Filter">BPF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_startup_process" title="Linux startup process">Startup</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="/wiki/System.map" title="System.map">System.map</a></li>
+<li><a href="/wiki/Dracut_(software)" title="Dracut (software)">dracut</a></li>
+<li><a href="/wiki/Initrd" class="mw-redirect" title="Initrd">initrd</a></li>
+<li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">ABIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a></li>
+<li><a href="/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Of<br /><a href="/wiki/User_space" title="User space">userspace</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtual_file_system" title="Virtual file system">FS</a>,<br /><a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemons</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Devfs" class="mw-redirect" title="Devfs">devfs</a></li>
+<li><a href="/wiki/Devpts" title="Devpts">devpts</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Systemd" title="Systemd">systemd</a>
+<ul><li><a href="/wiki/Udev" title="Udev">udev</a></li></ul></li>
+<li><a href="/wiki/Kmscon" title="Kmscon">Kmscon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Wrapper_library" title="Wrapper library">Wrapper<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_standard_library" title="C standard library">C standard library</a>
+<ul><li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li></ul></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">libcgroup</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a></li>
+<li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">libevdev</a></li>
+<li><a href="/wiki/Libusb" title="Libusb">libusb</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Of<br />kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#SCI" title="Linux kernel interfaces">System Call<br />Interface</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/POSIX" title="POSIX">POSIX</a>
+<ul><li><a href="/wiki/Ioctl" title="Ioctl">ioctl</a></li>
+<li><a href="/wiki/Select_(Unix)" title="Select (Unix)">select</a></li>
+<li><a href="/wiki/Open_(system_call)" title="Open (system call)">open</a></li>
+<li><a href="/wiki/Read_(system_call)" title="Read (system call)">read</a></li>
+<li><a href="/wiki/Close_(system_call)" title="Close (system call)">close</a></li>
+<li><a href="/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a></li>
+<li>…</li></ul></li>
+<li>Linux-only
+<ul><li><a href="/wiki/Futex" title="Futex">futex</a></li>
+<li><a href="/wiki/Epoll" title="Epoll">epoll</a></li>
+<li><a href="/wiki/Splice_(system_call)" title="Splice (system call)">splice</a></li>
+<li><a href="/wiki/Dnotify" title="Dnotify">dnotify</a></li>
+<li><a href="/wiki/Inotify" title="Inotify">inotify</a></li>
+<li><a href="/wiki/Readahead" title="Readahead">readahead</a></li>
+<li>…</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#In–kernel_APIs" title="Linux kernel interfaces">In-kernel</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="/wiki/Crypto_API_(Linux)" title="Crypto API (Linux)">Crypto API</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/Kernfs_(Linux)" title="Kernfs (Linux)">kernfs</a></li>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/New_API" title="New API">New API</a></li>
+<li><a href="/wiki/Read-copy-update" title="Read-copy-update">RCU</a></li>
+<li><a href="/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="/wiki/BlueZ" class="mw-redirect" title="BlueZ">BlueZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/EDAC_(Linux)" class="mw-redirect" title="EDAC (Linux)">EDAC</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/LIO_(SCSI_target)" title="LIO (SCSI target)">LIO</a></li>
+<li><a href="/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a href="/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux)">LVM</a></li>
+<li><a href="/wiki/KMS_driver" class="mw-redirect" title="KMS driver">KMS driver</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="/wiki/Netlink" title="Netlink">Netlink</a></li>
+<li><a href="/wiki/Nftables" title="Nftables">nftables</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Perf_(Linux)" title="Perf (Linux)">perf</a></li>
+<li><a href="/wiki/SLUB_(software)" title="SLUB (software)">SLUB</a></li>
+<li><a href="/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="/wiki/Zswap" title="Zswap">zswap</a></li></ul>
+<ul><li><a href="/wiki/Scheduling_(computing)#Linux" title="Scheduling (computing)">Process and I/O schedulers</a>:</li>
+<li><a href="/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a></li>
+<li><a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a href="/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> (CFQ)</li>
+<li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/Noop_scheduler" title="Noop scheduler">Noop scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<ul><li><a href="/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a>
+<ul><li><a href="/wiki/PaX" title="PaX">PaX</a></li></ul></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="/wiki/Smack_(software)" title="Smack (software)">Smack</a></li>
+<li><a href="/wiki/Tomoyo_Linux" title="Tomoyo Linux">Tomoyo Linux</a></li>
+<li><a href="/wiki/Linux_PAM" title="Linux PAM">Linux PAM</a></li></ul>
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device drivers</a>
+<ul><li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">802.11</a></li>
+<li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">graphics</a></li></ul></li>
+<li><a href="/wiki/Raw_device" title="Raw device">Raw device</a></li></ul>
+<ul><li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li>
+<li><a href="/wiki/KernelCare" title="KernelCare">KernelCare</a></li>
+<li><a href="/wiki/Kexec" title="Kexec">kexec</a></li>
+<li><a href="/wiki/KGraft" title="KGraft">kGraft</a></li>
+<li><a href="/wiki/Kpatch" title="Kpatch">kpatch</a></li>
+<li><a href="/wiki/Ksplice" title="Ksplice">Ksplice</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Mainline</a>
+<ul><li><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li></ul></li>
+<li><a href="/wiki/High-performance_computing" class="mw-redirect" title="High-performance computing">High-performance computing</a>
+<ul><li><a href="/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="/wiki/Slurm_Workload_Manager" title="Slurm Workload Manager">SLURM</a></li></ul></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul><li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li></ul></li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li></ul></li></ul>
+ </div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Virtualization" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul><li><a class="mw-selflink selflink">KVM</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul></li>
+<li><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level virtualization</a>
+<ul><li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li></ul></li>
+<li>Other
+<ul><li><a href="/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Rangeof_use" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range<br />of use</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul><li><a href="/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="/wiki/Thinstation" title="Thinstation">Thinstation</a></li></ul></li>
+<li>Server:
+<ul><li><a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME-LYCE</a></li></ul></li>
+<li><a href="/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Adopters</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel" title="Category:Linux kernel">Category</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Linux_kernel" class="extiw" title="commons:Linux kernel">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="https://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" decoding="async" title="Wikiversity page" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800" /> <b><a href="https://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q377539&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q377539&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q377539" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/1023662787">1023662787</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1328
+Cached time: 20200311104828
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.488 seconds
+Real time usage: 0.674 seconds
+Preprocessor visited node count: 2382/1000000
+Post‐expand include size: 153944/2097152 bytes
+Template argument size: 3349/2097152 bytes
+Highest expansion depth: 17/40
+Expensive parser function count: 7/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 67596/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.228/10.000 seconds
+Lua memory usage: 7.56 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  536.577      1 -total
+ 33.29%  178.632      1 Template:Reflist
+ 23.94%  128.458     21 Template:Cite_web
+ 18.03%   96.724      1 Template:Infobox_software
+ 16.79%   90.077      1 Template:Infobox
+ 13.35%   71.654     12 Template:Navbox
+  8.85%   47.499      1 Template:Short_description
+  6.38%   34.252      1 Template:Pagetype
+  6.14%   32.929      1 Template:Linux_kernel
+  5.95%   31.920      1 Template:Confusing
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:8412133-0!canonical and timestamp 20200311104827 and revision id 941736431
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Kernel-based_Virtual_Machine&amp;oldid=941736431">https://en.wikipedia.org/w/index.php?title=Kernel-based_Virtual_Machine&amp;oldid=941736431</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Free_emulation_software" title="Category:Free emulation software">Free emulation software</a></li><li><a href="/wiki/Category:Free_software_programmed_in_C" title="Category:Free software programmed in C">Free software programmed in C</a></li><li><a href="/wiki/Category:Free_virtualization_software" title="Category:Free virtualization software">Free virtualization software</a></li><li><a href="/wiki/Category:Linux_kernel_features" title="Category:Linux kernel features">Linux kernel features</a></li><li><a href="/wiki/Category:Virtualization_software" title="Category:Virtualization software">Virtualization software</a></li><li><a href="/wiki/Category:Virtualization-related_software_for_Linux" title="Category:Virtualization-related software for Linux">Virtualization-related software for Linux</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:All_articles_with_dead_external_links" title="Category:All articles with dead external links">All articles with dead external links</a></li><li><a href="/wiki/Category:Articles_with_dead_external_links_from_January_2018" title="Category:Articles with dead external links from January 2018">Articles with dead external links from January 2018</a></li><li><a href="/wiki/Category:Articles_with_permanently_dead_external_links" title="Category:Articles with permanently dead external links">Articles with permanently dead external links</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_February_2019" title="Category:Wikipedia articles needing clarification from February 2019">Wikipedia articles needing clarification from February 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Kernel-based+Virtual+Machine" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Kernel-based+Virtual+Machine" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Kernel-based_Virtual_Machine" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Kernel-based_Virtual_Machine" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Kernel-based_Virtual_Machine">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Kernel-based_Virtual_Machine" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Kernel-based_Virtual_Machine" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;oldid=941736431" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q377539" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Kernel-based_Virtual_Machine&amp;id=941736431&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Kernel-based_Virtual_Machine" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Kernel-based+Virtual+Machine">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Kernel-based+Virtual+Machine&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Kernel-based_Virtual_Machine&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A2%D9%84%D8%A9_%D8%A7%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A%D8%A9_%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9_%D8%B9%D9%84%D9%89_%D8%A7%D9%84%D9%86%D9%88%D8%A7%D8%A9" title="آلة افتراضية معتمدة على النواة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%BB%A4%EB%84%90_%EA%B8%B0%EB%B0%98_%EA%B0%80%EC%83%81_%EB%A8%B8%EC%8B%A0" title="커널 기반 가상 머신 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Kjernebasert_virtuell_maskin" title="Kjernebasert virtuell maskin – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/KVM" title="KVM – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%95%E0%AE%B0%E0%AF%81_%E0%AE%86%E0%AE%A4%E0%AE%BE%E0%AE%B0%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%B2%E0%AE%BE%E0%AE%A9_%E0%AE%AE%E0%AF%86%E0%AE%AF%E0%AF%8D%E0%AE%A8%E0%AE%BF%E0%AE%95%E0%AE%B0%E0%AF%8D_%E0%AE%87%E0%AE%AF%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%AE%E0%AF%8D" title="கரு ஆதாரத்திலான மெய்நிகர் இயந்திரம் – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/KVM_(%C3%87ekirdek_tabanl%C4%B1_sanal_makine)" title="KVM (Çekirdek tabanlı sanal makine) – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%9F%BA%E4%BA%8E%E5%86%85%E6%A0%B8%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA" title="基于内核的虚拟机 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q377539#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 20 February 2020, at 10:09<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Kernel-based_Virtual_Machine&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.488","walltime":"0.674","ppvisitednodes":{"value":2382,"limit":1000000},"postexpandincludesize":{"value":153944,"limit":2097152},"templateargumentsize":{"value":3349,"limit":2097152},"expansiondepth":{"value":17,"limit":40},"expensivefunctioncount":{"value":7,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":67596,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  536.577      1 -total"," 33.29%  178.632      1 Template:Reflist"," 23.94%  128.458     21 Template:Cite_web"," 18.03%   96.724      1 Template:Infobox_software"," 16.79%   90.077      1 Template:Infobox"," 13.35%   71.654     12 Template:Navbox","  8.85%   47.499      1 Template:Short_description","  6.38%   34.252      1 Template:Pagetype","  6.14%   32.929      1 Template:Linux_kernel","  5.95%   31.920      1 Template:Confusing"]},"scribunto":{"limitreport-timeusage":{"value":"0.228","limit":"10.000"},"limitreport-memusage":{"value":7925548,"limit":52428800}},"cachereport":{"origin":"mw1328","timestamp":"20200311104828","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Kernel-based Virtual Machine","url":"https:\/\/en.wikipedia.org\/wiki\/Kernel-based_Virtual_Machine","sameAs":"http:\/\/www.wikidata.org\/entity\/Q377539","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q377539","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-12-13T02:02:22Z","dateModified":"2020-02-20T10:09:55Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/3\/33\/Kvm_running_various_guests.png","headline":"virtualization module in the Linux kernel"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":108,"wgHostname":"mw1261"});});</script></body></html>

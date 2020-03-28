@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Dynamic programming language - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn9iDApAIH4AATWoNigAAADH","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Dynamic_programming_language","wgTitle":"Dynamic programming language","wgCurRevisionId":941919173,"wgRevisionId":941919173,"wgArticleId":234079,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: archived copy as title","Articles needing expert attention with no reason or talk parameter","Articles needing unspecified expert attention","Articles needing expert attention from January 2015","All articles needing expert attention","Accuracy disputes from March 2012"
+,"All accuracy disputes","Wikipedia articles needing clarification from October 2009","All Wikipedia articles needing clarification","Articles with multiple maintenance issues","Articles to be expanded from October 2009","All articles to be expanded","Articles using small message boxes","Wikipedia articles needing clarification from September 2016","Evaluation strategy"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Dynamic_programming_language","wgRelevantArticleId":234079,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},
+"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1268980","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher",
+"ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Dynamic_programming_language&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Dynamic_programming_language&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Dynamic_programming_language"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Dynamic_programming_language rootpage-Dynamic_programming_language skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Dynamic programming language</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">This article is about a class of programming languages. For the method for reducing the running time of algorithms, see <a href="/wiki/Dynamic_programming" title="Dynamic programming">dynamic programming</a>.</div>
+<table class="box-Multiple_issues plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span"><div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="/wiki/Talk:Dynamic_programming_language" title="Talk:Dynamic programming language">talk page</a></b>. <small><i>(<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+      <table class="box-Expert_needed plainlinks metadata ambox ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs attention from an expert on the subject</b>.<span class="hide-when-compact"> Please add a <i>reason</i> or a <i>talk</i> parameter to this template to explain the issue with the article. <br /><small><i>When placing this tag, consider <a href="/wiki/Template:Expert_needed#Parameters" title="Template:Expert needed">associating this request</a> with a <a href="/wiki/Wikipedia:WikiProject" title="Wikipedia:WikiProject">WikiProject</a>.</i></small></span>  <small class="date-container"><i>(<span class="date">January 2015</span>)</i></small></div></td></tr></tbody></table>
+<table class="box-Disputed plainlinks metadata ambox ambox-content ambox-disputed" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="System-search.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/System-search.svg/45px-System-search.svg.png" decoding="async" width="45" height="45" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/17/System-search.svg/68px-System-search.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/17/System-search.svg/90px-System-search.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article's <b>factual accuracy is <a href="/wiki/Wikipedia:Accuracy_dispute" title="Wikipedia:Accuracy dispute">disputed</a></b>.<span class="hide-when-compact"> Relevant discussion may be found on the <a href="/wiki/Talk:Dynamic_programming_language##Disputed" title="Talk:Dynamic programming language">talk page</a>. Please help to ensure that disputed statements are <a href="/wiki/Wikipedia:Reliable_sources" title="Wikipedia:Reliable sources">reliably sourced</a>.</span>  <small class="date-container"><i>(<span class="date">March 2012</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="box-Confusing plainlinks metadata ambox ambox-style ambox-confusing" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>may be <a href="/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness">confusing or unclear</a> to readers</b>.<span class="hide-when-compact"> Please help us <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarify the article</a>. There might be a discussion about this on <a href="/wiki/Talk:Dynamic_programming_language" title="Talk:Dynamic programming language">the talk page</a>.</span>  <small class="date-container"><i>(<span class="date">October 2009</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+    </div>
+</div><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Programming paradigms</a></th></tr><tr><td style="padding:0 0.1em 0.4em;text-align: left">
+<ul><li><a href="/wiki/Action_language" title="Action language">Action</a></li>
+<li><a href="/wiki/Agent-oriented_programming" title="Agent-oriented programming">Agent-oriented</a></li>
+<li><a href="/wiki/Array_programming" title="Array programming">Array-oriented</a></li>
+<li><a href="/wiki/Automata-based_programming" title="Automata-based programming">Automata-based</a></li>
+<li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent computing</a>
+<ul><li><a href="/wiki/Relativistic_programming" title="Relativistic programming">Relativistic programming</a></li></ul></li>
+<li><a href="/wiki/Data-driven_programming" title="Data-driven programming">Data-driven</a></li>
+<li><a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a> (contrast: <a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a>)
+<ul><li><a href="/wiki/Functional_programming" title="Functional programming">Functional</a>
+<ul><li><a href="/wiki/Functional_logic_programming" title="Functional logic programming">Functional logic</a></li>
+<li><a href="/wiki/Purely_functional_programming" title="Purely functional programming">Purely functional</a></li></ul></li>
+<li><a href="/wiki/Logic_programming" title="Logic programming">Logic</a>
+<ul><li><a href="/wiki/Abductive_logic_programming" title="Abductive logic programming">Abductive logic</a></li>
+<li><a href="/wiki/Answer_set_programming" title="Answer set programming">Answer set</a></li>
+<li><a href="/wiki/Concurrent_logic_programming" title="Concurrent logic programming">Concurrent logic</a></li>
+<li><a href="/wiki/Functional_logic_programming" title="Functional logic programming">Functional logic</a></li>
+<li><a href="/wiki/Inductive_logic_programming" title="Inductive logic programming">Inductive logic</a></li></ul></li>
+<li><a href="/wiki/Constraint_programming" title="Constraint programming">Constraint</a>
+<ul><li><a href="/wiki/Constraint_logic_programming" title="Constraint logic programming">Constraint logic</a>
+<ul><li><a href="/wiki/Concurrent_constraint_logic_programming" title="Concurrent constraint logic programming">Concurrent constraint logic</a></li></ul></li></ul></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a>
+<ul><li><a href="/wiki/Flow-based_programming" title="Flow-based programming">Flow-based</a></li>
+<li><a href="/wiki/Reactive_programming" title="Reactive programming">Reactive</a></li></ul></li>
+<li><a href="/wiki/Ontology_language" title="Ontology language">Ontology</a></li></ul></li>
+<li><a href="/wiki/Differentiable_programming" title="Differentiable programming">Differentiable</a></li>
+<li><a class="mw-selflink selflink">Dynamic/scripting</a></li>
+<li><a href="/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a></li>
+<li><a href="/wiki/Function-level_programming" title="Function-level programming">Function-level</a> (contrast: <a href="/wiki/Value-level_programming" title="Value-level programming">Value-level</a>)
+<ul><li><a href="/wiki/Tacit_programming" title="Tacit programming">Point-free style</a>
+<ul><li><a href="/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li></ul></li></ul></li>
+<li><a href="/wiki/Generic_programming" title="Generic programming">Generic</a></li>
+<li><a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a> (contrast: <a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a>)
+<ul><li><a href="/wiki/Procedural_programming" title="Procedural programming">Procedural</a></li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented</a>
+<ul><li><a href="/wiki/Polymorphic_code" title="Polymorphic code">Polymorphic</a></li></ul></li></ul></li>
+<li><a href="/wiki/Intentional_programming" title="Intentional programming">Intentional</a></li>
+<li><a href="/wiki/Language-oriented_programming" title="Language-oriented programming">Language-oriented</a>
+<ul><li><a href="/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li></ul></li>
+<li><a href="/wiki/Literate_programming" title="Literate programming">Literate</a></li>
+<li><a href="/wiki/Natural-language_programming" title="Natural-language programming">Natural-language programming</a></li>
+<li><a href="/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a>
+<ul><li><a href="/wiki/Automatic_programming" title="Automatic programming">Automatic</a>
+<ul><li><a href="/wiki/Inductive_programming" title="Inductive programming">Inductive programming</a></li></ul></li>
+<li><a href="/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a>
+<ul><li><a href="/wiki/Attribute-oriented_programming" title="Attribute-oriented programming">Attribute-oriented</a></li></ul></li>
+<li><a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">Macro</a></li>
+<li><a href="/wiki/Template_metaprogramming" title="Template metaprogramming">Template</a></li></ul></li>
+<li><a href="/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a> (contrast: <a href="/wiki/Structured_programming" title="Structured programming">Structured</a>)
+<ul><li><a href="/wiki/Array_programming" title="Array programming">Array</a></li></ul></li>
+<li><a href="/wiki/Nondeterministic_programming" title="Nondeterministic programming">Nondeterministic</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a>
+<ul><li><a href="/wiki/Process-oriented_programming" title="Process-oriented programming">Process-oriented</a></li></ul></li>
+<li><a href="/wiki/Probabilistic_programming_language" class="mw-redirect" title="Probabilistic programming language">Probabilistic</a></li>
+<li><a href="/wiki/Quantum_programming" title="Quantum programming">Quantum</a></li>
+<li><a href="/wiki/Set_theoretic_programming" title="Set theoretic programming">Set-theoretic</a></li>
+<li><a href="/wiki/Stack-oriented_programming" title="Stack-oriented programming">Stack-based</a></li>
+<li><a href="/wiki/Structured_programming" title="Structured programming">Structured</a> (contrast: <a href="/wiki/Non-structured_programming" title="Non-structured programming">Non-structured</a>)
+<ul><li><a href="/wiki/Block_(programming)" title="Block (programming)">Block-structured</a>
+<ul><li><a href="/wiki/Structured_concurrency" title="Structured concurrency">Structured concurrency</a></li></ul></li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented</a>
+<ul><li><a href="/wiki/Actor_model" title="Actor model">Actor-based</a></li>
+<li><a href="/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="/wiki/Concurrent_object-oriented_programming" title="Concurrent object-oriented programming">Concurrent</a></li>
+<li><a href="/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+<li>By <a href="/wiki/Separation_of_concerns" title="Separation of concerns">separation of concerns</a>:
+<ul><li><a href="/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="/wiki/Role-oriented_programming" title="Role-oriented programming">Role-oriented</a></li>
+<li><a href="/wiki/Subject-oriented_programming" title="Subject-oriented programming">Subject-oriented</a></li></ul></li></ul></li>
+<li><a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursive</a></li></ul></li>
+<li><a href="/wiki/Symbolic_programming" title="Symbolic programming">Symbolic</a></li>
+<li><a href="/wiki/Value-level_programming" title="Value-level programming">Value-level</a> (contrast: <a href="/wiki/Function-level_programming" title="Function-level programming">Function-level</a>)</li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Programming_paradigms" title="Template:Programming paradigms"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Programming_paradigms" title="Template talk:Programming paradigms"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Programming_paradigms&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, a <b>dynamic programming language</b> is a class of <a href="/wiki/High-level_programming_language" title="High-level programming language">high-level programming languages</a>, which at <a href="/wiki/Runtime_(program_lifecycle_phase)" title="Runtime (program lifecycle phase)">runtime</a> execute many common programming behaviours that static programming languages perform during <a href="/wiki/Compiler" title="Compiler">compilation</a>. These behaviors could include an extension of the program, by adding new <a href="/wiki/Source_code" title="Source code">code</a>, by extending <a href="/wiki/Object_(computer_science)" title="Object (computer science)">objects</a> and definitions, or by modifying the <a href="/wiki/Type_system" title="Type system">type system</a>. Although similar behaviors can be emulated in nearly any language, with varying degrees of difficulty, complexity and performance costs, dynamic languages provide direct tools to make use of them. Many of these features were first implemented as native features in the <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a> programming language.
+</p><p>Most dynamic languages are also <a href="/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">dynamically typed</a>, but not all are. Dynamic languages are frequently (but not always) referred to as <a href="/wiki/Scripting_language" title="Scripting language">scripting languages</a>, although that term in its narrowest sense refers to languages specific to a given run-time environment.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Implementation"><span class="tocnumber">1</span> <span class="toctext">Implementation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Eval"><span class="tocnumber">1.1</span> <span class="toctext">Eval</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Object_runtime_alteration"><span class="tocnumber">1.2</span> <span class="toctext">Object runtime alteration</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Reflection"><span class="tocnumber">1.3</span> <span class="toctext">Reflection</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Macros"><span class="tocnumber">1.4</span> <span class="toctext">Macros</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Example_code"><span class="tocnumber">2</span> <span class="toctext">Example code</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Computation_of_code_at_runtime_and_late_binding"><span class="tocnumber">2.1</span> <span class="toctext">Computation of code at runtime and late binding</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Object_runtime_alteration_2"><span class="tocnumber">2.2</span> <span class="toctext">Object runtime alteration</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Assembling_of_code_at_runtime_based_on_the_class_of_instances"><span class="tocnumber">2.3</span> <span class="toctext">Assembling of code at runtime based on the class of instances</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Examples"><span class="tocnumber">3</span> <span class="toctext">Examples</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Further_reading"><span class="tocnumber">6</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Implementation">Implementation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=1" title="Edit section: Implementation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Expand_section plainlinks metadata ambox mbox-small-left ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" decoding="async" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs expansion</b>. <small>You can help by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=">adding to it</a>.</small>  <small class="date-container"><i>(<span class="date">October 2009</span>)</i></small></div></td></tr></tbody></table>
+<h3><span class="mw-headline" id="Eval">Eval</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=2" title="Edit section: Eval">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some dynamic languages offer an <i><a href="/wiki/Eval" title="Eval">eval</a></i> function.  This function takes a string parameter containing code in the language and executes it.  If this code stands for an expression, the resulting value is returned.  However, <a href="/wiki/Erik_Meijer_(computer_scientist)" title="Erik Meijer (computer scientist)">Erik Meijer</a> and Peter Drayton suggests that programmers "use eval as a poor man's substitute for <a href="/wiki/Higher-order_function" title="Higher-order function">higher-order functions</a>."<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Object_runtime_alteration">Object runtime alteration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=3" title="Edit section: Object runtime alteration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A type or object system can typically be modified during runtime in a dynamic language. This can mean generating new objects from a runtime definition or based on <a href="/wiki/Mixin" title="Mixin">mixins</a> of existing types or objects. This can also refer to changing the <a href="/wiki/Inheritance_(computer_science)" class="mw-redirect" title="Inheritance (computer science)">inheritance</a> or type tree, and thus altering the way that existing types behave (especially with respect to the invocation of <a href="/wiki/Method_(computer_science)" class="mw-redirect" title="Method (computer science)">methods</a>).
+</p>
+<h3><span class="mw-headline" id="Reflection">Reflection</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=4" title="Edit section: Reflection">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/Reflection_(computer_science)" class="mw-redirect" title="Reflection (computer science)">Reflection</a> is common in many dynamic languages, and typically involves <a href="/wiki/Introspection_(computer_science)" class="mw-redirect" title="Introspection (computer science)">analysis</a> of the types and metadata of generic or <a href="/wiki/Type_polymorphism" class="mw-redirect" title="Type polymorphism">polymorphic</a> data.  It can, however, also include full evaluation and modification of a program's code as data, such as the features that Lisp provides in analyzing <a href="/wiki/S-expressions" class="mw-redirect" title="S-expressions">S-expressions</a>.
+</p>
+<h3><span class="mw-headline" id="Macros">Macros</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=5" title="Edit section: Macros">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A limited number of dynamic programming languages provide features which combine code introspection (the ability to examine classes, functions, and keywords to know what they are, what they do and what they know) and eval in a feature called <a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">macros</a>. Most programmers today who are aware of the term <i>macro</i> have encountered them in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> or <a href="/wiki/C%2B%2B" title="C++">C++</a>, where they are a static feature which is built in a small subset of the language, and are capable only of string substitutions on the text of the program. In dynamic languages, however, they provide access to the inner workings of the compiler, <i>and</i> full access to the interpreter, virtual machine, or runtime, allowing the definition of language-like constructs which can optimize code or modify the syntax or grammar of the language.
+</p><p><a href="/wiki/Assembly_language" title="Assembly language">Assembly</a>, <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="/wiki/C%2B%2B" title="C++">C++</a>, early <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, and <a href="/wiki/Fortran" title="Fortran">Fortran</a> do not generally fit into this category.<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (September 2016)">clarification needed</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="Example_code">Example code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=6" title="Edit section: Example code">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following examples show dynamic features using the language <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> and its <a href="/wiki/Common_Lisp_Object_System" title="Common Lisp Object System">Common Lisp Object System</a> (CLOS).
+</p>
+<h3><span class="mw-headline" id="Computation_of_code_at_runtime_and_late_binding">Computation of code at runtime and late binding</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=7" title="Edit section: Computation of code at runtime and late binding">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The example shows how a function can be modified at runtime from computed source code
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">; the source code is stored as data in a variable</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defparameter</span> <span class="vg">*best-guess-formula*</span> <span class="o">&#39;</span><span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">*</span> <span class="nv">x</span> <span class="nv">x</span> <span class="mf">2.5</span><span class="p">)))</span>
+<span class="vg">*BEST-GUESS-FORMULA*</span>
+
+<span class="c1">; a function is created from the code and compiled at runtime, the function is available under the name best-guess</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span>  <span class="p">(</span><span class="nb">compile</span> <span class="ss">&#39;best-guess</span> <span class="vg">*best-guess-formula*</span><span class="p">)</span>
+<span class="err">#</span><span class="nv">&lt;Function</span> <span class="mi">15</span> <span class="nv">40600152F4&gt;</span>
+
+<span class="c1">; the function can be called</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nv">best-guess</span> <span class="mf">10.3</span><span class="p">)</span>
+<span class="mf">265.225</span>
+
+<span class="c1">; the source code might be improved at runtime</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">setf</span> <span class="vg">*best-guess-formula*</span> <span class="o">`</span><span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="o">,</span><span class="p">(</span><span class="nb">list</span> <span class="ss">&#39;sqrt</span> <span class="p">(</span><span class="nb">third</span> <span class="vg">*best-guess-formula*</span><span class="p">))))</span>
+<span class="p">(</span><span class="nv">LAMBDA</span> <span class="p">(</span><span class="nv">X</span><span class="p">)</span> <span class="p">(</span><span class="nv">SQRT</span> <span class="p">(</span><span class="nb">*</span> <span class="nv">X</span> <span class="nv">X</span> <span class="mf">2.5</span><span class="p">)))</span>
+
+<span class="c1">; a new version of the function is being compiled</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">compile</span> <span class="ss">&#39;best-guess</span> <span class="vg">*best-guess-formula*</span><span class="p">)</span>
+<span class="err">#</span><span class="nv">&lt;Function</span> <span class="mi">16</span> <span class="nv">406000085C&gt;</span>
+
+<span class="c1">; the next call will call the new function, a feature of late binding</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nv">best-guess</span> <span class="mf">10.3</span><span class="p">)</span>
+<span class="mf">16.28573</span>
+</pre></div>
+<h3><span class="mw-headline" id="Object_runtime_alteration_2">Object runtime alteration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=8" title="Edit section: Object runtime alteration">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This example shows how an existing instance can be changed to include a new slot when its class changes and that an existing method can be replaced with a new version.
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">; a person class. The person has a name.</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defclass</span> <span class="nv">person</span> <span class="p">()</span> <span class="p">((</span><span class="nv">name</span> <span class="ss">:initarg</span> <span class="ss">:name</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-CLASS</span> <span class="nv">PERSON</span> <span class="nv">4020081FB3&gt;</span>
+
+<span class="c1">; a custom printing method for the objects of class person</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="p">((</span><span class="nv">p</span> <span class="nv">person</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">p</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">format</span> <span class="nc">stream</span> <span class="s">&quot;~a&quot;</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">p</span> <span class="ss">&#39;name</span><span class="p">))))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="no">NIL</span> <span class="p">(</span><span class="nv">PERSON</span> <span class="no">T</span><span class="p">)</span> <span class="nv">4020066E5B&gt;</span>
+
+<span class="c1">; one example person instance</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">setf</span> <span class="vg">*person-1*</span> <span class="p">(</span><span class="nb">make-instance</span> <span class="ss">&#39;person</span> <span class="ss">:name</span> <span class="s">&quot;Eva Luator&quot;</span><span class="p">))</span>
+<span class="err">#</span><span class="nv">&lt;PERSON</span> <span class="nv">Eva</span> <span class="nv">Luator&gt;</span>
+
+<span class="c1">; the class person gets a second slot. It then has the slots name and age.</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defclass</span> <span class="nv">person</span> <span class="p">()</span> <span class="p">((</span><span class="nv">name</span> <span class="ss">:initarg</span> <span class="ss">:name</span><span class="p">)</span> <span class="p">(</span><span class="nv">age</span> <span class="ss">:initarg</span> <span class="ss">:age</span> <span class="ss">:initform</span> <span class="ss">:unknown</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-CLASS</span> <span class="nv">PERSON</span> <span class="nv">4220333E23&gt;</span>
+
+<span class="c1">; updating the method to print the object</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="p">((</span><span class="nv">p</span> <span class="nv">person</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">p</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">format</span> <span class="nc">stream</span> <span class="s">&quot;~a age: ~&quot;</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">p</span> <span class="ss">&#39;name</span><span class="p">)</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">p</span> <span class="ss">&#39;age</span><span class="p">))))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="no">NIL</span> <span class="p">(</span><span class="nv">PERSON</span> <span class="no">T</span><span class="p">)</span> <span class="nv">402022ADE3&gt;</span>
+
+<span class="c1">; the existing object has now changed, it has an additional slot and a new print method</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="vg">*person-1*</span>
+<span class="err">#</span><span class="nv">&lt;PERSON</span> <span class="nv">Eva</span> <span class="nv">Luator</span> <span class="nv">age:</span> <span class="nv">UNKNOWN&gt;</span>
+
+<span class="c1">; we can set the new age slot of instance</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">setf</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="vg">*person-1*</span> <span class="ss">&#39;age</span><span class="p">)</span> <span class="mi">25</span><span class="p">)</span>
+<span class="mi">25</span>
+
+<span class="c1">; the object has been updated</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="vg">*person-1*</span>
+<span class="err">#</span><span class="nv">&lt;PERSON</span> <span class="nv">Eva</span> <span class="nv">Luator</span> <span class="nv">age:</span> <span class="nv">25&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Assembling_of_code_at_runtime_based_on_the_class_of_instances">Assembling of code at runtime based on the class of instances</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=9" title="Edit section: Assembling of code at runtime based on the class of instances">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the next example, the class <b>person</b> gets a new superclass. The <b>print</b> method gets redefined such that it assembles several methods into the effective method. The effective method gets assembled based on the class of the argument and the at runtime available and applicable methods.
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">; the class person</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defclass</span> <span class="nv">person</span> <span class="p">()</span> <span class="p">((</span><span class="nv">name</span> <span class="ss">:initarg</span> <span class="ss">:name</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-CLASS</span> <span class="nv">PERSON</span> <span class="nv">4220333E23&gt;</span>
+
+<span class="c1">; a person just prints its name</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="p">((</span><span class="nv">p</span> <span class="nv">person</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">p</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">format</span> <span class="nc">stream</span> <span class="s">&quot;~a&quot;</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">p</span> <span class="ss">&#39;name</span><span class="p">))))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="no">NIL</span> <span class="p">(</span><span class="nv">PERSON</span> <span class="no">T</span><span class="p">)</span> <span class="nv">40200605AB&gt;</span>
+
+<span class="c1">; a person instance</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defparameter</span> <span class="vg">*person-1*</span> <span class="p">(</span><span class="nb">make-instance</span> <span class="ss">&#39;person</span> <span class="ss">:name</span> <span class="s">&quot;Eva Luator&quot;</span><span class="p">))</span>
+<span class="vg">*PERSON-1*</span>
+
+<span class="c1">; displaying a person instance</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="vg">*person-1*</span>
+<span class="err">#</span><span class="nv">&lt;PERSON</span> <span class="nv">Eva</span> <span class="nv">Luator&gt;</span>
+
+<span class="c1">; now redefining the print method to be extensible</span>
+<span class="c1">; the around method creates the context for the print method and it calls the next method</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="ss">:around</span> <span class="p">((</span><span class="nv">p</span> <span class="nv">person</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">print-unreadable-object</span> <span class="p">(</span><span class="nv">p</span> <span class="nc">stream</span> <span class="ss">:type</span> <span class="no">t</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">call-next-method</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="p">(</span><span class="ss">:AROUND</span><span class="p">)</span> <span class="p">(</span><span class="nv">PERSON</span> <span class="no">T</span><span class="p">)</span> <span class="nv">4020263743&gt;</span>
+
+<span class="c1">; the primary method prints the name</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="p">((</span><span class="nv">p</span> <span class="nv">person</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">format</span> <span class="nc">stream</span> <span class="s">&quot;~a&quot;</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">p</span> <span class="ss">&#39;name</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="no">NIL</span> <span class="p">(</span><span class="nv">PERSON</span> <span class="no">T</span><span class="p">)</span> <span class="nv">40202646BB&gt;</span>
+
+<span class="c1">; a new class id-mixin provides an id</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defclass</span> <span class="nv">id-mixin</span> <span class="p">()</span> <span class="p">((</span><span class="nv">id</span> <span class="ss">:initarg</span> <span class="ss">:id</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-CLASS</span> <span class="nv">ID-MIXIN</span> <span class="nv">422034A7AB&gt;</span>
+
+<span class="c1">; the print method just prints the value of the id slot</span>
+<span class="nv">CL-USER</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defmethod</span> <span class="nb">print-object</span> <span class="ss">:after</span> <span class="p">((</span><span class="nv">object</span> <span class="nv">id-mixin</span><span class="p">)</span> <span class="nc">stream</span><span class="p">)</span>
+          <span class="p">(</span><span class="nb">format</span> <span class="nc">stream</span> <span class="s">&quot; ID: ~a&quot;</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="nv">object</span> <span class="ss">&#39;id</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-METHOD</span> <span class="nv">PRINT-OBJECT</span> <span class="p">(</span><span class="ss">:AFTER</span><span class="p">)</span> <span class="p">(</span><span class="nv">ID-MIXIN</span> <span class="no">T</span><span class="p">)</span> <span class="nv">4020278E33&gt;</span>
+
+<span class="c1">; now we redefine the class person to include the mixin id-mixin</span>
+<span class="nv">CL-USER</span> <span class="mi">241</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">defclass</span> <span class="nv">person</span> <span class="p">(</span><span class="nv">id-mixin</span><span class="p">)</span> <span class="p">((</span><span class="nv">name</span> <span class="ss">:initarg</span> <span class="ss">:name</span><span class="p">)))</span>
+<span class="err">#</span><span class="nv">&lt;STANDARD-CLASS</span> <span class="nv">PERSON</span> <span class="nv">4220333E23&gt;</span>
+
+<span class="c1">; the existing instance *person-1* now has a new slot and we set it to 42</span>
+<span class="nv">CL-USER</span> <span class="mi">242</span> <span class="nb">&gt;</span> <span class="p">(</span><span class="nb">setf</span> <span class="p">(</span><span class="nb">slot-value</span> <span class="vg">*person-1*</span> <span class="ss">&#39;id</span><span class="p">)</span> <span class="mi">42</span><span class="p">)</span>
+<span class="mi">42</span>
+
+<span class="c1">; displaying the object again. The print-object function now has an effective method, which calls three methods: an around method, the primary method and the after method.</span>
+<span class="nv">CL-USER</span> <span class="mi">243</span> <span class="nb">&gt;</span> <span class="vg">*person-1*</span>
+<span class="err">#</span><span class="nv">&lt;PERSON</span> <span class="nv">Eva</span> <span class="nv">Luator</span> <span class="nv">ID:</span> <span class="nv">42&gt;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=10" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Popular dynamic programming languages include <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>, <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>, <a href="/wiki/PHP" title="PHP">PHP</a>, <a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a> and <a href="/wiki/Perl" title="Perl">Perl</a>. The following are generally considered dynamic languages:
+</p>
+<ul><li><a href="/wiki/ActionScript" title="ActionScript">ActionScript</a></li>
+<li><a href="/wiki/BeanShell" title="BeanShell">BeanShell</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C# (using Reflection)</a></li>
+<li><a href="/wiki/Clojure" title="Clojure">Clojure</a></li>
+<li><a href="/wiki/CobolScript" title="CobolScript">CobolScript</a></li>
+<li><a href="/wiki/ColdFusion_Markup_Language" title="ColdFusion Markup Language">ColdFusion Markup Language</a></li>
+<li><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> and most other <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisps</a></li>
+<li><a href="/wiki/Dylan_(programming_language)" title="Dylan (programming language)">Dylan</a></li>
+<li><a href="/wiki/E_programming_language" class="mw-redirect" title="E programming language">E</a></li>
+<li><a href="/wiki/Elixir_(programming_language)" title="Elixir (programming language)">Elixir</a></li>
+<li><a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a></li>
+<li><a href="/wiki/Gambas" title="Gambas">Gambas</a></li>
+<li><a href="/wiki/GDScript" class="mw-redirect" title="GDScript">GDScript</a></li>
+<li><a href="/wiki/Groovy_(programming_language)" class="mw-redirect" title="Groovy (programming language)">Groovy</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li>
+<li><a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java (using Reflection)</a></li>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia</a></li>
+<li><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a></li>
+<li><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a> / <a href="/wiki/GNU_Octave" title="GNU Octave">Octave</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Perl" title="Perl">Perl</a></li>
+<li><a href="/wiki/PHP" title="PHP">PHP</a></li>
+<li><a href="/wiki/PowerShell" title="PowerShell">PowerShell</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">Prolog</a></li>
+<li><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></li>
+<li><a href="/wiki/R_(programming_language)" title="R (programming language)">R</a></li>
+<li><a href="/wiki/Rebol" title="Rebol">Rebol</a></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></li>
+<li><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></li>
+<li><a href="/wiki/SuperCollider" title="SuperCollider">SuperCollider</a></li>
+<li><a href="/wiki/Tcl" title="Tcl">Tcl</a></li>
+<li><a href="/wiki/VBScript" title="VBScript">VBScript</a></li>
+<li><a href="/wiki/Wolfram_Language" title="Wolfram Language">Wolfram Language</a></li></ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li>
+<li><a href="/wiki/Name_binding" title="Name binding">Name binding</a></li>
+<li><a href="/wiki/Von_Neumann_architecture" title="Von Neumann architecture">Von Neumann architecture</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFMeijer,_Erik_and_Peter_Drayton2005" class="citation"><a href="/wiki/Erik_Meijer_(computer_scientist)" title="Erik Meijer (computer scientist)">Meijer, Erik</a> and Peter Drayton (2005), <i>Static Typing Where Possible, Dynamic Typing When Needed: The End of the Cold War Between Programming Languages</i>, <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a> Corporation, <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.69.5966">10.1.1.69.5966</a></span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Static+Typing+Where+Possible%2C+Dynamic+Typing+When+Needed%3A+The+End+of+the+Cold+War+Between+Programming+Languages&amp;rft.pub=Microsoft+Corporation&amp;rft.date=2005&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.69.5966&amp;rft.au=Meijer%2C+Erik+and+Peter+Drayton&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+programming+language" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://static.springsource.org/spring/docs/2.0.x/reference/dynamic-language.html">Chapter 24. Dynamic language support</a>. Static.springsource.org. Retrieved on 2013-07-17.</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">&lt; <cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140302111159/http://groovy.codehaus.org/">"Archived copy"</a>. Archived from <a rel="nofollow" class="external text" href="http://groovy.codehaus.org/">the original</a> on 2014-03-02<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-02</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Archived+copy&amp;rft_id=http%3A%2F%2Fgroovy.codehaus.org%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+programming+language" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: archived copy as title (<a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=13" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">Tratt, Laurence (2009). <a rel="nofollow" class="external text" href="https://tratt.net/laurie/research/pubs/html/tratt__dynamically_typed_languages/"><i>Dynamically Typed Languages</i></a>. Advances in Computers. <b>77</b>. pp.&#160;149–184. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2Fs0065-2458%2809%2901205-4">10.1016/s0065-2458(09)01205-4</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780123748126" title="Special:BookSources/9780123748126"><bdi>9780123748126</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Dynamically+Typed+Languages&amp;rft.series=Advances+in+Computers&amp;rft.pages=149-184&amp;rft.date=2009&amp;rft_id=info%3Adoi%2F10.1016%2Fs0065-2458%2809%2901205-4&amp;rft.isbn=9780123748126&amp;rft.aulast=Tratt&amp;rft.aufirst=Laurence&amp;rft_id=https%3A%2F%2Ftratt.net%2Flaurie%2Fresearch%2Fpubs%2Fhtml%2Ftratt&#95;_dynamically_typed_languages%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADynamic+programming+language" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><i>(Many use the term "scripting languages".)</i>
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://page.mi.fu-berlin.de/~prechelt/Biblio/jccpprt2_advances2003.pdf">Are Scripting Languages Any Good? A Validation of Perl, Python, Rexx, and Tcl against C, C++, and Java (PDF)</a>&#160;&#8211;&#32; a 2003 study</li>
+<li><a rel="nofollow" class="external text" href="http://www.softpanorama.org/Articles/a_slightly_skeptical_view_on_scripting_languages.shtml">A Slightly Skeptical View on Scripting Languages</a> by Dr. Nikolai Bezroukov</li>
+<li><a rel="nofollow" class="external text" href="http://www.perl.com/pub/a/2007/12/06/soto-11.html">Programming is Hard, Let's Go Scripting...</a>&#160;&#8211;&#32; Perl.com transcript of <a href="/wiki/Larry_Wall" title="Larry Wall">Larry Wall</a>'s State of the Onion speech</li>
+<li><a rel="nofollow" class="external text" href="http://www.javaworld.com/javaworld/jw-11-2007/jw-11-jsr223.html">Scripting on the Java platform</a>&#160;&#8211;&#32; JavaWorld</li></ul>
+<p><br />
+</p>
+<div role="navigation" class="navbox" aria-labelledby="Types_of_programming_languages" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Types_of_programming_languages" title="Template:Types of programming languages"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Types_of_programming_languages" title="Template talk:Types of programming languages"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Types_of_programming_languages&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Types_of_programming_languages" style="font-size:114%;margin:0 4em"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Types of programming languages</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Actor_model" title="Actor model">Actor-based</a></li>
+<li><a href="/wiki/Array_programming" title="Array programming">Array</a></li>
+<li><a href="/wiki/Aspect-oriented_programming" title="Aspect-oriented programming">Aspect-oriented</a></li>
+<li><a href="/wiki/Class-based_programming" title="Class-based programming">Class-based</a></li>
+<li><a href="/wiki/Concatenative_programming_language" title="Concatenative programming language">Concatenative</a></li>
+<li><a href="/wiki/Concurrent_computing" title="Concurrent computing">Concurrent</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow</a></li>
+<li><a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a></li>
+<li><a href="/wiki/Domain-specific_language" title="Domain-specific language">Domain-specific</a></li>
+<li><a class="mw-selflink selflink">Dynamic</a></li>
+<li><a href="/wiki/Esoteric_programming_language" title="Esoteric programming language">Esoteric</a></li>
+<li><a href="/wiki/Event-driven_programming" title="Event-driven programming">Event-driven</a></li>
+<li><a href="/wiki/Extensible_programming" title="Extensible programming">Extensible</a></li>
+<li><a href="/wiki/Functional_programming" title="Functional programming">Functional</a></li>
+<li><a href="/wiki/Imperative_programming" title="Imperative programming">Imperative</a></li>
+<li><a href="/wiki/Logic_programming" title="Logic programming">Logic</a></li>
+<li><a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">Macro</a></li>
+<li><a href="/wiki/Metaprogramming" title="Metaprogramming">Metaprogramming</a></li>
+<li><a href="/wiki/Multi-paradigm_programming_language" class="mw-redirect" title="Multi-paradigm programming language">Multi-paradigm</a></li>
+<li><a href="/wiki/Object-based_language" title="Object-based language">Object-based</a></li>
+<li><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object-oriented</a></li>
+<li><a href="/wiki/Pipeline_programming" class="mw-redirect" title="Pipeline programming">Pipeline</a></li>
+<li><a href="/wiki/Procedural_programming" title="Procedural programming">Procedural</a></li>
+<li><a href="/wiki/Prototype-based_programming" title="Prototype-based programming">Prototype-based</a></li>
+<li><a href="/wiki/Reflection_(computer_programming)" title="Reflection (computer programming)">Reflective</a></li>
+<li><a href="/wiki/Rule-based_system" title="Rule-based system">Rule-based</a></li>
+<li><a href="/wiki/Scripting_language" title="Scripting language">Scripting</a></li>
+<li><a href="/wiki/Stack-based_language" class="mw-redirect" title="Stack-based language">Stack based</a></li>
+<li><a href="/wiki/Synchronous_programming_language" title="Synchronous programming language">Synchronous</a></li>
+<li><a href="/wiki/Tactile_programming_language" title="Tactile programming language">Tactile</a></li>
+<li><a href="/wiki/Templating_language" class="mw-redirect" title="Templating language">Templating</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Assembly_language" title="Assembly language">Assembly</a></li>
+<li><a href="/wiki/Compiled_language" title="Compiled language">Compiled</a></li>
+<li><a href="/wiki/Interpreted_language" title="Interpreted language">Interpreted</a></li>
+<li><a href="/wiki/Machine_code" title="Machine code">Machine</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Low-level_programming_language" title="Low-level programming language">Low-level</a></li>
+<li><a href="/wiki/High-level_programming_language" title="High-level programming language">High-level</a></li>
+<li><a href="/wiki/Very_high-level_programming_language" title="Very high-level programming language">Very high-level</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-even hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/First-generation_programming_language" title="First-generation programming language">First generation</a></li>
+<li><a href="/wiki/Second-generation_programming_language" title="Second-generation programming language">Second generation</a></li>
+<li><a href="/wiki/Third-generation_programming_language" title="Third-generation programming language">Third generation</a></li>
+<li><a href="/wiki/Fourth-generation_programming_language" title="Fourth-generation programming language">Fourth generation</a></li>
+<li><a href="/wiki/Fifth-generation_programming_language" title="Fifth-generation programming language">Fifth generation</a></li></ul>
+</div></td></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Non-English-based_programming_languages" title="Non-English-based programming languages">Non-English-based</a></li>
+<li><a href="/wiki/Visual_programming_language" title="Visual programming language">Visual</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1349
+Cached time: 20200306194348
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.376 seconds
+Real time usage: 0.554 seconds
+Preprocessor visited node count: 937/1000000
+Post‐expand include size: 68992/2097152 bytes
+Template argument size: 9111/2097152 bytes
+Highest expansion depth: 16/40
+Expensive parser function count: 8/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 25588/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.176/10.000 seconds
+Lua memory usage: 3.56 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  447.781      1 -total
+ 37.02%  165.747      1 Template:Reflist
+ 33.23%  148.816      1 Template:Citation
+ 27.22%  121.892      5 Template:Ambox
+ 22.70%  101.629      1 Template:Multiple_issues
+ 11.59%   51.897      1 Template:About
+  8.98%   40.222      1 Template:Expert-subject
+  8.50%   38.045      1 Template:Clarify
+  7.62%   34.140      1 Template:Fix-span
+  5.94%   26.596      1 Template:Cite_book
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:234079-0!canonical and timestamp 20200306194347 and revision id 941919173
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;oldid=941919173">https://en.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;oldid=941919173</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Evaluation_strategy" title="Category:Evaluation strategy">Evaluation strategy</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">CS1 maint: archived copy as title</a></li><li><a href="/wiki/Category:Articles_needing_expert_attention_with_no_reason_or_talk_parameter" title="Category:Articles needing expert attention with no reason or talk parameter">Articles needing expert attention with no reason or talk parameter</a></li><li><a href="/wiki/Category:Articles_needing_unspecified_expert_attention" title="Category:Articles needing unspecified expert attention">Articles needing unspecified expert attention</a></li><li><a href="/wiki/Category:Articles_needing_expert_attention_from_January_2015" title="Category:Articles needing expert attention from January 2015">Articles needing expert attention from January 2015</a></li><li><a href="/wiki/Category:All_articles_needing_expert_attention" title="Category:All articles needing expert attention">All articles needing expert attention</a></li><li><a href="/wiki/Category:Accuracy_disputes_from_March_2012" title="Category:Accuracy disputes from March 2012">Accuracy disputes from March 2012</a></li><li><a href="/wiki/Category:All_accuracy_disputes" title="Category:All accuracy disputes">All accuracy disputes</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_October_2009" title="Category:Wikipedia articles needing clarification from October 2009">Wikipedia articles needing clarification from October 2009</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li><li><a href="/wiki/Category:Articles_with_multiple_maintenance_issues" title="Category:Articles with multiple maintenance issues">Articles with multiple maintenance issues</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_October_2009" title="Category:Articles to be expanded from October 2009">Articles to be expanded from October 2009</a></li><li><a href="/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_September_2016" title="Category:Wikipedia articles needing clarification from September 2016">Wikipedia articles needing clarification from September 2016</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Dynamic+programming+language" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Dynamic+programming+language" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Dynamic_programming_language" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Dynamic_programming_language" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Dynamic_programming_language">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Dynamic_programming_language&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Dynamic_programming_language&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Dynamic_programming_language" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Dynamic_programming_language" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Dynamic_programming_language&amp;oldid=941919173" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Dynamic_programming_language&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1268980" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Dynamic_programming_language&amp;id=941919173&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Dynamic+programming+language">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Dynamic+programming+language&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Dynamic_programming_language&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Dinamik_proqramla%C5%9Fd%C4%B1rma_dili" title="Dinamik proqramlaşdırma dili – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="https://bn.wikipedia.org/wiki/%E0%A6%9A%E0%A6%B2%E0%A6%AE%E0%A6%BE%E0%A6%A8_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82_%E0%A6%AD%E0%A6%BE%E0%A6%B7%E0%A6%BE" title="চলমান প্রোগ্রামিং ভাষা – Bangla" lang="bn" hreflang="bn" class="interlanguage-link-target">বাংলা</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Llenguatge_de_programaci%C3%B3_din%C3%A0mic" title="Llenguatge de programació dinàmic – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Dynamick%C3%BD_programovac%C3%AD_jazyk" title="Dynamický programovací jazyk – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Dynamische_Programmiersprache" title="Dynamische Programmiersprache – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%94%CF%85%CE%BD%CE%B1%CE%BC%CE%B9%CE%BA%CE%AE_%CE%B3%CE%BB%CF%8E%CF%83%CF%83%CE%B1_%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CE%BF%CF%8D" title="Δυναμική γλώσσα προγραμματισμού – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C_%D9%BE%D9%88%DB%8C%D8%A7" title="زبان برنامه‌نویسی پویا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Langage_de_programmation_dynamique" title="Langage de programmation dynamique – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EB%8F%99%EC%A0%81_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4" title="동적 프로그래밍 언어 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Bahasa_pemrograman_dinamis" title="Bahasa pemrograman dinamis – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A9%D7%A4%D7%AA_%D7%AA%D7%9B%D7%A0%D7%95%D7%AA_%D7%93%D7%99%D7%A0%D7%9E%D7%99%D7%AA" title="שפת תכנות דינמית – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0%D0%BB%D1%8B%D2%9B_%D0%B1%D0%B0%D2%93%D0%B4%D0%B0%D1%80%D0%BB%D0%B0%D0%BC%D0%B0%D0%BB%D0%B0%D1%83_%D1%82%D1%96%D0%BB%D1%96" title="Динамикалық бағдарламалау тілі – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E5%8B%95%E7%9A%84%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E" title="動的プログラミング言語 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Dynamiczny_j%C4%99zyk_programowania" title="Dynamiczny język programowania – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F" title="Динамический язык программирования – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%81%D0%BA%D0%B8_%D1%98%D0%B5%D0%B7%D0%B8%D0%BA" title="Динамички програмски језик – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F" title="Динамічна мова програмування – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80" title="动态语言 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1268980#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 21 February 2020, at 13:08<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Dynamic_programming_language&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.376","walltime":"0.554","ppvisitednodes":{"value":937,"limit":1000000},"postexpandincludesize":{"value":68992,"limit":2097152},"templateargumentsize":{"value":9111,"limit":2097152},"expansiondepth":{"value":16,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":25588,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  447.781      1 -total"," 37.02%  165.747      1 Template:Reflist"," 33.23%  148.816      1 Template:Citation"," 27.22%  121.892      5 Template:Ambox"," 22.70%  101.629      1 Template:Multiple_issues"," 11.59%   51.897      1 Template:About","  8.98%   40.222      1 Template:Expert-subject","  8.50%   38.045      1 Template:Clarify","  7.62%   34.140      1 Template:Fix-span","  5.94%   26.596      1 Template:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.176","limit":"10.000"},"limitreport-memusage":{"value":3732310,"limit":52428800}},"cachereport":{"origin":"mw1349","timestamp":"20200306194348","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Dynamic programming language","url":"https:\/\/en.wikipedia.org\/wiki\/Dynamic_programming_language","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1268980","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1268980","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-26T04:45:20Z","dateModified":"2020-02-21T13:08:45Z","headline":"programming language"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":149,"wgHostname":"mw1409"});});</script></body></html>

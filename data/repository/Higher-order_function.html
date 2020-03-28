@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Higher-order function - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XncAZQpAIH4AAXQ3wwkAAACK","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Higher-order_function","wgTitle":"Higher-order function","wgCurRevisionId":945077798,"wgRevisionId":945077798,"wgArticleId":244689,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from September 2013","All articles lacking in-text citations","Articles to be split from May 2016","All articles to be split","Articles with example Python code","Articles with example Haskell code","Articles with example JavaScript code",
+"Articles with example C code","Articles with example Pascal code","Articles with example R code","Functional programming","Lambda calculus","Higher-order functions","Subroutines","Articles with example Scheme code"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Higher-order_function","wgRelevantArticleId":244689,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1474542","wgCentralAuthMobileDomain":!1,
+"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.math.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming",
+"ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Higher-order_function&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Higher-order_function&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Higher-order_function"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Higher-order_function rootpage-Higher-order_function skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Higher-order function</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">Not to be confused with <a href="/wiki/Functor" title="Functor">Functor (category theory)</a>.</div>
+<table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">September 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Mathematics" title="Mathematics">mathematics</a> and <a href="/wiki/Computer_science" title="Computer science">computer science</a>, a <b>higher-order function</b> is a <a href="/wiki/Function_(mathematics)" title="Function (mathematics)">function</a> that does at least one of the following:
+</p>
+<ul><li>takes one or more functions as arguments (i.e. <a href="/wiki/Procedural_parameter" title="Procedural parameter">procedural parameters</a>),</li>
+<li>returns a function as its result.</li></ul>
+<p>All other functions are <i>first-order functions</i>.  In mathematics higher-order functions are also termed <i><a href="/wiki/Operator_(mathematics)" title="Operator (mathematics)">operators</a></i> or <i><a href="/wiki/Functional_(mathematics)" title="Functional (mathematics)">functionals</a></i>.  The <a href="/wiki/Differential_operator" title="Differential operator">differential operator</a> in <a href="/wiki/Calculus" title="Calculus">calculus</a> is a common example, since it maps a function to its <a href="/wiki/Derivative" title="Derivative">derivative</a>, also a function. Higher-order functions should not be confused with other uses of the word "functor" throughout mathematics, see <a href="/wiki/Functor_(disambiguation)" class="mw-disambig" title="Functor (disambiguation)">Functor (disambiguation)</a>.
+</p><p>In the untyped <a href="/wiki/Lambda_calculus" title="Lambda calculus">lambda calculus</a>, all functions are higher-order; in a <a href="/wiki/Typed_lambda_calculus" title="Typed lambda calculus">typed lambda calculus</a>, from which most <a href="/wiki/Functional_programming" title="Functional programming">functional programming</a> languages are derived, higher-order functions that take one function as argument are values with types of the form <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (\tau _{1}\to \tau _{2})\to \tau _{3}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>&#x03C4;<!-- τ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>&#x03C4;<!-- τ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <msub>
+          <mi>&#x03C4;<!-- τ --></mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>3</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (\tau _{1}\to \tau _{2})\to \tau _{3}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/21f4ec10929e414aedfee50d2c07c91e9cb35668" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.249ex; height:2.843ex;" alt="(\tau _{1}\to \tau _{2})\to \tau _{3}"/></span>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#General_examples"><span class="tocnumber">1</span> <span class="toctext">General examples</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Support_in_programming_languages"><span class="tocnumber">2</span> <span class="toctext">Support in programming languages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Direct_support"><span class="tocnumber">2.1</span> <span class="toctext">Direct support</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#OCAML"><span class="tocnumber">2.1.1</span> <span class="toctext">OCAML</span></a></li>
+<li class="toclevel-3 tocsection-5"><a href="#APL"><span class="tocnumber">2.1.2</span> <span class="toctext">APL</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#J"><span class="tocnumber">2.1.3</span> <span class="toctext">J</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Python"><span class="tocnumber">2.1.4</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Wolfram_Language"><span class="tocnumber">2.1.5</span> <span class="toctext">Wolfram Language</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Pascal"><span class="tocnumber">2.1.6</span> <span class="toctext">Pascal</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#F#"><span class="tocnumber">2.1.7</span> <span class="toctext">F#</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#D"><span class="tocnumber">2.1.8</span> <span class="toctext">D</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#C#"><span class="tocnumber">2.1.9</span> <span class="toctext">C#</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Haskell"><span class="tocnumber">2.1.10</span> <span class="toctext">Haskell</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Clojure"><span class="tocnumber">2.1.11</span> <span class="toctext">Clojure</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Scheme"><span class="tocnumber">2.1.12</span> <span class="toctext">Scheme</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Erlang"><span class="tocnumber">2.1.13</span> <span class="toctext">Erlang</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Elixir"><span class="tocnumber">2.1.14</span> <span class="toctext">Elixir</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#JavaScript"><span class="tocnumber">2.1.15</span> <span class="toctext">JavaScript</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Go"><span class="tocnumber">2.1.16</span> <span class="toctext">Go</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Scala"><span class="tocnumber">2.1.17</span> <span class="toctext">Scala</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Java_(1.8+)"><span class="tocnumber">2.1.18</span> <span class="toctext">Java (1.8+)</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Julia"><span class="tocnumber">2.1.19</span> <span class="toctext">Julia</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Kotlin"><span class="tocnumber">2.1.20</span> <span class="toctext">Kotlin</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Lua"><span class="tocnumber">2.1.21</span> <span class="toctext">Lua</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#MATLAB"><span class="tocnumber">2.1.22</span> <span class="toctext">MATLAB</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Swift"><span class="tocnumber">2.1.23</span> <span class="toctext">Swift</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Rust"><span class="tocnumber">2.1.24</span> <span class="toctext">Rust</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Ruby"><span class="tocnumber">2.1.25</span> <span class="toctext">Ruby</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#C"><span class="tocnumber">2.1.26</span> <span class="toctext">C</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#C++"><span class="tocnumber">2.1.27</span> <span class="toctext">C++</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#D_2"><span class="tocnumber">2.1.28</span> <span class="toctext">D</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#ColdFusion_Markup_Language_(CFML)"><span class="tocnumber">2.1.29</span> <span class="toctext">ColdFusion Markup Language (CFML)</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#PHP"><span class="tocnumber">2.1.30</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#R"><span class="tocnumber">2.1.31</span> <span class="toctext">R</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Raku"><span class="tocnumber">2.1.32</span> <span class="toctext">Raku</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Tcl"><span class="tocnumber">2.1.33</span> <span class="toctext">Tcl</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#XQuery"><span class="tocnumber">2.1.34</span> <span class="toctext">XQuery</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#XACML"><span class="tocnumber">2.1.35</span> <span class="toctext">XACML</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-39"><a href="#Alternatives"><span class="tocnumber">2.2</span> <span class="toctext">Alternatives</span></a>
+<ul>
+<li class="toclevel-3 tocsection-40"><a href="#Function_pointers"><span class="tocnumber">2.2.1</span> <span class="toctext">Function pointers</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Macros"><span class="tocnumber">2.2.2</span> <span class="toctext">Macros</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#Dynamic_code_evaluation"><span class="tocnumber">2.2.3</span> <span class="toctext">Dynamic code evaluation</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Objects"><span class="tocnumber">2.2.4</span> <span class="toctext">Objects</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#Defunctionalization"><span class="tocnumber">2.2.5</span> <span class="toctext">Defunctionalization</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-45"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="General_examples">General examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=1" title="Edit section: General examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><code><a href="/wiki/Map_(higher-order_function)" title="Map (higher-order function)">map</a></code> function, found in many functional programming languages, is one example of a higher-order function.  It takes as arguments a function <i>f</i> and a collection of elements, and as the result, returns a new collection with <i>f</i> applied to each element from the collection.</li>
+<li>Sorting functions, which take a comparison function as a parameter, allowing the programmer to separate the sorting algorithm from the comparisons of the items being sorted.  The <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> standard <a href="/wiki/Function_(computer_science)" class="mw-redirect" title="Function (computer science)">function</a> <code>qsort</code> is an example of this.</li>
+<li><a href="/wiki/Filter_(higher-order_function)" title="Filter (higher-order function)"> filter</a></li>
+<li><a href="/wiki/Fold_(higher-order_function)" title="Fold (higher-order function)">fold</a></li>
+<li><a href="/wiki/Apply" title="Apply">apply</a></li>
+<li><a href="/wiki/Function_composition_(computer_science)" title="Function composition (computer science)">Function composition</a></li>
+<li><a href="/wiki/Integral" title="Integral">Integration</a></li>
+<li><a href="/wiki/Callback_(computer_programming)" title="Callback (computer programming)"> Callback</a></li>
+<li><a href="/wiki/Tree_traversal" title="Tree traversal">Tree traversal</a></li>
+<li><a href="/wiki/Montague_grammar" title="Montague grammar">Montague grammar</a>, a semantic theory of natural language, uses higher-order functions</li></ul>
+<h2><span class="mw-headline" id="Support_in_programming_languages">Support in programming languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=2" title="Edit section: Support in programming languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Split plainlinks metadata ambox ambox-move" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Split-arrows.svg/50px-Split-arrows.svg.png" decoding="async" width="50" height="17" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Split-arrows.svg/75px-Split-arrows.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Split-arrows.svg/100px-Split-arrows.svg.png 2x" data-file-width="60" data-file-height="20" /></div></td><td class="mbox-text"><div class="mbox-text-span">It has been suggested that  this article be <b><a href="/wiki/Wikipedia:Splitting" title="Wikipedia:Splitting">split</a></b> into a new article titled <i><a href="/wiki/Comparison_of_programming_languages_(higher-order_functions)" class="mw-redirect" title="Comparison of programming languages (higher-order functions)">Comparison of programming languages (higher-order functions)</a></i>. (<a href="/wiki/Talk:Higher-order_function" title="Talk:Higher-order function">Discuss</a>)  <small class="date-container"><i>(<span class="date">May 2016</span>)</i></small></div></td></tr></tbody></table> 
+<h3><span class="mw-headline" id="Direct_support">Direct support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=3" title="Edit section: Direct support">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><i>The examples are not intended to compare and contrast programming languages, but to serve as examples of higher-order function syntax</i>
+</p><p>In the following examples, the higher-order function <code>twice</code> takes a function, and applies the function to some value twice. If <code>twice</code> has to be applied several times for the same <code>f</code> it preferably should return a function rather than a value. This is in line with the "<a href="/wiki/Don%27t_repeat_yourself" title="Don&#39;t repeat yourself">don't repeat yourself</a>" principle.
+</p>
+<h4><span class="mw-headline" id="OCAML">OCAML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=4" title="Edit section: OCAML">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/OCaml_(programming_language)" class="mw-redirect" title="OCaml (programming language)">OCaml (programming language)</a></div><p>Explicitly</p><div class="mw-highlight mw-highlight-lang-ocaml mw-content-ltr" dir="ltr"><pre><span></span><span class="k">let</span> <span class="n">add3</span> <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="k">let</span> <span class="n">twice</span> <span class="n">f</span> <span class="n">x</span> <span class="o">=</span> <span class="n">f</span> <span class="o">(</span><span class="n">f</span> <span class="n">x</span><span class="o">)</span>
+
+<span class="n">print_int</span> <span class="o">(</span><span class="n">twice</span> <span class="n">add3</span> <span class="mi">7</span><span class="o">)</span> <span class="c">(* 13 *)</span>
+</pre></div><p>One-Line</p><div class="mw-highlight mw-highlight-lang-ocaml mw-content-ltr" dir="ltr"><pre><span></span><span class="n">print_int</span> <span class="o">((</span><span class="k">fun</span> <span class="n">f</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">f</span> <span class="o">(</span><span class="n">f</span> <span class="n">x</span><span class="o">))</span> <span class="o">((+)</span><span class="mi">3</span><span class="o">)</span> <span class="mi">7</span><span class="o">)</span> <span class="c">(* 13 *)</span>
+</pre></div>
+<h4><span class="mw-headline" id="APL">APL</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=5" title="Edit section: APL">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/APL_(programming_language)" title="APL (programming language)">APL (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-apl mw-content-ltr" dir="ltr"><pre><span></span>      <span class="nv">twice</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍺⍺</span> <span class="bp">⍺⍺</span> <span class="bp">⍵</span><span class="kt">}</span>
+
+      <span class="nv">plusthree</span><span class="kd">←</span><span class="kt">{</span><span class="bp">⍵</span><span class="o">+</span><span class="m">3</span><span class="kt">}</span>
+
+      <span class="nv">g</span><span class="kd">←</span><span class="kt">{</span><span class="nv">plusthree</span> <span class="nv">twice</span> <span class="bp">⍵</span><span class="kt">}</span>
+    
+      <span class="nv">g</span> <span class="m">7</span>
+<span class="m">13</span>
+</pre></div>
+<p>Or in a tacit manner:
+</p>
+<div class="mw-highlight mw-highlight-lang-apl mw-content-ltr" dir="ltr"><pre><span></span>      <span class="nv">twice</span><span class="kd">←</span><span class="na">⍣</span><span class="m">2</span>
+
+      <span class="nv">plusthree</span><span class="kd">←</span><span class="o">+</span><span class="na">∘</span><span class="m">3</span>
+
+      <span class="nv">g</span><span class="kd">←</span><span class="nv">plusthree</span> <span class="nv">twice</span>
+    
+      <span class="nv">g</span> <span class="m">7</span>
+<span class="m">13</span>
+</pre></div>
+<h4><span class="mw-headline" id="J">J</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=6" title="Edit section: J">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/J_(programming_language)" title="J (programming language)">J (programming language)</a></div>
+<p>Explicitly,
+</p>
+<div class="mw-highlight mw-highlight-lang-j mw-content-ltr" dir="ltr"><pre><span></span>   <span class="nv">twice</span><span class="o">=.</span>     <span class="nv">adverb</span> <span class="o">:</span> <span class="s">&#39;u u y&#39;</span>
+   <span class="nv">plusthree</span><span class="o">=.</span> <span class="nv">verb</span>   <span class="o">:</span> <span class="s">&#39;y + 3&#39;</span>
+   
+   <span class="nv">g</span><span class="o">=.</span> <span class="nv">plusthree</span> <span class="nv">twice</span>
+   
+   <span class="nv">g</span> <span class="mi">7</span>
+<span class="mi">13</span>
+</pre></div>
+<p>or tacitly,
+</p>
+<div class="mw-highlight mw-highlight-lang-j mw-content-ltr" dir="ltr"><pre><span></span>   <span class="nv">twice</span><span class="o">=.</span> <span class="o">^:</span><span class="mi">2</span>
+   <span class="nv">plusthree</span><span class="o">=.</span> <span class="o">+&amp;</span><span class="mi">3</span>
+   
+   <span class="nv">g</span><span class="o">=.</span> <span class="nv">plusthree</span> <span class="nv">twice</span>
+   
+   <span class="nv">g</span> <span class="mi">7</span>
+<span class="mi">13</span>
+</pre></div>
+<p>or point-free style,
+</p>
+<div class="mw-highlight mw-highlight-lang-j mw-content-ltr" dir="ltr"><pre><span></span>   <span class="o">+&amp;</span><span class="mi">3</span><span class="p">(</span><span class="o">^:</span><span class="mi">2</span><span class="p">)</span> <span class="mi">7</span>
+<span class="mi">13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Python">Python</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=7" title="Edit section: Python">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">twice</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">result</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">result</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plusthree</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">twice</span><span class="p">(</span><span class="n">plusthree</span><span class="p">)</span>
+<span class="go">    </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">13</span>
+</pre></div>
+<p>Python decorator syntax is often used to replace a function with the result of passing that function through a higher-order function. E.g., the function <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">g</code> could be implemented equivalently:
+</p>
+<div class="mw-highlight mw-highlight-lang-pycon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@twice</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Wolfram_Language">Wolfram Language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=8" title="Edit section: Wolfram Language">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Wolfram_Language" title="Wolfram Language">Wolfram Language</a></div>
+<div class="mw-highlight mw-highlight-lang-nb mw-content-ltr" dir="ltr"><pre><span></span><span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="n">Nest</span><span class="p">[</span><span class="nv">#</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"> </span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">:=</span><span class="w"> </span><span class="mi">13</span><span class="w"></span>
+</pre></div>
+<h4><span class="mw-headline" id="Pascal">Pascal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=9" title="Edit section: Pascal">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-pascal mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno"> 1 </span><span class="cm">{$mode objfpc}</span>
+<span class="lineno"> 2 </span>
+<span class="lineno"> 3 </span><span class="k">type</span> <span class="n">fun</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="kt">Integer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="lineno"> 4 </span>
+<span class="lineno"> 5 </span><span class="k">function</span> <span class="nf">add3</span><span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="kt">Integer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="lineno"> 6 </span><span class="k">begin</span>
+<span class="lineno"> 7 </span>  <span class="bp">result</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="o">;</span>
+<span class="lineno"> 8 </span><span class="k">end</span><span class="o">;</span>
+<span class="lineno"> 9 </span>
+<span class="lineno">10 </span><span class="k">function</span> <span class="nf">twice</span><span class="p">(</span><span class="n">func</span><span class="o">:</span> <span class="n">fun</span><span class="o">;</span> <span class="n">x</span><span class="o">:</span> <span class="kt">Integer</span><span class="p">)</span><span class="o">:</span> <span class="kt">Integer</span><span class="o">;</span>
+<span class="lineno">11 </span><span class="k">begin</span>
+<span class="lineno">12 </span>  <span class="bp">result</span> <span class="o">:=</span> <span class="n">func</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">;</span>
+<span class="lineno">13 </span><span class="k">end</span><span class="o">;</span>
+<span class="lineno">14 </span>
+<span class="lineno">15 </span><span class="k">begin</span>
+<span class="lineno">16 </span>  <span class="nb">writeln</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="o">@</span><span class="n">add3</span><span class="o">,</span> <span class="mi">7</span><span class="p">))</span><span class="o">;</span> <span class="cm">{ 13 }</span>
+<span class="lineno">17 </span><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<h4><span id="F.23"></span><span class="mw-headline" id="F#">F#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=10" title="Edit section: F#">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/F_Sharp_(programming_language)" title="F Sharp (programming language)">F Sharp (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-fsharp mw-content-ltr" dir="ltr"><pre><span></span><span class="k">let</span> <span class="nv">twice</span> <span class="n">f</span> <span class="o">=</span> <span class="n">f</span> <span class="o">&gt;&gt;</span> <span class="n">f</span>
+
+<span class="k">let</span> <span class="nv">f</span> <span class="o">=</span> <span class="o">(+)</span> <span class="mi">3</span>
+
+<span class="n">twice</span> <span class="n">f</span> <span class="mi">7</span> <span class="o">|&gt;</span> <span class="n">printf</span> <span class="s">&quot;%A&quot;</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="D">D</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=11" title="Edit section: D">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/D_(programming_language)" title="D (programming language)">D (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-d mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="k">delegate</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">twice</span><span class="p">(</span><span class="kt">int</span> <span class="k">delegate</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="n">f</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">twiceApplied</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">&amp;</span><span class="n">twiceApplied</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">import</span> <span class="n">std</span><span class="p">.</span><span class="n">stdio</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">plusThree</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="p">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">writeln</span><span class="p">(</span><span class="n">twice</span><span class="p">(&amp;</span><span class="n">plusThree</span><span class="p">)(</span><span class="mi">7</span><span class="p">));</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span id="C.23"></span><span class="mw-headline" id="C#">C#</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=12" title="Edit section: C#">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C Sharp (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">Func</span><span class="p">&lt;</span><span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;,</span> <span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;&gt;</span> <span class="n">twice</span> <span class="p">=</span> <span class="n">f</span> <span class="p">=&gt;</span> <span class="n">x</span> <span class="p">=&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+<span class="n">Func</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;</span> <span class="n">plusThree</span> <span class="p">=</span> <span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span> <span class="p">+</span> <span class="m">3</span><span class="p">;</span>
+
+<span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="n">plusThree</span><span class="p">)(</span><span class="m">7</span><span class="p">));</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Haskell">Haskell</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=13" title="Edit section: Haskell">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Haskell_(programming_language)" title="Haskell (programming language)">Haskell (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-haskell mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">twice</span> <span class="ow">::</span> <span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">a</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">a</span><span class="p">)</span>
+<span class="nf">twice</span> <span class="n">f</span> <span class="ow">=</span> <span class="n">f</span> <span class="o">.</span> <span class="n">f</span>
+
+<span class="nf">f</span> <span class="ow">::</span> <span class="kt">Num</span> <span class="n">a</span> <span class="ow">=&gt;</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">a</span>
+<span class="nf">f</span> <span class="ow">=</span> <span class="n">subtract</span> <span class="mi">3</span>
+
+<span class="nf">main</span> <span class="ow">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="n">print</span> <span class="p">(</span><span class="n">twice</span> <span class="n">f</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">-- 1</span>
+</pre></div>
+<p>Or more quickly:
+</p>
+<div class="mw-highlight mw-highlight-lang-haskell mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">twice</span> <span class="n">f</span> <span class="ow">=</span> <span class="n">f</span> <span class="o">.</span> <span class="n">f</span>
+<span class="nf">main</span> <span class="ow">=</span> <span class="n">print</span> <span class="o">$</span> <span class="n">twice</span> <span class="p">(</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span> <span class="mi">7</span> <span class="c1">-- 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Clojure">Clojure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=14" title="Edit section: Clojure">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Clojure" title="Clojure">Clojure</a></div>
+<div class="mw-highlight mw-highlight-lang-clojure mw-content-ltr" dir="ltr"><pre><span></span><span class="p">(</span><span class="kd">defn </span><span class="nv">twice</span> <span class="p">[</span><span class="nv">function</span> <span class="nv">x</span><span class="p">]</span>
+  <span class="p">(</span><span class="nf">function</span> <span class="p">(</span><span class="nf">function</span> <span class="nv">x</span><span class="p">)))</span>
+
+<span class="p">(</span><span class="nf">twice</span> <span class="o">#</span><span class="p">(</span><span class="nb">+ </span><span class="nv">%</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">;13</span>
+</pre></div>
+<p>In Clojure, "#" starts a lambda expression, and "%" refers to the next function argument.
+</p>
+<h4><span class="mw-headline" id="Scheme">Scheme</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=15" title="Edit section: Scheme">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-scheme mw-content-ltr" dir="ltr"><pre><span></span><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">add</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">f</span> <span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">y</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
+<span class="p">(</span><span class="nb">display </span><span class="p">((</span><span class="nf">f</span> <span class="mi">3</span><span class="p">)</span> <span class="mi">7</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">display </span><span class="p">(</span><span class="nf">add</span> <span class="mi">3</span> <span class="mi">7</span><span class="p">))</span>
+</pre></div>
+<p>In this Scheme example, the higher-order function <code>(f x)</code> is used to implement <a href="/wiki/Currying" title="Currying">currying</a>. It takes a single argument and returns a function. The evaluation of the expression <code>((f 3) 7)</code> first returns a function after evaluating <code>(f 3)</code>. The returned function is <code>(lambda (y) (+ 3 y))</code>. Then, it evaluates the returned function with 7 as the argument, returning 10. This is equivalent to the expression <code>(add 3 7)</code>, since <code>(f x)</code> is equivalent to the curried form of <code>(add x y)</code>.
+</p>
+<h4><span class="mw-headline" id="Erlang">Erlang</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=16" title="Edit section: Erlang">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-erlang mw-content-ltr" dir="ltr"><pre><span></span><span class="nf">or_else</span><span class="p">([],</span> <span class="p">_)</span> <span class="o">-&gt;</span> <span class="n">false</span><span class="p">;</span>
+<span class="nf">or_else</span><span class="p">([</span><span class="nv">F</span> <span class="p">|</span> <span class="nv">Fs</span><span class="p">],</span> <span class="nv">X</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">or_else</span><span class="p">(</span><span class="nv">Fs</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">F</span><span class="p">(</span><span class="nv">X</span><span class="p">)).</span>
+
+<span class="nf">or_else</span><span class="p">(</span><span class="nv">Fs</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="n">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">or_else</span><span class="p">(</span><span class="nv">Fs</span><span class="p">,</span> <span class="nv">X</span><span class="p">);</span>
+<span class="nf">or_else</span><span class="p">(</span><span class="nv">Fs</span><span class="p">,</span> <span class="p">_,</span> <span class="p">{</span><span class="n">false</span><span class="p">,</span> <span class="nv">Y</span><span class="p">})</span> <span class="o">-&gt;</span> <span class="n">or_else</span><span class="p">(</span><span class="nv">Fs</span><span class="p">,</span> <span class="nv">Y</span><span class="p">);</span>
+<span class="nf">or_else</span><span class="p">(_,</span> <span class="p">_,</span> <span class="nv">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nv">R</span><span class="p">.</span>
+
+<span class="nf">or_else</span><span class="p">([</span><span class="k">fun</span> <span class="nn">erlang</span><span class="p">:</span><span class="nb">is_integer</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="k">fun</span> <span class="nn">erlang</span><span class="p">:</span><span class="nb">is_atom</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="k">fun</span> <span class="nn">erlang</span><span class="p">:</span><span class="nb">is_list</span><span class="o">/</span><span class="mi">1</span><span class="p">],</span><span class="mi">3</span><span class="p">.</span><span class="mi">23</span><span class="p">).</span>
+</pre></div>
+<p>In this Erlang example, the higher-order function <code>or_else</code>/2 takes a list of functions (<code>Fs</code>) and argument (<code>X</code>). It evaluates the function <code>F</code> with the argument <code>X</code> as argument. If the function <code>F</code> returns false then the next function in <code>Fs</code> will be evaluated. If the function <code>F</code> returns <code>{false,Y}</code> then the next function in <code>Fs</code> with argument <code>Y</code> will be evaluated. If the function <code>F</code> returns <code>R</code> the higher-order function <code>or_else</code>/2 will return <code>R</code>. Note that <code>X</code>, <code>Y</code>, and <code>R</code> can be functions. The example returns <code>false</code>.
+</p>
+<h4><span class="mw-headline" id="Elixir">Elixir</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=17" title="Edit section: Elixir">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Elixir_(programming_language)" title="Elixir (programming language)">Elixir (programming language)</a></div>
+<p>In Elixir, you can mix module definitions and <a href="/wiki/Anonymous_function" title="Anonymous function">anonymous functions</a>
+</p>
+<div class="mw-highlight mw-highlight-lang-elixir mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">defmodule</span> <span class="nc">Hop</span> <span class="k">do</span>
+    <span class="kd">def</span> <span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">do</span>
+        <span class="n">f</span><span class="o">.</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">add3</span> <span class="o">=</span> <span class="k">fn</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">v</span> <span class="k">end</span>
+
+<span class="nc">IO</span><span class="o">.</span><span class="n">puts</span> <span class="nc">Hop</span><span class="o">.</span><span class="n">twice</span><span class="p">(</span><span class="n">add3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">#13</span>
+</pre></div>
+<p>Alternatively, we can also compose using pure anonymous functions.
+</p>
+<div class="mw-highlight mw-highlight-lang-elixir mw-content-ltr" dir="ltr"><pre><span></span><span class="n">twice</span> <span class="o">=</span> <span class="k">fn</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="o">.</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="k">end</span>
+<span class="n">add3</span> <span class="o">=</span> <span class="k">fn</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">v</span> <span class="k">end</span>
+
+<span class="nc">IO</span><span class="o">.</span><span class="n">puts</span> <span class="n">twice</span><span class="o">.</span><span class="p">(</span><span class="n">add3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">#13</span>
+</pre></div>
+<h4><span class="mw-headline" id="JavaScript">JavaScript</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=18" title="Edit section: JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></div>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">const</span> <span class="nx">twice</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">f</span><span class="p">(</span><span class="nx">v</span><span class="p">));</span>
+<span class="kr">const</span> <span class="nx">add3</span> <span class="o">=</span> <span class="nx">v</span> <span class="p">=&gt;</span> <span class="nx">v</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="nx">twice</span><span class="p">(</span><span class="nx">add3</span><span class="p">,</span> <span class="mi">7</span><span class="p">);</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Go">Go</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=19" title="Edit section: Go">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-go mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">func</span> <span class="nx">twice</span><span class="p">(</span><span class="nx">f</span> <span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">v</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="nx">f</span><span class="p">(</span><span class="nx">f</span><span class="p">(</span><span class="nx">v</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">f</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">v</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">v</span> <span class="o">+</span> <span class="mi">3</span>
+	<span class="p">}</span>
+	<span class="nx">twice</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">// returns 13</span>
+<span class="p">}</span>
+</pre></div>
+<p>Notice a function literal can be defined either with an identifier (<code>twice</code>) or anonymously (assigned to variable <code>f</code>). Run full program on <a rel="nofollow" class="external text" href="https://play.golang.org/p/jx_vxiL4Zj">Go Playground</a>.
+</p>
+<h4><span class="mw-headline" id="Scala">Scala</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=20" title="Edit section: Scala">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Scala_(programming_language)" title="Scala (programming language)">Scala (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-scala mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="n">twice</span><span class="o">(</span><span class="n">f</span><span class="k">:</span><span class="kt">Int</span><span class="o">=&gt;</span><span class="nc">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">f</span> <span class="n">compose</span> <span class="n">f</span>
+
+<span class="n">twice</span><span class="o">(</span><span class="k">_</span><span class="o">+</span><span class="mi">3</span><span class="o">)(</span><span class="mi">7</span><span class="o">)</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span id="Java_.281.8.2B.29"></span><span class="mw-headline" id="Java_(1.8+)">Java (1.8+)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=21" title="Edit section: Java (1.8+)">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java (programming language)</a> and <a href="/wiki/Java_version_history" title="Java version history">Java version history</a></div>
+<div class="mw-highlight mw-highlight-lang-java mw-content-ltr" dir="ltr"><pre><span></span><span class="n">Function</span><span class="o">&lt;</span><span class="n">IntUnaryOperator</span><span class="p">,</span> <span class="n">IntUnaryOperator</span><span class="o">&gt;</span> <span class="n">twice</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-&gt;</span> <span class="n">f</span><span class="p">.</span><span class="na">andThen</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="n">twice</span><span class="p">.</span><span class="na">apply</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">).</span><span class="na">applyAsInt</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Julia">Julia</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=22" title="Edit section: Julia">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Julia_(programming_language)" title="Julia (programming language)">Julia (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-jlcon mw-content-ltr" dir="ltr"><pre><span></span><span class="gp">julia&gt;</span> <span class="k">function</span> <span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+           <span class="k">function</span> <span class="n">result</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+               <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+               <span class="k">end</span>
+           <span class="k">return</span> <span class="n">result</span>
+       <span class="k">end</span>
+<span class="go">twice (generic function with 1 method)</span>
+
+<span class="gp">julia&gt;</span> <span class="n">plusthree</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="go">plusthree (generic function with 1 method)</span>
+
+<span class="gp">julia&gt;</span> <span class="n">g</span> <span class="o">=</span> <span class="n">twice</span><span class="p">(</span><span class="n">plusthree</span><span class="p">)</span>
+<span class="go">(::var&quot;#result#3&quot;{typeof(plusthree)}) (generic function with 1 method)</span>
+
+<span class="gp">julia&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Kotlin">Kotlin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=23" title="Edit section: Kotlin">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Kotlin_(programming_language)" title="Kotlin (programming language)">Kotlin (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-kotlin mw-content-ltr" dir="ltr"><pre><span></span><span class="k">fun</span> <span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="nf">twice</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="p">(</span><span class="n">T</span><span class="p">)-&gt;</span><span class="n">T</span><span class="p">):</span> <span class="p">(</span><span class="n">T</span><span class="p">)-&gt;</span><span class="n">T</span> <span class="p">=</span> <span class="p">{</span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">it</span><span class="p">))}</span>
+<span class="k">fun</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="n">Int</span><span class="p">)</span> <span class="p">=</span> <span class="n">x</span> <span class="p">+</span> <span class="m">3</span>
+<span class="n">println</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="o">::</span><span class="n">f</span><span class="p">)(</span><span class="m">7</span><span class="p">))</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Lua">Lua</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=24" title="Edit section: Lua">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">local</span> <span class="n">twice</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+<span class="kr">end</span>
+
+<span class="kd">local</span> <span class="n">addthree</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+  <span class="kr">return</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="n">addthree</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span> <span class="c1">-- 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="MATLAB">MATLAB</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=25" title="Edit section: MATLAB">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/MATLAB" title="MATLAB">MATLAB</a></div><div class="mw-highlight mw-highlight-lang-matlab mw-content-ltr" dir="ltr"><pre><span></span><span class="k">function</span><span class="w"> </span>result <span class="p">=</span><span class="w"> </span><span class="nf">twice</span><span class="p">(</span>fnhandle, v<span class="p">)</span><span class="w"></span>
+<span class="n">result</span> <span class="p">=</span> <span class="n">fnhandle</span><span class="p">(</span><span class="n">fnhandle</span><span class="p">(</span><span class="n">v</span><span class="p">));</span><span class="n"></span>
+<span class="n">end</span>
+
+<span class="s">addthree = @(n) n + 3</span><span class="p">;</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="n">addthree</span><span class="p">,</span> <span class="mi">7</span><span class="p">));</span> <span class="c">% 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Swift">Swift</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=26" title="Edit section: Swift">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-swift mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// generic function</span>
+<span class="kd">func</span> <span class="nf">twice</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kc">_</span> <span class="n">v</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">T</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="n">v</span><span class="p">(</span><span class="n">v</span><span class="p">(</span><span class="nv">$0</span><span class="p">))</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// inferred closure</span>
+<span class="kd">let</span> <span class="nv">f</span> <span class="p">=</span> <span class="p">{</span> <span class="nv">$0</span> <span class="o">+</span> <span class="mi">3</span> <span class="p">}</span>
+
+<span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">)(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">// 16</span>
+</pre></div>
+<h4><span class="mw-headline" id="Rust">Rust</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=27" title="Edit section: Rust">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-rust mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// Take function f(x), return function f(f(x))</span>
+<span class="k">fn</span> <span class="nf">twice</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">(</span><span class="n">function</span>: <span class="nc">impl</span><span class="w"> </span><span class="nb">Fn</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">A</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">impl</span><span class="w"> </span><span class="nb">Fn</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">A</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">move</span><span class="w"> </span><span class="o">|</span><span class="n">a</span><span class="o">|</span><span class="w"> </span><span class="n">function</span><span class="p">(</span><span class="n">function</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// Return x + 3</span>
+<span class="k">fn</span> <span class="nf">plusthree</span><span class="p">(</span><span class="n">x</span>: <span class="kt">i32</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="kt">i32</span> <span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">twice</span><span class="p">(</span><span class="n">plusthree</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">(</span><span class="mi">7</span><span class="p">));</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<h4><span class="mw-headline" id="Ruby">Ruby</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=28" title="Edit section: Ruby">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-ruby mw-content-ltr" dir="ltr"><pre><span></span><span class="k">def</span> <span class="nf">twice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+  <span class="n">f</span><span class="o">.</span><span class="n">call</span> <span class="n">f</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">add3</span> <span class="o">=</span> <span class="o">-&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span> <span class="p">}</span>
+<span class="nb">puts</span> <span class="n">twice</span><span class="p">(</span><span class="n">add3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c1">#=&gt; 13</span>
+</pre></div><p><br />
+</p><h4><span class="mw-headline" id="C">C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=29" title="Edit section: C">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/C_(programming_language)" title="C (programming language)">C (programming language)</a></div>
+<p>With function pointers in C:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">typedef</span> <span class="nf">int</span> <span class="p">(</span><span class="o">*</span><span class="n">int_func_int</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">add3</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">twice</span><span class="p">(</span><span class="n">int_func_int</span> <span class="n">f</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> 
+		<span class="n">twice</span><span class="p">(</span><span class="n">add3</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+	<span class="p">);</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p><br />
+</p>
+<h4><span id="C.2B.2B"></span><span class="mw-headline" id="C++">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=30" title="Edit section: C++">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/C%2B%2B" title="C++">C++</a></div>
+<p>With generic lambdas provided by C++14:
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">auto</span> <span class="n">twice</span> <span class="o">=</span> <span class="p">[](</span><span class="k">auto</span> <span class="n">f</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
+<span class="p">};</span>
+    
+<span class="k">auto</span> <span class="n">f</span> <span class="o">=</span> <span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+ 
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>   
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Or, using <code>std::function</code> in C++11&#160;:
+</p>
+<div class="mw-highlight mw-highlight-lang-c++ mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+
+<span class="k">auto</span> <span class="n">twice</span> <span class="o">=</span> <span class="p">[](</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">&gt;&amp;</span> <span class="n">f</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">));</span>
+<span class="p">};</span>
+    
+<span class="k">auto</span> <span class="n">f</span> <span class="o">=</span> <span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+    
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="D_2">D</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=31" title="Edit section: D">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/D_(programming_language)" title="D (programming language)">D (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-d mw-content-ltr" dir="ltr"><pre><span></span><span class="k">import</span> <span class="n">std</span><span class="p">.</span><span class="n">stdio</span> <span class="p">:</span> <span class="n">writeln</span><span class="p">;</span>
+
+<span class="k">alias</span> <span class="n">twice</span> <span class="p">=</span> <span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="k">alias</span> <span class="n">f</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="n">i</span> <span class="p">+</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="n">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">writeln</span><span class="p">(</span><span class="n">twice</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">7</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+<h4><span id="ColdFusion_Markup_Language_.28CFML.29"></span><span class="mw-headline" id="ColdFusion_Markup_Language_(CFML)">ColdFusion Markup Language (CFML)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=32" title="Edit section: ColdFusion Markup Language (CFML)">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/ColdFusion_Markup_Language" title="ColdFusion Markup Language">ColdFusion Markup Language</a></div>
+<div class="mw-highlight mw-highlight-lang-cfs mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">twice</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">f</span><span class="p">,</span> <span class="nv">v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">f</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="nv">v</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="nv">f</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">v</span> <span class="o">+</span> <span class="m">3</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nf">writeOutput</span><span class="p">(</span><span class="nf">twice</span><span class="p">(</span><span class="nv">f</span><span class="p">,</span> <span class="m">7</span><span class="p">));</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="PHP">PHP</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=33" title="Edit section: PHP">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/PHP" title="PHP">PHP</a></div>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$twice</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">$f</span><span class="p">,</span> <span class="nv">$v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$f</span><span class="p">(</span><span class="nv">$f</span><span class="p">(</span><span class="nv">$v</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="nv">$f</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nv">$v</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nv">$v</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">echo</span><span class="p">(</span><span class="nv">$twice</span><span class="p">(</span><span class="nv">$f</span><span class="p">,</span> <span class="mi">7</span><span class="p">));</span> <span class="c1">// 13</span>
+</pre></div>
+<h4><span class="mw-headline" id="R">R</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=34" title="Edit section: R">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/R_(programming_language)" title="R (programming language)">R (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-r mw-content-ltr" dir="ltr"><pre><span></span><span class="n">twice</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">func</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">return</span><span class="p">(</span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">func</span><span class="p">(</span><span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="n">f</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">return</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="m">3</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">g</span> <span class="o">&lt;-</span> <span class="nf">twice</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="o">&gt;</span> <span class="nf">print</span><span class="p">(</span><span class="nf">g</span><span class="p">(</span><span class="m">7</span><span class="p">))</span>
+<span class="n">[1]</span> <span class="m">13</span>
+</pre></div>
+<h4><span class="mw-headline" id="Raku">Raku</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=35" title="Edit section: Raku">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Raku_(programming_language)" title="Raku (programming language)">Raku (programming language)</a></div>
+<div class="mw-highlight mw-highlight-lang-perl6 mw-content-ltr" dir="ltr"><pre><span></span><span class="k">sub</span> <span class="n">twice</span>(<span class="nb">Callable:D</span> <span class="nv">$c</span>) {
+    <span class="k">return</span> <span class="k">sub</span> { <span class="nv">$c</span>(<span class="nv">$c</span>(<span class="nv">$^x</span>)) };
+}
+
+<span class="k">sub</span> <span class="n">f</span>(<span class="nb">Int:D</span> <span class="nv">$x</span>) {
+    <span class="k">return</span> <span class="nv">$x</span> + <span class="mi">3</span>;
+}
+
+<span class="k">my</span> <span class="nv">$g</span> = <span class="n">twice</span>(<span class="nv">&amp;f</span>);
+
+<span class="nb">say</span> <span class="nv">$g</span>(<span class="mi">7</span>); <span class="c1">#OUTPUT: 13</span>
+</pre></div>
+<p>In Raku, all code objects are closures and therefore can reference inner "lexical" variables from an outer scope because the lexical variable is "closed" inside of the function. Perl 6 also supports "pointy block" syntax for lambda expressions which can be assigned to a variable or invoked anonymously.
+</p>
+<h4><span class="mw-headline" id="Tcl">Tcl</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=36" title="Edit section: Tcl">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/Tcl" title="Tcl">Tcl</a></div>
+<div class="mw-highlight mw-highlight-lang-tcl mw-content-ltr" dir="ltr"><pre><span></span><span class="k">set</span> twice <span class="k">{{</span><span class="nv">f</span> v<span class="k">}</span> <span class="k">{apply</span> <span class="nv">$f</span> <span class="k">[apply</span> <span class="nv">$f</span> <span class="nv">$v</span><span class="k">]}}</span>
+<span class="k">set</span> f <span class="k">{{</span><span class="nv">v</span><span class="k">}</span> <span class="k">{return</span> <span class="k">[expr</span> <span class="nv">$v</span> <span class="o">+</span> <span class="mi">3</span><span class="k">]}}</span>
+
+<span class="c"># result: 13</span>
+<span class="nb">puts</span> <span class="k">[apply</span> <span class="nv">$twice</span> <span class="nv">$f</span> <span class="mi">7</span><span class="k">]</span>
+</pre></div>
+<p>Tcl uses apply command to apply an anonymous function (since 8.6).
+</p>
+<h4><span class="mw-headline" id="XQuery">XQuery</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=37" title="Edit section: XQuery">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/XQuery" title="XQuery">XQuery</a></div>
+<div class="mw-highlight mw-highlight-lang-xquery mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">declare</span> <span class="kd">function</span> <span class="nf">local:twice</span><span class="p">(</span><span class="nv">$</span><span class="n">f</span><span class="p">,</span> <span class="nv">$</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$</span><span class="n">f</span><span class="p">(</span><span class="nv">$</span><span class="n">f</span><span class="p">(</span><span class="nv">$</span><span class="n">x</span><span class="p">))</span>
+<span class="p">};</span>
+
+<span class="kd">declare</span> <span class="kd">function</span> <span class="nf">local:f</span><span class="p">(</span><span class="nv">$</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
+<span class="p">};</span>
+
+<span class="nf">local:twice</span><span class="p">(</span><span class="nf">local:f</span><span class="kt">#</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c">(: 13 :)</span>
+</pre></div>
+<h4><span class="mw-headline" id="XACML">XACML</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=38" title="Edit section: XACML">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/XACML" title="XACML">XACML</a></div>
+<p>The XACML standard defines higher-order functions in the standard to apply a function to multiple values of attribute bags.
+</p>
+<div class="mw-highlight mw-highlight-lang-java mw-content-ltr" dir="ltr"><pre><span></span><span class="n">rule</span> <span class="n">allowEntry</span><span class="p">{</span>
+    <span class="n">permit</span>
+    <span class="n">condition</span> <span class="nf">anyOfAny</span><span class="p">(</span><span class="n">function</span><span class="o">[</span><span class="n">stringEqual</span><span class="o">]</span><span class="p">,</span> <span class="n">citizenships</span><span class="p">,</span> <span class="n">allowedCitizenships</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+<p>The list of higher-order functions in XACML can be found <a href="/wiki/XACML#Higher_order_functions" title="XACML">here</a>.
+</p>
+<h3><span class="mw-headline" id="Alternatives">Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=39" title="Edit section: Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<h4><span class="mw-headline" id="Function_pointers">Function pointers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=40" title="Edit section: Function pointers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Function_pointer" title="Function pointer">Function pointers</a> in languages such as <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> allow programmers to pass around references to functions. The following C code computes an approximation of the integral of an arbitrary function:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">double</span> <span class="nf">square</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="nf">cube</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* Compute the integral of f() within the interval [a,b] */</span>
+<span class="kt">double</span> <span class="nf">integral</span><span class="p">(</span><span class="kt">double</span> <span class="n">f</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">),</span> <span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span>  <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">sum</span> <span class="o">*</span> <span class="n">dt</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">integral</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">integral</span><span class="p">(</span><span class="n">cube</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>The <a href="/wiki/Qsort" title="Qsort">qsort</a> function from the C standard library uses a function pointer to emulate the behavior of a higher-order function.
+</p>
+<h4><span class="mw-headline" id="Macros">Macros</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=41" title="Edit section: Macros">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">Macros</a> can also be used to achieve some of the effects of higher-order functions.  However, macros cannot easily avoid the problem of variable capture; they may also result in large amounts of duplicated code, which can be more difficult for a compiler to optimize.  Macros are generally not strongly typed, although they may produce strongly typed code.
+</p>
+<h4><span class="mw-headline" id="Dynamic_code_evaluation">Dynamic code evaluation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=42" title="Edit section: Dynamic code evaluation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In other <a href="/wiki/Imperative_programming" title="Imperative programming">imperative programming</a> languages, it is possible to achieve some of the same algorithmic results as are obtained via higher-order functions by dynamically executing code (sometimes called <i>Eval</i> or <i>Execute</i> operations) in the scope of evaluation.  There can be significant drawbacks to this approach:
+</p>
+<ul><li>The argument code to be executed is usually not <a href="/wiki/Type_system#Static_typing" title="Type system">statically typed</a>; these languages generally rely on <a href="/wiki/Type_system#Dynamic_typing" title="Type system">dynamic typing</a> to determine the well-formedness and safety of the code to be executed.</li>
+<li>The argument is usually provided as a string, the value of which may not be known until run-time.  This string must either be compiled during program execution (using <a href="/wiki/Just-in-time_compilation" title="Just-in-time compilation">just-in-time compilation</a>) or evaluated by <a href="/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpretation</a>, causing some added overhead at run-time, and usually generating less efficient code.</li></ul>
+<h4><span class="mw-headline" id="Objects">Objects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=43" title="Edit section: Objects">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>In <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a> languages that do not support higher-order functions, <a href="/wiki/Object_(computer_science)" title="Object (computer science)">objects</a> can be an effective substitute. An object's <a href="/wiki/Method_(computer_science)" class="mw-redirect" title="Method (computer science)">methods</a> act in essence like functions, and a method may accept objects as parameters and produce objects as return values. Objects often carry added run-time overhead compared to pure functions, however, and added <a href="/wiki/Boilerplate_code" title="Boilerplate code">boilerplate code</a> for defining and instantiating an object and its method(s). Languages that permit <a href="/wiki/Stack-based_memory_allocation" title="Stack-based memory allocation">stack</a>-based (versus <a href="/wiki/Dynamic_memory_allocation" class="mw-redirect" title="Dynamic memory allocation">heap</a>-based) objects or <a href="/wiki/Record_(computer_science)" title="Record (computer science)">structs</a> can provide more flexibility with this method.
+</p><p>An example of using a simple stack based record in <a href="/wiki/Free_Pascal" title="Free Pascal">Free Pascal</a> with a function that returns a function:
+</p>
+<div class="mw-highlight mw-highlight-lang-pascal mw-content-ltr" dir="ltr"><pre><span></span><span class="k">program</span> <span class="n">example</span><span class="o">;</span>
+
+<span class="k">type</span> 
+  <span class="nb">int</span> <span class="o">=</span> <span class="kt">integer</span><span class="o">;</span>
+  <span class="n">Txy</span> <span class="o">=</span> <span class="k">record</span> <span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">:</span> <span class="nb">int</span><span class="o">;</span> <span class="k">end</span><span class="o">;</span>
+  <span class="n">Tf</span> <span class="o">=</span> <span class="k">function</span> <span class="p">(</span><span class="n">xy</span><span class="o">:</span> <span class="n">Txy</span><span class="p">)</span><span class="o">:</span> <span class="nb">int</span><span class="o">;</span>
+     
+<span class="k">function</span> <span class="nf">f</span><span class="p">(</span><span class="n">xy</span><span class="o">:</span> <span class="n">Txy</span><span class="p">)</span><span class="o">:</span> <span class="nb">int</span><span class="o">;</span> 
+<span class="k">begin</span> 
+  <span class="bp">Result</span> <span class="o">:=</span> <span class="n">xy</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">xy</span><span class="o">.</span><span class="n">x</span><span class="o">;</span> 
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">function</span> <span class="nf">g</span><span class="p">(</span><span class="n">func</span><span class="o">:</span> <span class="n">Tf</span><span class="p">)</span><span class="o">:</span> <span class="n">Tf</span><span class="o">;</span> 
+<span class="k">begin</span> 
+  <span class="bp">result</span> <span class="o">:=</span> <span class="n">func</span><span class="o">;</span> 
+<span class="k">end</span><span class="o">;</span>
+
+<span class="k">var</span> 
+  <span class="n">a</span><span class="o">:</span> <span class="n">Tf</span><span class="o">;</span>
+  <span class="n">xy</span><span class="o">:</span> <span class="n">Txy</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span> <span class="mi">3</span><span class="o">;</span> <span class="n">y</span><span class="o">:</span> <span class="mi">7</span><span class="p">)</span><span class="o">;</span>
+
+<span class="k">begin</span>  
+  <span class="n">a</span> <span class="o">:=</span> <span class="n">g</span><span class="p">(</span><span class="o">@</span><span class="n">f</span><span class="p">)</span><span class="o">;</span>     <span class="c1">// return a function to &quot;a&quot;</span>
+  <span class="nb">writeln</span><span class="p">(</span><span class="n">a</span><span class="p">(</span><span class="n">xy</span><span class="p">))</span><span class="o">;</span> <span class="c1">// prints 10</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<p>The function <code>a()</code> takes a <code>Txy</code> record as input and returns the integer value of the sum of the record's <code>x</code> and <code>y</code> fields (3 + 7).
+</p>
+<h4><span class="mw-headline" id="Defunctionalization">Defunctionalization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=44" title="Edit section: Defunctionalization">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Defunctionalization" title="Defunctionalization">Defunctionalization</a> can be used to implement higher-order functions in languages that lack  <a href="/wiki/First_class_function" class="mw-redirect" title="First class function">first-class functions</a>:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// Defunctionalized function data structures</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">Add</span> <span class="p">{</span> <span class="n">T</span> <span class="n">value</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">DivBy</span> <span class="p">{</span> <span class="n">T</span> <span class="n">value</span><span class="p">;</span> <span class="p">};</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">G</span><span class="o">&gt;</span> <span class="k">struct</span> <span class="n">Composition</span> <span class="p">{</span> <span class="n">F</span> <span class="n">f</span><span class="p">;</span> <span class="n">G</span> <span class="n">g</span><span class="p">;</span> <span class="p">};</span>
+
+<span class="c1">// Defunctionalized function application implementations</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">G</span><span class="p">,</span> <span class="k">typename</span> <span class="n">X</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">apply</span><span class="p">(</span><span class="n">Composition</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">,</span> <span class="n">X</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">f</span><span class="p">,</span> <span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">g</span><span class="p">,</span> <span class="n">arg</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">X</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">apply</span><span class="p">(</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">,</span> <span class="n">X</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">arg</span>  <span class="o">+</span> <span class="n">f</span><span class="p">.</span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="p">,</span> <span class="k">typename</span> <span class="n">X</span><span class="o">&gt;</span>
+<span class="k">auto</span> <span class="n">apply</span><span class="p">(</span><span class="n">DivBy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">,</span> <span class="n">X</span> <span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">arg</span> <span class="o">/</span> <span class="n">f</span><span class="p">.</span><span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Higher-order compose function</span>
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">F</span><span class="p">,</span> <span class="k">typename</span> <span class="n">G</span><span class="o">&gt;</span>
+<span class="n">Composition</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="o">&gt;</span> <span class="n">compose</span><span class="p">(</span><span class="n">F</span> <span class="n">f</span><span class="p">,</span> <span class="n">G</span> <span class="n">g</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">Composition</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span> <span class="n">G</span><span class="o">&gt;</span> <span class="p">{</span><span class="n">f</span><span class="p">,</span> <span class="n">g</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span> <span class="p">{</span>
+    <span class="k">auto</span> <span class="n">f</span> <span class="o">=</span> <span class="n">compose</span><span class="p">(</span><span class="n">DivBy</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{</span> <span class="mf">2.0f</span> <span class="p">},</span> <span class="n">Add</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span> <span class="mi">5</span> <span class="p">});</span>
+    <span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 4.0f</span>
+    <span class="n">apply</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">9</span><span class="p">);</span> <span class="c1">// 7.0f</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>In this case, different types are used to trigger different functions via <a href="/wiki/Function_overloading" title="Function overloading">function overloading</a>. The overloaded function in this example has the signature <code>auto apply</code>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=45" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/First-class_function" title="First-class function">First-class function</a></li>
+<li><a href="/wiki/Combinatory_logic" title="Combinatory logic">Combinatory logic</a></li>
+<li><a href="/wiki/Function-level_programming" title="Function-level programming">Function-level programming</a></li>
+<li><a href="/wiki/Functional_programming" title="Functional programming">Functional programming</a></li>
+<li><a href="/wiki/Kappa_calculus" title="Kappa calculus">Kappa calculus</a> - a formalism for functions which <i>excludes</i> higher-order functions</li>
+<li><a href="/wiki/Strategy_pattern" title="Strategy pattern">Strategy pattern</a></li>
+<li><a href="/wiki/Higher_order_message" title="Higher order message">Higher order messages</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Higher-order_function&amp;action=edit&amp;section=46" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+</div>
+<!-- 
+NewPP limit report
+Parsed by mw1355
+Cached time: 20200322054520
+Cache expiry: 2592000
+Dynamic content: false
+Complications: []
+CPU time usage: 0.628 seconds
+Real time usage: 9.087 seconds
+Preprocessor visited node count: 1168/1000000
+Post‐expand include size: 16425/2097152 bytes
+Template argument size: 324/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 65822/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.101/10.000 seconds
+Lua memory usage: 2.44 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 8962.684      1 -total
+  0.99%   89.143     35 Template:Further_information
+  0.91%   81.325      1 Template:More_footnotes
+  0.77%   68.734      2 Template:Ambox
+  0.46%   41.329      1 Template:Distinguish
+  0.19%   16.952      1 Template:Split
+  0.09%    7.663      1 Template:Reflist
+  0.08%    7.299      2 Template:Yesno-no
+  0.07%    6.502      1 Template:Pagelist
+  0.05%    4.460      2 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:244689-0!canonical!math=5 and timestamp 20200322054510 and revision id 945077798
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Higher-order_function&amp;oldid=945077798">https://en.wikipedia.org/w/index.php?title=Higher-order_function&amp;oldid=945077798</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Functional_programming" title="Category:Functional programming">Functional programming</a></li><li><a href="/wiki/Category:Lambda_calculus" title="Category:Lambda calculus">Lambda calculus</a></li><li><a href="/wiki/Category:Higher-order_functions" title="Category:Higher-order functions">Higher-order functions</a></li><li><a href="/wiki/Category:Subroutines" title="Category:Subroutines">Subroutines</a></li><li><a href="/wiki/Category:Articles_with_example_Scheme_code" title="Category:Articles with example Scheme code">Articles with example Scheme code</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_September_2013" title="Category:Articles lacking in-text citations from September 2013">Articles lacking in-text citations from September 2013</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Articles_to_be_split_from_May_2016" title="Category:Articles to be split from May 2016">Articles to be split from May 2016</a></li><li><a href="/wiki/Category:All_articles_to_be_split" title="Category:All articles to be split">All articles to be split</a></li><li><a href="/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li><li><a href="/wiki/Category:Articles_with_example_Haskell_code" title="Category:Articles with example Haskell code">Articles with example Haskell code</a></li><li><a href="/wiki/Category:Articles_with_example_JavaScript_code" title="Category:Articles with example JavaScript code">Articles with example JavaScript code</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="/wiki/Category:Articles_with_example_Pascal_code" title="Category:Articles with example Pascal code">Articles with example Pascal code</a></li><li><a href="/wiki/Category:Articles_with_example_R_code" title="Category:Articles with example R code">Articles with example R code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Higher-order+function" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Higher-order+function" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Higher-order_function" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Higher-order_function" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Higher-order_function">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Higher-order_function&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Higher-order_function&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Higher-order_function" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Higher-order_function" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Higher-order_function&amp;oldid=945077798" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Higher-order_function&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1474542" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Higher-order_function&amp;id=945077798&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Higher-order+function">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Higher-order+function&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Higher-order_function&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Funci%C3%B3_d%27ordre_superior" title="Funció d&#039;ordre superior – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Funktion_h%C3%B6herer_Ordnung" title="Funktion höherer Ordnung – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/K%C3%B5rgemat_j%C3%A4rku_funktsioon" title="Kõrgemat järku funktsioon – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%A3%CF%85%CE%BD%CE%B1%CF%81%CF%84%CE%AE%CF%83%CE%B5%CE%B9%CF%82_%CE%B1%CE%BD%CF%8E%CF%84%CE%B5%CF%81%CE%BF%CF%85_%CE%B2%CE%B1%CE%B8%CE%BC%CE%BF%CF%8D" title="Συναρτήσεις ανώτερου βαθμού – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Funci%C3%B3n_de_orden_superior" title="Función de orden superior – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%A8%D8%B9_%D9%85%D8%B1%D8%AA%D8%A8%D9%87%E2%80%8C%D8%A8%D8%A7%D9%84%D8%A7" title="تابع مرتبه‌بالا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Fonction_d%27ordre_sup%C3%A9rieur" title="Fonction d&#039;ordre supérieur – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%A0%EC%B0%A8_%ED%95%A8%EC%88%98" title="고차 함수 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Funzione_di_ordine_superiore" title="Funzione di ordine superiore – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Hogere-ordefunctie" title="Hogere-ordefunctie – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E9%AB%98%E9%9A%8E%E9%96%A2%E6%95%B0" title="高階関数 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Funkcja_wy%C5%BCszego_rz%C4%99du" title="Funkcja wyższego rzędu – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F_%D0%B2%D1%8B%D1%81%D1%88%D0%B5%D0%B3%D0%BE_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D0%B0" title="Функция высшего порядка – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Funktioner_av_h%C3%B6gre_ordning" title="Funktioner av högre ordning – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%89%E0%AE%AF%E0%AE%B0%E0%AF%8D_%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%9A%E0%AF%88%E0%AE%9A%E0%AF%8D_%E0%AE%9A%E0%AF%86%E0%AE%AF%E0%AE%B2%E0%AE%BF" title="உயர் வரிசைச் செயலி – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A4%D1%83%D0%BD%D0%BA%D1%86%D1%96%D1%8F_%D0%B2%D0%B8%D1%89%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%80%D1%8F%D0%B4%D0%BA%D1%83" title="Функція вищого порядку – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/H%C3%A0m_th%E1%BB%A9_b%E1%BA%ADc_cao" title="Hàm thứ bậc cao – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0" title="高阶函数 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1474542#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 11 March 2020, at 17:54<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Higher-order_function&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.628","walltime":"9.087","ppvisitednodes":{"value":1168,"limit":1000000},"postexpandincludesize":{"value":16425,"limit":2097152},"templateargumentsize":{"value":324,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":65822,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 8962.684      1 -total","  0.99%   89.143     35 Template:Further_information","  0.91%   81.325      1 Template:More_footnotes","  0.77%   68.734      2 Template:Ambox","  0.46%   41.329      1 Template:Distinguish","  0.19%   16.952      1 Template:Split","  0.09%    7.663      1 Template:Reflist","  0.08%    7.299      2 Template:Yesno-no","  0.07%    6.502      1 Template:Pagelist","  0.05%    4.460      2 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.101","limit":"10.000"},"limitreport-memusage":{"value":2560142,"limit":52428800}},"cachereport":{"origin":"mw1355","timestamp":"20200322054520","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Higher-order function","url":"https:\/\/en.wikipedia.org\/wiki\/Higher-order_function","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1474542","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1474542","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-06-12T16:31:37Z","dateModified":"2020-03-11T17:54:26Z","headline":"function that takes one or more functions as an input or that outputs a function"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":99,"wgHostname":"mw1409"});});</script></body></html>

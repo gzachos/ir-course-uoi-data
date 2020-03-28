@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Completely Fair Scheduler - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn89mwpAAD0AAGJpsZAAAAEQ","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Completely_Fair_Scheduler","wgTitle":"Completely Fair Scheduler","wgCurRevisionId":938407350,"wgRevisionId":938407350,"wgArticleId":12414832,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages using Infobox software with unknown parameters","Wikipedia articles needing clarification from October 2009","All Wikipedia articles needing clarification","Wikipedia articles needing clarification from March 2009","Wikipedia articles needing clarification from April 2010",
+"Linux kernel process schedulers","Free software"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Completely_Fair_Scheduler","wgRelevantArticleId":12414832,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q29186","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":
+"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1200px-Simplified_Structure_of_the_Linux_Kernel.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Completely_Fair_Scheduler"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Completely_Fair_Scheduler rootpage-Completely_Fair_Scheduler skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Completely Fair Scheduler</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox vevent" style="width:22em"><caption class="summary">Completely Fair Scheduler</caption><tbody><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td><a href="/wiki/Ingo_Moln%C3%A1r" title="Ingo Molnár">Ingo Molnár</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer(s)</a></th><td>Linux kernel developers</td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Process_scheduler" class="mw-redirect" title="Process scheduler">process scheduler</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GPL-2.0</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://kernel.org">kernel<wbr />.org</a></span></td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/220px-Simplified_Structure_of_the_Linux_Kernel.svg.png" decoding="async" width="220" height="124" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/330px-Simplified_Structure_of_the_Linux_Kernel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/440px-Simplified_Structure_of_the_Linux_Kernel.svg.png 2x" data-file-width="960" data-file-height="540" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg" class="internal" title="Enlarge"></a></div>Location of the "Completely Fair Scheduler" (a process scheduler) in a simplified structure of the Linux kernel.</div></div></div>
+<p>The <b>Completely Fair Scheduler</b> (<b>CFS</b>) is a <a href="/wiki/Process_scheduler" class="mw-redirect" title="Process scheduler">process scheduler</a> which was merged into the 2.6.23 (October 2007) release of the <a href="/wiki/Linux" title="Linux">Linux</a> <a href="/wiki/Linux_kernel" title="Linux kernel">kernel</a> and is the default scheduler. It handles <a href="/wiki/Central_processing_unit" title="Central processing unit">CPU</a> resource allocation for executing <a href="/wiki/Process_(computing)" title="Process (computing)">processes</a>, and aims to maximize overall CPU utilization while also maximizing interactive performance.
+</p><p><a href="/wiki/Con_Kolivas" title="Con Kolivas">Con Kolivas</a>'s work with scheduling, most significantly his implementation of "<a href="/wiki/Fair-share_scheduling" title="Fair-share scheduling">fair scheduling</a>" named <a href="/wiki/Rotating_Staircase_Deadline" class="mw-redirect" title="Rotating Staircase Deadline">Rotating Staircase Deadline</a>, inspired <a href="/wiki/Ingo_Moln%C3%A1r" title="Ingo Molnár">Ingo Molnár</a> to develop his CFS, as a replacement for the earlier <a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a>, crediting Kolivas in his announcement.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p>In contrast to the previous O(1) scheduler used in older Linux 2.6 kernels, the CFS scheduler implementation is not based on <a href="/wiki/Run_queue" title="Run queue">run queues</a>. Instead, a <a href="/wiki/Red%E2%80%93black_tree" title="Red–black tree">red–black tree</a> implements a "timeline" of future task execution. Additionally, the scheduler uses <a href="/wiki/Nanosecond" title="Nanosecond">nanosecond</a> granularity accounting, the atomic units by which an individual process' share of the CPU was allocated (thus making redundant the previous notion of timeslices). This precise knowledge also means that no specific <a href="/wiki/Heuristics" class="mw-redirect" title="Heuristics">heuristics</a> are required to determine the interactivity of a process, for example.<sup id="cite_ref-kt8059_2-0" class="reference"><a href="#cite_note-kt8059-2">&#91;2&#93;</a></sup>
+</p><p>Like the old O(1) scheduler, CFS uses a concept called "sleeper fairness", which considers sleeping or waiting tasks equivalent to those on the runqueue. This means that interactive tasks which spend most of their time waiting for user input or other events get a comparable share of CPU time when they need it.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Algorithm"><span class="tocnumber">1</span> <span class="toctext">Algorithm</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#OS_background"><span class="tocnumber">2</span> <span class="toctext">OS background</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Fairer_algorithms"><span class="tocnumber">3</span> <span class="toctext">Fairer algorithms</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#2016_Patch"><span class="tocnumber">4</span> <span class="toctext">2016 Patch</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Algorithm">Algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=1" title="Edit section: Algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The data structure used for the scheduling algorithm is a <a href="/wiki/Red-black_tree" class="mw-redirect" title="Red-black tree">red-black tree</a> in which the nodes are scheduler-specific <code>sched_entity</code> structures. These are derived from the general <code>task_struct</code> process descriptor, with added scheduler elements.
+</p><p>The nodes are indexed by processor "<i>execution time</i>" in nanoseconds.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>A "<i>maximum execution time</i>" is also calculated for each process. This time is based upon the idea that an "ideal processor" would equally share processing power amongst all processes. Thus, the <i>maximum execution time</i> is the time the process has been waiting to run, divided by the total number of processes, or in other words, the <i>maximum execution time</i> is the time the process would have expected to run on an "ideal processor".
+</p><p>When the scheduler is invoked to run a new process,  the operation of the scheduler is as follows:
+</p>
+<ol><li>The leftmost node of the scheduling tree is chosen (as it will have the lowest spent <i>execution time</i>), and sent for execution.</li>
+<li>If the process simply completes execution, it is removed from the system and scheduling tree.</li>
+<li>If the process reaches its <i>maximum execution time</i> or is otherwise stopped (voluntarily or via interrupt) it is reinserted into the scheduling tree based on its new spent <i>execution time</i>.</li>
+<li>The new leftmost node will then be selected from the tree, repeating the iteration.</li></ol>
+<p>If the process spends a lot of its time sleeping, then its spent time value is low and it automatically gets the priority boost when it finally needs it. Hence such tasks do not get less processor time than the tasks that are constantly running.
+</p>
+<h2><span class="mw-headline" id="OS_background">OS background</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=2" title="Edit section: OS background">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Confusing plainlinks metadata ambox ambox-style ambox-confusing" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This section <b>may be <a href="/wiki/Wikipedia:Vagueness" title="Wikipedia:Vagueness">confusing or unclear</a> to readers</b>.<span class="hide-when-compact"> Please help us <a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarify the section</a>. There might be a discussion about this on <a href="/wiki/Talk:Completely_Fair_Scheduler" title="Talk:Completely Fair Scheduler">the talk page</a>.</span>  <small class="date-container"><i>(<span class="date">October 2009</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>CFS is an implementation of a well-studied, classic scheduling algorithm called <a href="/wiki/Weighted_fair_queuing" class="mw-redirect" title="Weighted fair queuing">weighted fair queuing</a>.<sup id="cite_ref-dwrr_4-0" class="reference"><a href="#cite_note-dwrr-4">&#91;4&#93;</a></sup>
+</p><p>Originally invented for <a href="/wiki/Packet_network" class="mw-redirect" title="Packet network">packet networks</a>, fair queuing had been previously applied to CPU scheduling under the name <a href="/wiki/Stride_scheduling" title="Stride scheduling">stride scheduling</a>.  However, CFS uses terminology different from that normally applied to fair queuing. "Service error" (the amount by which a process's obtained CPU share differs from its expected CPU share) is called "wait_runtime" in Linux's implementation, and "queue virtual time" (QVT) is called "fair_clock".
+</p><p>The fair queuing CFS scheduler has a scheduling complexity of O(<a href="/wiki/Logarithm" title="Logarithm">log</a> N), where N is the number of tasks in the <a href="/wiki/Run_queue" title="Run queue">runqueue</a>. Choosing a task can be done in constant time, but reinserting a task after it has run requires O(log N) operations, because the runqueue is implemented as a <a href="/wiki/Red-black_tree" class="mw-redirect" title="Red-black tree">red-black tree</a>.
+</p><p>CFS is the first implementation of a fair queuing <a href="/wiki/Process_scheduler" class="mw-redirect" title="Process scheduler">process scheduler</a> widely used in a general-purpose operating system.<sup id="cite_ref-dwrr_4-1" class="reference"><a href="#cite_note-dwrr-4">&#91;4&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Fairer_algorithms">Fairer algorithms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=3" title="Edit section: Fairer algorithms">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Technically, the name "Completely Fair Scheduler" is not entirely correct, since the algorithm only guarantees the "unfair" level to be less than <i>O</i>(<i>n</i>), where <i>n</i> is the number of processes. There are more complicated algorithms<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (March 2009)">clarification needed</span></a></i>&#93;</sup> which can give better bounds over the "unfair" levels (e.g. <i>O</i>(log <i>n</i>)).<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="The text near this tag may need clarification or removal of jargon. (April 2010)">clarification needed</span></a></i>&#93;</sup>
+</p><p>The Linux kernel received a patch for CFS in November 2010 for the 2.6.38 kernel that has made the scheduler <i>fairer</i> for use on desktops and workstations. Developed by Mike Galbraith using ideas suggested by <a href="/wiki/Linus_Torvalds" title="Linus Torvalds">Linus Torvalds</a>, the patch implements a feature called autogrouping that <i>significantly</i> boosts interactive desktop performance.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> 
+The explanation of the basic algorithm implementation was included by Mike Galbraith in a post about the patch:<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<style data-mw-deduplicate="TemplateStyles:r886047036">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>Each task's signal struct contains an inherited pointer to a refcounted autogroup struct containing a task group pointer, the default for all tasks pointing to the init_task_group.  When a task calls __proc_set_tty(), the process wide reference to the default group is dropped, a new task group is created, and the process is moved into the new task group.  Children thereafter inherit this task group, and increase its refcount.  On exit, a reference to the current task group is dropped when the last reference to each signal struct is dropped.  The task group is destroyed when the last signal struct referencing it is freed.   At runqueue selection time, IFF a task has no cgroup assignment, its current autogroup is used.
+The feature is enabled from boot by default if CONFIG_SCHED_AUTOGROUP is selected, but can be disabled via the boot option noautogroup, and can be also be turned on/off on the fly.</p></blockquote>
+<p>The primary issues solved by this are for multi-core as well as multi-cpu (<a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">SMP</a>) systems experiencing increased interactive response times while performing other tasks that use many CPU-intensive threads in those tasks.  A simple explanation is that, with this patch applied, one will be able to still watch a video, read email and perform other typical desktop activities without glitches or choppiness while, say, compiling the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a> or encoding video.
+</p><p>Initial patches for the autogroup feature tied grouping to a tty (terminal), but the eventually merged patch settled on an implementation that tied groups to sessions created via the <a rel="nofollow" class="external text" href="http://man7.org/linux/man-pages/man2/setsid.2.html"><code>setsid()</code></a> system call.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> The autogroup feature implements task group creation only for fair class tasks (that is, processes scheduled according to the default SCHED_OTHER policy, but not, for example, processes scheduled under realtime policies) and, as such, leaves the way open for enhancement.  Even at this basic implementation this patch can make <a href="/wiki/Linux" title="Linux">Linux</a> on the desktop a reality for all those who have found desktop performance to be less than desired.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+As <a href="/wiki/Linus_Torvalds" title="Linus Torvalds">Linus Torvalds</a> put it:<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>So I think this is firmly one of those "real improvement" patches.
+Good job. Group scheduling goes from "useful for some specific server loads" to "that's a killer feature".</p></blockquote>
+<h2><span class="mw-headline" id="2016_Patch">2016 Patch</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=4" title="Edit section: 2016 Patch">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In 2016, the Linux scheduler was patched for better multicore performance, based on the suggestions outlined in the paper, "The Linux Scheduler: A Decade of Wasted Cores".<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=5" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=6" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist"><a href="/wiki/Ingo_Moln%C3%A1r" title="Ingo Molnár">Molnár, Ingo</a> (2007-04-13). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/230501/">"&#x5b;patch&#x5d; Modular Scheduler Core and Completely Fair Scheduler &#x5b;CFS&#x5d;"</a>. <i>linux-kernel</i> (Mailing list).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%26%23x5b%3Bpatch%26%23x5d%3B+Modular+Scheduler+Core+and+Completely+Fair+Scheduler+%26%23x5b%3BCFS%26%23x5d%3B&amp;rft.date=2007-04-13&amp;rft.aulast=Moln%C3%A1r&amp;rft.aufirst=Ingo&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F230501%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-kt8059-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-kt8059_2-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Andrews, Jeremy (2007-04-18). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070419102054/http://kerneltrap.org/node/8059">"Linux: The Completely Fair Scheduler"</a>. <a href="/wiki/KernelTrap" title="KernelTrap">KernelTrap</a>. Archived from <a rel="nofollow" class="external text" href="http://kerneltrap.org/node/8059">the original</a> on 2007-04-19.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Linux%3A+The+Completely+Fair+Scheduler&amp;rft.pub=KernelTrap&amp;rft.date=2007-04-18&amp;rft.aulast=Andrews&amp;rft.aufirst=Jeremy&amp;rft_id=http%3A%2F%2Fkerneltrap.org%2Fnode%2F8059&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/linux/library/l-completely-fair-scheduler/">CFS description at ibm.com</a></span>
+</li>
+<li id="cite_note-dwrr-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-dwrr_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-dwrr_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Li, T.; Baumberger, D.; Hahn, S. (2009). <a rel="nofollow" class="external text" href="http://happyli.org/tongli/papers/dwrr.pdf">"Efficient and scalable multiprocessor fair scheduling using distributed weighted round-robin"</a> <span class="cs1-format">(PDF)</span>. <i>ACM SIGPLAN Notices</i>. <b>44</b> (4): 65. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.567.2170">10.1.1.567.2170</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F1594835.1504188">10.1145/1594835.1504188</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+SIGPLAN+Notices&amp;rft.atitle=Efficient+and+scalable+multiprocessor+fair+scheduling+using+distributed+weighted+round-robin&amp;rft.volume=44&amp;rft.issue=4&amp;rft.pages=65&amp;rft.date=2009&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.567.2170&amp;rft_id=info%3Adoi%2F10.1145%2F1594835.1504188&amp;rft.aulast=Li&amp;rft.aufirst=T.&amp;rft.au=Baumberger%2C+D.&amp;rft.au=Hahn%2C+S.&amp;rft_id=http%3A%2F%2Fhappyli.org%2Ftongli%2Fpapers%2Fdwrr.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.phoronix.com/scan.php?page=article&amp;item=linux_2637_video&amp;num=1">The ~200 Line Linux Kernel Patch That Does Wonders</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist"><a href="/w/index.php?title=Mike_Galbraith&amp;action=edit&amp;redlink=1" class="new" title="Mike Galbraith (page does not exist)">Galbraith, Mike</a> (2010-11-15). <a rel="nofollow" class="external text" href="http://marc.info/?l=linux-kernel&amp;m=128978361700898&amp;w=2">"&#x5b;RFC/RFT PATCH v3&#x5d; Re: &#91;RFC/RFT PATCH v3&#93; sched: automated per tty task groups &#x5b;CFS&#x5d;"</a>. <i>linux-kernel</i> (Mailing list).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%26%23x5b%3B&#82;FC%2FRFT+PATCH+v3%26%23x5d%3B+Re%3A+%5B&#82;FC%2FRFT+PATCH+v3%5D+sched%3A+automated+per+tty+task+groups+%26%23x5b%3BCFS%26%23x5d%3B&amp;rft.date=2010-11-15&amp;rft.aulast=Galbraith&amp;rft.aufirst=Mike&amp;rft_id=http%3A%2F%2Fmarc.info%2F%3Fl%3Dlinux-kernel%26m%3D128978361700898%26w%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist"><a href="/w/index.php?title=Mike_Galbraith&amp;action=edit&amp;redlink=1" class="new" title="Mike Galbraith (page does not exist)">Galbraith, Mike</a> (2010-11-20). <a rel="nofollow" class="external text" href="http://marc.info/?l=linux-kernel&amp;m=129028174609578">"&#x5b;PATCH v4&#x5d; sched: automated per session task groups"</a>. <i>linux-kernel</i> (Mailing list).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%26%23x5b%3BPATCH+v4%26%23x5d%3B+sched%3A+automated+per+session+task+groups&amp;rft.date=2010-11-20&amp;rft.aulast=Galbraith&amp;rft.aufirst=Mike&amp;rft_id=http%3A%2F%2Fmarc.info%2F%3Fl%3Dlinux-kernel%26m%3D129028174609578&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110223082612/http://blogs.computerworld.com/17371/the_linux_desktop_may_soon_be_a_lot_faster">"The Linux desktop may soon be a lot faster"</a>. Archived from <a rel="nofollow" class="external text" href="http://blogs.computerworld.com/17371/the_linux_desktop_may_soon_be_a_lot_faster">the original</a> on 2011-02-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-11-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Linux+desktop+may+soon+be+a+lot+faster&amp;rft_id=http%3A%2F%2Fblogs.computerworld.com%2F17371%2Fthe_linux_desktop_may_soon_be_a_lot_faster&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation mailinglist"><a href="/wiki/Linus_Torvalds" title="Linus Torvalds">Torvalds, Linus</a> (2010-11-15). <a rel="nofollow" class="external text" href="http://marc.info/?l=linux-kernel&amp;m=128979084506774&amp;w=2">"&#x5b;patch&#x5d; Modular Scheduler Core and Completely Fair Scheduler &#x5b;CFS&#x5d;"</a>. <i>linux-kernel</i> (Mailing list).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%26%23x5b%3Bpatch%26%23x5d%3B+Modular+Scheduler+Core+and+Completely+Fair+Scheduler+%26%23x5b%3BCFS%26%23x5d%3B&amp;rft.date=2010-11-15&amp;rft.aulast=Torvalds&amp;rft.aufirst=Linus&amp;rft_id=http%3A%2F%2Fmarc.info%2F%3Fl%3Dlinux-kernel%26m%3D128979084506774%26w%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web">Lozi, Jean-Pierre; Lepers, Baptiste; Funston, Justin; Gaud, Fabien; Quema, Vivian; Fedorova, Alexandra. <a rel="nofollow" class="external text" href="http://www.ece.ubc.ca/~sasha/papers/eurosys16-final29.pdf">"The Linux Scheduler: A Decade of Wasted Cores"</a> <span class="cs1-format">(PDF)</span>. EuroSys 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">15 June</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Linux+Scheduler%3A+A+Decade+of+Wasted+Cores&amp;rft.pub=EuroSys+2016&amp;rft.aulast=Lozi&amp;rft.aufirst=Jean-Pierre&amp;rft.au=Lepers%2C+Baptiste&amp;rft.au=Funston%2C+Justin&amp;rft.au=Gaud%2C+Fabien&amp;rft.au=Quema%2C+Vivian&amp;rft.au=Fedorova%2C+Alexandra&amp;rft_id=http%3A%2F%2Fwww.ece.ubc.ca%2F~sasha%2Fpapers%2Feurosys16-final29.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit&amp;section=7" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web">Corbet, Jonathan (2007-04-17). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/230574/">"Schedulers: The Plot Thickens"</a>. <a href="/wiki/LWN.net" title="LWN.net">LWN.net</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Schedulers%3A+The+Plot+Thickens&amp;rft.pub=LWN.net&amp;rft.date=2007-04-17&amp;rft.aulast=Corbet&amp;rft.aufirst=Jonathan&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F230574%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Corbet, J. (2007-07-02). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/240474/">"CFS Group Scheduling"</a>. LWN.net.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=CFS+Group+Scheduling&amp;rft.pub=LWN.net&amp;rft.date=2007-07-02&amp;rft.aulast=Corbet&amp;rft.aufirst=J.&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F240474%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Corbet, J. (2007-10-16). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/254711/">"Fair user scheduling and other scheduler patches"</a>. LWN.net.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Fair+user+scheduling+and+other+scheduler+patches&amp;rft.pub=LWN.net&amp;rft.date=2007-10-16&amp;rft.aulast=Corbet&amp;rft.aufirst=J.&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F254711%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Corbet, J. (2010-11-17). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/415740/">"TTY-based group scheduling"</a>. LWN.net.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=TTY-based+group+scheduling&amp;rft.pub=LWN.net&amp;rft.date=2010-11-17&amp;rft.aulast=Corbet&amp;rft.aufirst=J.&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F415740%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Corbet, J. (2010-12-06). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/418884/">"Group scheduling and alternatives"</a>. LWN.net.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Group+scheduling+and+alternatives&amp;rft.pub=LWN.net&amp;rft.date=2010-12-06&amp;rft.aulast=Corbet&amp;rft.aufirst=J.&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F418884%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Singh Pabla, Chandandeep (2009-08-01). <a rel="nofollow" class="external text" href="http://www.linuxjournal.com/magazine/completely-fair-scheduler">"Completely Fair Scheduler"</a>. <a href="/wiki/Linuxjournal.com" class="mw-redirect" title="Linuxjournal.com">linuxjournal.com</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Completely+Fair+Scheduler&amp;rft.pub=linuxjournal.com&amp;rft.date=2009-08-01&amp;rft.aulast=Singh+Pabla&amp;rft.aufirst=Chandandeep&amp;rft_id=http%3A%2F%2Fwww.linuxjournal.com%2Fmagazine%2Fcompletely-fair-scheduler&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Jones, Tim (2009-12-15). <a rel="nofollow" class="external text" href="https://developer.ibm.com/tutorials/l-completely-fair-scheduler/">"Inside the Linux 2.6 Completely Fair Scheduler"</a>. <a href="/wiki/Ibm" class="mw-redirect" title="Ibm">ibm</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Inside+the+Linux+2.6+Completely+Fair+Scheduler&amp;rft.pub=ibm&amp;rft.date=2009-12-15&amp;rft.aulast=Jones&amp;rft.aufirst=Tim&amp;rft_id=https%3A%2F%2Fdeveloper.ibm.com%2Ftutorials%2Fl-completely-fair-scheduler%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation web">Lozi, Jean-Pierre (2016-04-21). <a rel="nofollow" class="external text" href="https://www.ece.ubc.ca/~sasha/papers/eurosys16-final29.pdf">"The Linux Scheduler: a Decade of Wasted Cores"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">ACM</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Linux+Scheduler%3A+a+Decade+of+Wasted+Cores&amp;rft.pub=ACM&amp;rft.date=2016-04-21&amp;rft.aulast=Lozi&amp;rft.aufirst=Jean-Pierre&amp;rft_id=https%3A%2F%2Fwww.ece.ubc.ca%2F~sasha%2Fpapers%2Feurosys16-final29.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACompletely+Fair+Scheduler" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Linux_kernel" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux_kernel" title="Template talk:Linux kernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux_kernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux_kernel" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organization</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Kernel" scope="row" class="navbox-group" style="width:1%">Kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO disputes</a></li>
+<li><a href="/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="/wiki/GNU_General_Public_License#Version_2" title="GNU General Public License">GNU GPL v2</a></li>
+<li><a href="/wiki/Menuconfig" title="Menuconfig">menuconfig</a></li>
+<li><a href="/wiki/List_of_Linux-supported_computer_architectures" title="List of Linux-supported computer architectures">Supported computer architectures</a></li>
+<li><a href="/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">Kernel names</a></li>
+<li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Support</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Developers
+<ul><li><i><a href="/wiki/The_Linux_Programming_Interface" title="The Linux Programming Interface">The Linux Programming Interface</a></i></li>
+<li><a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a></li>
+<li><a href="/wiki/Linux_kernel_mailing_list" title="Linux kernel mailing list">LKML</a></li>
+<li><a href="/wiki/Linux_conference" class="mw-redirect" title="Linux conference">Linux conferences</a></li></ul></li>
+<li>Users
+<ul><li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Technical</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Debugging</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CRIU" title="CRIU">CRIU</a></li>
+<li><a href="/wiki/Ftrace" title="Ftrace">ftrace</a></li>
+<li><a href="/wiki/Kdump_(Linux)" title="Kdump (Linux)">kdump</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+<li><a href="/wiki/Berkeley_Packet_Filter" title="Berkeley Packet Filter">BPF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_startup_process" title="Linux startup process">Startup</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="/wiki/System.map" title="System.map">System.map</a></li>
+<li><a href="/wiki/Dracut_(software)" title="Dracut (software)">dracut</a></li>
+<li><a href="/wiki/Initrd" class="mw-redirect" title="Initrd">initrd</a></li>
+<li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">ABIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a></li>
+<li><a href="/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Of<br /><a href="/wiki/User_space" title="User space">userspace</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtual_file_system" title="Virtual file system">FS</a>,<br /><a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemons</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Devfs" class="mw-redirect" title="Devfs">devfs</a></li>
+<li><a href="/wiki/Devpts" title="Devpts">devpts</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Systemd" title="Systemd">systemd</a>
+<ul><li><a href="/wiki/Udev" title="Udev">udev</a></li></ul></li>
+<li><a href="/wiki/Kmscon" title="Kmscon">Kmscon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Wrapper_library" title="Wrapper library">Wrapper<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_standard_library" title="C standard library">C standard library</a>
+<ul><li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li></ul></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">libcgroup</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a></li>
+<li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">libevdev</a></li>
+<li><a href="/wiki/Libusb" title="Libusb">libusb</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Of<br />kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#SCI" title="Linux kernel interfaces">System Call<br />Interface</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/POSIX" title="POSIX">POSIX</a>
+<ul><li><a href="/wiki/Ioctl" title="Ioctl">ioctl</a></li>
+<li><a href="/wiki/Select_(Unix)" title="Select (Unix)">select</a></li>
+<li><a href="/wiki/Open_(system_call)" title="Open (system call)">open</a></li>
+<li><a href="/wiki/Read_(system_call)" title="Read (system call)">read</a></li>
+<li><a href="/wiki/Close_(system_call)" title="Close (system call)">close</a></li>
+<li><a href="/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a></li>
+<li>…</li></ul></li>
+<li>Linux-only
+<ul><li><a href="/wiki/Futex" title="Futex">futex</a></li>
+<li><a href="/wiki/Epoll" title="Epoll">epoll</a></li>
+<li><a href="/wiki/Splice_(system_call)" title="Splice (system call)">splice</a></li>
+<li><a href="/wiki/Dnotify" title="Dnotify">dnotify</a></li>
+<li><a href="/wiki/Inotify" title="Inotify">inotify</a></li>
+<li><a href="/wiki/Readahead" title="Readahead">readahead</a></li>
+<li>…</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#In–kernel_APIs" title="Linux kernel interfaces">In-kernel</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="/wiki/Crypto_API_(Linux)" title="Crypto API (Linux)">Crypto API</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/Kernfs_(Linux)" title="Kernfs (Linux)">kernfs</a></li>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/New_API" title="New API">New API</a></li>
+<li><a href="/wiki/Read-copy-update" title="Read-copy-update">RCU</a></li>
+<li><a href="/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="/wiki/BlueZ" class="mw-redirect" title="BlueZ">BlueZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/EDAC_(Linux)" class="mw-redirect" title="EDAC (Linux)">EDAC</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/LIO_(SCSI_target)" title="LIO (SCSI target)">LIO</a></li>
+<li><a href="/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a href="/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux)">LVM</a></li>
+<li><a href="/wiki/KMS_driver" class="mw-redirect" title="KMS driver">KMS driver</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="/wiki/Netlink" title="Netlink">Netlink</a></li>
+<li><a href="/wiki/Nftables" title="Nftables">nftables</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Perf_(Linux)" title="Perf (Linux)">perf</a></li>
+<li><a href="/wiki/SLUB_(software)" title="SLUB (software)">SLUB</a></li>
+<li><a href="/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="/wiki/Zswap" title="Zswap">zswap</a></li></ul>
+<ul><li><a href="/wiki/Scheduling_(computing)#Linux" title="Scheduling (computing)">Process and I/O schedulers</a>:</li>
+<li><a href="/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a></li>
+<li><a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a class="mw-selflink selflink">Completely Fair Scheduler</a> (CFQ)</li>
+<li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/Noop_scheduler" title="Noop scheduler">Noop scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<ul><li><a href="/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a>
+<ul><li><a href="/wiki/PaX" title="PaX">PaX</a></li></ul></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="/wiki/Smack_(software)" title="Smack (software)">Smack</a></li>
+<li><a href="/wiki/Tomoyo_Linux" title="Tomoyo Linux">Tomoyo Linux</a></li>
+<li><a href="/wiki/Linux_PAM" title="Linux PAM">Linux PAM</a></li></ul>
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device drivers</a>
+<ul><li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">802.11</a></li>
+<li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">graphics</a></li></ul></li>
+<li><a href="/wiki/Raw_device" title="Raw device">Raw device</a></li></ul>
+<ul><li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li>
+<li><a href="/wiki/KernelCare" title="KernelCare">KernelCare</a></li>
+<li><a href="/wiki/Kexec" title="Kexec">kexec</a></li>
+<li><a href="/wiki/KGraft" title="KGraft">kGraft</a></li>
+<li><a href="/wiki/Kpatch" title="Kpatch">kpatch</a></li>
+<li><a href="/wiki/Ksplice" title="Ksplice">Ksplice</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Mainline</a>
+<ul><li><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li></ul></li>
+<li><a href="/wiki/High-performance_computing" class="mw-redirect" title="High-performance computing">High-performance computing</a>
+<ul><li><a href="/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="/wiki/Slurm_Workload_Manager" title="Slurm Workload Manager">SLURM</a></li></ul></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul><li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li></ul></li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li></ul></li></ul>
+ </div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Virtualization" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul><li><a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul></li>
+<li><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level virtualization</a>
+<ul><li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li></ul></li>
+<li>Other
+<ul><li><a href="/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Rangeof_use" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range<br />of use</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul><li><a href="/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="/wiki/Thinstation" title="Thinstation">Thinstation</a></li></ul></li>
+<li>Server:
+<ul><li><a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME-LYCE</a></li></ul></li>
+<li><a href="/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Adopters</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel" title="Category:Linux kernel">Category</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Linux_kernel" class="extiw" title="commons:Linux kernel">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="https://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" decoding="async" title="Wikiversity page" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800" /> <b><a href="https://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1268
+Cached time: 20200306205225
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.404 seconds
+Real time usage: 0.542 seconds
+Preprocessor visited node count: 1847/1000000
+Post‐expand include size: 104113/2097152 bytes
+Template argument size: 2923/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 7/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 43318/5000000 bytes
+Number of Wikibase entities loaded: 3/400
+Lua time usage: 0.178/10.000 seconds
+Lua memory usage: 6.43 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  428.827      1 -total
+ 35.60%  152.659      1 Template:Reflist
+ 20.85%   89.393      1 Template:Infobox_software
+ 18.33%   78.617      4 Template:Cite_mailing_list
+ 18.15%   77.850      1 Template:Infobox
+ 14.43%   61.868      8 Template:Navbox
+ 11.64%   49.928      1 Template:Confusing
+ 10.68%   45.816      2 Template:Clarify
+ 10.16%   43.583      1 Template:Linux_kernel
+ 10.07%   43.191      1 Template:Ambox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:12414832-0!canonical and timestamp 20200306205225 and revision id 938407350
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Completely_Fair_Scheduler&amp;oldid=938407350">https://en.wikipedia.org/w/index.php?title=Completely_Fair_Scheduler&amp;oldid=938407350</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Linux_kernel_process_schedulers" title="Category:Linux kernel process schedulers">Linux kernel process schedulers</a></li><li><a href="/wiki/Category:Free_software" title="Category:Free software">Free software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Pages_using_Infobox_software_with_unknown_parameters" title="Category:Pages using Infobox software with unknown parameters">Pages using Infobox software with unknown parameters</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_October_2009" title="Category:Wikipedia articles needing clarification from October 2009">Wikipedia articles needing clarification from October 2009</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_needing_clarification" title="Category:All Wikipedia articles needing clarification">All Wikipedia articles needing clarification</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2009" title="Category:Wikipedia articles needing clarification from March 2009">Wikipedia articles needing clarification from March 2009</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_April_2010" title="Category:Wikipedia articles needing clarification from April 2010">Wikipedia articles needing clarification from April 2010</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Completely+Fair+Scheduler" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Completely+Fair+Scheduler" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Completely_Fair_Scheduler" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Completely_Fair_Scheduler" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Completely_Fair_Scheduler">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Completely_Fair_Scheduler" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Completely_Fair_Scheduler" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;oldid=938407350" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q29186" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Completely_Fair_Scheduler&amp;id=938407350&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Completely+Fair+Scheduler">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Completely+Fair+Scheduler&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Completely_Fair_Scheduler&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Planificador_Completamente_Justo" title="Planificador Completamente Justo – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B2%D9%85%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF_%DA%A9%D8%A7%D9%85%D9%84%D8%A7%D9%8B_%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D9%86%D9%87" title="زمان‌بند کاملاً عادلانه – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%94%8C%EB%A6%AC%ED%8B%80%EB%A6%AC_%ED%8E%98%EC%96%B4_%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC" title="컴플리틀리 페어 스케줄러 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%AE%8C%E5%85%A8%E5%85%AC%E5%B9%B3%E6%8E%92%E7%A8%8B%E5%99%A8" title="完全公平排程器 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q29186#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 31 January 2020, at 00:22<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Completely_Fair_Scheduler&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.404","walltime":"0.542","ppvisitednodes":{"value":1847,"limit":1000000},"postexpandincludesize":{"value":104113,"limit":2097152},"templateargumentsize":{"value":2923,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":7,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":43318,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00%  428.827      1 -total"," 35.60%  152.659      1 Template:Reflist"," 20.85%   89.393      1 Template:Infobox_software"," 18.33%   78.617      4 Template:Cite_mailing_list"," 18.15%   77.850      1 Template:Infobox"," 14.43%   61.868      8 Template:Navbox"," 11.64%   49.928      1 Template:Confusing"," 10.68%   45.816      2 Template:Clarify"," 10.16%   43.583      1 Template:Linux_kernel"," 10.07%   43.191      1 Template:Ambox"]},"scribunto":{"limitreport-timeusage":{"value":"0.178","limit":"10.000"},"limitreport-memusage":{"value":6746741,"limit":52428800}},"cachereport":{"origin":"mw1268","timestamp":"20200306205225","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Completely Fair Scheduler","url":"https:\/\/en.wikipedia.org\/wiki\/Completely_Fair_Scheduler","sameAs":"http:\/\/www.wikidata.org\/entity\/Q29186","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q29186","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-07-24T04:45:57Z","dateModified":"2020-01-31T00:22:54Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/6\/65\/Simplified_Structure_of_the_Linux_Kernel.svg","headline":"Linux process scheduler"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":94,"wgHostname":"mw1266"});});</script></body></html>

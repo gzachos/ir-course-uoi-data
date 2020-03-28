@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>C preprocessor - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XnfdQApAICMAAIN8W5UAAADR","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"C_preprocessor","wgTitle":"C preprocessor","wgCurRevisionId":941597835,"wgRevisionId":941597835,"wgArticleId":231835,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: missing periodical","Use dmy dates from July 2013","Wikipedia articles with style issues from February 2013","All articles with style issues","Articles lacking in-text citations from March 2015","All articles lacking in-text citations","Articles with multiple maintenance issues",
+"All articles with unsourced statements","Articles with unsourced statements from February 2020","Wikipedia articles needing clarification from March 2016","C (programming language)","Transformation languages","Macro programming languages"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"C_preprocessor","wgRelevantArticleId":231835,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q856846","wgCentralAuthMobileDomain":!1,
+"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init",
+"ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=C_preprocessor&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=C_preprocessor&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/C_preprocessor"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-C_preprocessor rootpage-C_preprocessor skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">C preprocessor</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<table class="box-Multiple_issues plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span"><div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="https://en.wikipedia.org/w/index.php?title=C_preprocessor&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="/wiki/Talk:C_preprocessor" title="Talk:C preprocessor">talk page</a></b>. <small><i>(<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+      <table class="box-Manual plainlinks metadata ambox ambox-style" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>is written like <a href="/wiki/Wikipedia:What_Wikipedia_is_not#GUIDE" title="Wikipedia:What Wikipedia is not">a manual or guidebook</a>.</b><span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=C_preprocessor&amp;action=edit">rewrite this article</a> from a descriptive, <a href="/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a>, and remove advice or instruction.</span>  <small class="date-container"><i>(<span class="date">February 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">March 2015</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+    </div>
+</div><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p>The <b>C preprocessor</b> or <b>cpp</b> is the <a href="/wiki/Preprocessor" title="Preprocessor">macro preprocessor</a> for the <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> computer <a href="/wiki/Programming_language" title="Programming language">programming languages</a>. The preprocessor provides the ability for the inclusion of <a href="/wiki/Header_files" class="mw-redirect" title="Header files">header files</a>, <a href="/wiki/Macro_(computer_science)" title="Macro (computer science)">macro</a> expansions, <a href="/wiki/Conditional_compilation" title="Conditional compilation">conditional compilation</a>, and line control.
+</p><p>In many C implementations, it is a separate <a href="/wiki/Computer_program" title="Computer program">program</a> invoked by the <a href="/wiki/Compiler" title="Compiler">compiler</a> as the first part of <a href="/wiki/Translator_(computing)" title="Translator (computing)">translation</a>.
+</p><p>The language of preprocessor <a href="/wiki/Directive_(programming)" title="Directive (programming)">directives</a> is only weakly related to the grammar of C, and so is sometimes used to process other kinds of <a href="/wiki/Text_files" class="mw-redirect" title="Text files">text files</a>.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2020)">citation needed</span></a></i>&#93;</sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Phases"><span class="tocnumber">1</span> <span class="toctext">Phases</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Including_files"><span class="tocnumber">1.1</span> <span class="toctext">Including files</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Conditional_compilation"><span class="tocnumber">1.2</span> <span class="toctext">Conditional compilation</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Macro_definition_and_expansion"><span class="tocnumber">1.3</span> <span class="toctext">Macro definition and expansion</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Order_of_expansion"><span class="tocnumber">1.3.1</span> <span class="toctext">Order of expansion</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-6"><a href="#Special_macros_and_directives"><span class="tocnumber">1.4</span> <span class="toctext">Special macros and directives</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Token_stringification"><span class="tocnumber">1.4.1</span> <span class="toctext">Token stringification</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Token_concatenation"><span class="tocnumber">1.4.2</span> <span class="toctext">Token concatenation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-9"><a href="#User-defined_compilation_errors"><span class="tocnumber">1.5</span> <span class="toctext">User-defined compilation errors</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Implementations"><span class="tocnumber">2</span> <span class="toctext">Implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Compiler-specific_preprocessor_features"><span class="tocnumber">2.1</span> <span class="toctext">Compiler-specific preprocessor features</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Other_uses"><span class="tocnumber">3</span> <span class="toctext">Other uses</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Phases">Phases</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=1" title="Edit section: Phases">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Preprocessing is defined by the first four (of eight) <i>phases of translation</i> specified in the C Standard.
+</p>
+<ol><li>Trigraph replacement: The preprocessor replaces <a href="/wiki/C_trigraph" class="mw-redirect" title="C trigraph">trigraph sequences</a> with the characters they represent.</li>
+<li>Line splicing: Physical source lines that are continued with <a href="/wiki/Escape_character" title="Escape character">escaped</a> <a href="/wiki/Newline" title="Newline">newline</a> sequences are <i>spliced</i> to form logical lines.</li>
+<li>Tokenization: The preprocessor breaks the result into <i>preprocessing tokens</i> and <a href="/wiki/Whitespace_character" title="Whitespace character">whitespace</a>.  It replaces comments with whitespace.</li>
+<li>Macro expansion and directive handling: Preprocessing directive lines, including file inclusion and conditional compilation, are executed.  The preprocessor simultaneously expands macros and, in the 1999 version of the C standard,<sup class="noprint Inline-Template" style="margin-left:0.1em; white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify"><span title="&#39;&#39;In&#39;&#39; that version, or &#39;&#39;since&#39;&#39; that version? (March 2016)">clarification needed</span></a></i>&#93;</sup> handles <code>_Pragma</code> operators.</li></ol>
+<h3><span class="mw-headline" id="Including_files">Including files</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=2" title="Edit section: Including files">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>One of the most common uses of the preprocessor is to include another file:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>The preprocessor replaces the line <code>#include &lt;stdio.h&gt;</code> with the textual content of the file 'stdio.h', which declares the <code>printf()</code> <a href="/wiki/Subroutine" title="Subroutine">function</a> among other things.
+</p><p>This can also be written using double quotes, e.g. <code>#include "stdio.h"</code>. If the filename is enclosed within angle brackets, the file is searched for in the standard compiler include paths. If the filename is enclosed within double quotes, the search path is expanded to include the current source directory. C compilers and programming environments all have a facility which allows the programmer to define where include files can be found. This can be introduced through a command line flag, which can be parameterized using a <a href="/wiki/Make_(software)" title="Make (software)">makefile</a>, so that a different set of include files can be swapped in for different operating systems, for instance.
+</p><p>By convention, include files are named with either a <i>.h</i> or <i>.hpp</i> extension. However, there is no requirement that this be observed. Files with a <i>.def</i> extension may denote files designed to be included multiple times, each time expanding the same repetitive content; <code>#include "icon.xbm"</code> is likely to refer to an <a href="/wiki/X_BitMap" title="X BitMap">XBM</a> image file (which is at the same time a C source file).
+</p><p><code>#include</code> often compels the use of <a href="/wiki/Include_guard" title="Include guard"><code>#include</code> guards</a> or <a href="/wiki/Pragma_once" title="Pragma once"><code>#pragma once</code></a> to prevent double inclusion.
+</p>
+<h3><span class="mw-headline" id="Conditional_compilation">Conditional compilation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=3" title="Edit section: Conditional compilation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="/wiki/If_else#If.E2.80.93then.28.E2.80.93else.29" class="mw-redirect" title="If else">if-else</a> directives <code>#if</code>, <code>#ifdef</code>, <code>#ifndef</code>, <code>#else</code>, <code>#elif</code> and <code>#endif</code> can be used for <a href="/wiki/Conditional_compilation" title="Conditional compilation">conditional compilation</a>.
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#if VERBOSE &gt;= 2</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;trace message&quot;</span><span class="p">);</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>Most compilers targeting <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Microsoft Windows</a> implicitly define <code>_WIN32</code>.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> This allows code, including preprocessor commands, to compile only when targeting Windows systems. A few compilers define <code>WIN32</code> instead. For such compilers that do not implicitly define the <code>_WIN32</code> macro, it can be specified on the compiler's command line, using <code>-D_WIN32</code>.
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#ifdef __unix__ </span><span class="cm">/* __unix__ is usually defined by compilers targeting Unix systems */</span><span class="cp"></span>
+<span class="cp"># include &lt;unistd.h&gt;</span>
+<span class="cp">#elif defined _WIN32 </span><span class="cm">/* _WIN32 is usually defined by compilers targeting 32 or 64 bit Windows systems */</span><span class="cp"></span>
+<span class="cp"># include &lt;windows.h&gt;</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>The example code tests if a macro <code>__unix__</code> is defined. If it is, the file <code>&lt;unistd.h&gt;</code> is then included. Otherwise, it tests if a macro <code>_WIN32</code> is defined instead. If it is, the file <code>&lt;windows.h&gt;</code> is then included.
+</p><p>A more complex <code>#if</code> example can use operators, for example something like:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#if !(defined __LP64__ || defined __LLP64__) || defined _WIN32 &amp;&amp; !defined _WIN64</span>
+	<span class="c1">// we are compiling for a 32-bit system</span>
+<span class="cp">#else</span>
+	<span class="c1">// we are compiling for a 64-bit system</span>
+<span class="cp">#endif</span>
+</pre></div>
+<p>Translation can also be caused to fail by using the <code>#error</code> directive:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#if RUBY_VERSION == 190</span>
+<span class="cp"># error 1.9.0 not supported</span>
+<span class="cp">#endif</span>
+</pre></div>
+<h3><span class="mw-headline" id="Macro_definition_and_expansion">Macro definition and expansion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=4" title="Edit section: Macro definition and expansion">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There are two types of macros, <i>object-like</i> and <i>function-like</i>. Object-like macros do not take parameters; function-like macros do (although the list of parameters may be empty). The generic syntax for declaring an identifier as a macro of each type is, respectively:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define &lt;identifier&gt; &lt;replacement token list&gt;                    </span><span class="c1">// object-like macro</span>
+<span class="cp">#define &lt;identifier&gt;(&lt;parameter list&gt;) &lt;replacement token list&gt;  </span><span class="c1">// function-like macro, note parameters</span>
+</pre></div>
+<p>The <i>function-like</i> macro declaration must not have any whitespace between the identifier and the first, opening, parenthesis.  If whitespace is present, the macro will be interpreted as object-like with everything starting from the first parenthesis added to the token list.
+</p><p>A macro definition can be removed with <code>#undef</code>:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#undef &lt;identifier&gt;                                              </span><span class="c1">// delete the macro</span>
+</pre></div>
+<p>Whenever the identifier appears in the source code it is replaced with the replacement token list, which can be empty.  For an identifier declared to be a function-like macro, it is only replaced when the following token is also a left parenthesis that begins the argument list of the macro invocation.  The exact procedure followed for expansion of function-like macros with arguments is subtle.
+</p><p>Object-like macros were conventionally used as part of good programming practice to create symbolic names for constants, e.g.,
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define PI 3.14159</span>
+</pre></div>
+<p>instead of <a href="/wiki/Hard_coding" title="Hard coding">hard-coding</a> numbers throughout the code. An alternative in both C and C++, especially in situations in which a pointer to the number is required, is to apply the <code>const</code> qualifier to a global variable. This causes the value to be stored in memory, instead of being substituted by the preprocessor.
+</p><p>An example of a function-like macro is:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define RADTODEG(x) ((x) * 57.29578)</span>
+</pre></div>
+<p>This defines a <a href="/wiki/Radian" title="Radian">radians</a>-to-degrees conversion which can be inserted in the code where required, i.e., <code>RADTODEG(34)</code>. This is expanded in-place, so that repeated multiplication by the constant is not shown throughout the code. The macro here is written as all uppercase to emphasize that it is a macro, not a compiled function.
+</p><p>The second <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="n">x</span></code> is enclosed in its own pair of parentheses to avoid the possibility of incorrect <a href="/wiki/Order_of_operations" title="Order of operations">order of operations</a> when it is an expression instead of a single value. For example, the expression <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="n">RADTODEG</span><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span></code> expands correctly as <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="p">((</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">57.29578</span><span class="p">)</span></code>; without parentheses, <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="p">(</span><span class="n">r</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="mf">57.29578</span><span class="p">)</span></code> gives precedence to the multiplication.
+</p><p>Similarly, the outer pair of parentheses maintain correct order of operation. For example, <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="mi">1</span> <span class="o">/</span> <span class="n">RADTODEG</span><span class="p">(</span><span class="n">r</span><span class="p">)</span></code> expands to <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="mi">1</span> <span class="o">/</span> <span class="p">((</span><span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="mf">57.29578</span><span class="p">)</span></code>; without parentheses, <code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="mf">57.29578</span></code> gives precedence to the division.
+</p>
+<h4><span class="mw-headline" id="Order_of_expansion">Order of expansion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=5" title="Edit section: Order of expansion">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><i>function-like</i> macro expansion occurs in the following stages:
+</p>
+<ol><li>Stringification operations are replaced with the textual representation of their argument's replacement list (without performing expansion).</li>
+<li>Parameters are replaced with their replacement list (without performing expansion).</li>
+<li>Concatenation operations are replaced with the concatenated result of the two operands (without expanding the resulting token).</li>
+<li>Tokens originating from parameters are expanded.</li>
+<li>The resulting tokens are expanded as normal.</li></ol>
+<p>This may produce surprising results:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define HE HI</span>
+<span class="cp">#define LLO _THERE</span>
+<span class="cp">#define HELLO &quot;HI THERE&quot;</span>
+<span class="cp">#define CAT(a,b) a##b</span>
+<span class="cp">#define XCAT(a,b) CAT(a,b)</span>
+<span class="cp">#define CALL(fn) fn(HE,LLO)</span>
+<span class="n">CAT</span><span class="p">(</span><span class="n">HE</span><span class="p">,</span><span class="n">LLO</span><span class="p">)</span> <span class="c1">// &quot;HI THERE&quot;, because concatenation occurs before normal expansion</span>
+<span class="n">XCAT</span><span class="p">(</span><span class="n">HE</span><span class="p">,</span><span class="n">LLO</span><span class="p">)</span> <span class="c1">// HI_THERE, because the tokens originating from parameters (&quot;HE&quot; and &quot;LLO&quot;) are expanded first</span>
+<span class="n">CALL</span><span class="p">(</span><span class="n">CAT</span><span class="p">)</span> <span class="c1">// &quot;HI THERE&quot;, because parameters are expanded first</span>
+</pre></div>
+<h3><span class="mw-headline" id="Special_macros_and_directives">Special macros and directives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=6" title="Edit section: Special macros and directives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Certain symbols are required to be defined by an implementation during preprocessing. These include <code>__FILE__</code> and <code>__LINE__</code>, predefined by the preprocessor itself, which expand into the current file and line number. For instance the following:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// debugging macros so we can pin down message origin at a glance</span>
+<span class="c1">// is bad</span>
+<span class="cp">#define WHERESTR  &quot;[file %s, line %d]: &quot;</span>
+<span class="cp">#define WHEREARG  __FILE__, __LINE__</span>
+<span class="cp">#define DEBUGPRINT2(...)       fprintf(stderr, __VA_ARGS__)</span>
+<span class="cp">#define DEBUGPRINT(_fmt, ...)  DEBUGPRINT2(WHERESTR _fmt, WHEREARG, __VA_ARGS__)</span>
+<span class="c1">// OR</span>
+<span class="c1">// is good</span>
+<span class="cp">#define DEBUGPRINT(_fmt, ...)  fprintf(stderr, &quot;[file %s, line %d]: &quot; _fmt, __FILE__, __LINE__, __VA_ARGS__)</span>
+
+  <span class="n">DEBUGPRINT</span><span class="p">(</span><span class="s">&quot;hey, x=%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</pre></div>
+<p>prints the value of <code>x</code>, preceded by the file and line number to the error stream, allowing quick access to which line the message was produced on. Note that the <code>WHERESTR</code> argument is concatenated with the string following it. The values of <code>__FILE__</code> and <code>__LINE__</code> can be manipulated with the <code>#line</code> directive. The <code>#line</code> directive determines the line number and the file name of the line below. E.g.:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#line 314 &quot;pi.c&quot;</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;line=%d file=%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">__LINE__</span><span class="p">,</span> <span class="n">__FILE__</span><span class="p">);</span>
+</pre></div>
+<p>generates the printf function:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;line=%d file=%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="mi">314</span><span class="p">,</span> <span class="s">&quot;pi.c&quot;</span><span class="p">);</span>
+</pre></div>
+<p>Source code <a href="/wiki/Debugger" title="Debugger">debuggers</a> refer also to the source position defined with <code>__FILE__</code> and <code>__LINE__</code>.
+This allows source code debugging, when C is used as target language of a compiler, for a totally different language.
+The first <a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C Standard</a> specified that the macro <code>__STDC__</code> be defined to 1 if the implementation conforms to the ISO Standard and 0 otherwise, and the macro <code>__STDC_VERSION__</code> defined as a numeric literal specifying the version of the Standard supported by the implementation. Standard C++ compilers support the <code>__cplusplus</code> macro. Compilers running in non-standard mode must not set these macros, or must define others to signal the differences.
+</p><p>Other Standard macros include <code>__DATE__</code>, the current date, and <code>__TIME__</code>, the current time.
+</p><p>The second edition of the C Standard, <a href="/wiki/C99" title="C99">C99</a>, added support for <code>__func__</code>, which contains the name of the function definition within which it is contained, but because the preprocessor is <a href="https://en.wiktionary.org/wiki/agnostic" class="extiw" title="wikt:agnostic">agnostic</a> to the grammar of C, this must be done in the compiler itself using a variable local to the function.
+</p><p>Macros that can take a varying number of arguments (<a href="/wiki/Variadic_macro" title="Variadic macro">variadic macros</a>) are not allowed in C89, but were introduced by a number of compilers and standardised in <a href="/wiki/C99" title="C99">C99</a>.  Variadic macros are particularly useful when writing wrappers to functions taking a variable number of parameters, such as <code><a href="/wiki/Printf" class="mw-redirect" title="Printf">printf</a></code>, for example when logging warnings and errors.
+</p><p>One little-known usage pattern of the C preprocessor is known as <a href="/wiki/X_Macro" title="X Macro">X-Macros</a>.<sup id="cite_ref-X_macros_2-0" class="reference"><a href="#cite_note-X_macros-2">&#91;2&#93;</a></sup><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> An X-Macro is a <a href="/wiki/Header_file" class="mw-redirect" title="Header file">header file</a>.  Commonly these use the extension ".def" instead of the traditional ".h". This file contains a list of similar macro calls, which can be referred to as "component macros".  The include file is then referenced repeatedly.
+</p><p>Many compilers define additional, non-standard macros, although these are often poorly documented.  A common reference for these macros is the <a rel="nofollow" class="external text" href="http://predef.sourceforge.net/">Pre-defined C/C++ Compiler Macros project</a>, which lists "various pre-defined compiler macros that can be used to identify standards, compilers, operating systems, hardware architectures, and even basic run-time libraries at compile-time".
+</p>
+<h4><span class="mw-headline" id="Token_stringification">Token stringification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=7" title="Edit section: Token stringification">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The # operator (known as the "Stringification Operator") converts a token into a C <a href="/wiki/String_literal" title="String literal">string literal</a>, escaping any quotes or backslashes appropriately.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define str(s) #s</span>
+
+<span class="n">str</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="s">&quot;foo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;)</span> <span class="c1">// outputs &quot;p = \&quot;foo\\n\&quot;;&quot;</span>
+<span class="n">str</span><span class="p">(</span><span class="err">\</span><span class="n">n</span><span class="p">)</span>           <span class="c1">// outputs &quot;\n&quot;</span>
+</pre></div>
+<p>If you want to stringify the expansion of a macro argument, you have to use two levels of macros:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define xstr(s) str(s)</span>
+<span class="cp">#define str(s) #s</span>
+<span class="cp">#define foo 4</span>
+
+<span class="n">str</span> <span class="p">(</span><span class="n">foo</span><span class="p">)</span>  <span class="c1">// outputs &quot;foo&quot;</span>
+<span class="n">xstr</span> <span class="p">(</span><span class="n">foo</span><span class="p">)</span> <span class="c1">// outputs &quot;4&quot;</span>
+</pre></div>
+<p>You cannot combine a macro argument with additional text and stringify it all together. You can however write a series of adjacent string constants and stringified arguments: the C compiler will then combine all the adjacent string constants into one long string.
+</p>
+<h4><span class="mw-headline" id="Token_concatenation">Token concatenation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=8" title="Edit section: Token concatenation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The ## operator (known as the "Token Pasting Operator") concatenates two tokens into one token.
+</p><p>Example:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#define DECLARE_STRUCT_TYPE(name) typedef struct name##_s name##_t</span>
+
+<span class="n">DECLARE_STRUCT_TYPE</span><span class="p">(</span><span class="n">g_object</span><span class="p">);</span> <span class="c1">// Outputs: typedef struct g_object_s g_object_t;</span>
+</pre></div>
+<h3><span class="mw-headline" id="User-defined_compilation_errors">User-defined compilation errors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=9" title="Edit section: User-defined compilation errors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code>#error</code> directive outputs a message through the error stream.
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>#error &quot;error message&quot;
+</pre></div>
+<h2><span class="mw-headline" id="Implementations">Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=10" title="Edit section: Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>All C, C++ and Objective-C implementations provide a preprocessor, as preprocessing is a required step for those languages, and its behavior is described by official standards for these languages, such as the ISO C standard.
+</p><p>Implementations may provide their own extensions and deviations, and vary in their degree of compliance with written standards.  Their exact behavior may depend on command-line flags supplied on invocation.  For instance, the GNU C preprocessor can be made more standards compliant by supplying certain flags.<sup id="cite_ref-gnu-cpp-overview_5-0" class="reference"><a href="#cite_note-gnu-cpp-overview-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Compiler-specific_preprocessor_features">Compiler-specific preprocessor features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=11" title="Edit section: Compiler-specific preprocessor features">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <code>#pragma</code> directive is a <a href="/wiki/Compiler_directive" class="mw-redirect" title="Compiler directive">compiler-specific directive</a>, which compiler vendors may use for their own purposes. For instance, a <code>#pragma</code> is often used to allow suppression of specific error messages, manage heap and stack debugging and so on. A compiler with support for the <a href="/wiki/OpenMP" title="OpenMP">OpenMP</a> parallelization library can automatically parallelize a <code>for</code> loop with <code>#pragma omp parallel for</code>.
+</p><p>C99 introduced a few standard <code>#pragma</code> directives, taking the form <code>#pragma STDC ...</code>, which are used to control the floating-point implementation.
+</p>
+<ul><li>Many implementations do not support trigraphs or do not replace them by default.</li>
+<li>Many implementations (including, e.g., the C compilers by GNU, Intel, Microsoft and IBM) provide a non-standard directive to print out a warning message in the output, but not stop the compilation process. A typical use is to warn about the usage of some old code, which is now <a href="/wiki/Deprecated" class="mw-redirect" title="Deprecated">deprecated</a> and only included for compatibility reasons, e.g.:<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>// GNU, Intel and IBM
+#warning &quot;Do not use ABC, which is deprecated. Use XYZ instead.&quot;
+</pre></div><div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>// Microsoft
+#pragma message(&quot;Do not use ABC, which is deprecated. Use XYZ instead.&quot;)
+</pre></div></li>
+<li>Some <a href="/wiki/Unix" title="Unix">Unix</a> preprocessors traditionally provided "assertions", which have little similarity to <a href="/wiki/Assertion_(computing)" class="mw-redirect" title="Assertion (computing)">assertions</a> used in programming.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup></li>
+<li>GCC provides <code>#include_next</code> for chaining headers of the same name.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a> preprocessors have <code>#import</code>, which is like <code>#include</code> but only includes the file once. A common vendor pragma with a similar functionality in C is <a href="/wiki/Pragma_once" title="Pragma once">#pragma once</a>.</li></ul>
+<h2><span class="mw-headline" id="Other_uses">Other uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=12" title="Edit section: Other uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As the C preprocessor can be invoked separately from the compiler with which it is supplied, it can be used separately, on different languages.  Notable examples include its use in the now-deprecated <a href="/wiki/Imake" title="Imake">imake</a> system and for preprocessing <a href="/wiki/Fortran" title="Fortran">Fortran</a>.  However, such use as a <a href="/wiki/General_purpose_preprocessor" class="mw-redirect" title="General purpose preprocessor">general purpose preprocessor</a> is limited: the input language must be sufficiently C-like.<sup id="cite_ref-gnu-cpp-overview_5-1" class="reference"><a href="#cite_note-gnu-cpp-overview-5">&#91;5&#93;</a></sup>
+For preprocessing Fortran, a more flexible variant of the C preprocessor is preferred, <i>GPP</i>.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+The <a href="/wiki/GNU_Fortran" title="GNU Fortran">GNU Fortran</a> compiler automatically calls cpp before compiling Fortran code if certain file extensions are used.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> Intel offers a Fortran preprocessor, fpp, for use with the <a href="/wiki/Intel_Fortran_Compiler" title="Intel Fortran Compiler">ifort</a> compiler, which has similar capabilities.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup>
+</p><p>GPP also works acceptably with most <a href="/wiki/Assembly_language" title="Assembly language">assembly languages</a>. GNU mentions assembly as one of the target languages among C, C++ and Objective-C in the documentation of its implementation of the preprocessor. This requires that the assembler syntax not conflict with GPP syntax, which means no lines starting with <code>#</code> and that double quotes, which gpp interprets as <a href="/wiki/String_literal" title="String literal">string literals</a> and thus ignores, don't have syntactical meaning other than that.
+</p><p>The C preprocessor is not <a href="/wiki/Turing_completeness" title="Turing completeness">Turing-complete</a>, but it comes very close: recursive computations can be specified, but with a fixed upper bound on the amount of recursion performed.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> However, the C preprocessor is not designed to be, nor does it perform well as, a general-purpose programming language. As the C preprocessor does not have features of some other preprocessors, such as recursive macros, selective expansion according to quoting, and string evaluation in conditionals, it is very limited in comparison to a more general macro processor such as <a href="/wiki/M4_(computer_language)" title="M4 (computer language)">m4</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/C_syntax" title="C syntax">C syntax</a></li>
+<li><a href="/wiki/Make_(software)" title="Make (software)">Make</a></li>
+<li><a href="/wiki/Preprocessor" title="Preprocessor">Preprocessor</a></li>
+<li><a href="/wiki/M4_(computer_language)" title="M4 (computer language)">m4 (computer language)</a></li>
+<li><a href="/wiki/PL/I_preprocessor" title="PL/I preprocessor">PL/I preprocessor</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/b0084kay.aspx">List of predefined ANSI C and Microsoft C++ implementation macros.</a></span>
+</li>
+<li id="cite_note-X_macros-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-X_macros_2-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://liw.iki.fi/liw/texts/cpp-trick.html">Wirzenius, Lars. C "Preprocessor Trick For Implementing Similar Data Types". Retrieved January 9, 2011</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal">Meyers, Randy (May 2001). <a rel="nofollow" class="external text" href="http://www.ddj.com/cpp/184401387">"The New C: X Macros"</a>. <i>Dr. Dobb's Journal</i><span class="reference-accessdate">. Retrieved <span class="nowrap">1 May</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Dr.+Dobb%27s+Journal&amp;rft.atitle=The+New+C%3A+X+Macros&amp;rft.date=2001-05&amp;rft.aulast=Meyers&amp;rft.aufirst=Randy&amp;rft_id=http%3A%2F%2Fwww.ddj.com%2Fcpp%2F184401387&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">Beal, Stephan (August 2004). <a rel="nofollow" class="external text" href="http://wanderinghorse.net/computing/papers/#supermacros">"Supermacros"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">27 October</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Supermacros&amp;rft.date=2004-08&amp;rft.aulast=Beal&amp;rft.aufirst=Stephan&amp;rft_id=http%3A%2F%2Fwanderinghorse.net%2Fcomputing%2Fpapers%2F%23supermacros&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-gnu-cpp-overview-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-gnu-cpp-overview_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-gnu-cpp-overview_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/cpp/Overview.html">"The C Preprocessor: Overview"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 July</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+C+Preprocessor%3A+Overview&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fcpp%2FOverview.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/cpp/Obsolete-Features.html">GCC Obsolete features</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gcc.gnu.org/onlinedocs/cpp/Wrapper-Headers.html">https://gcc.gnu.org/onlinedocs/cpp/Wrapper-Headers.html</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">
+<cite class="citation web"><a rel="nofollow" class="external text" href="https://files.nothingisreal.com/software/gpp/gpp.html">"GPP 2.23 — Generic Preprocessor"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">17 July</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=GPP+2.23+%E2%80%94+Generic+Preprocessor&amp;rft_id=https%3A%2F%2Ffiles.nothingisreal.com%2Fsoftware%2Fgpp%2Fgpp.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gfortran/Preprocessing-and-conditional-compilation.html">"1.3 Preprocessing and conditional compilation"</a>. gnu.org.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=1.3+Preprocessing+and+conditional+compilation&amp;rft.pub=gnu.org&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgfortran%2FPreprocessing-and-conditional-compilation.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://software.intel.com/en-us/node/524749">"Using the fpp Preprocessor"</a>. Intel<span class="reference-accessdate">. Retrieved <span class="nowrap">14 October</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Using+the+fpp+Preprocessor&amp;rft.pub=Intel&amp;rft_id=https%3A%2F%2Fsoftware.intel.com%2Fen-us%2Fnode%2F524749&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://stackoverflow.com/a/10526117">"Is the C99 preprocessor Turing complete?"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Is+the+C99+preprocessor+Turing+complete%3F&amp;rft_id=https%3A%2F%2Fstackoverflow.com%2Fa%2F10526117&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AC+preprocessor" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_preprocessor&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/C_Programming/Preprocessor" class="extiw" title="wikibooks:C Programming/Preprocessor">C Programming/Preprocessor</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.open-std.org/JTC1/SC22/WG14/www/standards">ISO/IEC 9899</a>. The official C standard. As of 2014, the latest publicly available version is <a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1124.pdf">a working paper for C11</a>.</li>
+<li><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/cpp/index.html">GNU CPP online manual</a></li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/y4skk93w(VS.80).aspx">Visual Studio .NET preprocessor reference</a></li>
+<li><a rel="nofollow" class="external text" href="http://predef.sourceforge.net/">Pre-defined C/C++ Compiler Macros project</a>: lists "various pre-defined compiler macros that can be used to identify standards, compilers, operating systems, hardware architectures, and even basic run-time libraries at compile-time"</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_programming_language" title="Template:C programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_programming_language" title="Template talk:C programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*ANSI_C_**C89_and_C90_*C99_*C11_*C18_*C2x_*Embedded_C_*MISRA_C">
+<ul><li><a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>
+<ul><li><a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C89 and C90</a></li></ul></li>
+<li><a href="/wiki/C99" title="C99">C99</a></li>
+<li><a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a></li>
+<li><a href="/wiki/C18_(C_standard_revision)" title="C18 (C standard revision)">C18</a></li>
+<li><a href="/wiki/C2x" title="C2x">C2x</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subroutine" title="Subroutine">Functions</a></li>
+<li><a href="/wiki/Include_directive#C" title="Include directive">Header files</a></li>
+<li><a href="/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String</a></li>
+<li><a href="/wiki/C_syntax" title="C syntax">Syntax</a></li>
+<li><a class="mw-selflink selflink">Preprocessor</a></li>
+<li><a href="/wiki/C_data_types" title="C data types">Data types</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C_standard_library" title="C standard library">Standard library<br />functions</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_character_classification" title="C character classification">Char (ctype.h)</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File I/O (stdio.h)</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Math (math.h)</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Dynamic memory (stdlib.h)</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String (string.h)</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Time (time.h)</a></li>
+<li><a href="/wiki/Stdarg.h" title="Stdarg.h">Variadic (stdarg.h)</a></li>
+<li><a href="/wiki/C_POSIX_library" title="C POSIX library">POSIX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_standard_library" title="Category:C standard library">Standard<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Microsoft_Windows_library_files#MSVCRT.DLL,_MSVCPP.DLL_and_CRTDLL.DLL" title="Microsoft Windows library files">Microsoft Run-time Library</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/BSD_libc" class="mw-redirect" title="BSD libc">BSD libc</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C_compilers" title="List of compilers">Comparison of compilers</a></li>
+<li><a href="/wiki/Amsterdam_Compiler_Kit" title="Amsterdam Compiler Kit">ACK</a></li>
+<li><a href="/wiki/Borland_Turbo_C" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">ICC</a></li>
+<li><a href="/wiki/LCC_(compiler)" title="LCC (compiler)">LCC</a></li>
+<li><a href="/wiki/Portable_C_Compiler" title="Portable C Compiler">PCC</a></li>
+<li><a href="/wiki/Small_Device_C_Compiler" title="Small Device C Compiler">SDCC</a></li>
+<li><a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">TCC</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> / <a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Express</a> / <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/GNOME_Builder" title="GNOME Builder">GNOME Builder</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison with<br />other languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="Compatibility of C and C++">Compatibility of C and C++</a></li>
+<li>Comparison with <a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison with Pascal</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Descendant<br />languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Alef_(programming_language)" title="Alef (programming language)">Alef</a></li>
+<li><a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Vala_(programming_language)" title="Vala (programming language)">Vala</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1335
+Cached time: 20200322055246
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.336 seconds
+Real time usage: 0.489 seconds
+Preprocessor visited node count: 1639/1000000
+Post‐expand include size: 58124/2097152 bytes
+Template argument size: 8226/2097152 bytes
+Highest expansion depth: 19/40
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 33023/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.138/10.000 seconds
+Lua memory usage: 3.88 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  397.298      1 -total
+ 33.13%  131.610      1 Template:Reflist
+ 29.09%  115.566      3 Template:Ambox
+ 23.83%   94.662      2 Template:Cite_journal
+ 22.27%   88.490      1 Template:Multiple_issues
+ 12.57%   49.941      1 Template:Use_dmy_dates
+ 10.19%   40.478      1 Template:More_footnotes
+  8.22%   32.674      1 Template:CProLang
+  7.37%   29.299      1 Template:Citation_needed
+  6.56%   26.068      1 Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:231835-0!canonical and timestamp 20200322055246 and revision id 941597835
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=C_preprocessor&amp;oldid=941597835">https://en.wikipedia.org/w/index.php?title=C_preprocessor&amp;oldid=941597835</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:Transformation_languages" title="Category:Transformation languages">Transformation languages</a></li><li><a href="/wiki/Category:Macro_programming_languages" title="Category:Macro programming languages">Macro programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_July_2013" title="Category:Use dmy dates from July 2013">Use dmy dates from July 2013</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_style_issues_from_February_2013" title="Category:Wikipedia articles with style issues from February 2013">Wikipedia articles with style issues from February 2013</a></li><li><a href="/wiki/Category:All_articles_with_style_issues" title="Category:All articles with style issues">All articles with style issues</a></li><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_March_2015" title="Category:Articles lacking in-text citations from March 2015">Articles lacking in-text citations from March 2015</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Articles_with_multiple_maintenance_issues" title="Category:Articles with multiple maintenance issues">Articles with multiple maintenance issues</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_February_2020" title="Category:Articles with unsourced statements from February 2020">Articles with unsourced statements from February 2020</a></li><li><a href="/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2016" title="Category:Wikipedia articles needing clarification from March 2016">Wikipedia articles needing clarification from March 2016</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=C+preprocessor" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=C+preprocessor" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/C_preprocessor" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:C_preprocessor" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/C_preprocessor">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=C_preprocessor&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=C_preprocessor&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/C_preprocessor" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/C_preprocessor" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=C_preprocessor&amp;oldid=941597835" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=C_preprocessor&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q856846" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=C_preprocessor&amp;id=941597835&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/C_Programming/Preprocessor_directives_and_macros" hreflang="en">Wikibooks</a></li><li class="wb-otherproject-link wb-otherproject-wikiversity"><a href="https://en.wikiversity.org/wiki/C_Programming/Preprocessors" hreflang="en">Wikiversity</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=C+preprocessor">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=C+preprocessor&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=C_preprocessor&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Preprocesor_jazyka_C" title="Preprocesor jazyka C – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor" title="C-Präprozessor – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Preprocesador_de_C" title="Preprocesador de C – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="https://eo.wikipedia.org/wiki/CPP_(anta%C5%ADtraktilo)" title="CPP (antaŭtraktilo) – Esperanto" lang="eo" hreflang="eo" class="interlanguage-link-target">Esperanto</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Pr%C3%A9processeur_C" title="Préprocesseur C – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/C_%EC%A0%84%EC%B2%98%EB%A6%AC%EA%B8%B0" title="C 전처리기 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-la"><a href="https://la.wikipedia.org/wiki/Praeprocessorium_C" title="Praeprocessorium C – Latin" lang="la" hreflang="la" class="interlanguage-link-target">Latina</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/C_el%C5%91ford%C3%ADt%C3%B3" title="C előfordító – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/CPP_(preprocesor)" title="CPP (preprocesor) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D1%80_%D0%A1%D0%B8" title="Препроцессор Си – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/C-esik%C3%A4%C3%A4nt%C3%A4j%C3%A4" title="C-esikääntäjä – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/C_%C3%B6ni%C5%9Flemcisi" title="C önişlemcisi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%BE%D1%80_C" title="Препроцесор C – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/C%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8" title="C预处理器 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q856846#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 19 February 2020, at 15:15<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=C_preprocessor&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.336","walltime":"0.489","ppvisitednodes":{"value":1639,"limit":1000000},"postexpandincludesize":{"value":58124,"limit":2097152},"templateargumentsize":{"value":8226,"limit":2097152},"expansiondepth":{"value":19,"limit":40},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":33023,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  397.298      1 -total"," 33.13%  131.610      1 Template:Reflist"," 29.09%  115.566      3 Template:Ambox"," 23.83%   94.662      2 Template:Cite_journal"," 22.27%   88.490      1 Template:Multiple_issues"," 12.57%   49.941      1 Template:Use_dmy_dates"," 10.19%   40.478      1 Template:More_footnotes","  8.22%   32.674      1 Template:CProLang","  7.37%   29.299      1 Template:Citation_needed","  6.56%   26.068      1 Template:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.138","limit":"10.000"},"limitreport-memusage":{"value":4065946,"limit":52428800}},"cachereport":{"origin":"mw1335","timestamp":"20200322055246","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"C preprocessor","url":"https:\/\/en.wikipedia.org\/wiki\/C_preprocessor","sameAs":"http:\/\/www.wikidata.org\/entity\/Q856846","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q856846","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-22T15:32:55Z","dateModified":"2020-02-19T15:15:56Z","headline":"preprocessor"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":90,"wgHostname":"mw1333"});});</script></body></html>

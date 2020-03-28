@@ -1,0 +1,980 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Common Object Request Broker Architecture - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xnb7WApAMM4AA882EeAAAAAX","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Common_Object_Request_Broker_Architecture","wgTitle":"Common Object Request Broker Architecture","wgCurRevisionId":941785204,"wgRevisionId":941785204,"wgArticleId":43285,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from February 2009","All articles lacking in-text citations","Use dmy dates from December 2019","All articles with failed verification","Articles with failed verification from November 2017",
+"All articles with unsourced statements","Articles with unsourced statements from November 2017","Articles with unsourced statements from February 2007","Wikipedia articles with GND identifiers","Wikipedia articles with LCCN identifiers","Common Object Request Broker Architecture","Component-based software engineering","GNOME","Inter-process communication","ISO standards","Object-oriented programming"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Common_Object_Request_Broker_Architecture","wgRelevantArticleId":43285,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,
+"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q691593","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons",
+"ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Common_Object_Request_Broker_Architecture rootpage-Common_Object_Request_Broker_Architecture skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Common Object Request Broker Architecture</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">February 2009</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<p class="mw-empty-elt">
+</p>
+<table class="infobox hproduct" style="width:22em"><caption class="fn">Common Object Request Broker Architecture</caption><tbody><tr><th scope="row">Status</th><td>Published</td></tr><tr><th scope="row">Year started</th><td>1991</td></tr><tr><th scope="row">Latest version</th><td>3.3<br />October 2012</td></tr><tr><th scope="row">Organization</th><td><a href="/wiki/Object_Management_Group" title="Object Management Group">Object Management Group</a></td></tr><tr><th scope="row">Abbreviation</th><td>CORBA</td></tr><tr><th scope="row">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://corba.org/">corba<wbr />.org</a></span></td></tr></tbody></table>
+<p>The  <b>Common Object Request Broker Architecture</b> (<b>CORBA</b>) is a <a href="/wiki/Standardization" title="Standardization">standard</a> defined by the <a href="/wiki/Object_Management_Group" title="Object Management Group">Object Management Group</a> (OMG) designed to facilitate the communication of systems that are deployed on diverse platforms. CORBA enables collaboration between systems on different operating systems, <a href="/wiki/Programming_language" title="Programming language">programming languages</a>, and computing hardware. CORBA uses an object-oriented model although the systems that use the CORBA do not have to be object-oriented. CORBA is an example of the <a href="/wiki/Distributed_object" title="Distributed object">distributed object</a> paradigm.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Versions_history"><span class="tocnumber">2</span> <span class="toctext">Versions history</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Servants"><span class="tocnumber">3</span> <span class="toctext">Servants</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Features"><span class="tocnumber">4</span> <span class="toctext">Features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Objects_By_Reference"><span class="tocnumber">4.1</span> <span class="toctext">Objects By Reference</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Data_By_Value"><span class="tocnumber">4.2</span> <span class="toctext">Data By Value</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Objects_By_Value_(OBV)"><span class="tocnumber">4.3</span> <span class="toctext">Objects By Value (OBV)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#CORBA_Component_Model_(CCM)"><span class="tocnumber">4.4</span> <span class="toctext">CORBA Component Model (CCM)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Portable_interceptors"><span class="tocnumber">4.5</span> <span class="toctext">Portable interceptors</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#General_InterORB_Protocol_(GIOP)"><span class="tocnumber">4.6</span> <span class="toctext">General InterORB Protocol (GIOP)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#VMCID_(Vendor_Minor_Codeset_ID)"><span class="tocnumber">4.7</span> <span class="toctext">VMCID (Vendor Minor Codeset ID)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Corba_Location_(CorbaLoc)"><span class="tocnumber">4.8</span> <span class="toctext">Corba Location (CorbaLoc)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Benefits"><span class="tocnumber">5</span> <span class="toctext">Benefits</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Problems_and_criticism"><span class="tocnumber">6</span> <span class="toctext">Problems and criticism</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#Further_reading"><span class="tocnumber">9</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CORBA enables communication between software written in different languages and running on different computers. Implementation details from specific operating systems, programming languages, and hardware platforms are all removed from the responsibility of developers who use CORBA. CORBA normalizes the method-call semantics between application objects residing either in the same address-space (application) or in remote address-spaces (same host, or remote host on a network). Version 1.0 was released in October 1991.
+</p><p>CORBA uses an <a href="/wiki/Interface_definition_language" class="mw-redirect" title="Interface definition language">interface definition language</a> (IDL) to specify the interfaces that objects present to the outer world. CORBA then specifies a <i>mapping</i> from IDL to a specific implementation language like <a href="/wiki/C%2B%2B" title="C++">C++</a> or <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>. Standard mappings exist for <a href="/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a>, <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, <a href="/wiki/C%2B%2B" title="C++">C++</a>, <a href="/wiki/C%2B%2B11" title="C++11">C++11</a>, <a href="/wiki/COBOL" title="COBOL">COBOL</a>, <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a>, <a href="/wiki/PL/I" title="PL/I">PL/I</a>, <a href="/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a>, <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>, <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a> and <a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a>. Non-standard mappings exist for <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="/wiki/Erlang_(programming_language)" title="Erlang (programming language)">Erlang</a>, <a href="/wiki/Perl" title="Perl">Perl</a>, <a href="/wiki/Tcl" title="Tcl">Tcl</a> and <a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a> implemented by <a href="/wiki/Object_request_broker" title="Object request broker">object request brokers</a> (ORBs) written for those languages.
+</p><p>The CORBA specification dictates there shall be an ORB through which an application would interact with other objects. This is how it is implemented in practice:
+</p>
+<ol><li>The application simply initializes the ORB, and accesses an internal <i>Object Adapter</i>, which maintains things like reference counting, object (and reference) instantiation policies, and object lifetime policies.</li>
+<li>The Object Adapter is used to register instances of the <i>generated code classes</i>. Generated code classes are the result of compiling the user IDL code, which translates the high-level interface definition into an OS- and language-specific class base for use by the user application. This step is necessary in order to enforce CORBA semantics and provide a clean user process for interfacing with the CORBA infrastructure.</li></ol>
+<p>Some IDL mappings are more difficult to use than others. For example, due to the nature of Java, the IDL-Java mapping is rather straightforward and makes usage of CORBA very simple in a Java application. This is also true of the IDL to Python mapping. The C++ mapping requires the programmer to learn datatypes that predate the C++ <a href="/wiki/Standard_Template_Library" title="Standard Template Library">Standard Template Library</a> (STL). By contrast, the C++11 mapping is easier to use, but requires heavy use of the STL. Since the C language is not object-oriented, the IDL to C mapping requires a C programmer to manually emulate object-oriented features.
+</p><p>In order to build a system that uses or implements a CORBA-based distributed object interface, a developer must either obtain or write the IDL code that defines the object-oriented interface to the logic the system will use or implement. Typically, an ORB implementation includes a tool called an IDL compiler that translates the IDL interface into the target language for use in that part of the system. A traditional compiler then compiles the generated code to create the linkable-object files for use in the application. This diagram illustrates how the generated code is used within the CORBA infrastructure:
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:Orb.svg" class="image" title="Illustration of the autogeneration of the infrastructure code from an interface defined using the CORBA IDL"><img alt="Illustration of the autogeneration of the infrastructure code from an interface defined using the CORBA IDL" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f0/Orb.svg/401px-Orb.svg.png" decoding="async" width="401" height="402" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f0/Orb.svg/602px-Orb.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f0/Orb.svg/802px-Orb.svg.png 2x" data-file-width="401" data-file-height="402" /></a></div></div>
+<p>This figure illustrates the high-level paradigm for remote interprocess communications using CORBA. The CORBA specification further addresses data typing, exceptions, network protocols, communication timeouts, etc. For example: Normally the server side has the <a href="/wiki/Portable_Object_Adapter" class="mw-redirect" title="Portable Object Adapter">Portable Object Adapter</a> (POA) that redirects calls either to the local <a href="/wiki/Servant_(CORBA)" class="mw-redirect" title="Servant (CORBA)">servants</a> or (to balance the load) to the other servers. The CORBA specification (and thus this figure) leaves various aspects of distributed system to the application to define including object lifetimes (although reference counting semantics are available to applications), redundancy/fail-over, memory management, dynamic load balancing, and application-oriented models such as the separation between display/data/control semantics (e.g. see <a href="/wiki/Model%E2%80%93view%E2%80%93controller" title="Model–view–controller">Model–view–controller</a>), etc.
+</p><p>In addition to providing users with a language and a platform-neutral <a href="/wiki/Remote_procedure_call" title="Remote procedure call">remote procedure call</a> (RPC) specification, CORBA defines commonly needed services such as transactions and security, events, time, and other domain-specific interface models.
+</p>
+<h2><span class="mw-headline" id="Versions_history">Versions history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=2" title="Edit section: Versions history">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This table presents the history of CORBA standard versions.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th width="60">Version
+</th>
+<th width="110">Version Date
+</th>
+<th width="400">Highlights
+</th></tr>
+<tr>
+<td>1.0</td>
+<td>October 1991</td>
+<td>First version, C mapping
+</td></tr>
+<tr>
+<td>1.1</td>
+<td>February 1992</td>
+<td>Interoperability, C++ mapping
+</td></tr>
+<tr>
+<td>1.2</td>
+<td>December 1993</td>
+<td>-
+</td></tr>
+<tr>
+<td>2.0</td>
+<td>August 1996</td>
+<td>First major update of the standard, also dubbed <b>CORBA 2</b>
+</td></tr>
+<tr>
+<td>2.1</td>
+<td>August 1997</td>
+<td>-
+</td></tr>
+<tr>
+<td>2.2</td>
+<td>February 1998</td>
+<td>Java mapping
+</td></tr>
+<tr>
+<td>2.3</td>
+<td>June 1999</td>
+<td>-
+</td></tr>
+<tr>
+<td>2.4</td>
+<td>August 2000</td>
+<td>-
+</td></tr>
+<tr>
+<td>2.5</td>
+<td>September 2001</td>
+<td>-
+</td></tr>
+<tr>
+<td>2.6</td>
+<td>December 2001</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.0</td>
+<td>July 2002</td>
+<td>Second major update of the standard, also dubbed <b>CORBA 3</b><br />CORBA Component Model (CCM)
+</td></tr>
+<tr>
+<td>3.0.1</td>
+<td>November 2002</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.0.2</td>
+<td>December 2002</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.0.3</td>
+<td>March 2004</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.1</td>
+<td>January 2008</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.1.1</td>
+<td>August 2011</td>
+<td>Adopted as 2012 edition of ISO/IEC 19500
+</td></tr>
+<tr>
+<td>3.2</td>
+<td>November 2011</td>
+<td>-
+</td></tr>
+<tr>
+<td>3.3</td>
+<td>November 2012</td>
+<td>Addition of ZIOP
+</td></tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Servants">Servants</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=3" title="Edit section: Servants">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A <b>servant</b> is the invocation target containing methods for handling the <a href="/wiki/Remote_method_invocation" class="mw-redirect" title="Remote method invocation">remote method invocations</a>. In the newer CORBA versions, the remote object (on the server side) is split into the <b>object</b> <i>(that is exposed to remote invocations)</i> and <b>servant</b> <i>(to which the former part <a href="/wiki/Forwarding_(object-oriented_programming)" title="Forwarding (object-oriented programming)">forwards</a> the method calls)</i>. It can be one <i>servant</i> per remote <i>object</i>, or the same servant can support several (possibly all) objects, associated with the given <a href="/wiki/Portable_Object_Adapter" class="mw-redirect" title="Portable Object Adapter">Portable Object Adapter</a>. The <i>servant</i> for each <i>object</i> can be set or found "once and forever" (servant activation) or dynamically chosen each time the method on that object is invoked (servant location). Both servant locator and servant activator can forward the calls to another server. In total, this system provides a very powerful means to balance the load, distributing requests between several machines. In the object-oriented languages, both remote <i>object</i> and its <i>servant</i> are objects from the viewpoint of the object-oriented programming.
+</p><p><i>Incarnation</i> is the act of associating a servant with a CORBA object so that it may service requests.  Incarnation provides a concrete servant form for the virtual CORBA object. Activation and deactivation refer only to CORBA objects, while the terms incarnation and etherealization refer to servants.  However, the lifetimes of objects and servants are independent.  You always incarnate a servant before calling activate_object(), but the reverse is also possible, create_reference() activates an object without incarnating a servant, and servant incarnation is later done on demand with a Servant Manager.
+</p><p>The <i><span id="Portable_Object_Adapter">Portable Object Adapter</span></i> (POA) is the CORBA object responsible for splitting the server side remote invocation handler into the remote <i>object</i> and its <i>servant</i>. The object is exposed for the remote invocations, while the servant contains the methods that are actually handling the requests. The servant for each object can be chosen either statically (once) or dynamically (for each remote invocation), in both cases allowing the call forwarding to another server.
+</p><p>On the server side, the POAs form a tree-like structure, where each POA is responsible for one or more objects being served. The branches of this tree can be independently activated/deactivated, have the different code for the servant location or activation and the different request handling policies.
+</p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=4" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following describes some of the most significant ways that CORBA can be used to facilitate communication among distributed objects.
+</p>
+<h3><span class="mw-headline" id="Objects_By_Reference">Objects By Reference</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=5" title="Edit section: Objects By Reference">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This reference is either acquired through a stringified <a href="/wiki/Uniform_Resource_Locator" class="mw-redirect" title="Uniform Resource Locator">Uniform Resource Locator</a> (URL), NameService lookup (similar to <a href="/wiki/Domain_Name_System" title="Domain Name System">Domain Name System</a> (DNS)), or passed-in as a method parameter during a call.
+</p><p>Object references are lightweight objects matching the interface of the real object (remote or local). Method calls on the reference result in subsequent calls to the ORB and blocking on the thread while waiting for a reply, success or failure. The parameters, return data (if any), and exception data are marshaled internally by the ORB according to the local language and OS mapping.
+</p>
+<h3><span class="mw-headline" id="Data_By_Value">Data By Value</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=6" title="Edit section: Data By Value">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The CORBA Interface Definition Language provides the language- and OS-neutral inter-object communication definition. CORBA Objects are passed by reference, while data (integers, doubles, structs, enums, etc.) are passed by value. The combination of Objects-by-reference and data-by-value provides the means to enforce great data typing while compiling clients and servers, yet preserve the flexibility inherent in the CORBA problem-space.
+</p>
+<h3><span id="Objects_By_Value_.28OBV.29"></span><span class="mw-headline" id="Objects_By_Value_(OBV)">Objects By Value (OBV)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=7" title="Edit section: Objects By Value (OBV)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Apart from remote objects, the CORBA and <a href="/wiki/RMI-IIOP" title="RMI-IIOP">RMI-IIOP</a> define the concept of the OBV and Valuetypes. The code inside the methods of Valuetype objects is executed locally by default. If the OBV has been received from the remote side, the needed code must be either <i><a href="/wiki/A_priori_and_a_posteriori" title="A priori and a posteriori">a priori</a></i> known for both sides or dynamically downloaded from the sender. To make this possible, the record, defining OBV, contains the Code Base that is a space-separated list of <a href="/wiki/Uniform_Resource_Locator" class="mw-redirect" title="Uniform Resource Locator">URLs</a> whence this code should be downloaded. The OBV can also have the remote methods.
+</p>
+<h3><span id="CORBA_Component_Model_.28CCM.29"></span><span class="mw-headline" id="CORBA_Component_Model_(CCM)">CORBA Component Model (CCM)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=8" title="Edit section: CORBA Component Model (CCM)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>CORBA Component Model (CCM) is an addition to the family of CORBA definitions.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> It was introduced with CORBA 3 and it describes a standard application framework for CORBA components. Though not dependent on "language dependent <a href="/wiki/Enterprise_Java_Beans" class="mw-redirect" title="Enterprise Java Beans">Enterprise Java Beans</a> (EJB)", it is a more general form of EJB, providing four component types instead of the two that EJB defines. It provides an abstraction of entities that can provide and accept services through well-defined named interfaces called <i>ports</i>.
+</p><p>The CCM has a component container, where software components can be deployed. The container offers a set of services that the components can use. These services include (but are not limited to) <a href="/wiki/Notification_system" title="Notification system">notification</a>, <a href="/wiki/Authentication" title="Authentication">authentication</a>, <a href="/wiki/Persistence_(computer_science)" title="Persistence (computer science)">persistence</a> and <a href="/wiki/Transaction_processing" title="Transaction processing">transaction processing</a>. These are the most-used services any distributed system requires, and, by moving the implementation of these services from the software components to the component container, the complexity of the components is dramatically reduced.
+</p>
+<h3><span class="mw-headline" id="Portable_interceptors">Portable interceptors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=9" title="Edit section: Portable interceptors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Portable interceptors are the "hooks", used by CORBA and <a href="/wiki/RMI-IIOP" title="RMI-IIOP">RMI-IIOP</a> to mediate the most important functions of the CORBA system. The CORBA standard defines the following types of interceptors:
+</p>
+<ol><li><a href="/wiki/Interoperable_Object_Reference" title="Interoperable Object Reference">IOR</a> interceptors mediate the creation of the new references to the remote objects, presented by the current server.</li>
+<li>Client interceptors usually mediate the remote method calls on the client (caller) side. If the object <a href="/wiki/Servant_(CORBA)" class="mw-redirect" title="Servant (CORBA)">Servant</a> exists on the same server where the method is invoked, they also mediate the local calls.</li>
+<li>Server interceptors mediate the handling of the remote method calls on the server (handler) side.</li></ol>
+<p>The interceptors can attach the specific information to the messages being sent and IORs being created. This information can be later read by the corresponding interceptor on the remote side. Interceptors can also throw forwarding exceptions, redirecting request to another target.
+</p>
+<h3><span id="General_InterORB_Protocol_.28GIOP.29"></span><span class="mw-headline" id="General_InterORB_Protocol_(GIOP)">General InterORB Protocol (GIOP)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=10" title="Edit section: General InterORB Protocol (GIOP)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/General_Inter-ORB_Protocol" title="General Inter-ORB Protocol">General Inter-ORB Protocol</a></div>
+<p>The <a href="/wiki/General_Inter-ORB_Protocol" title="General Inter-ORB Protocol">GIOP</a> is an abstract protocol by which <a href="/wiki/Object_request_broker" title="Object request broker">Object request brokers</a> (ORBs) communicate. Standards associated with the protocol are maintained by the <a href="/wiki/Object_Management_Group" title="Object Management Group">Object Management Group</a> (OMG). The GIOP architecture provides several concrete protocols, including:
+</p>
+<ol><li>Internet InterORB Protocol (IIOP) &#8211; The Internet Inter-Orb Protocol is an implementation of the GIOP for use over the <a href="/wiki/Internet" title="Internet">Internet</a>, and provides a mapping between GIOP messages and the <a href="/wiki/Internet_protocol_suite" title="Internet protocol suite">TCP/IP</a> layer.</li>
+<li>SSL InterORB Protocol (SSLIOP) &#8211; SSLIOP is IIOP over <a href="/wiki/Secure_Sockets_Layer" class="mw-redirect" title="Secure Sockets Layer">SSL</a>, providing <a href="/wiki/Encryption" title="Encryption">encryption</a> and <a href="/wiki/Authentication" title="Authentication">authentication</a>.</li>
+<li>HyperText InterORB Protocol (HTIOP) &#8211; HTIOP is IIOP over <a href="/wiki/HTTP" class="mw-redirect" title="HTTP">HTTP</a>, providing transparent proxy bypassing.</li>
+<li>Zipped IOP (ZIOP) &#8211; A zipped version of GIOP that reduces the bandwidth usage.</li></ol>
+<h3><span id="VMCID_.28Vendor_Minor_Codeset_ID.29"></span><span class="mw-headline" id="VMCID_(Vendor_Minor_Codeset_ID)">VMCID (Vendor Minor Codeset ID)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=11" title="Edit section: VMCID (Vendor Minor Codeset ID)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Each standard CORBA exception includes a minor code to designate the subcategory of the exception. Minor exception codes are of type unsigned long and consist of a 20-bit "Vendor Minor Codeset ID" (VMCID), which occupies the high order 20 bits, and the minor code proper which occupies the low order 12 bits.
+</p><p>Minor codes for the standard exceptions are prefaced by the VMCID assigned to OMG, defined as the unsigned long constant CORBA::OMGVMCID, which has the VMCID allocated to OMG occupying the high order 20 bits. The minor exception codes associated with the standard exceptions that are found in Table 3-13 on page 3-58 are or-ed with OMGVMCID to get the minor code value that is returned in the ex_body structure (see Section 3.17.1, "Standard Exception Definitions", on page 3-52 and Section 3.17.2, "Standard Minor Exception Codes", on page 3-58).
+</p><p>Within a vendor assigned space, the assignment of values to minor codes is left to the vendor. Vendors may request allocation of VMCIDs by sending email to tagrequest@omg.org. A list of currently assigned VMCIDs can be found on the OMG website at: <a rel="nofollow" class="external free" href="http://www.omg.org/cgi-bin/doc?vendor-tags">http://www.omg.org/cgi-bin/doc?vendor-tags</a>
+</p><p>The VMCID 0 and 0xfffff are reserved for experimental use. The VMCID OMGVMCID (Section 3.17.1, "Standard Exception Definitions", on page 3-52) and 1 through 0xf are reserved for OMG use.
+</p><p><a rel="nofollow" class="external text" href="http://www.omg.org/cgi-bin/doc?formal/98-12-01">The Common Object Request Broker: Architecture and Specification (CORBA 2.3)</a>
+</p>
+<h3><span id="Corba_Location_.28CorbaLoc.29"></span><span class="mw-headline" id="Corba_Location_(CorbaLoc)">Corba Location (CorbaLoc)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=12" title="Edit section: Corba Location (CorbaLoc)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Corba Location (CorbaLoc) refers to a stringified object reference for a CORBA object that looks similar to a URL.
+</p><p>All CORBA products must support two OMG-defined URLs: "<tt>corbaloc:</tt>" and "<tt>corbaname:</tt>". The purpose of these is to provide a human readable and editable way to specify a location where an IOR can be obtained.
+</p><p>An example of corbaloc is shown below:
+</p>
+<dl><dd><tt>corbaloc::160.45.110.41:38693/StandardNS/NameServer-POA/_root</tt></dd></dl>
+<p>A CORBA product may optionally support the "<tt>http:</tt>", "<tt>ftp:</tt>" and "<tt>file:</tt>" formats. The semantics of these is that they provide details of how to download a stringified IOR (or, recursively, download another URL that will eventually provide a stringified IOR). Some ORBs do deliver additional formats which are proprietary for that ORB.
+</p>
+<h2><span class="mw-headline" id="Benefits">Benefits</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=13" title="Edit section: Benefits">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>CORBA's benefits include language- and OS-independence, freedom from technology-linked implementations, strong data-typing, high level of tunability, and freedom from the details of distributed data transfers.
+</p>
+<dl><dt>Language independence</dt>
+<dd>CORBA was designed to free engineers from limitations of coupling their designs to a particular software language. Currently there are many languages supported by various CORBA providers, the most popular being Java and C++. There are also C++11, C-only, Smalltalk, Perl, Ada, Ruby, and Python implementations, just to mention a few.</dd></dl>
+<dl><dt>OS-independence</dt>
+<dd>CORBA's design is meant to be OS-independent. CORBA is available in Java (OS-independent), as well as natively for Linux/Unix, Windows, Solaris, OS X, OpenVMS, HPUX, Android, LynxOS, VxWorks, ThreadX, INTEGRITY, and others.</dd></dl>
+<dl><dt>Freedom from technologies</dt>
+<dd>One of the main implicit benefits is that CORBA provides a neutral playing field for engineers to be able to normalize the interfaces between various new and legacy systems. When integrating C, C++, Object Pascal, Java, Fortran, Python, and any other language or OS into a single cohesive system design model, CORBA provides the means to level the field and allow disparate teams to develop systems and unit tests that can later be joined together into a whole system. This does not rule out the need for basic system engineering decisions, such as threading, timing, object lifetime, etc. These issues are part of any system regardless of technology. CORBA allows system elements to be normalized into a single cohesive system model.<br /> For example, the design of a <a href="/wiki/Multitier_architecture" title="Multitier architecture">multitier architecture</a> is made simple using <a href="/wiki/Java_Servlet" class="mw-redirect" title="Java Servlet">Java Servlets</a> in the web server and various CORBA servers containing the business logic and wrapping the database accesses. This allows the implementations of the business logic to change, while the interface changes would need to be handled as in any other technology. For example, a database wrapped by a server can have its database schema change for the sake of improved disk usage or performance (or even whole-scale database vendor change), without affecting the external interfaces. At the same time, C++ legacy code can talk to C/Fortran legacy code and Java database code, and can provide data to a web interface.</dd></dl>
+<dl><dt>Data-typing</dt>
+<dd>CORBA provides flexible data typing, for example an "ANY" datatype. CORBA also enforces tightly coupled datatyping, reducing human errors. In a situation where Name-Value pairs are passed around, it is conceivable that a server provides a number where a string was expected. CORBA Interface Definition Language provides the mechanism to ensure that user-code conforms to method-names, return-, parameter-types, and exceptions.</dd></dl>
+<dl><dt>High tunability</dt>
+<dd>Many implementations (e.g.  ORBexpress (Ada, C++, and Java implementation)<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> and OmniORB (open source C++ and Python implementation))<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> have options for tuning the threading and connection management features. Not all ORB implementations provide the same features.</dd></dl>
+<dl><dt>Freedom from data-transfer details</dt>
+<dd>When handling low-level connection and threading, CORBA provides a high level of detail in error conditions. This is defined in the CORBA-defined standard exception set and the implementation-specific extended exception set. Through the exceptions, the application can determine if a call failed for reasons such as "Small problem, so try again", "The server is dead" or "The reference does not make sense." The general rule is: Not receiving an exception means that the method call completed successfully. This is a very powerful design feature.</dd></dl>
+<dl><dt>Compression</dt>
+<dd>CORBA marshals its data in a binary form and supports compression. IONA, Remedy IT, and <a href="/wiki/Telefonica" class="mw-redirect" title="Telefonica">Telefónica</a> have worked on an extension to the CORBA standard that delivers compression. This extension is called ZIOP and this is now a formal OMG standard.</dd></dl>
+<h2><span class="mw-headline" id="Problems_and_criticism">Problems and criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=14" title="Edit section: Problems and criticism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>While CORBA delivered much in the way code was written and software constructed, it has been the subject of criticism.<sup id="cite_ref-CORBA_trouble_6-0" class="reference"><a href="#cite_note-CORBA_trouble-6">&#91;6&#93;</a></sup>
+</p><p>Much of the criticism of CORBA stems from poor implementations of the standard and not deficiencies of the standard itself. Some of the failures of the standard itself were due to the process by which the CORBA specification was created and the compromises inherent in the politics and business of writing a common standard sourced by many competing implementors.
+</p>
+<dl><dt>Initial implementation incompatibilities</dt>
+<dd>The initial specifications of CORBA defined only the IDL, not the on-the-wire format. This meant that source-code compatibility was the best that was available for several years. With CORBA 2 and later this issue was resolved.</dd></dl>
+<dl><dt>Location transparency</dt>
+<dd>CORBA's notion of location transparency has been criticized; that is, that objects residing in the same <a href="/wiki/Address_space" title="Address space">address space</a> and accessible with a simple <a href="/wiki/Function_call" class="mw-redirect" title="Function call">function call</a> are treated the same as objects residing elsewhere (different processes on the same machine, or different machines). This is a fundamental design flaw,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup><sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability"><span title="The material near this tag failed verification of its source citation(s). (November 2017)">failed verification</span></a></i>&#93;</sup> as it makes all object access as complex as the most complex case (i.e., remote network call with a wide class of failures that are not possible in local calls). It also hides the inescapable differences between the two classes, making it impossible for applications to select an appropriate use strategy (that is, a call with 1<a href="/wiki/%CE%9Cs" class="mw-redirect" title="Μs">µs</a> latency and guaranteed return will be used very differently from a call with 1s latency with possible transport failure, in which the delivery status is potentially unknown and might take 30s to time out).</dd>
+<dt>Design and process deficiencies</dt>
+<dd>The creation of the CORBA standard is also often cited for its process of <a href="/wiki/Design_by_committee" title="Design by committee">design by committee</a>. There was no process to arbitrate between conflicting proposals or to decide on the hierarchy of problems to tackle. Thus the standard was created by taking a union of the features in all proposals with no regard to their coherence.<sup id="cite_ref-ACM_fall_8-0" class="reference"><a href="#cite_note-ACM_fall-8">&#91;8&#93;</a></sup> This made the specification complex, expensive to implement entirely, and often ambiguous.</dd></dl>
+<dl><dd>A design committee composed of a mixture of implementation vendors and customers created a diverse set of interests. This diversity made difficult a cohesive standard. Standards and interoperability increased competition and eased customers' movement between alternative implementations. This led to much political fighting within the committee and frequent releases of revisions of the CORBA standard that some ORB implementors ensured were difficult to use without proprietary extensions.<sup id="cite_ref-CORBA_trouble_6-1" class="reference"><a href="#cite_note-CORBA_trouble-6">&#91;6&#93;</a></sup> Less ethical CORBA vendors encouraged customer lock-in and achieved strong short-term results. Over time the ORB vendors that encourage portability took over market share.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (November 2017)">citation needed</span></a></i>&#93;</sup></dd></dl>
+<dl><dt>Problems with implementations</dt>
+<dd>Through its history, CORBA has been plagued by shortcomings in poor ORB implementations. Unfortunately many of the papers criticizing CORBA as a standard are simply criticisms of a particularly bad CORBA ORB implementation.</dd></dl>
+<dl><dd>CORBA is a comprehensive standard with many features. Few implementations attempt to implement all of the specifications,<sup id="cite_ref-ACM_fall_8-1" class="reference"><a href="#cite_note-ACM_fall-8">&#91;8&#93;</a></sup> and initial implementations were incomplete or inadequate.  As there were no requirements to provide a reference implementation, members were free to propose features which were never tested for usefulness or implementability. Implementations were further hindered by the general tendency of the standard to be verbose, and the common practice of compromising by adopting the sum of all submitted proposals, which often created APIs that were incoherent and difficult to use, even if the individual proposals were perfectly reasonable.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (February 2007)">citation needed</span></a></i>&#93;</sup></dd></dl>
+<dl><dd>Robust implementations of CORBA have been very difficult to acquire in the past, but are now much easier to find. The SUN Java SDK comes with CORBA built-in. Some poorly designed implementations have been found to be complex, slow, incompatible and incomplete. Robust commercial versions began to appear but for significant cost. As good quality free implementations became available the bad commercial implementations died quickly.</dd></dl>
+<dl><dt>Firewalls</dt>
+<dd>CORBA (more precisely, <a href="/wiki/General_Inter-ORB_Protocol" title="General Inter-ORB Protocol">GIOP</a>) is not tied to any particular communications transport. A specialization of GIOP is the Internet Inter-ORB Protocol or IIOP. IIOP uses raw <a href="/wiki/TCP/IP" class="mw-redirect" title="TCP/IP">TCP/IP</a> connections in order to transmit data.</dd></dl>
+<dl><dd>If the client is behind a very restrictive firewall or <a href="/wiki/Transparent_proxy" class="mw-redirect" title="Transparent proxy">transparent proxy</a> server environment that only allows <a href="/wiki/HTTP" class="mw-redirect" title="HTTP">HTTP</a> connections to the outside through port 80, communication may be impossible, unless the proxy server in question allows the <a href="/wiki/Tunneling_protocol" title="Tunneling protocol">HTTP CONNECT</a> method or <a href="/wiki/SOCKS" title="SOCKS">SOCKS</a> connections as well. At one time, it was difficult even to force implementations to use a single standard port – they tended to pick multiple random ports instead. As of today, current ORBs do have these deficiencies. Due to such difficulties, some users have made increasing use of <a href="/wiki/Web_services" class="mw-redirect" title="Web services">web services</a> instead of CORBA. These communicate using <a href="/wiki/XML" title="XML">XML</a>/<a href="/wiki/SOAP" title="SOAP">SOAP</a> via port 80, which is normally left open or filtered through a HTTP proxy inside the organization, for web browsing via HTTP. Recent CORBA implementations, though, support <a href="/wiki/Secure_Sockets_Layer" class="mw-redirect" title="Secure Sockets Layer">SSL</a> and can be easily configured to work on a single port. Some ORBS, such as <a href="/wiki/TAO_(software)" title="TAO (software)">TAO</a>, omniORB and <a href="/w/index.php?title=JacORB&amp;action=edit&amp;redlink=1" class="new" title="JacORB (page does not exist)">JacORB</a> also support bidirectional GIOP, which gives CORBA the advantage of being able to use callback communication rather than the polling approach characteristic of web service implementations. Also, most modern firewalls support GIOP &amp; IIOP and are thus CORBA-friendly firewalls.</dd></dl>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=15" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<dl><dt>Software engineering</dt></dl>
+<ul><li><a href="/wiki/Component-based_software_engineering" title="Component-based software engineering">Component-based software engineering</a></li>
+<li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Portable_object_(computing)" title="Portable object (computing)">Portable object</a></li>
+<li><a href="/wiki/Service-oriented_architecture" title="Service-oriented architecture">Service-oriented architecture</a> (SOA)</li></ul>
+<dl><dt>Component-based software technologies</dt></dl>
+<ul><li><a href="/wiki/Freedesktop.org" title="Freedesktop.org">Freedesktop.org</a> <a href="/wiki/D-Bus" title="D-Bus">D-Bus</a> – current open cross-language cross-platform object model</li>
+<li><a href="/wiki/GNOME" title="GNOME">GNOME</a> <a href="/wiki/Bonobo_(GNOME)" title="Bonobo (GNOME)">Bonobo</a> – deprecated GNOME cross-language object model</li>
+<li><a href="/wiki/KDE" title="KDE">KDE</a> <a href="/wiki/DCOP" title="DCOP">DCOP</a> – deprecated KDE interprocess and software componentry communication system</li>
+<li><a href="/wiki/KDE" title="KDE">KDE</a> <a href="/wiki/KDE_Platform#KParts" class="mw-redirect" title="KDE Platform">KParts</a> – KDE component framework</li>
+<li><a href="/wiki/Component_Object_Model" title="Component Object Model">Component Object Model</a> (COM) – Microsoft Windows-only cross-language object model</li>
+<li><a href="/wiki/Distributed_Component_Object_Model" title="Distributed Component Object Model">DCOM</a> (Distributed COM) – extension making COM able to work in networks</li>
+<li><a href="/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a> – Current <a href="/wiki/.NET_Framework" title=".NET Framework">.NET</a> cross-language cross-platform object model</li>
+<li><a href="/wiki/XPCOM" title="XPCOM">XPCOM</a> (Cross Platform Component Object Model) – developed by Mozilla for applications based on it (e.g. <a href="/wiki/Mozilla_Application_Suite" title="Mozilla Application Suite">Mozilla Application Suite</a>, <a href="/wiki/SeaMonkey" title="SeaMonkey">SeaMonkey</a> 1.x)</li>
+<li><a href="/wiki/IBM_System_Object_Model" title="IBM System Object Model">IBM System Object Model</a> SOM and DSOM – component systems from IBM used in <a href="/wiki/OS/2" title="OS/2">OS/2</a> and <a href="/wiki/AIX" class="mw-redirect" title="AIX">AIX</a></li>
+<li><a href="/wiki/Internet_Communications_Engine" title="Internet Communications Engine">Internet Communications Engine</a> (ICE)</li>
+<li><a href="/wiki/Java_remote_method_invocation" title="Java remote method invocation">Java remote method invocation</a> (Java RMI)</li>
+<li><a href="/wiki/Java_Platform,_Enterprise_Edition" title="Java Platform, Enterprise Edition">Java Platform, Enterprise Edition</a> (Java EE)</li>
+<li><a href="/wiki/JavaBean" class="mw-redirect" title="JavaBean">JavaBean</a></li>
+<li><a href="/wiki/OpenAIR" title="OpenAIR">OpenAIR</a></li>
+<li><a href="/wiki/Remote_procedure_call" title="Remote procedure call">Remote procedure call</a> (RPC)</li>
+<li><a href="/wiki/Windows_Communication_Foundation" title="Windows Communication Foundation">Windows Communication Foundation</a> (WCF)</li>
+<li><a href="/wiki/Software_Communications_Architecture" title="Software Communications Architecture">Software Communications Architecture</a> (SCA) – components for embedded systems, cross-language, cross-transport, cross-platform</li></ul>
+<dl><dt>Language bindings</dt></dl>
+<ul><li><a href="/wiki/Language_binding" title="Language binding">Language binding</a></li>
+<li><a href="/wiki/Foreign_function_interface" title="Foreign function interface">Foreign function interface</a></li>
+<li><a href="/wiki/Calling_convention" title="Calling convention">Calling convention</a></li>
+<li><a href="/wiki/Dynamic_Invocation_Interface" title="Dynamic Invocation Interface">Dynamic Invocation Interface</a></li>
+<li><a href="/wiki/Name_mangling" title="Name mangling">Name mangling</a></li>
+<li><a href="/wiki/Application_programming_interface" title="Application programming interface">Application programming interface</a> - API</li>
+<li><a href="/wiki/Application_binary_interface" title="Application binary interface">Application binary interface</a> - ABI</li>
+<li><a href="/wiki/Comparison_of_application_virtual_machines" class="mw-redirect" title="Comparison of application virtual machines">Comparison of application virtual machines</a></li>
+<li><a href="/wiki/SWIG" title="SWIG">SWIG</a> opensource automatic interfaces bindings generator from many languages to many languages</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=16" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.omg.org/gettingstarted/history_of_corba.htm">"History of CORBA"</a>. <a href="/wiki/Object_Management_Group" title="Object Management Group">Object Management Group</a><span class="reference-accessdate">. Retrieved <span class="nowrap">12 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=History+of+CORBA&amp;rft.pub=Object+Management+Group&amp;rft_id=http%3A%2F%2Fwww.omg.org%2Fgettingstarted%2Fhistory_of_corba.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.corba.org/history_of_corba.htm">"History of CORBA"</a>. <a href="/wiki/Object_Management_Group" title="Object Management Group">Object Management Group</a><span class="reference-accessdate">. Retrieved <span class="nowrap">4 June</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=History+of+CORBA&amp;rft.pub=Object+Management+Group&amp;rft_id=http%3A%2F%2Fwww.corba.org%2Fhistory_of_corba.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.drdobbs.com/the-corba-component-model/184403888">"The CORBA Component Model"</a>. <a href="/wiki/Dr._Dobb%27s_Journal" title="Dr. Dobb&#39;s Journal">Dr. Dobb's Journal</a>. 1 September 2004<span class="reference-accessdate">. Retrieved <span class="nowrap">13 March</span> 2017</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+CORBA+Component+Model&amp;rft.pub=Dr.+Dobb%27s+Journal&amp;rft.date=2004-09-01&amp;rft_id=http%3A%2F%2Fwww.drdobbs.com%2Fthe-corba-component-model%2F184403888&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ois.com/Products/communications-middleware.html">"ORBexpress&#160;: Real-time CORBA ORB"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ORBexpress+%3A+Real-time+CORBA+ORB&amp;rft_id=http%3A%2F%2Fwww.ois.com%2FProducts%2Fcommunications-middleware.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://omniorb.sourceforge.net">"omniORB&#160;: Free CORBA ORB"</a>. <i>sourceforge.net</i><span class="reference-accessdate">. Retrieved <span class="nowrap">9 January</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=sourceforge.net&amp;rft.atitle=omniORB+%3A+Free+CORBA+ORB&amp;rft_id=http%3A%2F%2Fomniorb.sourceforge.net&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-CORBA_trouble-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-CORBA_trouble_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-CORBA_trouble_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Chappel, David (May 1998). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20121203074323/http://www.davidchappell.com/articles/article_Trouble_CORBA.html">"Trouble with CORBA"</a>. davidchappel.com. Archived from <a rel="nofollow" class="external text" href="http://www.davidchappell.com/articles/article_Trouble_CORBA.html">the original</a> on 3 December 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">15 March</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Trouble+with+CORBA&amp;rft.pub=davidchappel.com&amp;rft.date=1998-05&amp;rft.aulast=Chappel&amp;rft.aufirst=David&amp;rft_id=http%3A%2F%2Fwww.davidchappell.com%2Farticles%2Farticle_Trouble_CORBA.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal">Waldo, Jim; Geoff Wyant; Ann Wollrath; Sam Kendall (November 1994). <a rel="nofollow" class="external text" href="http://www.cc.gatech.edu/classes/AY2010/cs4210_fall/papers/smli_tr-94-29.pdf">"A Note on Distributed Computing"</a> <span class="cs1-format">(PDF)</span>. <i>Sun Microsystem Laboratories</i><span class="reference-accessdate">. Retrieved <span class="nowrap">4 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Sun+Microsystem+Laboratories&amp;rft.atitle=A+Note+on+Distributed+Computing&amp;rft.date=1994-11&amp;rft.aulast=Waldo&amp;rft.aufirst=Jim&amp;rft.au=Geoff+Wyant&amp;rft.au=Ann+Wollrath&amp;rft.au=Sam+Kendall&amp;rft_id=http%3A%2F%2Fwww.cc.gatech.edu%2Fclasses%2FAY2010%2Fcs4210_fall%2Fpapers%2Fsmli_tr-94-29.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-ACM_fall-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-ACM_fall_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ACM_fall_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Henning, Michi (30 June 2006). <a rel="nofollow" class="external text" href="http://queue.acm.org/detail.cfm?id=1142044">"The Rise and Fall of CORBA"</a>. <i><a href="/wiki/ACM_Queue" title="ACM Queue">ACM Queue</a></i>. <a href="/wiki/Association_for_Computing_Machinery" title="Association for Computing Machinery">Association for Computing Machinery</a>. <b>4</b> (5)<span class="reference-accessdate">. Retrieved <span class="nowrap">15 March</span> 2010</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+Queue&amp;rft.atitle=The+Rise+and+Fall+of+CORBA&amp;rft.volume=4&amp;rft.issue=5&amp;rft.date=2006-06-30&amp;rft.aulast=Henning&amp;rft.aufirst=Michi&amp;rft_id=http%3A%2F%2Fqueue.acm.org%2Fdetail.cfm%3Fid%3D1142044&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=17" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.omg.org/spec/CORBA/">"CORBA"</a>. <i>Current</i>. Specification. <a href="/wiki/Object_Management_Group" title="Object Management Group">OMG</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Current&amp;rft.atitle=CORBA&amp;rft_id=https%3A%2F%2Fwww.omg.org%2Fspec%2FCORBA%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Orfali, Robert. <a rel="nofollow" class="external text" href="https://archive.org/details/essentialclients00orfa"><i>The Essential Client/Server Survival Guide</i></a>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-15325-7" title="Special:BookSources/0-471-15325-7"><bdi>0-471-15325-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Essential+Client%2FServer+Survival+Guide&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-15325-7&amp;rft.aulast=Orfali&amp;rft.aufirst=Robert&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fessentialclients00orfa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Orfali, Robert; Harkey, Dan; Edwards, Jeri. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/essentialdistrib00orfa"><i>The Essential Distributed Objects Survival Guide</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-12993-3" title="Special:BookSources/0-471-12993-3"><bdi>0-471-12993-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Essential+Distributed+Objects+Survival+Guide&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-12993-3&amp;rft.aulast=Orfali&amp;rft.aufirst=Robert&amp;rft.au=Harkey%2C+Dan&amp;rft.au=Edwards%2C+Jeri&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fessentialdistrib00orfa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Orfali, Robert; Harkey, Dan. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/clientserverprog00orfa"><i>Client/Server Programming with JAVA and CORBA</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-24578-X" title="Special:BookSources/0-471-24578-X"><bdi>0-471-24578-X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Client%2FServer+Programming+with+JAVA+and+CORBA&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-24578-X&amp;rft.aulast=Orfali&amp;rft.aufirst=Robert&amp;rft.au=Harkey%2C+Dan&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fclientserverprog00orfa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Slama, Dirk; Garbis, Jason; Russell, Perry. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/isbn_9780130839633"><i>Enterprise CORBA</i></a></span>. Prentice Hall. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-083963-9" title="Special:BookSources/0-13-083963-9"><bdi>0-13-083963-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Enterprise+CORBA&amp;rft.pub=Prentice+Hall&amp;rft.isbn=0-13-083963-9&amp;rft.aulast=Slama&amp;rft.aufirst=Dirk&amp;rft.au=Garbis%2C+Jason&amp;rft.au=Russell%2C+Perry&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fisbn_9780130839633&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Henning, Michi; Vinoski, Steve. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/advancedcorbapro00henn"><i>Advanced CORBA Programming with C++</i></a></span>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-37927-9" title="Special:BookSources/0-201-37927-9"><bdi>0-201-37927-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Advanced+CORBA+Programming+with+C%2B%2B&amp;rft.pub=Addison-Wesley&amp;rft.isbn=0-201-37927-9&amp;rft.aulast=Henning&amp;rft.aufirst=Michi&amp;rft.au=Vinoski%2C+Steve&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fadvancedcorbapro00henn&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Korthaus, Axel; Schader, Martin; Aleksy, Markus. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20051031102447/http://www.wifo.uni-mannheim.de/CORBA/"><i>Implementing Distributed Systems with Java and CORBA</i></a>. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/3-540-24173-6" title="Special:BookSources/3-540-24173-6"><bdi>3-540-24173-6</bdi></a>. Archived from <a rel="nofollow" class="external text" href="http://www.wifo.uni-mannheim.de/CORBA/">the original</a> on 31 October 2005<span class="reference-accessdate">. Retrieved <span class="nowrap">23 June</span> 2005</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Implementing+Distributed+Systems+with+Java+and+CORBA&amp;rft.pub=Springer&amp;rft.isbn=3-540-24173-6&amp;rft.aulast=Korthaus&amp;rft.aufirst=Axel&amp;rft.au=Schader%2C+Martin&amp;rft.au=Aleksy%2C+Markus&amp;rft_id=http%3A%2F%2Fwww.wifo.uni-mannheim.de%2FCORBA%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Bolton, Fintan. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/purecorba00fint"><i>Pure Corba</i></a></span>. Sams Publishing. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-672-31812-1" title="Special:BookSources/0-672-31812-1"><bdi>0-672-31812-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Pure+Corba&amp;rft.pub=Sams+Publishing&amp;rft.isbn=0-672-31812-1&amp;rft.aulast=Bolton&amp;rft.aufirst=Fintan&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fpurecorba00fint&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Siegel, Jon. <i>CORBA 3 - Fundamentals and Programming</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-29518-3" title="Special:BookSources/0-471-29518-3"><bdi>0-471-29518-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CORBA+3+-+Fundamentals+and+Programming&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-29518-3&amp;rft.aulast=Siegel&amp;rft.aufirst=Jon&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Zahavi, Ron. <i>Enterprise Application Integration with CORBA: Component and Web-Based Solutions</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-32720-4" title="Special:BookSources/0-471-32720-4"><bdi>0-471-32720-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Enterprise+Application+Integration+with+CORBA%3A+Component+and+Web-Based+Solutions&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-32720-4&amp;rft.aulast=Zahavi&amp;rft.aufirst=Ron&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Hartman, Bret; Beznosov, hartman; Vinoski, Steve; Flinn, Donald. <i>Enterprise Security with EJB and CORBA</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-40131-5" title="Special:BookSources/0-471-40131-5"><bdi>0-471-40131-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Enterprise+Security+with+EJB+and+CORBA&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-40131-5&amp;rft.aulast=Hartman&amp;rft.aufirst=Bret&amp;rft.au=Beznosov%2C+hartman&amp;rft.au=Vinoski%2C+Steve&amp;rft.au=Flinn%2C+Donald&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Mowbray, Thomas J.; Zahavi, Ron. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/essentialcorbasy00mowb"><i>The Essential Corba: System Integration Using Distributed Objects</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-10611-9" title="Special:BookSources/0-471-10611-9"><bdi>0-471-10611-9</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Essential+Corba%3A+System+Integration+Using+Distributed+Objects&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-10611-9&amp;rft.aulast=Mowbray&amp;rft.aufirst=Thomas+J.&amp;rft.au=Zahavi%2C+Ron&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fessentialcorbasy00mowb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Michael_Rosen_(enterprise_architect)" title="Michael Rosen (enterprise architect)">Rosen, Michael</a>; Curtis, David. <i>Integrating CORBA and COM Applications</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-19827-7" title="Special:BookSources/0-471-19827-7"><bdi>0-471-19827-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Integrating+CORBA+and+COM+Applications&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-19827-7&amp;rft.aulast=Rosen&amp;rft.aufirst=Michael&amp;rft.au=Curtis%2C+David&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Brose, Gerald; Vogel, Andreas; Duddy, Keith. <i>Java Programming with CORBA</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-37681-7" title="Special:BookSources/0-471-37681-7"><bdi>0-471-37681-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Java+Programming+with+CORBA&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-37681-7&amp;rft.aulast=Brose&amp;rft.aufirst=Gerald&amp;rft.au=Vogel%2C+Andreas&amp;rft.au=Duddy%2C+Keith&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Schettino, John; Hohman, Robin S.; O'Hara, Liz. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/corbafordummies00sche"><i>CORBA For Dummies</i></a></span>. Hungry Minds. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7645-0308-1" title="Special:BookSources/0-7645-0308-1"><bdi>0-7645-0308-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CORBA+For+Dummies&amp;rft.pub=Hungry+Minds&amp;rft.isbn=0-7645-0308-1&amp;rft.aulast=Schettino&amp;rft.aufirst=John&amp;rft.au=Hohman%2C+Robin+S.&amp;rft.au=O%27Hara%2C+Liz&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcorbafordummies00sche&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Rosenberger, Jeremy L. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/teachyourselfcor00rose"><i>Teach Yourself CORBA in 14 Days</i></a></span>. Sams Publishing. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-672-31208-5" title="Special:BookSources/0-672-31208-5"><bdi>0-672-31208-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Teach+Yourself+CORBA+in+14+Days&amp;rft.pub=Sams+Publishing&amp;rft.isbn=0-672-31208-5&amp;rft.aulast=Rosenberger&amp;rft.aufirst=Jeremy+L.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fteachyourselfcor00rose&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Siegel, Jon. <i>Quick CORBA 3</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-38935-8" title="Special:BookSources/0-471-38935-8"><bdi>0-471-38935-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Quick+CORBA+3&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-38935-8&amp;rft.aulast=Siegel&amp;rft.aufirst=Jon&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Mowbray, Thomas J.; Malveau, Raphael C. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/corbadesignpatte00mowb"><i>CORBA Design Patterns</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-15882-8" title="Special:BookSources/0-471-15882-8"><bdi>0-471-15882-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CORBA+Design+Patterns&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-15882-8&amp;rft.aulast=Mowbray&amp;rft.aufirst=Thomas+J.&amp;rft.au=Malveau%2C+Raphael+C.&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcorbadesignpatte00mowb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Orfali, Robert; Harkey, Dan; Edwards, Jeri. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/instantcorba00orfa"><i>Instant CORBA</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-18333-4" title="Special:BookSources/0-471-18333-4"><bdi>0-471-18333-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Instant+CORBA&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.isbn=0-471-18333-4&amp;rft.aulast=Orfali&amp;rft.aufirst=Robert&amp;rft.au=Harkey%2C+Dan&amp;rft.au=Edwards%2C+Jeri&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Finstantcorba00orfa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Paul_Harmon_(management_author)" title="Paul Harmon (management author)">Harmon, Paul</a>; Morrissey, William (1996). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/objecttechnology00harm"><i>The Object Technology Casebook</i></a></span>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-471-14717-6" title="Special:BookSources/0-471-14717-6"><bdi>0-471-14717-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Object+Technology+Casebook&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=1996&amp;rft.isbn=0-471-14717-6&amp;rft.aulast=Harmon&amp;rft.aufirst=Paul&amp;rft.au=Morrissey%2C+William&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fobjecttechnology00harm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACommon+Object+Request+Broker+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit&amp;section=18" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/CORBA_Programming" class="extiw" title="wikibooks:CORBA Programming">CORBA Programming</a></b></i></td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.omg.org/spec/CCM/">Official OMG CORBA Components page</a></li>
+<li><a rel="nofollow" class="external text" href="http://ditec.um.es/~dsevilla/ccm">Unofficial CORBA Component Model page</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.taox11.org/documents/presentations.html">Comparing IDL to C++ with IDL to C++11</a></li>
+<li><a rel="nofollow" class="external text" href="http://queue.acm.org/detail.cfm?id=1388786">Corba: Gone But (Hopefully) Not Forgotten</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.omg.org/spec/CORBA/">OMG XMI Specification</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="ISO_standards_by_standard_number" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:ISO_standards" title="Template:ISO standards"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:ISO_standards" title="Template talk:ISO standards"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:ISO_standards&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="ISO_standards_by_standard_number" style="font-size:114%;margin:0 4em"><a href="/wiki/International_Organization_for_Standardization" title="International Organization for Standardization">ISO</a> standards <style data-mw-deduplicate="TemplateStyles:r886047488">.mw-parser-output .nobold{font-weight:normal}</style><span class="nobold"><span style="font-size:90%;">by standard number</span></span></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="List_of_ISO_standards_/_ISO_romanizations_/_IEC_standards">List of <a href="/wiki/List_of_International_Organization_for_Standardization_standards" title="List of International Organization for Standardization standards">ISO standards</a>&#160;/&#32;<a href="/wiki/List_of_ISO_romanizations" title="List of ISO romanizations">ISO romanizations</a>&#160;/&#32;<a href="/wiki/List_of_IEC_standards" class="mw-redirect" title="List of IEC standards">IEC standards</a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">1–9999</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO_1" title="ISO 1">1</a></li>
+<li><a href="/wiki/ISO_2" title="ISO 2">2</a></li>
+<li><a href="/wiki/Renard_series" title="Renard series">3</a></li>
+<li><a href="/wiki/ISO_4" title="ISO 4">4</a></li>
+<li><a href="/wiki/ISO_5" title="ISO 5">5</a></li>
+<li><a href="/wiki/Film_speed" title="Film speed">6</a></li>
+<li><a href="/wiki/British_Standard_Pipe" title="British Standard Pipe">7</a></li>
+<li><a href="/wiki/ISO_9" title="ISO 9">9</a></li>
+<li><a href="/wiki/A440_(pitch_standard)" title="A440 (pitch standard)">16</a></li>
+<li><a href="/wiki/Renard_series" title="Renard series">17</a></li>
+<li><a href="/wiki/ISO_31" title="ISO 31">31</a>
+<ul><li><a href="/wiki/ISO_31-0" title="ISO 31-0">-0</a></li>
+<li><a href="/wiki/ISO_31-1" title="ISO 31-1">-1</a></li>
+<li><a href="/wiki/ISO_31-2" title="ISO 31-2">-2</a></li>
+<li><a href="/wiki/ISO_31-3" title="ISO 31-3">-3</a></li>
+<li><a href="/wiki/ISO_31-4" title="ISO 31-4">-4</a></li>
+<li><a href="/wiki/ISO_31-5" title="ISO 31-5">-5</a></li>
+<li><a href="/wiki/ISO_31-6" title="ISO 31-6">-6</a></li>
+<li><a href="/wiki/ISO_31-7" title="ISO 31-7">-7</a></li>
+<li><a href="/wiki/ISO_31-8" title="ISO 31-8">-8</a></li>
+<li><a href="/wiki/ISO_31-9" title="ISO 31-9">-9</a></li>
+<li><a href="/wiki/ISO_31-10" title="ISO 31-10">-10</a></li>
+<li><a href="/wiki/ISO_31-11" title="ISO 31-11">-11</a></li>
+<li><a href="/wiki/ISO_31-12" title="ISO 31-12">-12</a></li>
+<li><a href="/wiki/ISO_31-13" title="ISO 31-13">-13</a></li></ul></li>
+<li><a href="/wiki/ISO_128" title="ISO 128">128</a></li>
+<li><a href="/wiki/ISO_216" title="ISO 216">216</a></li>
+<li><a href="/wiki/ISO_217" title="ISO 217">217</a></li>
+<li><a href="/wiki/Equal-loudness_contour" title="Equal-loudness contour">226</a></li>
+<li><a href="/wiki/British_Standard_Pipe" title="British Standard Pipe">228</a></li>
+<li><a href="/wiki/ISO_233" title="ISO 233">233</a></li>
+<li><a href="/wiki/ISO_259" title="ISO 259">259</a></li>
+<li><a href="/wiki/Envelope" title="Envelope">269</a></li>
+<li><a href="/wiki/Kappa_number" title="Kappa number">302</a></li>
+<li><a href="/wiki/Vicat_softening_point" title="Vicat softening point">306</a></li>
+<li><a href="/wiki/ISO_361" title="ISO 361">361</a></li>
+<li><a href="/wiki/ISO_428" title="ISO 428">428</a></li>
+<li><a href="/wiki/Power_take-off" title="Power take-off">500</a></li>
+<li><a href="/wiki/ISO_518" class="mw-redirect" title="ISO 518">518</a></li>
+<li><a href="/wiki/ISO_519" class="mw-redirect" title="ISO 519">519</a></li>
+<li><a href="/wiki/ISO_639" title="ISO 639">639</a>
+<ul><li><a href="/wiki/ISO_639-1" title="ISO 639-1">-1</a></li>
+<li><a href="/wiki/ISO_639-2" title="ISO 639-2">-2</a></li>
+<li><a href="/wiki/ISO_639-3" title="ISO 639-3">-3</a></li>
+<li><a href="/wiki/ISO_639-5" title="ISO 639-5">-5</a></li>
+<li><a href="/wiki/ISO_639-6" title="ISO 639-6">-6</a></li></ul></li>
+<li><a href="/wiki/ISO/IEC_646" title="ISO/IEC 646">646</a></li>
+<li><a href="/wiki/ISO_657" title="ISO 657">657</a></li>
+<li><a href="/wiki/ISO_668" title="ISO 668">668</a></li>
+<li><a href="/wiki/ISO_690" title="ISO 690">690</a></li>
+<li><a href="/wiki/ISO_704" title="ISO 704">704</a></li>
+<li><a href="/wiki/ISO_732" title="ISO 732">732</a></li>
+<li><a href="/wiki/Antimagnetic_watch" title="Antimagnetic watch">764</a></li>
+<li><a href="/wiki/Hole_punch" title="Hole punch">838</a></li>
+<li><a href="/wiki/ISO_843" title="ISO 843">843</a></li>
+<li><a href="/wiki/ISO_860" title="ISO 860">860</a></li>
+<li><a href="/wiki/ISO_898" title="ISO 898">898</a></li>
+<li><a href="/wiki/ISO_965" title="ISO 965">965</a></li>
+<li><a href="/wiki/ISO_999" title="ISO 999">999</a></li>
+<li><a href="/wiki/ISO_1000" title="ISO 1000">1000</a></li>
+<li><a href="/wiki/Magnetic_ink_character_recognition" title="Magnetic ink character recognition">1004</a></li>
+<li><a href="/wiki/135_film" title="135 film">1007</a></li>
+<li><a href="/wiki/OCR-A_font" class="mw-redirect" title="OCR-A font">1073-1</a></li>
+<li><a href="/wiki/Longitudinal_redundancy_check" title="Longitudinal redundancy check">1155</a></li>
+<li><a href="/wiki/ISO_1413" class="mw-redirect" title="ISO 1413">1413</a></li>
+<li><a href="/wiki/ALGOL_60" title="ALGOL 60">1538</a></li>
+<li><a href="/wiki/ISO_1629" title="ISO 1629">1629</a></li>
+<li><a href="/wiki/ISO_1745" title="ISO 1745">1745</a></li>
+<li><a href="/wiki/COBOL" title="COBOL">1989</a></li>
+<li><a href="/wiki/ISO_2014" title="ISO 2014">2014</a></li>
+<li><a href="/wiki/ISO_2015" title="ISO 2015">2015</a></li>
+<li><a href="/wiki/ISO/IEC_2022" title="ISO/IEC 2022">2022</a></li>
+<li><a href="/wiki/ISO_2033" title="ISO 2033">2033</a></li>
+<li><a href="/wiki/ISO_2047" title="ISO 2047">2047</a></li>
+<li><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">2108</a></li>
+<li><a href="/wiki/ISO_2145" title="ISO 2145">2145</a></li>
+<li><a href="/wiki/ISO_2146" title="ISO 2146">2146</a></li>
+<li><a href="/wiki/Film_speed" title="Film speed">2240</a></li>
+<li><a href="/wiki/Water_Resistant_mark" title="Water Resistant mark">2281</a></li>
+<li><a href="/wiki/International_Standard_Atmosphere" title="International Standard Atmosphere">2533</a></li>
+<li><a href="/wiki/ISO_2709" title="ISO 2709">2709</a></li>
+<li><a href="/wiki/ISO_2711" title="ISO 2711">2711</a></li>
+<li><a href="/wiki/Film_speed" title="Film speed">2720</a></li>
+<li><a href="/wiki/ISO_2788" title="ISO 2788">2788</a></li>
+<li><a href="/wiki/ISO_2848" title="ISO 2848">2848</a></li>
+<li><a href="/wiki/ISO_2852" title="ISO 2852">2852</a></li>
+<li><a href="/wiki/126_film" title="126 film">3029</a></li>
+<li><a href="/wiki/ISO_3103" title="ISO 3103">3103</a></li>
+<li><a href="/wiki/ISO_3166" title="ISO 3166">3166</a>
+<ul><li><a href="/wiki/ISO_3166-1" title="ISO 3166-1">-1</a></li>
+<li><a href="/wiki/ISO_3166-2" title="ISO 3166-2">-2</a></li>
+<li><a href="/wiki/ISO_3166-3" title="ISO 3166-3">-3</a></li></ul></li>
+<li><a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">3297</a></li>
+<li><a href="/wiki/ISO_3307" title="ISO 3307">3307</a></li>
+<li><a href="/wiki/O-ring" title="O-ring">3601</a></li>
+<li><a href="/wiki/Kunrei-shiki_romanization" title="Kunrei-shiki romanization">3602</a></li>
+<li><a href="/wiki/ISO_3864" title="ISO 3864">3864</a></li>
+<li><a href="/wiki/International_Standard_Recording_Code" title="International Standard Recording Code">3901</a></li>
+<li><a href="/wiki/FDI_World_Dental_Federation_notation" title="FDI World Dental Federation notation">3950</a></li>
+<li><a href="/wiki/ISO_3977" title="ISO 3977">3977</a></li>
+<li><a href="/wiki/ISO_4031" title="ISO 4031">4031</a></li>
+<li><a href="/wiki/ISO_4157" title="ISO 4157">4157</a></li>
+<li><a href="/wiki/ISO_4165" title="ISO 4165">4165</a></li>
+<li><a href="/wiki/ISO_4217" title="ISO 4217">4217</a></li>
+<li><a href="/wiki/ISO/IEC_4909" title="ISO/IEC 4909">4909</a></li>
+<li><a href="/wiki/ISO/IEC_5218" title="ISO/IEC 5218">5218</a></li>
+<li><a href="/wiki/ISO_5426" title="ISO 5426">5426</a></li>
+<li><a href="/wiki/ISO_5427" title="ISO 5427">5427</a></li>
+<li><a href="/wiki/ISO_5428" title="ISO 5428">5428</a></li>
+<li><a href="/wiki/Accuracy_and_precision" title="Accuracy and precision">5725</a></li>
+<li><a href="/wiki/ISO_5775" title="ISO 5775">5775</a></li>
+<li><a href="/wiki/ISO_5776" title="ISO 5776">5776</a></li>
+<li><a href="/wiki/Film_speed" title="Film speed">5800</a></li>
+<li><a href="/wiki/Flowchart" title="Flowchart">5807</a></li>
+<li><a href="/wiki/ISO_5964" title="ISO 5964">5964</a></li>
+<li><a href="/wiki/International_Securities_Identification_Number" title="International Securities Identification Number">6166</a></li>
+<li><a href="/wiki/ISO_6344" title="ISO 6344">6344</a></li>
+<li><a href="/wiki/ISO_6346" title="ISO 6346">6346</a></li>
+<li><a href="/wiki/ISO_6385" title="ISO 6385">6385</a></li>
+<li><a href="/wiki/Water_Resistant_mark" title="Water Resistant mark">6425</a></li>
+<li><a href="/wiki/ANSI_escape_code" title="ANSI escape code">6429</a></li>
+<li><a href="/wiki/ISO_6438" title="ISO 6438">6438</a></li>
+<li><a href="/wiki/ISO/IEC_6523" title="ISO/IEC 6523">6523</a></li>
+<li><a href="/wiki/ISO_6709" title="ISO 6709">6709</a></li>
+<li><a href="/wiki/ISO_6943" title="ISO 6943">6943</a></li>
+<li><a href="/wiki/ISO_7001" title="ISO 7001">7001</a></li>
+<li><a href="/wiki/ISO_7002" title="ISO 7002">7002</a></li>
+<li><a href="/wiki/ISO_7010" title="ISO 7010">7010</a></li>
+<li><a href="/wiki/ISO_7027" title="ISO 7027">7027</a></li>
+<li><a href="/wiki/ISO_7064" title="ISO 7064">7064</a></li>
+<li><a href="/wiki/Pinyin" title="Pinyin">7098</a></li>
+<li><a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">7185</a></li>
+<li><a href="/wiki/ISO_7200" title="ISO 7200">7200</a></li>
+<li><a href="/wiki/Open_Systems_Interconnection" class="mw-redirect" title="Open Systems Interconnection">7498</a>
+<ul><li><a href="/wiki/OSI_model" title="OSI model">-1</a></li></ul></li>
+<li><a href="/wiki/ISO_7637" title="ISO 7637">7637</a></li>
+<li><a href="/wiki/ISO_7736" title="ISO 7736">7736</a></li>
+<li><a href="/wiki/ISO/IEC_7810" title="ISO/IEC 7810">7810</a></li>
+<li><a href="/wiki/ISO/IEC_7811" title="ISO/IEC 7811">7811</a></li>
+<li><a href="/wiki/ISO/IEC_7812" title="ISO/IEC 7812">7812</a></li>
+<li><a href="/wiki/ISO/IEC_7813" title="ISO/IEC 7813">7813</a></li>
+<li><a href="/wiki/ISO/IEC_7816" title="ISO/IEC 7816">7816</a></li>
+<li><a href="/wiki/Graphical_Kernel_System" title="Graphical Kernel System">7942</a></li>
+<li><a href="/wiki/ISO_8000" title="ISO 8000">8000</a></li>
+<li><a href="/wiki/On-board_diagnostics" title="On-board diagnostics">8093</a></li>
+<li><a href="/wiki/ISO_8178" title="ISO 8178">8178</a></li>
+<li><a href="/wiki/Fuel_oil" title="Fuel oil">8217</a></li>
+<li><a href="/wiki/ISO_8373" title="ISO 8373">8373</a></li>
+<li><a href="/wiki/ISO_8501-1" title="ISO 8501-1">8501-1</a></li>
+<li><a href="/wiki/FTAM" title="FTAM">8571</a></li>
+<li><a href="/wiki/ISO_8583" title="ISO 8583">8583</a></li>
+<li><a href="/wiki/ISO_8601" title="ISO 8601">8601</a></li>
+<li><a href="/wiki/Open_Document_Architecture" title="Open Document Architecture">8613</a></li>
+<li><a href="/wiki/Computer_Graphics_Metafile" title="Computer Graphics Metafile">8632</a></li>
+<li><a href="/wiki/Graphical_Kernel_System" title="Graphical Kernel System">8651</a></li>
+<li><a href="/wiki/ISO/IEC_8652" title="ISO/IEC 8652">8652</a></li>
+<li><a href="/wiki/ISO_8691" title="ISO 8691">8691</a></li>
+<li><a href="/wiki/Graphical_Kernel_System" title="Graphical Kernel System">8805/8806</a></li>
+<li><a href="/wiki/Language_Of_Temporal_Ordering_Specification" title="Language Of Temporal Ordering Specification">8807</a></li>
+<li><a href="/wiki/ISO/IEC_8820-5" title="ISO/IEC 8820-5">8820-5</a></li>
+<li><a href="/wiki/ISO/IEC_8859" title="ISO/IEC 8859">8859</a>
+<ul><li><a href="/wiki/ISO/IEC_8859-1" title="ISO/IEC 8859-1">-1</a></li>
+<li><a href="/wiki/ISO/IEC_8859-2" title="ISO/IEC 8859-2">-2</a></li>
+<li><a href="/wiki/ISO/IEC_8859-3" title="ISO/IEC 8859-3">-3</a></li>
+<li><a href="/wiki/ISO/IEC_8859-4" title="ISO/IEC 8859-4">-4</a></li>
+<li><a href="/wiki/ISO/IEC_8859-5" title="ISO/IEC 8859-5">-5</a></li>
+<li><a href="/wiki/ISO/IEC_8859-6" title="ISO/IEC 8859-6">-6</a></li>
+<li><a href="/wiki/ISO/IEC_8859-7" title="ISO/IEC 8859-7">-7</a></li>
+<li><a href="/wiki/ISO/IEC_8859-8" title="ISO/IEC 8859-8">-8</a></li>
+<li><a href="/wiki/ISO-8859-8-I" title="ISO-8859-8-I">-8-I</a></li>
+<li><a href="/wiki/ISO/IEC_8859-9" title="ISO/IEC 8859-9">-9</a></li>
+<li><a href="/wiki/ISO/IEC_8859-10" title="ISO/IEC 8859-10">-10</a></li>
+<li><a href="/wiki/ISO/IEC_8859-11" title="ISO/IEC 8859-11">-11</a></li>
+<li><a href="/wiki/ISO/IEC_8859-12" title="ISO/IEC 8859-12">-12</a></li>
+<li><a href="/wiki/ISO/IEC_8859-13" title="ISO/IEC 8859-13">-13</a></li>
+<li><a href="/wiki/ISO/IEC_8859-14" title="ISO/IEC 8859-14">-14</a></li>
+<li><a href="/wiki/ISO/IEC_8859-15" title="ISO/IEC 8859-15">-15</a></li>
+<li><a href="/wiki/ISO/IEC_8859-16" title="ISO/IEC 8859-16">-16</a></li></ul></li>
+<li><a href="/wiki/Standard_Generalized_Markup_Language" title="Standard Generalized Markup Language">8879</a></li>
+<li><a href="/wiki/ISO_9000" title="ISO 9000">9000/9001</a></li>
+<li><a href="/wiki/ASMO_449" title="ASMO 449">9036</a></li>
+<li><a href="/wiki/SQL" title="SQL">9075</a></li>
+<li><a href="/wiki/ISO/IEC_9126" title="ISO/IEC 9126">9126</a></li>
+<li><a href="/wiki/On-board_diagnostics" title="On-board diagnostics">9141</a></li>
+<li><a href="/wiki/Salt_spray_test" title="Salt spray test">9227</a></li>
+<li><a href="/wiki/ISO_9241" title="ISO 9241">9241</a></li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">9293</a></li>
+<li><a href="/wiki/Fiber_Distributed_Data_Interface" title="Fiber Distributed Data Interface">9314</a></li>
+<li><a href="/wiki/ISO_9362" title="ISO 9362">9362</a></li>
+<li><a href="/wiki/Shoe_size" title="Shoe size">9407</a></li>
+<li><a href="/wiki/Manufacturing_Message_Specification" title="Manufacturing Message Specification">9506</a></li>
+<li><a href="/wiki/ISO_9529" title="ISO 9529">9529</a></li>
+<li><a href="/wiki/ISO_9564" title="ISO 9564">9564</a></li>
+<li><a href="/wiki/PHIGS" title="PHIGS">9592/9593</a></li>
+<li><a href="/wiki/X.500" title="X.500">9594</a></li>
+<li><a href="/wiki/ISO_9660" title="ISO 9660">9660</a></li>
+<li><a href="/wiki/ISO/IEC_9797-1" title="ISO/IEC 9797-1">9797-1</a></li>
+<li><a href="/wiki/ISO_9897" title="ISO 9897">9897</a></li>
+<li><a href="/wiki/C_(programming_language)" title="C (programming language)">9899</a></li>
+<li><a href="/wiki/POSIX" title="POSIX">9945</a></li>
+<li><a href="/wiki/Romanization_of_Georgian" title="Romanization of Georgian">9984</a></li>
+<li><a href="/wiki/Romanization_of_Armenian" title="Romanization of Armenian">9985</a></li>
+<li><a href="/wiki/ISO/IEC_9995" title="ISO/IEC 9995">9995</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">10000–19999</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO_10005" class="mw-redirect" title="ISO 10005">10005</a></li>
+<li><a href="/wiki/ISO_10006" title="ISO 10006">10006</a></li>
+<li><a href="/wiki/ISO_10007" title="ISO 10007">10007</a></li>
+<li><a href="/wiki/ISO/IEC_10116" title="ISO/IEC 10116">10116</a></li>
+<li><a href="/wiki/Whirlpool_(hash_function)" title="Whirlpool (hash function)">10118-3</a></li>
+<li><a href="/wiki/ISO_10160" title="ISO 10160">10160</a></li>
+<li><a href="/wiki/ISO_10161" title="ISO 10161">10161</a></li>
+<li><a href="/wiki/Guidelines_for_the_Definition_of_Managed_Objects" title="Guidelines for the Definition of Managed Objects">10165</a></li>
+<li><a href="/wiki/Document_Style_Semantics_and_Specification_Language" title="Document Style Semantics and Specification Language">10179</a></li>
+<li><a href="/wiki/ISO_10206" class="mw-redirect" title="ISO 10206">10206</a></li>
+<li><a href="/wiki/ISO_10218" title="ISO 10218">10218</a></li>
+<li><a href="/wiki/ISO_10303" title="ISO 10303">10303</a>
+<ul><li><a href="/wiki/EXPRESS_(data_modeling_language)" title="EXPRESS (data modeling language)">-11</a></li>
+<li><a href="/wiki/ISO_10303-21" title="ISO 10303-21">-21</a></li>
+<li><a href="/wiki/ISO_10303-22" title="ISO 10303-22">-22</a></li>
+<li><a href="/wiki/ISO_10303-28" title="ISO 10303-28">-28</a></li>
+<li><a href="/wiki/STEP-NC" title="STEP-NC">-238</a></li></ul></li>
+<li><a href="/wiki/ISO_10383" class="mw-redirect" title="ISO 10383">10383</a></li>
+<li><a href="/wiki/ISO_10487" class="mw-redirect" title="ISO 10487">10487</a></li>
+<li><a href="/wiki/ArmSCII" title="ArmSCII">10585</a></li>
+<li><a href="/wiki/IS-IS" title="IS-IS">10589</a></li>
+<li><a href="/wiki/Universal_Coded_Character_Set" title="Universal Coded Character Set">10646</a></li>
+<li><a href="/wiki/Torx" title="Torx">10664</a></li>
+<li><a href="/wiki/RM-ODP" title="RM-ODP">10746</a></li>
+<li><a href="/wiki/Multibus" title="Multibus">10861</a></li>
+<li><a href="/wiki/International_Standard_Music_Number" title="International Standard Music Number">10957</a></li>
+<li><a href="/wiki/ISO_10962" title="ISO 10962">10962</a></li>
+<li><a href="/wiki/ISO/IEC_10967" title="ISO/IEC 10967">10967</a></li>
+<li><a href="/wiki/ISO/IEEE_11073" title="ISO/IEEE 11073">11073</a></li>
+<li><a href="/wiki/ISO_11170" title="ISO 11170">11170</a></li>
+<li><a href="/wiki/ISO/IEC_11179" title="ISO/IEC 11179">11179</a></li>
+<li><a href="/wiki/ISO/IEC_11404" title="ISO/IEC 11404">11404</a></li>
+<li><a href="/wiki/JBIG" title="JBIG">11544</a></li>
+<li><a href="/wiki/ISO_11783" title="ISO 11783">11783</a></li>
+<li><a href="/wiki/ISO_11784_and_ISO_11785" title="ISO 11784 and ISO 11785">11784</a></li>
+<li><a href="/wiki/ISO_11784_and_ISO_11785" title="ISO 11784 and ISO 11785">11785</a></li>
+<li><a href="/wiki/ISO/IEC_11801" title="ISO/IEC 11801">11801</a></li>
+<li><a href="/wiki/ISO_11898" class="mw-redirect" title="ISO 11898">11898</a></li>
+<li><a href="/wiki/ISO_11940" title="ISO 11940">11940</a> (<a href="/wiki/ISO_11940-2" title="ISO 11940-2">-2</a>)</li>
+<li><a href="/wiki/ISO/TR_11941" title="ISO/TR 11941">11941</a></li>
+<li><a href="/wiki/ISO/TR_11941" title="ISO/TR 11941">11941 (TR)</a></li>
+<li><a href="/wiki/ISO_11992" title="ISO 11992">11992</a></li>
+<li><a href="/wiki/ISO_12006" title="ISO 12006">12006</a></li>
+<li><a href="/wiki/ISO/IEC_TR_12182" title="ISO/IEC TR 12182">12182</a></li>
+<li><a href="/wiki/ISO/IEC_12207" title="ISO/IEC 12207">12207</a></li>
+<li><a href="/wiki/Tag_Image_File_Format_/_Electronic_Photography" class="mw-redirect" title="Tag Image File Format / Electronic Photography">12234-2</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">13211</a>
+<ul><li><a href="/wiki/Prolog" title="Prolog">-1</a></li>
+<li><a href="/wiki/Prolog" title="Prolog">-2</a></li></ul></li>
+<li><a href="/wiki/Isofix" title="Isofix">13216</a></li>
+<li><a href="/wiki/Topic_map" title="Topic map">13250</a></li>
+<li><a href="/wiki/ISO_13399" title="ISO 13399">13399</a></li>
+<li><a href="/wiki/ISO_13406-2" title="ISO 13406-2">13406-2</a></li>
+<li><a href="/wiki/110_film" title="110 film">13450</a></li>
+<li><a href="/wiki/ISO_13485" title="ISO 13485">13485</a></li>
+<li><a href="/wiki/ISO_13490" title="ISO 13490">13490</a></li>
+<li><a href="/wiki/ISO_13567" title="ISO 13567">13567</a></li>
+<li><a href="/wiki/Z_notation" title="Z notation">13568</a></li>
+<li><a href="/wiki/ISO_13584" title="ISO 13584">13584</a></li>
+<li><a href="/wiki/International_Bank_Account_Number" title="International Bank Account Number">13616</a></li>
+<li><a href="/wiki/ISO_14000" title="ISO 14000">14000</a></li>
+<li><a href="/wiki/ISO_14031" title="ISO 14031">14031</a></li>
+<li><a href="/wiki/ISO_14224" title="ISO 14224">14224</a></li>
+<li><a href="/wiki/PDF/UA" title="PDF/UA">14289</a></li>
+<li><a href="/wiki/Horsepower" title="Horsepower">14396</a></li>
+<li><a href="/wiki/ISO/IEC_14443" title="ISO/IEC 14443">14443</a></li>
+<li><a href="/wiki/MPEG-4" title="MPEG-4">14496</a>
+<ul><li><a href="/wiki/MPEG-4_Part_2" title="MPEG-4 Part 2">-2</a></li>
+<li><a href="/wiki/MPEG-4_Part_3" title="MPEG-4 Part 3">-3</a></li>
+<li><a href="/wiki/Delivery_Multimedia_Integration_Framework" title="Delivery Multimedia Integration Framework">-6</a></li>
+<li><a href="/wiki/H.264/MPEG-4_AVC" class="mw-redirect" title="H.264/MPEG-4 AVC">-10</a></li>
+<li><a href="/wiki/MPEG-4_Part_11" title="MPEG-4 Part 11">-11</a></li>
+<li><a href="/wiki/MPEG-4_Part_12" class="mw-redirect" title="MPEG-4 Part 12">-12</a></li>
+<li><a href="/wiki/MPEG-4_Part_14" title="MPEG-4 Part 14">-14</a></li>
+<li><a href="/wiki/MPEG-4_Part_14" title="MPEG-4 Part 14">-17</a></li>
+<li><a href="/wiki/MPEG-4_Part_14" title="MPEG-4 Part 14">-20</a></li></ul></li>
+<li><a href="/wiki/ISO_14644" title="ISO 14644">14644</a></li>
+<li><a href="/wiki/STEP-NC" title="STEP-NC">14649</a></li>
+<li><a href="/wiki/ISO_14651" title="ISO 14651">14651</a></li>
+<li><a href="/wiki/ISO_14698" title="ISO 14698">14698</a></li>
+<li><a href="/wiki/ISO_14750" title="ISO 14750">14750</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">14764</a></li>
+<li><a href="/wiki/C%2B%2B" title="C++">14882</a></li>
+<li><a href="/wiki/ISO_14971" title="ISO 14971">14971</a></li>
+<li><a href="/wiki/ISO_15022" title="ISO 15022">15022</a></li>
+<li><a href="/wiki/ISO_15189" title="ISO 15189">15189</a></li>
+<li><a href="/wiki/ISO/IEC_15288" title="ISO/IEC 15288">15288</a></li>
+<li><a href="/wiki/Ada_Semantic_Interface_Specification" title="Ada Semantic Interface Specification">15291</a></li>
+<li><a href="/wiki/ISO_15292" title="ISO 15292">15292</a></li>
+<li><a href="/wiki/ISO_15398" title="ISO 15398">15398</a></li>
+<li><a href="/wiki/Common_Criteria" title="Common Criteria">15408</a></li>
+<li><a href="/wiki/JPEG_2000" title="JPEG 2000">15444</a>
+<ul><li><a href="/wiki/Motion_JPEG_2000" title="Motion JPEG 2000">-3</a></li></ul></li>
+<li><a href="/wiki/HTML" title="HTML">15445</a></li>
+<li><a href="/wiki/PDF417" title="PDF417">15438</a></li>
+<li><a href="/wiki/ISO/IEC_15504" title="ISO/IEC 15504">15504</a></li>
+<li><a href="/wiki/International_Standard_Identifier_for_Libraries_and_Related_Organizations" title="International Standard Identifier for Libraries and Related Organizations">15511</a></li>
+<li><a href="/wiki/ISO_15686" title="ISO 15686">15686</a></li>
+<li><a href="/wiki/ISO/IEC_15693" title="ISO/IEC 15693">15693</a></li>
+<li><a href="/wiki/International_Standard_Audiovisual_Number" title="International Standard Audiovisual Number">15706</a>
+<ul><li><a href="/wiki/ISO_15706-2" title="ISO 15706-2">-2</a></li></ul></li>
+<li><a href="/wiki/International_Standard_Musical_Work_Code" title="International Standard Musical Work Code">15707</a></li>
+<li><a href="/wiki/ISO_15897" class="mw-redirect" title="ISO 15897">15897</a></li>
+<li><a href="/wiki/ISO_15919" title="ISO 15919">15919</a></li>
+<li><a href="/wiki/ISO_15924" title="ISO 15924">15924</a></li>
+<li><a href="/wiki/ISO_15926" title="ISO 15926">15926</a></li>
+<li><a href="/wiki/ISO_15926_WIP" title="ISO 15926 WIP">15926 WIP</a></li>
+<li><a href="/wiki/PDF/X" title="PDF/X">15930</a></li>
+<li><a href="/wiki/MaxiCode" title="MaxiCode">16023</a></li>
+<li><a href="/wiki/ECMAScript" title="ECMAScript">16262</a></li>
+<li><a href="/wiki/Quality_function_deployment" title="Quality function deployment">16355-1</a></li>
+<li><a href="/wiki/PDF/VT" title="PDF/VT">16612-2</a></li>
+<li><a href="/wiki/ISO_16750" title="ISO 16750">16750</a></li>
+<li><a href="/wiki/IATF_16949" class="mw-redirect" title="IATF 16949">16949 (TS)</a></li>
+<li><a href="/wiki/ISO/IEC_17024" title="ISO/IEC 17024">17024</a></li>
+<li><a href="/wiki/ISO/IEC_17025" title="ISO/IEC 17025">17025</a></li>
+<li><a href="/wiki/ISO_17100" title="ISO 17100">17100</a></li>
+<li><a href="/wiki/Open_Virtualization_Format" title="Open Virtualization Format">17203</a></li>
+<li><a href="/wiki/SDMX" title="SDMX">17369</a></li>
+<li><a href="/wiki/Legal_Entity_Identifier" title="Legal Entity Identifier">17442</a></li>
+<li><a href="/wiki/ISO/IEC_27002" title="ISO/IEC 27002">17799</a></li>
+<li><a href="/wiki/ISO/IEC_18000" title="ISO/IEC 18000">18000</a></li>
+<li><a href="/wiki/QR_code" title="QR code">18004</a></li>
+<li><a href="/wiki/ISO/IEC_18014" title="ISO/IEC 18014">18014</a></li>
+<li><a href="/wiki/ISO_18245" title="ISO 18245">18245</a></li>
+<li><a href="/wiki/Process_Specification_Language" title="Process Specification Language">18629</a></li>
+<li><a href="/wiki/Photographic_Activity_Test" title="Photographic Activity Test">18916</a></li>
+<li><a href="/wiki/PDF/A" title="PDF/A">19005</a></li>
+<li><a href="/wiki/ISO_19011" title="ISO 19011">19011</a></li>
+<li><a href="/wiki/ISO_19092-1" title="ISO 19092-1">19092 (-1</a></li>
+<li><a href="/wiki/ISO_19092-2" title="ISO 19092-2">-2)</a></li>
+<li><a href="/wiki/ISO_19114" title="ISO 19114">19114</a></li>
+<li><a href="/wiki/ISO_19115" class="mw-redirect" title="ISO 19115">19115</a></li>
+<li><a href="/wiki/Simple_feature_access" class="mw-redirect" title="Simple feature access">19125</a></li>
+<li><a href="/wiki/ISO_19136" class="mw-redirect" title="ISO 19136">19136</a></li>
+<li><a href="/wiki/Shoe_size" title="Shoe size">19407</a></li>
+<li><a href="/wiki/ISO_19439" title="ISO 19439">19439</a></li>
+<li><a class="mw-selflink selflink">19500</a></li>
+<li><a href="/wiki/Unified_Modeling_Language" title="Unified Modeling Language">19501</a></li>
+<li><a href="/wiki/Meta-Object_Facility" title="Meta-Object Facility">19502</a></li>
+<li><a href="/wiki/XML_Metadata_Interchange" title="XML Metadata Interchange">19503</a></li>
+<li><a href="/wiki/Unified_Modeling_Language" title="Unified Modeling Language">19505</a></li>
+<li><a href="/wiki/Knowledge_Discovery_Metamodel" title="Knowledge Discovery Metamodel">19506</a></li>
+<li><a href="/wiki/Object_Constraint_Language" title="Object Constraint Language">19507</a></li>
+<li><a href="/wiki/Meta-Object_Facility" title="Meta-Object Facility">19508</a></li>
+<li><a href="/wiki/XML_Metadata_Interchange" title="XML Metadata Interchange">19509</a></li>
+<li><a href="/wiki/Business_Process_Model_and_Notation" title="Business Process Model and Notation">19510</a></li>
+<li><a href="/wiki/ISO_19600" title="ISO 19600">19600</a></li>
+<li><a href="/wiki/ISO/IEC_19752" title="ISO/IEC 19752">19752</a></li>
+<li><a href="/wiki/RELAX_NG" title="RELAX NG">19757</a></li>
+<li><a href="/wiki/ISO/IEC_19770" title="ISO/IEC 19770">19770</a></li>
+<li><a href="/wiki/X3D" title="X3D">19775-1</a></li>
+<li><a href="/wiki/ISO/IEC_19794-5" title="ISO/IEC 19794-5">19794-5</a></li>
+<li><a href="/wiki/Cloud_Infrastructure_Management_Interface" title="Cloud Infrastructure Management Interface">19831</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">20000+</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ISO/IEC_20000" title="ISO/IEC 20000">20000</a></li>
+<li><a href="/wiki/ISO_20022" title="ISO 20022">20022</a></li>
+<li><a href="/wiki/ISO_20121" title="ISO 20121">20121</a></li>
+<li><a href="/wiki/ISO_20400" title="ISO 20400">20400</a></li>
+<li><a href="/wiki/MPEG-21" title="MPEG-21">21000</a></li>
+<li><a href="/wiki/International_Standard_Text_Code" title="International Standard Text Code">21047</a></li>
+<li><a href="/wiki/ISO_21500" title="ISO 21500">21500</a></li>
+<li><a href="/wiki/ISO/IEC_21827" title="ISO/IEC 21827">21827:2002</a></li>
+<li><a href="/wiki/ISO_22000" title="ISO 22000">22000</a></li>
+<li><a href="/wiki/ISO_22300" title="ISO 22300">22300</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">23270</a></li>
+<li><a href="/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">23271</a></li>
+<li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">23360</a></li>
+<li><a href="/wiki/PDF/E" title="PDF/E">24517</a></li>
+<li><a href="/wiki/Lexical_Markup_Framework" title="Lexical Markup Framework">24613</a></li>
+<li><a href="/wiki/ISO-TimeML" title="ISO-TimeML">24617</a></li>
+<li><a href="/wiki/Common_Logic" title="Common Logic">24707</a></li>
+<li><a href="/wiki/ISO_25178" title="ISO 25178">25178</a></li>
+<li><a href="/wiki/ISO_25964" title="ISO 25964">25964</a></li>
+<li><a href="/wiki/ISO_26000" title="ISO 26000">26000</a></li>
+<li><a href="/wiki/ISO_26262" title="ISO 26262">26262</a></li>
+<li><a href="/wiki/OpenDocument" title="OpenDocument">26300</a></li>
+<li><a href="/wiki/Digital_object_identifier" title="Digital object identifier">26324</a></li>
+<li><a href="/wiki/ISO/IEC_27000-series" title="ISO/IEC 27000-series">27000 series</a></li>
+<li><a href="/wiki/ISO/IEC_27000" title="ISO/IEC 27000">27000</a></li>
+<li><a href="/wiki/ISO/IEC_27001" title="ISO/IEC 27001">27001</a></li>
+<li><a href="/wiki/ISO/IEC_27002" title="ISO/IEC 27002">27002</a></li>
+<li><a href="/wiki/ISO/IEC_27006" title="ISO/IEC 27006">27006</a></li>
+<li><a href="/wiki/International_Standard_Name_Identifier" title="International Standard Name Identifier">27729</a></li>
+<li><a href="/wiki/ISO_28000" title="ISO 28000">28000</a></li>
+<li><a href="/wiki/ISO_29110" title="ISO 29110">29110</a></li>
+<li><a href="/wiki/Requirements_engineering" title="Requirements engineering">29148</a></li>
+<li><a href="/wiki/JPEG_XR" title="JPEG XR">29199-2</a></li>
+<li><a href="/wiki/Office_Open_XML" title="Office Open XML">29500</a></li>
+<li><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">30170</a></li>
+<li><a href="/wiki/ISO_31000" title="ISO 31000">31000</a></li>
+<li><a href="/wiki/Portable_Document_Format" class="mw-redirect" title="Portable Document Format">32000</a></li>
+<li><a href="/wiki/ISO_37001" title="ISO 37001">37001</a></li>
+<li><a href="/wiki/ISO/IEC_38500" title="ISO/IEC 38500">38500</a></li>
+<li><a href="/wiki/Web_Content_Accessibility_Guidelines" title="Web Content Accessibility Guidelines">40500</a></li>
+<li><a href="/wiki/ISO/IEC_42010" title="ISO/IEC 42010">42010</a></li>
+<li><a href="/wiki/ISO_45001" title="ISO 45001">45001</a></li>
+<li><a href="/wiki/ISO_50001" title="ISO 50001">50001</a></li>
+<li><a href="/wiki/ISO_55000" title="ISO 55000">55000</a></li>
+<li><a href="/wiki/ISO/IEC_80000" title="ISO/IEC 80000">80000</a>
+<ul><li><a href="/wiki/ISO_80000-1" title="ISO 80000-1">-1</a></li></ul></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <a href="/wiki/Category:ISO_standards" title="Category:ISO standards">Category</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q691593&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q691593&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q691593" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4403709-0">4403709-0</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh97002221">sh97002221</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1364
+Cached time: 20200322054457
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.512 seconds
+Real time usage: 0.685 seconds
+Preprocessor visited node count: 2231/1000000
+Post‐expand include size: 98862/2097152 bytes
+Template argument size: 2651/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 7/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 65338/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.241/10.000 seconds
+Lua memory usage: 6.29 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  536.470      1 -total
+ 22.71%  121.813      1 Template:Reflist
+ 18.42%   98.827      7 Template:Cite_web
+ 15.68%   84.110      1 Template:More_footnotes
+ 11.36%   60.956     19 Template:Cite_book
+ 10.60%   56.859      1 Template:Authority_control
+  9.21%   49.413      1 Template:Infobox_standardref
+  9.06%   48.580      1 Template:Ambox
+  8.49%   45.555      3 Template:Fix
+  7.95%   42.650      1 Template:Infobox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:43285-0!canonical and timestamp 20200322054457 and revision id 941785204
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;oldid=941785204">https://en.wikipedia.org/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;oldid=941785204</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Common_Object_Request_Broker_Architecture" title="Category:Common Object Request Broker Architecture">Common Object Request Broker Architecture</a></li><li><a href="/wiki/Category:Component-based_software_engineering" title="Category:Component-based software engineering">Component-based software engineering</a></li><li><a href="/wiki/Category:GNOME" title="Category:GNOME">GNOME</a></li><li><a href="/wiki/Category:Inter-process_communication" title="Category:Inter-process communication">Inter-process communication</a></li><li><a href="/wiki/Category:ISO_standards" title="Category:ISO standards">ISO standards</a></li><li><a href="/wiki/Category:Object-oriented_programming" title="Category:Object-oriented programming">Object-oriented programming</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_February_2009" title="Category:Articles lacking in-text citations from February 2009">Articles lacking in-text citations from February 2009</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_December_2019" title="Category:Use dmy dates from December 2019">Use dmy dates from December 2019</a></li><li><a href="/wiki/Category:All_articles_with_failed_verification" title="Category:All articles with failed verification">All articles with failed verification</a></li><li><a href="/wiki/Category:Articles_with_failed_verification_from_November_2017" title="Category:Articles with failed verification from November 2017">Articles with failed verification from November 2017</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_November_2017" title="Category:Articles with unsourced statements from November 2017">Articles with unsourced statements from November 2017</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_February_2007" title="Category:Articles with unsourced statements from February 2007">Articles with unsourced statements from February 2007</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Common+Object+Request+Broker+Architecture" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Common+Object+Request+Broker+Architecture" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Common_Object_Request_Broker_Architecture" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Common_Object_Request_Broker_Architecture" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Common_Object_Request_Broker_Architecture">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Common_Object_Request_Broker_Architecture" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Common_Object_Request_Broker_Architecture" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;oldid=941785204" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q691593" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Common_Object_Request_Broker_Architecture&amp;id=941785204&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Common+Object+Request+Broker+Architecture">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Common+Object+Request+Broker+Architecture&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%83%D9%88%D8%B1%D8%A8%D8%A7_(%D8%AD%D8%A7%D8%B3%D9%88%D8%A8)" title="كوربا (حاسوب) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/CORBA" title="CORBA – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%DA%A9%D9%88%D8%B1%D8%A8%D8%A7" title="کوربا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/CORBA" title="CORBA – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-gl"><a href="https://gl.wikipedia.org/wiki/CORBA" title="CORBA – Galician" lang="gl" hreflang="gl" class="interlanguage-link-target">Galego</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%B5%ED%86%B5_%EA%B0%9D%EC%B2%B4_%EC%9A%94%EA%B5%AC_%EB%A7%A4%EA%B0%9C%EC%9E%90_%EA%B5%AC%EC%A1%B0" title="공통 객체 요구 매개자 구조 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ky"><a href="https://ky.wikipedia.org/wiki/CORBA" title="CORBA – Kyrgyz" lang="ky" hreflang="ky" class="interlanguage-link-target">Кыргызча</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/CORBA" title="CORBA – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mr"><a href="https://mr.wikipedia.org/wiki/%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%AC%E0%A4%BE" title="कोर्बा – Marathi" lang="mr" hreflang="mr" class="interlanguage-link-target">मराठी</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/CORBA" title="CORBA – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/CORBA" title="CORBA – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sl"><a href="https://sl.wikipedia.org/wiki/CORBA" title="CORBA – Slovenian" lang="sl" hreflang="sl" class="interlanguage-link-target">Slovenščina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/CORBA" title="CORBA – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/CORBA" title="CORBA – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/CORBA" title="CORBA – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/CORBA" title="CORBA – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/CORBA" title="CORBA – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q691593#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 20 February 2020, at 17:37<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Common_Object_Request_Broker_Architecture&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.512","walltime":"0.685","ppvisitednodes":{"value":2231,"limit":1000000},"postexpandincludesize":{"value":98862,"limit":2097152},"templateargumentsize":{"value":2651,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":7,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":65338,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  536.470      1 -total"," 22.71%  121.813      1 Template:Reflist"," 18.42%   98.827      7 Template:Cite_web"," 15.68%   84.110      1 Template:More_footnotes"," 11.36%   60.956     19 Template:Cite_book"," 10.60%   56.859      1 Template:Authority_control","  9.21%   49.413      1 Template:Infobox_standardref","  9.06%   48.580      1 Template:Ambox","  8.49%   45.555      3 Template:Fix","  7.95%   42.650      1 Template:Infobox"]},"scribunto":{"limitreport-timeusage":{"value":"0.241","limit":"10.000"},"limitreport-memusage":{"value":6599890,"limit":52428800}},"cachereport":{"origin":"mw1364","timestamp":"20200322054457","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Common Object Request Broker Architecture","url":"https:\/\/en.wikipedia.org\/wiki\/Common_Object_Request_Broker_Architecture","sameAs":"http:\/\/www.wikidata.org\/entity\/Q691593","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q691593","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-03-07T16:38:39Z","dateModified":"2020-02-20T17:37:45Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":794,"wgHostname":"mw1364"});});</script></body></html>

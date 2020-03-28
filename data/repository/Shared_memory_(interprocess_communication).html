@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Shared memory - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn6WywpAIC8AAKfFMkcAAAAX","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Shared_memory","wgTitle":"Shared memory","wgCurRevisionId":944615204,"wgRevisionId":944615204,"wgArticleId":45081735,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Computer architecture","Memory management","Inter-process communication","Concurrent computing","Parallel computing","Distributed computing architecture"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Shared_memory","wgRelevantArticleId":45081735,"wgIsProbablyEditable":
+!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Shared_memory_(interprocess_communication)","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Shared_memory","wgWikibaseItemId":"Q764810","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready",
+"mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Shared_memory.svg/1200px-Shared_memory.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Shared_memory&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Shared_memory&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Shared_memory"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Shared_memory rootpage-Shared_memory skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Shared memory</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=Shared_memory_(interprocess_communication)&amp;redirect=no" class="mw-redirect" title="Shared memory (interprocess communication)">Shared memory (interprocess communication)</a>)</span></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:302px;"><a href="/wiki/File:Shared_memory.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Shared_memory.svg/300px-Shared_memory.svg.png" decoding="async" width="300" height="129" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Shared_memory.svg/450px-Shared_memory.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Shared_memory.svg/600px-Shared_memory.svg.png 2x" data-file-width="655" data-file-height="282" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Shared_memory.svg" class="internal" title="Enlarge"></a></div>An illustration of a shared memory system of three processors.</div></div></div>
+<p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, <b>shared memory</b> is <a href="/wiki/Random-access_memory" title="Random-access memory">memory</a> that may be simultaneously accessed by multiple programs with an intent to provide communication among them or avoid redundant copies. Shared memory is an efficient means of passing data between programs. Depending on context, programs may run on a single processor or on multiple separate processors.
+</p><p>Using memory for communication inside a single program, e.g. among its multiple <a href="/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">threads</a>, is also referred to as shared memory.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#In_hardware"><span class="tocnumber">1</span> <span class="toctext">In hardware</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#In_software"><span class="tocnumber">2</span> <span class="toctext">In software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Support_on_Unix-like_systems"><span class="tocnumber">2.1</span> <span class="toctext">Support on Unix-like systems</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Support_on_Windows"><span class="tocnumber">2.2</span> <span class="toctext">Support on Windows</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Cross-platform_support"><span class="tocnumber">2.3</span> <span class="toctext">Cross-platform support</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Programming_language_support"><span class="tocnumber">2.4</span> <span class="toctext">Programming language support</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="In_hardware">In hardware</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=1" title="Edit section: In hardware">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:MMU_and_IOMMU.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/MMU_and_IOMMU.svg/220px-MMU_and_IOMMU.svg.png" decoding="async" width="220" height="220" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/MMU_and_IOMMU.svg/330px-MMU_and_IOMMU.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d6/MMU_and_IOMMU.svg/440px-MMU_and_IOMMU.svg.png 2x" data-file-width="1128" data-file-height="1128" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:MMU_and_IOMMU.svg" class="internal" title="Enlarge"></a></div><a href="/wiki/Heterogeneous_System_Architecture" title="Heterogeneous System Architecture">HSA</a> defines a special case of memory sharing, where the <a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a> of the CPU and the <a href="/wiki/IOMMU" class="mw-redirect" title="IOMMU">IOMMU</a> of the GPU have an identical pageable virtual address space.</div></div></div>
+<p>In computer hardware, <i>shared memory</i> refers to a (typically large) block of <a href="/wiki/Random_access_memory" class="mw-redirect" title="Random access memory">random access memory</a> (RAM) that can be accessed by several different <a href="/wiki/Central_processing_unit" title="Central processing unit">central processing units</a> (CPUs) in a <a href="/wiki/Multiprocessing" title="Multiprocessing">multiprocessor computer system</a>.
+</p><p>Shared memory systems may use:<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p>
+<ul><li><a href="/wiki/Uniform_memory_access" title="Uniform memory access">uniform memory access</a> (UMA): all the processors share the physical memory uniformly;</li>
+<li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">non-uniform memory access</a> (NUMA): memory access time depends on the memory location relative to a processor;</li>
+<li><a href="/wiki/Cache-only_memory_architecture" title="Cache-only memory architecture">cache-only memory architecture</a> (COMA): the local memories for the processors at each node is used as cache instead of as actual main memory.</li></ul>
+<p>A shared memory system is relatively easy to program since all processors share a single view of data and the communication between processors can be as fast as memory accesses to a same location. The issue with shared memory systems is that many CPUs need fast access to memory and will likely <a href="/wiki/Cache_memory" class="mw-redirect" title="Cache memory">cache memory</a>, which has two complications:
+</p>
+<ul><li>access time degradation: when several processors try to access the same memory location it causes contention. Trying to access nearby memory locations may cause <a href="/wiki/False_sharing" title="False sharing">false sharing</a>. Shared memory computers cannot scale very well. Most of them have ten or fewer processors;</li>
+<li>lack of data coherence: whenever one cache is updated with information that may be used by other processors, the change needs to be reflected to the other processors, otherwise the different processors will be working with incoherent data. Such <a href="/wiki/Cache_coherence" title="Cache coherence">cache coherence</a> protocols can, when they work well, provide extremely high-performance access to shared information between multiple processors. On the other hand, they can sometimes become overloaded and become a bottleneck to performance.</li></ul>
+<p>Technologies like <a href="/wiki/Crossbar_switch" title="Crossbar switch">crossbar switches</a>, <a href="/wiki/Omega_network" title="Omega network">Omega networks</a>, <a href="/wiki/HyperTransport" title="HyperTransport">HyperTransport</a> or <a href="/wiki/Front-side_bus" title="Front-side bus">front-side bus</a> can be used to dampen the bottleneck-effects.
+</p><p>In case of a <a href="/wiki/Heterogeneous_System_Architecture" title="Heterogeneous System Architecture">Heterogeneous System Architecture</a> (processor architecture that integrates different types of processors, such as <a href="/wiki/CPU" class="mw-redirect" title="CPU">CPUs</a> and <a href="/wiki/GPU" class="mw-redirect" title="GPU">GPUs</a>, with shared memory), the <a href="/wiki/Memory_management_unit" title="Memory management unit">memory management unit</a> (MMU) of the CPU and the <a href="/wiki/Input%E2%80%93output_memory_management_unit" title="Input–output memory management unit">input–output memory management unit</a> (IOMMU) of the GPU have to share certain characteristics, like a common address space.
+</p><p>The alternatives to shared memory are <a href="/wiki/Distributed_memory" title="Distributed memory">distributed memory</a> and <a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">distributed shared memory</a>, each having a similar set of issues.
+</p>
+<h2><span class="mw-headline" id="In_software">In software</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=2" title="Edit section: In software">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In computer software, <i>shared memory</i> is either
+</p>
+<ul><li>a method of <a href="/wiki/Inter-process_communication" title="Inter-process communication">inter-process communication</a> (IPC), i.e. a way of exchanging data between programs running at the same time. One <a href="/wiki/Process_(computing)" title="Process (computing)">process</a> will create an area in <a href="/wiki/Random-access_memory" title="Random-access memory">RAM</a> which other processes can access;</li>
+<li>a method of conserving memory space by directing accesses to what would ordinarily be copies of a piece of data to a single instance instead, by using <a href="/wiki/Virtual_memory" title="Virtual memory">virtual memory</a> mappings or with explicit support of the program in question. This is most often used for <a href="/wiki/Shared_library" class="mw-redirect" title="Shared library">shared libraries</a> and for <a href="/wiki/Execute_in_place" title="Execute in place">Execute in place</a> (XIP).</li></ul>
+<p>Since both processes can access the shared memory area like regular working memory, this is a very fast way of communication (as opposed to other mechanisms of IPC such as <a href="/wiki/Named_pipe" title="Named pipe">named pipes</a>, <a href="/wiki/Unix_domain_socket" title="Unix domain socket">Unix domain sockets</a> or <a href="/wiki/CORBA" class="mw-redirect" title="CORBA">CORBA</a>). On the other hand, it is less scalable, as for example the communicating processes must be running on the same machine (of other IPC methods, only Internet domain sockets—not Unix domain sockets—can use a <a href="/wiki/Computer_network" title="Computer network">computer network</a>), and care must be taken to avoid issues if processes sharing memory are running on separate CPUs and the underlying architecture is not <a href="/wiki/Cache_coherence" title="Cache coherence">cache coherent</a>.
+</p><p>IPC by shared memory is used for example to transfer images between the application and the <a href="/wiki/X_Window_System" title="X Window System">X server</a> on Unix systems, or inside the IStream object returned by CoMarshalInterThreadInterfaceInStream in the COM libraries under <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>.
+</p><p><a href="/wiki/Library_(computing)#Dynamic_linking" title="Library (computing)">Dynamic libraries</a> are generally held in memory once and mapped to multiple processes, and only pages that had to be customized for the individual process (because a symbol resolved differently there) are duplicated, usually with a mechanism known as <a href="/wiki/Copy-on-write" title="Copy-on-write">copy-on-write</a> that transparently copies the page when a write is attempted, and then lets the write succeed on the private copy.
+</p>
+<h3><span class="mw-headline" id="Support_on_Unix-like_systems">Support on Unix-like systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=3" title="Edit section: Support on Unix-like systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><a href="/wiki/POSIX" title="POSIX">POSIX</a> provides a standardized API for using shared memory, <i>POSIX Shared Memory</i>. This uses the function <code>shm_open</code> from sys/mman.h.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> POSIX interprocess communication (part of the POSIX:XSI Extension) includes the shared-memory functions <code>shmat</code>, <code>shmctl</code>, <code>shmdt</code> and <code>shmget</code>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> Unix System V provides an API for shared memory as well. This uses shmget from sys/shm.h. BSD systems provide "anonymous mapped memory" which can be used by several processes.
+</p><p>The shared memory created by <code>shm_open</code> is persistent. It stays in the system until explicitly removed by a process. This has a drawback that if the process crashes and fails to clean up shared memory it will stay until system shutdown.
+</p><p>POSIX also provides the <code><a href="/wiki/Mmap" title="Mmap">mmap</a></code> API for mapping files into memory; a mapping can be shared, allowing the file's contents to be used as shared memory.
+</p><p>Linux distributions based on the 2.6 kernel and later offer /dev/shm as shared memory in the form of a <a href="/wiki/RAM_disk" class="mw-redirect" title="RAM disk">RAM disk</a>, more specifically as a world-writable directory (a directory in which every user of the system can create files) that is stored in memory. Both the <a href="/wiki/Red_Hat_Linux" title="Red Hat Linux">RedHat</a> and <a href="/wiki/Debian" title="Debian">Debian</a> based distributions include it by default. Support for this type of RAM disk is completely optional within the kernel <a href="/wiki/Configuration_file" title="Configuration file">configuration file</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Support_on_Windows">Support on Windows</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=4" title="Edit section: Support on Windows">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On Windows, one can use <code>CreateFileMapping</code> and <code>MapViewOfFile</code> functions to map a region of a file into memory in multiple processes.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Cross-platform_support">Cross-platform support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=5" title="Edit section: Cross-platform support">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some C++ libraries provide a portable and object-oriented access to shared memory functionality. For example, <a href="/wiki/Boost_(C%2B%2B_libraries)" title="Boost (C++ libraries)">Boost</a> contains the Boost.Interprocess C++ Library<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> and <a href="/wiki/Qt_(framework)" class="mw-redirect" title="Qt (framework)">Qt</a> provides the QSharedMemory class.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Programming_language_support">Programming language support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=6" title="Edit section: Programming language support">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>There is native support for shared memory also in programming languages besides C/C++. For example, <a href="/wiki/PHP" title="PHP">PHP</a> provides an <a href="/wiki/API" class="mw-redirect" title="API">API</a> to create shared memory, similar to <a href="/wiki/POSIX" title="POSIX">POSIX</a> functions.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Distributed_memory" title="Distributed memory">Distributed memory</a></li>
+<li><a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">Distributed shared memory</a></li>
+<li><a href="/wiki/Shared_graphics_memory" title="Shared graphics memory">Shared graphics memory</a></li>
+<li><a href="/wiki/Heterogeneous_System_Architecture" title="Heterogeneous System Architecture">Heterogeneous System Architecture</a></li>
+<li><a href="/wiki/Global_variable" title="Global variable">Global variable</a></li>
+<li><a href="/wiki/Nano-threads" title="Nano-threads">Nano-threads</a></li>
+<li><a href="/wiki/Execute_in_place" title="Execute in place">Execute in place</a></li>
+<li><a href="/wiki/Shared_register" title="Shared register">Shared register</a></li>
+<li><a href="/wiki/Shared_snapshot_objects" title="Shared snapshot objects">Shared snapshot objects</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation book">El-Rewini, Hesham; Abd-El-Barr, Mostafa (2005). <i>Advanced Computer Architecture and Parallel Processing</i>. Wiley-Interscience. pp.&#160;77–80. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-471-46740-3" title="Special:BookSources/978-0-471-46740-3"><bdi>978-0-471-46740-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Advanced+Computer+Architecture+and+Parallel+Processing&amp;rft.pages=77-80&amp;rft.pub=Wiley-Interscience&amp;rft.date=2005&amp;rft.isbn=978-0-471-46740-3&amp;rft.aulast=El-Rewini&amp;rft.aufirst=Hesham&amp;rft.au=Abd-El-Barr%2C+Mostafa&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShared+memory" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.opengroup.org/onlinepubs/007908799/xsh/shm_open.html">Documentation of shm_open</a> from the Single Unix Specification</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation book">Robbins, Kay A.; Robbins, Steven (2003). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/unixsystemsprogr0000robb"><i>Unix systems programming: communication, concurrency, and threads</i></a></span> (2 ed.). Prentice Hall PTR. p.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/unixsystemsprogr0000robb/page/512">512</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-13-042411-2" title="Special:BookSources/978-0-13-042411-2"><bdi>978-0-13-042411-2</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-05-13</span></span>. <q>The POSIX interprocess communication (IPC) is part of the POSIX:XSI Extension and has its origin in Unix System V interprocess communication.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Unix+systems+programming%3A+communication%2C+concurrency%2C+and+threads&amp;rft.pages=512&amp;rft.edition=2&amp;rft.pub=Prentice+Hall+PTR&amp;rft.date=2003&amp;rft.isbn=978-0-13-042411-2&amp;rft.aulast=Robbins&amp;rft.aufirst=Kay+A.&amp;rft.au=Robbins%2C+Steven&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Funixsystemsprogr0000robb&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShared+memory" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.opengroup.org/onlinepubs/007908799/xsh/sysshm.h.html">Shared memory facility</a> from the Single Unix Specification.</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web">Christoph Rohland; Hugh Dickins; KOSAKI Motohiro. <a rel="nofollow" class="external text" href="https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt">"tmpfs.txt"</a>. <a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2010-03-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=tmpfs.txt&amp;rft.pub=kernel.org&amp;rft.au=Christoph+Rohland&amp;rft.au=Hugh+Dickins&amp;rft.au=KOSAKI+Motohiro&amp;rft_id=https%3A%2F%2Fwww.kernel.org%2Fdoc%2FDocumentation%2Ffilesystems%2Ftmpfs.txt&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShared+memory" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa366551%28v=vs.85%29.aspx">Creating Named Shared Memory</a> from MSDN.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.boost.org/doc/libs/1_48_0/doc/html/interprocess.html">Boost.Interprocess C++ Library</a></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://doc.qt.io/archives/qt-4.8/qsharedmemory.html">"QSharedMemory Class Reference"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=QSharedMemory+Class+Reference&amp;rft_id=http%3A%2F%2Fdoc.qt.io%2Farchives%2Fqt-4.8%2Fqsharedmemory.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AShared+memory" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.php.net/manual/en/ref.shmop.php">Shared Memory Functions in PHP-API</a></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Shared_memory&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.cs.cf.ac.uk/Dave/C/node27.html">IPC:Shared Memory</a> by Dave Marshall</li>
+<li><a rel="nofollow" class="external text" href="http://www.kohala.com/start/unpv22e/unpv22e.chap12.pdf">Shared Memory Introduction</a>, Ch. 12 from book by Richard Stevens "UNIX Network Programming, Volume 2, Second Edition: Interprocess Communications".</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/simonhf/sharedhashfile">SharedHashFile</a>, An open source, shared memory hash table.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Inter-process_communication" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IPC" title="Template:IPC"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IPC" title="Template talk:IPC"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IPC&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Inter-process_communication" style="font-size:114%;margin:0 4em"><a href="/wiki/Inter-process_communication" title="Inter-process communication">Inter-process communication</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="Data_exchange_among_threads_in_computer_programs"><a href="/wiki/Data" title="Data">Data</a> exchange among <a href="/wiki/Thread_(computing)" title="Thread (computing)">threads</a> in <a href="/wiki/Computer_program" title="Computer program">computer programs</a></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Methods</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_file" title="Computer file">File</a></li>
+<li><a href="/wiki/Mmap" title="Mmap">Memory-mapped file</a></li>
+<li><a href="/wiki/Message_passing" title="Message passing">Message passing</a></li>
+<li><a href="/wiki/Message_queue" title="Message queue">Message queue and mailbox</a></li>
+<li><a href="/wiki/Named_pipe" title="Named pipe">Named pipe</a></li>
+<li><a href="/wiki/Anonymous_pipe" title="Anonymous pipe">Anonymous pipe</a></li>
+<li><a href="/wiki/Pipeline_(Unix)" title="Pipeline (Unix)">Pipe</a></li>
+<li><a href="/wiki/Semaphore_(programming)" title="Semaphore (programming)">Semaphore</a></li>
+<li><a class="mw-selflink selflink">Shared memory</a></li>
+<li><a href="/wiki/Unix_signal" class="mw-redirect" title="Unix signal">Signal</a></li>
+<li>Sockets
+<ul><li><a href="/wiki/Network_socket" title="Network socket">Network</a></li>
+<li><a href="/wiki/Unix_domain_socket" title="Unix domain socket">Unix</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Communication_protocol" title="Communication protocol">Protocols</a><br />and <a href="/wiki/Technical_standard" title="Technical standard">standards</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_event" title="Apple event">Apple events</a></li>
+<li><a href="/wiki/Component_Object_Model#COM.2B" title="Component Object Model">COM+</a></li>
+<li><a href="/wiki/Common_Object_Request_Broker_Architecture" title="Common Object Request Broker Architecture">CORBA</a></li>
+<li><a href="/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="/wiki/Data_Distribution_Service" title="Data Distribution Service">DDS</a></li>
+<li><a href="/wiki/Distributed_Computing_Environment" title="Distributed Computing Environment">DCE</a></li>
+<li><a href="/wiki/Internet_Communications_Engine" title="Internet Communications Engine">ICE</a></li>
+<li><a href="/wiki/OpenBinder" title="OpenBinder">OpenBinder</a></li>
+<li><a href="/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">ONC RPC</a></li>
+<li><a href="/wiki/POSIX" title="POSIX">POSIX</a> (various methods)</li>
+<li><a href="/wiki/SOAP" title="SOAP">SOAP</a></li>
+<li><a href="/wiki/Representational_State_Transfer" class="mw-redirect" title="Representational State Transfer">REST</a></li>
+<li><a href="/wiki/Apache_Thrift" title="Apache Thrift">Thrift</a></li>
+<li><a href="/wiki/TIPC" class="mw-redirect" title="TIPC">TIPC</a></li>
+<li><a href="/wiki/XML-RPC" title="XML-RPC">XML-RPC</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Library_(computing)" title="Library (computing)">Software libraries</a><br />and <a href="/wiki/Software_framework" title="Software framework">frameworks</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/D-Bus" title="D-Bus">D-Bus</a></li>
+<li><a href="/wiki/Libevent" title="Libevent">libevent</a></li>
+<li><a href="/wiki/SIMPL" title="SIMPL">SIMPL</a></li>
+<li><a href="/wiki/LINX_(IPC)" title="LINX (IPC)">LINX</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Parallel_computing" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Parallel_computing" title="Template:Parallel computing"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Parallel_computing" title="Template talk:Parallel computing"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Parallel_computing&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Parallel_computing" style="font-size:114%;margin:0 4em"><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel</a></li>
+<li><a href="/wiki/Cloud_computing" title="Cloud computing">Cloud computing</a></li>
+<li><a href="/wiki/Supercomputer" title="Supercomputer">High-performance computing</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Manycore_processor" title="Manycore processor">Manycore processor</a></li>
+<li><a href="/wiki/General-purpose_computing_on_graphics_processing_units" title="General-purpose computing on graphics processing units">GPGPU</a></li>
+<li><a href="/wiki/Computer_network" title="Computer network">Computer network</a></li>
+<li><a href="/wiki/Systolic_array" title="Systolic array">Systolic array</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Levels</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a></li>
+<li><a href="/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Thread</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Task</a></li>
+<li><a href="/wiki/Data_parallelism" title="Data parallelism">Data</a></li>
+<li><a href="/wiki/Memory-level_parallelism" title="Memory-level parallelism">Memory</a></li>
+<li><a href="/wiki/Loop-level_parallelism" title="Loop-level parallelism">Loop</a></li>
+<li><a href="/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal</a></li>
+<li><a href="/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous</a> (SMT)</li>
+<li><a href="/wiki/Speculative_multithreading" title="Speculative multithreading">Speculative</a> (SpMT)</li>
+<li><a href="/wiki/Preemption_(computing)" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="/wiki/Computer_multitasking#Cooperative_multitasking" title="Computer multitasking">Cooperative</a></li>
+<li><a href="/wiki/Bulldozer_(microarchitecture)#Bulldozer_core" title="Bulldozer (microarchitecture)">Clustered Multi-Thread</a> (CMT)</li>
+<li><a href="/wiki/Hardware_scout" title="Hardware scout">Hardware scout</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Theory</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Parallel_random-access_machine" title="Parallel random-access machine">PRAM model</a></li>
+<li><a href="/wiki/Parallel_external_memory" title="Parallel external memory">PEM Model</a></li>
+<li><a href="/wiki/Analysis_of_parallel_algorithms" title="Analysis of parallel algorithms">Analysis of parallel algorithms</a></li>
+<li><a href="/wiki/Amdahl%27s_law" title="Amdahl&#39;s law">Amdahl's law</a></li>
+<li><a href="/wiki/Gustafson%27s_law" title="Gustafson&#39;s law">Gustafson's law</a></li>
+<li><a href="/wiki/Cost_efficiency" title="Cost efficiency">Cost efficiency</a></li>
+<li><a href="/wiki/Karp%E2%80%93Flatt_metric" title="Karp–Flatt metric">Karp–Flatt metric</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Slowdown</a></li>
+<li><a href="/wiki/Speedup" title="Speedup">Speedup</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Elements</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Process_(computing)" title="Process (computing)">Process</a></li>
+<li><a href="/wiki/Thread_(computing)" title="Thread (computing)">Thread</a></li>
+<li><a href="/wiki/Fiber_(computer_science)" title="Fiber (computer science)">Fiber</a></li>
+<li><a href="/wiki/Instruction_window" title="Instruction window">Instruction window</a></li>
+<li><a href="/wiki/Array_data_structure" title="Array data structure">Array data structure</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Coordination</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Memory_coherence" title="Memory coherence">Memory coherency</a></li>
+<li><a href="/wiki/Cache_coherence" title="Cache coherence">Cache coherency</a></li>
+<li><a href="/wiki/Cache_invalidation" title="Cache invalidation">Cache invalidation</a></li>
+<li><a href="/wiki/Barrier_(computer_science)" title="Barrier (computer science)">Barrier</a></li>
+<li><a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+<li><a href="/wiki/Application_checkpointing" title="Application checkpointing">Application checkpointing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_programming" title="Computer programming">Programming</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Stream_processing" title="Stream processing">Stream processing</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow programming</a></li>
+<li><a href="/wiki/Parallel_programming_model" title="Parallel programming model">Models</a>
+<ul><li><a href="/wiki/Implicit_parallelism" title="Implicit parallelism">Implicit parallelism</a></li>
+<li><a href="/wiki/Explicit_parallelism" title="Explicit parallelism">Explicit parallelism</a></li>
+<li><a href="/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></li></ul></li>
+<li><a href="/wiki/Non-blocking_algorithm" title="Non-blocking algorithm">Non-blocking algorithm</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_hardware" title="Computer hardware">Hardware</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Flynn%27s_taxonomy" title="Flynn&#39;s taxonomy">Flynn's taxonomy</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/Single_instruction,_multiple_threads" title="Single instruction, multiple threads">SIMT</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a></li></ul></li>
+<li><a href="/wiki/Dataflow_architecture" title="Dataflow architecture">Dataflow architecture</a></li>
+<li><a href="/wiki/Instruction_pipelining" title="Instruction pipelining">Pipelined processor</a></li>
+<li><a href="/wiki/Superscalar_processor" title="Superscalar processor">Superscalar processor</a></li>
+<li><a href="/wiki/Vector_processor" title="Vector processor">Vector processor</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessor</a>
+<ul><li><a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">symmetric</a></li>
+<li><a href="/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">asymmetric</a></li></ul></li>
+<li><a href="/wiki/Semiconductor_memory" title="Semiconductor memory">Memory</a>
+<ul><li><a class="mw-selflink selflink">shared</a></li>
+<li><a href="/wiki/Distributed_memory" title="Distributed memory">distributed</a></li>
+<li><a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">distributed shared</a></li>
+<li><a href="/wiki/Uniform_memory_access" title="Uniform memory access">UMA</a></li>
+<li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">NUMA</a></li>
+<li><a href="/wiki/Cache-only_memory_architecture" title="Cache-only memory architecture">COMA</a></li></ul></li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel computer</a></li>
+<li><a href="/wiki/Computer_cluster" title="Computer cluster">Computer cluster</a></li>
+<li><a href="/wiki/Grid_computing" title="Grid computing">Grid computer</a></li>
+<li><a href="/wiki/Hardware_acceleration" title="Hardware acceleration">Hardware acceleration</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Application_programming_interface" title="Application programming interface">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ateji_PX" title="Ateji PX">Ateji PX</a></li>
+<li><a href="/wiki/Boost_(C%2B%2B_libraries)#Multithreading_–_Boost.Thread" title="Boost (C++ libraries)">Boost.Thread</a></li>
+<li><a href="/wiki/Chapel_(programming_language)" title="Chapel (programming language)">Chapel</a></li>
+<li><a href="/wiki/HPX" title="HPX">HPX</a></li>
+<li><a href="/wiki/Charm%2B%2B" title="Charm++"> Charm++</a></li>
+<li><a href="/wiki/Cilk" title="Cilk">Cilk</a></li>
+<li><a href="/wiki/Coarray_Fortran" title="Coarray Fortran">Coarray Fortran</a></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><a href="/wiki/Heterogeneous-compute_Interface_for_Portability" class="mw-redirect" title="Heterogeneous-compute Interface for Portability">HIP</a></li>
+<li><a href="/wiki/Dryad_(programming)" title="Dryad (programming)">Dryad</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Global_Arrays" title="Global Arrays">Global Arrays</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="/wiki/OpenHMPP" title="OpenHMPP">OpenHMPP</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/Parallel_Extensions#Task_Parallel_Library" title="Parallel Extensions">TPL</a></li>
+<li><a href="/wiki/Parallel_Extensions#PLINQ" title="Parallel Extensions">PLINQ</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX_Threads" title="POSIX Threads">POSIX Threads</a></li>
+<li><a href="/wiki/RaftLib" title="RaftLib">RaftLib</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">TBB</a></li>
+<li><a href="/wiki/ZPL_(programming_language)" title="ZPL (programming language)">ZPL</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Problems</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Automatic_parallelization" title="Automatic parallelization">Automatic parallelization</a></li>
+<li><a href="/wiki/Deadlock" title="Deadlock">Deadlock</a></li>
+<li><a href="/wiki/Deadlock#Livelock" title="Deadlock">Livelock</a></li>
+<li><a href="/wiki/Deterministic_algorithm" title="Deterministic algorithm">Deterministic algorithm</a></li>
+<li><a href="/wiki/Embarrassingly_parallel" title="Embarrassingly parallel">Embarrassingly parallel</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Parallel slowdown</a></li>
+<li><a href="/wiki/Race_condition#Computing" title="Race condition">Race condition</a></li>
+<li><a href="/wiki/Software_lockout" title="Software lockout">Software lockout</a></li>
+<li><a href="/wiki/Scalability" title="Scalability">Scalability</a></li>
+<li><a href="/wiki/Starvation_(computer_science)" title="Starvation (computer science)">Starvation</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" />&#160;<a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Category: parallel computing</a></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Parallel_computing" class="extiw" title="c:Category:Parallel computing">Parallel computing</a> at Wikimedia Commons</li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1378
+Cached time: 20200308220747
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.200 seconds
+Real time usage: 0.260 seconds
+Preprocessor visited node count: 523/1000000
+Post‐expand include size: 39565/2097152 bytes
+Template argument size: 113/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 14506/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.078/10.000 seconds
+Lua memory usage: 2.51 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  174.311      1 -total
+ 72.13%  125.723      1 Template:Reflist
+ 55.64%   96.979      2 Template:Cite_book
+ 21.91%   38.197      2 Template:Navbox
+ 14.89%   25.955      1 Template:Parallel_Computing
+ 12.85%   22.392      1 Template:IPC
+  8.08%   14.078      1 Template:Category-inline
+  7.13%   12.429      2 Template:Icon
+  4.88%    8.498      2 Template:Cite_web
+  1.44%    2.514      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:45081735-0!canonical and timestamp 20200308220747 and revision id 944615204
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Shared_memory&amp;oldid=944615204">https://en.wikipedia.org/w/index.php?title=Shared_memory&amp;oldid=944615204</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Computer_architecture" title="Category:Computer architecture">Computer architecture</a></li><li><a href="/wiki/Category:Memory_management" title="Category:Memory management">Memory management</a></li><li><a href="/wiki/Category:Inter-process_communication" title="Category:Inter-process communication">Inter-process communication</a></li><li><a href="/wiki/Category:Concurrent_computing" title="Category:Concurrent computing">Concurrent computing</a></li><li><a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Parallel computing</a></li><li><a href="/wiki/Category:Distributed_computing_architecture" title="Category:Distributed computing architecture">Distributed computing architecture</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Shared+memory" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Shared+memory" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Shared_memory" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Shared_memory" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Shared_memory">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Shared_memory&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Shared_memory&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Shared_memory" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Shared_memory" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Shared_memory&amp;oldid=944615204" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Shared_memory&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q764810" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Shared_memory&amp;id=944615204&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Shared+memory">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Shared+memory&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Shared_memory&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%B0%D8%A7%D9%83%D8%B1%D8%A9_%D9%85%D8%B4%D8%AA%D8%B1%D9%83%D8%A9" title="ذاكرة مشتركة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Mem%C3%B2ria_compartida" title="Memòria compartida – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Sd%C3%ADlen%C3%A1_pam%C4%9B%C5%A5" title="Sdílená paměť – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Shared_Memory" title="Shared Memory – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Memoria_compartida" title="Memoria compartida – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AD%D8%A7%D9%81%D8%B8%D9%87_%D9%85%D8%B4%D8%AA%D8%B1%DA%A9" title="حافظه مشترک – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/M%C3%A9moire_partag%C3%A9e_(communication_inter-processus)" title="Mémoire partagée (communication inter-processus) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EA%B3%B5%EC%9C%A0_%EB%A9%94%EB%AA%A8%EB%A6%AC" title="공유 메모리 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0_%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D1%98%D0%B0" title="Поделена меморија – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA" title="共有メモリ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Pami%C4%99%C4%87_dzielona" title="Pamięć dzielona – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Mem%C3%B3ria_compartilhada" title="Memória compartilhada – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB%D1%8F%D0%B5%D0%BC%D0%B0%D1%8F_%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D1%8C" title="Разделяемая память – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%94%D0%B5%D1%99%D0%B5%D0%BD%D0%B0_%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D1%98%D0%B0" title="Дељена меморија – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Jaettu_muisti" title="Jaettu muisti – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Payla%C5%9F%C4%B1lan_bellek" title="Paylaşılan bellek – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D1%96%D0%BB%D1%8C%D0%BD%D0%B0_%D0%BF%D0%B0%D0%BC%27%D1%8F%D1%82%D1%8C" title="Спільна пам&#039;ять – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98" title="共享内存 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q764810#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 8 March 2020, at 22:07<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Shared_memory&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.200","walltime":"0.260","ppvisitednodes":{"value":523,"limit":1000000},"postexpandincludesize":{"value":39565,"limit":2097152},"templateargumentsize":{"value":113,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":14506,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  174.311      1 -total"," 72.13%  125.723      1 Template:Reflist"," 55.64%   96.979      2 Template:Cite_book"," 21.91%   38.197      2 Template:Navbox"," 14.89%   25.955      1 Template:Parallel_Computing"," 12.85%   22.392      1 Template:IPC","  8.08%   14.078      1 Template:Category-inline","  7.13%   12.429      2 Template:Icon","  4.88%    8.498      2 Template:Cite_web","  1.44%    2.514      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.078","limit":"10.000"},"limitreport-memusage":{"value":2635107,"limit":52428800}},"cachereport":{"origin":"mw1378","timestamp":"20200308220747","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Shared memory","url":"https:\/\/en.wikipedia.org\/wiki\/Shared_memory","sameAs":"http:\/\/www.wikidata.org\/entity\/Q764810","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q764810","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2015-01-16T21:15:49Z","dateModified":"2020-03-08T22:07:47Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/f\/f2\/Shared_memory.svg","headline":"memory that may be simultaneously accessed by multiple programs with an intent to provide communication among them or avoid redundant copies"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":113,"wgHostname":"mw1326"});});</script></body></html>

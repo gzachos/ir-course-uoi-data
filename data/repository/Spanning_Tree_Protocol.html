@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Spanning Tree Protocol - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7@4gpAMFoAAIbB9@oAAACM","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Spanning_Tree_Protocol","wgTitle":"Spanning Tree Protocol","wgCurRevisionId":946051776,"wgRevisionId":946051776,"wgArticleId":98761,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: multiple names: authors list","CS1 errors: missing periodical","Commons category link is on Wikidata","Pages using RFC magic links","Network protocols","Link protocols","Network topology","Spanning tree","Fault-tolerant computer systems","Ethernet standards"],"wgPageContentLanguage"
+:"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Spanning_Tree_Protocol","wgRelevantArticleId":98761,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q852555","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready",
+"jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Spanning_Tree_Protocol"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Spanning_Tree_Protocol rootpage-Spanning_Tree_Protocol skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Spanning Tree Protocol</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="vertical-navbox nowraplinks hlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/Internet_protocol_suite" title="Internet protocol suite">Internet protocol suite</a></th></tr><tr><th style="padding:0.1em">
+<a href="/wiki/Application_layer" title="Application layer">Application layer</a></th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Border_Gateway_Protocol" title="Border Gateway Protocol">BGP</a></li>
+<li><a href="/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</a></li>
+<li><a href="/wiki/Domain_Name_System" title="Domain Name System">DNS</a></li>
+<li><a href="/wiki/File_Transfer_Protocol" title="File Transfer Protocol">FTP</a></li>
+<li><a href="/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</a></li>
+<li><a href="/wiki/HTTPS" title="HTTPS">HTTPS</a></li>
+<li><a href="/wiki/Internet_Message_Access_Protocol" title="Internet Message Access Protocol">IMAP</a></li>
+<li><a href="/wiki/Lightweight_Directory_Access_Protocol" title="Lightweight Directory Access Protocol">LDAP</a></li>
+<li><a href="/wiki/Media_Gateway_Control_Protocol" title="Media Gateway Control Protocol">MGCP</a></li>
+<li><a href="/wiki/MQTT" title="MQTT">MQTT</a></li>
+<li><a href="/wiki/Network_News_Transfer_Protocol" title="Network News Transfer Protocol">NNTP</a></li>
+<li><a href="/wiki/Network_Time_Protocol" title="Network Time Protocol">NTP</a></li>
+<li><a href="/wiki/Post_Office_Protocol" title="Post Office Protocol">POP</a></li>
+<li><a href="/wiki/Open_Network_Computing_Remote_Procedure_Call" title="Open Network Computing Remote Procedure Call">ONC/RPC</a></li>
+<li><a href="/wiki/Real-time_Transport_Protocol" title="Real-time Transport Protocol">RTP</a></li>
+<li><a href="/wiki/Real_Time_Streaming_Protocol" title="Real Time Streaming Protocol">RTSP</a></li>
+<li><a href="/wiki/Routing_Information_Protocol" title="Routing Information Protocol">RIP</a></li>
+<li><a href="/wiki/Session_Initiation_Protocol" title="Session Initiation Protocol">SIP</a></li>
+<li><a href="/wiki/Simple_Mail_Transfer_Protocol" title="Simple Mail Transfer Protocol">SMTP</a></li>
+<li><a href="/wiki/Simple_Network_Management_Protocol" title="Simple Network Management Protocol">SNMP</a></li>
+<li><a href="/wiki/Secure_Shell" title="Secure Shell">SSH</a></li>
+<li><a href="/wiki/Telnet" title="Telnet">Telnet</a></li>
+<li><a href="/wiki/Transport_Layer_Security" title="Transport Layer Security">TLS/SSL</a></li>
+<li><a href="/wiki/XMPP" title="XMPP">XMPP</a></li>
+<li><a href="/wiki/Category:Application_layer_protocols" title="Category:Application layer protocols"><i>more...</i></a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Transport_layer" title="Transport layer">Transport layer</a></th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a></li>
+<li><a href="/wiki/User_Datagram_Protocol" title="User Datagram Protocol">UDP</a></li>
+<li><a href="/wiki/Datagram_Congestion_Control_Protocol" title="Datagram Congestion Control Protocol">DCCP</a></li>
+<li><a href="/wiki/Stream_Control_Transmission_Protocol" title="Stream Control Transmission Protocol">SCTP</a></li>
+<li><a href="/wiki/Resource_Reservation_Protocol" title="Resource Reservation Protocol">RSVP</a></li>
+<li><a href="/wiki/Category:Transport_layer_protocols" title="Category:Transport layer protocols"><i>more...</i></a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Internet_layer" title="Internet layer">Internet layer</a></th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Internet_Protocol" title="Internet Protocol">IP</a>
+<ul><li><a href="/wiki/IPv4" title="IPv4">IPv4</a></li>
+<li><a href="/wiki/IPv6" title="IPv6">IPv6</a></li></ul></li>
+<li><a href="/wiki/Internet_Control_Message_Protocol" title="Internet Control Message Protocol">ICMP</a></li>
+<li><a href="/wiki/Internet_Control_Message_Protocol_for_IPv6" title="Internet Control Message Protocol for IPv6">ICMPv6</a></li>
+<li><a href="/wiki/Explicit_Congestion_Notification" title="Explicit Congestion Notification">ECN</a></li>
+<li><a href="/wiki/Internet_Group_Management_Protocol" title="Internet Group Management Protocol">IGMP</a></li>
+<li><a href="/wiki/IPsec" title="IPsec">IPsec</a></li>
+<li><a href="/wiki/Category:Internet_layer_protocols" title="Category:Internet layer protocols"><i>more...</i></a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Link_layer" title="Link layer">Link layer</a></th></tr><tr><td style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Address_Resolution_Protocol" title="Address Resolution Protocol">ARP</a></li>
+<li><a href="/wiki/Neighbor_Discovery_Protocol" title="Neighbor Discovery Protocol">NDP</a></li>
+<li><a href="/wiki/Open_Shortest_Path_First" title="Open Shortest Path First">OSPF</a></li>
+<li><a href="/wiki/Tunneling_protocol" title="Tunneling protocol">Tunnels</a>
+<ul><li><a href="/wiki/Layer_2_Tunneling_Protocol" title="Layer 2 Tunneling Protocol">L2TP</a></li></ul></li>
+<li><a href="/wiki/Point-to-Point_Protocol" title="Point-to-Point Protocol">PPP</a></li>
+<li><a href="/wiki/Medium_access_control" title="Medium access control">MAC</a>
+<ul><li><a href="/wiki/Ethernet" title="Ethernet">Ethernet</a></li>
+<li><a href="/wiki/Wi-Fi" title="Wi-Fi">Wi-Fi</a></li>
+<li><a href="/wiki/Digital_subscriber_line" title="Digital subscriber line">DSL</a></li>
+<li><a href="/wiki/Integrated_Services_Digital_Network" title="Integrated Services Digital Network">ISDN</a></li>
+<li><a href="/wiki/Fiber_Distributed_Data_Interface" title="Fiber Distributed Data Interface">FDDI</a></li></ul></li></ul>
+<ul><li><a href="/wiki/Category:Link_protocols" title="Category:Link protocols"><i>more...</i></a></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IPstack" title="Template:IPstack"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IPstack" title="Template talk:IPstack"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IPstack&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>The <b>Spanning Tree Protocol </b>(<b>STP</b>) is a <a href="/wiki/Network_protocol" class="mw-redirect" title="Network protocol">network protocol</a> that builds a loop-free <a href="/wiki/Logical_topology" title="Logical topology">logical topology</a> for <a href="/wiki/Ethernet_network" class="mw-redirect" title="Ethernet network">Ethernet networks</a>. The basic function of STP is to prevent <a href="/wiki/Bridge_loop" class="mw-redirect" title="Bridge loop">bridge loops</a> and the <a href="/wiki/Broadcast_radiation" title="Broadcast radiation">broadcast radiation</a> that results from them. Spanning tree also allows a <a href="/wiki/Network_planning_and_design" title="Network planning and design">network design</a> to include backup links providing <a href="/wiki/Fault_tolerance" title="Fault tolerance">fault tolerance</a> if an active link fails.
+</p><p>As the name suggests, STP creates a <a href="/wiki/Spanning_tree_(mathematics)" class="mw-redirect" title="Spanning tree (mathematics)">spanning tree</a> that characterizes the relationship of nodes within a network of connected layer-2 <a href="/wiki/Network_bridge" class="mw-redirect" title="Network bridge">bridges</a>, and disables those links that are not part of the spanning tree, leaving a single active path between any two network nodes. STP is based on an algorithm that was invented by <a href="/wiki/Radia_Perlman" title="Radia Perlman">Radia Perlman</a> while she was working for <a href="/wiki/Digital_Equipment_Corporation" title="Digital Equipment Corporation">Digital Equipment Corporation</a>.<sup id="cite_ref-perlman_paper_1-0" class="reference"><a href="#cite_note-perlman_paper-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p><p>In 2001, the <a href="/wiki/IEEE" class="mw-redirect" title="IEEE">IEEE</a> introduced <b>Rapid Spanning Tree Protocol</b> (<b>RSTP</b>) as 802.1w.  RSTP provides significantly faster recovery in response to network changes or failures, introducing new convergence behaviors and bridge port roles to do this.  RSTP was designed to be backwards-compatible with standard STP.
+</p><p>STP was originally standardized as <a href="/wiki/IEEE_802.1D" title="IEEE 802.1D">IEEE 802.1D</a> but the functionality of spanning tree (802.1D), rapid spanning tree (802.1w), and <a href="/wiki/Multiple_Spanning_Tree_Protocol" title="Multiple Spanning Tree Protocol">multiple spanning tree</a> (802.1s) has since been incorporated into <a href="/wiki/IEEE_802.1Q" title="IEEE 802.1Q">IEEE 802.1Q-2014</a>.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Protocol_operation"><span class="tocnumber">1</span> <span class="toctext">Protocol operation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Path_cost"><span class="tocnumber">1.1</span> <span class="toctext">Path cost</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Port_states"><span class="tocnumber">1.2</span> <span class="toctext">Port states</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Configuration"><span class="tocnumber">2</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#Select_a_root_bridge_and_the_bridge_ID"><span class="tocnumber">2.1</span> <span class="toctext">Select a root bridge and the bridge ID</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Protocol_choice_of_the_path_to_the_root_bridge"><span class="tocnumber">2.2</span> <span class="toctext">Protocol choice of the path to the root bridge</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Breaking_ties_in_selecting_the_path_to_the_root_bridge"><span class="tocnumber">2.2.1</span> <span class="toctext">Breaking ties in selecting the path to the root bridge</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Bridge_Protocol_Data_Units"><span class="tocnumber">3</span> <span class="toctext">Bridge Protocol Data Units</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Bridge_Protocol_Data_Unit_fields"><span class="tocnumber">3.1</span> <span class="toctext">Bridge Protocol Data Unit fields</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Spanning_Tree_Protocol_standards"><span class="tocnumber">4</span> <span class="toctext">Spanning Tree Protocol standards</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Rapid_Spanning_Tree_Protocol"><span class="tocnumber">4.1</span> <span class="toctext">Rapid Spanning Tree Protocol</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Rapid_Spanning_Tree_Operation"><span class="tocnumber">4.1.1</span> <span class="toctext">Rapid Spanning Tree Operation</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#Spanning_Tree_Protocol_standards_for_VLANs"><span class="tocnumber">5</span> <span class="toctext">Spanning Tree Protocol standards for VLANs</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="#Proprietary_Spanning_Tree_VLAN_standards"><span class="tocnumber">5.1</span> <span class="toctext">Proprietary Spanning Tree VLAN standards</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Multiple_Spanning_Tree_Protocol"><span class="tocnumber">5.2</span> <span class="toctext">Multiple Spanning Tree Protocol</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Shortest_path_bridging_(SPB)"><span class="tocnumber">6</span> <span class="toctext">Shortest path bridging (SPB)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#System_ID_Extension"><span class="tocnumber">6.1</span> <span class="toctext">System ID Extension</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="#Disadvantages_and_current_practice"><span class="tocnumber">7</span> <span class="toctext">Disadvantages and current practice</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Notes"><span class="tocnumber">9</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Protocol_operation">Protocol operation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=1" title="Edit section: Protocol operation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r923042769/mw-parser-output/.tmulti">.mw-parser-output .tmulti .thumbinner{display:flex;flex-direction:column}.mw-parser-output .tmulti .trow{display:flex;flex-direction:row;clear:left;flex-wrap:wrap;width:100%;box-sizing:border-box}.mw-parser-output .tmulti .tsingle{margin:1px;float:left}.mw-parser-output .tmulti .theader{clear:both;font-weight:bold;text-align:center;align-self:center;background-color:transparent;width:100%}.mw-parser-output .tmulti .thumbcaption{text-align:left;background-color:transparent}.mw-parser-output .tmulti .thumbcaption-center{text-align:center;background-color:transparent}.mw-parser-output .tmulti .text-align-left{text-align:left}.mw-parser-output .tmulti .text-align-right{text-align:right}.mw-parser-output .tmulti .text-align-center{text-align:center}@media all and (max-width:720px){.mw-parser-output .tmulti .thumbinner{width:100%!important;box-sizing:border-box;max-width:none!important;align-items:center}.mw-parser-output .tmulti .trow{justify-content:center}.mw-parser-output .tmulti .tsingle{float:none!important;max-width:100%!important;box-sizing:border-box;text-align:center}.mw-parser-output .tmulti .thumbcaption{text-align:center}}</style><div class="thumb tmulti tright"><div class="thumbinner" style="width:608px;max-width:608px"><div class="trow"><div class="tsingle" style="width:302px;max-width:302px"><div class="thumbimage"><a href="/wiki/File:Spanning_tree_protocol_at_work_5.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Spanning_tree_protocol_at_work_5.svg/300px-Spanning_tree_protocol_at_work_5.svg.png" decoding="async" width="300" height="300" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Spanning_tree_protocol_at_work_5.svg/450px-Spanning_tree_protocol_at_work_5.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Spanning_tree_protocol_at_work_5.svg/600px-Spanning_tree_protocol_at_work_5.svg.png 2x" data-file-width="591" data-file-height="591" /></a></div><div class="thumbcaption">Switches with Spanning Tree Protocol implementation in a local area network (LAN). One switch is the STP <i>root bridge</i>. All switch ports that connect a link between two switches are either a <i>root port</i> (RP), a <i>designated port</i> (DP), or a <i>blocked port</i> (BP).</div></div><div class="tsingle" style="width:302px;max-width:302px"><div class="thumbimage"><a href="/wiki/File:Spanning_tree_protocol_at_work_6.svg" class="image"><img alt="After link failure the spanning tree algorithm computes and spans new least-cost tree." src="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Spanning_tree_protocol_at_work_6.svg/300px-Spanning_tree_protocol_at_work_6.svg.png" decoding="async" width="300" height="300" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/21/Spanning_tree_protocol_at_work_6.svg/450px-Spanning_tree_protocol_at_work_6.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/21/Spanning_tree_protocol_at_work_6.svg/600px-Spanning_tree_protocol_at_work_6.svg.png 2x" data-file-width="591" data-file-height="591" /></a></div><div class="thumbcaption">After link failure the spanning tree algorithm computes and spans new least-cost tree.</div></div></div><div class="trow"><div class="thumbcaption" style="background-color:transparent">Switches with Spanning Tree Protocol implementation in a local area network (LAN)</div></div></div></div>
+<p>The need for the Spanning Tree Protocol (STP) arose because <a href="/wiki/Network_switch" title="Network switch">switches</a> in <a href="/wiki/Local_area_networks" class="mw-redirect" title="Local area networks">local area networks</a> (LANs) are often interconnected using redundant links to improve resilience should one connection fail.<sup id="cite_ref-Angelescu_4-0" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>386</span></sup> However, this connection configuration creates a <a href="/wiki/Switching_loop" title="Switching loop">switching loop</a> resulting in <a href="/wiki/Broadcast_radiation" title="Broadcast radiation">broadcast radiations</a> and <a href="/wiki/MAC_table" class="mw-redirect" title="MAC table">MAC table</a> instability.<sup id="cite_ref-Angelescu_4-1" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>388</span></sup> If redundant links are used to connect switches, then switching loops need to be avoided.<sup id="cite_ref-Angelescu_4-2" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>385</span></sup>
+</p><p>To avoid the problems associated with redundant links in a switched LAN, STP is implemented on switches to monitor the network topology. Every link between switches, and in particular redundant links, are catalogued. The spanning-tree algorithm then blocks forwarding on redundant links by setting up one preferred link between switches in the LAN. This preferred link is used for all Ethernet frames unless it fails, in which case a non-preferred redundant link is enabled. When implemented in a network, STP designates one layer-2 switch as <i>root bridge</i>. All switches then select their best connection towards the root bridge for forwarding and block other redundant links. All switches constantly communicate with their neighbors in the LAN using <a href="/wiki/Bridge_Protocol_Data_Unit" title="Bridge Protocol Data Unit">Bridge Protocol Data Units</a> (BPDUs).<sup id="cite_ref-Angelescu_4-3" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>388</span></sup>
+</p><p>Provided there is more than one link between two switches, the STP root bridge calculates the cost of each path based on bandwidth. STP will select the path with the lowest cost, that is the highest bandwidth, as the preferred link. STP will enable this preferred link as the only path to be used for Ethernet frames between the two switches, and disable all other possible links by designating the switch ports that connect the preferred path as <i>root port</i>.<sup id="cite_ref-Angelescu_4-4" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>393</span></sup>
+</p><p>After STP enabled switches in a LAN have elected the root bridge, all non-root bridges assign one of their ports as root port. This is either the port that connects the switch to the root bridge, or if there are several paths, the port with the preferred path as calculated by the root bridge. Because not all switches are directly connected to the root bridge they communicate amongst each other using STP <a href="/wiki/Bridge_Protocol_Data_Unit" title="Bridge Protocol Data Unit">Bridge Protocol Data Units</a> (BPDUs). Each switch adds the cost of its own path to the cost received from the neighboring switches to determine the total cost of a given path to the root bridge. Once the cost of all possible paths to the root bridge have been added up, each switch assigns a port as root port which connects to the path with the lowest cost, or highest bandwidth, that will eventually lead to the root bridge.<sup id="cite_ref-Angelescu_4-5" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>394</span></sup>
+</p>
+<h3><span class="mw-headline" id="Path_cost">Path cost</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=2" title="Edit section: Path cost">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable floatright">
+<caption>Path cost for different port speed and STP variation
+</caption>
+<tbody><tr>
+<th>Data rate
+</th>
+<th>STP cost
+</th>
+<th>RSTP cost<sup id="cite_ref-802.1D-2004_5-0" class="reference"><a href="#cite_note-802.1D-2004-5">&#91;5&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>154</span></sup>
+</th></tr>
+<tr>
+<td><b>(Link bandwidth)</b>
+</td>
+<td><b>(802.1D-1998)</b>
+</td>
+<td><b>(802.1W-2004 default value)</b>
+</td></tr>
+<tr>
+<td>4&#160;Mbit/s
+</td>
+<td>250
+</td>
+<td>5,000,000
+</td></tr>
+<tr>
+<td>10&#160;Mbit/s
+</td>
+<td>100
+</td>
+<td>2,000,000
+</td></tr>
+<tr>
+<td>16&#160;Mbit/s
+</td>
+<td>62
+</td>
+<td>1,250,000
+</td></tr>
+<tr>
+<td>100&#160;Mbit/s
+</td>
+<td>19
+</td>
+<td>200,000
+</td></tr>
+<tr>
+<td>1&#160;Gbit/s
+</td>
+<td>4
+</td>
+<td>20,000
+</td></tr>
+<tr>
+<td>2&#160;Gbit/s
+</td>
+<td>3
+</td>
+<td>10,000
+</td></tr>
+<tr>
+<td>10&#160;Gbit/s
+</td>
+<td>2
+</td>
+<td>2,000
+</td></tr>
+<tr>
+<td>100&#160;Gbit/s
+</td>
+<td>N/A
+</td>
+<td>200
+</td></tr>
+<tr>
+<td>1&#160;Tbit/s
+</td>
+<td>N/A
+</td>
+<td>20
+</td></tr></tbody></table>
+<p>The STP path cost default was originally calculated by the formula <span class="texhtml"><span role="math" class="sfrac nowrap tion" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span class="num" style="display:block; line-height:1em; margin:0 0.1em;">1 Gbit/s</span><span class="slash visualhide">/</span><span class="den" style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;">bandwidth</span></span></span>. When faster speeds became available, the default values were adjusted as otherwise speeds above 1&#160;Gbit/s would have been indistinguishable by STP. Its successor RSTP uses a similar formula with a larger numerator: <span class="texhtml"><span role="math" class="sfrac nowrap tion" style="display:inline-block; vertical-align:-0.5em; font-size:85%; text-align:center;"><span class="num" style="display:block; line-height:1em; margin:0 0.1em;">20 Tbit/s</span><span class="slash visualhide">/</span><span class="den" style="display:block; line-height:1em; margin:0 0.1em; border-top:1px solid;">bandwidth</span></span></span>. These formulas lead to the sample values in the table.<sup id="cite_ref-802.1D-2004_5-1" class="reference"><a href="#cite_note-802.1D-2004-5">&#91;5&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>154</span></sup>
+</p>
+<h3><span class="mw-headline" id="Port_states">Port states</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=3" title="Edit section: Port states">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>All switch ports in the LAN where STP is enabled are categorized.<sup id="cite_ref-Angelescu_4-6" class="reference"><a href="#cite_note-Angelescu-4">&#91;4&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>388</span></sup>
+</p>
+<dl><dt>Blocking</dt>
+<dd>A port that would cause a switching loop if it were active. To prevent the use of looped paths, no user data is sent or received over a blocking port. BPDU data is still received in blocking state. A blocked port may go into forwarding mode if the other links in use fail and the spanning tree algorithm determines the port may transition to the forwarding state.</dd>
+<dt>Listening</dt>
+<dd>The switch processes BPDUs and awaits possible new information that would cause it to return to the blocking state. It does not populate the <a href="/wiki/MAC_table" class="mw-redirect" title="MAC table">MAC table</a> and it does not forward frames.</dd>
+<dt>Learning</dt>
+<dd>While the port does not yet forward frames, it does learn source addresses from frames received and adds them to the MAC table.</dd>
+<dt>Forwarding</dt>
+<dd>A port in normal operation receiving and forwarding frames. The port monitors incoming BPDUs that would indicate it should return to the blocking state to prevent a loop.</dd>
+<dt>Disabled</dt>
+<dd>A network administrator has manually disabled the switch port.</dd></dl>
+<p>When a device is first attached to a switch port, it will not immediately start to forward data. It will instead go through a number of states while it processes BPDUs and determines the topology of the network. The port attached to a host such as a computer, printer or <a href="/wiki/Server_(computing)" title="Server (computing)">server</a> always goes into the forwarding state, albeit after a delay of about 30 seconds while it goes through the listening and learning states. The time spent in the listening and learning states is determined by a value known as the forward delay (default 15 seconds and set by the root bridge). If another <a href="/wiki/Network_switch" title="Network switch">switch</a> is connected, the port may remain in blocking mode if it is determined that it would cause a loop in the network. Topology Change Notification (TCN) BPDUs are used to inform other switches of port changes. TCNs are injected into the network by a non-root switch and propagated to the root. Upon receipt of the TCN, the root switch will set the Topology Change flag in its normal BPDUs. This flag is propagated to all other switches and instructs them to rapidly age out their forwarding table entries.
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=4" title="Edit section: Configuration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Before configuring STP, the network topology should be carefully planned.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> Basic configuration requires that STP be enabled on all switches in the LAN and the same version of STP chosen on each. The administrator may determine which switch will be the root bridge and configure the switches appropriately. If the root bridge goes down, the protocol will automatically assign a new root bridge based on bridge ID. If all switches have the same bridge ID, such as the default ID, and the root bridge goes down, a tie situation arises and the protocol will assign one switch as root bridge based on the switch MAC addresses. Once the switches have been assigned a bridge ID and the protocol has chosen the root bridge switch, the best path to the root bridge is calculated based on port cost, path cost and port priority.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> Ultimately STP calculates the path cost on the basis of the bandwidth of a link, however links between switches may have the same bandwidth. Administrators can influence the protocol's choice of the preferred path by configuring the port cost, the lower the port cost the more likely it is that the protocol will choose the connected link as root port for the preferred path.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> The selection of how other switches in the topology choose their root port, or the least cost path to the root bridge, can be influenced by the port priority. The highest priority will mean the path will ultimately be less preferred. If all ports of a switch have the same priority, the port with the lowest number is chosen to forward frames.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Select_a_root_bridge_and_the_bridge_ID">Select a root bridge and the bridge ID</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=5" title="Edit section: Select a root bridge and the bridge ID">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright"><div class="thumbinner" style="width:252px;"><a href="/wiki/File:Spanning_tree_protocol_at_work_2.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Spanning_tree_protocol_at_work_2.svg/250px-Spanning_tree_protocol_at_work_2.svg.png" decoding="async" width="250" height="250" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Spanning_tree_protocol_at_work_2.svg/375px-Spanning_tree_protocol_at_work_2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Spanning_tree_protocol_at_work_2.svg/500px-Spanning_tree_protocol_at_work_2.svg.png 2x" data-file-width="591" data-file-height="591" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Spanning_tree_protocol_at_work_2.svg" class="internal" title="Enlarge"></a></div>An example network. The numbered boxes represent bridges, that is switches in a LAN. The number is the bridge ID. The lettered clouds represent network segments. The smallest bridge ID is 3. Therefore, bridge 3 is the root bridge.</div></div></div>
+<p>The <i>root bridge</i> of the spanning tree is the bridge with the smallest (lowest) bridge ID. Each bridge has a configurable priority number and a MAC address; the bridge ID is the <a href="/wiki/Concatenation" title="Concatenation">concatenation</a> of the bridge priority and the MAC address. For example, the ID of a bridge with priority 32768 and MAC <i><span class="macaddr" style="padding-right: 1px;"><span>0200.0000.1111</span></span></i> is <i><span class="macaddr" style="padding-right: 1px;"><span>32768.0200.0000.1111</span></span></i>. The bridge priority default is 32768 and can only be configured in multiples of 4096.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;a&#93;</a></sup> When comparing two bridge IDs, the priority portions are compared first and the MAC addresses are compared only if the priorities are equal. The switch with the lowest priority of all the switches will be the root; if there is a tie, then the switch with the lowest priority and lowest MAC address will be the root. For example, if switches <i>A</i> (MAC = <i><span class="macaddr" style="padding-right: 1px;"><span>0200.0000.1111</span></span></i>) and <i>B</i> (MAC = <i><span class="macaddr" style="padding-right: 1px;"><span>0200.0000.2222</span></span></i>) both have a priority of 32768 then switch <i>A</i> will be selected as the root bridge.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;b&#93;</a></sup> If the network administrators would like switch <i>B</i> to become the root bridge, they must set its priority to be less than 32768.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;c&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Protocol_choice_of_the_path_to_the_root_bridge">Protocol choice of the path to the root bridge</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=6" title="Edit section: Protocol choice of the path to the root bridge">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The sequence of events to determine the best received BPDU (which is the best path to the root) is:
+</p>
+<ul><li>Lowest root bridge ID - Determines the root bridge</li>
+<li>Lowest cost to the root bridge - Favors the upstream switch with the least cost to root</li>
+<li>Lowest sender bridge ID - Serves as a tie breaker if multiple upstream switches have equal cost to root</li>
+<li>Lowest sender port ID - Serves as a tie breaker if a switch has multiple (non-Etherchannel) links to a single upstream switch, where:
+<ul><li>Bridge ID = priority (4 bits) + locally assigned system ID extension (12 bits) + ID [MAC address] (48 bits); the default bridge priority is 32768, and</li>
+<li>Port ID = priority (4 bits) + ID (Interface number) (12 bits); the default port priority is 128.</li></ul></li></ul>
+<h4><span class="mw-headline" id="Breaking_ties_in_selecting_the_path_to_the_root_bridge">Breaking ties in selecting the path to the root bridge</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=7" title="Edit section: Breaking ties in selecting the path to the root bridge">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><b>Breaking ties for root ports:</b> When multiple paths from a bridge are least-cost paths, the chosen path uses the neighbor bridge with the lower bridge ID. The root port is thus the one connecting to the bridge with the lowest bridge ID. For example, in figure 3, if switch 4 were connected to network segment d instead of segment f, there would be two paths of length 2 to the root, one path going through bridge 24 and the other through bridge 92. Because there are two least cost paths, the lower bridge ID (24) would be used as the tie-breaker in choosing which path to use.
+</p><p><b>Breaking ties for designated ports:</b> When the root bridge has more than one port on a single LAN segment, the bridge ID is effectively tied, as are all root path costs (all equal zero). The designated port then becomes the port on that LAN segment with the lowest port ID. It's put into Forwarding mode while all other ports on the root bridge on that same LAN segment become non-designated ports and are put into blocking mode.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;10&#93;</a></sup> Not all bridge/switch manufacturers follow this rule, instead making all root bridge ports designated ports, and putting them all in forwarding mode. A final tie-breaker is required as noted in the section "The final tie-breaker."
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:252px;"><a href="/wiki/File:Spanning_tree_protocol_at_work_4.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Spanning_tree_protocol_at_work_4.svg/250px-Spanning_tree_protocol_at_work_4.svg.png" decoding="async" width="250" height="250" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/77/Spanning_tree_protocol_at_work_4.svg/375px-Spanning_tree_protocol_at_work_4.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/77/Spanning_tree_protocol_at_work_4.svg/500px-Spanning_tree_protocol_at_work_4.svg.png 2x" data-file-width="591" data-file-height="591" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Spanning_tree_protocol_at_work_4.svg" class="internal" title="Enlarge"></a></div>Path tie: The least cost path to the root from network segment e goes through bridge 92. Therefore, the designated port for network segment e is the port that connects bridge 92 to network segment e.</div></div></div>
+<p>When more than one bridge on a segment leads to a least-cost path to the root, the bridge with the lower bridge ID is used to forward messages to the root. The port attaching that bridge to the network segment is the <i>designated port</i> for the segment. In the diagram on the right there are two least cost paths from network segment d to the root, one going through bridge 24 and the other through bridge 92. The lower bridge ID is 24, so the tie breaker dictates that the designated port is the port through which network segment d is connected to bridge 24. If bridge IDs were equal, then the bridge with the lowest MAC address would have the designated port. In either case, the loser sets the port as being blocked.
+</p><p><i>The final tie-breaker.</i>  In some cases, there may still be a tie, as when the root bridge has multiple active ports on the same LAN segment (see above, "Breaking ties for designated ports") with equally low root path costs and bridge IDs, or, in other cases, multiple bridges are connected by multiple cables and multiple ports. In each case, a single bridge may have multiple candidates for its root port. In these cases, candidates for the root port have already received BPDUs offering equally-low (i.e. the "best") root path costs and equally-low (i.e. the "best") bridge IDs, and the final tie breaker goes to the port that received the lowest (i.e. the "best") port priority ID, or port ID.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;11&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Bridge_Protocol_Data_Units">Bridge Protocol Data Units</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=8" title="Edit section: Bridge Protocol Data Units">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Bridge_Protocol_Data_Unit" title="Bridge Protocol Data Unit">Bridge Protocol Data Unit</a></div>
+<p>The above rules describe one way of determining what spanning tree will be computed by the algorithm, but the rules as written require knowledge of the entire network. The bridges have to determine the root bridge and compute the port roles (root, designated, or blocked) with only the information that they have. To ensure that each bridge has enough information, the bridges use special data frames called <b>Bridge Protocol Data Units</b> (<a href="/wiki/Bridge_Protocol_Data_Units_(EN)" class="mw-redirect" title="Bridge Protocol Data Units (EN)">BPDUs</a>) to exchange information about bridge IDs and root path costs.
+</p><p>A <a href="/wiki/Network_bridge" class="mw-redirect" title="Network bridge">bridge</a> sends a BPDU frame using the unique MAC address of the port itself as a source address, and a destination address of the STP <a href="/wiki/Multicast_address" title="Multicast address">multicast address</a> <i><span class="macaddr" style="padding-right: 1px;"><span>01:80:C2:00:00:00</span></span></i>.
+</p><p>There are two types of BPDUs in the original STP specification<sup id="cite_ref-802.1D-2004_5-2" class="reference"><a href="#cite_note-802.1D-2004-5">&#91;5&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>63</span></sup> (the Rapid Spanning Tree (RSTP) extension uses a specific RSTP BPDU):
+</p>
+<ul><li>Configuration BPDU (CBPDU), used for Spanning Tree computation</li>
+<li>Topology Change Notification (TCN) BPDU, used to announce changes in the network topology</li></ul>
+<p>BPDUs are exchanged regularly (every 2 seconds by default) and enable switches to keep track of network changes and to start and stop forwarding at ports as required. To prevent the delay when connecting hosts to a switch and during some topology changes, <a href="#Rapid_Spanning_Tree_Protocol">Rapid STP</a> was developed, which allows a switch port to rapidly transition into the forwarding state during these situations.
+</p>
+<h3><span class="mw-headline" id="Bridge_Protocol_Data_Unit_fields">Bridge Protocol Data Unit fields</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=9" title="Edit section: Bridge Protocol Data Unit fields">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>IEEE 802.1D and <a href="/wiki/IEEE_802.1aq" title="IEEE 802.1aq">IEEE 802.1aq</a> BPDUs have the following format:
+</p><p><i></i>
+</p>
+<pre> 1. Protocol ID:       2 bytes (0x0000 IEEE 802.1D)
+ 2. Version ID:        1 byte (0x00 Config &amp; TCN / 0x02 RST / 0x03 MST / 0x04 SPT  BPDU) 
+ 3. BPDU Type:         1 byte (0x00 STP Config BPDU, 0x80 TCN BPDU, 0x02 RST/MST Config BPDU)
+ 4. Flags:             1 byte
+   bits  : usage
+       1&#160;: 0 or 1 for Topology Change
+       2&#160;: 0 (unused) or 1 for Proposal in RST/MST/SPT BPDU
+     3-4&#160;: 00 (unused) or
+           01 for Port Role Alternate/Backup in RST/MST/SPT BPDU
+           10 for Port Role Root in RST/MST/SPT BPDU
+           11 for Port Role Designated in RST/MST/SPT BPDU
+       5&#160;: 0 (unused) or 1 for Learning in RST/MST/SPT BPDU
+       6&#160;: 0 (unused) or 1 for Forwarding in RST/MST/SPT BPDU
+       7&#160;: 0 (unused) or 1 for Agreement in RST/MST/SPT BPDU
+       8&#160;: 0 or 1 for Topology Change Acknowledgement
+ 5. Root ID:           8 bytes (CIST Root ID in MST/SPT BPDU)
+   bits  : usage
+     1-4&#160;: Root Bridge Priority
+    5-16&#160;: Root Bridge System ID Extension
+   17-64&#160;: Root Bridge MAC Address
+ 6. Root Path Cost:    4 bytes (CIST External Path Cost in MST/SPT BPDU)
+ 7. Bridge ID:         8 bytes (CIST Regional Root ID in MST/SPT BPDU)
+   bits  : usage
+     1-4&#160;: Bridge Priority 
+    5-16&#160;: Bridge System ID Extension
+   17-64&#160;: Bridge MAC Address
+  8. Port ID:          2 bytes
+  9. Message Age:      2 bytes in 1/256 secs
+ 10. Max Age:          2 bytes in 1/256 secs
+ 11. Hello Time:       2 bytes in 1/256 secs
+ 12. Forward Delay:    2 bytes in 1/256 secs
+ 13. Version 1 Length: 1 byte (0x00 no ver 1 protocol info present. RST, MST, SPT BPDU only)
+ 14. Version 3 Length: 2 bytes (MST, SPT BPDU only)
+ 
+ <small>The TCN BPDU includes fields 1-3 only.</small> <i></i>
+</pre>
+<h2><span class="mw-headline" id="Spanning_Tree_Protocol_standards">Spanning Tree Protocol standards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=10" title="Edit section: Spanning Tree Protocol standards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The first spanning tree protocol was invented in 1985 at the Digital Equipment Corporation by <a href="/wiki/Radia_Perlman" title="Radia Perlman">Radia Perlman</a>.<sup id="cite_ref-perlman_paper_1-1" class="reference"><a href="#cite_note-perlman_paper-1">&#91;1&#93;</a></sup> In 1990, the IEEE published the first standard for the protocol as 802.1D,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;12&#93;</a></sup> based on the algorithm designed by Perlman. Subsequent versions were published in 1998<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;13&#93;</a></sup> and 2004,<sup id="cite_ref-standard_17-0" class="reference"><a href="#cite_note-standard-17">&#91;14&#93;</a></sup> incorporating various extensions. The original Perlman-inspired Spanning Tree Protocol, called DEC STP, is not a standard and differs from the IEEE version in message format as well as timer settings. Some bridges implement both the IEEE and the DEC versions of the Spanning Tree Protocol, but their interworking can create issues for the network administrator, as illustrated by the problem discussed in an on-line Cisco document.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;15&#93;</a></sup>
+</p><p>Different implementations of a standard are not guaranteed to work, due for example to differences in default timer settings. The IEEE encourages vendors to provide a "<a href="/wiki/Protocol_Implementation_Conformance_Statement" class="mw-redirect" title="Protocol Implementation Conformance Statement">Protocol Implementation Conformance Statement</a>", declaring which capabilities and options have been implemented,<sup id="cite_ref-standard_17-1" class="reference"><a href="#cite_note-standard-17">&#91;14&#93;</a></sup> to help users determine whether different implementations will interwork correctly.
+</p>
+<h3><span class="mw-headline" id="Rapid_Spanning_Tree_Protocol">Rapid Spanning Tree Protocol</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=11" title="Edit section: Rapid Spanning Tree Protocol">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In 2001, the <a href="/wiki/IEEE" class="mw-redirect" title="IEEE">IEEE</a> introduced Rapid Spanning Tree Protocol (RSTP) as 802.1w.  RSTP provides significantly faster spanning tree convergence after a topology change, introducing new convergence behaviors and bridge port roles to do this.  RSTP was designed to be backwards-compatible with standard STP.
+</p><p>While STP can take 30 to 50 seconds to respond to a topology change, RSTP is typically able to respond to changes within 3&#160;×&#160;Hello times (default: 3 times 2 seconds) or within a few milliseconds of a physical link failure. The Hello time is an important and configurable time interval that is used by RSTP for several purposes; its default value is 2 seconds.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;16&#93;</a></sup><sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;17&#93;</a></sup>
+</p><p>Standard IEEE 802.1D-2004 incorporates RSTP and obsoletes the original STP standard.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;18&#93;</a></sup>
+</p>
+<h4><span class="mw-headline" id="Rapid_Spanning_Tree_Operation">Rapid Spanning Tree Operation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=12" title="Edit section: Rapid Spanning Tree Operation">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>RSTP adds new bridge port roles in order to speed convergence following a link failure. The number of states a port can be in has been reduced to three instead of STP's original five.
+</p><p><b>RSTP bridge port roles:</b>
+</p>
+<ul><li><b>Root</b> - A forwarding port that is the best port from non-root bridge to root bridge</li>
+<li><b>Designated</b> - A forwarding port for every LAN segment</li>
+<li><b>Alternate</b> - An alternate path to the root bridge. This path is different from using the root port</li>
+<li><b>Backup</b> - A backup/redundant path to a segment where another bridge port already connects</li>
+<li><b>Disabled</b> - Not strictly part of STP, a network administrator can manually disable a port</li></ul>
+<p><b>RSTP switch port states:</b>
+</p>
+<ul><li><b>Discarding</b> - No user data is sent over the port</li>
+<li><b>Learning</b> - The port is not forwarding frames yet, but is populating its MAC-address-table</li>
+<li><b>Forwarding</b> - The port is fully operational</li></ul>
+<p><b>RSTP operational details:</b>
+</p>
+<ul><li>Detection of root switch failure is done in 3 hello times, which is 6 seconds if the default hello times have not been changed.</li>
+<li>Ports may be configured as edge ports if they are attached to a LAN that has no other bridges attached. These edge ports transition directly to the forwarding state. RSTP still continues to monitor the port for BPDUs in case a bridge is connected. RSTP can also be configured to automatically detect edge ports. As soon as the bridge detects a BPDU coming to an edge port, the port becomes a non-edge port.</li>
+<li>RSTP calls the connection between two or more switches as a "link-type" connection. A port that operates in full-duplex mode is assumed to be point-to-point link, whereas a half-duplex port (through a hub) is considered a shared port by default. This automatic link type setting can be overridden by explicit configuration. RSTP improves convergence on point-to-point links by reducing the Max-Age time to 3 times Hello interval, removing the STP listening state, and exchanging a handshake between two switches to quickly transition the port to forwarding state. RSTP does not do anything differently from STP on shared links.</li>
+<li>Unlike in STP, RSTP will respond to BPDUs sent from the direction of the root bridge. An RSTP bridge will "propose" its spanning tree information to its designated ports. If another RSTP bridge receives this information and determines this is the superior root information, it sets all its other ports to discarding. The bridge may send an "agreement" to the first bridge confirming its superior spanning tree information. The first bridge, upon receiving this agreement, knows it can rapidly transition that port to the forwarding state bypassing the traditional listening/learning state transition. This essentially creates a cascading effect away from the root bridge where each designated bridge proposes to its neighbors to determine if it can make a rapid transition. This is one of the major elements that allows RSTP to achieve faster convergence times than STP.</li>
+<li>As discussed in the port role details above, RSTP maintains backup details regarding the discarding status of ports. This avoids timeouts if the current forwarding ports were to fail or BPDUs were not received on the root port in a certain interval.</li>
+<li>RSTP will revert to legacy STP on an interface if a legacy version of an STP BPDU is detected on that port.</li></ul>
+<p><span id="PVST"></span>
+</p>
+<h2><span class="mw-headline" id="Spanning_Tree_Protocol_standards_for_VLANs">Spanning Tree Protocol standards for VLANs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=13" title="Edit section: Spanning Tree Protocol standards for VLANs">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>STP and RSTP do not segregate switch ports by VLAN.<sup id="cite_ref-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204_22-0" class="reference"><a href="#cite_note-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204-22">&#91;19&#93;</a></sup> However, in <a href="/wiki/Ethernet" title="Ethernet">Ethernet</a> <a href="/wiki/Network_switch" title="Network switch">switched</a> environments where multiple <a href="/wiki/Virtual_LAN" title="Virtual LAN">Virtual LANs</a> (VLANs) exist, it is often desirable to create multiple spanning trees so that traffic from different VLANs uses different links.
+</p>
+<h3><span class="mw-headline" id="Proprietary_Spanning_Tree_VLAN_standards">Proprietary Spanning Tree VLAN standards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=14" title="Edit section: Proprietary Spanning Tree VLAN standards">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Before the IEEE published a Spanning Tree Protocol standard for VLANs a number of vendors who sold VLAN capable switches developed their own Spanning Tree Protocol versions that were VLAN capable. <a href="/wiki/Cisco" class="mw-redirect" title="Cisco">Cisco</a> developed, implemented and published the Per-VLAN Spanning Tree (PVST) <a href="/wiki/Proprietary_protocol" title="Proprietary protocol">proprietary protocol</a> using its own proprietary <a href="/wiki/Cisco_Inter-Switch_Link" title="Cisco Inter-Switch Link">Inter-Switch Link</a> (ISL) for VLAN <a href="/wiki/Encapsulation_(networking)" title="Encapsulation (networking)">encapsulation</a>, and PVST+ which uses <a href="/wiki/802.1Q" class="mw-redirect" title="802.1Q">802.1Q</a> VLAN encapsulation. Both standards implement a separate spanning tree for every VLAN. Cisco switches now commonly implement PVST+ and can only implement Spanning Trees for VLANs if the other switches in the LAN implement the same VLAN STP protocol. Very few switches from other vendors support Cisco's various proprietary protocols. HP provides PVST and PVST+ compatibility in some of its network switches.<sup id="cite_ref-ReferenceA_23-0" class="reference"><a href="#cite_note-ReferenceA-23">&#91;20&#93;</a></sup> Some devices from <a href="/wiki/Force10" title="Force10">Force10 Networks</a>, <a href="/wiki/Alcatel-Lucent" title="Alcatel-Lucent">Alcatel-Lucent</a>, <a href="/wiki/Extreme_Networks" title="Extreme Networks">Extreme Networks</a>, <a href="/wiki/Avaya" title="Avaya">Avaya</a>, <a href="/wiki/Brocade_Communications_Systems" title="Brocade Communications Systems">Brocade Communications Systems</a> and <a href="/wiki/BLADE_Network_Technologies" title="BLADE Network Technologies">BLADE Network Technologies</a> support PVST+.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;21&#93;</a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;22&#93;</a></sup><sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;23&#93;</a></sup> Extreme Networks does so with two limitations: Lack of support on ports where the VLAN is untagged/native, and also on the VLAN with ID 1. PVST+ can tunnel across an <a href="/wiki/Spanning_tree_protocol#Multiple_Spanning_Tree_Protocol" class="mw-redirect" title="Spanning tree protocol">MSTP</a> Region.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;24&#93;</a></sup>
+</p><p>The switch vendor <a href="/wiki/Juniper_Networks" title="Juniper Networks">Juniper Networks</a> in turn developed and implemented its VLAN Spanning Tree Protocol (VSTP) to provide compatibility with Cisco's PVST, so that the switches from both vendors can be included in one LAN.<sup id="cite_ref-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204_22-1" class="reference"><a href="#cite_note-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204-22">&#91;19&#93;</a></sup> The VSTP protocol is only supported by the EX and MX Series from Juniper Networks. There are two restrictions to the compatibility of VSTP:
+</p>
+<ol><li>VSTP supports only 253 different spanning-tree topologies. If there are more than 253 VLANs, it is recommended to configure RSTP in addition to VSTP, and VLANs beyond 253 will be handled by RSTP.</li>
+<li><a href="/wiki/MVRP" class="mw-redirect" title="MVRP">MVRP</a> does not support VSTP. If this protocol is in use, VLAN membership for trunk interfaces must be statically configured <a rel="nofollow" class="external autonumber" href="http://www.juniper.net/techpubs/en_US/junos10.0/topics/concept/bridging-mvrp-ex-series.html">[1]</a>.</li></ol>
+<p>By default, VSTP uses the RSTP protocol as its core spanning-tree protocol, but usage of STP can be forced if the network includes old bridges <a rel="nofollow" class="external autonumber" href="https://www.juniper.net/techpubs/en_US/junos9.4/topics/concept/spanning-trees-ex-series-vstp-understanding.html">[2]</a>. More information about configuring VSTP on Juniper Networks switches was published in the official documentation <a rel="nofollow" class="external text" href="https://www.juniper.net/techpubs/en_US/junos14.1/topics/concept/spanning-trees-ex-series-vstp-understanding.html">Understanding VSTP</a>.
+</p><p>Cisco also published a proprietary version of Rapid Spanning Tree Protocol. It creates a spanning tree for each VLAN, just like PVST. Cisco refers to this as Rapid Per-VLAN Spanning Tree (RPVST).
+</p>
+<h3><span class="mw-headline" id="Multiple_Spanning_Tree_Protocol">Multiple Spanning Tree Protocol</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=15" title="Edit section: Multiple Spanning Tree Protocol">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Multiple_Spanning_Tree_Protocol" title="Multiple Spanning Tree Protocol">Multiple Spanning Tree Protocol</a></div>
+<p>The <i>Multiple Spanning Tree Protocol</i> (MSTP), originally defined in <a href="/wiki/IEEE_802.1s" class="mw-redirect" title="IEEE 802.1s">IEEE 802.1s</a> and later merged into <a href="/wiki/IEEE_802.1Q" title="IEEE 802.1Q">IEEE 802.1Q</a>-2005, defines an extension to RSTP to further develop the usefulness of virtual LANs (VLANs).
+</p><p>In the standard a spanning tree that maps one or more VLANs is called <i>multiple spanning tree</i> (MST). If MSTP is implemented a spanning tree can be defined for individual VLANs or for groups of VLANs. Furthermore, the administrator can define alternate paths within a spanning tree. VLANs must be assigned to a so-called <i>multiple spanning tree instance</i> (MSTI). Switches are first assigned to an MST region, then VLANs are mapped against or assigned to this MST. A <i>Common Spanning Tree</i> (CST) is an MST to which several VLANs are mapped, this group of VLANs is called <i>MST Instance</i> (MSTI). CSTs are backward compatible with the STP and RSTP standard. A MST that has only one VLAN assigned to it is a <i>Internal Spanning Tree</i> (IST).<sup id="cite_ref-ReferenceA_23-1" class="reference"><a href="#cite_note-ReferenceA-23">&#91;20&#93;</a></sup>
+</p><p>Unlike some proprietary per-VLAN spanning tree implementations,<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;25&#93;</a></sup> MSTP includes all of its spanning tree information in a single <a href="/wiki/BPDU" class="mw-redirect" title="BPDU">BPDU</a> format. Not only does this reduce the number of BPDUs required on a LAN to communicate spanning tree information for each VLAN, but it also ensures backward compatibility with RSTP (and in effect, classic STP too). MSTP does this by encoding additional region information after the standard RSTP BPDU as well as a number of MSTI messages (from 0 to 64 instances, although in practice many bridges support fewer). Each of these MSTI configuration messages conveys the spanning tree information for each instance. Each instance can be assigned a number of configured VLANs and frames (packets) assigned to these VLANs operate in this spanning tree instance whenever they are inside the MST region. In order to avoid conveying their entire VLAN to spanning tree mapping in each BPDU, bridges encode an MD5 digest of their VLAN to instance table in the MSTP BPDU. This digest is then used by other MSTP bridges, along with other administratively configured values, to determine if the neighboring bridge is in the same MST region as itself.
+</p><p>MSTP is fully compatible with RSTP bridges, in that an MSTP BPDU can be interpreted by an RSTP bridge as an RSTP BPDU. This not only allows compatibility with RSTP bridges without configuration changes, but also causes any RSTP bridges outside of an MSTP region to see the region as a single RSTP bridge, regardless of the number of MSTP bridges inside the region itself. In order to further facilitate this view of an MST region as a single RSTP bridge, the MSTP protocol uses a variable known as remaining hops as a time to live counter instead of the message age timer used by RSTP. The message age time is only incremented once when spanning tree information enters an MST region, and therefore RSTP bridges will see a region as only one "hop" in the spanning tree. Ports at the edge of an MST region connected to either an RSTP or STP bridge or an endpoint are known as boundary ports. As in RSTP, these ports can be configured as edge ports to facilitate rapid changes to the forwarding state when connected to endpoints.
+</p>
+<h2><span id="Shortest_path_bridging_.28SPB.29"></span><span class="mw-headline" id="Shortest_path_bridging_(SPB)">Shortest path bridging (SPB)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=16" title="Edit section: Shortest path bridging (SPB)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Shortest_Path_Bridging" class="mw-redirect" title="Shortest Path Bridging">Shortest Path Bridging</a></div>
+<p>The IEEE approved the <a href="/wiki/IEEE_802.1aq" title="IEEE 802.1aq">IEEE 802.1aq</a> standard May 2012,<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;26&#93;</a></sup> also known and documented in most books as <a href="/wiki/Shortest_Path_Bridging" class="mw-redirect" title="Shortest Path Bridging">Shortest Path Bridging</a> (SPB).  SPB allows redundant links between switches to be active through multiple equal cost paths, and provides much larger layer 2 topologies, faster convergence, and improves the use of the mesh topologies through increased bandwidth between all devices by allowing traffic to load share across all paths on a mesh network.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;27&#93;</a></sup><sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;28&#93;</a></sup>
+SPB consolidates multiple existing functionalities, including Spanning Tree Protocol (STP), Multiple Spanning Tree Protocol (MSTP), Rapid Spanning Tree Protocol (RSTP), Link aggregation, and <a href="/wiki/Multiple_MAC_Registration_Protocol" class="mw-redirect" title="Multiple MAC Registration Protocol">Multiple MAC Registration Protocol</a> (MMRP) into a one link state protocol.<sup id="cite_ref-IEEE_32-0" class="reference"><a href="#cite_note-IEEE-32">&#91;29&#93;</a></sup> SPB is designed to virtually eliminate human error during configuration and preserves the plug-and-play nature that established Ethernet as the de facto protocol at Layer 2.<sup id="cite_ref-IEEE_32-1" class="reference"><a href="#cite_note-IEEE-32">&#91;29&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="System_ID_Extension">System ID Extension</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=17" title="Edit section: System ID Extension">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The bridge ID, or BID, is a field inside a <a href="/wiki/BPDU" class="mw-redirect" title="BPDU">BPDU</a> packet. It is eight <a href="/wiki/Byte" title="Byte">bytes</a> in length. The first two bytes are the bridge priority, an unsigned integer of 0-65,535. The last six <a href="/wiki/Byte" title="Byte">bytes</a> are a <a href="/wiki/MAC_address" title="MAC address">MAC address</a> supplied by the bridge. Prior to IEEE 802.1D-2004, the first two bytes gave a 16 <a href="/wiki/Bit" title="Bit">bit</a> bridge priority. Since IEEE 802.1D-2004, the first four <a href="/wiki/Bit" title="Bit">bits</a> are a configurable priority, and the last twelve bits carry the bridge system ID extension.  In the case of <a href="/wiki/Minimum_spanning_tree" title="Minimum spanning tree">MST</a>, the bridge system ID extension carries the <a href="/wiki/Multiple_Spanning_Tree_Protocol" title="Multiple Spanning Tree Protocol">MSTP</a> instance number.  Some vendors set the bridge system ID extension to carry a <a href="/wiki/VLAN" class="mw-redirect" title="VLAN">VLAN</a> ID allowing a different spanning tree per VLAN, such as Cisco's <a href="/wiki/PVST" class="mw-redirect" title="PVST">PVST</a>.
+</p>
+<h2><span class="mw-headline" id="Disadvantages_and_current_practice">Disadvantages and current practice</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=18" title="Edit section: Disadvantages and current practice">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Spanning tree is an older protocol with a longer default hold-down time that governs convergence of the protocol state. Improper use or implementation can contribute to network disruptions. The idea of blocking links is something that customers these days do not accept as a proper high availability solution. Modern networks can make use of all connected links by use of protocols that inhibit, control or suppress the natural behavior of logical or physical topology loops.
+</p><p>Switch virtualization techniques like HPE IRF, Aruba VSF and Cisco VSS combine multiple switches into a single logical entity. A <a href="/w/index.php?title=Multi-chassis_link_aggregation_group&amp;action=edit&amp;redlink=1" class="new" title="Multi-chassis link aggregation group (page does not exist)">multi-chassis link aggregation group</a> works like a normal <a href="/wiki/Link_aggregation" title="Link aggregation">LACP trunk</a>, only distributed through multiple switches. Conversely partitioning technologies compartmentalize a single physical chassis into multiple logical entities.
+</p><p>On the edge of the network, loop-detection is configured to prevent accidental loops by users.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=19" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Bridge_Protocol_Data_Unit" title="Bridge Protocol Data Unit">Bridge Protocol Data Unit</a></li>
+<li><a href="/wiki/Distributed_minimum_spanning_tree" title="Distributed minimum spanning tree">Distributed minimum spanning tree</a></li>
+<li><a href="/wiki/EtherChannel" title="EtherChannel">EtherChannel</a></li>
+<li><a href="/wiki/Ethernet_Automatic_Protection_Switching" title="Ethernet Automatic Protection Switching">Ethernet Automatic Protection Switching</a></li>
+<li><a href="/wiki/Ethernet_Ring_Protection_Switching" title="Ethernet Ring Protection Switching">Ethernet Ring Protection Switching</a></li>
+<li><a href="/wiki/Flex_links" title="Flex links">Flex links</a></li>
+<li><a href="/wiki/Flooding_(computer_networking)" title="Flooding (computer networking)">Flooding (computer networking)</a></li>
+<li><a href="/wiki/Media_Redundancy_Protocol" title="Media Redundancy Protocol">Media Redundancy Protocol</a></li>
+<li><a href="/wiki/Minimum_spanning_tree" title="Minimum spanning tree">Minimum spanning tree</a></li>
+<li><a href="/wiki/TRILL_(computing)" title="TRILL (computing)">TRILL</a> (Transparent Interconnection of Lots of Links)</li>
+<li><a href="/wiki/Unidirectional_Link_Detection" title="Unidirectional Link Detection">Unidirectional Link Detection</a></li>
+<li><a href="/wiki/Virtual_Link_Trunking" title="Virtual Link Trunking">Virtual Link Trunking</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=20" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: lower-alpha;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text">Spanning tree incorporated 802.1t, and per 802.1t, uses the 4 most-significant bits of the 802.1d two-octet priority field as priority, and the least-significant 12 bits of that field as the extended system ID.</span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text">The original 802.1d envisioned the possibility of the root bridge having more than one port on the same LAN segment, and in that case, the port with the lowest port ID would become the designated port for that LAN segment, and put into forwarding mode, while its other ports on that same LAN segment became non-designated ports put into blocking mode. Not all bridge manufacturers follow that rule, some making all ports designated ports and putting them all into forwarding mode.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text">Alternatively the network administrator can configure the spanning tree a root primary/secondary. When configuring the root primary and root secondary the switch will automatically change the priority accordingly, 24576 and 28672 respectively with the default configuration.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=21" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-perlman_paper-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-perlman_paper_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-perlman_paper_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Perlman, Radia (1985). <a rel="nofollow" class="external text" href="https://semanticscholar.org/paper/933d8fc9b5ddc0e5e12116c1eb309ab535e6ae75">"An Algorithm for Distributed Computation of a Spanning Tree in an Extended LAN"</a>. <i>ACM SIGCOMM Computer Communication Review</i>. <b>15</b> (4): 44–53. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F318951.319004">10.1145/318951.319004</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+SIGCOMM+Computer+Communication+Review&amp;rft.atitle=An+Algorithm+for+Distributed+Computation+of+a+Spanning+Tree+in+an+Extended+LAN&amp;rft.volume=15&amp;rft.issue=4&amp;rft.pages=44-53&amp;rft.date=1985&amp;rft_id=info%3Adoi%2F10.1145%2F318951.319004&amp;rft.aulast=Perlman&amp;rft.aufirst=Radia&amp;rft_id=https%3A%2F%2Fsemanticscholar.org%2Fpaper%2F933d8fc9b5ddc0e5e12116c1eb309ab535e6ae75&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text">
+<cite class="citation book">Perlman, Radia (2000). <i>Interconnections, Second Edition</i>. USA: Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-63448-1" title="Special:BookSources/0-201-63448-1"><bdi>0-201-63448-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Interconnections%2C+Second+Edition&amp;rft.place=USA&amp;rft.pub=Addison-Wesley&amp;rft.date=2000&amp;rft.isbn=0-201-63448-1&amp;rft.aulast=Perlman&amp;rft.aufirst=Radia&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.ieee802.org/1/pages/802.1Q-2014.html">Bridges and Bridged Networks</a></span>
+</li>
+<li id="cite_note-Angelescu-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-Angelescu_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Angelescu_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Angelescu_4-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Angelescu_4-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Angelescu_4-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Angelescu_4-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Angelescu_4-6"><sup><i><b>g</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Silviu Angelescu (2010). <i>CCNA Certification All-In-One For Dummies</i>. John Wiley &amp; Sons. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780470635926" title="Special:BookSources/9780470635926"><bdi>9780470635926</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNA+Certification+All-In-One+For+Dummies&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2010&amp;rft.isbn=9780470635926&amp;rft.au=Silviu+Angelescu&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-802.1D-2004-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-802.1D-2004_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-802.1D-2004_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-802.1D-2004_5-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://standards.ieee.org/getieee802/download/802.1D-2004.pdf">"802.1D IEEE Standard for Local and Metropolitan Area Networks. Media Access Control (MAC) Bridges"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/IEEE" class="mw-redirect" title="IEEE">IEEE</a>. 2004<span class="reference-accessdate">. Retrieved <span class="nowrap">19 April</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=802.1D+IEEE+Standard+for+Local+and+Metropolitan+Area+Networks.+Media+Access+Control+%28MAC%29+Bridges&amp;rft.pub=IEEE&amp;rft.date=2004&amp;rft_id=http%3A%2F%2Fstandards.ieee.org%2Fgetieee802%2Fdownload%2F802.1D-2004.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book">Wade Edwards, Terry Jack, Todd Lammle, Toby Skandier, Robert Padjen, Arthur Pfund &amp; Carl Timm (2006). <i>CCNP Complete Study Guide: Exams 642-801, 642-811, 642-821, 642-831</i>. John Wiley &amp; Sons. pp.&#160;506 &amp; 511. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780782150667" title="Special:BookSources/9780782150667"><bdi>9780782150667</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNP+Complete+Study+Guide%3A+Exams+642-801%2C+642-811%2C+642-821%2C+642-831&amp;rft.pages=506+%26+511&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2006&amp;rft.isbn=9780782150667&amp;rft.au=Wade+Edwards%2C+Terry+Jack%2C+Todd+Lammle%2C+Toby+Skandier%2C+Robert+Padjen%2C+Arthur+Pfund+%26+Carl+Timm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation book">Wade Edwards, Terry Jack, Todd Lammle, Toby Skandier, Robert Padjen, Arthur Pfund &amp; Carl Timm (2006). <i>CCNP Complete Study Guide: Exams 642-801, 642-811, 642-821, 642-831</i>. John Wiley &amp; Sons. p.&#160;506. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780782150667" title="Special:BookSources/9780782150667"><bdi>9780782150667</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNP+Complete+Study+Guide%3A+Exams+642-801%2C+642-811%2C+642-821%2C+642-831&amp;rft.pages=506&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2006&amp;rft.isbn=9780782150667&amp;rft.au=Wade+Edwards%2C+Terry+Jack%2C+Todd+Lammle%2C+Toby+Skandier%2C+Robert+Padjen%2C+Arthur+Pfund+%26+Carl+Timm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation book">Wade Edwards, Terry Jack, Todd Lammle, Toby Skandier, Robert Padjen, Arthur Pfund &amp; Carl Timm (2006). <i>CCNP Complete Study Guide: Exams 642-801, 642-811, 642-821, 642-831</i>. John Wiley &amp; Sons. p.&#160;511. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780782150667" title="Special:BookSources/9780782150667"><bdi>9780782150667</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNP+Complete+Study+Guide%3A+Exams+642-801%2C+642-811%2C+642-821%2C+642-831&amp;rft.pages=511&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2006&amp;rft.isbn=9780782150667&amp;rft.au=Wade+Edwards%2C+Terry+Jack%2C+Todd+Lammle%2C+Toby+Skandier%2C+Robert+Padjen%2C+Arthur+Pfund+%26+Carl+Timm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation book">Wade Edwards, Terry Jack, Todd Lammle, Toby Skandier, Robert Padjen, Arthur Pfund &amp; Carl Timm (2006). <i>CCNP Complete Study Guide: Exams 642-801, 642-811, 642-821, 642-831</i>. John Wiley &amp; Sons. p.&#160;513. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780782150667" title="Special:BookSources/9780782150667"><bdi>9780782150667</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=CCNP+Complete+Study+Guide%3A+Exams+642-801%2C+642-811%2C+642-821%2C+642-831&amp;rft.pages=513&amp;rft.pub=John+Wiley+%26+Sons&amp;rft.date=2006&amp;rft.isbn=9780782150667&amp;rft.au=Wade+Edwards%2C+Terry+Jack%2C+Todd+Lammle%2C+Toby+Skandier%2C+Robert+Padjen%2C+Arthur+Pfund+%26+Carl+Timm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text">802.1d-1998 section 8.3.1: The Designated Port for each LAN is the Bridge Port for which the value of the Root Path Cost is the lowest: if two or more Ports have the same value of Root Path Cost, then first the Bridge Identifier of their Bridges, and their Port Identifiers are used as tie breakers.</span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text">802.1d-1998 section 8.3.2 b) A Bridge that receives a Configuration BPDU on what it decides is its Root Port conveying better information (i.e. highest priority Root Identifier, lowest Root Path Cost, highest priority transmitting Bridge and Port), passes that information on to all the LANs for which it believes itself to be the Designated Bridge.</span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation book">LAN/MAN Standards Committee of the IEEE Computer Society, ed. (1990). <i>ANSI/IEEE Std 802.1D</i>. IEEE.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ANSI%2FIEEE+Std+802.1D&amp;rft.pub=IEEE&amp;rft.date=1990&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation book">LAN/MAN Standards Committee of the IEEE Computer Society, ed. (1998). <i>ANSI/IEEE Std 802.1D, 1998 Edition, Part 3: Media Access Control (MAC) Bridges</i>. IEEE.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ANSI%2FIEEE+Std+802.1D%2C+1998+Edition%2C+Part+3%3A+Media+Access+Control+%28MAC%29+Bridges&amp;rft.pub=IEEE&amp;rft.date=1998&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-standard-17"><span class="mw-cite-backlink">^ <a href="#cite_ref-standard_17-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-standard_17-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">LAN/MAN Standards Committee of the IEEE Computer Society, ed. (2004). <i>ANSI/IEEE Std 802.1D - 2004: IEEE Standard for Local and Metropolitan Area Networks: Media Access Control (MAC) Bridges</i>. IEEE.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ANSI%2FIEEE+Std+802.1D+-+2004%3A+IEEE+Standard+for+Local+and+Metropolitan+Area+Networks%3A+Media+Access+Control+%28MAC%29+Bridges&amp;rft.pub=IEEE&amp;rft.date=2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation journal"><a rel="nofollow" class="external text" href="https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/11072-inter-vlan-11072.pdf">"Understanding Issues Related to Inter-VLAN Bridging"</a> <span class="cs1-format">(PDF)</span>. Cisco Systems, Inc. 11072.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Understanding+Issues+Related+to+Inter-VLAN+Bridging&amp;rft_id=https%3A%2F%2Fwww.cisco.com%2Fc%2Fen%2Fus%2Fsupport%2Fdocs%2Flan-switching%2Fspanning-tree-protocol%2F11072-inter-vlan-11072.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web">Waldemar Wojdak (March 2003). <a rel="nofollow" class="external text" href="http://www.compactpci-systems.com/articles/id/?203">"Rapid Spanning Tree Protocol: A new solution from an old technology"</a>. <i>CompactPCI Systems</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-08-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=CompactPCI+Systems&amp;rft.atitle=Rapid+Spanning+Tree+Protocol%3A+A+new+solution+from+an+old+technology&amp;rft.date=2003-03&amp;rft.au=Waldemar+Wojdak&amp;rft_id=http%3A%2F%2Fwww.compactpci-systems.com%2Farticles%2Fid%2F%3F203&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.cisco.com/en/US/tech/tk389/tk621/technologies_white_paper09186a0080094cfa.shtml">"Understanding Rapid Spanning Tree Protocol (802.1w)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-11-27</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Understanding+Rapid+Spanning+Tree+Protocol+%28802.1w%29&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2Fen%2FUS%2Ftech%2Ftk389%2Ftk621%2Ftechnologies_white_paper09186a0080094cfa.shtml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation"><i>IEEE 802.1D-2004</i>, <a href="/wiki/IEEE" class="mw-redirect" title="IEEE">IEEE</a>, 2004-06-04, <q>Since the original Spanning Tree Protocol (STP) has been removed from the 2004 revision of IEEE Std 802.1D, an implementation of RSTP is required for any claim of conformance for an implementation of IEEE Std 802.1Q-2003 that refers to the current revision of IEEE Std 802.1D</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+802.1D-2004&amp;rft.pub=IEEE&amp;rft.date=2004-06-04&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204-22"><span class="mw-cite-backlink">^ <a href="#cite_ref-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Michael_G._Solomon,_David_Kim_&amp;_Jeffrey_L._Carrell_2014_204_22-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Michael G. Solomon, David Kim &amp; Jeffrey L. Carrell (2014). <i>Fundamentals of Communications and Networking</i>. Jones &amp; Bartlett Publishers. p.&#160;204. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781284060157" title="Special:BookSources/9781284060157"><bdi>9781284060157</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Communications+and+Networking&amp;rft.pages=204&amp;rft.pub=Jones+%26+Bartlett+Publishers&amp;rft.date=2014&amp;rft.isbn=9781284060157&amp;rft.au=Michael+G.+Solomon%2C+David+Kim+%26+Jeffrey+L.+Carrell&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-ReferenceA-23"><span class="mw-cite-backlink">^ <a href="#cite_ref-ReferenceA_23-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ReferenceA_23-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Michael G. Solomon, David Kim &amp; Jeffrey L. Carrell (2014). <i>Fundamentals of Communications and Networking</i>. Jones &amp; Bartlett Publishers. p.&#160;204. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781284060157" title="Special:BookSources/9781284060157"><bdi>9781284060157</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Fundamentals+of+Communications+and+Networking&amp;rft.pages=204&amp;rft.pub=Jones+%26+Bartlett+Publishers&amp;rft.date=2014&amp;rft.isbn=9781284060157&amp;rft.au=Michael+G.+Solomon%2C+David+Kim+%26+Jeffrey+L.+Carrell&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.force10networks.com/CSPortal20/TechTips/0050B_HowDoIConfigureSpanningTree.aspx">"Technical Documentation"</a>. <a href="/wiki/Force10" title="Force10">Force10</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Technical+Documentation&amp;rft.pub=Force10&amp;rft_id=https%3A%2F%2Fwww.force10networks.com%2FCSPortal20%2FTechTips%2F0050B_HowDoIConfigureSpanningTree.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.extremenetworks.com/libraries/products/DSExtXOS_1030.pdf">"ExtremeXOS Operating System, Version 12.5"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/Extreme_Networks" title="Extreme Networks">Extreme Networks</a>. 2010<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ExtremeXOS+Operating+System%2C+Version+12.5&amp;rft.pub=Extreme+Networks&amp;rft.date=2010&amp;rft_id=http%3A%2F%2Fwww.extremenetworks.com%2Flibraries%2Fproducts%2FDSExtXOS_1030.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.bladenetwork.net/userfiles/file/PDFs/WP_PVST_SpanningTree_Cisco.pdf">"BLADE PVST+ Interoperability with Cisco"</a> <span class="cs1-format">(PDF)</span>. 2006<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=BLADE+PVST%2B+Interoperability+with+Cisco&amp;rft.date=2006&amp;rft_id=http%3A%2F%2Fwww.bladenetwork.net%2Fuserfiles%2Ffile%2FPDFs%2FWP_PVST_SpanningTree_Cisco.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.cisco.com/en/US/docs/ios/12_1t/12_1t3/feature/guide/dtbridge.html#wp1020686">"Bridging Between IEEE 802.1Q VLANs"</a>. Cisco Systems<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Bridging+Between+IEEE+802.1Q+VLANs&amp;rft.pub=Cisco+Systems&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2Fen%2FUS%2Fdocs%2Fios%2F12_1t%2F12_1t3%2Ffeature%2Fguide%2Fdtbridge.html%23wp1020686&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.cisco.com/en/US/prod/collateral/netmgtsw/ps6504/ps6528/ps2425/white_paper_c07-552114.html#wp9003215">"CiscoWorks LAN Management Solution 3.2 Deployment Guide"</a>. August 2009<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-01-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=CiscoWorks+LAN+Management+Solution+3.2+Deployment+Guide&amp;rft.date=2009-08&amp;rft_id=https%3A%2F%2Fwww.cisco.com%2Fen%2FUS%2Fprod%2Fcollateral%2Fnetmgtsw%2Fps6504%2Fps6528%2Fps2425%2Fwhite_paper_c07-552114.html%23wp9003215&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text">
+<cite class="citation web">Shuang Yu (8 May 2012). <a rel="nofollow" class="external text" href="http://standards.ieee.org/news/2012/802.1aq.html">"IEEE APPROVES NEW IEEE 802.1aq™ SHORTEST PATH BRIDGING STANDARD"</a>. IEEE<span class="reference-accessdate">. Retrieved <span class="nowrap">2 June</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=IEEE+APPROVES+NEW+IEEE+802.1aq%E2%84%A2+SHORTEST+PATH+BRIDGING+STANDARD&amp;rft.pub=IEEE&amp;rft.date=2012-05-08&amp;rft.au=Shuang+Yu&amp;rft_id=http%3A%2F%2Fstandards.ieee.org%2Fnews%2F2012%2F802.1aq.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web">Peter Ashwood-Smith (24 Feb 2011). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20130515115628/http://meetings.apnic.net/__data/assets/pdf_file/0012/32007/APRICOT_SPB_Overview.pdf">"Shortest Path Bridging IEEE 802.1aq Overview"</a> <span class="cs1-format">(PDF)</span>. Huawei. Archived from <a rel="nofollow" class="external text" href="http://meetings.apnic.net/__data/assets/pdf_file/0012/32007/APRICOT_SPB_Overview.pdf">the original</a> <span class="cs1-format">(PDF)</span> on 15 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">11 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Shortest+Path+Bridging+IEEE+802.1aq+Overview&amp;rft.pub=Huawei&amp;rft.date=2011-02-24&amp;rft.au=Peter+Ashwood-Smith&amp;rft_id=http%3A%2F%2Fmeetings.apnic.net%2F&#95;_data%2Fassets%2Fpdf_file%2F0012%2F32007%2FAPRICOT_SPB_Overview.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text">
+<cite class="citation web">Jim Duffy (11 May 2012). <a rel="nofollow" class="external text" href="http://www.pcadvisor.co.uk/news/internet/3357242/largest-illinois-healthcare-system-uproots-cisco-build-40m-private-cloud/">"Largest Illinois healthcare system uproots Cisco to build $40M private cloud"</a>. PC Advisor<span class="reference-accessdate">. Retrieved <span class="nowrap">11 May</span> 2012</span>. <q>Shortest Path Bridging will replace Spanning Tree in the Ethernet fabric.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Largest+Illinois+healthcare+system+uproots+Cisco+to+build+%2440M+private+cloud&amp;rft.pub=PC+Advisor&amp;rft.date=2012-05-11&amp;rft.au=Jim+Duffy&amp;rft_id=http%3A%2F%2Fwww.pcadvisor.co.uk%2Fnews%2Finternet%2F3357242%2Flargest-illinois-healthcare-system-uproots-cisco-build-40m-private-cloud%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-IEEE-32"><span class="mw-cite-backlink">^ <a href="#cite_ref-IEEE_32-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IEEE_32-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">
+<cite class="citation news"><a rel="nofollow" class="external text" href="http://www.techpowerup.com/165594/IEEE-Approves-New-IEEE-802.1aq-Shortest-Path-Bridging-Standard.html">"IEEE Approves New IEEE 802.1aq Shortest Path Bridging Standard"</a>. Tech Power Up. 7 May 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">11 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=IEEE+Approves+New+IEEE+802.1aq+Shortest+Path+Bridging+Standard&amp;rft.date=2012-05-07&amp;rft_id=http%3A%2F%2Fwww.techpowerup.com%2F165594%2FIEEE-Approves-New-IEEE-802.1aq-Shortest-Path-Bridging-Standard.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit&amp;section=22" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Spanning_tree_protocol" class="extiw" title="commons:Category:Spanning tree protocol"><span style="">Spanning tree protocol</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="http://www.cisco.com/en/US/tech/tk389/tk621/tsd_technology_support_protocol_home.html">Cisco home page for the Spanning-Tree protocol family</a> (discusses CST, MISTP, PVST, PVST+, RSTP, STP)</li>
+<li><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160304105810/http://www.cisco.com/image/gif/paws/10556/spanning_tree1.swf">"Educational explanation of STP"</a>. Archived from <a rel="nofollow" class="external text" href="http://www.cisco.com/image/gif/paws/10556/spanning_tree1.swf">the original</a> on 2016-03-04.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Educational+explanation+of+STP&amp;rft_id=http%3A%2F%2Fwww.cisco.com%2Fimage%2Fgif%2Fpaws%2F10556%2Fspanning_tree1.swf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.wireshark.org/STP">STP article in the Wireshark wiki</a> Includes a sample PCAP-file of captured STP traffic.</li>
+<li><cite class="citation web">Perlman, Radia. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110719212324/http://www.csua.berkeley.edu/~ranga/humor/algorhyme.txt">"Algorhyme"</a>. <a href="/wiki/University_of_California_at_Berkeley" class="mw-redirect" title="University of California at Berkeley">University of California at Berkeley</a>. Archived from <a rel="nofollow" class="external text" href="http://www.csua.berkeley.edu/~ranga/humor/algorhyme.txt">the original</a> on 2011-07-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-09-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Algorhyme&amp;rft.pub=University+of+California+at+Berkeley&amp;rft.aulast=Perlman&amp;rft.aufirst=Radia&amp;rft_id=http%3A%2F%2Fwww.csua.berkeley.edu%2F~ranga%2Fhumor%2Falgorhyme.txt&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASpanning+Tree+Protocol" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li>IEEE Standards
+<ul><li><a rel="nofollow" class="external text" href="http://standards.ieee.org/getieee802/download/802.1D-2004.pdf">ANSI/IEEE 802.1D-2004 standard</a>, section 17 discusses RSTP (Regular STP is no longer a part of this standard. This is pointed out in section 8.)</li>
+<li><a rel="nofollow" class="external text" href="http://standards.ieee.org/getieee802/download/802.1Q-2005.pdf">ANSI/IEEE 802.1Q-2005 standard</a>, section 13 discusses MSTP</li></ul></li>
+<li>RFCs
+<ul><li><a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc2674">RFC 2674</a>-1999, proposed standard, Definitions of Managed Objects for Bridges with Traffic Classes, Multicast Filtering and Virtual LAN Extensions</li>
+<li><a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc1525">RFC 1525</a>-1993, - SBRIDGEMIB, proposed standard, Definitions of Managed Objects for Source Routing Bridges</li>
+<li><a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc1493">RFC 1493</a>-1993 - BRIDGEMIB, draft standard, Definitions of Managed Objects for Bridges</li></ul></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110812152242/http://blog.ipexpert.com/2010/03/22/spanning-tree-direct-vs-indirect-link-failures/">Spanning Tree Direct vs Indirect Link Failures - CCIE Study</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20151227040910/http://www.networkel.com/2015/10/spanning-tree-protocol-stp-no-loop.html">Spanning Tree Protocol Overview</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="IEEE_standards" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IEEE_standards" title="Template:IEEE standards"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IEEE_standards" title="Template talk:IEEE standards"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IEEE_standards&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="IEEE_standards" style="font-size:114%;margin:0 4em"><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE standards</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Current</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE-488" title="IEEE-488">488</a></li>
+<li><a href="/wiki/Software_quality_assurance" title="Software quality assurance">730</a></li>
+<li><a href="/wiki/IEEE_754" title="IEEE 754">754</a>
+<ul><li><a href="/wiki/IEEE_754-2008_revision" title="IEEE 754-2008 revision">Revision</a></li></ul></li>
+<li><a href="/wiki/IEEE_854-1987" title="IEEE 854-1987">854</a></li>
+<li><a href="/wiki/Software_configuration_management" title="Software configuration management">828</a></li>
+<li><a href="/wiki/Software_test_documentation" title="Software test documentation">829</a></li>
+<li><a href="/wiki/Futurebus" title="Futurebus">896</a></li>
+<li><a href="/wiki/Single_UNIX_Specification" title="Single UNIX Specification">1003</a></li>
+<li><a href="/wiki/VMEbus" title="VMEbus">1014</a></li>
+<li><a href="/wiki/Software_design_description" title="Software design description">1016</a></li>
+<li><a href="/wiki/VHDL" title="VHDL">1076</a></li>
+<li><a href="/wiki/JTAG" title="JTAG">1149.1</a></li>
+<li><a href="/wiki/PILOT" title="PILOT">1154</a></li>
+<li><a href="/wiki/IEEE_1164" title="IEEE 1164">1164</a></li>
+<li><a href="/wiki/Open_Firmware" title="Open Firmware">1275</a></li>
+<li><a href="/wiki/Distributed_Interactive_Simulation" title="Distributed Interactive Simulation">1278</a></li>
+<li><a href="/wiki/IEEE_1284" title="IEEE 1284">1284</a></li>
+<li><a href="/wiki/IEEE_1355" title="IEEE 1355">1355</a></li>
+<li><a href="/wiki/IEEE_1394" title="IEEE 1394">1394</a></li>
+<li><a href="/wiki/IEEE_1451" title="IEEE 1451">1451</a></li>
+<li><a href="/wiki/Standard_Delay_Format" title="Standard Delay Format">1497</a></li>
+<li><a href="/wiki/High-level_architecture" class="mw-redirect" title="High-level architecture">1516</a></li>
+<li><a href="/wiki/IEEE_1541-2002" title="IEEE 1541-2002">1541</a></li>
+<li><a href="/wiki/IEEE_1547" title="IEEE 1547">1547</a></li>
+<li><a href="/wiki/IEEE_1584" title="IEEE 1584">1584</a></li>
+<li><a href="/wiki/Precision_Time_Protocol" title="Precision Time Protocol">1588</a></li>
+<li><a href="/wiki/Scalable_Coherent_Interface" title="Scalable Coherent Interface">1596</a></li>
+<li><a href="/wiki/Advanced_Library_Format" title="Advanced Library Format">1603</a></li>
+<li><a href="/wiki/IEEE_1613" title="IEEE 1613">1613</a></li>
+<li><a href="/wiki/SystemC" title="SystemC">1666</a></li>
+<li><a href="/wiki/IEEE_1667" title="IEEE 1667">1667</a></li>
+<li><a href="/wiki/IEEE_1675-2008" title="IEEE 1675-2008">1675</a></li>
+<li><a href="/wiki/IP-XACT" title="IP-XACT">1685</a></li>
+<li><a href="/wiki/IEEE_1722" class="mw-redirect" title="IEEE 1722">1722</a></li>
+<li><a href="/wiki/IEEE_1733" class="mw-redirect" title="IEEE 1733">1733</a></li>
+<li><a href="/wiki/SystemVerilog" title="SystemVerilog">1800</a></li>
+<li><a href="/wiki/Unified_Power_Format" title="Unified Power Format">1801</a></li>
+<li><a href="/wiki/DNP3" title="DNP3">1815</a></li>
+<li><a href="/wiki/Property_Specification_Language" title="Property Specification Language">1850</a></li>
+<li><a href="/wiki/DySPAN" title="DySPAN">1900</a></li>
+<li><a href="/wiki/IEEE_1901" title="IEEE 1901">1901</a></li>
+<li><a href="/wiki/RuBee" title="RuBee">1902</a></li>
+<li><a href="/wiki/Service_Interoperability_in_Ethernet_Passive_Optical_Networks" title="Service Interoperability in Ethernet Passive Optical Networks">1904</a></li>
+<li><a href="/wiki/IEEE_1905" title="IEEE 1905">1905</a></li>
+<li><a href="/wiki/IEEE_2030" title="IEEE 2030">2030</a></li>
+<li><a href="/wiki/Micro_T-Kernel" title="Micro T-Kernel">2050</a></li>
+<li><a href="/wiki/ISO/IEEE_11073" title="ISO/IEEE 11073">11073</a></li>
+<li><a href="/wiki/ISO/IEC_12207" title="ISO/IEC 12207">12207</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">14764</a></li>
+<li><a href="/wiki/Risk_management" title="Risk management">16085</a></li>
+<li><a href="/wiki/Project_management" title="Project management">16326</a></li>
+<li><a href="/wiki/Requirements_engineering" title="Requirements engineering">29148</a></li>
+<li><a href="/wiki/ISO/IEC_42010" title="ISO/IEC 42010">42010</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802" title="IEEE 802">802 series</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.1" title="IEEE 802.1">802.1</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.1D" title="IEEE 802.1D">D</a></li>
+<li><a href="/wiki/IEEE_P802.1p" title="IEEE P802.1p">p</a></li>
+<li><a href="/wiki/IEEE_802.1Q" title="IEEE 802.1Q">Q</a></li>
+<li><a href="/wiki/IEEE_802.1Qav" class="mw-redirect" title="IEEE 802.1Qav">Qav</a></li>
+<li><a href="/wiki/Stream_Reservation_Protocol" title="Stream Reservation Protocol">Qat</a></li>
+<li><a href="/wiki/Provider_Backbone_Bridge_Traffic_Engineering" title="Provider Backbone Bridge Traffic Engineering">Qay</a></li>
+<li><a class="mw-selflink selflink">w</a></li>
+<li><a href="/wiki/IEEE_802.1X" title="IEEE 802.1X">X</a></li>
+<li><a href="/wiki/Link_Layer_Discovery_Protocol" title="Link Layer Discovery Protocol">ab</a></li>
+<li><a href="/wiki/IEEE_802.1ad" title="IEEE 802.1ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.1AE" title="IEEE 802.1AE">AE</a></li>
+<li><a href="/wiki/IEEE_802.1ag" title="IEEE 802.1ag">ag</a></li>
+<li><a href="/wiki/IEEE_802.1ah-2008" title="IEEE 802.1ah-2008">ah</a></li>
+<li><a href="/wiki/Multiple_Registration_Protocol" title="Multiple Registration Protocol">ak</a></li>
+<li><a href="/wiki/IEEE_802.1aq" title="IEEE 802.1aq">aq</a></li>
+<li><a href="/wiki/IEEE_802.1AS" class="mw-redirect" title="IEEE 802.1AS">AS</a></li>
+<li><a href="/wiki/Link_aggregation" title="Link aggregation">ax</a></li>
+<li><a href="/wiki/Data_center_bridging#IEEE_Task_Group" title="Data center bridging">az</a></li>
+<li><a href="/wiki/Audio_Video_Bridging" title="Audio Video Bridging">BA</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.3" title="IEEE 802.3">802.3</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/10BASE5" title="10BASE5">-1983</a></li>
+<li><a href="/wiki/802.3a" class="mw-redirect" title="802.3a">a</a></li>
+<li><a href="/wiki/802.3b" class="mw-redirect" title="802.3b">b</a></li>
+<li><a href="/wiki/802.3d" class="mw-redirect" title="802.3d">d</a></li>
+<li><a href="/wiki/802.3e" class="mw-redirect" title="802.3e">e</a></li>
+<li><a href="/wiki/802.3i" class="mw-redirect" title="802.3i">i</a></li>
+<li><a href="/wiki/802.3j" class="mw-redirect" title="802.3j">j</a></li>
+<li><a href="/wiki/802.3u" class="mw-redirect" title="802.3u">u</a></li>
+<li><a href="/wiki/IEEE_802.3x" class="mw-redirect" title="IEEE 802.3x">x</a></li>
+<li><a href="/wiki/802.3y" class="mw-redirect" title="802.3y">y</a></li>
+<li><a href="/wiki/802.3z" class="mw-redirect" title="802.3z">z</a></li>
+<li><a href="/wiki/802.3ab" class="mw-redirect" title="802.3ab">ab</a></li>
+<li><a href="/wiki/802.3ac" class="mw-redirect" title="802.3ac">ac</a></li>
+<li><a href="/wiki/802.3ad" class="mw-redirect" title="802.3ad">ad</a></li>
+<li><a href="/wiki/802.3ae" class="mw-redirect" title="802.3ae">ae</a></li>
+<li><a href="/wiki/802.3af" class="mw-redirect" title="802.3af">af</a></li>
+<li><a href="/wiki/802.3ah" class="mw-redirect" title="802.3ah">ah</a></li>
+<li><a href="/wiki/802.3ak" class="mw-redirect" title="802.3ak">ak</a></li>
+<li><a href="/wiki/802.3an" class="mw-redirect" title="802.3an">an</a></li>
+<li><a href="/wiki/802.3aq" class="mw-redirect" title="802.3aq">aq</a></li>
+<li><a href="/wiki/802.3at" class="mw-redirect" title="802.3at">at</a></li>
+<li><a href="/wiki/802.3av" class="mw-redirect" title="802.3av">av</a></li>
+<li><a href="/wiki/802.3az" class="mw-redirect" title="802.3az">az</a></li>
+<li><a href="/wiki/802.3ba" class="mw-redirect" title="802.3ba">ba</a></li>
+<li><a href="/wiki/802.3bt" class="mw-redirect" title="802.3bt">bt</a></li>
+<li><a href="/wiki/802.3by" class="mw-redirect" title="802.3by">by</a></li>
+<li><a href="/wiki/802.3bz" class="mw-redirect" title="802.3bz">bz</a></li>
+<li><a href="/w/index.php?title=802.3cg&amp;action=edit&amp;redlink=1" class="new" title="802.3cg (page does not exist)">cg</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.11" title="IEEE 802.11">802.11</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.11_(legacy_mode)" title="IEEE 802.11 (legacy mode)">legacy mode</a></li>
+<li><a href="/wiki/IEEE_802.11a-1999" title="IEEE 802.11a-1999">a</a></li>
+<li><a href="/wiki/IEEE_802.11b-1999" title="IEEE 802.11b-1999">b</a></li>
+<li><a href="/wiki/IEEE_802.11c" title="IEEE 802.11c">c</a></li>
+<li><a href="/wiki/IEEE_802.11d-2001" title="IEEE 802.11d-2001">d</a></li>
+<li><a href="/wiki/IEEE_802.11e-2005" title="IEEE 802.11e-2005">e</a></li>
+<li><a href="/wiki/Inter-Access_Point_Protocol" title="Inter-Access Point Protocol">f</a></li>
+<li><a href="/wiki/IEEE_802.11g-2003" title="IEEE 802.11g-2003">g</a></li>
+<li><a href="/wiki/IEEE_802.11h-2003" title="IEEE 802.11h-2003">h</a></li>
+<li><a href="/wiki/IEEE_802.11i-2004" title="IEEE 802.11i-2004">i</a></li>
+<li><a href="/wiki/IEEE_802.11j-2004" title="IEEE 802.11j-2004">j</a></li>
+<li><a href="/wiki/IEEE_802.11k-2008" title="IEEE 802.11k-2008">k</a></li>
+<li><a href="/wiki/IEEE_802.11n-2009" title="IEEE 802.11n-2009">n</a></li>
+<li><a href="/wiki/IEEE_802.11p" title="IEEE 802.11p">p</a></li>
+<li><a href="/wiki/IEEE_802.11r-2008" title="IEEE 802.11r-2008">r</a></li>
+<li><a href="/wiki/IEEE_802.11s" title="IEEE 802.11s">s</a></li>
+<li><a href="/wiki/IEEE_802.11u" title="IEEE 802.11u">u</a></li>
+<li><a href="/wiki/IEEE_802.11v" title="IEEE 802.11v">v</a></li>
+<li><a href="/wiki/IEEE_802.11w-2009" title="IEEE 802.11w-2009">w</a></li>
+<li><a href="/wiki/IEEE_802.11y-2008" title="IEEE 802.11y-2008">y</a></li>
+<li><a href="/wiki/IEEE_802.11ac" title="IEEE 802.11ac">ac</a></li>
+<li><a href="/wiki/IEEE_802.11ad" title="IEEE 802.11ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.11af" title="IEEE 802.11af">af</a></li>
+<li><a href="/wiki/IEEE_802.11ah" title="IEEE 802.11ah">ah</a></li>
+<li><a href="/wiki/IEEE_802.11ai" title="IEEE 802.11ai">ai</a></li>
+<li><a href="/wiki/IEEE_802.11ax" title="IEEE 802.11ax">ax</a></li>
+<li><a href="/wiki/IEEE_802.11ay" title="IEEE 802.11ay">ay</a></li>
+<li><a href="/wiki/IEEE_802.11be" title="IEEE 802.11be">be</a></li></ul>
+</div></td></tr></tbody></table><div>
+<ul><li><a href="/wiki/IEEE_802.2" title="IEEE 802.2">.2</a></li>
+<li><a href="/wiki/Token_bus_network" title="Token bus network">.4</a></li>
+<li><a href="/wiki/Token_ring" title="Token ring">.5</a></li>
+<li><a href="/wiki/IEEE_802.6" title="IEEE 802.6">.6</a></li>
+<li><a href="/wiki/IEEE_802.7" title="IEEE 802.7">.7</a></li>
+<li><a href="/wiki/IEEE_802.8" title="IEEE 802.8">.8</a></li>
+<li><a href="/wiki/IEEE_802.9" title="IEEE 802.9">.9</a></li>
+<li><a href="/wiki/IEEE_802.10" title="IEEE 802.10">.10</a></li>
+<li><a href="/wiki/100BaseVG" title="100BaseVG">.12</a></li>
+<li><a href="/wiki/Cable_modem#IEEE_802.14" title="Cable modem">.14</a></li>
+<li><a href="/wiki/IEEE_802.15" title="IEEE 802.15">.15</a>
+<ul><li><a href="/wiki/Bluetooth" title="Bluetooth">.1</a></li>
+<li><a href="/wiki/IEEE_802.15.4" title="IEEE 802.15.4">.4</a></li>
+<li><a href="/wiki/IEEE_802.15.4a" title="IEEE 802.15.4a">.4a</a></li>
+<li><a href="/wiki/IEEE_802.15.6" title="IEEE 802.15.6">.6</a></li></ul></li>
+<li><a href="/wiki/IEEE_802.16" title="IEEE 802.16">.16</a>
+<ul><li><a href="/wiki/WiMAX" title="WiMAX">Original · d · e</a></li></ul></li>
+<li><a href="/wiki/Resilient_Packet_Ring" title="Resilient Packet Ring">.17</a></li>
+<li><a href="/wiki/IEEE_802.18" title="IEEE 802.18">.18</a></li>
+<li><a href="/wiki/IEEE_802.20" title="IEEE 802.20">.20</a></li>
+<li><a href="/wiki/IEEE_802.21" title="IEEE 802.21">.21</a></li>
+<li><a href="/wiki/IEEE_802.22" title="IEEE 802.22">.22</a></li></ul></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Proposed</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><a href="/wiki/IEEE_P1363" title="IEEE P1363">P1363</a></li>
+<li><a href="/wiki/IEEE_P1619" title="IEEE P1619">P1619</a></li>
+<li><a href="/wiki/Rosetta-lang" title="Rosetta-lang">P1699</a></li>
+<li><a href="/wiki/Universal_Power_Adapter_for_Mobile_Devices" title="Universal Power Adapter for Mobile Devices">P1823</a></li>
+<li><a href="/wiki/IEEE_P1906.1" title="IEEE P1906.1">P1906.1</a></li>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Superseded</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_754-1985" title="IEEE 754-1985">754-1985</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">830</a></li>
+<li><a href="/wiki/IEEE_1219" class="mw-redirect" title="IEEE 1219">1219</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">1233</a></li>
+<li><a href="/wiki/Concept_of_operations" title="Concept of operations">1362</a></li>
+<li><a href="/wiki/Verilog" title="Verilog">1364</a></li>
+<li><a href="/wiki/IEEE_1471" title="IEEE 1471">1471</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<dl><dt><i>See also</i></dt>
+<dd><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE Standards Association</a></dd>
+<dd><a href="/wiki/Category:IEEE_standards" title="Category:IEEE standards">Category:IEEE standards</a></dd></dl>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1409
+Cached time: 20200328015446
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.456 seconds
+Real time usage: 0.583 seconds
+Preprocessor visited node count: 2136/1000000
+Post‐expand include size: 89954/2097152 bytes
+Template argument size: 2582/2097152 bytes
+Highest expansion depth: 11/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 91725/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.211/10.000 seconds
+Lua memory usage: 4.87 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  460.579      1 -total
+ 53.74%  247.535      2 Template:Reflist
+ 21.14%   97.371      2 Template:Cite_journal
+ 11.30%   52.040     13 Template:Cite_web
+ 11.10%   51.144      1 Template:Commons_category
+ 10.48%   48.254     11 Template:Cite_book
+  6.78%   31.225      1 Template:IPstack
+  4.86%   22.404      1 Template:Multiple_image
+  4.17%   19.210      1 Template:Notelist
+  3.89%   17.920      1 Template:Commons
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:98761-0!canonical and timestamp 20200328015445 and revision id 946051776
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Spanning_Tree_Protocol&amp;oldid=946051776">https://en.wikipedia.org/w/index.php?title=Spanning_Tree_Protocol&amp;oldid=946051776</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Network_protocols" title="Category:Network protocols">Network protocols</a></li><li><a href="/wiki/Category:Link_protocols" title="Category:Link protocols">Link protocols</a></li><li><a href="/wiki/Category:Network_topology" title="Category:Network topology">Network topology</a></li><li><a href="/wiki/Category:Spanning_tree" title="Category:Spanning tree">Spanning tree</a></li><li><a href="/wiki/Category:Fault-tolerant_computer_systems" title="Category:Fault-tolerant computer systems">Fault-tolerant computer systems</a></li><li><a href="/wiki/Category:Ethernet_standards" title="Category:Ethernet standards">Ethernet standards</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Pages_using_RFC_magic_links" title="Category:Pages using RFC magic links">Pages using RFC magic links</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Spanning+Tree+Protocol" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Spanning+Tree+Protocol" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Spanning_Tree_Protocol" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Spanning_Tree_Protocol" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Spanning_Tree_Protocol">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Spanning_Tree_Protocol" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Spanning_Tree_Protocol" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;oldid=946051776" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q852555" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Spanning_Tree_Protocol&amp;id=946051776&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Spanning_tree_protocol" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Spanning+Tree+Protocol">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Spanning+Tree+Protocol&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Spanning_Tree_Protocol&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D9%88%D8%AA%D9%88%D9%83%D9%88%D9%84_%D8%A7%D9%84%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A7%D9%84%D9%85%D8%AA%D9%81%D8%B1%D8%B9%D8%A9" title="بروتوكول الشجرة المتفرعة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/T%C3%A4ispuuprotokoll" title="Täispuuprotokoll – Estonian" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Spanning_tree" title="Spanning tree – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D8%AA%DA%A9%D9%84_%D8%AF%D8%B1%D8%AE%D8%AA_%D9%BE%D9%88%D8%B4%D8%A7" title="پروتکل درخت پوشا – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%8B%A0%EC%9E%A5_%ED%8A%B8%EB%A6%AC_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C" title="신장 트리 프로토콜 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Spanning_tree_(networking)" title="Spanning tree (networking) – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C_%D7%94%D7%A2%D7%A5_%D7%94%D7%A4%D7%95%D7%A8%D7%A9" title="פרוטוקול העץ הפורש – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Savienot%C4%81_koka_protokols" title="Savienotā koka protokols – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-mn"><a href="https://mn.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Mongolian" lang="mn" hreflang="mn" class="interlanguage-link-target">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Spanning_tree_protocol" title="Spanning tree protocol – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%91%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%84%E3%83%AA%E3%83%BC%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB" title="スパニングツリープロトコル – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Protok%C3%B3%C5%82_drzewa_rozpinaj%C4%85cego" title="Protokół drzewa rozpinającego – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/STP" title="STP – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D1%80%D0%B0%D0%B7%D0%B0%D0%BF%D0%B8%D1%9A%D1%83%D1%9B%D0%B5%D0%B3_%D1%81%D1%82%D0%B0%D0%B1%D0%BB%D0%B0" title="Протокол разапињућег стабла – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Spanning_tree_protocol" title="Spanning tree protocol – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%81%E0%B8%93%E0%B8%91%E0%B9%8C%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A1" title="เกณฑ์วิธีต้นไม้แบบทอดข้าม – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/STP" title="STP – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-wuu"><a href="https://wuu.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E6%A0%91%E5%8D%8F%E8%AE%AE" title="生成树协议 – Wu Chinese" lang="wuu" hreflang="wuu" class="interlanguage-link-target">吴语</a></li><li class="interlanguage-link interwiki-yi"><a href="https://yi.wikipedia.org/wiki/Spanning_tree_protocol" title="Spanning tree protocol – Yiddish" lang="yi" hreflang="yi" class="interlanguage-link-target">ייִדיש</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E6%A8%B9%E5%8D%94%E5%AE%9A" title="生成樹協定 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E6%88%90%E6%A0%91%E5%8D%8F%E8%AE%AE" title="生成树协议 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q852555#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 March 2020, at 19:35<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Spanning_Tree_Protocol&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.456","walltime":"0.583","ppvisitednodes":{"value":2136,"limit":1000000},"postexpandincludesize":{"value":89954,"limit":2097152},"templateargumentsize":{"value":2582,"limit":2097152},"expansiondepth":{"value":11,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":91725,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  460.579      1 -total"," 53.74%  247.535      2 Template:Reflist"," 21.14%   97.371      2 Template:Cite_journal"," 11.30%   52.040     13 Template:Cite_web"," 11.10%   51.144      1 Template:Commons_category"," 10.48%   48.254     11 Template:Cite_book","  6.78%   31.225      1 Template:IPstack","  4.86%   22.404      1 Template:Multiple_image","  4.17%   19.210      1 Template:Notelist","  3.89%   17.920      1 Template:Commons"]},"scribunto":{"limitreport-timeusage":{"value":"0.211","limit":"10.000"},"limitreport-memusage":{"value":5104664,"limit":52428800}},"cachereport":{"origin":"mw1409","timestamp":"20200328015446","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Spanning Tree Protocol","url":"https:\/\/en.wikipedia.org\/wiki\/Spanning_Tree_Protocol","sameAs":"http:\/\/www.wikidata.org\/entity\/Q852555","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q852555","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-10-03T15:39:43Z","dateModified":"2020-03-17T19:35:38Z","headline":"computer network protocol"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":104,"wgHostname":"mw1255"});});</script></body></html>

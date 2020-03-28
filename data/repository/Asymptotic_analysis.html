@@ -1,0 +1,2206 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Asymptotic analysis - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn8suApAMF0AALgWKpgAAAAQ","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Asymptotic_analysis","wgTitle":"Asymptotic analysis","wgCurRevisionId":945721410,"wgRevisionId":945721410,"wgArticleId":641995,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Asymptotic analysis","Mathematical series"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Asymptotic_analysis","wgRelevantArticleId":641995,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q752718","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};
+RLPAGEMODULES=["ext.math.scripts","ext.cite.ux-enhancements","ext.scribunto.logs","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Asymptotic_analysis&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Asymptotic_analysis&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Asymptotic_analysis"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Asymptotic_analysis rootpage-Asymptotic_analysis skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Asymptotic analysis</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div role="note" class="hatnote navigation-not-searchable">This article is about the behavior of functions as inputs approach infinity, or some other limit value. For asymptotes in <a href="/wiki/Geometry" title="Geometry">geometry</a>, see <a href="/wiki/Asymptote" title="Asymptote">Asymptote</a>.</div>
+<p>In <a href="/wiki/Mathematical_analysis" title="Mathematical analysis">mathematical analysis</a>, <b>asymptotic analysis</b>, also known as <b>asymptotics</b>, is a method of describing <a href="/wiki/Limit_(mathematics)" title="Limit (mathematics)">limiting</a> behavior.
+</p><p>As an illustration, suppose that we are interested in the properties of a function <span class="texhtml"><i>f</i>(<i>n</i>)</span> as <span class="texhtml mvar" style="font-style:italic;">n</span> becomes very large.  If <span class="texhtml"><i>f</i>(<i>n</i>) = <i>n</i><sup>2</sup> + 3<i>n</i></span>, then as <span class="texhtml mvar" style="font-style:italic;">n</span> becomes very large, the term <span class="texhtml">3<i>n</i></span>  becomes insignificant compared to <span class="texhtml"><i>n</i><sup>2</sup></span>.  The function <span class="texhtml"><i>f</i>(<i>n</i>)</span> is said to be "<i>asymptotically equivalent</i> to <span class="texhtml"><i>n</i><sup>2</sup></span>, as <span class="texhtml"><i>n</i>&#160;→ ∞</span>". This is often written symbolically as <span class="texhtml"><i>f</i>(<i>n</i>) ~ <i>n</i><sup>2</sup></span>, which is read as "<span class="texhtml"><i>f</i>(<i>n</i>)</span> is asymptotic to <span class="texhtml"><i>n</i><sup>2</sup></span>".
+</p><p>An example of an important asymptotic result is the <a href="/wiki/Prime_number_theorem" title="Prime number theorem">prime&#160;number theorem</a>. Let <span class="texhtml">π(<i>x</i>)</span> denote the <a href="/wiki/Prime-counting_function" title="Prime-counting function">prime-counting function</a> (which is not directly related to the constant <a href="/wiki/Pi" title="Pi">Pi</a>), i.e. <span class="texhtml">π(<i>x</i>)</span> is the number of <a href="/wiki/Prime_number" title="Prime number">prime numbers</a> that are less than or equal to <span class="texhtml mvar" style="font-style:italic;">x</span>. Then the theorem states that 
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \pi (x)\sim {\frac {x}{\ln x}}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>&#x03C0;<!-- π --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mi>x</mi>
+            <mrow>
+              <mi>ln</mi>
+              <mo>&#x2061;<!-- ⁡ --></mo>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \pi (x)\sim {\frac {x}{\ln x}}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f046ceeb40c2095d0a9b771a41cf702bb2f6b2b4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.005ex; width:12.709ex; height:4.843ex;" alt="\pi (x)\sim {\frac  {x}{\ln x}}."/></span></dd></dl>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Properties"><span class="tocnumber">2</span> <span class="toctext">Properties</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Examples_of_asymptotic_formulas"><span class="tocnumber">3</span> <span class="toctext">Examples of asymptotic formulas</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Construction"><span class="tocnumber">4</span> <span class="toctext">Construction</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#General"><span class="tocnumber">4.1</span> <span class="toctext">General</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Asymptotic_to_two_different_polynomials"><span class="tocnumber">4.2</span> <span class="toctext">Asymptotic to two different polynomials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Asymptotic_expansion"><span class="tocnumber">5</span> <span class="toctext">Asymptotic expansion</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Examples_of_asymptotic_expansions"><span class="tocnumber">5.1</span> <span class="toctext">Examples of asymptotic expansions</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Worked_example"><span class="tocnumber">5.2</span> <span class="toctext">Worked example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Asymptotic_distribution"><span class="tocnumber">6</span> <span class="toctext">Asymptotic distribution</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Applications"><span class="tocnumber">7</span> <span class="toctext">Applications</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Notes"><span class="tocnumber">9</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">10</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Formally, given functions <span class="texhtml"><i>f</i>(<i>x</i>)</span> and <span class="texhtml"><i>g</i>(<i>x</i>)</span>, we define a binary relation
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)\sim g(x)\quad ({\text{as }}x\to \infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mspace width="1em" />
+        <mo stretchy="false">(</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtext>as&#xA0;</mtext>
+        </mrow>
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)\sim g(x)\quad ({\text{as }}x\to \infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2c62261103c2ca7e0935177eeaf82e818340e15d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:25.83ex; height:2.843ex;" alt="{\displaystyle f(x)\sim g(x)\quad ({\text{as }}x\to \infty )}"/></span></dd></dl>
+<p>if and only if (<a href="#CITEREFde_Bruijn1981">de&#160;Bruijn 1981</a>, §1.4)
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \lim _{x\to \infty }{\frac {f(x)}{g(x)}}=1.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <munder>
+          <mo movablelimits="true" form="prefix">lim</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+            <mo stretchy="false">&#x2192;<!-- → --></mo>
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munder>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mi>f</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <mi>g</mi>
+              <mo stretchy="false">(</mo>
+              <mi>x</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <mn>1.</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \lim _{x\to \infty }{\frac {f(x)}{g(x)}}=1.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/5cb9bd7842f604400245e3e1f8ae62d1fbd5ad20" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:14.775ex; height:6.509ex;" alt="{\displaystyle \lim _{x\to \infty }{\frac {f(x)}{g(x)}}=1.}"/></span></dd></dl>
+<p>The symbol <span class="texhtml">~</span> is the <a href="/wiki/Tilde" title="Tilde">tilde</a>. The relation is an <a href="/wiki/Equivalence_relation" title="Equivalence relation">equivalence relation</a> on the set of functions of <span class="texhtml mvar" style="font-style:italic;">x</span>; the functions <span class="texhtml mvar" style="font-style:italic;">f</span> and <span class="texhtml mvar" style="font-style:italic;">g</span> are said to be <i>asymptotically equivalent</i>. The <a href="/wiki/Domain_of_a_function" title="Domain of a function">domain</a> of <span class="texhtml mvar" style="font-style:italic;">f</span> and <span class="texhtml mvar" style="font-style:italic;">g</span> can be any set for which the limit is defined: e.g. real numbers, complex numbers, positive integers.
+</p><p>The same notation is also used for other ways of passing to a limit: e.g. <span class="texhtml"><i>x</i>&#160;→ 0</span>, <span class="texhtml"><i>x</i>&#160;↓ 0</span>, <span class="texhtml">|<i>x</i>|&#160;→ 0</span>. The way of passing to the limit is often not stated explicitly, if it is clear from the context.
+</p><p>Although the above definition is common in the literature, it is problematic if <span class="texhtml"><i>g</i>(<i>x</i>)</span> is zero infinitely often as <span class="texhtml mvar" style="font-style:italic;">x</span> goes to the limiting value. For that reason, some authors use an alternative definition. The alternative definition, in <a href="/wiki/Little-o_notation" class="mw-redirect" title="Little-o notation">little-o notation</a>, is that <span class="texhtml"> <i>f</i> ~ <i>g</i></span> if and only if 
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)-g(x)=o(g(x)).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)-g(x)=o(g(x)).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/885db7411c47d7e6cbf5a68613dd66274b4ac7f8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:22.45ex; height:2.843ex;" alt="{\displaystyle f(x)-g(x)=o(g(x)).}"/></span></dd></dl>
+<p>This definition is equivalent to the prior definition if <span class="texhtml"><i>g</i>(<i>x</i>)</span> is not zero in some <a href="/wiki/Neighbourhood_(mathematics)" title="Neighbourhood (mathematics)">neighbourhood</a> of the limiting value.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Properties">Properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=2" title="Edit section: Properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>If <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f\sim g}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>g</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f\sim g}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/dc50b415ab7e2ffa27d032cdf150ab0984a44170" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:5.493ex; height:2.509ex;" alt="f\sim g"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a\sim b}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>b</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a\sim b}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d60a7ec044aafda7685b062b023b95b2e3f9e252" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.326ex; height:2.176ex;" alt="a\sim b"/></span>, then under some mild conditions, the following hold.
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f^{r}\sim g^{r}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>f</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>r</mi>
+          </mrow>
+        </msup>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msup>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>r</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f^{r}\sim g^{r}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6017e8f19e095becdb2c453442871bc0e1de11be" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.485ex; height:2.676ex;" alt="{\displaystyle f^{r}\sim g^{r}}"/></span>, for every real <span class="texhtml mvar" style="font-style:italic;">r</span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \log(f)\sim \log(g)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>f</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>log</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>g</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \log(f)\sim \log(g)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/64a49ed9990899543f862a2e47d11defa0c17865" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:15.055ex; height:2.843ex;" alt="{\displaystyle \log(f)\sim \log(g)}"/></span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f\times a\sim g\times b}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>a</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>g</mi>
+        <mo>&#x00D7;<!-- × --></mo>
+        <mi>b</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f\times a\sim g\times b}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7d6a99f5e5d52c146c03ff35e29feac60f314b5c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:13.401ex; height:2.509ex;" alt="{\displaystyle f\times a\sim g\times b}"/></span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f/a\sim g/b}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>a</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mi>g</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>b</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f/a\sim g/b}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/915c81717dc77109e3825128b96f711d795494b9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.045ex; height:2.843ex;" alt="{\displaystyle f/a\sim g/b}"/></span></li></ul>
+<p>Such properties allow asymptotically-equivalent functions to be freely exchanged in many algebraic expressions.
+</p>
+<h2><span class="mw-headline" id="Examples_of_asymptotic_formulas">Examples of asymptotic formulas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=3" title="Edit section: Examples of asymptotic formulas">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Factorial" title="Factorial">Factorial</a></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>n</mi>
+        <mo>!</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <mn>2</mn>
+            <mi>&#x03C0;<!-- π --></mi>
+            <mi>n</mi>
+          </msqrt>
+        </mrow>
+        <msup>
+          <mrow>
+            <mo>(</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mi>n</mi>
+                <mi>e</mi>
+              </mfrac>
+            </mrow>
+            <mo>)</mo>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/977732acd9d1c6bbe89c54fc956f3c16d2feade9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:17.19ex; height:4.843ex;" alt="{\displaystyle n!\sim {\sqrt {2\pi n}}\left({\frac {n}{e}}\right)^{n}}"/></span></dd></dl></dd>
+<dd>—this is <a href="/wiki/Stirling%27s_approximation" title="Stirling&#39;s approximation">Stirling's approximation</a></dd></dl>
+<ul><li><a href="/wiki/Partition_(number_theory)#Partition_function" title="Partition (number theory)">Partition function</a></li></ul>
+<dl><dd>For a positive integer <i>n</i>, the partition function, <i>p</i>(<i>n</i>), gives the number of ways of writing the integer <i>n</i> as a sum of positive integers, where the order of addends is not considered.
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle p(n)\sim {\frac {1}{4n{\sqrt {3}}}}e^{\pi {\sqrt {\frac {2n}{3}}}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+        <mo stretchy="false">(</mo>
+        <mi>n</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>4</mn>
+              <mi>n</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msqrt>
+                  <mn>3</mn>
+                </msqrt>
+              </mrow>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x03C0;<!-- π --></mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <msqrt>
+                <mfrac>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>n</mi>
+                  </mrow>
+                  <mn>3</mn>
+                </mfrac>
+              </msqrt>
+            </mrow>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p(n)\sim {\frac {1}{4n{\sqrt {3}}}}e^{\pi {\sqrt {\frac {2n}{3}}}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7f2b7193d88ca4892b68fa55ca1af9f4fc663784" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.838ex; margin-left: -0.089ex; width:20.258ex; height:7.343ex;" alt="{\displaystyle p(n)\sim {\frac {1}{4n{\sqrt {3}}}}e^{\pi {\sqrt {\frac {2n}{3}}}}}"/></span></dd></dl></dd></dl>
+<ul><li><a href="/wiki/Airy_function" title="Airy function">Airy function</a></li></ul>
+<dl><dd>The Airy function, Ai(<i>x</i>), is a solution of the differential equation &#8201;<span class="texhtml"><i>y''</i> − <i>xy</i> = 0</span>; it has many applications in physics.
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {Ai} (x)\sim {\frac {e^{-{\frac {2}{3}}x^{\frac {3}{2}}}}{2{\sqrt {\pi }}x^{1/4}}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Ai</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>e</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mn>2</mn>
+                    <mn>3</mn>
+                  </mfrac>
+                </mrow>
+                <msup>
+                  <mi>x</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mfrac>
+                      <mn>3</mn>
+                      <mn>2</mn>
+                    </mfrac>
+                  </mrow>
+                </msup>
+              </mrow>
+            </msup>
+            <mrow>
+              <mn>2</mn>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msqrt>
+                  <mi>&#x03C0;<!-- π --></mi>
+                </msqrt>
+              </mrow>
+              <msup>
+                <mi>x</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>1</mn>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>/</mo>
+                  </mrow>
+                  <mn>4</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Ai} (x)\sim {\frac {e^{-{\frac {2}{3}}x^{\frac {3}{2}}}}{2{\sqrt {\pi }}x^{1/4}}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/50b0ddfebd0cb2184e05ca72bd606c2bbe19a1c9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.838ex; width:17.922ex; height:8.843ex;" alt="{\displaystyle \operatorname {Ai} (x)\sim {\frac {e^{-{\frac {2}{3}}x^{\frac {3}{2}}}}{2{\sqrt {\pi }}x^{1/4}}}}"/></span></dd></dl></dd></dl>
+<ul><li><a href="/wiki/Hankel_functions" class="mw-redirect" title="Hankel functions">Hankel functions</a></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\begin{aligned}H_{\alpha }^{(1)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\\H_{\alpha }^{(2)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{-i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\end{aligned}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true">
+            <mtr>
+              <mtd>
+                <msubsup>
+                  <mi>H</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>&#x03B1;<!-- α --></mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">(</mo>
+                    <mn>1</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </msubsup>
+                <mo stretchy="false">(</mo>
+                <mi>z</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>&#x223C;<!-- ∼ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msqrt>
+                    <mfrac>
+                      <mn>2</mn>
+                      <mrow>
+                        <mi>&#x03C0;<!-- π --></mi>
+                        <mi>z</mi>
+                      </mrow>
+                    </mfrac>
+                  </msqrt>
+                </mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>i</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mi>z</mi>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mfrac>
+                            <mrow>
+                              <mn>2</mn>
+                              <mi>&#x03C0;<!-- π --></mi>
+                              <mi>&#x03B1;<!-- α --></mi>
+                              <mo>&#x2212;<!-- − --></mo>
+                              <mi>&#x03C0;<!-- π --></mi>
+                            </mrow>
+                            <mn>4</mn>
+                          </mfrac>
+                        </mrow>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+            <mtr>
+              <mtd>
+                <msubsup>
+                  <mi>H</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mi>&#x03B1;<!-- α --></mi>
+                  </mrow>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo stretchy="false">(</mo>
+                    <mn>2</mn>
+                    <mo stretchy="false">)</mo>
+                  </mrow>
+                </msubsup>
+                <mo stretchy="false">(</mo>
+                <mi>z</mi>
+                <mo stretchy="false">)</mo>
+              </mtd>
+              <mtd>
+                <mi></mi>
+                <mo>&#x223C;<!-- ∼ --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <msqrt>
+                    <mfrac>
+                      <mn>2</mn>
+                      <mrow>
+                        <mi>&#x03C0;<!-- π --></mi>
+                        <mi>z</mi>
+                      </mrow>
+                    </mfrac>
+                  </msqrt>
+                </mrow>
+                <msup>
+                  <mi>e</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                    <mi>i</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mi>z</mi>
+                        <mo>&#x2212;<!-- − --></mo>
+                        <mrow class="MJX-TeXAtom-ORD">
+                          <mfrac>
+                            <mrow>
+                              <mn>2</mn>
+                              <mi>&#x03C0;<!-- π --></mi>
+                              <mi>&#x03B1;<!-- α --></mi>
+                              <mo>&#x2212;<!-- − --></mo>
+                              <mi>&#x03C0;<!-- π --></mi>
+                            </mrow>
+                            <mn>4</mn>
+                          </mfrac>
+                        </mrow>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </mrow>
+                </msup>
+              </mtd>
+            </mtr>
+          </mtable>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\begin{aligned}H_{\alpha }^{(1)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\\H_{\alpha }^{(2)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{-i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\end{aligned}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/a83de26570e88fa1f181c36cf8e249b5559513aa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -5.671ex; width:28.861ex; height:12.509ex;" alt="{\displaystyle {\begin{aligned}H_{\alpha }^{(1)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\\H_{\alpha }^{(2)}(z)&amp;\sim {\sqrt {\frac {2}{\pi z}}}e^{-i\left(z-{\frac {2\pi \alpha -\pi }{4}}\right)}\end{aligned}}}"/></span></dd></dl></dd></dl>
+<h2><span class="mw-headline" id="Construction">Construction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=4" title="Edit section: Construction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="General">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=5" title="Edit section: General">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Consider:  
+</p>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle h(x)=f(x)(1-F(x))+g(x)F(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h(x)=f(x)(1-F(x))+g(x)F(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c7f456f476438220880491c1a344d210df221308" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:34.661ex; height:2.843ex;" alt="{\displaystyle h(x)=f(x)(1-F(x))+g(x)F(x)}"/></span></dd></dl></dd></dl>
+<p>where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/202945cce41ecebb6f643f31d119c514bec7a074" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.418ex; height:2.843ex;" alt="f(x)"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c6ca91363022bd5e4dcb17e5ef29f78b8ef00b59" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.255ex; height:2.843ex;" alt="g(x)"/></span> are real-valued <a href="/wiki/Analytic_function" title="Analytic function">analytic functions</a>, and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle F(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle F(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/71a82805d469cdfa7856c11d6ee756acd1dc7174" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.88ex; height:2.843ex;" alt="F(x)"/></span> is a <a href="/wiki/Cumulative_distribution_function" title="Cumulative distribution function">Cumulative distribution function</a>.  
+</p><p>Then <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle h(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/02c07825dae28705df03d15daeb8844d49c4dbd4" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.478ex; height:2.843ex;" alt="h(x)"/></span> is asymptotic to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/202945cce41ecebb6f643f31d119c514bec7a074" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.418ex; height:2.843ex;" alt="f(x)"/></span> as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x\to (-\infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x\to (-\infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81b3f28c1e2d26c2d0956d1731a290bfd29efa37" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.885ex; height:2.843ex;" alt="{\displaystyle x\to (-\infty )}"/></span> and asymptotic to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>g</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c6ca91363022bd5e4dcb17e5ef29f78b8ef00b59" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:4.255ex; height:2.843ex;" alt="g(x)"/></span> as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x\to (+\infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>+</mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x\to (+\infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/767af5f0d0d6c837c679e74eacedba100b730a5a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.885ex; height:2.843ex;" alt="{\displaystyle x\to (+\infty )}"/></span>.
+</p>
+<h3><span class="mw-headline" id="Asymptotic_to_two_different_polynomials">Asymptotic to two different polynomials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=6" title="Edit section: Asymptotic to two different polynomials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Suppose we want a real-valued function that is asymptotic to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (a_{0}+a_{1}x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (a_{0}+a_{1}x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3b70a922fb6cf9f26a95f05bca6828589ff0d070" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.547ex; height:2.843ex;" alt="{\displaystyle (a_{0}+a_{1}x)}"/></span> as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x\to (-\infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x\to (-\infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/81b3f28c1e2d26c2d0956d1731a290bfd29efa37" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.885ex; height:2.843ex;" alt="{\displaystyle x\to (-\infty )}"/></span> and is asymptotic to <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (b_{0}+b_{1}x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (b_{0}+b_{1}x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/582b36f2633db509b5bd6496ed5d0e15d1d0c614" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.083ex; height:2.843ex;" alt="{\displaystyle (b_{0}+b_{1}x)}"/></span> as <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x\to (+\infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mo stretchy="false">(</mo>
+        <mo>+</mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x\to (+\infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/767af5f0d0d6c837c679e74eacedba100b730a5a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:10.885ex; height:2.843ex;" alt="{\displaystyle x\to (+\infty )}"/></span>.  Then 
+</p>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle h(x)=(a_{0}+a_{1}x)(1-F(x))+(b_{0}+b_{1}x)F(x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>h</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>b</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>F</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle h(x)=(a_{0}+a_{1}x)(1-F(x))+(b_{0}+b_{1}x)F(x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a74c5c5a55f91210b9846a72e4a5edbfde4102c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:46.619ex; height:2.843ex;" alt="{\displaystyle h(x)=(a_{0}+a_{1}x)(1-F(x))+(b_{0}+b_{1}x)F(x)}"/></span></dd></dl></dd></dl>
+<p>will do this.
+</p>
+<h2><span class="mw-headline" id="Asymptotic_expansion">Asymptotic expansion</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=7" title="Edit section: Asymptotic expansion">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Asymptotic_expansion" title="Asymptotic expansion">Asymptotic expansion</a></div>
+<p>An <a href="/wiki/Asymptotic_expansion" title="Asymptotic expansion">asymptotic expansion</a> of a function <span class="texhtml"><i>f</i>(<i>x</i>)</span> is in practice an expression of that function in terms of a <a href="/wiki/Series_(mathematics)" title="Series (mathematics)">series</a>, the <a href="/wiki/Partial_sum" class="mw-redirect" title="Partial sum">partial sums</a> of which do not necessarily converge, but such that taking any initial partial sum provides an asymptotic formula for <span class="texhtml mvar" style="font-style:italic;">f</span>. The idea is that successive terms provide an increasingly accurate description of the order of growth of <span class="texhtml mvar" style="font-style:italic;">f</span>.
+</p><p>In symbols, it means we have <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f\sim g_{1},}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f\sim g_{1},}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/238ba15121629db8e7fe04c8d66de612f9c82c60" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:7.187ex; height:2.509ex;" alt="{\displaystyle f\sim g_{1},}"/></span> but also <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-g_{1}\sim g_{2}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-g_{1}\sim g_{2}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f49e45a79a74e8732d53f58d559c8790ea15db6d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:11.544ex; height:2.509ex;" alt="f - g_1 \sim g_2"/></span> and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-g_{1}-\cdots -g_{k-1}\sim g_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-g_{1}-\cdots -g_{k-1}\sim g_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/acfc3a1a8e8642400e7aa4d9e6b4ca9275449354" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:24.281ex; height:2.509ex;" alt="f - g_1 - \cdots -  g_{k-1} \sim g_{k}"/></span> for each fixed <i>k</i>. In view of the definition of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \sim }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x223C;<!-- ∼ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sim }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/afcc42adfcfdc24d5c4c474869e5d8eaa78d1173" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.307ex; margin-bottom: -0.478ex; width:1.808ex; height:1.343ex;" alt="\sim "/></span> symbol, the last equation means <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-(g_{1}+\cdots +g_{k})=o(g_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-(g_{1}+\cdots +g_{k})=o(g_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/99aa4a2a79236a74047973e1be1cfedec4828742" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:26.926ex; height:2.843ex;" alt="f - (g_1 + \cdots + g_k) = o(g_k)"/></span> in the <a href="/wiki/Big_O_notation#Little-o_notation" title="Big O notation">little o notation</a>, i.e., <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-(g_{1}+\cdots +g_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-(g_{1}+\cdots +g_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/33bbffb3926f0449a956f24e2b0e3b0fb4db81fa" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:18.693ex; height:2.843ex;" alt="f - (g_1 + \cdots + g_k)"/></span> is much smaller than <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k}.}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k}.}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d889250739650cf1b57bc7adb7b52fb62fd69a47" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.845ex; height:2.009ex;" alt="{\displaystyle g_{k}.}"/></span>
+</p><p>The relation  <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-g_{1}-\cdots -g_{k-1}\sim g_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-g_{1}-\cdots -g_{k-1}\sim g_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/acfc3a1a8e8642400e7aa4d9e6b4ca9275449354" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:24.281ex; height:2.509ex;" alt="f - g_1 - \cdots -  g_{k-1} \sim g_{k}"/></span> takes its full meaning if <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k+1}=o(g_{k})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k+1}=o(g_{k})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7294cc95875ceec4fbe193e8f97bf89767bdbe91" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.531ex; height:2.843ex;" alt="{\displaystyle g_{k+1}=o(g_{k})}"/></span> for all <i>k</i>, which means the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/de363eb168fab5e16a5acc74d8b0288e07a23aca" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.198ex; height:2.009ex;" alt="g_{k}"/></span> form an <a href="/wiki/Asymptotic_scale" class="mw-redirect" title="Asymptotic scale">asymptotic scale</a>. In that case, some authors may <a href="/wiki/Abuse_of_notation" title="Abuse of notation">abusively</a> write <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f\sim g_{1}+\cdots +g_{k}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f\sim g_{1}+\cdots +g_{k}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/4c2c5d66ca1b40187e293a5c10e013c133285a83" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:17.142ex; height:2.509ex;" alt="f \sim g_1 + \cdots +  g_k"/></span> to denote the statement <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-(g_{1}+\cdots +g_{k})=o(g_{k}).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>+</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-(g_{1}+\cdots +g_{k})=o(g_{k}).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/becfa35672c6b95c9ddc65f1daac9e030000bac0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:27.573ex; height:2.843ex;" alt="{\displaystyle f-(g_{1}+\cdots +g_{k})=o(g_{k}).}"/></span> One should however be careful that this is not a standard use of the <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \sim }">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo>&#x223C;<!-- ∼ --></mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \sim }</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/afcc42adfcfdc24d5c4c474869e5d8eaa78d1173" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: 0.307ex; margin-bottom: -0.478ex; width:1.808ex; height:1.343ex;" alt="\sim "/></span> symbol, and that it does not correspond to the definition given in <a href="#Definition">§&#160;Definition</a>.
+</p><p>In the present situation, this relation <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k}=o(g_{k-1})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k}=o(g_{k-1})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c2c4b94c27b15f9b93287ee9700f18f1046ba333" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:12.531ex; height:2.843ex;" alt="g_{k} = o(g_{k-1})"/></span> actually follows from combining steps <i>k</i> and <i>k</i>−1; by subtracting <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-g_{1}-\cdots -g_{k-2}=g_{k-1}+o(g_{k-1})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-g_{1}-\cdots -g_{k-2}=g_{k-1}+o(g_{k-1})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/13b2771c6598f82f4e921b5217cb6698b7af3dde" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:36.457ex; height:2.843ex;" alt="f - g_1 - \cdots -  g_{k-2} = g_{k-1} + o(g_{k-1})"/></span> from <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle f-g_{1}-\cdots -g_{k-2}-g_{k-1}=g_{k}+o(g_{k}),}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>f</mi>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle f-g_{1}-\cdots -g_{k-2}-g_{k-1}=g_{k}+o(g_{k}),}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/30819b0643883049cbed034efbbb4c42669cef59" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:40.041ex; height:2.843ex;" alt="{\displaystyle f-g_{1}-\cdots -g_{k-2}-g_{k-1}=g_{k}+o(g_{k}),}"/></span> one gets <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k}+o(g_{k})=o(g_{k-1}),}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>+</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k}+o(g_{k})=o(g_{k-1}),}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e727ce76cbf1f321fb70275e2ecff602ede5c987" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:21.153ex; height:2.843ex;" alt="{\displaystyle g_{k}+o(g_{k})=o(g_{k-1}),}"/></span> i.e. <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle g_{k}=o(g_{k-1}).}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>o</mi>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>g</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>k</mi>
+            <mo>&#x2212;<!-- − --></mo>
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>.</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle g_{k}=o(g_{k-1}).}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9caebf3c5a6ae2e517f06e174d88687857587bfb" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:13.178ex; height:2.843ex;" alt="{\displaystyle g_{k}=o(g_{k-1}).}"/></span>
+</p><p>In case the asymptotic expansion does not converge, for any particular value of the argument there will be a particular partial sum which provides the best approximation and adding additional terms will decrease the accuracy.  This optimal partial sum will usually have more terms as the argument approaches the limit value.
+</p>
+<h3><span class="mw-headline" id="Examples_of_asymptotic_expansions">Examples of asymptotic expansions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=8" title="Edit section: Examples of asymptotic expansions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a href="/wiki/Gamma_function" title="Gamma function">Gamma function</a></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\frac {e^{x}}{x^{x}{\sqrt {2\pi x}}}}\Gamma (x+1)\sim 1+{\frac {1}{12x}}+{\frac {1}{288x^{2}}}-{\frac {139}{51840x^{3}}}-\cdots \ (x\to \infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>e</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>x</mi>
+              </mrow>
+            </msup>
+            <mrow>
+              <msup>
+                <mi>x</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>x</mi>
+                </mrow>
+              </msup>
+              <mrow class="MJX-TeXAtom-ORD">
+                <msqrt>
+                  <mn>2</mn>
+                  <mi>&#x03C0;<!-- π --></mi>
+                  <mi>x</mi>
+                </msqrt>
+              </mrow>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mi mathvariant="normal">&#x0393;<!-- Γ --></mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo>+</mo>
+        <mn>1</mn>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>12</mn>
+              <mi>x</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>+</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>288</mn>
+              <msup>
+                <mi>x</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>139</mn>
+            <mrow>
+              <mn>51840</mn>
+              <msup>
+                <mi>x</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>3</mn>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>&#x2212;<!-- − --></mo>
+        <mo>&#x22EF;<!-- ⋯ --></mo>
+        <mtext>&#xA0;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {e^{x}}{x^{x}{\sqrt {2\pi x}}}}\Gamma (x+1)\sim 1+{\frac {1}{12x}}+{\frac {1}{288x^{2}}}-{\frac {139}{51840x^{3}}}-\cdots \ (x\to \infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8df64ba7ef26b06380f6d677898493be3b4d7a13" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.838ex; width:66.314ex; height:6.176ex;" alt="{\displaystyle {\frac {e^{x}}{x^{x}{\sqrt {2\pi x}}}}\Gamma (x+1)\sim 1+{\frac {1}{12x}}+{\frac {1}{288x^{2}}}-{\frac {139}{51840x^{3}}}-\cdots \ (x\to \infty )}"/></span></dd></dl></dd></dl>
+<ul><li><a href="/wiki/Exponential_integral" title="Exponential integral">Exponential integral</a></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle xe^{x}E_{1}(x)\sim \sum _{n=0}^{\infty }{\frac {(-1)^{n}n!}{x^{n}}}\ (x\to \infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>x</mi>
+          </mrow>
+        </msup>
+        <msub>
+          <mi>E</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mo>&#x2212;<!-- − --></mo>
+              <mn>1</mn>
+              <msup>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>n</mi>
+                </mrow>
+              </msup>
+              <mi>n</mi>
+              <mo>!</mo>
+            </mrow>
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>n</mi>
+              </mrow>
+            </msup>
+          </mfrac>
+        </mrow>
+        <mtext>&#xA0;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle xe^{x}E_{1}(x)\sim \sum _{n=0}^{\infty }{\frac {(-1)^{n}n!}{x^{n}}}\ (x\to \infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ad1d952d1a23d28933b0f078aa16d15682c6e833" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:34.868ex; height:6.843ex;" alt="{\displaystyle xe^{x}E_{1}(x)\sim \sum _{n=0}^{\infty }{\frac {(-1)^{n}n!}{x^{n}}}\ (x\to \infty )}"/></span></dd></dl></dd></dl>
+<ul><li><a href="/wiki/Error_function" title="Error function">Error function</a></li></ul>
+<dl><dd><dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\sqrt {\pi }}xe^{x^{2}}{\rm {erfc}}(x)\sim 1+\sum _{n=1}^{\infty }(-1)^{n}{\frac {(2n-1)!!}{n!(2x^{2})^{n}}}\ (x\to \infty )}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <msqrt>
+            <mi>&#x03C0;<!-- π --></mi>
+          </msqrt>
+        </mrow>
+        <mi>x</mi>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <msup>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mn>2</mn>
+              </mrow>
+            </msup>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">e</mi>
+            <mi mathvariant="normal">r</mi>
+            <mi mathvariant="normal">f</mi>
+            <mi mathvariant="normal">c</mi>
+          </mrow>
+        </mrow>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>&#x223C;<!-- ∼ --></mo>
+        <mn>1</mn>
+        <mo>+</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <msup>
+          <mo stretchy="false">)</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <mo stretchy="false">(</mo>
+              <mn>2</mn>
+              <mi>n</mi>
+              <mo>&#x2212;<!-- − --></mo>
+              <mn>1</mn>
+              <mo stretchy="false">)</mo>
+              <mo>!</mo>
+              <mo>!</mo>
+            </mrow>
+            <mrow>
+              <mi>n</mi>
+              <mo>!</mo>
+              <mo stretchy="false">(</mo>
+              <mn>2</mn>
+              <msup>
+                <mi>x</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mn>2</mn>
+                </mrow>
+              </msup>
+              <msup>
+                <mo stretchy="false">)</mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mi>n</mi>
+                </mrow>
+              </msup>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mtext>&#xA0;</mtext>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">&#x2192;<!-- → --></mo>
+        <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\sqrt {\pi }}xe^{x^{2}}{\rm {erfc}}(x)\sim 1+\sum _{n=1}^{\infty }(-1)^{n}{\frac {(2n-1)!!}{n!(2x^{2})^{n}}}\ (x\to \infty )}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b5a2e6115ee990e75802c4387d73de3504644d48" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:51.277ex; height:6.843ex;" alt="{\displaystyle {\sqrt {\pi }}xe^{x^{2}}{\rm {erfc}}(x)\sim 1+\sum _{n=1}^{\infty }(-1)^{n}{\frac {(2n-1)!!}{n!(2x^{2})^{n}}}\ (x\to \infty )}"/></span></dd></dl></dd>
+<dd>where <span class="texhtml">(2<i>n</i>&#8201;−&#8201;1)!!</span> is the <a href="/wiki/Double_factorial" title="Double factorial">double factorial</a>.</dd></dl>
+<h3><span class="mw-headline" id="Worked_example">Worked example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=9" title="Edit section: Worked example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Asymptotic expansions often occur when an ordinary series is used in a formal expression that forces the taking of values outside of its domain of convergence. For example, we might start with the ordinary series
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\frac {1}{1-w}}=\sum _{n=0}^{\infty }w^{n}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mrow>
+              <mn>1</mn>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>w</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <msup>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\frac {1}{1-w}}=\sum _{n=0}^{\infty }w^{n}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/292c38895abf46d696bbf78b8836420e1c49026c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:16.226ex; height:6.843ex;" alt="{\frac  {1}{1-w}}=\sum _{{n=0}}^{\infty }w^{n}"/></span></dd></dl>
+<p>The expression on the left is valid on the entire complex plane <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w\neq 1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>w</mi>
+        <mo>&#x2260;<!-- ≠ --></mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w\neq 1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/818d53d2262705b2dd36e40872ceaf04f76c7fe1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:5.925ex; height:2.676ex;" alt="w\ne 1"/></span>, while the right hand side converges only for <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle |w|&lt;1}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mi>w</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo stretchy="false">|</mo>
+        </mrow>
+        <mo>&lt;</mo>
+        <mn>1</mn>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle |w|&lt;1}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3fd52cdea4952598ac35dd1ad3709c6669538122" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.219ex; height:2.843ex;" alt="|w|&lt; 1"/></span>. Multiplying by <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle e^{-w/t}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>w</mi>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mo>/</mo>
+            </mrow>
+            <mi>t</mi>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{-w/t}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d46b6ea51f4fd9f953a65c7acff4bd6c849ae9b8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:5.187ex; height:2.843ex;" alt="e^{-w/t}"/></span> and integrating both sides yields
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \int _{0}^{\infty }{\frac {e^{-{\frac {w}{t}}}}{1-w}}\,dw=\sum _{n=0}^{\infty }t^{n+1}\int _{0}^{\infty }e^{-u}u^{n}\,du}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msubsup>
+          <mo>&#x222B;<!-- ∫ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </msubsup>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <msup>
+              <mi>e</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mo>&#x2212;<!-- − --></mo>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mfrac>
+                    <mi>w</mi>
+                    <mi>t</mi>
+                  </mfrac>
+                </mrow>
+              </mrow>
+            </msup>
+            <mrow>
+              <mn>1</mn>
+              <mo>&#x2212;<!-- − --></mo>
+              <mi>w</mi>
+            </mrow>
+          </mfrac>
+        </mrow>
+        <mspace width="thinmathspace" />
+        <mi>d</mi>
+        <mi>w</mi>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <msup>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+        <msubsup>
+          <mo>&#x222B;<!-- ∫ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </msubsup>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mi>u</mi>
+          </mrow>
+        </msup>
+        <msup>
+          <mi>u</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+        </msup>
+        <mspace width="thinmathspace" />
+        <mi>d</mi>
+        <mi>u</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \int _{0}^{\infty }{\frac {e^{-{\frac {w}{t}}}}{1-w}}\,dw=\sum _{n=0}^{\infty }t^{n+1}\int _{0}^{\infty }e^{-u}u^{n}\,du}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0d4954afc6de95ba4b38a63796a35c33006661ae" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:39.625ex; height:7.509ex;" alt="{\displaystyle \int _{0}^{\infty }{\frac {e^{-{\frac {w}{t}}}}{1-w}}\,dw=\sum _{n=0}^{\infty }t^{n+1}\int _{0}^{\infty }e^{-u}u^{n}\,du}"/></span></dd></dl>
+<p>The integral on the left hand side can be expressed in terms of the <a href="/wiki/Exponential_integral" title="Exponential integral">exponential integral</a>.  The integral on the right hand side, after the substitution <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle u=w/t}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>u</mi>
+        <mo>=</mo>
+        <mi>w</mi>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>t</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle u=w/t}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/d70bda6a364e112d3e53f2aff77c0d065dcbe6e7" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:8.094ex; height:2.843ex;" alt="u=w/t"/></span>, may be recognized as the <a href="/wiki/Gamma_function" title="Gamma function">gamma function</a>. Evaluating both, one obtains the asymptotic expansion
+</p>
+<dl><dd><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle e^{-{\frac {1}{t}}}\operatorname {Ei} \left({\frac {1}{t}}\right)=\sum _{n=0}^{\infty }n!\;t^{n+1}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <mfrac>
+                <mn>1</mn>
+                <mi>t</mi>
+              </mfrac>
+            </mrow>
+          </mrow>
+        </msup>
+        <mi>Ei</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mrow>
+          <mo>(</mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mfrac>
+              <mn>1</mn>
+              <mi>t</mi>
+            </mfrac>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi mathvariant="normal">&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mi>n</mi>
+        <mo>!</mo>
+        <mspace width="thickmathspace" />
+        <msup>
+          <mi>t</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>+</mo>
+            <mn>1</mn>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle e^{-{\frac {1}{t}}}\operatorname {Ei} \left({\frac {1}{t}}\right)=\sum _{n=0}^{\infty }n!\;t^{n+1}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7c4e62cb00739d2511ca26bee63682a086743b28" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -3.005ex; width:25.82ex; height:6.843ex;" alt="{\displaystyle e^{-{\frac {1}{t}}}\operatorname {Ei} \left({\frac {1}{t}}\right)=\sum _{n=0}^{\infty }n!\;t^{n+1}}"/></span></dd></dl>
+<p>Here, the right hand side is clearly not convergent for any non-zero value of <i>t</i>.  However, by keeping <i>t</i> small, and truncating the series on the right to a finite number of terms, one may obtain a fairly good approximation to the value of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {Ei} (1/t)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Ei</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>t</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Ei} (1/t)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9960f589970193cc2582b43d105c0f1d1858b2ba" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:7.204ex; height:2.843ex;" alt="\operatorname{Ei}(1/t)"/></span>. Substituting <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x=-1/t}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>x</mi>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mn>1</mn>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mo>/</mo>
+        </mrow>
+        <mi>t</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x=-1/t}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/736bc7ac8ffbf37b835983296b0ccb9bf2a5e2a9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:9.401ex; height:2.843ex;" alt="{\displaystyle x=-1/t}"/></span> and noting that <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle \operatorname {Ei} (x)=-E_{1}(-x)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>Ei</mi>
+        <mo>&#x2061;<!-- ⁡ --></mo>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <msub>
+          <mi>E</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mo>&#x2212;<!-- − --></mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle \operatorname {Ei} (x)=-E_{1}(-x)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/640b40f817c87cb246e58d4311dbef48e21f1e63" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:17.992ex; height:2.843ex;" alt="{\displaystyle \operatorname {Ei} (x)=-E_{1}(-x)}"/></span> results in the asymptotic expansion given earlier in this article.
+</p>
+<h2><span class="mw-headline" id="Asymptotic_distribution">Asymptotic distribution</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=10" title="Edit section: Asymptotic distribution">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Asymptotic_distribution" title="Asymptotic distribution">Asymptotic distribution</a></div>
+<p>In <a href="/wiki/Mathematical_statistics" title="Mathematical statistics">mathematical statistics</a>, an <b><a href="/wiki/Asymptotic_distribution" title="Asymptotic distribution">asymptotic distribution</a></b> is a hypothetical distribution that is in a sense the "limiting" distribution of a sequence of distributions. A distribution is an ordered set of random variables <i>Z</i><sub><i>i</i></sub> for <i>i</i> = 1, ..., <i>n</i>, for some positive integer <i>n</i>. An asymptotic distribution allows <i>i</i> to range without bound, that is, <i>n</i> is infinite.
+</p><p>A special case of an asymptotic distribution is when the late entries go to zero—that is, the <i>Z</i><sub><i>i</i></sub> go to 0 as <i>i</i> goes to infinity. Some instances of "asymptotic distribution" refer only to this special case.
+</p><p>This is based on the notion of an <a href="/wiki/Asymptotic" class="mw-redirect" title="Asymptotic">asymptotic</a> function which cleanly approaches a constant value (the <i>asymptote</i>) as the independent variable goes to infinity; "clean" in this sense meaning that for any desired closeness epsilon there is some value of the independent variable after which the function never differs from the constant by more than epsilon.
+</p><p>An <a href="/wiki/Asymptote" title="Asymptote">asymptote</a> is a straight line that a curve approaches but never meets or crosses. Informally, one may speak of the curve meeting the asymptote "at infinity" although this is not a precise definition. In the equation <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y={\frac {1}{x}},}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>y</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mi>x</mi>
+          </mfrac>
+        </mrow>
+        <mo>,</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y={\frac {1}{x}},}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f9fef2b931e4a1f874e96531b5715de189c9e680" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:7.067ex; height:5.176ex;" alt="{\displaystyle y={\frac {1}{x}},}"/></span> <i>y</i> becomes arbitrarily small in magnitude as <i>x</i> increases.
+</p>
+<h2><span class="mw-headline" id="Applications">Applications</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=11" title="Edit section: Applications">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Asymptotic analysis is used in several <a href="/wiki/Mathematical_sciences" title="Mathematical sciences">mathematical sciences</a>. In <a href="/wiki/Statistics" title="Statistics">statistics</a>, asymptotic theory provides limiting approximations of the <a href="/wiki/Probability_distribution" title="Probability distribution">probability distribution</a> of <a href="/wiki/Sample_statistic" class="mw-redirect" title="Sample statistic">sample statistics</a>, such as the <a href="/wiki/Likelihood-ratio_test" title="Likelihood-ratio test">likelihood ratio</a> <a href="/wiki/Statistic" title="Statistic">statistic</a> and the <a href="/wiki/Expected_value" title="Expected value">expected value</a> of the <a href="/wiki/Deviance_(statistics)" title="Deviance (statistics)">deviance</a>. Asymptotic theory does not provide a method of evaluating the finite-sample distributions of sample statistics, however. Non-asymptotic bounds are provided by methods of <a href="/wiki/Approximation_theory" title="Approximation theory">approximation theory</a>.
+</p><p>Examples of applications are the following.
+</p>
+<ul><li>In <a href="/wiki/Applied_mathematics" title="Applied mathematics">applied mathematics</a>, asymptotic analysis is used to build <a href="/wiki/Numerical_method" title="Numerical method">numerical methods</a> to approximate <a href="/wiki/Equation" title="Equation">equation</a> solutions.</li>
+<li>In <a href="/wiki/Mathematical_statistics" title="Mathematical statistics">mathematical statistics</a> and <a href="/wiki/Probability_theory" title="Probability theory">probability theory</a>, asymptotics are used in analysis of long-run or large-sample behaviour of random variables and estimators.</li>
+<li>in <a href="/wiki/Computer_science" title="Computer science">computer science</a> in the <a href="/wiki/Analysis_of_algorithms" title="Analysis of algorithms">analysis of algorithms</a>, considering the performance of algorithms.</li>
+<li>the behavior of <a href="/wiki/Physical_system" title="Physical system">physical systems</a>, an example being <a href="/wiki/Statistical_mechanics" title="Statistical mechanics">statistical mechanics</a>.</li>
+<li>in <a href="/wiki/Accident_analysis" title="Accident analysis">accident analysis</a> when identifying the causation of crash through count modeling with large number of crash counts in a given time and space.</li></ul>
+<p>Asymptotic analysis is a key tool for exploring the <a href="/wiki/Ordinary_differential_equation" title="Ordinary differential equation">ordinary</a> and <a href="/wiki/Partial_differential_equation" title="Partial differential equation">partial</a> differential equations which arise in the <a href="/wiki/Mathematical_model" title="Mathematical model">mathematical modelling</a> of real-world phenomena.<sup id="cite_ref-Howison_3-0" class="reference"><a href="#cite_note-Howison-3">&#91;3&#93;</a></sup> An illustrative example is the derivation of the <a href="/wiki/Boundary_layer#Boundary_layer_equations" title="Boundary layer">boundary layer equations</a> from the full <a href="/wiki/Navier-Stokes_equations" class="mw-redirect" title="Navier-Stokes equations">Navier-Stokes equations</a> governing fluid flow. In many cases, the asymptotic expansion is in power of a small parameter,  <span class="texhtml mvar" style="font-style:italic;">ε</span>: in the boundary layer case, this is the <a href="/wiki/Dimensional_analysis" title="Dimensional analysis">nondimensional</a> ratio of the boundary layer thickness to a typical lengthscale of the problem. Indeed, applications of asymptotic analysis in mathematical modelling often<sup id="cite_ref-Howison_3-1" class="reference"><a href="#cite_note-Howison-3">&#91;3&#93;</a></sup> center around a nondimensional parameter which has been shown, or assumed, to be small through a consideration of the scales of the problem at hand.
+</p><p>Asymptotic expansions typically arise in the approximation of certain integrals (<a href="/wiki/Laplace%27s_method" title="Laplace&#39;s method">Laplace's method</a>, <a href="/wiki/Saddle-point_method" class="mw-redirect" title="Saddle-point method">saddle-point method</a>, <a href="/wiki/Method_of_steepest_descent" title="Method of steepest descent">method of steepest descent</a>) or in the approximation of probability distributions (<a href="/wiki/Edgeworth_series" title="Edgeworth series">Edgeworth series</a>). The <a href="/wiki/Feynman_graphs" class="mw-redirect" title="Feynman graphs">Feynman graphs</a> in <a href="/wiki/Quantum_field_theory" title="Quantum field theory">quantum field theory</a> are another example of asymptotic expansions which often do not converge.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=12" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="div-col columns column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em;">
+<ul><li><a href="/wiki/Asymptote" title="Asymptote">Asymptote</a></li>
+<li><a href="/wiki/Asymptotic_computational_complexity" title="Asymptotic computational complexity">Asymptotic computational complexity</a></li>
+<li><a href="/wiki/Asymptotic_density" class="mw-redirect" title="Asymptotic density">Asymptotic density</a> (in number theory)</li>
+<li><a href="/wiki/Asymptotic_theory_(statistics)" title="Asymptotic theory (statistics)">Asymptotic theory (statistics)</a></li>
+<li><a href="/wiki/Asymptotology" title="Asymptotology">Asymptotology</a></li>
+<li><a href="/wiki/Big_O_notation" title="Big O notation">Big O notation</a></li>
+<li><a href="/wiki/Leading-order_term" title="Leading-order term">Leading-order term</a></li>
+<li><a href="/wiki/Method_of_dominant_balance" title="Method of dominant balance">Method of dominant balance</a> (for ODEs)</li>
+<li><a href="/wiki/Method_of_matched_asymptotic_expansions" title="Method of matched asymptotic expansions">Method of matched asymptotic expansions</a></li>
+<li><a href="/wiki/Watson%27s_lemma" title="Watson&#39;s lemma">Watson's lemma</a></li></ul>
+</div>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=13" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite id="CITEREFHazewinkel2001" class="citation"><a href="/wiki/Michiel_Hazewinkel" title="Michiel Hazewinkel">Hazewinkel, Michiel</a>, ed. (2001) [1994], <a rel="nofollow" class="external text" href="https://www.encyclopediaofmath.org/index.php?title=Asymptotic_equality">"Asymptotic equality"</a>, <i><a href="/wiki/Encyclopedia_of_Mathematics" title="Encyclopedia of Mathematics">Encyclopedia of Mathematics</a></i>, Springer Science+Business Media B.V. / Kluwer Academic Publishers, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-1-55608-010-4" title="Special:BookSources/978-1-55608-010-4"><bdi>978-1-55608-010-4</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Asymptotic+equality&amp;rft.btitle=Encyclopedia+of+Mathematics&amp;rft.pub=Springer+Science%2BBusiness+Media+B.V.+%2F+Kluwer+Academic+Publishers&amp;rft.date=2001&amp;rft.isbn=978-1-55608-010-4&amp;rft_id=https%3A%2F%2Fwww.encyclopediaofmath.org%2Findex.php%3Ftitle%3DAsymptotic_equality&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a href="#CITEREFEstradaKanwal2002">Estrada &amp; Kanwal (2002</a>, §1.2)</span>
+</li>
+<li id="cite_note-Howison-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Howison_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Howison_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Howison, S. (2005), <i><a rel="nofollow" class="external text" href="https://books.google.com/books?id=A2Hy_54Y1MsC&amp;printsec=frontcover#v=onepage&amp;q=%22asymptotic%20analysis%22&amp;f=false">Practical Applied Mathematics</a></i>, <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite id="CITEREFBalser1994" class="citation">Balser, W. (1994), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=V-17CwAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>From Divergent Power Series To Analytic Functions</i></a>, <a href="/wiki/Springer-Verlag" class="mw-redirect" title="Springer-Verlag">Springer-Verlag</a>, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9783540485940" title="Special:BookSources/9783540485940"><bdi>9783540485940</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=From+Divergent+Power+Series+To+Analytic+Functions&amp;rft.pub=Springer-Verlag&amp;rft.date=1994&amp;rft.isbn=9783540485940&amp;rft.aulast=Balser&amp;rft.aufirst=W.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DV-17CwAAQBAJ%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite id="CITEREFde_Bruijn1981" class="citation"><a href="/wiki/Nicolaas_Govert_de_Bruijn" title="Nicolaas Govert de Bruijn">de Bruijn, N. G.</a> (1981), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=Oqj9AgAAQBAJ&amp;printsec=frontcover"><i>Asymptotic Methods in Analysis</i></a>, <a href="/wiki/Dover_Publications" title="Dover Publications">Dover Publications</a>, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780486642215" title="Special:BookSources/9780486642215"><bdi>9780486642215</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Asymptotic+Methods+in+Analysis&amp;rft.pub=Dover+Publications&amp;rft.date=1981&amp;rft.isbn=9780486642215&amp;rft.aulast=de+Bruijn&amp;rft.aufirst=N.+G.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DOqj9AgAAQBAJ%26printsec%3Dfrontcover&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite id="CITEREFEstradaKanwal2002" class="citation">Estrada, R.; Kanwal, R. P. (2002), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=X3cECAAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>A Distributional Approach to Asymptotics</i></a>, <a href="/wiki/Birkh%C3%A4user" title="Birkhäuser">Birkhäuser</a>, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780817681302" title="Special:BookSources/9780817681302"><bdi>9780817681302</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Distributional+Approach+to+Asymptotics&amp;rft.pub=Birkh%C3%A4user&amp;rft.date=2002&amp;rft.isbn=9780817681302&amp;rft.aulast=Estrada&amp;rft.aufirst=R.&amp;rft.au=Kanwal%2C+R.+P.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DX3cECAAAQBAJ%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite id="CITEREFMiller2006" class="citation">Miller, P. D. (2006), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=KQvqBwAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>Applied Asymptotic Analysis</i></a>, <a href="/wiki/American_Mathematical_Society" title="American Mathematical Society">American Mathematical Society</a>, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780821840788" title="Special:BookSources/9780821840788"><bdi>9780821840788</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Applied+Asymptotic+Analysis&amp;rft.pub=American+Mathematical+Society&amp;rft.date=2006&amp;rft.isbn=9780821840788&amp;rft.aulast=Miller&amp;rft.aufirst=P.+D.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DKQvqBwAAQBAJ%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite id="CITEREFMurray1984" class="citation">Murray, J. D. (1984), <a rel="nofollow" class="external text" href="https://books.google.com/books?id=PC3rBwAAQBAJ&amp;printsec=frontcover#v=onepage&amp;q&amp;f=false"><i>Asymptotic Analysis</i></a>, Springer, <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9781461211228" title="Special:BookSources/9781461211228"><bdi>9781461211228</bdi></a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Asymptotic+Analysis&amp;rft.pub=Springer&amp;rft.date=1984&amp;rft.isbn=9781461211228&amp;rft.aulast=Murray&amp;rft.aufirst=J.+D.&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DPC3rBwAAQBAJ%26printsec%3Dfrontcover%23v%3Donepage%26q%26f%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite id="CITEREFParisKaminsky2001" class="citation">Paris, R. B.; Kaminsky, D. (2001), <a rel="nofollow" class="external text" href="https://www.researchgate.net/publication/39064661"><i>Asymptotics and Mellin-Barnes Integrals</i></a>, <a href="/wiki/Cambridge_University_Press" title="Cambridge University Press">Cambridge University Press</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Asymptotics+and+Mellin-Barnes+Integrals&amp;rft.pub=Cambridge+University+Press&amp;rft.date=2001&amp;rft.aulast=Paris&amp;rft.aufirst=R.+B.&amp;rft.au=Kaminsky%2C+D.&amp;rft_id=https%3A%2F%2Fwww.researchgate.net%2Fpublication%2F39064661&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAsymptotic+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://www.iospress.nl/journal/asymptotic-analysis/"><i>Asymptotic Analysis</i></a> &#160;—home page of the journal, which is published by <a href="/wiki/IOS_Press" title="IOS Press">IOS Press</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20070422145944/http://swan.econ.ohio-state.edu/econ840/note4.pdf">A paper on time series analysis using asymptotic distribution</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1322
+Cached time: 20200327233240
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.300 seconds
+Real time usage: 0.442 seconds
+Preprocessor visited node count: 1278/1000000
+Post‐expand include size: 15887/2097152 bytes
+Template argument size: 540/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 18649/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.116/10.000 seconds
+Lua memory usage: 3.3 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  261.263      1 -total
+ 43.48%  113.602      7 Template:Citation
+ 30.97%   80.913      1 Template:SpringerEOM
+ 17.36%   45.347      1 Template:About
+  9.57%   25.012      1 Template:Harv
+  5.26%   13.741      1 Template:Div_col
+  4.00%   10.456      1 Template:Harvtxt
+  3.55%    9.273     24 Template:Math
+  3.00%    7.830      1 Template:Section_link
+  2.78%    7.272      2 Template:Main
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:641995-0!canonical!math=5 and timestamp 20200327233240 and revision id 945721410
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Asymptotic_analysis&amp;oldid=945721410">https://en.wikipedia.org/w/index.php?title=Asymptotic_analysis&amp;oldid=945721410</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Asymptotic_analysis" title="Category:Asymptotic analysis">Asymptotic analysis</a></li><li><a href="/wiki/Category:Mathematical_series" title="Category:Mathematical series">Mathematical series</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Asymptotic+analysis" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Asymptotic+analysis" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Asymptotic_analysis" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Asymptotic_analysis" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Asymptotic_analysis">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Asymptotic_analysis&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Asymptotic_analysis&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Asymptotic_analysis" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Asymptotic_analysis" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Asymptotic_analysis&amp;oldid=945721410" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Asymptotic_analysis&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q752718" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Asymptotic_analysis&amp;id=945721410&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Asymptotic+analysis">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Asymptotic+analysis&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Asymptotic_analysis&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/An%C3%A0lisi_asimpt%C3%B2tica" title="Anàlisi asimptòtica – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Asymptotische_Analyse" title="Asymptotische Analyse – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_asint%C3%B3tico" title="Análisis asintótico – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%AD%D9%84%DB%8C%D9%84_%D9%85%D8%AC%D8%A7%D9%86%D8%A8%DB%8C" title="تحلیل مجانبی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Stima_asintotica" title="Stima asintotica – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Aszimptotikus_anal%C3%ADzis" title="Aszimptotikus analízis – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%B8%E0%B4%82%E0%B4%AA%E0%B4%BE%E0%B4%A4_%E0%B4%B5%E0%B4%BF%E0%B4%B6%E0%B4%95%E0%B4%B2%E0%B4%A8%E0%B4%82" title="അസംപാത വിശകലനം – Malayalam" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Asymptotische_analyse" title="Asymptotische analyse – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/An%C3%A1lise_assint%C3%B3tica" title="Análise assintótica – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D0%B8%D0%BC%D0%BF%D1%82%D0%BE%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7" title="Асимптотический анализ – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%90%D1%81%D0%B8%D0%BC%D0%BF%D1%82%D0%BE%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BD%D0%B0%D0%BB%D1%96%D0%B7" title="Асимптотичний аналіз – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%B8%90%E8%BF%91%E5%88%86%E6%9E%90" title="渐近分析 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q752718#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 15 March 2020, at 19:11<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Asymptotic_analysis&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.300","walltime":"0.442","ppvisitednodes":{"value":1278,"limit":1000000},"postexpandincludesize":{"value":15887,"limit":2097152},"templateargumentsize":{"value":540,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":18649,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  261.263      1 -total"," 43.48%  113.602      7 Template:Citation"," 30.97%   80.913      1 Template:SpringerEOM"," 17.36%   45.347      1 Template:About","  9.57%   25.012      1 Template:Harv","  5.26%   13.741      1 Template:Div_col","  4.00%   10.456      1 Template:Harvtxt","  3.55%    9.273     24 Template:Math","  3.00%    7.830      1 Template:Section_link","  2.78%    7.272      2 Template:Main"]},"scribunto":{"limitreport-timeusage":{"value":"0.116","limit":"10.000"},"limitreport-memusage":{"value":3459962,"limit":52428800},"limitreport-logs":"anchor_id_list = table#1 {\n  [\"CITEREFBalser1994\"] = 1,\n  [\"CITEREFEstradaKanwal2002\"] = 1,\n  [\"CITEREFMiller2006\"] = 1,\n  [\"CITEREFMurray1984\"] = 1,\n  [\"CITEREFParisKaminsky2001\"] = 1,\n  [\"CITEREFde_Bruijn1981\"] = 1,\n}\n"},"cachereport":{"origin":"mw1322","timestamp":"20200327233240","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Asymptotic analysis","url":"https:\/\/en.wikipedia.org\/wiki\/Asymptotic_analysis","sameAs":"http:\/\/www.wikidata.org\/entity\/Q752718","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q752718","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-05-08T05:30:07Z","dateModified":"2020-03-15T19:11:29Z","headline":"description of limiting behavior of a function"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":117,"wgHostname":"mw1258"});});</script></body></html>

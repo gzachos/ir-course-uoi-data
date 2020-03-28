@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Feature detection (computer vision) - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn8KzApAAEUAAE7TZBAAAAAB","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Feature_detection_(computer_vision)","wgTitle":"Feature detection (computer vision)","wgCurRevisionId":938664273,"wgRevisionId":938664273,"wgArticleId":1284224,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from April 2013","All articles lacking in-text citations","Wikipedia articles with style issues from April 2013","All articles with style issues","Articles with multiple maintenance issues","Feature detection (computer vision)"],
+"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Feature_detection_(computer_vision)","wgRelevantArticleId":1284224,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1005631","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading",
+"jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Writing_Desk_with_Harris_Detector.png/1200px-Writing_Desk_with_Harris_Detector.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Feature_detection_(computer_vision)"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Feature_detection_computer_vision rootpage-Feature_detection_computer_vision skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Feature detection (computer vision)</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Writing_Desk_with_Harris_Detector.png" class="image"><img alt="Writing Desk with Harris Detector.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Writing_Desk_with_Harris_Detector.png/220px-Writing_Desk_with_Harris_Detector.png" decoding="async" width="220" height="149" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Writing_Desk_with_Harris_Detector.png/330px-Writing_Desk_with_Harris_Detector.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Writing_Desk_with_Harris_Detector.png/440px-Writing_Desk_with_Harris_Detector.png 2x" data-file-width="1260" data-file-height="853" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Writing_Desk_with_Harris_Detector.png" class="internal" title="Enlarge"></a></div></div></div></div>
+<table class="box-Multiple_issues plainlinks metadata ambox ambox-content ambox-multiple_issues compact-ambox" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/40px-Ambox_important.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/60px-Ambox_important.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/b/b4/Ambox_important.svg/80px-Ambox_important.svg.png 2x" data-file-width="40" data-file-height="40" /></div></td><td class="mbox-text"><div class="mbox-text-span"><div class="mw-collapsible" style="width:95%; margin: 0.2em 0;"><b>This article has multiple issues.</b> Please help <b><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit">improve it</a></b> or discuss these issues on the <b><a href="/wiki/Talk:Feature_detection_(computer_vision)" title="Talk:Feature detection (computer vision)">talk page</a></b>. <small><i>(<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove these template messages</a>)</i></small>
+<div class="mw-collapsible-content" style="margin-top: 0.3em;">
+      <table class="box-No_footnotes plainlinks metadata ambox ambox-style ambox-No_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">The <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">references</a> in this article <b>are unclear because of a lack of <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> <br />Help <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">Wikipedia improve</a> by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">adding</a> precise citations!</span>  <small class="date-container"><i>(<span class="date">April 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="box-Essay-like plainlinks metadata ambox ambox-style ambox-essay-like" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/40px-Edit-clear.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/60px-Edit-clear.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/f2/Edit-clear.svg/80px-Edit-clear.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>is written like a <a href="/wiki/Wikipedia:What_Wikipedia_is_not#Wikipedia_is_not_a_publisher_of_original_thought" title="Wikipedia:What Wikipedia is not">personal reflection, personal essay, or argumentative essay</a></b> that states a Wikipedia editor's personal feelings or presents an original argument about a topic.<span class="hide-when-compact"> Please <a class="external text" href="https://en.wikipedia.org/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit">help improve it</a> by rewriting it in an <a href="/wiki/Wikipedia:Writing_better_articles#Information_style_and_tone" title="Wikipedia:Writing better articles">encyclopedic style</a>.</span>  <small class="date-container"><i>(<span class="date">April 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+    </div>
+</div><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%"><tbody><tr><th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a class="mw-selflink selflink">Feature detection</a></th></tr><tr><th style="padding:0.1em">
+<a href="/wiki/Edge_detection" title="Edge detection">Edge detection</a></th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Canny_edge_detector" title="Canny edge detector">Canny</a></li>
+<li><a href="/wiki/Deriche_edge_detector" title="Deriche edge detector">Deriche</a></li>
+<li><a href="/wiki/Edge_detection#Differential" title="Edge detection">Differential</a></li>
+<li><a href="/wiki/Sobel_operator" title="Sobel operator">Sobel</a></li>
+<li><a href="/wiki/Prewitt_operator" title="Prewitt operator">Prewitt</a></li>
+<li><a href="/wiki/Roberts_cross" title="Roberts cross">Roberts cross</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Corner_detection" title="Corner detection">Corner detection</a></th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Corner_detection#The_Harris_&amp;_Stephens_/_Shi–Tomasi_corner_detection_algorithms" title="Corner detection">Harris operator</a></li>
+<li><a href="/wiki/Corner_detection#The_Harris_&amp;_Stephens_/_Shi–Tomasi_corner_detection_algorithms" title="Corner detection">Shi and Tomasi</a></li>
+<li><a href="/wiki/Corner_detection#The_level_curve_curvature_approach" title="Corner detection">Level curve curvature</a></li>
+<li><a href="/wiki/Corner_detection#Scale-space_interest_points_based_on_the_Lindeberg_Hessian_feature_strength_measures" title="Corner detection">Hessian feature strength measures</a></li>
+<li><a href="/wiki/Corner_detection#The_SUSAN_corner_detector" title="Corner detection">SUSAN</a></li>
+<li><a href="/wiki/Corner_detection#AST-based_feature_detectors" title="Corner detection">FAST</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Blob_detection" title="Blob detection">Blob detection</a></th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Blob_detection#The_Laplacian_of_Gaussian" title="Blob detection">Laplacian of Gaussian (LoG)</a></li>
+<li><a href="/wiki/Difference_of_Gaussians" title="Difference of Gaussians">Difference of Gaussians (DoG)</a></li>
+<li><a href="/wiki/Blob_detection#The_determinant_of_the_Hessian" title="Blob detection">Determinant of Hessian  (DoH)</a></li>
+<li><a href="/wiki/Maximally_stable_extremal_regions" title="Maximally stable extremal regions">Maximally stable extremal regions</a></li>
+<li><a href="/wiki/Principal_Curvature-Based_Region_Detector" class="mw-redirect" title="Principal Curvature-Based Region Detector">PCBR</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Ridge_detection" title="Ridge detection">Ridge detection</a></th></tr><tr><th style="padding:0.1em">
+Hough transform</th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Hough_transform" title="Hough transform">Hough transform</a></li>
+<li><a href="/wiki/Generalized_Hough_transform" class="mw-redirect" title="Generalized Hough transform">Generalized Hough transform</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Structure tensor</th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Structure_tensor" title="Structure tensor">Structure tensor</a></li>
+<li><a href="/wiki/Generalized_structure_tensor" title="Generalized structure tensor">Generalized structure tensor</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Affine invariant feature detection</th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Affine_shape_adaptation" title="Affine shape adaptation">Affine shape adaptation</a></li>
+<li><a href="/wiki/Harris_affine_region_detector" title="Harris affine region detector">Harris affine</a></li>
+<li><a href="/wiki/Hessian_affine_region_detector" title="Hessian affine region detector">Hessian affine</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+Feature description</th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Scale-invariant_feature_transform" title="Scale-invariant feature transform">SIFT</a></li>
+<li><a href="/wiki/Speeded_up_robust_features" title="Speeded up robust features">SURF</a></li>
+<li><a href="/wiki/GLOH" title="GLOH">GLOH</a></li>
+<li><a href="/wiki/Histogram_of_oriented_gradients" title="Histogram of oriented gradients">HOG</a></li></ul></td>
+</tr><tr><th style="padding:0.1em">
+<a href="/wiki/Scale_space" title="Scale space">Scale space</a></th></tr><tr><td class="hlist" style="padding:0 0.1em 0.4em">
+<ul><li><a href="/wiki/Scale-space_axioms" title="Scale-space axioms">Scale-space axioms</a></li>
+<li><a href="/wiki/Axiomatic_theory_of_receptive_fields" title="Axiomatic theory of receptive fields">Axiomatic theory of receptive fields</a></li>
+<li><a href="/wiki/Scale_space_implementation" title="Scale space implementation">Implementation details</a></li>
+<li><a href="/wiki/Pyramid_(image_processing)" title="Pyramid (image processing)">Pyramids</a></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Feature_detection_(computer_vision)_navbox" title="Template:Feature detection (computer vision) navbox"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Feature_detection_(computer_vision)_navbox" title="Template talk:Feature detection (computer vision) navbox"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Feature_detection_(computer_vision)_navbox&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>In <a href="/wiki/Computer_vision" title="Computer vision">computer vision</a> and <a href="/wiki/Image_processing" class="mw-redirect" title="Image processing">image processing</a> <b>feature detection</b> includes methods for computing abstractions of image information and making local decisions at every image point whether there is an <a href="/wiki/Image_feature" class="mw-redirect" title="Image feature">image feature</a> of a given type at that point or not. The resulting features will be subsets of the image domain, often in the form of isolated points, continuous curves or connected regions.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition_of_a_feature"><span class="tocnumber">1</span> <span class="toctext">Definition of a feature</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Types_of_image_features"><span class="tocnumber">2</span> <span class="toctext">Types of image features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Edges"><span class="tocnumber">2.1</span> <span class="toctext">Edges</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Corners_/_interest_points"><span class="tocnumber">2.2</span> <span class="toctext">Corners / interest points</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Blobs_/_regions_of_interest_points"><span class="tocnumber">2.3</span> <span class="toctext">Blobs / regions of interest points</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Ridges"><span class="tocnumber">2.4</span> <span class="toctext">Ridges</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Feature_detectors"><span class="tocnumber">3</span> <span class="toctext">Feature detectors</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Feature_extraction"><span class="tocnumber">4</span> <span class="toctext">Feature extraction</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definition_of_a_feature">Definition of a feature</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=1" title="Edit section: Definition of a feature">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There is no universal or exact definition of what constitutes a feature, and the exact definition often depends on the problem or the type of application. Given that, a feature is defined as an "interesting" part of an <a href="/wiki/Digital_image" title="Digital image">image</a>, and features are used as a starting point for many computer vision algorithms. Since features are used as the starting point and main primitives for subsequent algorithms, the overall algorithm will often only be as good as its feature detector. Consequently, the desirable property for a feature detector is <i><a href="/wiki/Repeatability" title="Repeatability">repeatability</a></i>: whether or not the same feature will be detected in two or more different images of the same scene.
+</p><p>Feature detection is a low-level <a href="/wiki/Image_processing" class="mw-redirect" title="Image processing">image processing</a> operation. That is, it is usually performed as the first operation on an image, and examines every <a href="/wiki/Pixel" title="Pixel">pixel</a> to see if there is a feature present at that pixel. If this is part of a larger algorithm, then the algorithm will typically only examine the image in the region of the features. As a built-in pre-requisite to feature detection, the input image is usually smoothed by a <a href="/wiki/Gaussian_blur" title="Gaussian blur">Gaussian</a> kernel in a <a href="/wiki/Scale_space" title="Scale space">scale-space representation</a> and one or several feature images are computed, often expressed in terms of local <a href="/wiki/Image_Derivatives" class="mw-redirect" title="Image Derivatives">image derivatives</a> operations.
+</p><p>Occasionally, when feature detection is <a href="/wiki/Computationally_expensive" class="mw-redirect" title="Computationally expensive">computationally expensive</a> and there are time constraints, a higher level algorithm may be used to guide the feature detection stage, so that only certain parts of the image are searched for features.
+</p><p>There are many computer vision algorithms that use feature detection as the initial step, so as a result, a very large number of feature detectors have been developed. These vary widely in the kinds of feature detected, the computational complexity and the repeatability.
+</p>
+<h2><span class="mw-headline" id="Types_of_image_features">Types of image features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=2" title="Edit section: Types of image features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Edges">Edges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=3" title="Edit section: Edges">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Edges are points where there is a boundary (or an edge) between two image regions. In general, an edge can be of almost arbitrary shape, and may include junctions. In practice, edges are usually defined as sets of points in the image which have a strong <a href="/wiki/Gradient" title="Gradient">gradient</a> magnitude. Furthermore, some common algorithms will then chain high gradient points together to form a more complete description of an edge. These algorithms usually place some constraints on the properties of an edge, such as shape, smoothness, and gradient value.
+</p><p>Locally, edges have a one-dimensional structure.
+</p>
+<h3><span id="Corners_.2F_interest_points"></span><span class="mw-headline" id="Corners_/_interest_points">Corners / interest points</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=4" title="Edit section: Corners / interest points">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The terms corners and interest points are used somewhat interchangeably and refer to point-like features in an image, which have a local two dimensional structure. The name "Corner" arose since early algorithms first performed <a href="/wiki/Edge_detection" title="Edge detection">edge detection</a>, and then analysed the edges to find rapid changes in direction (corners). These algorithms were then developed so that explicit edge detection was no longer required, for instance by looking for high levels of <a href="/wiki/Curvature" title="Curvature">curvature</a> in the image gradient. It was then noticed that the so-called corners were also being detected on parts of the image which were not corners in the traditional sense (for instance a small bright spot on a dark background may be detected). These points are frequently known as interest points, but the term "corner" is used by tradition.
+</p>
+<h3><span id="Blobs_.2F_regions_of_interest_points"></span><span class="mw-headline" id="Blobs_/_regions_of_interest_points">Blobs / regions of interest points</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=5" title="Edit section: Blobs / regions of interest points">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Blobs provide a complementary description of image structures in terms of regions, as opposed to corners that are more point-like. Nevertheless, blob descriptors may often contain a preferred point (a local maximum of an operator response or a center of gravity) which means that many blob detectors may also be regarded as interest point operators. Blob detectors can detect areas in an image which are too smooth to be detected by a corner detector.
+</p><p>Consider shrinking an image and then performing corner detection. The detector will respond to points which are sharp in the shrunk image, but may be smooth in the original image. It is at this point that the difference between a corner detector and a blob detector becomes somewhat vague. To a large extent, this distinction can be remedied by including an appropriate notion of scale. Nevertheless, due to their response properties to different types of image structures at different scales, the LoG and DoH  <a href="/wiki/Blob_detection" title="Blob detection">blob detectors</a> are also mentioned in the article on <a href="/wiki/Corner_detection" title="Corner detection">corner detection</a>.
+</p>
+<h3><span class="mw-headline" id="Ridges">Ridges</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=6" title="Edit section: Ridges">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>For elongated objects, the notion of <i>ridges</i> is a natural tool. A ridge descriptor computed from a grey-level image can be seen as a generalization of a <a href="/wiki/Medial_axis" title="Medial axis">medial axis</a>. From a practical viewpoint, a ridge can be thought of as a one-dimensional curve that represents an axis of symmetry, and in addition has an attribute of local ridge width associated with each ridge point. Unfortunately, however, it is algorithmically harder to extract ridge features from general classes of grey-level images than edge-, corner- or blob features. Nevertheless, ridge descriptors are frequently used for road extraction in aerial images and for extracting blood vessels in medical images—see <a href="/wiki/Ridge_detection" title="Ridge detection">ridge detection</a>.
+</p>
+<h2><span class="mw-headline" id="Feature_detectors">Feature detectors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=7" title="Edit section: Feature detectors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<caption>Common feature detectors and their classification:
+</caption>
+<tbody><tr>
+<th>Feature detector</th>
+<th><a href="/wiki/Edge_detection" title="Edge detection">Edge</a></th>
+<th><a href="/wiki/Corner_detection" title="Corner detection">Corner</a></th>
+<th><a href="/wiki/Blob_detection" title="Blob detection">Blob</a>
+</th></tr>
+<tr>
+<td><a href="/wiki/Canny_edge_detector" title="Canny edge detector">Canny</a>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+
+<tr>
+<td><a href="/wiki/Sobel_operator" title="Sobel operator">Sobel</a>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+
+<tr>
+<td><a href="/w/index.php?title=Kayyali_operator&amp;action=edit&amp;redlink=1" class="new" title="Kayyali operator (page does not exist)">Kayyali</a>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+
+<tr>
+<td><a href="/wiki/Corner_detection#The_Harris_&amp;_Stephens_/_Plessey_/_Shi–Tomasi_corner_detection_algorithms" title="Corner detection">Harris &amp; Stephens / Plessey / Shi–Tomasi</a>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+<tr>
+<td><a href="/wiki/Corner_detection#The_SUSAN_corner_detector" title="Corner detection">SUSAN</a>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+<tr>
+<td><a href="/wiki/Corner_detection#The_Shi_and_Tomasi_corner_detection_algorithm" title="Corner detection">Shi &amp; Tomasi</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+<tr>
+<td><a href="/wiki/Corner_detection#The_level_curve_curvature_approach" title="Corner detection">Level curve curvature</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td></tr>
+<tr>
+<td><a href="/wiki/Features_from_accelerated_segment_test" title="Features from accelerated segment test">FAST</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/Blob_detection#The_Laplacian_of_Gaussian" title="Blob detection">Laplacian of Gaussian</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/Difference_of_Gaussians" title="Difference of Gaussians">Difference of Gaussians</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/Blob_detection#The_determinant_of_the_Hessian" title="Blob detection">Determinant of Hessian</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/MSER" class="mw-redirect" title="MSER">MSER</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/Principal_Curvature-Based_Region_Detector" class="mw-redirect" title="Principal Curvature-Based Region Detector">PCBR</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr>
+<tr>
+<td><a href="/wiki/Blob_detection#Grey-level_blobs,_grey-level_blob_trees_and_scale-space_blobs" title="Blob detection">Grey-level blobs</a>
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td></tr></tbody></table>
+<h2><span class="mw-headline" id="Feature_extraction">Feature extraction</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=8" title="Edit section: Feature extraction">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Once features have been detected, a local image patch around the feature can be extracted. This extraction may involve quite considerable amounts of image processing. The result is known as a feature descriptor or feature vector. Among the approaches that are used to feature description, one can mention <a href="/wiki/N-jet" title="N-jet"><i>N</i>-jets</a> and local histograms (see <a href="/wiki/Scale-invariant_feature_transform" title="Scale-invariant feature transform">scale-invariant feature transform</a> for one example of a local histogram descriptor). In addition to such attribute information, the feature detection step by itself may also provide complementary attributes, such as the edge orientation and gradient magnitude in edge detection and the polarity and the strength of the blob in blob detection.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=9" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Automatic_image_annotation" title="Automatic image annotation">Automatic image annotation</a></li>
+<li><a href="/wiki/Feature_extraction" title="Feature extraction">Feature extraction</a></li>
+<li><a href="/wiki/Feature_learning" title="Feature learning">Feature learning</a></li>
+<li><a href="/wiki/Feature_selection" title="Feature selection">Feature selection</a></li>
+<li><a href="/wiki/Foreground_detection" title="Foreground detection">Foreground detection</a></li>
+<li><a href="/wiki/Vectorization_(image_tracing)" class="mw-redirect" title="Vectorization (image tracing)">Vectorization (image tracing)</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit&amp;section=10" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">T. Lindeberg (2008–2009). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/~tony/abstracts/Lin08-EncCompSci.html"><i>Scale-space</i></a>. <i>Encyclopedia of Computer Science and Engineering (Benjamin Wah, Ed), John Wiley and Sons</i>. <b>IV</b>. pp.&#160;2495–2504. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1002%2F9780470050118.ecse609">10.1002/9780470050118.ecse609</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0470050118" title="Special:BookSources/978-0470050118"><bdi>978-0470050118</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Scale-space&amp;rft.pages=2495-2504&amp;rft.date=2008%2F2009&amp;rft_id=info%3Adoi%2F10.1002%2F9780470050118.ecse609&amp;rft.isbn=978-0470050118&amp;rft.au=T.+Lindeberg&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2F~tony%2Fabstracts%2FLin08-EncCompSci.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style> (summary and review of a number of feature detectors formulated based on a scale-space operations)</li>
+<li><cite class="citation journal"><a href="/wiki/John_Canny" title="John Canny">Canny, J.</a> (1986). "A Computational Approach To Edge Detection". <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>. <b>8</b> (6): 679–714. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FTPAMI.1986.4767851">10.1109/TPAMI.1986.4767851</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=IEEE+Transactions+on+Pattern+Analysis+and+Machine+Intelligence&amp;rft.atitle=A+Computational+Approach+To+Edge+Detection&amp;rft.volume=8&amp;rft.issue=6&amp;rft.pages=679-714&amp;rft.date=1986&amp;rft_id=info%3Adoi%2F10.1109%2FTPAMI.1986.4767851&amp;rft.aulast=Canny&amp;rft.aufirst=J.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>. (<a href="/wiki/Canny_edge_detector" title="Canny edge detector">Canny edge detection</a>)</li>
+<li><cite class="citation conference">C. Harris; M. Stephens (1988). <a rel="nofollow" class="external text" href="http://www.bmva.org/bmvc/1988/avc-88-023.pdf">"A combined corner and edge detector"</a> <span class="cs1-format">(PDF)</span>. <i>Proceedings of the 4th Alvey Vision Conference</i>. pp.&#160;147–151.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=A+combined+corner+and+edge+detector&amp;rft.btitle=Proceedings+of+the+4th+Alvey+Vision+Conference&amp;rft.pages=147-151&amp;rft.date=1988&amp;rft.au=C.+Harris&amp;rft.au=M.+Stephens&amp;rft_id=http%3A%2F%2Fwww.bmva.org%2Fbmvc%2F1988%2Favc-88-023.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(Harris/Plessey corner detection)</li>
+<li><cite class="citation journal">S. M. Smith; J. M. Brady (May 1997). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/smith95susan.html">"SUSAN - a new approach to low level image processing"</a>. <i>International Journal of Computer Vision</i>. <b>23</b> (1): 45–78. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1007963824710">10.1023/A:1007963824710</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Computer+Vision&amp;rft.atitle=SUSAN+-+a+new+approach+to+low+level+image+processing&amp;rft.volume=23&amp;rft.issue=1&amp;rft.pages=45-78&amp;rft.date=1997-05&amp;rft_id=info%3Adoi%2F10.1023%2FA%3A1007963824710&amp;rft.au=S.+M.+Smith&amp;rft.au=J.+M.+Brady&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fsmith95susan.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(The SUSAN corner detector)</li>
+<li><cite class="citation conference">J. Shi; C. Tomasi (June 1994). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/shi94good.html">"Good Features to Track,"</a>. <i>9th IEEE Conference on Computer Vision and Pattern Recognition</i>. Springer.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Good+Features+to+Track%2C&amp;rft.btitle=9th+IEEE+Conference+on+Computer+Vision+and+Pattern+Recognition&amp;rft.pub=Springer&amp;rft.date=1994-06&amp;rft.au=J.+Shi&amp;rft.au=C.+Tomasi&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2Fshi94good.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(The Shi and Tomasi corner detector)</li>
+<li><cite class="citation conference">E. Rosten; T. Drummond (2006). "Machine learning for high-speed corner detection". <i>European Conference on Computer Vision</i>. Springer. pp.&#160;430–443. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.60.3991">10.1.1.60.3991</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F11744023_34">10.1007/11744023_34</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Machine+learning+for+high-speed+corner+detection&amp;rft.btitle=European+Conference+on+Computer+Vision&amp;rft.pages=430-443&amp;rft.pub=Springer&amp;rft.date=2006&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.60.3991&amp;rft_id=info%3Adoi%2F10.1007%2F11744023_34&amp;rft.au=E.+Rosten&amp;rft.au=T.+Drummond&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(The FAST corner detector)</li>
+<li><cite class="citation journal">T. Lindeberg (1998). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/cvap/abstracts/cvap198.html">"Feature detection with automatic scale selection"</a> <span class="cs1-format">(abstract)</span>. <i>International Journal of Computer Vision</i>. <b>30</b> (2): 77–116. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1008045108935">10.1023/A:1008045108935</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Computer+Vision&amp;rft.atitle=Feature+detection+with+automatic+scale+selection&amp;rft.volume=30&amp;rft.issue=2&amp;rft.pages=77-116&amp;rft.date=1998&amp;rft_id=info%3Adoi%2F10.1023%2FA%3A1008045108935&amp;rft.au=T.+Lindeberg&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2Fcvap%2Fabstracts%2Fcvap198.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(Laplacian and determinant of Hessian blob detection as well as automatic scale selection)</li>
+<li><cite class="citation journal">D. Lowe (2004). <a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/654168.html">"Distinctive Image Features from Scale-Invariant Keypoints"</a>. <i>International Journal of Computer Vision</i>. <b>60</b> (2): 91. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.73.2924">10.1.1.73.2924</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FB%3AVISI.0000029664.99615.94">10.1023/B:VISI.0000029664.99615.94</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Computer+Vision&amp;rft.atitle=Distinctive+Image+Features+from+Scale-Invariant+Keypoints&amp;rft.volume=60&amp;rft.issue=2&amp;rft.pages=91&amp;rft.date=2004&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.73.2924&amp;rft_id=info%3Adoi%2F10.1023%2FB%3AVISI.0000029664.99615.94&amp;rft.au=D.+Lowe&amp;rft_id=http%3A%2F%2Fciteseer.ist.psu.edu%2F654168.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(DOG blob detection with automatic scale selection)</li>
+<li><cite class="citation conference">J. Matas; O. Chum; M. Urban; T. Pajdla (2002). <a rel="nofollow" class="external text" href="http://cmp.felk.cvut.cz/~matas/papers/matas-bmvc02.pdf">"Robust wide baseline stereo from maximally stable extremum regions"</a> <span class="cs1-format">(PDF)</span>. <i>British Machine Vision Conference</i>. pp.&#160;384–393.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.atitle=Robust+wide+baseline+stereo+from+maximally+stable+extremum+regions&amp;rft.btitle=British+Machine+Vision+Conference&amp;rft.pages=384-393&amp;rft.date=2002&amp;rft.au=J.+Matas&amp;rft.au=O.+Chum&amp;rft.au=M.+Urban&amp;rft.au=T.+Pajdla&amp;rft_id=http%3A%2F%2Fcmp.felk.cvut.cz%2F~matas%2Fpapers%2Fmatas-bmvc02.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(The MSER blob detector)</li>
+<li><cite class="citation journal">T. Lindeberg (1993). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/~tony/abstracts/Lin92-IJCV.html">"Detecting Salient Blob-Like Image Structures and Their Scales with a Scale-Space Primal Sketch: A Method for Focus-of-Attention"</a> <span class="cs1-format">(abstract)</span>. <i>International Journal of Computer Vision</i>. <b>11</b> (3): 283–318. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2FBF01469346">10.1007/BF01469346</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Computer+Vision&amp;rft.atitle=Detecting+Salient+Blob-Like+Image+Structures+and+Their+Scales+with+a+Scale-Space+Primal+Sketch%3A+A+Method+for+Focus-of-Attention&amp;rft.volume=11&amp;rft.issue=3&amp;rft.pages=283-318&amp;rft.date=1993&amp;rft_id=info%3Adoi%2F10.1007%2FBF01469346&amp;rft.au=T.+Lindeberg&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2F~tony%2Fabstracts%2FLin92-IJCV.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(Grey-level blob detection and scale-space blobs)</li>
+<li>R. Haralick, "<a rel="nofollow" class="external text" href="http://www.cs.unc.edu/Research/Image/MIDAG/pubs/CScourses/254-Spring2002/Haralick-Ridges-CVGIP.PDF">Ridges and Valleys on Digital Images</a>," Computer Vision, Graphics, and Image Processing vol. 22, no. 10, pp.&#160;28–38, Apr. 1983. (Ridge detection using facet model)</li>
+<li>J. L. Crowley and A. C. Parker, "<a rel="nofollow" class="external text" href="http://www.dtic.mil/get-tr-doc/pdf?AD=ADA133299">A Representation for Shape Based on Peaks and Ridges in the Difference of Low Pass Transform</a>", IEEE Transactions on PAMI, PAMI 6 (2), pp.&#160;156–170, March 1984. (Ridge detection based on DOGs)</li>
+<li>D. Eberly, R. Gardner, B. Morse, S. Pizer, C. Scharlach, <a rel="nofollow" class="external text" href="http://www.cs.unc.edu/techreports/93-055.ps">Ridges for image analysis</a>, Journal of Mathematical Imaging and Vision, v.&#160;4 n.&#160;4, pp.&#160;353–373, Dec. 1994. (Fixed scale ridge detection)</li>
+<li><cite class="citation journal">T. Lindeberg (1998). <a rel="nofollow" class="external text" href="http://www.nada.kth.se/cvap/abstracts/cvap191.html">"Edge detection and ridge detection with automatic scale selection"</a> <span class="cs1-format">(abstract)</span>. <i>International Journal of Computer Vision</i>. <b>30</b> (2): 117–154. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1023%2FA%3A1008097225773">10.1023/A:1008097225773</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=International+Journal+of+Computer+Vision&amp;rft.atitle=Edge+detection+and+ridge+detection+with+automatic+scale+selection&amp;rft.volume=30&amp;rft.issue=2&amp;rft.pages=117-154&amp;rft.date=1998&amp;rft_id=info%3Adoi%2F10.1023%2FA%3A1008097225773&amp;rft.au=T.+Lindeberg&amp;rft_id=http%3A%2F%2Fwww.nada.kth.se%2Fcvap%2Fabstracts%2Fcvap191.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFeature+detection+%28computer+vision%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>(Ridge detection with automatic scale selection)</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1323
+Cached time: 20200328002602
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.284 seconds
+Real time usage: 0.392 seconds
+Preprocessor visited node count: 1014/1000000
+Post‐expand include size: 65333/2097152 bytes
+Template argument size: 7025/2097152 bytes
+Highest expansion depth: 22/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 22297/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.161/10.000 seconds
+Lua memory usage: 4.92 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  334.182      1 -total
+ 44.08%  147.309      3 Template:Ambox
+ 40.07%  133.913      1 Template:Multiple_issues
+ 28.14%   94.046      1 Template:Cite_book
+ 14.35%   47.958      1 Template:No_footnotes
+ 12.48%   41.720      6 Template:Cite_journal
+ 10.52%   35.148      1 Template:Essay
+ 10.09%   33.717      4 Template:Cite_conference
+  8.29%   27.713      1 Template:Essay-like
+  6.55%   21.887      1 Template:FeatureDetectionCompVisNavbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1284224-0!canonical and timestamp 20200328002602 and revision id 938664273
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Feature_detection_(computer_vision)&amp;oldid=938664273">https://en.wikipedia.org/w/index.php?title=Feature_detection_(computer_vision)&amp;oldid=938664273</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Feature_detection_(computer_vision)" title="Category:Feature detection (computer vision)">Feature detection (computer vision)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_April_2013" title="Category:Articles lacking in-text citations from April 2013">Articles lacking in-text citations from April 2013</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_style_issues_from_April_2013" title="Category:Wikipedia articles with style issues from April 2013">Wikipedia articles with style issues from April 2013</a></li><li><a href="/wiki/Category:All_articles_with_style_issues" title="Category:All articles with style issues">All articles with style issues</a></li><li><a href="/wiki/Category:Articles_with_multiple_maintenance_issues" title="Category:Articles with multiple maintenance issues">Articles with multiple maintenance issues</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Feature+detection+%28computer+vision%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Feature+detection+%28computer+vision%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Feature_detection_(computer_vision)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Feature_detection_(computer_vision)" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Feature_detection_(computer_vision)">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Feature_detection_(computer_vision)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Feature_detection_(computer_vision)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;oldid=938664273" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1005631" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Feature_detection_%28computer_vision%29&amp;id=938664273&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Feature+detection+%28computer+vision%29">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Feature+detection+%28computer+vision%29&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Feature_detection_(computer_vision)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Detecci%C3%B3_de_caracter%C3%ADstiques" title="Detecció de característiques – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Detecci%C3%B3n_de_caracter%C3%ADsticas_(visi%C3%B3n_por_computadora)" title="Detección de características (visión por computadora) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/D%C3%A9tection_de_zones_d%27int%C3%A9r%C3%AAt" title="Détection de zones d&#039;intérêt – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Rilevamento_di_caratteristiche" title="Rilevamento di caratteristiche – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B8%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F_%D0%BE%D0%B7%D0%BD%D0%B0%D0%BA_(%D0%BA%D0%BE%D0%BC%D0%BF%27%D1%8E%D1%82%D0%B5%D1%80%D0%BD%D0%B8%D0%B9_%D0%B7%D1%96%D1%80)" title="Виявлення ознак (комп&#039;ютерний зір) – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%89%B9%E5%BE%81%E6%A3%80%E6%B5%8B" title="特征检测 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1005631#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 1 February 2020, at 17:42<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Feature_detection_(computer_vision)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.284","walltime":"0.392","ppvisitednodes":{"value":1014,"limit":1000000},"postexpandincludesize":{"value":65333,"limit":2097152},"templateargumentsize":{"value":7025,"limit":2097152},"expansiondepth":{"value":22,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":22297,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  334.182      1 -total"," 44.08%  147.309      3 Template:Ambox"," 40.07%  133.913      1 Template:Multiple_issues"," 28.14%   94.046      1 Template:Cite_book"," 14.35%   47.958      1 Template:No_footnotes"," 12.48%   41.720      6 Template:Cite_journal"," 10.52%   35.148      1 Template:Essay"," 10.09%   33.717      4 Template:Cite_conference","  8.29%   27.713      1 Template:Essay-like","  6.55%   21.887      1 Template:FeatureDetectionCompVisNavbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.161","limit":"10.000"},"limitreport-memusage":{"value":5158742,"limit":52428800}},"cachereport":{"origin":"mw1323","timestamp":"20200328002602","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Feature detection (computer vision)","url":"https:\/\/en.wikipedia.org\/wiki\/Feature_detection_(computer_vision)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1005631","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1005631","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-12-16T05:54:12Z","dateModified":"2020-02-01T17:42:44Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/8\/8d\/Writing_Desk_with_Harris_Detector.png","headline":"methods for finding parts of an image relevant to a computational task"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":95,"wgHostname":"mw1274"});});</script></body></html>

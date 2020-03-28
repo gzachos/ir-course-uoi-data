@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Escape sequences in C - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XndTjwpAMMMAA6YuXdgAAAAO","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Escape_sequences_in_C","wgTitle":"Escape sequences in C","wgCurRevisionId":940129640,"wgRevisionId":940129640,"wgArticleId":32561813,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles lacking in-text citations from September 2013","All articles lacking in-text citations","Articles with short description","Use American English from March 2019","All Wikipedia articles written in American English","Use dmy dates from May 2019","C (programming language)",
+"Control characters"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Escape_sequences_in_C","wgRelevantArticleId":32561813,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q17077094","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready",
+"user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","jquery.tablesorter.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.tablesorter.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Escape_sequences_in_C"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Escape_sequences_in_C rootpage-Escape_sequences_in_C skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Escape sequences in C</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-More_footnotes plainlinks metadata ambox ambox-style ambox-More_footnotes" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/40px-Text_document_with_red_question_mark.svg.png" decoding="async" width="40" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/60px-Text_document_with_red_question_mark.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Text_document_with_red_question_mark.svg/80px-Text_document_with_red_question_mark.svg.png 2x" data-file-width="48" data-file-height="48" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article includes a <a href="/wiki/Wikipedia:Citing_sources" title="Wikipedia:Citing sources">list of references</a>, but <b>its sources remain unclear</b> because it has <b>insufficient <a href="/wiki/Wikipedia:Citing_sources#Inline_citations" title="Wikipedia:Citing sources">inline citations</a></b>.<span class="hide-when-compact"> Please help to <a href="/wiki/Wikipedia:WikiProject_Fact_and_Reference_Check" class="mw-redirect" title="Wikipedia:WikiProject Fact and Reference Check">improve</a> this article by <a href="/wiki/Wikipedia:When_to_cite" title="Wikipedia:When to cite">introducing</a> more precise citations.</span>  <small class="date-container"><i>(<span class="date">September 2013</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">escape characters and related in the C programming language</div>
+<p>
+
+<b>Escape sequences</b> are used in the programming languages <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a>, and their design was copied in many other languages such as <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a> and <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>. An escape sequence is a sequence of characters that does not represent itself when used inside a character or string <a href="/wiki/Literal_(computer_programming)" title="Literal (computer programming)">literal</a>, but is translated into another character or a sequence of characters that may be difficult or impossible to represent directly.
+</p><p>In C, all escape sequences consist of two or more characters, the first of which is the backslash, <style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">\</span> (called the "<a href="/wiki/Escape_character" title="Escape character">Escape character</a>"); the remaining characters determine the interpretation of the escape sequence. For example, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\n</span> is an escape sequence that denotes a <a href="/wiki/Newline" title="Newline">newline</a> character.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Motivation"><span class="tocnumber">1</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Table_of_escape_sequences"><span class="tocnumber">2</span> <span class="toctext">Table of escape sequences</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Notes"><span class="tocnumber">2.1</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Non-standard_escape_sequences"><span class="tocnumber">2.2</span> <span class="toctext">Non-standard escape sequences</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Universal_character_names"><span class="tocnumber">2.3</span> <span class="toctext">Universal character names</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Further_reading"><span class="tocnumber">5</span> <span class="toctext">Further reading</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=1" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Suppose we want to print out <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">Hello,</span> on one line, followed by <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">world!</span> on the next line. One could attempt to represent the string to be printed as a single literal as follows:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello,</span>
+<span class="n">world</span><span class="o">!</span><span class="s">&quot;);</span>
+<span class="p">}</span>
+</pre></div>
+<p>This is not valid in C, since a string literal may not span multiple logical source lines. This can be worked around by printing the newline character using its numerical value (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x0A</span> in <a href="/wiki/ASCII" title="ASCII">ASCII</a>),
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello,%cworld!&quot;</span><span class="p">,</span> <span class="mh">0x0A</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>This instructs the program to print <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">Hello,</span>, followed by the byte whose numerical value is <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x0A</span>, followed by <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">world!</span>. While this will indeed work when the machine uses the ASCII encoding, it will not work on systems that use other encodings, that have a different numerical value for the newline character. It is also not a good solution because it still does not allow to represent a newline character inside a literal, and instead takes advantage of the semantics of <a href="/wiki/Printf" class="mw-redirect" title="Printf">printf</a>. In order to solve these problems and ensure maximum portability between systems, C interprets <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\n</span> inside a literal as a newline character, whatever that may be on the target system:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello,</span><span class="se">\n</span><span class="s">world!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>In this code, the <a href="/wiki/Escape_sequence" title="Escape sequence">escape sequence</a> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\n</span> does not stand for a backslash followed by the letter <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">n</span>, because the backslash causes an "escape" from the normal way characters are interpreted by the compiler. After seeing the backslash, the compiler expects another character to complete the escape sequence, and then translates the escape sequence into the bytes it is intended to represent. Thus, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">"Hello,\nworld!"</span> represents a string with an embedded newline, regardless of whether it is used inside <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">printf</span> or anywhere else.
+</p><p>This raises the issue of how to represent an actual backslash inside a literal. This is done by using the escape sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\\</span>, as seen in the next section.
+</p><p>Some languages don't have escape sequences, for example <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a>. Instead a command including a newline would be used (writeln includes a newline, write excludes it).
+</p>
+<div class="mw-highlight mw-highlight-lang-pascal mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">writeln</span><span class="p">(</span><span class="s">&#39;Hello&#39;</span><span class="p">)</span><span class="o">;</span>
+<span class="nb">write</span><span class="p">(</span><span class="s">&#39;world!&#39;</span><span class="p">)</span><span class="o">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Table_of_escape_sequences">Table of escape sequences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=2" title="Edit section: Table of escape sequences">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following escape sequences are defined in standard C. This table also shows the values they map to in ASCII. However, these escape sequences can be used on any system with a C compiler, and may map to different values if the system does not use a character encoding based on ASCII.
+</p>
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Escape sequence</th>
+<th>Hex value in ASCII</th>
+<th>Character represented
+</th></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\a</span></td>
+<td>07</td>
+<td><a href="/wiki/Bell_character" title="Bell character">Alert (Beep, Bell)</a> (added in C89)<sup id="cite_ref-Rationale_2003_C_1-0" class="reference"><a href="#cite_note-Rationale_2003_C-1">&#91;1&#93;</a></sup>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\b</span></td>
+<td>08</td>
+<td><a href="/wiki/Backspace" title="Backspace">Backspace</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\e</span><sup class="reference plainlinks nourlexpansion" id="ref_Note1"><a href="#endnote_Note1">note 1</a></sup></td>
+<td>1B</td>
+<td><a href="/wiki/Escape_character" title="Escape character">Escape character</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\f</span></td>
+<td>0C</td>
+<td><a href="/wiki/Formfeed" class="mw-redirect" title="Formfeed">Formfeed</a> <a href="/wiki/Page_Break" class="mw-redirect" title="Page Break">Page Break</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\n</span></td>
+<td>0A</td>
+<td><a href="/wiki/Newline" title="Newline">Newline</a> (Line Feed); see notes below
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\r</span></td>
+<td>0D</td>
+<td><a href="/wiki/Carriage_Return" class="mw-redirect" title="Carriage Return">Carriage Return</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\t</span></td>
+<td>09</td>
+<td><a href="/wiki/Horizontal_Tab" class="mw-redirect" title="Horizontal Tab">Horizontal Tab</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\v</span></td>
+<td>0B</td>
+<td><a href="/wiki/Vertical_Tab" class="mw-redirect" title="Vertical Tab">Vertical Tab</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\\</span></td>
+<td>5C</td>
+<td><a href="/wiki/Backslash" title="Backslash">Backslash</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\'</span></td>
+<td>27</td>
+<td><a href="/wiki/Apostrophe" title="Apostrophe">Apostrophe</a> or single quotation mark
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\"</span></td>
+<td>22</td>
+<td>Double <a href="/wiki/Quotation_mark" title="Quotation mark">quotation mark</a>
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\?</span></td>
+<td>3F</td>
+<td><a href="/wiki/Question_mark" title="Question mark">Question mark</a> (used to avoid <a href="/wiki/Digraphs_and_trigraphs#C" title="Digraphs and trigraphs">trigraphs</a>)
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\<i>nnn</i></span><sup class="reference plainlinks nourlexpansion" id="ref_Note2"><a href="#endnote_Note2">note 2</a></sup></td>
+<td>any</td>
+<td>The byte whose numerical value is given by <i>nnn</i> interpreted as an <a href="/wiki/Octal" title="Octal">octal</a> number
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\x<i>hh…</i></span></td>
+<td>any</td>
+<td>The byte whose numerical value is given by <i>hh…</i> interpreted as a <a href="/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a> number
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\u<i>hhhh</i></span><sup class="reference plainlinks nourlexpansion" id="ref_Note3"><a href="#endnote_Note3">note 3</a></sup></td>
+<td>none</td>
+<td><a href="/wiki/Unicode" title="Unicode">Unicode</a> <a href="/wiki/Code_point" title="Code point">code point</a> below 10000 hexadecimal
+</td></tr>
+<tr>
+<td><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U<i>hhhhhhhh</i></span><sup class="reference plainlinks nourlexpansion" id="ref_Note4"><a href="#endnote_Note4">note 4</a></sup></td>
+<td>none</td>
+<td>Unicode code point where <i>h</i> is a hexadecimal digit
+</td></tr></tbody></table>
+<dl><dd>Note 1.<span class="citation wikicite" id="endnote_Note1"><b><a href="#ref_Note1">^</a></b></span> Common non-standard code; see the Notes section below.</dd>
+<dd>Note 2.<span class="citation wikicite" id="endnote_Note2"><b><a href="#ref_Note2">^</a></b></span> There may be one, two, or three octal numerals <i>n</i> present; see the Notes section below.</dd>
+<dd>Note 3.<span class="citation wikicite" id="endnote_Note3"><b><a href="#ref_Note3">^</a></b></span> \u takes 4 hexadecimal digits <i>h</i>; see the Notes section below.</dd>
+<dd>Note 4.<span class="citation wikicite" id="endnote_Note4"><b><a href="#ref_Note4">^</a></b></span> \U takes 8 hexadecimal digits <i>h</i>; see the Notes section below.</dd></dl>
+<h3><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=3" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\n</span> produces one byte, despite the fact that the platform may use more than one byte to denote a newline, such as the <a href="/wiki/DOS" title="DOS">DOS</a>/<a href="/wiki/Windows" class="mw-redirect" title="Windows">Windows</a> CR-LF sequence, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x0D 0x0A</span>. The translation from <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x0A</span> to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x0D 0x0A</span> on DOS and Windows occurs when the byte is written out to a file or to the console, and the inverse translation is done when text files are read.
+</p><p>A hex escape sequence must have at least one hex digit following <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\x</span>, with no upper bound; it continues for as many hex digits as there are. Thus, for example, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\xABCDEFG</span> denotes the byte with the numerical value ABCDEF<sub>16</sub>, followed by the letter <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">G</span>, which is not a hex digit. However, if the resulting integer value is too large to fit in a single byte, the actual numerical value assigned is implementation-defined. Most platforms have 8-bit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">char</span> types, which limits a useful hex escape sequence to two hex digits. However, hex escape sequences longer than two hex digits might be useful inside a wide character or wide string literal(prefixed with L):
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">char</span> <span class="n">s1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\x12</span><span class="s">&quot;</span><span class="p">;</span>       <span class="c1">// single char with value 0x12 (18 in decimal)</span>
+<span class="kt">char</span> <span class="n">s1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\x1234</span><span class="s">&quot;</span><span class="p">;</span>     <span class="c1">// single char with implementation-defined value, unless char is long enough</span>
+<span class="kt">wchar_t</span> <span class="n">s2</span><span class="p">[]</span> <span class="o">=</span> <span class="sa">L</span><span class="s">&quot;</span><span class="se">\x1234</span><span class="s">&quot;</span><span class="p">;</span> <span class="c1">// single wchar_t with value 0x1234, provided wchar_t is long enough (16 bits suffices)</span>
+</pre></div>
+<p>An octal escape sequence consists of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\</span> followed by one, two, or three octal digits. The octal escape sequence ends when it either contains three octal digits already, or the next character is not an octal digit. For example, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\11</span> is a single octal escape sequence denoting a byte with numerical value 9 (11 in octal), rather than the escape sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\1</span> followed by the digit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">1</span>. However, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\1111</span> is the octal escape sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\111</span> followed by the digit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">1</span>. In order to denote the byte with numerical value 1, followed by the digit <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">1</span>, one could use <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">"\1""1"</span>, since C automatically concatenates adjacent string literals. Note that some three-digit octal escape sequences may be too large to fit in a single byte; this results in an implementation-defined value for the byte actually produced. The escape sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\0</span> is a commonly used octal escape sequence, which denotes the null character, with value zero.
+</p>
+<h3><span class="mw-headline" id="Non-standard_escape_sequences">Non-standard escape sequences</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=4" title="Edit section: Non-standard escape sequences">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A sequence such as <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\z</span> is not a valid escape sequence according to the C standard as it is not found in the table above. The C standard requires such "invalid" escape sequences to be diagnosed (i.e., the compiler must print an error message). Notwithstanding this fact, some compilers may define additional escape sequences, with implementation-defined semantics.  An example is the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\e</span> escape sequence, which has 1B as the hexadecimal value in ASCII, represents the <a href="/wiki/Escape_character" title="Escape character">escape character</a>, and is supported in <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a>,<sup id="cite_ref-GCC_2-0" class="reference"><a href="#cite_note-GCC-2">&#91;2&#93;</a></sup> <a href="/wiki/Clang" title="Clang">clang</a> and <a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">tcc</a>. It wasn't however added to the C standard repertoire, because it has no meaningful equivalent in some <a href="/wiki/Character_set" class="mw-redirect" title="Character set">character sets</a> (such as <a href="/wiki/EBCDIC" title="EBCDIC">EBCDIC</a>).<sup id="cite_ref-Rationale_2003_C_1-1" class="reference"><a href="#cite_note-Rationale_2003_C-1">&#91;1&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Universal_character_names">Universal character names</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=5" title="Edit section: Universal character names">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>From the <a href="/wiki/C99" title="C99">C99</a> standard, C has also supported escape sequences that denote <a href="/wiki/Unicode" title="Unicode">Unicode</a> code points in string literals. Such escape sequences are called <i>universal character names</i>, and have the form <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\u<i>hhhh</i></span> or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U<i>hhhhhhhh</i></span>, where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced"><i>h</i></span> stands for a hex digit. Unlike the other escape sequences considered, a universal character name may expand into more than one code unit.
+</p><p>The sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\u<i>hhhh</i></span> denotes the <a href="/wiki/Code_point" title="Code point">code point</a> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced"><i>hhhh</i></span>, interpreted as a hexadecimal number. The sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U<i>hhhhhhhh</i></span> denotes the code point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced"><i>hhhhhhhh</i></span>, interpreted as a hexadecimal number. (Therefore, code points located at U+10000 or higher must be denoted with the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U</span> syntax, whereas lower code points may use <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\u</span> or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U</span>.) The code point is converted into a sequence of <a href="/wiki/Code_unit" class="mw-redirect" title="Code unit">code units</a> in the encoding of the destination type on the target system. For example, consider
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">char</span> <span class="n">s1</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\xC0</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">s2</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\u00C1</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="kt">wchar_t</span> <span class="n">s3</span><span class="p">[]</span> <span class="o">=</span> <span class="sa">L</span><span class="s">&quot;</span><span class="se">\xC0</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="kt">wchar_t</span> <span class="n">s4</span><span class="p">[]</span> <span class="o">=</span> <span class="sa">L</span><span class="s">&quot;</span><span class="se">\u00C0</span><span class="s">&quot;</span><span class="p">;</span>
+</pre></div>
+<p>The string <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s1</span> will contain a single byte (not counting the terminating null) whose numerical value, the actual value stored in memory, is in fact <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0xC0</span>. The string <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s2</span> will contain the character "Á", U+00C1 <style data-mw-deduplicate="TemplateStyles:r920966791">.mw-parser-output span.smallcaps{font-variant:small-caps}.mw-parser-output span.smallcaps-smaller{font-size:85%}</style><span class="smallcaps smallcaps-smaller">LATIN CAPITAL LETTER A WITH ACUTE</span>. On a system that uses the <a href="/wiki/UTF-8" title="UTF-8">UTF-8</a> encoding, the string <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s2</span> will contain <i>two</i> bytes, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0xC3 0xA1</span>. The string <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s3</span> contains a single <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span>, again with numerical value <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0xC0</span>. The string <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s4</span> contains the character "À" encoded into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span>, if the <a href="/wiki/UTF-16" title="UTF-16">UTF-16</a> encoding is used, then <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">s4</span> will also contain only a single <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span>, 16 bits long, with numerical value <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">0x00C0</span>. A universal character name such as <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U0001F603</span> may be represented by a single <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">wchar_t</span> if the <a href="/wiki/UTF-32" title="UTF-32">UTF-32</a> encoding is used, or two if UTF-16 is used.
+</p><p>Importantly, the universal character name <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\u00C0</span> always denotes the character "À", regardless of what kind of string literal it is used in, or the encoding in use. Again, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">\U0001F603</span> always denotes the character at code point 1F603<sub>16</sub>, regardless of context. On the other hand, octal and hex escape sequences always denote certain sequences of numerical values, regardless of encoding. Therefore, universal character names are complementary to octal and hex escape sequences; while octal and hex escape sequences represent "physical" code units, universal character names represent <a href="/wiki/Code_point" title="Code point">code points</a>, which may be thought of as "logical" characters.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=6" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Escape_sequence" title="Escape sequence">Escape sequence</a></li>
+<li><a href="/wiki/Digraph_(computing)" class="mw-redirect" title="Digraph (computing)">Digraph</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Rationale_2003_C-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Rationale_2003_C_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Rationale_2003_C_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">"Rationale for International Standard - Programming Languages - C"</a> <span class="cs1-format">(PDF)</span>. 5.10. April 2003. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20160606072228/http://www.open-std.org/jtc1/sc22/wg14/www/C99RationaleV5.10.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 2016-06-06<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-10-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Rationale+for+International+Standard+-+Programming+Languages+-+C&amp;rft.series=5.10&amp;rft.date=2003-04&amp;rft_id=http%3A%2F%2Fwww.open-std.org%2Fjtc1%2Fsc22%2Fwg14%2Fwww%2FC99RationaleV5.10.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEscape+sequences+in+C" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-GCC-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-GCC_2-0">^</a></b></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc-4.8.2/gcc/Character-Escapes.html#Character-Escapes">"6.35 The Character &lt;ESC&gt; in Constants"</a>. <i>GCC 4.8.2 Manual</i>. <a rel="nofollow" class="external text" href="http://archive.is/oAdXk">Archived</a> from the original on 2019-05-12<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-03-08</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=6.35+The+Character+%3CESC%3E+in+Constants&amp;rft.btitle=GCC+4.8.2+Manual&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc-4.8.2%2Fgcc%2FCharacter-Escapes.html%23Character-Escapes&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEscape+sequences+in+C" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit&amp;section=8" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>ISO/IEC 9899:1999, <i>Programming languages — C</i></li>
+<li><cite class="citation book"><a href="/wiki/Brian_Kernighan" title="Brian Kernighan">Kernighan, Brian W.</a>; <a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Ritchie, Dennis M.</a> (2003) [1988]. <a href="/wiki/The_C_Programming_Language" title="The C Programming Language"><i>The C Programming Language</i></a> (2 ed.). <a href="/wiki/Prentice_Hall" title="Prentice Hall">Prentice Hall</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-13308621-8" title="Special:BookSources/978-0-13308621-8"><bdi>978-0-13308621-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+C+Programming+Language&amp;rft.edition=2&amp;rft.pub=Prentice+Hall&amp;rft.date=2003&amp;rft.isbn=978-0-13308621-8&amp;rft.aulast=Kernighan&amp;rft.aufirst=Brian+W.&amp;rft.au=Ritchie%2C+Dennis+M.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEscape+sequences+in+C" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/Robert_Lafore" title="Robert Lafore">Lafore, Robert</a> (2001). <i>Object-Oriented Programming in Turbo C++</i> (1 ed.). Galgotia Publications. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-8-18562322-1" title="Special:BookSources/978-8-18562322-1"><bdi>978-8-18562322-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Object-Oriented+Programming+in+Turbo+C%2B%2B&amp;rft.edition=1&amp;rft.pub=Galgotia+Publications&amp;rft.date=2001&amp;rft.isbn=978-8-18562322-1&amp;rft.aulast=Lafore&amp;rft.aufirst=Robert&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEscape+sequences+in+C" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1322
+Cached time: 20200322055101
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.360 seconds
+Real time usage: 1.684 seconds
+Preprocessor visited node count: 3015/1000000
+Post‐expand include size: 30235/2097152 bytes
+Template argument size: 4865/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 28249/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.103/10.000 seconds
+Lua memory usage: 2.95 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1629.150      1 -total
+  6.31%  102.724      1 Template:Reflist
+  5.88%   95.781      1 Template:More_footnotes
+  4.95%   80.672      1 Template:Cite_web
+  3.80%   61.986     77 Template:Mono
+  3.56%   57.934      1 Template:Ambox
+  3.18%   51.748     78 Template:Ifsubst
+  1.47%   23.899      1 Template:Short_description
+  1.19%   19.453      1 Template:Use_American_English
+  1.13%   18.383      2 Template:DMCA
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:32561813-0!canonical and timestamp 20200322055059 and revision id 940129640
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Escape_sequences_in_C&amp;oldid=940129640">https://en.wikipedia.org/w/index.php?title=Escape_sequences_in_C&amp;oldid=940129640</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:Control_characters" title="Category:Control characters">Control characters</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_lacking_in-text_citations_from_September_2013" title="Category:Articles lacking in-text citations from September 2013">Articles lacking in-text citations from September 2013</a></li><li><a href="/wiki/Category:All_articles_lacking_in-text_citations" title="Category:All articles lacking in-text citations">All articles lacking in-text citations</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Use_American_English_from_March_2019" title="Category:Use American English from March 2019">Use American English from March 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">All Wikipedia articles written in American English</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_May_2019" title="Category:Use dmy dates from May 2019">Use dmy dates from May 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Escape+sequences+in+C" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Escape+sequences+in+C" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Escape_sequences_in_C" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Escape_sequences_in_C" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Escape_sequences_in_C">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Escape_sequences_in_C" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Escape_sequences_in_C" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Escape_sequences_in_C&amp;oldid=940129640" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Escape_sequences_in_C&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q17077094" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Escape_sequences_in_C&amp;id=940129640&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Escape+sequences+in+C">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Escape+sequences+in+C&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Escape_sequences_in_C&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q17077094#sitelinks-wikipedia" title="Add interlanguage links" class="wbc-editpage">Add links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 10 February 2020, at 18:20<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Escape_sequences_in_C&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.360","walltime":"1.684","ppvisitednodes":{"value":3015,"limit":1000000},"postexpandincludesize":{"value":30235,"limit":2097152},"templateargumentsize":{"value":4865,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":28249,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1629.150      1 -total","  6.31%  102.724      1 Template:Reflist","  5.88%   95.781      1 Template:More_footnotes","  4.95%   80.672      1 Template:Cite_web","  3.80%   61.986     77 Template:Mono","  3.56%   57.934      1 Template:Ambox","  3.18%   51.748     78 Template:Ifsubst","  1.47%   23.899      1 Template:Short_description","  1.19%   19.453      1 Template:Use_American_English","  1.13%   18.383      2 Template:DMCA"]},"scribunto":{"limitreport-timeusage":{"value":"0.103","limit":"10.000"},"limitreport-memusage":{"value":3094123,"limit":52428800}},"cachereport":{"origin":"mw1322","timestamp":"20200322055101","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Escape sequences in C","url":"https:\/\/en.wikipedia.org\/wiki\/Escape_sequences_in_C","sameAs":"http:\/\/www.wikidata.org\/entity\/Q17077094","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q17077094","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2011-07-28T14:45:20Z","dateModified":"2020-02-10T18:20:38Z","headline":"escape characters and related in the C programming language"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":98,"wgHostname":"mw1353"});});</script></body></html>

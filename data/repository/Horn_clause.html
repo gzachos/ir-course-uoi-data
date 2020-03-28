@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Horn clause - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn@HRApAICsAAAr@8OAAAAAN","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Horn_clause","wgTitle":"Horn clause","wgCurRevisionId":931306598,"wgRevisionId":931306598,"wgArticleId":333824,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from December 2015","Logic in computer science","Normal forms (logic)"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Horn_clause","wgRelevantArticleId":333824,"wgIsProbablyEditable":!0,
+"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q933932","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready",
+"ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Horn_clause&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Horn_clause&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Horn_clause"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Horn_clause rootpage-Horn_clause skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Horn clause</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>In <a href="/wiki/Mathematical_logic" title="Mathematical logic">mathematical logic</a> and <a href="/wiki/Logic_programming" title="Logic programming">logic programming</a>, a <b>Horn clause</b> is a logical formula of a particular rule-like form which gives it useful properties for use in logic programming, <a href="/wiki/Formal_specification" title="Formal specification">formal specification</a>, and <a href="/wiki/Model_theory" title="Model theory">model theory</a>. Horn clauses are named for the logician <a href="/wiki/Alfred_Horn" title="Alfred Horn">Alfred Horn</a>, who first pointed out their significance in 1951.<sup id="cite_ref-onsentences_1-0" class="reference"><a href="#cite_note-onsentences-1">&#91;1&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Definition"><span class="tocnumber">1</span> <span class="toctext">Definition</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Significance"><span class="tocnumber">1.1</span> <span class="toctext">Significance</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Logic_programming"><span class="tocnumber">2</span> <span class="toctext">Logic programming</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Notes"><span class="tocnumber">3</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Definition">Definition</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Horn_clause&amp;action=edit&amp;section=1" title="Edit section: Definition">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A Horn clause is a <a href="/wiki/Clause_(logic)" title="Clause (logic)">clause</a> (a <a href="/wiki/Disjunction" class="mw-redirect" title="Disjunction">disjunction</a> of <a href="/wiki/Literal_(mathematical_logic)" title="Literal (mathematical logic)">literals</a>) with at most one positive, i.e. <a href="/wiki/Negation" title="Negation">unnegated</a>, literal. 
+</p><p>Conversely, a disjunction of literals with at most one negated literal is called a <b>dual-Horn clause</b>. 
+</p><p>A Horn clause with exactly one positive literal is a <b>definite clause</b> or a <b>strict Horn clause</b><sup id="cite_ref-makowsky_2-0" class="reference"><a href="#cite_note-makowsky-2">&#91;2&#93;</a></sup>; a definite clause with no negative literals is sometimes called a <b>unit clause</b><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>, and a unit clause without variables is sometimes called a <b>fact</b><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>; and a Horn clause without a positive literal is sometimes called a <b>goal clause</b> (note that the empty clause consisting of no literals is a goal clause). These three kinds of Horn clauses are illustrated in the following <a href="/wiki/Propositional_formula" title="Propositional formula">propositional</a> example:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>
+</th>
+<th>Disjunction form
+</th>
+<th><a href="/wiki/Material_conditional" title="Material conditional">Implication</a> form
+</th>
+<th>Read intuitively as
+</th></tr>
+<tr align="center">
+<th>Definite clause
+</th>
+<td>¬<i>p</i> ∨ ¬<i>q</i> ∨ ... ∨ ¬<i>t</i> ∨ <i>u</i>
+</td>
+<td><i>u</i> ← <i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>
+</td>
+<td>assume that,<br />if <i>p</i> and <i>q</i> and ... and <i>t</i> all hold, then also <i>u</i> holds
+</td></tr>
+<tr align="center">
+<th>Fact
+</th>
+<td><i>u</i>
+</td>
+<td><i>u</i>
+</td>
+<td>assume that<br /><i>u</i> holds
+</td></tr>
+<tr align="center">
+<th>Goal clause
+</th>
+<td>¬<i>p</i> ∨ ¬<i>q</i> ∨ ... ∨ ¬<i>t</i>
+</td>
+<td><i>false</i> ← <i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>
+</td>
+<td>show   that<br /><i>p</i> and <i>q</i> and ... and <i>t</i> all hold <sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;note 1&#93;</a></sup>
+</td></tr></tbody></table>
+<p>In the <a href="/wiki/First-order_logic" title="First-order logic">non-propositional</a> case, 
+all variables<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;note 2&#93;</a></sup> in a clause are implicitly <a href="/wiki/Universal_quantification" title="Universal quantification">universally quantified</a> with the scope being the entire clause. Thus, for example:
+</p>
+<dl><dd>¬ <i>human</i>(<i>X</i>) ∨ <i>mortal</i>(<i>X</i>)</dd></dl>
+<p>stands for:
+</p>
+<dl><dd>∀X( ¬ <i>human</i>(<i>X</i>) ∨ <i>mortal</i>(<i>X</i>) )</dd></dl>
+<p>which is logically equivalent to:
+</p>
+<dl><dd>∀X ( <i>human</i>(<i>X</i>) → <i>mortal</i>(<i>X</i>) )</dd></dl>
+<h3><span class="mw-headline" id="Significance">Significance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Horn_clause&amp;action=edit&amp;section=2" title="Edit section: Significance">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Horn clauses play a basic role in <a href="/wiki/Constructive_logic" class="mw-redirect" title="Constructive logic">constructive logic</a> and <a href="/wiki/Computational_logic" title="Computational logic">computational logic</a>. They are important in <a href="/wiki/Automated_theorem_proving" title="Automated theorem proving">automated theorem proving</a> by <a href="/wiki/First-order_resolution" class="mw-redirect" title="First-order resolution">first-order resolution</a>, because the <a href="/wiki/Resolution_(logic)" title="Resolution (logic)">resolvent</a> of two Horn clauses is itself a Horn clause, and the resolvent of a goal clause and a definite clause is a goal clause. These properties of Horn clauses can lead to greater efficiencies in proving a theorem (represented as the negation of a goal clause).
+</p><p>Propositional Horn clauses are also of interest in <a href="/wiki/Computational_complexity_theory" title="Computational complexity theory">computational complexity</a>. The problem of finding truth value assignments to make a conjunction of propositional Horn clauses true is a <a href="/wiki/P-complete" title="P-complete">P-complete</a> problem, solvable in <a href="/wiki/Linear_time" class="mw-redirect" title="Linear time">linear time</a>,<sup id="cite_ref-dowling_7-0" class="reference"><a href="#cite_note-dowling-7">&#91;5&#93;</a></sup> and sometimes called <a href="/wiki/Horn-satisfiability" title="Horn-satisfiability">HORNSAT</a>. (The unrestricted <a href="/wiki/Boolean_satisfiability_problem" title="Boolean satisfiability problem">Boolean satisfiability problem</a> is an <a href="/wiki/NP-complete" class="mw-redirect" title="NP-complete">NP-complete</a> problem however.) Satisfiability of first-order Horn clauses is <a href="/wiki/Undecidable_problem" title="Undecidable problem">undecidable</a>.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2015)">citation needed</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="Logic_programming">Logic programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Horn_clause&amp;action=edit&amp;section=3" title="Edit section: Logic programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Horn clauses are also the basis of <a href="/wiki/Logic_programming" title="Logic programming">logic programming</a>, where it is common to write definite clauses in the form of an <a href="/wiki/Material_conditional" title="Material conditional">implication</a>:
+</p>
+<dl><dd>(<i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>) → <i>u</i></dd></dl>
+<p>In fact, the resolution of a goal clause with a definite clause to produce a new goal clause is the basis of the <a href="/wiki/SLD_resolution" title="SLD resolution">SLD resolution</a> inference rule, used to implement <a href="/wiki/Logic_programming" title="Logic programming">logic programming</a> in the programming language <a href="/wiki/Prolog" title="Prolog">Prolog</a>.
+</p><p>In logic programming a definite clause behaves as a goal-reduction procedure. For example, the Horn clause written above behaves as the procedure:
+</p>
+<dl><dd>to show <i>u</i>, show <i>p</i> and show <i>q</i> and ... and show <i>t</i>.</dd></dl>
+<p>To emphasize this reverse use of the clause, it is often written in the reverse form:
+</p>
+<dl><dd><i>u</i> ← (<i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>)</dd></dl>
+<p>In <a href="/wiki/Prolog" title="Prolog">Prolog</a> this is written as:
+</p>
+<pre>u&#160;:- p, q, ..., t.
+</pre>
+<p>In <a href="/wiki/Logic_programming" title="Logic programming">logic programming</a> and <a href="/wiki/Datalog" title="Datalog">datalog</a>, computation and query evaluation are performed by representing the negation of a problem to be solved as a goal clause. For example, the problem of solving the existentially quantified conjunction of positive literals:
+</p>
+<dl><dd>∃<i>X</i> (<i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>)</dd></dl>
+<p>is represented by negating the problem (denying that it has a solution), and representing it in the logically equivalent form of a goal clause:
+</p>
+<dl><dd>∀<i>X</i> (<i>false</i> ← <i>p</i> ∧ <i>q</i> ∧ ... ∧ <i>t</i>)</dd></dl>
+<p>In <a href="/wiki/Prolog" title="Prolog">Prolog</a> this is written as:
+</p>
+<pre>:- p, q, ..., t.
+</pre>
+<p>Solving the problem amounts to deriving a contradiction, which is represented by the empty clause (or "false"). The solution of the problem is a substitution of terms for the variables in the goal clause, which can be extracted from the proof of contradiction. Used in this way, goal clauses are similar to <a href="/wiki/Conjunctive_query" title="Conjunctive query">conjunctive queries</a> in relational databases, and Horn clause logic is equivalent in computational power to a <a href="/wiki/Universal_Turing_machine" title="Universal Turing machine">universal Turing machine</a>. 
+</p><p>The Prolog notation is actually ambiguous, and the term “goal clause” is sometimes also used ambiguously.  The variables in a goal clause can be read as universally or existentially quantified, and deriving “false” can be interpreted either as deriving a contradiction or as deriving a successful solution of the problem to be solved.
+</p><p>Van Emden and Kowalski (1976) investigated the model theoretic properties of Horn clauses in the context of logic programming, showing that every set of definite clauses <b>D</b> has a unique minimal model <b>M</b>. An atomic formula <b>A</b> is logically implied by <b>D</b> if and only if <b>A</b> is true in <b>M</b>. It follows that a problem <b>P</b> represented by an existentially quantified conjunction of positive literals is logically implied by <b>D</b> if and only if <b>P</b> is true in <b>M</b>. The minimal model semantics of Horn clauses is the basis for the <a href="/wiki/Stable_model_semantics" title="Stable model semantics">stable model semantics</a> of logic programs.<sup id="cite_ref-emdenkowalski_8-0" class="reference"><a href="#cite_note-emdenkowalski-8">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Horn_clause&amp;action=edit&amp;section=4" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Like in <a href="/wiki/Resolution_(logic)#A_resolution_technique" title="Resolution (logic)">resolution theorem proving</a>, intuitive meanings "show φ" and "assume ¬φ" are synonymous (<a href="/wiki/Indirect_proof" class="mw-redirect" title="Indirect proof">indirect proof</a>); they both correspond to the same formula, viz. ¬φ. This way, a mechanical proving tool needs to maintain only one set of formulas (assumptions), rather than two sets (assumptions and (sub)goals).</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">Formula constituent names differ between <a href="/wiki/Propositional_calculus" title="Propositional calculus">Propositional logic</a> and <a href="/wiki/First-order_logic" title="First-order logic">First-order logic</a>. An atomic formula is just a <i>propositional variable</i> in the former, while in the latter it is composed of a predicate symbol and appropriately many <a href="/wiki/Term_(logic)" title="Term (logic)">terms</a>, each of which may contain <i>domain variables</i>. Domain variables are meant here.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Horn_clause&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-onsentences-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-onsentences_1-0">^</a></b></span> <span class="reference-text"><cite class="citation journal"><a href="/wiki/Alfred_Horn" title="Alfred Horn">Horn, Alfred</a> (1951). "On sentences which are true of direct unions of algebras". <i><a href="/wiki/Journal_of_Symbolic_Logic" title="Journal of Symbolic Logic">Journal of Symbolic Logic</a></i>. <b>16</b> (1): 14–21. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.2307%2F2268661">10.2307/2268661</a>. <a href="/wiki/JSTOR" title="JSTOR">JSTOR</a>&#160;<a rel="nofollow" class="external text" href="//www.jstor.org/stable/2268661">2268661</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Symbolic+Logic&amp;rft.atitle=On+sentences+which+are+true+of+direct+unions+of+algebras&amp;rft.volume=16&amp;rft.issue=1&amp;rft.pages=14-21&amp;rft.date=1951&amp;rft_id=info%3Adoi%2F10.2307%2F2268661&amp;rft_id=%2F%2Fwww.jstor.org%2Fstable%2F2268661&amp;rft.aulast=Horn&amp;rft.aufirst=Alfred&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-makowsky-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-makowsky_2-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">Makowsky (1987). <a rel="nofollow" class="external text" href="https://core.ac.uk/download/pdf/82190596.pdf">"Why Horn Formulas Matter in Computer Science: Initial Structures and Generic Examples"</a> <span class="cs1-format">(PDF)</span>. <i>Journal of Computer and System Sciences</i>. <b>34</b> (2–3): 266–292. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2F0022-0000%2887%2990027-4">10.1016/0022-0000(87)90027-4</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Computer+and+System+Sciences&amp;rft.atitle=Why+Horn+Formulas+Matter+in+Computer+Science%3A+Initial+Structures+and+Generic+Examples&amp;rft.volume=34&amp;rft.issue=2%E2%80%933&amp;rft.pages=266-292&amp;rft.date=1987&amp;rft_id=info%3Adoi%2F10.1016%2F0022-0000%2887%2990027-4&amp;rft.au=Makowsky&amp;rft_id=https%3A%2F%2Fcore.ac.uk%2Fdownload%2Fpdf%2F82190596.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation book">Buss, Samuel R. (1998). <a rel="nofollow" class="external text" href="http://www.sciencedirect.com/science/article/pii/S0049237X98800165">"An Introduction to Proof Theory"</a>.  In Samuel R. Buss (ed.). <i>Handbook of Proof Theory</i>. Studies in Logic and the Foundations of Mathematics. <b>137</b>. Elsevier B.V. pp.&#160;1–78. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2FS0049-237X%2898%2980016-5">10.1016/S0049-237X(98)80016-5</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-444-89840-1" title="Special:BookSources/978-0-444-89840-1"><bdi>978-0-444-89840-1</bdi></a>. <a href="/wiki/International_Standard_Serial_Number" title="International Standard Serial Number">ISSN</a>&#160;<a rel="nofollow" class="external text" href="//www.worldcat.org/issn/0049-237X">0049-237X</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=An+Introduction+to+Proof+Theory&amp;rft.btitle=Handbook+of+Proof+Theory&amp;rft.series=Studies+in+Logic+and+the+Foundations+of+Mathematics&amp;rft.pages=1-78&amp;rft.pub=Elsevier+B.V&amp;rft.date=1998&amp;rft.issn=0049-237X&amp;rft_id=info%3Adoi%2F10.1016%2FS0049-237X%2898%2980016-5&amp;rft.isbn=978-0-444-89840-1&amp;rft.aulast=Buss&amp;rft.aufirst=Samuel+R.&amp;rft_id=http%3A%2F%2Fwww.sciencedirect.com%2Fscience%2Farticle%2Fpii%2FS0049237X98800165&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">Lau &amp; Ornaghi (2004). "Specifying Compositional Units for Correct Program Development in Computational Logic". <i>Lecture Notes in Computer Science</i>. <b>3049</b>: 1–29. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-3-540-25951-0_1">10.1007/978-3-540-25951-0_1</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-22152-4" title="Special:BookSources/978-3-540-22152-4"><bdi>978-3-540-22152-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Lecture+Notes+in+Computer+Science&amp;rft.atitle=Specifying+Compositional+Units+for+Correct+Program+Development+in+Computational+Logic.&amp;rft.volume=3049&amp;rft.pages=1-29&amp;rft.date=2004&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-540-25951-0_1&amp;rft.isbn=978-3-540-22152-4&amp;rft.au=Lau+%26+Ornaghi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-dowling-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-dowling_7-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">Dowling, William F.; <a href="/wiki/Jean_Gallier" title="Jean Gallier">Gallier, Jean H.</a> (1984). "Linear-time algorithms for testing the satisfiability of propositional Horn formulae". <i><a href="/wiki/Journal_of_Logic_Programming" class="mw-redirect" title="Journal of Logic Programming">Journal of Logic Programming</a></i>. <b>1</b> (3): 267–284. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1016%2F0743-1066%2884%2990014-1">10.1016/0743-1066(84)90014-1</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Logic+Programming&amp;rft.atitle=Linear-time+algorithms+for+testing+the+satisfiability+of+propositional+Horn+formulae&amp;rft.volume=1&amp;rft.issue=3&amp;rft.pages=267-284&amp;rft.date=1984&amp;rft_id=info%3Adoi%2F10.1016%2F0743-1066%2884%2990014-1&amp;rft.aulast=Dowling&amp;rft.aufirst=William+F.&amp;rft.au=Gallier%2C+Jean+H.&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-emdenkowalski-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-emdenkowalski_8-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">van Emden, M. H.; <a href="/wiki/Robert_Kowalski" title="Robert Kowalski">Kowalski, R. A.</a> (1976). <a rel="nofollow" class="external text" href="http://www.doc.ic.ac.uk/~rak/papers/kowalski-van_emden.pdf">"The semantics of predicate logic as a programming language"</a> <span class="cs1-format">(PDF)</span>. <i><a href="/wiki/Journal_of_the_ACM" title="Journal of the ACM">Journal of the ACM</a></i>. <b>23</b> (4): 733–742. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.64.9246">10.1.1.64.9246</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F321978.321991">10.1145/321978.321991</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+the+ACM&amp;rft.atitle=The+semantics+of+predicate+logic+as+a+programming+language&amp;rft.volume=23&amp;rft.issue=4&amp;rft.pages=733-742&amp;rft.date=1976&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.64.9246&amp;rft_id=info%3Adoi%2F10.1145%2F321978.321991&amp;rft.aulast=van+Emden&amp;rft.aufirst=M.+H.&amp;rft.au=Kowalski%2C+R.+A.&amp;rft_id=http%3A%2F%2Fwww.doc.ic.ac.uk%2F~rak%2Fpapers%2Fkowalski-van_emden.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHorn+clause" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Parsed by mw1326
+Cached time: 20200306193757
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.220 seconds
+Real time usage: 0.337 seconds
+Preprocessor visited node count: 599/1000000
+Post‐expand include size: 14888/2097152 bytes
+Template argument size: 652/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 21881/5000000 bytes
+Number of Wikibase entities loaded: 4/400
+Lua time usage: 0.139/10.000 seconds
+Lua memory usage: 4.03 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  302.377      1 -total
+ 71.34%  215.701      2 Template:Reflist
+ 49.93%  150.974      5 Template:Cite_journal
+ 28.33%   85.670      1 Template:Citation_needed
+ 22.03%   66.618      1 Template:Fix
+ 16.28%   49.236      2 Template:Category_handler
+  9.86%   29.816      1 Template:Cite_book
+  4.41%   13.349      1 Template:Delink
+  1.48%    4.480      2 Template:Main_other
+  1.48%    4.469      1 Template:Fix/category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:333824-0!canonical and timestamp 20200306193756 and revision id 931306598
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Horn_clause&amp;oldid=931306598">https://en.wikipedia.org/w/index.php?title=Horn_clause&amp;oldid=931306598</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Logic_in_computer_science" title="Category:Logic in computer science">Logic in computer science</a></li><li><a href="/wiki/Category:Normal_forms_(logic)" title="Category:Normal forms (logic)">Normal forms (logic)</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_December_2015" title="Category:Articles with unsourced statements from December 2015">Articles with unsourced statements from December 2015</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Horn+clause" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Horn+clause" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Horn_clause" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Horn_clause" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Horn_clause">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Horn_clause&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Horn_clause&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Horn_clause" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Horn_clause" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Horn_clause&amp;oldid=931306598" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Horn_clause&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q933932" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Horn_clause&amp;id=931306598&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Horn+clause">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Horn+clause&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Horn_clause&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Hornova_klauzule" title="Hornova klauzule – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Horn-Formel" title="Horn-Formel – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Cl%C3%A1usula_de_Horn" title="Cláusula de Horn – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%A7%D8%B1%D8%AA_%D9%87%D9%88%D8%B1%D9%86" title="عبارت هورن – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Clause_de_Horn" title="Clause de Horn – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Clausola_di_Horn" title="Clausola di Horn – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%A5%D0%BE%D1%80%D0%BD_%D3%A9%D1%80%D0%BD%D0%B5%D0%B3%D1%96" title="Хорн өрнегі – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Horn-kl%C3%B3z" title="Horn-klóz – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Horn-clausule" title="Horn-clausule – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%BC%E3%83%B3%E7%AF%80" title="ホーン節 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Klauzula_Horna" title="Klauzula Horna – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Cl%C3%A1usula_de_Horn" title="Cláusula de Horn – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D1%80%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B8%D0%B7%D1%8A%D1%8E%D0%BD%D0%BA%D1%82" title="Хорновский дизъюнкт – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Horn_clause" title="Horn clause – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%A5%D0%BE%D1%80%D0%BD%D0%BE%D0%B2%D0%B0_%D0%BA%D0%BB%D0%B0%D1%83%D0%B7%D0%B0" title="Хорнова клауза – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Horn_c%C3%BCmlesi" title="Horn cümlesi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%94%D0%B8%D0%B7%27%D1%8E%D0%BD%D0%BA%D1%82_%D0%93%D0%BE%D1%80%D0%BD%D0%B0" title="Диз&#039;юнкт Горна – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E9%9C%8D%E6%81%A9%E5%AD%90%E5%8F%A5" title="霍恩子句 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q933932#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 18 December 2019, at 05:04<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Horn_clause&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.220","walltime":"0.337","ppvisitednodes":{"value":599,"limit":1000000},"postexpandincludesize":{"value":14888,"limit":2097152},"templateargumentsize":{"value":652,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":21881,"limit":5000000},"entityaccesscount":{"value":4,"limit":400},"timingprofile":["100.00%  302.377      1 -total"," 71.34%  215.701      2 Template:Reflist"," 49.93%  150.974      5 Template:Cite_journal"," 28.33%   85.670      1 Template:Citation_needed"," 22.03%   66.618      1 Template:Fix"," 16.28%   49.236      2 Template:Category_handler","  9.86%   29.816      1 Template:Cite_book","  4.41%   13.349      1 Template:Delink","  1.48%    4.480      2 Template:Main_other","  1.48%    4.469      1 Template:Fix/category"]},"scribunto":{"limitreport-timeusage":{"value":"0.139","limit":"10.000"},"limitreport-memusage":{"value":4226982,"limit":52428800}},"cachereport":{"origin":"mw1326","timestamp":"20200306193757","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Horn clause","url":"https:\/\/en.wikipedia.org\/wiki\/Horn_clause","sameAs":"http:\/\/www.wikidata.org\/entity\/Q933932","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q933932","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-10-03T14:24:44Z","dateModified":"2019-12-18T05:04:17Z","headline":"clause (a disjunction of literals) with at most one positive, i.e. unnegated, literal"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":108,"wgHostname":"mw1322"});});</script></body></html>

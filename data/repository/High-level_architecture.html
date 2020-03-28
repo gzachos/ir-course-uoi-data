@@ -1,0 +1,922 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>High Level Architecture - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7TBgpAIIQAAKT4QTsAAACB","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"High_Level_Architecture","wgTitle":"High Level Architecture","wgCurRevisionId":945998213,"wgRevisionId":945998213,"wgArticleId":838835,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 errors: missing periodical","Use American English from March 2019","All Wikipedia articles written in American English","Articles with short description","IEEE standards","Distributed computing architecture","Modeling and simulation","Simulation software"],"wgPageContentLanguage":"en",
+"wgPageContentModel":"wikitext","wgRelevantPageName":"High_Level_Architecture","wgRelevantArticleId":838835,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"High-level_architecture","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/High_Level_Architecture","wgWikibaseItemId":"Q640931","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready",
+"ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns",
+"ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=High_Level_Architecture&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=High_Level_Architecture&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/High_Level_Architecture"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-High_Level_Architecture rootpage-High_Level_Architecture skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">High Level Architecture</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"><span class="mw-redirectedfrom">&#160;&#160;(Redirected from <a href="/w/index.php?title=High-level_architecture&amp;redirect=no" class="mw-redirect" title="High-level architecture">High-level architecture</a>)</span></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">standard for distributed simulation</div>
+<div role="note" class="hatnote navigation-not-searchable">This article is about the IEEE standard for distributed simulation. For other uses, see <a href="/wiki/High-_and_low-level" title="High- and low-level">High- and low-level</a>.</div>
+<p>The <b>High Level Architecture</b> (<b>HLA</b>) is a standard for distributed simulation, used when building a simulation for a larger purpose by combining (federating) several simulations.<sup id="cite_ref-Kuhl_1-0" class="reference"><a href="#cite_note-Kuhl-1">&#91;1&#93;</a></sup> The standard was developed in the 90’s under the leadership of the US Department of Defense<sup id="cite_ref-Dahmann1997_2-0" class="reference"><a href="#cite_note-Dahmann1997-2">&#91;2&#93;</a></sup> and was later transitioned to become an open international IEEE standard. It is a recommended standard within <a href="/wiki/NATO" title="NATO">NATO</a> through <a href="/wiki/STANAG" class="mw-redirect" title="STANAG">STANAG</a> 4603.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> Today the HLA is used in a number of domains including defense and security and civilian applications. 
+</p><p>The purpose of HLA is to enable interoperability and reuse. Key properties of HLA are:
+</p>
+<ul><li>The ability to connect simulations running on different computers, locally or widely distributed, independent of their operating system and implementation language, into one Federation.</li>
+<li>Ability to specify and use information exchange data models, Federation Object Models (FOMs), for different application domains.</li>
+<li>Services for exchanging information using a publish-subscribe mechanism, based on the FOM, and with additional filtering options.</li>
+<li>Services for coordinating logical (simulation) time and time-stamped data exchange.</li>
+<li>Management services for inspecting and adjusting the state of a Federation.</li></ul>
+<p>HLA forms the basis for developing standardized and extendable FOMs in different communities, for example in aerospace and defense.
+</p><p>The architecture specifies the following components.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:HLA_Federation.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/3/33/HLA_Federation.png/220px-HLA_Federation.png" decoding="async" width="220" height="69" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/3/33/HLA_Federation.png/330px-HLA_Federation.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/3/33/HLA_Federation.png/440px-HLA_Federation.png 2x" data-file-width="1314" data-file-height="410" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:HLA_Federation.png" class="internal" title="Enlarge"></a></div>Components of an HLA federation</div></div></div>
+<ul><li>A <b>Run-time Infrastructure</b> (RTI) that provides a standardized set of services through different programming languages. These services include information exchange, synchronization and federation management</li>
+<li><b>Federates</b> that are individual simulation systems using RTI services.</li>
+<li>A <b>Federation Object Model</b> (FOM) that specifies the Object Classes and Interaction Classes used to exchange data. The FOM can describe information for any domain.</li></ul>
+<p>Together the above components form a <b>Federation</b>. 
+</p><p>The HLA standard consists of three parts:
+</p>
+<ol><li><b>IEEE Std 1516-2010 Framework and Rules</b><sup id="cite_ref-RULES_4-0" class="reference"><a href="#cite_note-RULES-4">&#91;4&#93;</a></sup>, which specifies ten architectural rules that the components or the entire federation shall adhere to.</li>
+<li><b>IEEE Std 1516.1-2010 Federate Interface Specification</b><sup id="cite_ref-IFSPEC_5-0" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, which specifies the services that shall be provided by the RTI. The services are provided as C++ and Java APIs as well as Web Services.</li>
+<li><b>IEEE Std 1516.2-2010 Object Model Template Specification</b> <sup id="cite_ref-OMTSPEC_6-0" class="reference"><a href="#cite_note-OMTSPEC-6">&#91;6&#93;</a></sup>, which specifies the format that HLA object models, such as the FOM, shall use.</li></ol>
+<p><br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History_and_versions"><span class="tocnumber">1</span> <span class="toctext">History and versions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#HLA_1.3"><span class="tocnumber">1.1</span> <span class="toctext">HLA 1.3</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#HLA_1516-2000"><span class="tocnumber">1.2</span> <span class="toctext">HLA 1516-2000</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#HLA_1516-2010_(HLA_Evolved)"><span class="tocnumber">1.3</span> <span class="toctext">HLA 1516-2010 (HLA Evolved)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#HLA_1516-20XX_(HLA_4)"><span class="tocnumber">1.4</span> <span class="toctext">HLA 1516-20XX (HLA 4)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#Technical_overview"><span class="tocnumber">2</span> <span class="toctext">Technical overview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Common_HLA_terminology"><span class="tocnumber">2.1</span> <span class="toctext">Common HLA terminology</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#Interface_specification"><span class="tocnumber">3</span> <span class="toctext">Interface specification</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Federation_Management_Services"><span class="tocnumber">3.1</span> <span class="toctext">Federation Management Services</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Declaration_Management_Services"><span class="tocnumber">3.2</span> <span class="toctext">Declaration Management Services</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Object_Management_Services"><span class="tocnumber">3.3</span> <span class="toctext">Object Management Services</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Ownership_Management_Services"><span class="tocnumber">3.4</span> <span class="toctext">Ownership Management Services</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Time_Management_Services"><span class="tocnumber">3.5</span> <span class="toctext">Time Management Services</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Data_Distribution_Management_Services_(DDM)"><span class="tocnumber">3.6</span> <span class="toctext">Data Distribution Management Services (DDM)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Support_services"><span class="tocnumber">3.7</span> <span class="toctext">Support services</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Management_Object_Model"><span class="tocnumber">3.8</span> <span class="toctext">Management Object Model</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-17"><a href="#Object_model_template_(OMT)"><span class="tocnumber">4</span> <span class="toctext">Object model template (OMT)</span></a>
+<ul>
+<li class="toclevel-2 tocsection-18"><a href="#Identification_Table"><span class="tocnumber">4.1</span> <span class="toctext">Identification Table</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Object_Classes_Structure_Table"><span class="tocnumber">4.2</span> <span class="toctext">Object Classes Structure Table</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Attribute_Table"><span class="tocnumber">4.3</span> <span class="toctext">Attribute Table</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Interaction_Class_Structure_Table"><span class="tocnumber">4.4</span> <span class="toctext">Interaction Class Structure Table</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Parameter_Table"><span class="tocnumber">4.5</span> <span class="toctext">Parameter Table</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Dimensions_table"><span class="tocnumber">4.6</span> <span class="toctext">Dimensions table</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Time_representation_table"><span class="tocnumber">4.7</span> <span class="toctext">Time representation table</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#User-supplied_tag_table"><span class="tocnumber">4.8</span> <span class="toctext">User-supplied tag table</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Synchronization_table"><span class="tocnumber">4.9</span> <span class="toctext">Synchronization table</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Transportation_type_table"><span class="tocnumber">4.10</span> <span class="toctext">Transportation type table</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Update_rate_table"><span class="tocnumber">4.11</span> <span class="toctext">Update rate table</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Switches_table"><span class="tocnumber">4.12</span> <span class="toctext">Switches table</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Datatypes"><span class="tocnumber">4.13</span> <span class="toctext">Datatypes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-31"><a href="#Basic_Data_Representation_Table"><span class="tocnumber">4.13.1</span> <span class="toctext">Basic Data Representation Table</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Simple_Datatypes_Table"><span class="tocnumber">4.13.2</span> <span class="toctext">Simple Datatypes Table</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Enumerated_Datatypes_Table"><span class="tocnumber">4.13.3</span> <span class="toctext">Enumerated Datatypes Table</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Array_Datatypes_Table"><span class="tocnumber">4.13.4</span> <span class="toctext">Array Datatypes Table</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Fixed_Record_Datatypes_Table"><span class="tocnumber">4.13.5</span> <span class="toctext">Fixed Record Datatypes Table</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Variant_Record_Datatypes_Table"><span class="tocnumber">4.13.6</span> <span class="toctext">Variant Record Datatypes Table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-37"><a href="#Notes_table"><span class="tocnumber">4.14</span> <span class="toctext">Notes table</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-38"><a href="#HLA_rules"><span class="tocnumber">5</span> <span class="toctext">HLA rules</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#HLA_Evolved"><span class="tocnumber">6</span> <span class="toctext">HLA Evolved</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="#Federation_Conformance"><span class="tocnumber">7</span> <span class="toctext">Federation Conformance</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="#STANAG_4603"><span class="tocnumber">8</span> <span class="toctext">STANAG 4603</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="#Related_standards"><span class="tocnumber">9</span> <span class="toctext">Related standards</span></a>
+<ul>
+<li class="toclevel-2 tocsection-43"><a href="#Base_Object_Model"><span class="tocnumber">9.1</span> <span class="toctext">Base Object Model</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-44"><a href="#Alternatives_and_Disadvantages"><span class="tocnumber">10</span> <span class="toctext">Alternatives and Disadvantages</span></a>
+<ul>
+<li class="toclevel-2 tocsection-45"><a href="#Alternatives"><span class="tocnumber">10.1</span> <span class="toctext">Alternatives</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#Disadvantages"><span class="tocnumber">10.2</span> <span class="toctext">Disadvantages</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-47"><a href="#See_also"><span class="tocnumber">11</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="#References"><span class="tocnumber">12</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="#External_links"><span class="tocnumber">13</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History_and_versions">History and versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=1" title="Edit section: History and versions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>HLA was initiated in the early 1990’s when Dr. <a href="/wiki/Anita_K._Jones" title="Anita K. Jones">Anita K. Jones</a>, the Director of Defense Research and Engineering within the US Department of Defense, gave the Defense Modeling and Simulation Office (DMSO) the task of “assuring interoperability and reusability of defense models and simulations”<sup id="cite_ref-Kuhl_1-1" class="reference"><a href="#cite_note-Kuhl-1">&#91;1&#93;</a></sup>. In 1995 DMSO formulated a vision for modeling and simulation and established a modeling and simulation masterplan, which included the High Level Architecture. 
+</p><p>Two protocols for M&amp;S interoperability already existed: <a href="/wiki/Distributed_Interactive_Simulation" title="Distributed Interactive Simulation">Distributed Interactive Simulation</a> (DIS), focusing on real-time platform level simulation with a fixed object model, and <a href="/wiki/Aggregate_Level_Simulation_Protocol" title="Aggregate Level Simulation Protocol">Aggregate Level Simulation Protocol</a> (ALSP) focusing on simulation of aggregate with time management, ownership management and flexible object models, called confederation models. The purpose of HLA was to provide one unified standard that would meet the simulation interoperability requirements of all US DoD components<sup id="cite_ref-Dahmann1997_2-1" class="reference"><a href="#cite_note-Dahmann1997-2">&#91;2&#93;</a></sup>. 
+</p><p>The development of HLA was based on four prototypical federations: the Platform Prototype Federation, the Joint Training Protofederation, the Analysis Protofederation and the Engineering Prototype Federation. The HLA specification was prototyped and refined, until HLA 1.3 was finally released. To facilitate usage outside of the defense community, HLA was then transitioned into an IEEE standard, maintained by <a href="/wiki/Simulation_Interoperability_Standards_Organization" title="Simulation Interoperability Standards Organization">Simulation Interoperability Standards Organization</a> (SISO). To facilitate the migration for DIS users, a Federation Object Model corresponding to the fixed object model of DIS was also developed as the Real-time Platform Reference FOM (<a href="/wiki/RPR_FOM" title="RPR FOM">RPR FOM</a>).
+</p><p>The following HLA versions exist: 
+</p>
+<h3><span class="mw-headline" id="HLA_1.3">HLA 1.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=2" title="Edit section: HLA 1.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HLA 1.3 was published in March 1998 by DMSO. It consists of:  
+</p>
+<ul><li>U.S. Department of Defense, Rules Version 1.3</li>
+<li>U.S. Department of Defense, High Level Architecture Interface Specification Version 1.3</li>
+<li>U.S. Department of Defense, High Level Architecture Object Model Template Version 1.3</li></ul>
+<p>The US DoD also published interpretations for HLA 1.3:
+</p>
+<ul><li>U.S. Department of Defense, Interpretations of the High Level Architecture Interface Specification Version 1.3, Release 3</li></ul>
+<h3><span class="mw-headline" id="HLA_1516-2000">HLA 1516-2000</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=3" title="Edit section: HLA 1516-2000">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HLA IEEE 1516-2000 was published in 2000 by IEEE. It consists of:
+</p>
+<ul><li>IEEE Std 1516–2000 – Standard for Modeling and Simulation High Level Architecture – Framework and Rules</li>
+<li>IEEE Std 1516.1–2000 – Standard for Modeling and Simulation High Level Architecture – Federate Interface Specification</li>
+<li>IEEE 1516.1–2000 Errata (2003-oct-16)</li>
+<li>IEEE 1516.2-2000 – Standard for Modeling and Simulation High Level Architecture – Object Model Template (OMT) Specification</li></ul>
+<p>Major improvements in IEEE 1516-2000 included an XML-based FOM with detailed data type specifications, as well as an improved DDM design.
+</p><p>The IEEE 1516-2000 standard was also complemented by a recommended development process as well as a recommended VV&amp;A process:
+</p>
+<ul><li>IEEE 1516.3-2003 – Recommended Practice for High Level Architecture Federation Development and Execution Process (FEDEP). This standard would later become IEEE Std 1730-2010 Distributed Simulation Engineering and Execution Process (<a href="/wiki/DSEEP" title="DSEEP">DSEEP</a>)</li>
+<li>IEEE 1516.4-2007 – Recommended Practice for Verification, Validation, and Accreditation of a Federation an Overlay to the High Level Architecture Federation Development and Execution Process</li></ul>
+<p>It was soon found that the 1516-2000 standard had APIs that were slightly different for each RTI implementation. SISO produced a standard with alternate, dynamic link compatible (DLC) C++ and Java APIs:
+</p>
+<ul><li>SISO-STD-004.1-2004: Standard for Dynamic Link Compatible HLA API Standard for the HLA Interface Specification (IEEE 1516.1 Version)</li>
+<li>SISO-STD-004-2004: Standard for Dynamic Link Compatible HLA API Standard for the HLA Interface Specification (v1.3)</li></ul>
+<p>The DLC APIs were later merged into the main standard.
+</p>
+<h3><span id="HLA_1516-2010_.28HLA_Evolved.29"></span><span class="mw-headline" id="HLA_1516-2010_(HLA_Evolved)">HLA 1516-2010 (HLA Evolved)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=4" title="Edit section: HLA 1516-2010 (HLA Evolved)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The IEEE 1516-2010 standard was published in August 2010 by IEEE and is commonly known as HLA Evolved. It consists of:
+</p>
+<ul><li>IEEE 1516–2010 – Standard for Modeling and Simulation High Level Architecture – Framework and Rules<sup id="cite_ref-RULES_4-1" class="reference"><a href="#cite_note-RULES-4">&#91;4&#93;</a></sup></li>
+<li>IEEE 1516.1–2010 – Standard for Modeling and Simulation High Level Architecture – Federate Interface Specification<sup id="cite_ref-IFSPEC_5-1" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup></li>
+<li>IEEE 1516.2-2010 – Standard for Modeling and Simulation High Level Architecture – Object Model Template (OMT) Specification<sup id="cite_ref-OMTSPEC_6-1" class="reference"><a href="#cite_note-OMTSPEC-6">&#91;6&#93;</a></sup></li></ul>
+<p>Major improvements in IEEE 1516-2010 include Modular FOMs, incorporation of the DLC APIs in C++ and Java, a Web Services API and Fault Tolerance.
+</p><p>Machine-readable parts of this version of HLA, such as XML Schemas, C++, Java and WSDL APIs as well as FOM/SOM samples can be downloaded from <a rel="nofollow" class="external text" href="http://standards.ieee.org/downloads/1516/">the IEEE 1516 download area of the IEEE web site</a>. The full standards texts are available at no extra cost to SISO members or can be purchased from <a rel="nofollow" class="external text" href="https://web.archive.org/web/20001206215800/http://www.shop.ieee.org/">the IEEE shop</a>.
+</p>
+<h3><span id="HLA_1516-20XX_.28HLA_4.29"></span><span class="mw-headline" id="HLA_1516-20XX_(HLA_4)">HLA 1516-20XX (HLA 4)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=5" title="Edit section: HLA 1516-20XX (HLA 4)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The development of a new version of HLA started in January 2016 by SISO and is currently ongoing.
+</p>
+<h2><span class="mw-headline" id="Technical_overview">Technical overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=6" title="Edit section: Technical overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The HLA standard consists of three parts:
+</p>
+<ul><li><b>Framework and Rules</b>, which specifies ten architectural rules that federates or the entire federation shall adhere to.</li>
+<li><b>Federate Interface Specification</b>, which specifies the services that shall be provided by the RTI. The services are provided as C++ and Java APIs as well as Web Services.</li>
+<li><b>Object Model Template Specification</b> which specifies the format that HLA object models, such as the FOM, shall use.</li></ul>
+<h3><span class="mw-headline" id="Common_HLA_terminology">Common HLA terminology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=7" title="Edit section: Common HLA terminology">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><b>Run-time Infrastructure (RTI)</b>: Software that provides a standardized set of services, as specified in the HLA Federate Interface Specification.  There are seven service groups.</li></ul>
+<ul><li><b>Federate</b>: A system, such as a simulation, a tool or an interface to live systems, that connects to the RTI. Examples of tools are data loggers and management tools. A federate uses the RTI services to exchange data and synchronize with other federates.</li></ul>
+<ul><li><b>Federation</b>: A set of federates that connect to the same RTI together with a common FOM.</li></ul>
+<ul><li><b>Federation Execution</b>: A session, where a set of federates execute together in a federation with a specific objective, using the same RTI and FOM.</li></ul>
+<ul><li><b>Federation Object Model (FOM)</b>: A document that specifies object classes, interaction classes, data types and additional data that is used for the information exchange in a federation. A FOM is an XML file that follows the format of the HLA Object Model Template and the associated XML Schema.  Different FOMs are used for exchanging data for different application domains. There are standardized FOMs, called reference FOMs, that are commonly used as a starting point for FOM development. A FOM can be developed and extended in a modular way using FOM modules.</li></ul>
+<ul><li><b>Simulation Object Model (SOM)</b>: A document that specifies object classes, interaction classes, data types and additional data that a particular simulation publishes and/or subscribes to in a federation. A SOM is also an XML file that follows the format of the HLA Object Model Template and the associated XML Schema. SOMs can also be developed and extended in a modular way using SOM modules.</li></ul>
+<ul><li><b>Object</b>: Objects are used to represent data that is persistent over some period of time and that have attributes that can be updated. They are defined in the FOM/SOM using an Object Class.</li></ul>
+<ul><li><b>Interaction</b>: Interaction are used to represent instantaneous events with parameters. An interaction that has been sent cannot be updated (as opposed to object classes). They are defined in the FOM/SOM using an Interaction Class.</li></ul>
+<ul><li><b>Datatypes</b>: The representation and interpretation of attribute and parameter data is specified in the FOM/SOM using HLA Datatypes.</li></ul>
+<ul><li><b>Publish</b>: A federate that publishes an object class with a set of attributes can register and delete instances of that object class and update its attribute values. A federate that publishes an interaction class can send interactions of that interaction class, together with associated parameter values.</li></ul>
+<ul><li><b>Subscribe</b>: A federate that subscribes to an object class with a set of attributes will discover registrations and deletions of instances of that object class and receive updates of subscribed attributes. A federate that subscribes to an interaction class will receive interactions of that interaction class, together with associated parameter values.</li></ul>
+<h2><span class="mw-headline" id="Interface_specification">Interface specification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=8" title="Edit section: Interface specification">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The RTI services are defined in the HLA Interface Specification. They are grouped into seven service groups. In addition to these services, the Management Object Model (MOM) provides services that makes it possible to inspect and adjust the state of the federation programmatically.
+</p><p>Most RTIs consist of a Central RTI Component (CRC), which is an executable and Local RTI Components (LRCs), which are libraries that are used by the federates. Services are provided through a <a href="/wiki/C%2B%2B" title="C++">C++</a> or <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a> API and also using Web services. In the C++ and Java APIs, services are invoked using calls to an instance of the RTI Ambassador class. The RTI delivers information to a federate using callbacks, which are delivered using calls to an instance of the Federate Ambassador class. In the Web Services API, defined using <a href="/wiki/WSDL" class="mw-redirect" title="WSDL">WSDL</a>, calls are made, and callbacks are fetched, by the federate using Web Services requests and responses.
+</p><p>The service group descriptions below focus on key services. Exceptions and advisories are not included.
+</p>
+<h3><span class="mw-headline" id="Federation_Management_Services">Federation Management Services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=9" title="Edit section: Federation Management Services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of Federation Management services, described in chapter 4 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-2" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to manage Federation Executions as well as federation-wide operations such as Synchronization Points and Save/Restore. 
+</p><p>One set of Federation Management services manages the connection to the RTI, the federation execution and the set of joined federates. Key services are:
+</p>
+<ul><li>Connect and Disconnect from the RTI</li>
+<li>CreateFederationExecution and DestroyFederationExecution that are used to create and destroy a federation execution</li>
+<li>JoinFederationExecution and ResignFederationExecution that are used by a federate to join and resign a federation execution.</li>
+<li>ConnectionLost, that is used by the RTI to inform a federate that it has lost its connection to the federation execution due to a fault</li>
+<li>ListFederationExecutions that is used to retrieve a list of available federation executions for an RTI</li></ul>
+<p>Another set of services relates to synchronization points. These are federation-wide events where all, or selected federates are required to complete an operation, such as initializing a scenario, before the execution can continue. Key services are:
+</p>
+<ul><li>RegisterFederationSynchronizationPoint that is used to register a synchronization point</li>
+<li>AnnounceSynchronizationPoint that is used by the RTI to inform federates that a synchronization point has been registered</li>
+<li>SynchronizationPointAchieved that is used by a federate to indicate that it has achieved a synchronization point</li>
+<li>FederationSynchronized that is used by the RTI to Inform federates that the federation is synchronized, i.e. all federates have achieved the synchronization point.</li></ul>
+<p>Yet another set of service relates to saving and restoring a federation execution. A save operation requires both the RTI and each federate to perform a save of their internal state. A restore operation requires both the RTI and each federate to perform a restore of their internal state. Key services are:
+</p><p>Save:
+</p>
+<ul><li>RequestFederationSave that is used to initiate a save of a federation</li>
+<li>InitiateFederateSave that is used by the RTI to notify federates to start saving its state</li>
+<li>FederateSaveComplete that shall be called by a federate when it has completed saving its state.</li>
+<li>FederationSaved that is used by the RTI to notify federates that the federation is saved</li></ul>
+<p>Restore:
+</p>
+<ul><li>RequestFederationRestore that is used to initiate a restore of a federation</li>
+<li>InitiateFederateRestore that is used by the RTI to notify federates to start restoring its state</li>
+<li>FederateRestoreComplete that shall be called by a federate when it has completed restoring its state.</li>
+<li>FederationRestored that is used by the RTI to notify federates that the federation is restored</li></ul>
+<h3><span class="mw-headline" id="Declaration_Management_Services">Declaration Management Services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=10" title="Edit section: Declaration Management Services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of Declaration Management services, described in chapter 5 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-3" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to enable federates to declare what information they wish to publish (send) and subscribe to (receive) based on object and interaction classes in the FOM. The RTI uses this information to route updates and interactions to subscribing federates. For an object class, publishing and subscribing are performed for a specific set of attributes. For interaction classes, the entire interaction, including all parameters, is published and subscribed. Key services are:
+</p>
+<ul><li>PublishObjectClassAttributes that is used to publish a set of attributes for a given object class.</li>
+<li>SubscribeObjectClassAttributes that is used to subscribe to a set of attributes for a given object class.</li>
+<li>PublishInteractionClass that is used to publish an interaction class including all parameters</li>
+<li>SubscribeInteractionClass that is used to subscribe to an interaction class including all parameters</li></ul>
+<h3><span class="mw-headline" id="Object_Management_Services">Object Management Services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=11" title="Edit section: Object Management Services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of Object Management services, described in chapter 6 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-4" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to enable federates to share information about object instances and to exchange interactions.
+</p><p>Object instance names can be reserved or be automatically generated. Federates can register object instances of specified object classes, that are then discovered by subscribing federates. Attributes of these object instances can be updated. These updates will be reflected to subscribing federates. Interactions can be sent. These interactions will be delivered to subscribing federates. Key services are:
+</p><p>Objects:
+</p>
+<ul><li>ReserveObjectInstanceName that is used to reserve a name to be used for an object instance</li>
+<li>RegisterObjectInstance that is used to register an object instance of a particular object class, either with a reserved name or an automatically generated name.</li>
+<li>DiscoverObjectInstance that is used by the RTI to notify federates subscribing to particular object class that a new object instance has been registered.</li>
+<li>DeleteObjectInstance that is used to delete an object instance</li>
+<li>RemoveObjectInstances that is used by the RTI to notify federates that an object instance has been removed</li></ul>
+<p>Attributes:
+</p>
+<ul><li>UpdateAttributeValues that is used to provide updated attribute values for an object instance</li>
+<li>ReflectAttributeValues that is used by the RTI to notify federates subscribing to particular attributes of updated values.</li></ul>
+<p>Interactions:
+</p>
+<ul><li>SendInteraction that is used to send an interaction of a particular interaction class, including parameter values.</li>
+<li>ReceiveInteraction that is used by the RTI to deliver an interaction, including parameter values, to federates subscribing to a particular interaction class</li></ul>
+<h3><span class="mw-headline" id="Ownership_Management_Services">Ownership Management Services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=12" title="Edit section: Ownership Management Services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of Ownership Management services, described in chapter 7 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-5" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to dynamically manage what federate that simulates what aspect of an object instance. In HLA, only one federate is allowed to update a given attribute of a given object instance. That federate is considered the owner of the attribute. A federate that registers a new object instance will automatically be the owner of all attributes it publishes. In some cases, attributes of an object instance may become unowned, i.e. not owned by any federate.
+</p><p>Ownership management provides services for transferring ownership of one or several attributes at runtime, which can include a federate Divesting the attribute and another federate Acquiring the attribute. There are two main patterns: “pull” that are initiated by the acquiring federate and “push” that are initiated by the divesting federate. 
+</p><p>Key services for initiating “pull” ownership are:
+</p>
+<ul><li>AttributeOwnershipAcquisitionIfAvailable which is used by a federate that wishes to acquire ownership of unowned attributes.</li>
+<li>AttributeOwnershipAcquisition which is used by a federate that wishes to request ownership of a potentially owned attribute</li></ul>
+<p>Key services for initiating “push” ownership are:
+</p>
+<ul><li>AttributeOwnershipDivestitureIfWanted which is used by a federate that wishes to divest attributes only if there is some other federate that is standing by to acquire ownership of these attributes.</li>
+<li>NegotiatedAttributeOwnershipDivestiture, which is similar but may also cause the RTI to try to find a new owner.</li>
+<li>UnconditionalAttributeOwnershipDivestiture, which is used by a federate that wishes to give up ownership, even if no new owner can be found.</li></ul>
+<p>All object instances have a predefined attribute called HLAPrivilegeToDeleteObject. Only the owner of this attribute for an object instance is allowed to delete the object instance. Ownership of this attribute can be transferred at runtime using the above operations.
+</p>
+<h3><span class="mw-headline" id="Time_Management_Services">Time Management Services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=13" title="Edit section: Time Management Services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The information exchange in an HLA federation takes place in real-time with immediate (Receive Order, RO) delivery of messages, unless HLA Time Management has been enabled. The purpose of HLA Time Management, described in chapter 8 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-6" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to guarantee causality and a correct and consistent exchange of time stamped messages (updates and interactions) in Time Stamp Order (TSO), no matter if the federation executes in real-time, faster-than-real-time, slower-than-real-time or as-fast-as-possible. 
+</p><p>Some important concepts in HLA Time Management are:
+</p><p><b>Logical time</b>: A time axis in HLA, starting at zero. Logical time is used for Time Management timestamps and operations. The logical time axis can be mapped to the scenario time of the federation. An example of such a mapping is to let zero represent the scenario time 8:00 of the 1-Jan-1066 and let an increment by one represent one second of the scenario.
+</p><p><b>Lookahead</b>: A time interval specifying the lowest time in the future for which a federate will produce messages. For a federate with a fixed time step, this is usually the length of the time step. 
+</p><p><b>Granted</b>: A federate is granted (allowed to advance) to a particular logical time by the RTI, when all time-stamped messages up to that time have been delivered. The federate can then safely start calculating messages with a timestamp in the future. This timestamp may not be earlier than the granted time plus the federates lookahead.
+</p><p><b>Advancing</b>: When a federate has finished producing data for the granted time plus the lookahead, it may request to be advanced to a later time, which also means that it promises not to produce any more messages with a time stamp less than the requested time plus the lookahead. The federate is now in the advancing state. 
+</p><p><b>Time Regulating</b>: A federate that sends time stamped events is considered Time Regulating since the time advance by other federates may be regulated by this. 
+</p><p><b>Time Constrained</b>: A federate that receives time managed events is considered Time Constrained since the reception of time stamped messages, constrains its time advance. 
+</p><p>The main principles of HLA Time Management are that:
+</p>
+<ul><li>Each federate assigns a time stamp to messages (updates and interactions) when they are sent, indicating for which scenario time the message is valid.</li>
+<li>Federates request permission from the RTI to advance their time.</li>
+<li>The RTI manages delivery of messages and grants federates time advance so that messages are delivered in Time Stamp Order and that federates don’t get any messages with a time stamp in their past.</li></ul>
+<p>Example of Lookahead, granted and advancing:
+</p>
+<ol><li>A federate uses a fixed time step of 10 and has a Lookahead of 10.</li>
+<li>The federate is granted to logical time 50 by the RTI. The RTI thus guarantees that all messages with time step less or equal to 50 have been delivered to the federate.</li>
+<li>The federate now has all the necessary data to correctly calculate and send messages for the granted time plus Lookahead, i.e. 60.</li>
+<li>When the federate has sent all messages with timestamp 60, it requests to be advanced to time 60. It thereby promises not to send any messages with a timestamp less than 70.</li>
+<li>The RTI delivers all messages with timestamp less or equal to 60 to the federate. It then grants the federate to time 60.</li>
+<li>Etc</li></ol>
+<p>If at least one federate in the federation performs pacing, i.e.  correlates their time advance requests with a real time clock, the federation may run in real time or scaled real time. Without pacing, the federation will run as fast as possible, which is used for example in Monte Carlo simulation.
+</p><p>Key services include:
+</p>
+<ul><li>EnableTimeConstrained and EnableTimeRegulating that enables theses modes for a federate</li>
+<li>TimeAdvanceRequest whereby a federate requests to be advanced to a specified logical time</li>
+<li>TimeAdvancedGrant whereby the RTI informs a federate that it is granted to a specified logical time.</li>
+<li>EnableAsynchronousDelivery that enables delivery of Receive Order messages both when a federate is in the granted and advancing state.</li></ul>
+<p>For event driven simulation it is also possible for a federate to request to be advanced to the next event using the following service:
+</p>
+<ul><li>NextMessageRequest whereby a federate requests to be advanced to the timestamp of the next message due for delivery to the federate, or a specified logical time, whichever has a lower timestamp.</li></ul>
+<p>Another important concept is <b>Greatest Available Logical Time</b> (GALT). The greatest time that each federate can be granted to, depends on the time that other federates have been granted to as well as their lookahead. The GALT for a federate specifies how far a federate can be granted, without having to wait for other federates to be granted. This is particularly interesting for a federate that joins late into a time managed federation.
+</p><p>Key services for GALT are:
+</p>
+<ul><li>QueryGALT that returns the GALT for the calling federate.</li></ul>
+<p>More advanced services include:
+</p>
+<ul><li>FlushQueueRequest whereby a federate can request delivery of all queued, timestamped messages, no matter how far in the future their timestamp is.</li>
+<li>Retract whereby a federate can request that an already sent message is retracted. This is useful in optimistic simulation.</li></ul>
+<h3><span id="Data_Distribution_Management_Services_.28DDM.29"></span><span class="mw-headline" id="Data_Distribution_Management_Services_(DDM)">Data Distribution Management Services (DDM)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=14" title="Edit section: Data Distribution Management Services (DDM)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of DDM, described in chapter 9 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-7" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to increase scalability of federations by performing additional filtering of subscribed data beyond class and attribute subscriptions<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>. Filtering can be based on continuous values (like latitude and longitude) or discreet values (like car brand). 
+</p><p>Key concepts of DDM are:
+</p><p><b>Dimension</b>: a named interval (0..n) used for filtering, with values starting with 0 and ending with an upper bound n. Data in the simulation domain is mapped to one or more dimensions. For example, dimensions for geographical filtering could be LatitudeDimension and LongitudeDimension. A dimension for filtering based on car brand could be CarBrandDimension.
+</p><p><b>Normalization function</b>: a function that maps input values to integer values to be used in a dimension. An example is that a normalization function for the LatitudeDimension could map a latitude value ranging from -90.0 to +90.0 to an integer in the range 0..179. A normalization function for the CarBrandDimension could map a set of car brands Kia, Ford, BMW and Peugeot to an integer in the range 0..3.
+</p><p><b>Range</b>: an interval on a dimension, specified by a lower bound (inclusive) and an upper bound (exclusive).
+</p><p><b>Region</b>: a set of ranges, each one relating to a particular dimension. In the above example, a region could consist of the range (3..5) for LatitudeDimension (55..65) for LongitudeDimension and (0..1) for the CarBrandDimension. At runtime Region Realizations (objects) are instantiated to represent regions. The ranges of a region can be modified over time.
+</p><p><b>Region overlap</b>: two regions overlap if, for all dimensions that they have in common, their ranges overlap. 
+</p><p>At runtime, a federate can provide Regions when subscribing to object class attributes and interactions. Regions are also used when sending attribute updates and interactions. When DDM is used, attribute updates and interactions will only be delivered if there is a region overlap.
+</p><p>Key services for Regions are:
+</p>
+<ul><li>CreateRegion that is used to create a region with a specified set of Dimensions.</li>
+<li>DeleteRegion that is used to delete a region.</li>
+<li>CommitRegionModifications that is used to change the ranges of a dimension for a Region.</li></ul>
+<p>Key services for exchanging attribute updates with DDM are:
+</p>
+<ul><li>RegisterObjectInstanceWithRegions that is used to register an object instance with regions associated with its attributes.</li>
+<li>AssociateRegionsForUpdates that is used to associate regions with attributes of an object instance.</li>
+<li>SubscribeObjectClassAttributesWithRegions that is used to subscribing to attributes of objects where the regions used for subscription overlaps with the regions of the attributes.</li></ul>
+<p>Key services for exchanging interactions with DDM are:
+</p>
+<ul><li>SubscribeInteractionClassWithRegions that is used to subscribe to interactions where the regions used for subscription overlaps with the regions of the interactions.</li>
+<li>SendInteractionsWithRegions that is used to send interactions with associated regions.</li></ul>
+<h3><span class="mw-headline" id="Support_services">Support services</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=15" title="Edit section: Support services">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The HLA Support Services, described in chapter 10 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-8" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, provide a number of supporting services. These include:
+</p>
+<ul><li>Getting Handles (references) to be used in the above service calls.</li>
+<li>Setting various runtime switches, in particular for advisories (notifications).</li>
+<li>Controlling the delivery of callbacks.</li></ul>
+<h3><span class="mw-headline" id="Management_Object_Model">Management Object Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=16" title="Edit section: Management Object Model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the Management Object Model, described in chapter 11 of the HLA Interface Specification<sup id="cite_ref-IFSPEC_5-9" class="reference"><a href="#cite_note-IFSPEC-5">&#91;5&#93;</a></sup>, is to provide services for managing a federation. This is performed using the MOM object and interaction classes. MOM objects are defined in a special FOM module called the MIM, that is automatically loaded by the RTI. Key MOM features include:
+</p>
+<ul><li>List and inspect properties of federates.</li>
+<li>Inspect properties of the federation.</li>
+<li>Get the content of the current FOM and FOM modules.</li>
+<li>Inspect the state of Time management.</li>
+<li>Inspect and modify publications and subscriptions of federates.</li>
+<li>Inspect certain performance figures.</li>
+<li>Inspect which federate that calls which HLA services.</li>
+<li>Inspect status of synchronization points.</li></ul>
+<h2><span id="Object_model_template_.28OMT.29"></span><span class="mw-headline" id="Object_model_template_(OMT)">Object model template (OMT)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=17" title="Edit section: Object model template (OMT)">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The OMT is a template used for describing Federation Object Models (FOMs) and Simulation Object Models (SOMs). FOMs and SOMs can be represented in a tabular format or using XML. The latter format is used when a FOM is loaded into the RTI. 
+</p><p>In earlier versions of HLA, FOMs were monolithic, but the current version of the standard supports modular FOMs, i.e several modules, covering different aspects of the information exchange, can be provided to the RTI.
+</p><p>A number of predefined classes, datatypes, dimensions and transportation types are provided in the standard. These are provided in the HLAstandardMIM.xml FOM module. Predefined concepts are prefixed with HLA, for example HLAobjectRoot and HLAunicodeString.
+</p><p>There are three different XML Schemas for the OMT:
+</p>
+<ul><li>The OMT DIF XML Schema, that verifies that an OMT document follows the basic OMT format, but not that it is complete and has referential integrity.</li>
+<li>The OMT FDD XML Schema, that verifies that an OMT document contains enough information to be useful by an RTI. Note that this schema is provided in the Interface Specification.</li>
+<li>The OMT Conformance Schema that verifies that an OMT document is complete and has referential integrity.</li></ul>
+<h3><span class="mw-headline" id="Identification_Table">Identification Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=18" title="Edit section: Identification Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the identification table is to provide meta-data about the model, to facilitate reuse of the FOM/SOM or federates. 
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_Identification_Table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sample_HLA_Identification_Table.png/220px-Sample_HLA_Identification_Table.png" decoding="async" width="220" height="142" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sample_HLA_Identification_Table.png/330px-Sample_HLA_Identification_Table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sample_HLA_Identification_Table.png/440px-Sample_HLA_Identification_Table.png 2x" data-file-width="830" data-file-height="534" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_Identification_Table.png" class="internal" title="Enlarge"></a></div>Sample HLA identification table</div></div></div>
+<p>The following fields are specified:
+</p>
+<ul><li>General: Name, Type (FOM/SOM), Version, Modification date, Security classification, Release restriction, Purpose, Application domain, Description, Use limitation and Use history</li>
+<li>Keywords: Keyword values and Taxonomy used</li>
+<li>Point of contacts (POC): Type (Primary author/Contributor/Proponent/Sponsor/Release Authority/Technical POC), POC name, POC name, POC organization, POC telephone, POC email</li>
+<li>References: Type (Text document/Spreadsheet/Powerpoint file/Standalone FOM/Dependency FOM/Composed from FOM), Identification (document name or FOM name)</li>
+<li>Other</li>
+<li>Glyph (Icon)</li></ul>
+<h3><span class="mw-headline" id="Object_Classes_Structure_Table">Object Classes Structure Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=19" title="Edit section: Object Classes Structure Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the object class structure table is to specify the class hierarchy (subclass/superclass) of the object classes that are used to instantiate objects in an HLA federation. Object class attributes are inherited from superclasses to subclasses based on this hierarchy. The root of the object class tree is known as HLAobjectRoot. An example of a fully qualified name of an object class is HLAobjectRoot.Car.ElectricCar
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_object_class_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sample_HLA_object_class_table.png/220px-Sample_HLA_object_class_table.png" decoding="async" width="220" height="34" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sample_HLA_object_class_table.png/330px-Sample_HLA_object_class_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sample_HLA_object_class_table.png/440px-Sample_HLA_object_class_table.png 2x" data-file-width="834" data-file-height="128" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_object_class_table.png" class="internal" title="Enlarge"></a></div>Sample HLA object class table</div></div></div>
+<p>The following fields are specified for an object class in the hierarchy:
+</p>
+<ul><li>Name</li>
+<li>Publication (Publish/Subscribe/PublishSubscribe/Neither)</li></ul>
+<h3><span class="mw-headline" id="Attribute_Table">Attribute Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=20" title="Edit section: Attribute Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the attribute table is to specify the attributes that are available for a given object class. Since attributes are inherited, an object class will have the union of all attributes that are locally defined on the object class or specified on any direct or indirect superclass. 
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_attribute_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sample_HLA_attribute_table.png/220px-Sample_HLA_attribute_table.png" decoding="async" width="220" height="109" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sample_HLA_attribute_table.png/330px-Sample_HLA_attribute_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sample_HLA_attribute_table.png/440px-Sample_HLA_attribute_table.png 2x" data-file-width="1105" data-file-height="549" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_attribute_table.png" class="internal" title="Enlarge"></a></div>Sample HLA attribute table</div></div></div>
+<p>The following fields are specified for an attribute
+</p>
+<ul><li>Object class name, for which it is defined</li>
+<li>Attribute name</li>
+<li>Datatype, defined in the Datatypes Table (see below)</li>
+<li>Update type (Static/Periodic/Conditional/NA)</li>
+<li>Update condition</li>
+<li>D/A (Divest/Acquire/NoTransfer/DivestAcquire): Whether the attribute can be divested and or acquired using the HLA Ownership Services</li>
+<li>P/S (Publish/Subscribe/PublishSubscribe/Neither): Whether the attribute can be published and/or subscribed. In a SOM, this information relates to the Federate described, in a FOM it relates to the entire federation.</li>
+<li>Available Dimensions</li>
+<li>Transportation (Reliable/BestEffort/other transportations described in the Transportation table)</li>
+<li>Order (Receive/TimeStamp): Delivery order for attribute updates.</li></ul>
+<h3><span class="mw-headline" id="Interaction_Class_Structure_Table">Interaction Class Structure Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=21" title="Edit section: Interaction Class Structure Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the interaction class structure table is to specify the class hierarchy (subclass/superclass) of the interaction classes that are used to exchange interactions in an HLA federation. Interaction class parameters are inherited from superclasses to subclasses based on this hierarchy. The root of the interaction class tree is known as HLAinteractionRoot. An example of a fully qualified name of an interaction class is HLAinteractionRoot.CarCommand.Start.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_interaction_class_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sample_HLA_interaction_class_table.png/220px-Sample_HLA_interaction_class_table.png" decoding="async" width="220" height="27" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sample_HLA_interaction_class_table.png/330px-Sample_HLA_interaction_class_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Sample_HLA_interaction_class_table.png/440px-Sample_HLA_interaction_class_table.png 2x" data-file-width="926" data-file-height="114" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_interaction_class_table.png" class="internal" title="Enlarge"></a></div>Sample HLA interaction class table</div></div></div>
+<p>The following fields are specified for an interaction class in the hierarchy:
+</p>
+<ul><li>Name</li>
+<li>Publication (Publish/Subscribe/PublishSubscribe/Neither)</li></ul>
+<h3><span class="mw-headline" id="Parameter_Table">Parameter Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=22" title="Edit section: Parameter Table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the parameter table is to specify the parameters that are available for a given interaction class. Since parameters are inherited, an interaction class will have the union of all parameters that are locally defined on the interaction class or specified on any direct or indirect superclass.
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_parameter_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sample_HLA_parameter_table.png/220px-Sample_HLA_parameter_table.png" decoding="async" width="220" height="58" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sample_HLA_parameter_table.png/330px-Sample_HLA_parameter_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/15/Sample_HLA_parameter_table.png/440px-Sample_HLA_parameter_table.png 2x" data-file-width="923" data-file-height="245" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_parameter_table.png" class="internal" title="Enlarge"></a></div>Sample HLA parameter table</div></div></div>
+<h3><span class="mw-headline" id="Dimensions_table">Dimensions table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=23" title="Edit section: Dimensions table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the dimensions table is to specify the DDM dimensions, used for attributes and interaction classes.
+</p>
+<h3><span class="mw-headline" id="Time_representation_table">Time representation table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=24" title="Edit section: Time representation table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the time representation table is to specify the datatypes used by the Time Management services.
+</p>
+<h3><span class="mw-headline" id="User-supplied_tag_table">User-supplied tag table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=25" title="Edit section: User-supplied tag table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A user-supplied tag can be supplied when calling certain HLA services. The purpose of the user-supplied tag table is to specify the datatypes of these tags.
+</p>
+<h3><span class="mw-headline" id="Synchronization_table">Synchronization table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=26" title="Edit section: Synchronization table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the synchronization table is to specify the synchronisation points used in a federation.
+</p>
+<h3><span class="mw-headline" id="Transportation_type_table">Transportation type table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=27" title="Edit section: Transportation type table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the transportation type table is to specify the available transportation types. There are two predefined transportation types: HLAreliable and HLAbestEffort.
+</p>
+<h3><span class="mw-headline" id="Update_rate_table">Update rate table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=28" title="Edit section: Update rate table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the update rate table is to specify the available maximum update rates.
+</p>
+<h3><span class="mw-headline" id="Switches_table">Switches table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=29" title="Edit section: Switches table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The runtime behaviour of the RTI can be controlled using a number of predefined switches. The purpose of the switches table is to provide initial values for these switches. Some of the switches can alsobe updated at runtime.
+</p>
+<h3><span class="mw-headline" id="Datatypes">Datatypes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=30" title="Edit section: Datatypes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the datatype tables is to provide specifications of the datatypes used for attributes, parameters, dimensions, time representation, user supplied tag and synchronization points. There are six categories of datatypes, with a separate tabular format for each of them.
+</p>
+<h4><span class="mw-headline" id="Basic_Data_Representation_Table">Basic Data Representation Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=31" title="Edit section: Basic Data Representation Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>The purpose of the basic data representation table is to provide binary representations for use in other tables. A number of predefined basic datatypes are provided in the HLA standard: HLAinteger16BE, HLAinteger32BE, HLAinteger64BE, HLAfloat32BE, HLAfloat64BE, HLAoctetPairBE, HLAinteger16LE, HLAinteger32LE, HLAinteger64LE, HLAfloat32LE, HLAfloat64LE, HLAoctetPairLE and HLAoctet. The set of basic datatypes is usually not extended with user defined basic datatypes. 
+</p>
+<h4><span class="mw-headline" id="Simple_Datatypes_Table">Simple Datatypes Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=32" title="Edit section: Simple Datatypes Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_simple_datatype_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sample_HLA_simple_datatype_table.png/220px-Sample_HLA_simple_datatype_table.png" decoding="async" width="220" height="52" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sample_HLA_simple_datatype_table.png/330px-Sample_HLA_simple_datatype_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sample_HLA_simple_datatype_table.png/440px-Sample_HLA_simple_datatype_table.png 2x" data-file-width="2022" data-file-height="482" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_simple_datatype_table.png" class="internal" title="Enlarge"></a></div>Sample HLA simple datatype table</div></div></div>
+<p>The purpose of the simple datatypes table is to describe simple scalar data items. A number of predefined simple datatypes are provided in the HLA standard: HLAASCIIchar, HLAunicodeChar, HLAbyte, HLAinteger64time and HLAfloat64time. It is common to include user defined simple datatypes in a FOM.
+</p>
+<h4><span class="mw-headline" id="Enumerated_Datatypes_Table">Enumerated Datatypes Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=33" title="Edit section: Enumerated Datatypes Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_enumerated_datatype_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sample_HLA_enumerated_datatype_table.png/220px-Sample_HLA_enumerated_datatype_table.png" decoding="async" width="220" height="58" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sample_HLA_enumerated_datatype_table.png/330px-Sample_HLA_enumerated_datatype_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sample_HLA_enumerated_datatype_table.png/440px-Sample_HLA_enumerated_datatype_table.png 2x" data-file-width="1360" data-file-height="356" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_enumerated_datatype_table.png" class="internal" title="Enlarge"></a></div>Sample HLA enumerated datatype table</div></div></div>
+<p>The purpose of the enumerated datatypes table is to describe data elements that can take on a finite discrete set of values. One predefined enumerated datatype is provided in the standard: HLAboolean. It is common to include user defined enumerated datatypes in a FOM.
+</p>
+<h4><span class="mw-headline" id="Array_Datatypes_Table">Array Datatypes Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=34" title="Edit section: Array Datatypes Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_array_datatype_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sample_HLA_array_datatype_table.png/220px-Sample_HLA_array_datatype_table.png" decoding="async" width="220" height="17" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sample_HLA_array_datatype_table.png/330px-Sample_HLA_array_datatype_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sample_HLA_array_datatype_table.png/440px-Sample_HLA_array_datatype_table.png 2x" data-file-width="1478" data-file-height="116" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_array_datatype_table.png" class="internal" title="Enlarge"></a></div>Sample HLA array datatype table</div></div></div>
+<p>The purpose of the enumerated datatypes table is to describe arrays of data elements (simple, enumerated, arrays, fixed records or variant records). A number of predefined simple datatypes are provided in the HLA standard: HLAASCIIstring, HLAunicodeString, HLAopaqueData and HLAtoken. It is common to include user defined array datatypes in a FOM.
+</p>
+<h4><span class="mw-headline" id="Fixed_Record_Datatypes_Table">Fixed Record Datatypes Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=35" title="Edit section: Fixed Record Datatypes Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Sample_HLA_fixed_record_datatype_table.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sample_HLA_fixed_record_datatype_table.png/220px-Sample_HLA_fixed_record_datatype_table.png" decoding="async" width="220" height="33" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sample_HLA_fixed_record_datatype_table.png/330px-Sample_HLA_fixed_record_datatype_table.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Sample_HLA_fixed_record_datatype_table.png/440px-Sample_HLA_fixed_record_datatype_table.png 2x" data-file-width="1738" data-file-height="258" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Sample_HLA_fixed_record_datatype_table.png" class="internal" title="Enlarge"></a></div>Sample HLA fixed record datatype table</div></div></div>
+<p>The purpose of the fixed record datatypes table is to describe records with a fixed set of data elements (simple, enumerated, arrays, fixed records or variant records). It is common to include user defined simple datatypes in a FOM. No predefined simple datatypes are provided in the HLA standard.
+</p>
+<h4><span class="mw-headline" id="Variant_Record_Datatypes_Table">Variant Record Datatypes Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=36" title="Edit section: Variant Record Datatypes Table">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<h3><span class="mw-headline" id="Notes_table">Notes table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=37" title="Edit section: Notes table">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The purpose of the notes the table is to provide annotations and additional descriptions of items in other tables.
+</p>
+<h2><span class="mw-headline" id="HLA_rules">HLA rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=38" title="Edit section: HLA rules">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The HLA rules describe the responsibilities of federations and the federates that join.<sup id="cite_ref-rti-prog-guide_8-0" class="reference"><a href="#cite_note-rti-prog-guide-8">&#91;8&#93;</a></sup>
+</p>
+<ol><li>Federations shall have an HLA federation object model (FOM), documented in accordance with the HLA object model template (OMT).</li>
+<li>In a federation, all representation of objects in the FOM shall be in the federates, not in the run-time infrastructure (RTI).</li>
+<li>During a federation execution, all exchange of FOM data among federates shall occur via the RTI.</li>
+<li>During a federation execution, federates shall interact with the run-time infrastructure (RTI) in accordance with the HLA interface specification.</li>
+<li>During a federation execution, an attribute of an instance of an object shall be owned by only one federate at any given time.</li>
+<li>Federates shall have an HLA simulation object model (SOM), documented in accordance with the HLA object model template (OMT).</li>
+<li>Federates shall be able to update and/or reflect any attributes of objects in their SOM and send and/or receive SOM object interactions externally, as specified in their SOM.</li>
+<li>Federates shall be able to transfer and/or accept ownership of an attribute dynamically during a federation execution, as specified in their SOM.</li>
+<li>Federates shall be able to vary the conditions under which they provide updates of attributes of objects, as specified in their SOM.</li>
+<li>Federates shall be able to manage local time in a way that will allow them to coordinate data exchange with other members of a federation.</li></ol>
+<h2><span class="mw-headline" id="HLA_Evolved">HLA Evolved</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=39" title="Edit section: HLA Evolved">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The IEEE 1516 standard has been revised under the SISO HLA-Evolved Product Development Group and was approved 25-Mar-2010 by the IEEE Standards Activities Board. The revised IEEE 1516–2010 standard includes current DoD standard interpretations and the EDLC API, an extended version of the SISO DLC API. Other major improvements include:
+</p>
+<ul><li>Extended XML support for FOM/SOM, such as Schemas and extensibility</li>
+<li>Fault tolerance support services</li>
+<li>Web Services (WSDL) support/API</li>
+<li>Modular FOMs</li>
+<li>Update rate reduction</li>
+<li>Encoding helpers</li>
+<li>Extended support for additional transportation (such as QoS, IPv6,...)</li>
+<li>Standardized time representations</li></ul>
+<h2><span class="mw-headline" id="Federation_Conformance">Federation Conformance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=40" title="Edit section: Federation Conformance">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In order to ensure the proper interaction between simulations, a way of testing federate conformance is defined. This involves ensuring that every class and interaction listed in the SOM for a particular federate is used according to the usage described, "PublishSubscribe", "Publish", "Subscribe" or "None".
+</p>
+<h2><span class="mw-headline" id="STANAG_4603">STANAG 4603</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=41" title="Edit section: STANAG 4603">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>HLA (in both the current IEEE 1516 version and its ancestor "1.3" version) is the subject of the <a href="/wiki/NATO" title="NATO">NATO</a> standardization agreement (STANAG 4603) for modeling and simulation: <i>Modeling And Simulation Architecture Standards For Technical Interoperability: High Level Architecture (HLA)</i>.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Related_standards">Related standards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=42" title="Edit section: Related standards">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Base_Object_Model">Base Object Model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=43" title="Edit section: Base Object Model">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The <a href="/w/index.php?title=Base_Object_Model&amp;action=edit&amp;redlink=1" class="new" title="Base Object Model (page does not exist)">Base Object Model</a> (BOM), SISO-STD-003-2006 is a related standard by <a href="/wiki/Simulation_Interoperability_Standards_Organization" title="Simulation Interoperability Standards Organization">SISO</a> to provide better reuse and composability for HLA simulations. It provides a way to specify conceptual models and how to map them to an HLA FOM.<sup id="cite_ref-bomstandard_10-0" class="reference"><a href="#cite_note-bomstandard-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Alternatives_and_Disadvantages">Alternatives and Disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=44" title="Edit section: Alternatives and Disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Virtually all means of interconnecting Distributed Modeling and Simulation (DM&amp;S) applications have alternatives and or disadvantages and the HLA is no exception.
+</p>
+<h3><span class="mw-headline" id="Alternatives">Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=45" title="Edit section: Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In regards to the Distributed Modeling and Simulation (DM&amp;S) industry the most often used alternative to the HLA, for real-time simulation of military platforms, is <a href="/wiki/Distributed_Interactive_Simulation" title="Distributed Interactive Simulation">Distributed Interactive Simulation</a> (DIS), IEEE 1278.1-2012, a simulation protocol. Most <a href="/wiki/Run-Time_Infrastructure_(simulation)" class="mw-redirect" title="Run-Time Infrastructure (simulation)">HLA RTI vendors</a> also feature DIS in their products.  As for middleware applications that most closely match HLA features, such as
+the publish and subscribe feature (P&amp;S) see <a href="/wiki/Data_Distribution_Service" title="Data Distribution Service">Data Distribution Service (DDS)</a> which shares many of the same characteristics but having an open on-the-wire protocol for system interoperability.<sup id="cite_ref-compare_11-0" class="reference"><a href="#cite_note-compare-11">&#91;11&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Disadvantages">Disadvantages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=46" title="Edit section: Disadvantages">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>HLA is a <a href="/wiki/Message-oriented_middleware" title="Message-oriented middleware">Message-oriented middleware</a> that defines as a set of services, provided by a C++ or Java API. There is no standardized on-the-wire protocol. Participants in a federation must use RTI libraries from the same provider and usually also of the same version<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=47" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Run-Time_Infrastructure" class="mw-redirect" title="Run-Time Infrastructure">List of commercial and non-commercial RTIs</a></li>
+<li><a href="/wiki/Computer_simulation" title="Computer simulation">Computer simulation</a></li>
+<li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Simulation_Interoperability_Standards_Organization" title="Simulation Interoperability Standards Organization">Simulation Interoperability Standards Organization</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=48" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap mw-references-columns"><ol class="references">
+<li id="cite_note-Kuhl-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Kuhl_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Kuhl_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Kuhl, Frederick; Weatherly, Richard; Dahmann, Judith (October 18, 1999). <i>Creating Computer Simulation Systems: An Introduction to the High Level Architecture</i> (1 ed.). Prentice Hall. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0130225118" title="Special:BookSources/0130225118"><bdi>0130225118</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Creating+Computer+Simulation+Systems%3A+An+Introduction+to+the+High+Level+Architecture&amp;rft.edition=1&amp;rft.pub=Prentice+Hall&amp;rft.date=1999-10-18&amp;rft.isbn=0130225118&amp;rft.aulast=Kuhl&amp;rft.aufirst=Frederick&amp;rft.au=Weatherly%2C+Richard&amp;rft.au=Dahmann%2C+Judith&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-Dahmann1997-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Dahmann1997_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Dahmann1997_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Dahmann, Judith (1997). <a rel="nofollow" class="external text" href="https://www.informs-sim.org/wsc97papers/0142.PDF">"The Department of Defense High Level Architecture"</a> <span class="cs1-format">(PDF)</span>. <i>Proceedings of the 1997 Winter Simulation Conference</i>: 142–149. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F268437.268465">10.1145/268437.268465</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/078034278X" title="Special:BookSources/078034278X"><bdi>078034278X</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+1997+Winter+Simulation+Conference&amp;rft.atitle=The+Department+of+Defense+High+Level+Architecture&amp;rft.pages=142-149&amp;rft.date=1997&amp;rft_id=info%3Adoi%2F10.1145%2F268437.268465&amp;rft.isbn=078034278X&amp;rft.aulast=Dahmann&amp;rft.aufirst=Judith&amp;rft_id=https%3A%2F%2Fwww.informs-sim.org%2Fwsc97papers%2F0142.PDF&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation book"><i>STANAG 4603: Modelling and Simulation Architecture Standards for Technical Interoperability: High Level Architecture (HLA)</i>. NATO.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=STANAG+4603%3A+Modelling+and+Simulation+Architecture+Standards+for+Technical+Interoperability%3A+High+Level+Architecture+%28HLA%29&amp;rft.pub=NATO&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-RULES-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-RULES_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-RULES_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://standards.ieee.org/content/ieee-standards/en/standard/1516-2010.html"><i>IEEE Standard for Modeling and Simulation (M&amp;S) High Level Architecture (HLA)— Framework and Rules</i></a>. IEEE Computer Society. 18 August 2010. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7381-6251-5" title="Special:BookSources/978-0-7381-6251-5"><bdi>978-0-7381-6251-5</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+Standard+for+Modeling+and+Simulation+%28M%26S%29+High+Level+Architecture+%28HLA%29%E2%80%94+Framework+and+Rules&amp;rft.pub=IEEE+Computer+Society&amp;rft.date=2010-08-18&amp;rft.isbn=978-0-7381-6251-5&amp;rft_id=https%3A%2F%2Fstandards.ieee.org%2Fcontent%2Fieee-standards%2Fen%2Fstandard%2F1516-2010.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-IFSPEC-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-IFSPEC_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-IFSPEC_5-9"><sup><i><b>j</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://standards.ieee.org/content/ieee-standards/en/standard/1516_1-2010.html"><i>IEEE Standard for Modeling and Simulation (M&amp;S) High Level Architecture (HLA)— Federate Interface Specification</i></a>. IEEE Computer Society. 18 August 2010. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7381-6247-8" title="Special:BookSources/978-0-7381-6247-8"><bdi>978-0-7381-6247-8</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+Standard+for+Modeling+and+Simulation+%28M%26S%29+High+Level+Architecture+%28HLA%29%E2%80%94+Federate+Interface+Specification&amp;rft.pub=IEEE+Computer+Society&amp;rft.date=2010-08-18&amp;rft.isbn=978-0-7381-6247-8&amp;rft_id=https%3A%2F%2Fstandards.ieee.org%2Fcontent%2Fieee-standards%2Fen%2Fstandard%2F1516_1-2010.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-OMTSPEC-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-OMTSPEC_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-OMTSPEC_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a rel="nofollow" class="external text" href="https://standards.ieee.org/content/ieee-standards/en/standard/1516_2-2010.html"><i>IEEE Standard for Modeling and Simulation (M&amp;S) High Level Architecture (HLA)— Object Model Template (OMT) Specification</i></a>. IEEE Computer Society. 18 August 2010. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7381-6249-2" title="Special:BookSources/978-0-7381-6249-2"><bdi>978-0-7381-6249-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=IEEE+Standard+for+Modeling+and+Simulation+%28M%26S%29+High+Level+Architecture+%28HLA%29%E2%80%94+Object+Model+Template+%28OMT%29+Specification&amp;rft.pub=IEEE+Computer+Society&amp;rft.date=2010-08-18&amp;rft.isbn=978-0-7381-6249-2&amp;rft_id=https%3A%2F%2Fstandards.ieee.org%2Fcontent%2Fieee-standards%2Fen%2Fstandard%2F1516_2-2010.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation journal">Möller, Björn; Fredrik, Antelius; Martin, Johansson; Mikael, Karlsson (September 2016). <a rel="nofollow" class="external text" href="https://www.sisostds.org/DigitalLibrary.aspx?Command=Core_Download&amp;EntryId=44863">"Building Scalable Distributed Simulations: Design Patterns for HLA DDM"</a>. <i>Proceedings of 2016 Fall Simulation Interoperability Workshop</i><span class="reference-accessdate">. Retrieved <span class="nowrap">13 November</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+2016+Fall+Simulation+Interoperability+Workshop&amp;rft.atitle=Building+Scalable+Distributed+Simulations%3A+Design+Patterns+for+HLA+DDM&amp;rft.date=2016-09&amp;rft.aulast=M%C3%B6ller&amp;rft.aufirst=Bj%C3%B6rn&amp;rft.au=Fredrik%2C+Antelius&amp;rft.au=Martin%2C+Johansson&amp;rft.au=Mikael%2C+Karlsson&amp;rft_id=https%3A%2F%2Fwww.sisostds.org%2FDigitalLibrary.aspx%3FCommand%3DCore_Download%26EntryId%3D44863&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-rti-prog-guide-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-rti-prog-guide_8-0">^</a></b></span> <span class="reference-text"><cite class="citation book">U.S. <a href="/wiki/Defense_Modeling_and_Simulation_Office" class="mw-redirect" title="Defense Modeling and Simulation Office">Defense Modeling and Simulation Office</a> (2001). <i>RTI 1.3-Next Generation Programmer's Guide Version 4</i>. <a href="/wiki/United_States_Department_of_Defense" title="United States Department of Defense">U.S. Department of Defense</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=RTI+1.3-Next+Generation+Programmer%27s+Guide+Version+4&amp;rft.pub=U.S.+Department+of+Defense&amp;rft.date=2001&amp;rft.au=U.S.+Defense+Modeling+and+Simulation+Office&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.cso.nato.int/Activity_Meta.asp?ACT=817">"High Level Architecture STANAG Development (MSG-033)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">March 3,</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=High+Level+Architecture+STANAG+Development+%28MSG-033%29&amp;rft_id=https%3A%2F%2Fwww.cso.nato.int%2FActivity_Meta.asp%3FACT%3D817&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-bomstandard-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-bomstandard_10-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.sisostds.org/DigitalLibrary.aspx?Command=Core_Download&amp;EntryId=30820">SISO BOM Standard</a></span>
+</li>
+<li id="cite_note-compare-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-compare_11-0">^</a></b></span> <span class="reference-text"><cite class="citation journal">Doshi, Rajiv; Castellote, Gerardo-Pardo (2006). <a rel="nofollow" class="external text" href="http://community.rti.com/sites/default/files/archive/Comparison_and_Mapping_of_DDS_and_HLA.pdf">"A Comparison of HLA and DDS"</a> <span class="cs1-format">(PDF)</span>. Real-Time Innovations<span class="reference-accessdate">. Retrieved <span class="nowrap">March 3,</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=A+Comparison+of+HLA+and+DDS&amp;rft.date=2006&amp;rft.aulast=Doshi&amp;rft.aufirst=Rajiv&amp;rft.au=Castellote%2C+Gerardo-Pardo&amp;rft_id=http%3A%2F%2Fcommunity.rti.com%2Fsites%2Fdefault%2Ffiles%2Farchive%2FComparison_and_Mapping_of_DDS_and_HLA.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web">Granowetter, Len. <a rel="nofollow" class="external text" href="https://www.sisostds.org/DesktopModules/Bring2mind/DMX/Download.aspx?Command=Core_Download&amp;EntryId=24573&amp;PortalId=0&amp;TabId=105">"RTI Interoperability Issues - API Standards, Wire Standards, and RTI Bridges"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">14 March</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=RTI+Interoperability+Issues+-+API+Standards%2C+Wire+Standards%2C+and+RTI+Bridges&amp;rft.aulast=Granowetter&amp;rft.aufirst=Len&amp;rft_id=https%3A%2F%2Fwww.sisostds.org%2FDesktopModules%2FBring2mind%2FDMX%2FDownload.aspx%3FCommand%3DCore_Download%26EntryId%3D24573%26PortalId%3D0%26TabId%3D105&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHigh+Level+Architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit&amp;section=49" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.pitch.se/hlatutorial">The HLA Tutorial</a>: a free tutorial (PDF) published 2012.</li>
+<li><a rel="nofollow" class="external text" href="https://sites.google.com/site/simulationarchitecture/">SimArch</a>: a GPL Java-based layered architecture to ease the development of HLA distributed simulation systems.</li>
+<li><a rel="nofollow" class="external text" href="https://www.ds.tools/products/coreds/">coreDS™</a>: a High-Level API to facilitate HLA and/or DIS integration in your project.</li>
+<li><a rel="nofollow" class="external text" href="https://smash-lab.github.io/HLA-Development-Kit/">HLA Development Kit</a>: a general-purpose, domain-independent framework, released under the open source policy Lesser GNU Public License (LGPL), which facilitates the development of HLA Federates.</li>
+<li><a rel="nofollow" class="external text" href="http://standards.ieee.org/reading/ieee/updates/errata/1516.1-2000.pdf">Errata to IEEE Standard for Modeling and Simulation (M&amp;S) High Level Architecture (HLA) — Federate Interface Specification</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20041017153550/https://www.dmso.mil/public/library/projects/hla/rti/DoD_interps_1516_Release_2.doc">Department of Defense (DoD) Interpretations of the IEEE 1516–2000 series of standards, Release 2 (2003-jul-01)</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="IEEE_standards" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IEEE_standards" title="Template:IEEE standards"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IEEE_standards" title="Template talk:IEEE standards"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IEEE_standards&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="IEEE_standards" style="font-size:114%;margin:0 4em"><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE standards</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Current</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE-488" title="IEEE-488">488</a></li>
+<li><a href="/wiki/Software_quality_assurance" title="Software quality assurance">730</a></li>
+<li><a href="/wiki/IEEE_754" title="IEEE 754">754</a>
+<ul><li><a href="/wiki/IEEE_754-2008_revision" title="IEEE 754-2008 revision">Revision</a></li></ul></li>
+<li><a href="/wiki/IEEE_854-1987" title="IEEE 854-1987">854</a></li>
+<li><a href="/wiki/Software_configuration_management" title="Software configuration management">828</a></li>
+<li><a href="/wiki/Software_test_documentation" title="Software test documentation">829</a></li>
+<li><a href="/wiki/Futurebus" title="Futurebus">896</a></li>
+<li><a href="/wiki/Single_UNIX_Specification" title="Single UNIX Specification">1003</a></li>
+<li><a href="/wiki/VMEbus" title="VMEbus">1014</a></li>
+<li><a href="/wiki/Software_design_description" title="Software design description">1016</a></li>
+<li><a href="/wiki/VHDL" title="VHDL">1076</a></li>
+<li><a href="/wiki/JTAG" title="JTAG">1149.1</a></li>
+<li><a href="/wiki/PILOT" title="PILOT">1154</a></li>
+<li><a href="/wiki/IEEE_1164" title="IEEE 1164">1164</a></li>
+<li><a href="/wiki/Open_Firmware" title="Open Firmware">1275</a></li>
+<li><a href="/wiki/Distributed_Interactive_Simulation" title="Distributed Interactive Simulation">1278</a></li>
+<li><a href="/wiki/IEEE_1284" title="IEEE 1284">1284</a></li>
+<li><a href="/wiki/IEEE_1355" title="IEEE 1355">1355</a></li>
+<li><a href="/wiki/IEEE_1394" title="IEEE 1394">1394</a></li>
+<li><a href="/wiki/IEEE_1451" title="IEEE 1451">1451</a></li>
+<li><a href="/wiki/Standard_Delay_Format" title="Standard Delay Format">1497</a></li>
+<li><a href="/wiki/High-level_architecture" class="mw-redirect" title="High-level architecture">1516</a></li>
+<li><a href="/wiki/IEEE_1541-2002" title="IEEE 1541-2002">1541</a></li>
+<li><a href="/wiki/IEEE_1547" title="IEEE 1547">1547</a></li>
+<li><a href="/wiki/IEEE_1584" title="IEEE 1584">1584</a></li>
+<li><a href="/wiki/Precision_Time_Protocol" title="Precision Time Protocol">1588</a></li>
+<li><a href="/wiki/Scalable_Coherent_Interface" title="Scalable Coherent Interface">1596</a></li>
+<li><a href="/wiki/Advanced_Library_Format" title="Advanced Library Format">1603</a></li>
+<li><a href="/wiki/IEEE_1613" title="IEEE 1613">1613</a></li>
+<li><a href="/wiki/SystemC" title="SystemC">1666</a></li>
+<li><a href="/wiki/IEEE_1667" title="IEEE 1667">1667</a></li>
+<li><a href="/wiki/IEEE_1675-2008" title="IEEE 1675-2008">1675</a></li>
+<li><a href="/wiki/IP-XACT" title="IP-XACT">1685</a></li>
+<li><a href="/wiki/IEEE_1722" class="mw-redirect" title="IEEE 1722">1722</a></li>
+<li><a href="/wiki/IEEE_1733" class="mw-redirect" title="IEEE 1733">1733</a></li>
+<li><a href="/wiki/SystemVerilog" title="SystemVerilog">1800</a></li>
+<li><a href="/wiki/Unified_Power_Format" title="Unified Power Format">1801</a></li>
+<li><a href="/wiki/DNP3" title="DNP3">1815</a></li>
+<li><a href="/wiki/Property_Specification_Language" title="Property Specification Language">1850</a></li>
+<li><a href="/wiki/DySPAN" title="DySPAN">1900</a></li>
+<li><a href="/wiki/IEEE_1901" title="IEEE 1901">1901</a></li>
+<li><a href="/wiki/RuBee" title="RuBee">1902</a></li>
+<li><a href="/wiki/Service_Interoperability_in_Ethernet_Passive_Optical_Networks" title="Service Interoperability in Ethernet Passive Optical Networks">1904</a></li>
+<li><a href="/wiki/IEEE_1905" title="IEEE 1905">1905</a></li>
+<li><a href="/wiki/IEEE_2030" title="IEEE 2030">2030</a></li>
+<li><a href="/wiki/Micro_T-Kernel" title="Micro T-Kernel">2050</a></li>
+<li><a href="/wiki/ISO/IEEE_11073" title="ISO/IEEE 11073">11073</a></li>
+<li><a href="/wiki/ISO/IEC_12207" title="ISO/IEC 12207">12207</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">14764</a></li>
+<li><a href="/wiki/Risk_management" title="Risk management">16085</a></li>
+<li><a href="/wiki/Project_management" title="Project management">16326</a></li>
+<li><a href="/wiki/Requirements_engineering" title="Requirements engineering">29148</a></li>
+<li><a href="/wiki/ISO/IEC_42010" title="ISO/IEC 42010">42010</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802" title="IEEE 802">802 series</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.1" title="IEEE 802.1">802.1</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.1D" title="IEEE 802.1D">D</a></li>
+<li><a href="/wiki/IEEE_P802.1p" title="IEEE P802.1p">p</a></li>
+<li><a href="/wiki/IEEE_802.1Q" title="IEEE 802.1Q">Q</a></li>
+<li><a href="/wiki/IEEE_802.1Qav" class="mw-redirect" title="IEEE 802.1Qav">Qav</a></li>
+<li><a href="/wiki/Stream_Reservation_Protocol" title="Stream Reservation Protocol">Qat</a></li>
+<li><a href="/wiki/Provider_Backbone_Bridge_Traffic_Engineering" title="Provider Backbone Bridge Traffic Engineering">Qay</a></li>
+<li><a href="/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol">w</a></li>
+<li><a href="/wiki/IEEE_802.1X" title="IEEE 802.1X">X</a></li>
+<li><a href="/wiki/Link_Layer_Discovery_Protocol" title="Link Layer Discovery Protocol">ab</a></li>
+<li><a href="/wiki/IEEE_802.1ad" title="IEEE 802.1ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.1AE" title="IEEE 802.1AE">AE</a></li>
+<li><a href="/wiki/IEEE_802.1ag" title="IEEE 802.1ag">ag</a></li>
+<li><a href="/wiki/IEEE_802.1ah-2008" title="IEEE 802.1ah-2008">ah</a></li>
+<li><a href="/wiki/Multiple_Registration_Protocol" title="Multiple Registration Protocol">ak</a></li>
+<li><a href="/wiki/IEEE_802.1aq" title="IEEE 802.1aq">aq</a></li>
+<li><a href="/wiki/IEEE_802.1AS" class="mw-redirect" title="IEEE 802.1AS">AS</a></li>
+<li><a href="/wiki/Link_aggregation" title="Link aggregation">ax</a></li>
+<li><a href="/wiki/Data_center_bridging#IEEE_Task_Group" title="Data center bridging">az</a></li>
+<li><a href="/wiki/Audio_Video_Bridging" title="Audio Video Bridging">BA</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.3" title="IEEE 802.3">802.3</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/10BASE5" title="10BASE5">-1983</a></li>
+<li><a href="/wiki/802.3a" class="mw-redirect" title="802.3a">a</a></li>
+<li><a href="/wiki/802.3b" class="mw-redirect" title="802.3b">b</a></li>
+<li><a href="/wiki/802.3d" class="mw-redirect" title="802.3d">d</a></li>
+<li><a href="/wiki/802.3e" class="mw-redirect" title="802.3e">e</a></li>
+<li><a href="/wiki/802.3i" class="mw-redirect" title="802.3i">i</a></li>
+<li><a href="/wiki/802.3j" class="mw-redirect" title="802.3j">j</a></li>
+<li><a href="/wiki/802.3u" class="mw-redirect" title="802.3u">u</a></li>
+<li><a href="/wiki/IEEE_802.3x" class="mw-redirect" title="IEEE 802.3x">x</a></li>
+<li><a href="/wiki/802.3y" class="mw-redirect" title="802.3y">y</a></li>
+<li><a href="/wiki/802.3z" class="mw-redirect" title="802.3z">z</a></li>
+<li><a href="/wiki/802.3ab" class="mw-redirect" title="802.3ab">ab</a></li>
+<li><a href="/wiki/802.3ac" class="mw-redirect" title="802.3ac">ac</a></li>
+<li><a href="/wiki/802.3ad" class="mw-redirect" title="802.3ad">ad</a></li>
+<li><a href="/wiki/802.3ae" class="mw-redirect" title="802.3ae">ae</a></li>
+<li><a href="/wiki/802.3af" class="mw-redirect" title="802.3af">af</a></li>
+<li><a href="/wiki/802.3ah" class="mw-redirect" title="802.3ah">ah</a></li>
+<li><a href="/wiki/802.3ak" class="mw-redirect" title="802.3ak">ak</a></li>
+<li><a href="/wiki/802.3an" class="mw-redirect" title="802.3an">an</a></li>
+<li><a href="/wiki/802.3aq" class="mw-redirect" title="802.3aq">aq</a></li>
+<li><a href="/wiki/802.3at" class="mw-redirect" title="802.3at">at</a></li>
+<li><a href="/wiki/802.3av" class="mw-redirect" title="802.3av">av</a></li>
+<li><a href="/wiki/802.3az" class="mw-redirect" title="802.3az">az</a></li>
+<li><a href="/wiki/802.3ba" class="mw-redirect" title="802.3ba">ba</a></li>
+<li><a href="/wiki/802.3bt" class="mw-redirect" title="802.3bt">bt</a></li>
+<li><a href="/wiki/802.3by" class="mw-redirect" title="802.3by">by</a></li>
+<li><a href="/wiki/802.3bz" class="mw-redirect" title="802.3bz">bz</a></li>
+<li><a href="/w/index.php?title=802.3cg&amp;action=edit&amp;redlink=1" class="new" title="802.3cg (page does not exist)">cg</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.11" title="IEEE 802.11">802.11</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.11_(legacy_mode)" title="IEEE 802.11 (legacy mode)">legacy mode</a></li>
+<li><a href="/wiki/IEEE_802.11a-1999" title="IEEE 802.11a-1999">a</a></li>
+<li><a href="/wiki/IEEE_802.11b-1999" title="IEEE 802.11b-1999">b</a></li>
+<li><a href="/wiki/IEEE_802.11c" title="IEEE 802.11c">c</a></li>
+<li><a href="/wiki/IEEE_802.11d-2001" title="IEEE 802.11d-2001">d</a></li>
+<li><a href="/wiki/IEEE_802.11e-2005" title="IEEE 802.11e-2005">e</a></li>
+<li><a href="/wiki/Inter-Access_Point_Protocol" title="Inter-Access Point Protocol">f</a></li>
+<li><a href="/wiki/IEEE_802.11g-2003" title="IEEE 802.11g-2003">g</a></li>
+<li><a href="/wiki/IEEE_802.11h-2003" title="IEEE 802.11h-2003">h</a></li>
+<li><a href="/wiki/IEEE_802.11i-2004" title="IEEE 802.11i-2004">i</a></li>
+<li><a href="/wiki/IEEE_802.11j-2004" title="IEEE 802.11j-2004">j</a></li>
+<li><a href="/wiki/IEEE_802.11k-2008" title="IEEE 802.11k-2008">k</a></li>
+<li><a href="/wiki/IEEE_802.11n-2009" title="IEEE 802.11n-2009">n</a></li>
+<li><a href="/wiki/IEEE_802.11p" title="IEEE 802.11p">p</a></li>
+<li><a href="/wiki/IEEE_802.11r-2008" title="IEEE 802.11r-2008">r</a></li>
+<li><a href="/wiki/IEEE_802.11s" title="IEEE 802.11s">s</a></li>
+<li><a href="/wiki/IEEE_802.11u" title="IEEE 802.11u">u</a></li>
+<li><a href="/wiki/IEEE_802.11v" title="IEEE 802.11v">v</a></li>
+<li><a href="/wiki/IEEE_802.11w-2009" title="IEEE 802.11w-2009">w</a></li>
+<li><a href="/wiki/IEEE_802.11y-2008" title="IEEE 802.11y-2008">y</a></li>
+<li><a href="/wiki/IEEE_802.11ac" title="IEEE 802.11ac">ac</a></li>
+<li><a href="/wiki/IEEE_802.11ad" title="IEEE 802.11ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.11af" title="IEEE 802.11af">af</a></li>
+<li><a href="/wiki/IEEE_802.11ah" title="IEEE 802.11ah">ah</a></li>
+<li><a href="/wiki/IEEE_802.11ai" title="IEEE 802.11ai">ai</a></li>
+<li><a href="/wiki/IEEE_802.11ax" title="IEEE 802.11ax">ax</a></li>
+<li><a href="/wiki/IEEE_802.11ay" title="IEEE 802.11ay">ay</a></li>
+<li><a href="/wiki/IEEE_802.11be" title="IEEE 802.11be">be</a></li></ul>
+</div></td></tr></tbody></table><div>
+<ul><li><a href="/wiki/IEEE_802.2" title="IEEE 802.2">.2</a></li>
+<li><a href="/wiki/Token_bus_network" title="Token bus network">.4</a></li>
+<li><a href="/wiki/Token_ring" title="Token ring">.5</a></li>
+<li><a href="/wiki/IEEE_802.6" title="IEEE 802.6">.6</a></li>
+<li><a href="/wiki/IEEE_802.7" title="IEEE 802.7">.7</a></li>
+<li><a href="/wiki/IEEE_802.8" title="IEEE 802.8">.8</a></li>
+<li><a href="/wiki/IEEE_802.9" title="IEEE 802.9">.9</a></li>
+<li><a href="/wiki/IEEE_802.10" title="IEEE 802.10">.10</a></li>
+<li><a href="/wiki/100BaseVG" title="100BaseVG">.12</a></li>
+<li><a href="/wiki/Cable_modem#IEEE_802.14" title="Cable modem">.14</a></li>
+<li><a href="/wiki/IEEE_802.15" title="IEEE 802.15">.15</a>
+<ul><li><a href="/wiki/Bluetooth" title="Bluetooth">.1</a></li>
+<li><a href="/wiki/IEEE_802.15.4" title="IEEE 802.15.4">.4</a></li>
+<li><a href="/wiki/IEEE_802.15.4a" title="IEEE 802.15.4a">.4a</a></li>
+<li><a href="/wiki/IEEE_802.15.6" title="IEEE 802.15.6">.6</a></li></ul></li>
+<li><a href="/wiki/IEEE_802.16" title="IEEE 802.16">.16</a>
+<ul><li><a href="/wiki/WiMAX" title="WiMAX">Original · d · e</a></li></ul></li>
+<li><a href="/wiki/Resilient_Packet_Ring" title="Resilient Packet Ring">.17</a></li>
+<li><a href="/wiki/IEEE_802.18" title="IEEE 802.18">.18</a></li>
+<li><a href="/wiki/IEEE_802.20" title="IEEE 802.20">.20</a></li>
+<li><a href="/wiki/IEEE_802.21" title="IEEE 802.21">.21</a></li>
+<li><a href="/wiki/IEEE_802.22" title="IEEE 802.22">.22</a></li></ul></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Proposed</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><a href="/wiki/IEEE_P1363" title="IEEE P1363">P1363</a></li>
+<li><a href="/wiki/IEEE_P1619" title="IEEE P1619">P1619</a></li>
+<li><a href="/wiki/Rosetta-lang" title="Rosetta-lang">P1699</a></li>
+<li><a href="/wiki/Universal_Power_Adapter_for_Mobile_Devices" title="Universal Power Adapter for Mobile Devices">P1823</a></li>
+<li><a href="/wiki/IEEE_P1906.1" title="IEEE P1906.1">P1906.1</a></li>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Superseded</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_754-1985" title="IEEE 754-1985">754-1985</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">830</a></li>
+<li><a href="/wiki/IEEE_1219" class="mw-redirect" title="IEEE 1219">1219</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">1233</a></li>
+<li><a href="/wiki/Concept_of_operations" title="Concept of operations">1362</a></li>
+<li><a href="/wiki/Verilog" title="Verilog">1364</a></li>
+<li><a href="/wiki/IEEE_1471" title="IEEE 1471">1471</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<dl><dt><i>See also</i></dt>
+<dd><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE Standards Association</a></dd>
+<dd><a href="/wiki/Category:IEEE_standards" title="Category:IEEE standards">Category:IEEE standards</a></dd></dl>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1307
+Cached time: 20200328015543
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.304 seconds
+Real time usage: 0.414 seconds
+Preprocessor visited node count: 955/1000000
+Post‐expand include size: 47561/2097152 bytes
+Template argument size: 599/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 37995/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.129/10.000 seconds
+Lua memory usage: 4.79 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  313.069      1 -total
+ 53.95%  168.911      1 Template:Reflist
+ 33.69%  105.477      6 Template:Cite_book
+ 15.13%   47.356      1 Template:Use_American_English
+ 14.29%   44.746      1 Template:Short_description
+ 11.64%   36.428      3 Template:Cite_journal
+  8.46%   26.479      1 Template:Pagetype
+  5.78%   18.089      1 Template:DMCA
+  5.43%   16.987      1 Template:IEEE_standards
+  4.97%   15.559      1 Template:Dated_maintenance_category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:838835-0!canonical and timestamp 20200328015543 and revision id 945998213
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=High_Level_Architecture&amp;oldid=945998213">https://en.wikipedia.org/w/index.php?title=High_Level_Architecture&amp;oldid=945998213</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:IEEE_standards" title="Category:IEEE standards">IEEE standards</a></li><li><a href="/wiki/Category:Distributed_computing_architecture" title="Category:Distributed computing architecture">Distributed computing architecture</a></li><li><a href="/wiki/Category:Modeling_and_simulation" title="Category:Modeling and simulation">Modeling and simulation</a></li><li><a href="/wiki/Category:Simulation_software" title="Category:Simulation software">Simulation software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Use_American_English_from_March_2019" title="Category:Use American English from March 2019">Use American English from March 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">All Wikipedia articles written in American English</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=High+Level+Architecture" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=High+Level+Architecture" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/High_Level_Architecture" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:High_Level_Architecture" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/High_Level_Architecture">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=High_Level_Architecture&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=High_Level_Architecture&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/High_Level_Architecture" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/High_Level_Architecture" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=High_Level_Architecture&amp;oldid=945998213" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=High_Level_Architecture&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q640931" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=High_Level_Architecture&amp;id=945998213&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=High+Level+Architecture">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=High+Level+Architecture&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=High_Level_Architecture&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/High_Level_Architecture" title="High Level Architecture – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/High_Level_Architecture" title="High Level Architecture – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/High_Level_Architecture" title="High Level Architecture – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%ED%95%98%EC%9D%B4_%EB%A0%88%EB%B2%A8_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" title="하이 레벨 아키텍처 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/HLA" title="HLA – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Architektura_wysokiego_poziomu" title="Architektura wysokiego poziomu – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q640931#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 17 March 2020, at 12:43<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=High_Level_Architecture&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.304","walltime":"0.414","ppvisitednodes":{"value":955,"limit":1000000},"postexpandincludesize":{"value":47561,"limit":2097152},"templateargumentsize":{"value":599,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":37995,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  313.069      1 -total"," 53.95%  168.911      1 Template:Reflist"," 33.69%  105.477      6 Template:Cite_book"," 15.13%   47.356      1 Template:Use_American_English"," 14.29%   44.746      1 Template:Short_description"," 11.64%   36.428      3 Template:Cite_journal","  8.46%   26.479      1 Template:Pagetype","  5.78%   18.089      1 Template:DMCA","  5.43%   16.987      1 Template:IEEE_standards","  4.97%   15.559      1 Template:Dated_maintenance_category"]},"scribunto":{"limitreport-timeusage":{"value":"0.129","limit":"10.000"},"limitreport-memusage":{"value":5021492,"limit":52428800}},"cachereport":{"origin":"mw1307","timestamp":"20200328015543","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"High Level Architecture","url":"https:\/\/en.wikipedia.org\/wiki\/High_Level_Architecture","sameAs":"http:\/\/www.wikidata.org\/entity\/Q640931","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q640931","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-07-17T21:15:35Z","dateModified":"2020-03-17T12:43:04Z","headline":"standard for distributed simulation"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":96,"wgHostname":"mw1413"});});</script></body></html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Unix philosophy - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRequestId":"XnC9PwpAADgAAA49hlgAAADU","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Unix_philosophy","wgTitle":"Unix philosophy","wgCurRevisionId":945646904,"wgRevisionId":945646904,"wgArticleId":223176,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: multiple names: authors list","Articles with short description","Software development philosophies","Unix"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Unix_philosophy","wgRelevantArticleId":223176,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q14652","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":
+"ready","mediawiki.toc.styles":"ready","skins.vector.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.22"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/1/1b/Ken_Thompson_and_Dennis_Ritchie--1973.jpg"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Unix_philosophy&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Unix_philosophy&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Unix_philosophy"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Unix_philosophy rootpage-Unix_philosophy skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Unix philosophy</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">Philosophy on developing software</div>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Ken_Thompson_and_Dennis_Ritchie--1973.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ken_Thompson_and_Dennis_Ritchie--1973.jpg/220px-Ken_Thompson_and_Dennis_Ritchie--1973.jpg" decoding="async" width="220" height="143" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/1/1b/Ken_Thompson_and_Dennis_Ritchie--1973.jpg 1.5x" data-file-width="310" data-file-height="201" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Ken_Thompson_and_Dennis_Ritchie--1973.jpg" class="internal" title="Enlarge"></a></div><a href="/wiki/Ken_Thompson" title="Ken Thompson">Ken Thompson</a> and <a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Dennis Ritchie</a>, key proponents of the Unix philosophy</div></div></div>
+<p>The <b>Unix philosophy</b>, originated by <a href="/wiki/Ken_Thompson" title="Ken Thompson">Ken Thompson</a>, is a set of cultural norms and philosophical approaches to <a href="/wiki/Minimalism_(computing)" title="Minimalism (computing)">minimalist</a>, <a href="/wiki/Modularity_(programming)" class="mw-redirect" title="Modularity (programming)">modular</a> <a href="/wiki/Software_development" title="Software development">software development</a>. It is based on the experience of leading developers of the <a href="/wiki/Unix" title="Unix">Unix</a> <a href="/wiki/Operating_system" title="Operating system">operating system</a>. Early Unix developers were important in bringing the concepts of modularity and reusability into software engineering practice, spawning a "<a href="/wiki/Software_tools" class="mw-redirect" title="Software tools">software tools</a>" movement. Over time, the leading developers of Unix (and programs that ran on it) established a set of cultural norms for developing software; these norms became as important and influential as the technology of Unix itself; this has been termed the "Unix philosophy."
+</p><p>The Unix philosophy emphasizes building simple, short, clear, modular, and extensible code that can be easily maintained and repurposed by developers other than its creators. The Unix philosophy favors <a href="/wiki/Composability" title="Composability">composability</a> as opposed to <a href="/wiki/Monolithic_application" title="Monolithic application">monolithic design</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Origin"><span class="tocnumber">1</span> <span class="toctext">Origin</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#The_UNIX_Programming_Environment"><span class="tocnumber">2</span> <span class="toctext"><i>The UNIX Programming Environment</i></span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Program_Design_in_the_UNIX_Environment"><span class="tocnumber">3</span> <span class="toctext"><i>Program Design in the UNIX Environment</i></span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Doug_McIlroy_on_Unix_programming"><span class="tocnumber">4</span> <span class="toctext">Doug McIlroy on Unix programming</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Do_One_Thing_and_Do_It_Well"><span class="tocnumber">5</span> <span class="toctext">Do One Thing and Do It Well</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Eric_Raymond&#39;s_17_Unix_Rules"><span class="tocnumber">6</span> <span class="toctext">Eric Raymond's 17 Unix Rules</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Mike_Gancarz:_The_UNIX_Philosophy"><span class="tocnumber">7</span> <span class="toctext">Mike Gancarz: The UNIX Philosophy</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#&quot;Worse_is_better&quot;"><span class="tocnumber">8</span> <span class="toctext">"Worse is better"</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Criticism"><span class="tocnumber">9</span> <span class="toctext">Criticism</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">10</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#Notes"><span class="tocnumber">11</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">12</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#External_links"><span class="tocnumber">13</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Origin">Origin</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=1" title="Edit section: Origin">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Unix philosophy is documented by <a href="/wiki/Doug_McIlroy" class="mw-redirect" title="Doug McIlroy">Doug McIlroy</a><sup id="cite_ref-taoup-ch1s6_1-0" class="reference"><a href="#cite_note-taoup-ch1s6-1">&#91;1&#93;</a></sup> in the Bell System Technical Journal from 1978:<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<ol><li>Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new "features".</li>
+<li>Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.</li>
+<li>Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.</li>
+<li>Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.</li></ol>
+<p>It was later summarized by <a href="/wiki/Peter_H._Salus" title="Peter H. Salus">Peter H. Salus</a> in A Quarter-Century of Unix (1994):<sup id="cite_ref-taoup-ch1s6_1-1" class="reference"><a href="#cite_note-taoup-ch1s6-1">&#91;1&#93;</a></sup>
+</p>
+<ul><li>Write programs that do one thing and do it well.</li>
+<li>Write programs to work together.</li>
+<li>Write programs to handle text streams, because that is a universal interface.</li></ul>
+<p>In their award-winning Unix paper of 1974, Ritchie and Thompson quote the following design considerations:<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<ul><li>Make it easy to write, test, and run programs.</li>
+<li>Interactive use instead of <a href="/wiki/Batch_processing" title="Batch processing">batch processing</a>.</li>
+<li><a href="/wiki/Frugality" title="Frugality">Economy</a> and <a href="/wiki/Elegance" title="Elegance">elegance</a> of design due to size constraints ("salvation through suffering").</li>
+<li><a href="/wiki/Self_supporting" class="mw-redirect" title="Self supporting">Self-supporting</a> system: all Unix software is maintained under Unix.</li></ul>
+<style data-mw-deduplicate="TemplateStyles:r886047036">.mw-parser-output .templatequote{overflow:hidden;margin:1em 0;padding:0 40px}.mw-parser-output .templatequote .templatequotecite{line-height:1.5em;text-align:left;padding-left:1.6em;margin-top:0}</style><blockquote class="templatequote"><p>The whole philosophy of UNIX seems to stay out of <a href="/wiki/Assembly_language" title="Assembly language">assembler</a>.</p><div class="templatequotecite">—&#8201;<cite><a href="/wiki/Michael_Sean_Mahoney" title="Michael Sean Mahoney">Michael Sean Mahoney</a><sup id="cite_ref-interview_4-0" class="reference"><a href="#cite_note-interview-4">&#91;4&#93;</a></sup></cite></div></blockquote>
+<h2><span class="mw-headline" id="The_UNIX_Programming_Environment"><i>The UNIX Programming Environment</i></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=2" title="Edit section: The UNIX Programming Environment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Rob-pike-oscon.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rob-pike-oscon.jpg/220px-Rob-pike-oscon.jpg" decoding="async" width="220" height="147" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rob-pike-oscon.jpg/330px-Rob-pike-oscon.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rob-pike-oscon.jpg/440px-Rob-pike-oscon.jpg 2x" data-file-width="1280" data-file-height="853" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Rob-pike-oscon.jpg" class="internal" title="Enlarge"></a></div><a href="/wiki/Rob_Pike" title="Rob Pike">Rob Pike</a>, co-author of <i><a href="/wiki/The_UNIX_Programming_Environment" class="mw-redirect" title="The UNIX Programming Environment">The UNIX Programming Environment</a></i></div></div></div>
+<p>In their preface to the 1984 book, <i><a href="/wiki/The_UNIX_Programming_Environment" class="mw-redirect" title="The UNIX Programming Environment">The UNIX Programming Environment</a></i>, <a href="/wiki/Brian_Kernighan" title="Brian Kernighan">Brian Kernighan</a> and <a href="/wiki/Rob_Pike" title="Rob Pike">Rob Pike</a>, both from <a href="/wiki/Bell_Labs" title="Bell Labs">Bell Labs</a>, give a brief description of the Unix design and the Unix philosophy:<sup id="cite_ref-unix1984_5-0" class="reference"><a href="#cite_note-unix1984-5">&#91;5&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>Even though the UNIX system introduces a number of innovative programs and techniques, no single program or idea makes it work well. Instead, what makes it effective is the approach to programming, a philosophy of using the computer. Although that philosophy can't be written down in a single sentence, at its heart is the idea that the power of a system comes more from the relationships among programs than from the programs themselves. Many UNIX programs do quite trivial things in isolation, but, combined with other programs, become general and useful tools.</p></blockquote>
+<p>The authors further write that their goal for this book is "to communicate the UNIX programming philosophy."<sup id="cite_ref-unix1984_5-1" class="reference"><a href="#cite_note-unix1984-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Program_Design_in_the_UNIX_Environment"><i>Program Design in the UNIX Environment</i></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=3" title="Edit section: Program Design in the UNIX Environment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg/220px-Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg" decoding="async" width="220" height="330" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg/330px-Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg/440px-Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg 2x" data-file-width="2302" data-file-height="3456" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Brian_Kernighan_in_2012_at_Bell_Labs_2.jpg" class="internal" title="Enlarge"></a></div><a href="/wiki/Brian_Kernighan" title="Brian Kernighan">Brian Kernighan</a> has written at length about the Unix philosophy</div></div></div>
+<p>In October 1984, Brian Kernighan and Rob Pike published a paper called <i>Program Design in the UNIX Environment</i>. In this paper, they criticize the accretion of program options and features found in some newer Unix systems such as <a href="/wiki/4.2BSD" class="mw-redirect" title="4.2BSD">4.2BSD</a> and <a href="/wiki/System_V" class="mw-redirect" title="System V">System V</a>, and explain the Unix philosophy of software tools, each performing one general function:<sup id="cite_ref-design1984_6-0" class="reference"><a href="#cite_note-design1984-6">&#91;6&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>Much of the power of the UNIX operating system comes from a style of program design that makes programs easy to use and, more important, easy to combine with other programs. This style has been called the use of <i>software tools</i>, and depends more on how the programs fit into the programming environment and how they can be used with other programs than on how they are designed internally. [...] This style was based on the use of <i>tools</i>: using programs separately or in combination to get a job done, rather than doing it by hand, by monolithic self-sufficient subsystems, or by special-purpose, one-time programs.</p></blockquote>
+<p>The authors contrast Unix tools such as <tt><a href="/wiki/Cat_(Unix)" title="Cat (Unix)">cat</a></tt>, with larger program suites used by other systems.<sup id="cite_ref-design1984_6-1" class="reference"><a href="#cite_note-design1984-6">&#91;6&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>The design of <tt>cat</tt> is typical of most UNIX programs: it implements one simple but general function that can be used in many different applications (including many not envisioned by the original author). Other commands are used for other functions. For example, there are separate commands for file system tasks like renaming files, deleting them, or telling how big they are. Other systems instead lump these into a single "file system" command with an internal structure and command language of its own. (The PIP file copy program found on operating systems like <a href="/wiki/CP/M" title="CP/M">CP/M</a> or <a href="/wiki/RSX-11" title="RSX-11">RSX-11</a> is an example.) That approach is not necessarily worse or better, but it is certainly against the UNIX philosophy.</p></blockquote>
+<h2><span class="mw-headline" id="Doug_McIlroy_on_Unix_programming">Doug McIlroy on Unix programming</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=4" title="Edit section: Doug McIlroy on Unix programming">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Dennis_Ritchie_(right)_Receiving_Japan_Prize.jpeg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg/220px-Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg" decoding="async" width="220" height="300" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg/330px-Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg/440px-Dennis_Ritchie_%28right%29_Receiving_Japan_Prize.jpeg 2x" data-file-width="1195" data-file-height="1628" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Dennis_Ritchie_(right)_Receiving_Japan_Prize.jpeg" class="internal" title="Enlarge"></a></div><a href="/wiki/Doug_McIlroy" class="mw-redirect" title="Doug McIlroy">Doug McIlroy</a> (left) with <a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Dennis Ritchie</a></div></div></div>
+<p><a href="/wiki/Douglas_McIlroy" title="Douglas McIlroy">McIlroy</a>, then head of the Bell Labs Computing Sciences Research Center, and inventor of the <a href="/wiki/Pipeline_(Unix)" title="Pipeline (Unix)">Unix pipe</a>,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> summarized the Unix philosophy as follows:<sup id="cite_ref-taoup-ch1s6_1-2" class="reference"><a href="#cite_note-taoup-ch1s6-1">&#91;1&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle <a href="/wiki/Standard_streams" title="Standard streams">text streams</a>, because that is a universal interface.</p></blockquote>
+<p>Beyond these statements, he has also emphasized simplicity and <a href="/wiki/Minimalism" title="Minimalism">minimalism</a> in Unix programming:<sup id="cite_ref-taoup-ch1s6_1-3" class="reference"><a href="#cite_note-taoup-ch1s6-1">&#91;1&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>The notion of "intricate and beautiful complexities" is almost an oxymoron. Unix programmers vie with each other for "simple and beautiful" honors&#160;— a point that's implicit in these rules, but is well worth making overt.</p></blockquote>
+<p>Conversely, McIlroy has criticized modern <a href="/wiki/Linux" title="Linux">Linux</a> as having <a href="/wiki/Software_bloat" title="Software bloat">software bloat</a>, remarking that, "adoring admirers have fed Linux goodies to a disheartening state of <a href="/wiki/Obesity" title="Obesity">obesity</a>."<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> He contrasts this with the earlier approach taken at Bell Labs when developing and revising <a href="/wiki/Research_Unix" title="Research Unix">Research Unix</a>:<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886047036"/><blockquote class="templatequote"><p>Everything was small... and my heart sinks for Linux when I see the size of it. [...] The <a href="/wiki/Man_page" title="Man page">manual page</a>, which really used to be a manual <i>page</i>, is now a small volume, with a thousand options... We used to sit around in the Unix Room saying, 'What can we throw out? Why is there this option?' It's often because there is some deficiency in the basic design&#160;— you didn't really hit the right design point. Instead of adding an option, think about what was forcing you to add that option.</p></blockquote>
+<h2><span class="mw-headline" id="Do_One_Thing_and_Do_It_Well">Do One Thing and Do It Well</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=5" title="Edit section: Do One Thing and Do It Well">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>As stated by McIlroy, and generally accepted throughout the Unix community, Unix programs have always been expected to follow the concept of DOTADIW, or "Do One Thing And Do It Well." There are limited sources for the acronym DOTADIW on the Internet, but it is discussed at length during the development and packaging of new operating systems, especially in the Linux community.
+</p><p><a href="/wiki/Patrick_Volkerding" title="Patrick Volkerding">Patrick Volkerding</a>, the project lead of <a href="/wiki/Slackware_Linux" class="mw-redirect" title="Slackware Linux">Slackware Linux</a>, invoked this design principle in a criticism of the <a href="/wiki/Systemd" title="Systemd">systemd</a> architecture, stating that, "attempting to control services, sockets, devices, mounts, etc., all within one <a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemon</a> flies in the face of the Unix concept of doing one thing and doing it well."<sup id="cite_ref-volkerding-2012_10-0" class="reference"><a href="#cite_note-volkerding-2012-10">&#91;10&#93;</a></sup>
+</p>
+<h2><span id="Eric_Raymond.27s_17_Unix_Rules"></span><span class="mw-headline" id="Eric_Raymond's_17_Unix_Rules">Eric Raymond's 17 Unix Rules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=6" title="Edit section: Eric Raymond&#039;s 17 Unix Rules">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In his book <i><a href="/wiki/The_Art_of_Unix_Programming" title="The Art of Unix Programming">The Art of Unix Programming</a></i> that was first published in 2003,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> <a href="/wiki/Eric_S._Raymond" title="Eric S. Raymond">Eric S. Raymond</a>, an American programmer and open source advocate,  summarizes the Unix philosophy as <a href="/wiki/KISS_Principle" class="mw-redirect" title="KISS Principle">KISS Principle</a> of "Keep it Simple, Stupid."<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>  He provides a series of design rules:<sup id="cite_ref-taoup-ch1s6_1-4" class="reference"><a href="#cite_note-taoup-ch1s6-1">&#91;1&#93;</a></sup>
+</p>
+<ul><li>Build <a href="/wiki/Modularity_(programming)" class="mw-redirect" title="Modularity (programming)">modular</a> programs</li>
+<li>Write readable programs</li>
+<li>Use composition</li>
+<li><a href="/wiki/Separation_of_mechanism_and_policy" title="Separation of mechanism and policy">Separate mechanisms from policy</a></li>
+<li>Write simple programs</li>
+<li>Write small programs</li>
+<li>Write transparent programs</li>
+<li>Write robust programs</li>
+<li>Make data complicated when required, not the program</li>
+<li>Build on potential users' expected knowledge</li>
+<li>Avoid unnecessary output</li>
+<li>Write programs which fail in a way that is easy to diagnose</li>
+<li>Value developer time over machine time</li>
+<li>Write <a href="/wiki/Generative_programming" class="mw-redirect" title="Generative programming">abstract programs that generate code</a> instead of writing code by hand</li>
+<li><a href="/wiki/Software_prototyping" title="Software prototyping">Prototype</a> software before polishing it</li>
+<li>Write flexible and open programs</li>
+<li>Make the program and protocols extensible.</li></ul>
+<h2><span class="mw-headline" id="Mike_Gancarz:_The_UNIX_Philosophy">Mike Gancarz: The UNIX Philosophy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=7" title="Edit section: Mike Gancarz: The UNIX Philosophy">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In 1994, <a href="/w/index.php?title=Mike_Gancarz&amp;action=edit&amp;redlink=1" class="new" title="Mike Gancarz (page does not exist)">Mike Gancarz</a> (a member of the team that designed the <a href="/wiki/X_Window_System" title="X Window System">X Window System</a>), drew on his own experience with Unix, as well as discussions with fellow programmers and people in other fields who depended on Unix, to produce <i>The UNIX Philosophy</i> which sums it up in nine paramount precepts:
+</p>
+<ol><li><i>Small is beautiful.</i></li>
+<li><i>Make each program do one thing well.</i></li>
+<li><i>Build a prototype as soon as possible.</i></li>
+<li><i>Choose portability over efficiency.</i></li>
+<li><i>Store data in flat <a href="/wiki/Text_file" title="Text file">text files</a>.</i></li>
+<li><i>Use software leverage to your advantage.</i></li>
+<li><i>Use <a href="/wiki/Shell_script" title="Shell script">shell scripts</a> to increase leverage and portability.</i></li>
+<li><i>Avoid captive user interfaces.</i></li>
+<li><i>Make every program a <a href="/wiki/Filter_(software)#Unix" title="Filter (software)">filter</a>.</i></li></ol>
+<h2><span id=".22Worse_is_better.22"></span><span class="mw-headline" id="&quot;Worse_is_better&quot;">"Worse is better"</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=8" title="Edit section: &quot;Worse is better&quot;">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Worse_is_better" title="Worse is better">Worse is better</a></div>
+<p><a href="/wiki/Richard_P._Gabriel" title="Richard P. Gabriel">Richard P. Gabriel</a> suggests that a key advantage of Unix was that it embodied a design philosophy he termed "worse is better", in which simplicity of both the interface <i>and</i> the implementation are more important than any other attributes of the system—including correctness, consistency, and completeness. Gabriel argues that this design style has key evolutionary advantages, though he questions the quality of some results.
+</p><p>For example, in the early days Unix used a <a href="/wiki/Monolithic_kernel" title="Monolithic kernel">monolithic kernel</a> (which means that user processes carried out kernel system calls all on the user stack). If a signal was delivered to a process while it was blocked on a long-term <a href="/wiki/Input/output" title="Input/output">I/O</a> in the kernel, then what should be done? Should the signal be delayed, possibly for a long time (maybe indefinitely) while the I/O completed? The signal handler could not be executed when the process was in kernel mode, with sensitive kernel data on the stack. Should the kernel back-out the system call, and store it, for replay and restart later, assuming that the signal handler completes successfully?
+</p><p>In these cases <a href="/wiki/Ken_Thompson_(computer_programmer)" class="mw-redirect" title="Ken Thompson (computer programmer)">Ken Thompson</a> and <a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Dennis Ritchie</a> favored simplicity over perfection. The Unix system would occasionally return early from a system call with an error stating that it had done nothing—the "Interrupted System Call", or an error number 4 (<code>EINTR</code>) in today's systems.  Of course the call had been aborted in order to call the signal handler. This could only happen for a handful of long-running system calls such as <code>read()</code>, <code>write()</code>, <code>open()</code>, and <code>select()</code>. On the plus side, this made the I/O system many times simpler to design and understand. The vast majority of user programs were never affected because they did not handle or experience signals other than <code>SIGINT</code> and would die right away if one was raised.  For the few other programs—things like shells or text editors that respond to job control key presses—small wrappers could be added to system calls so as to retry the call right away if this <code>EINTR</code> error was raised.  Thus, the problem was solved in a simple manner.
+</p>
+<h2><span class="mw-headline" id="Criticism">Criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=9" title="Edit section: Criticism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In a 1981 article entitled "The truth about Unix: <i>The user interface is horrid</i>"<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> published in <i><a href="/wiki/Datamation" title="Datamation">Datamation</a></i>, <a href="/wiki/Don_Norman" title="Don Norman">Don Norman</a> criticized the design philosophy of Unix for its lack of concern for the user interface. Writing from his background in cognitive science and from the perspective of the then-current philosophy of <a href="/wiki/Cognitive_engineering" title="Cognitive engineering">cognitive engineering</a><sup id="cite_ref-interview_4-1" class="reference"><a href="#cite_note-interview-4">&#91;4&#93;</a></sup>, he focused on how end users comprehend and form a personal <a href="/wiki/Cognitive_model" title="Cognitive model">cognitive model</a> of systems--or, in the case of Unix, fail to understand, with the result that disastrous mistakes (such as losing an hour's worth of work) are all too easy.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Cognitive_engineering" title="Cognitive engineering">Cognitive engineering</a></li>
+<li><a href="/wiki/Unix_architecture" title="Unix architecture">Unix architecture</a></li>
+<li><a href="/wiki/Minimalism_(computing)" title="Minimalism (computing)">Minimalism (computing)</a></li>
+<li><a href="/wiki/Software_engineering" title="Software engineering">Software engineering</a></li>
+<li><a href="/wiki/Hacker_ethic" title="Hacker ethic">Hacker ethic</a></li>
+<li><a href="/wiki/List_of_software_development_philosophies" title="List of software development philosophies">List of software development philosophies</a></li>
+<li><a href="/wiki/Everything_is_a_file" title="Everything is a file">Everything is a file</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=11" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-taoup-ch1s6-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-taoup-ch1s6_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-taoup-ch1s6_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-taoup-ch1s6_1-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-taoup-ch1s6_1-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-taoup-ch1s6_1-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/Eric_S._Raymond" title="Eric S. Raymond">Raymond, Eric S.</a> (2003-09-23). <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html">"Basics of the Unix Philosophy"</a>. <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup/html/"><i>The Art of Unix Programming</i></a>. Addison-Wesley Professional. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-142901-9" title="Special:BookSources/0-13-142901-9"><bdi>0-13-142901-9</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-11-01</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Basics+of+the+Unix+Philosophy&amp;rft.btitle=The+Art+of+Unix+Programming&amp;rft.pub=Addison-Wesley+Professional&amp;rft.date=2003-09-23&amp;rft.isbn=0-13-142901-9&amp;rft.aulast=Raymond&amp;rft.aufirst=Eric+S.&amp;rft_id=http%3A%2F%2Fwww.catb.org%2F~esr%2Fwritings%2Ftaoup%2Fhtml%2Fch01s06.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a href="/wiki/Doug_McIlroy" class="mw-redirect" title="Doug McIlroy">Doug McIlroy</a>, E. N. Pinson, B. A. Tague (8 July 1978). <a rel="nofollow" class="external text" href="https://archive.org/details/bstj57-6-1899/mode/2up">"Unix Time-Sharing System: Foreword"</a>. <i>The Bell System Technical Journal</i>. Bell Laboratories. pp.&#160;1902–1903.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=The+Bell+System+Technical+Journal&amp;rft.atitle=Unix+Time-Sharing+System%3A+Foreword&amp;rft.pages=1902-1903&amp;rft.date=1978-07-08&amp;rft.au=Doug+McIlroy%2C+E.+N.+Pinson%2C+B.+A.+Tague&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fbstj57-6-1899%2Fmode%2F2up&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: multiple names: authors list (<a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite id="CITEREFDennis_RitchieKen_Thompson1974" class="citation"><a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Dennis Ritchie</a>; <a href="/wiki/Ken_Thompson" title="Ken Thompson">Ken Thompson</a> (1974), <a rel="nofollow" class="external text" href="https://people.eecs.berkeley.edu/~brewer/cs262/unix.pdf">"The UNIX time-sharing system"</a> <span class="cs1-format">(PDF)</span>, <i><a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Communications of the ACM</a></i>, <b>17</b> (7): 365–375, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F361011.361061">10.1145/361011.361061</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Communications+of+the+ACM&amp;rft.atitle=The+UNIX+time-sharing+system&amp;rft.volume=17&amp;rft.issue=7&amp;rft.pages=365-375&amp;rft.date=1974&amp;rft_id=info%3Adoi%2F10.1145%2F361011.361061&amp;rft.au=Dennis+Ritchie&amp;rft.au=Ken+Thompson&amp;rft_id=https%3A%2F%2Fpeople.eecs.berkeley.edu%2F~brewer%2Fcs262%2Funix.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-interview-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-interview_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-interview_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.princeton.edu/~hos/mike/transcripts/condon.htm">"An Oral History of Unix"</a>. <a href="/wiki/Princeton_University" title="Princeton University">Princeton University</a> History of Science.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=An+Oral+History+of+Unix&amp;rft.pub=Princeton+University+History+of+Science&amp;rft_id=https%3A%2F%2Fwww.princeton.edu%2F~hos%2Fmike%2Ftranscripts%2Fcondon.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-unix1984-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-unix1984_5-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-unix1984_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Kernighan, Brian W. Pike, Rob. <i>The UNIX Programming Environment.</i> 1984. viii</span>
+</li>
+<li id="cite_note-design1984-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-design1984_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-design1984_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Rob Pike; Brian W. Kernighan (October 1984). <a rel="nofollow" class="external text" href="http://harmful.cat-v.org/cat-v/unix_prog_design.pdf">"Program Design in the UNIX Environment"</a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Program+Design+in+the+UNIX+Environment&amp;rft.date=1984-10&amp;rft.au=Rob+Pike&amp;rft.au=Brian+W.+Kernighan&amp;rft_id=http%3A%2F%2Fharmful.cat-v.org%2Fcat-v%2Funix_prog_design.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFDennis_Ritchie1984" class="citation"><a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Dennis Ritchie</a> (1984), <a rel="nofollow" class="external text" href="http://tech-insider.org/unix/research/acrobat/8410.pdf">"The Evolution of the UNIX Time-Sharing System"</a> <span class="cs1-format">(PDF)</span>, <i><a href="/wiki/AT%26T_Bell_Laboratories_Technical_Journal" class="mw-redirect" title="AT&amp;T Bell Laboratories Technical Journal">AT&amp;T Bell Laboratories Technical Journal</a></i>, <b>63</b> (8): 1577–1593, <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1002%2Fj.1538-7305.1984.tb00054.x">10.1002/j.1538-7305.1984.tb00054.x</a></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=AT%26T+Bell+Laboratories+Technical+Journal&amp;rft.atitle=The+Evolution+of+the+UNIX+Time-Sharing+System&amp;rft.volume=63&amp;rft.issue=8&amp;rft.pages=1577-1593&amp;rft.date=1984&amp;rft_id=info%3Adoi%2F10.1002%2Fj.1538-7305.1984.tb00054.x&amp;rft.au=Dennis+Ritchie&amp;rft_id=http%3A%2F%2Ftech-insider.org%2Funix%2Fresearch%2Facrobat%2F8410.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web">Douglas McIlroy. <a rel="nofollow" class="external text" href="http://www.cs.dartmouth.edu/~doug/dmr.pdf">"Remarks for Japan Prize award ceremony for Dennis Ritchie, May 19, 2011, Murray Hill, NJ"</a> <span class="cs1-format">(PDF)</span><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Remarks+for+Japan+Prize+award+ceremony+for+Dennis+Ritchie%2C+May+19%2C+2011%2C+Murray+Hill%2C+NJ&amp;rft.au=Douglas+McIlroy&amp;rft_id=http%3A%2F%2Fwww.cs.dartmouth.edu%2F~doug%2Fdmr.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">Bill McGonigle. <a rel="nofollow" class="external text" href="https://archive.org/details/DougMcIlroy_AncestryOfLinux_DLSLUG">"Ancestry of Linux&#160;— How the Fun Began (2005)"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2014-06-19</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Ancestry+of+Linux+%E2%80%94+How+the+Fun+Began+%282005%29&amp;rft.au=Bill+McGonigle&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2FDougMcIlroy_AncestryOfLinux_DLSLUG&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-volkerding-2012-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-volkerding-2012_10-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.linuxquestions.org/questions/interviews-28/interview-with-patrick-volkerding-of-slackware-949029/">"Interview with Patrick Volkerding of Slackware"</a>. <i>linuxquestions.org</i>. 2012-06-07<span class="reference-accessdate">. Retrieved <span class="nowrap">2015-10-24</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=linuxquestions.org&amp;rft.atitle=Interview+with+Patrick+Volkerding+of+Slackware&amp;rft.date=2012-06-07&amp;rft_id=http%3A%2F%2Fwww.linuxquestions.org%2Fquestions%2Finterviews-28%2Finterview-with-patrick-volkerding-of-slackware-949029%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/Eric_S._Raymond" title="Eric S. Raymond">Raymond, Eric</a> (2003-09-19). <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup/html/"><i>The Art of Unix Programming</i></a>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-142901-9" title="Special:BookSources/0-13-142901-9"><bdi>0-13-142901-9</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-02-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=The+Art+of+Unix+Programming&amp;rft.pub=Addison-Wesley&amp;rft.date=2003-09-19&amp;rft.isbn=0-13-142901-9&amp;rft.aulast=Raymond&amp;rft.aufirst=Eric&amp;rft_id=http%3A%2F%2Fwww.catb.org%2F~esr%2Fwritings%2Ftaoup%2Fhtml%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation book"><a href="/wiki/Eric_S._Raymond" title="Eric S. Raymond">Raymond, Eric</a> (2003-09-19). <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup/html/ch01s07.html">"The Unix Philosophy in One Lesson"</a>. <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup/html/"><i>The Art of Unix Programming</i></a>. Addison-Wesley. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-142901-9" title="Special:BookSources/0-13-142901-9"><bdi>0-13-142901-9</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-02-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=The+Unix+Philosophy+in+One+Lesson&amp;rft.btitle=The+Art+of+Unix+Programming&amp;rft.pub=Addison-Wesley&amp;rft.date=2003-09-19&amp;rft.isbn=0-13-142901-9&amp;rft.aulast=Raymond&amp;rft.aufirst=Eric&amp;rft_id=http%3A%2F%2Fwww.catb.org%2F~esr%2Fwritings%2Ftaoup%2Fhtml%2Fch01s07.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation news">Norman, Don (1981). <a rel="nofollow" class="external text" href="http://www.ceri.memphis.edu/people/smalley/ESCI7205_misc_files/The_truth_about_Unix_cleaned.pdf">"The truth about Unix: The user interface is horrid"</a> <span class="cs1-format">(PDF)</span>. <i>Datamation</i> (27(12)).</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Datamation&amp;rft.atitle=The+truth+about+Unix%3A+The+user+interface+is+horrid&amp;rft.issue=27%2812%29&amp;rft.date=1981&amp;rft.aulast=Norman&amp;rft.aufirst=Don&amp;rft_id=http%3A%2F%2Fwww.ceri.memphis.edu%2Fpeople%2Fsmalley%2FESCI7205_misc_files%2FThe_truth_about_Unix_cleaned.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AUnix+philosophy" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><i><a rel="nofollow" class="external text" href="http://cm.bell-labs.com/cm/cs/upe/">The Unix Programming Environment</a></i> by <a href="/wiki/Brian_Kernighan" title="Brian Kernighan">Brian Kernighan</a> and <a href="/wiki/Rob_Pike" title="Rob Pike">Rob Pike</a>, 1984</li>
+<li><i><a rel="nofollow" class="external text" href="http://harmful.cat-v.org/cat-v/">Program Design in the UNIX Environment</a></i> – The paper by Pike and Kernighan that preceded the book.</li>
+<li><a rel="nofollow" class="external text" href="http://doc.cat-v.org/bell_labs/pikestyle"><i>Notes on Programming in C</i></a>, Rob Pike, September 21, 1989</li>
+<li><i>A Quarter Century of Unix</i>, Peter H. Salus, Addison-Wesley, May 31, 1994 (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-54777-5" title="Special:BookSources/0-201-54777-5">0-201-54777-5</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://www.faqs.org/docs/artu/philosophychapter.html"><i>Philosophy</i></a>&#160;— from <a rel="nofollow" class="external text" href="http://www.catb.org/~esr/writings/taoup"><i>The Art of Unix Programming</i></a>, Eric S. Raymond, Addison-Wesley, September 17, 2003 (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-142901-9" title="Special:BookSources/0-13-142901-9">0-13-142901-9</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://citeseer.ist.psu.edu/schroeder77final.html">Final Report of the Multics Kernel Design Project</a> by M. D. Schroeder, D. D. Clark, J. H. Saltzer, and D. H. Wells, 1977.</li>
+<li><i>The UNIX Philosophy</i>, Mike Gancarz, <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-55558-123-4" title="Special:BookSources/1-55558-123-4">1-55558-123-4</a></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Unix_philosophy&amp;action=edit&amp;section=13" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://www.catb.org/esr/writings/taoup/html/ch01s06.html">Basics of the Unix Philosophy</a> – by Catb.org</li>
+<li><a rel="nofollow" class="external text" href="http://www.linfo.org/unix_philosophy.html">The Unix Philosophy: A Brief Introduction</a> – by The Linux Information Project (LINFO)</li>
+<li><a rel="nofollow" class="external text" href="http://hebb.cis.uoguelph.ca/~dave/27320/new/unixphil.html">The Unix Philosophy</a></li>
+<li><a rel="nofollow" class="external text" href="http://marmaro.de/docs/studium/unix-phil/unix-phil.pdf">Why the Unix Philosophy still matters</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1341
+Cached time: 20200315083412
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.324 seconds
+Real time usage: 0.419 seconds
+Preprocessor visited node count: 2112/1000000
+Post‐expand include size: 30341/2097152 bytes
+Template argument size: 5547/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 47846/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.141/10.000 seconds
+Lua memory usage: 4.79 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  362.213      1 -total
+ 47.65%  172.603      1 Template:Reflist
+ 21.48%   77.816      3 Template:Cite_book
+ 16.34%   59.175      1 Template:Short_description
+ 13.66%   49.477      3 Template:ISBN
+ 12.58%   45.573      7 Template:Quote
+ 11.65%   42.183      1 Template:Pagetype
+ 10.26%   37.172      2 Template:Citation
+  6.85%   24.811      6 Template:Cite_web
+  4.98%   18.037      3 Template:Catalog_lookup_link
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:223176-0!canonical and timestamp 20200315083412 and revision id 945646904
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Unix_philosophy&amp;oldid=945646904">https://en.wikipedia.org/w/index.php?title=Unix_philosophy&amp;oldid=945646904</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Software_development_philosophies" title="Category:Software development philosophies">Software development philosophies</a></li><li><a href="/wiki/Category:Unix" title="Category:Unix">Unix</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+	<h3 id="p-personal-label">Personal tools</h3>
+	<ul >
+		
+		<li id="pt-anonuserpage">Not logged in</li>
+		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Unix+philosophy" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Unix+philosophy" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+	</ul>
+</div>
+
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+	<h3 id="p-namespaces-label">Namespaces</h3>
+	<ul >
+		<li id="ca-nstab-main" class="selected"><a href="/wiki/Unix_philosophy" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Unix_philosophy" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+	</ul>
+</div>
+<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+	<h3 id="p-variants-label">
+		<span>Variants</span>
+	</h3>
+	<ul class="menu" >
+		
+	</ul>
+</div>
+
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+	<h3 id="p-views-label">Views</h3>
+	<ul >
+		<li id="ca-view" class="collapsible selected"><a href="/wiki/Unix_philosophy">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Unix_philosophy&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Unix_philosophy&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+	</ul>
+</div>
+<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+	<h3 id="p-cactions-label">
+		<span>More</span>
+	</h3>
+	<ul class="menu" >
+		
+	</ul>
+</div>
+<div id="p-search" role="search">
+	<h3 >
+		<label for="searchInput">Search</label>
+	</h3>
+	<form action="/w/index.php" id="searchform">
+		<div id="simpleSearch">
+			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+			<input type="hidden" value="Special:Search" name="title"/>
+			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+		</div>
+	</form>
+</div>
+
+        </div>
+    </div>
+    
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+	</div>
+	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+		<h3  id="p-navigation-label">
+			Navigation
+		</h3>
+		<div class="body">
+			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+		<h3  id="p-interaction-label">
+			Interaction
+		</h3>
+		<div class="body">
+			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+		<h3  id="p-tb-label">
+			Tools
+		</h3>
+		<div class="body">
+			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Unix_philosophy" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Unix_philosophy" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Unix_philosophy&amp;oldid=945646904" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Unix_philosophy&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q14652" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Unix_philosophy&amp;id=945646904" title="Information on how to cite this page">Cite this page</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+		<h3  id="p-coll-print_export-label">
+			Print/export
+		</h3>
+		<div class="body">
+			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Unix+philosophy">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Unix+philosophy&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Unix_philosophy&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+			
+		</div>
+	</div>
+	
+	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+		<h3  id="p-lang-label">
+			Languages
+		</h3>
+		<div class="body">
+			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%81%D9%84%D8%B3%D9%81%D8%A9_%D9%8A%D9%88%D9%86%D9%83%D8%B3" title="فلسفة يونكس – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Filosofie_Unixu" title="Filosofie Unixu – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Unix-Philosophie" title="Unix-Philosophie – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%81%D9%84%D8%B3%D9%81%D9%87_%DB%8C%D9%88%D9%86%DB%8C%DA%A9%D8%B3" title="فلسفه یونیکس – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Philosophie_d%27Unix" title="Philosophie d&#039;Unix – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%B2%A0%ED%95%99" title="유닉스 철학 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Filosofia_Unix" title="Filosofia Unix – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/UNIX%E5%93%B2%E5%AD%A6" title="UNIX哲学 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Unix-filosofien" title="Unix-filosofien – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Filosofia_Unix" title="Filosofia Unix – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%8F_Unix" title="Философия Unix – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Unix%E5%93%B2%E5%AD%A6" title="Unix哲学 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q14652#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+	</div>
+	
+</div>
+
+</div>
+
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 15 March 2020, at 08:34<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Unix_philosophy&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.324","walltime":"0.419","ppvisitednodes":{"value":2112,"limit":1000000},"postexpandincludesize":{"value":30341,"limit":2097152},"templateargumentsize":{"value":5547,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":47846,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  362.213      1 -total"," 47.65%  172.603      1 Template:Reflist"," 21.48%   77.816      3 Template:Cite_book"," 16.34%   59.175      1 Template:Short_description"," 13.66%   49.477      3 Template:ISBN"," 12.58%   45.573      7 Template:Quote"," 11.65%   42.183      1 Template:Pagetype"," 10.26%   37.172      2 Template:Citation","  6.85%   24.811      6 Template:Cite_web","  4.98%   18.037      3 Template:Catalog_lookup_link"]},"scribunto":{"limitreport-timeusage":{"value":"0.141","limit":"10.000"},"limitreport-memusage":{"value":5025332,"limit":52428800}},"cachereport":{"origin":"mw1341","timestamp":"20200315083412","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Unix philosophy","url":"https:\/\/en.wikipedia.org\/wiki\/Unix_philosophy","sameAs":"http:\/\/www.wikidata.org\/entity\/Q14652","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q14652","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2003-05-08T03:11:44Z","dateModified":"2020-03-15T08:34:12Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/1b\/Ken_Thompson_and_Dennis_Ritchie--1973.jpg","headline":"philosophy on developing software"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":109,"wgHostname":"mw1261"});});</script></body></html>

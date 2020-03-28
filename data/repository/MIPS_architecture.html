@@ -1,0 +1,1024 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>MIPS architecture - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn4I7wpAMNUAAoQc2xoAAACE","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"MIPS_architecture","wgTitle":"MIPS architecture","wgCurRevisionId":946587889,"wgRevisionId":946587889,"wgArticleId":20170,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: location","CS1 maint: archived copy as title","Articles to be expanded from February 2020","All articles to be expanded","Articles using small message boxes","All articles with unsourced statements","Articles with unsourced statements from June 2016","Commons category link is on Wikidata",
+"Use mdy dates from October 2018","Advanced RISC Computing","Computer-related introductions in 1985","Instruction set architectures","MIPS architecture","MIPS Technologies","Open microprocessors"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"MIPS_architecture","wgRelevantArticleId":20170,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q527464","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={
+"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks",
+"ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=MIPS_architecture&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=MIPS_architecture&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/MIPS_architecture"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-MIPS_architecture rootpage-MIPS_architecture skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">MIPS architecture</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox" style="width:22em"><caption>MIPS</caption><tbody><tr><th scope="row">Designer</th><td><a href="/wiki/MIPS_Technologies" title="MIPS Technologies">MIPS Technologies</a>, <a href="/wiki/Imagination_Technologies" title="Imagination Technologies">Imagination Technologies</a></td></tr><tr><th scope="row">Bits</th><td><a href="/wiki/64-bit" class="mw-redirect" title="64-bit">64-bit</a> (32 → 64)</td></tr><tr><th scope="row">Introduced</th><td>1985<span class="noprint">&#59;&#32;35&#160;years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">1985</span>)</span></td></tr><tr><th scope="row">Version</th><td>MIPS32/64 Release 6 (2014)</td></tr><tr><th scope="row"><a href="/wiki/Computer_architecture" title="Computer architecture">Design</a></th><td><a href="/wiki/Reduced_instruction_set_computer" title="Reduced instruction set computer">RISC</a></td></tr><tr><th scope="row">Type</th><td>Register-Register</td></tr><tr><th scope="row"><a href="/wiki/Instruction_set" class="mw-redirect" title="Instruction set">Encoding</a></th><td>Fixed</td></tr><tr><th scope="row"><a href="/wiki/Branch_(computer_science)" title="Branch (computer science)">Branching</a></th><td>Compare and branch</td></tr><tr><th scope="row"><a href="/wiki/Endianness" title="Endianness">Endianness</a></th><td><a href="/wiki/Bi-endian" class="mw-redirect" title="Bi-endian">Bi</a></td></tr><tr><th scope="row">Page size</th><td>4&#160;KB</td></tr><tr><th scope="row">Extensions</th><td><a href="/wiki/MDMX" title="MDMX">MDMX</a>, <a href="/wiki/MIPS-3D" title="MIPS-3D">MIPS-3D</a></td></tr><tr><th scope="row">Open</th><td>No</td></tr><tr><th colspan="2" style="text-align:center"><a href="/wiki/Processor_register" title="Processor register">Registers</a></th></tr><tr><th scope="row"><a href="/wiki/General_purpose_register" class="mw-redirect" title="General purpose register">General purpose</a></th><td>32</td></tr><tr><th scope="row"><a href="/wiki/Floating_point" class="mw-redirect" title="Floating point">Floating point</a></th><td>32</td></tr></tbody></table>
+<p><b>MIPS</b> (<b>Microprocessor without Interlocked Pipelined Stages</b>)<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> is a <a href="/wiki/Reduced_instruction_set_computer" title="Reduced instruction set computer">reduced instruction set computer</a> (RISC) <a href="/wiki/Instruction_set_architecture" title="Instruction set architecture">instruction set architecture</a> (ISA)<sup id="cite_ref-Price1995_2-0" class="reference"><a href="#cite_note-Price1995-2">&#91;2&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>A-1</span></sup><sup id="cite_ref-Sweetman1999_3-0" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>19</span></sup> developed by MIPS Computer Systems, now <a href="/wiki/MIPS_Technologies" title="MIPS Technologies">MIPS Technologies</a>, based in the United States.
+</p><p>There are multiple versions of MIPS: including MIPS I, II, III, IV, and V; as well as five releases of MIPS32/64 (for 32- and 64-bit implementations, respectively). The early MIPS architectures were 32-bit only; 64-bit versions were developed later. As of April 2017, the current version of MIPS is MIPS32/64 Release 6.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> MIPS32/64 primarily differs from MIPS I&#8211;V by defining the privileged kernel mode System Control Coprocessor in addition to the user mode architecture.
+</p><p>The MIPS architecture has several optional extensions. <a href="/wiki/MIPS-3D" title="MIPS-3D">MIPS-3D</a> which is a simple set of <a href="/wiki/Floating-point" class="mw-redirect" title="Floating-point">floating-point</a> <a href="/wiki/Instruction_set_architecture#SIMD_instruction" title="Instruction set architecture">SIMD instructions</a> dedicated to common 3D tasks,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> <a href="/wiki/MDMX" title="MDMX">MDMX</a> (MaDMaX) which is a more extensive integer <a href="/wiki/SIMD" title="SIMD">SIMD</a> instruction set using the 64-bit floating-point registers, MIPS16e which adds <a href="/w/index.php?title=Compressed_instructions&amp;action=edit&amp;redlink=1" class="new" title="Compressed instructions (page does not exist)">compression to the instruction stream</a> to make programs take up less room,<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> and MIPS MT, which adds <a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">multithreading</a> capability.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p><p><a href="/wiki/Computer_architecture" title="Computer architecture">Computer architecture</a> courses in universities and technical schools often study the MIPS architecture.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> The architecture greatly influenced later RISC architectures such as <a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Design"><span class="tocnumber">2</span> <span class="toctext">Design</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Versions"><span class="tocnumber">3</span> <span class="toctext">Versions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#MIPS_I"><span class="tocnumber">3.1</span> <span class="toctext">MIPS I</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="#Registers"><span class="tocnumber">3.1.1</span> <span class="toctext">Registers</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="#Instruction_formats"><span class="tocnumber">3.1.2</span> <span class="toctext">Instruction formats</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#CPU_instructions"><span class="tocnumber">3.1.3</span> <span class="toctext">CPU instructions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#MIPS_II"><span class="tocnumber">3.2</span> <span class="toctext">MIPS II</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#MIPS_III"><span class="tocnumber">3.3</span> <span class="toctext">MIPS III</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#MIPS_IV"><span class="tocnumber">3.4</span> <span class="toctext">MIPS IV</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#MIPS_V"><span class="tocnumber">3.5</span> <span class="toctext">MIPS V</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#MIPS32/MIPS64"><span class="tocnumber">3.6</span> <span class="toctext">MIPS32/MIPS64</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#microMIPS"><span class="tocnumber">3.7</span> <span class="toctext">microMIPS</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Application-specific_extensions"><span class="tocnumber">4</span> <span class="toctext">Application-specific extensions</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#Uses"><span class="tocnumber">5</span> <span class="toctext">Uses</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Simulators"><span class="tocnumber">6</span> <span class="toctext">Simulators</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#Further_reading"><span class="tocnumber">9</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Expand_section plainlinks metadata ambox mbox-small-left ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" decoding="async" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs expansion</b>. <small>You can help by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=">adding to it</a>.</small>  <small class="date-container"><i>(<span class="date">February 2020</span>)</i></small></div></td></tr></tbody></table>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="/wiki/MIPS_Technologies" title="MIPS Technologies">MIPS Technologies</a></div>
+<p>The first version of the MIPS architecture was designed by <a href="/wiki/MIPS_Computer_Systems" class="mw-redirect" title="MIPS Computer Systems">MIPS Computer Systems</a> for its <a href="/wiki/R2000_(microprocessor)" title="R2000 (microprocessor)">R2000</a> microprocessor, the first MIPS implementation. Both MIPS and the R2000 were introduced together in 1985.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2016)">citation needed</span></a></i>&#93;</sup> When MIPS II was introduced, <i>MIPS</i> was renamed <i>MIPS I</i> to distinguish it from the new version.<sup id="cite_ref-Sweetman1999_3-1" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>32</span></sup>
+</p><p><a href="/wiki/MIPS_Computer_Systems" class="mw-redirect" title="MIPS Computer Systems">MIPS Computer Systems</a>' <a href="/wiki/R6000" title="R6000">R6000</a> microprocessor (1989) was the first MIPS II implementation.<sup id="cite_ref-Sweetman1999_3-2" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>8</span></sup> Designed for servers, the R6000 was fabricated and sold by <a href="/wiki/Bipolar_Integrated_Technology" title="Bipolar Integrated Technology">Bipolar Integrated Technology</a>, but was a commercial failure. During the mid-1990s, many new 32-bit MIPS processors for <a href="/wiki/Embedded_system" title="Embedded system">embedded systems</a> were MIPS II implementations because the introduction of the 64-bit MIPS III architecture in 1991 left MIPS II as the newest 32-bit MIPS architecture until MIPS32 was introduced in 1999.A<sup id="cite_ref-Sweetman1999_3-3" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>19</span></sup>
+</p><p><a href="/wiki/MIPS_Computer_Systems" class="mw-redirect" title="MIPS Computer Systems">MIPS Computer Systems</a>' <a href="/wiki/R4000" title="R4000">R4000</a> microprocessor (1991) was the first MIPS III implementation. It was designed for use in personal, workstation, and server computers. MIPS Computer Systems aggressively promoted the MIPS architecture and R4000, establishing the <a href="/wiki/Advanced_Computing_Environment" title="Advanced Computing Environment">Advanced Computing Environment</a> (ACE) consortium to advance its <a href="/wiki/Advanced_RISC_Computing" title="Advanced RISC Computing">Advanced RISC Computing</a> (ARC) standard, which aimed to establish MIPS as the dominant personal computing platform. ARC found little success in personal computers, but the R4000 (and the R4400 derivative) were widely used in workstation and server computers, especially by its largest user, <a href="/wiki/Silicon_Graphics" title="Silicon Graphics">Silicon Graphics</a>. Other uses of the R4000 included high-end embedded systems and supercomputers. MIPS III was eventually implemented by a number of embedded microprocessors. <a href="/wiki/Quantum_Effect_Design" class="mw-redirect" title="Quantum Effect Design">Quantum Effect Design</a>'s <a href="/wiki/R4600" title="R4600">R4600</a> (1993) and its derivatives was widely used in high-end embedded systems and low-end workstations and servers. MIPS Technologies' <a href="/wiki/R4200" title="R4200">R4200</a> (1994), was designed for embedded systems, laptop, and personal computers. A derivative, the R4300i, fabricated by <a href="/wiki/NEC_Electronics" class="mw-redirect" title="NEC Electronics">NEC Electronics</a>, was used in the <a href="/wiki/Nintendo_64" title="Nintendo 64">Nintendo 64</a> game console. The Nintendo 64, along with the <a href="/wiki/PlayStation" title="PlayStation">PlayStation</a>, were among the highest volume users of MIPS architecture processors in the mid-1990s.
+</p><p>The first MIPS IV implementation was the MIPS Technologies <a href="/wiki/R8000" title="R8000">R8000</a> microprocessor chipset (1994). The design of the R8000 began at Silicon Graphics, Inc. and it was only used in high-end workstations and servers for scientific and technical applications where high performance on large floating-point workloads was important. Later implementations were the MIPS Technologies <a href="/wiki/R10000" title="R10000">R10000</a> (1996) and the Quantum Effect Devices <a href="/wiki/R5000" title="R5000">R5000</a> (1996) and <a href="/w/index.php?title=RM7000&amp;action=edit&amp;redlink=1" class="new" title="RM7000 (page does not exist)">RM7000</a> (1998). The R10000, fabricated and sold by NEC Electronics and Toshiba, and its derivatives were used by NEC, Pyramid Technology, Silicon Graphics, Inc., and Tandem Computers (among others) in workstations, servers, and supercomputers. The R5000 and R7000 found use in high-end embedded systems, personal computers, and low-end workstations and servers. A derivative of the R5000 from Toshiba, the R5900, was used in Sony Computer Entertainment's <a href="/wiki/Emotion_Engine" title="Emotion Engine">Emotion Engine</a>, which powered its <a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a> game console.
+</p><p>Announced on October 21, 1996 at the Microprocessor Forum 1996 alongside the <a href="/wiki/MDMX" title="MDMX">MIPS Digital Media Extensions</a> (MDMX) extension, MIPS V was designed to improve the performance of 3D graphics transformations.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> In the mid-1990s, a major use of non-embedded MIPS microprocessors were graphics workstations from SGI. MIPS V was completed by the integer-only MDMX extension to provide a complete system for improving the performance of 3D graphics applications.<sup id="cite_ref-MPR:1996-11-18_11-0" class="reference"><a href="#cite_note-MPR:1996-11-18-11">&#91;11&#93;</a></sup> MIPS V implementations were never introduced. On May 12, 1997, SGI announced the "H1" ("Beast") and "H2" ("Capitan") microprocessors. The former was to have been the first MIPS V implementation, and was due to be introduced in the first half of 1999.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> The "H1" and "H2" projects were later combined and were eventually canceled in 1998. While there have not been any MIPS V implementations, MIPS64 Release 1 (1999) was based on MIPS V and retains all of its features as an optional Coprocessor 1 (FPU) feature called Paired-Single.
+</p><p>When MIPS Technologies was spun-out of <a href="/wiki/Silicon_Graphics" title="Silicon Graphics">Silicon Graphics</a> in 1998, it refocused on the embedded market. Up to MIPS V, each successive version was a strict superset of the previous version, but this property was found to be a problem,<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2016)">citation needed</span></a></i>&#93;</sup> and the architecture definition was changed to define a 32-bit and a 64-bit architecture: MIPS32 and MIPS64. Both were introduced in 1999.<sup id="cite_ref-mips32-and-mips64_13-0" class="reference"><a href="#cite_note-mips32-and-mips64-13">&#91;13&#93;</a></sup>  MIPS32 is based on MIPS II with some additional features from MIPS III, MIPS IV, and MIPS V; MIPS64 is based on MIPS V.<sup id="cite_ref-mips32-and-mips64_13-1" class="reference"><a href="#cite_note-mips32-and-mips64-13">&#91;13&#93;</a></sup> <a href="/wiki/Nippon_Electric_Corporation" class="mw-redirect" title="Nippon Electric Corporation">NEC</a>, <a href="/wiki/Toshiba" title="Toshiba">Toshiba</a> and <a href="/wiki/SiByte" class="mw-redirect" title="SiByte">SiByte</a> (later acquired by <a href="/wiki/Broadcom_Corporation" title="Broadcom Corporation">Broadcom</a>) each obtained licenses for MIPS64 as soon as it was announced. <a href="/wiki/Philips" title="Philips">Philips</a>, <a href="/wiki/LSI_Corporation" title="LSI Corporation">LSI Logic</a>, <a href="/wiki/Integrated_Device_Technology" title="Integrated Device Technology">IDT</a>, <a href="/wiki/RMI_Corporation" title="RMI Corporation">Raza Microelectronics, Inc.</a>, <a href="/wiki/Cavium" title="Cavium">Cavium</a>, <a href="/wiki/Loongson" title="Loongson">Loongson Technology</a> and <a href="/wiki/Ingenic_Semiconductor" title="Ingenic Semiconductor">Ingenic Semiconductor</a> have since joined them. MIPS32/MIPS64 Release 5 was announced on December 6, 2012.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> Release 4 was skipped because the number four is perceived as <a href="/wiki/Tetraphobia" title="Tetraphobia">unlucky</a> in many Asian cultures.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</p><p>In December 2018, Wave Computing, the new owner of the MIPS architecture, announced that MIPS ISA would be open-sourced in a program dubbed the MIPS Open initiative.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> The program was intended to open up access to the most recent versions of both the 32-bit and 64-bit designs making them available without any licensing or royalty fees as well as granting participants licenses to existing MIPS patents.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p><p>In March 2019, one version of the architecture was made available under a royalty-free license,<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> but later that year the program was shut down again.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Design">Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=2" title="Edit section: Design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Expand_section plainlinks metadata ambox mbox-small-left ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" decoding="async" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs expansion</b>. <small>You can help by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=">adding to it</a>.</small>  <small class="date-container"><i>(<span class="date">February 2020</span>)</i></small></div></td></tr></tbody></table>
+<p>MIPS is a modular architecture supporting up to four <a href="/wiki/Coprocessor" title="Coprocessor">coprocessors</a> (CP0/1/2/3). In MIPS terminology, CP0 is the System Control Coprocessor (an essential part of the processor that is implementation-defined in MIPS I&#8211;V), CP1 is an optional <a href="/wiki/Floating-point_unit" title="Floating-point unit">floating-point unit</a> (FPU) and CP2/3 are optional implementation-defined coprocessors (MIPS III removed CP3 and reused its opcodes for other purposes). For example, in the <a href="/wiki/PlayStation_(console)" title="PlayStation (console)">PlayStation</a> video game console, CP2 is the <a href="/wiki/PlayStation_technical_specifications#Central_processing_unit_(CPU)" title="PlayStation technical specifications">Geometry Transformation Engine</a> (GTE), which accelerates the processing of geometry in 3D computer graphics.
+</p>
+<h2><span class="mw-headline" id="Versions">Versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=3" title="Edit section: Versions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="MIPS_I">MIPS I</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=4" title="Edit section: MIPS I">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPS is a <a href="/wiki/Load/store_architecture" class="mw-redirect" title="Load/store architecture">load/store architecture</a> (also known as a <i>register-register architecture</i>); except for the <a href="/wiki/Load/store_instructions" class="mw-redirect" title="Load/store instructions">load/store instructions</a> used to access <a href="/wiki/Computer_memory" title="Computer memory">memory</a>, all instructions operate on the registers.
+</p>
+<h4><span class="mw-headline" id="Registers">Registers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=5" title="Edit section: Registers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>MIPS I has thirty-two 32-bit general-purpose registers (GPR). Register $0 is hardwired to zero and writes to it are discarded. Register $31 is the link register. For integer multiplication and division instructions, which run asynchronously from other instructions, a pair of 32-bit registers, <i>HI</i> and <i>LO</i>, are provided. There is a small set of instructions for copying data between the general-purpose registers and the HI/LO registers.
+</p><p>The program counter has 32 bits. The two low-order bits always contain zero since MIPS I instructions are 32 bits long and are aligned to their natural word boundaries.
+</p>
+<h4><span class="mw-headline" id="Instruction_formats">Instruction formats</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=6" title="Edit section: Instruction formats">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>Instructions are divided into three types: R, I and J. Every instruction starts with a 6-bit opcode. In addition to the opcode, R-type instructions specify three registers, a shift amount field, and a function field; I-type instructions specify two registers and a 16-bit immediate value; J-type instructions follow the opcode with a 26-bit jump target.<sup id="cite_ref-Price1995_2-1" class="reference"><a href="#cite_note-Price1995-2">&#91;2&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>A-174</span></sup>
+</p><p>The following are the three formats used for the core instruction set:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Type</th>
+<th colspan="6">-31- &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; format (bits) &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; -0-
+</th></tr>
+<tr align="center">
+<td><b>R</b></td>
+<td>opcode (6)</td>
+<td>rs (5)</td>
+<td>rt (5)</td>
+<td>rd (5)</td>
+<td>shamt (5)</td>
+<td>funct (6)
+</td></tr>
+<tr align="center">
+<td><b>I</b></td>
+<td>opcode (6)</td>
+<td>rs (5)</td>
+<td>rt (5)</td>
+<td colspan="3">immediate (16)
+</td></tr>
+<tr align="center">
+<td><b>J</b></td>
+<td>opcode (6)</td>
+<td colspan="5">address (26)
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="CPU_instructions">CPU instructions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=7" title="Edit section: CPU instructions">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p>MIPS I has instructions that load and store 8-bit bytes, 16-bit halfwords, and 32-bit words. Only one <a href="/wiki/Addressing_mode" title="Addressing mode">addressing mode</a> is supported: base + displacement. Since MIPS I is a 32-bit architecture, loading quantities fewer than 32 bits requires the datum to be either signed- or zero-extended to 32 bits. The load instructions suffixed by "unsigned" perform zero extension; otherwise sign extension is performed. Load instructions source the base from the contents of a GPR (rs) and write the result to another GPR (rt). Store instructions source the base from the contents of a GPR (rs) and the store data from another GPR (rt). All load and store instructions compute the memory address by summing the base with the sign-extended 16-bit immediate. MIPS I requires all memory accesses to be aligned to their natural word boundaries, otherwise an exception is signaled. To support efficient unaligned memory accesses, there are load/store word instructions suffixed by "left" or "right". All load instructions are followed by a <a href="/wiki/Load_delay_slot" class="mw-redirect" title="Load delay slot">load delay slot</a>. The instruction in the load delay slot cannot use the data loaded by the load instruction. The load delay slot can be filled with an instruction that is not dependent on the load; a nop is substituted if such an instruction cannot be found.
+</p><p>MIPS I has instructions to perform addition and subtraction. These instructions source their operands from two GPRs (rs and rt), and write the result to a third GPR (rd). Alternatively, addition can source one of the operands from a 16-bit immediate (which is sign-extended to 32 bits). The instructions for addition and subtraction have two variants: by default, an exception is signaled if the result overflows; instructions with the "unsigned" suffix do not signal an exception. The overflow check interprets the result as a 32-bit two's complement integer. MIPS I has instructions to perform <a href="/wiki/Bitwise_operation" title="Bitwise operation">bitwise</a> logical AND, OR, XOR, and NOR. These instructions source their operands from two GPRs and write the result to a third GPR. The AND, OR, and XOR instructions can alternatively source one of the operands from a 16-bit immediate (which is zero-extended to 32 bits). The Set on <i>relation</i> instructions write one or zero to the destination register if the specified relation is true or false. These instructions source their operands from two GPRs or one GPR and a 16-bit immediate (which is sign-extended to 32 bits), and write the result to a third GPR. By default, the operands are interpreted as signed integers. The variants of these instructions that are suffixed with "unsigned" interpret the operands as unsigned integers (even those that source an operand from the sign-extended 16-bit immediate).
+</p><p>The Load Immediate Upper instruction copies the 16-bit immediate into the high-order 16 bits of a GPR. It is used in conjunction with the Or Immediate instruction to load a 32-bit immediate into a register.
+</p><p>MIPS I has instructions to perform left and right logical shifts and right arithmetic shifts. The operand is obtained from a GPR (rt), and the result is written to another GPR (rd). The shift distance is obtained from either a GPR (rs) or a 5-bit "shift amount" (the "sa" field).
+</p><p>MIPS I has instructions for signed and unsigned integer multiplication and division. These instructions source their operands from two GPRs and write their results to a pair of 32-bit registers called HI and LO, since they may execute separately from (and concurrently with) the other CPU instructions. For multiplication, the high- and low-order halves of the 64-bit product is written to HI and LO (respectively). For division, the quotient is written to LO and the remainder to HI. To access the results, a pair of instructions (Move from HI and Move from LO) is provided to copy the contents of HI or LO to a GPR. These instructions are interlocked: reads of HI and LO do not proceed past an unfinished arithmetic instruction that will write to HI and LO. Another pair of instructions (Move to HI or Move to LO) copies the contents of a GPR to HI and LO. These instructions are used to restore HI and LO to their original state after exception handling. Instructions that read HI or LO must be separated by two instructions that do not write to HI or LO.
+</p><p>All MIPS I control flow instructions are followed by a <a href="/wiki/Branch_delay_slot" class="mw-redirect" title="Branch delay slot">branch delay slot</a>. Unless the branch delay slot is filled by an instruction performing useful work, an nop is substituted. MIPS I branch instructions compare the contents of a GPR (rs) against zero or another GPR (rt) as signed integers and branch if the specified condition is true. Control is transferred to the address computed by shifting the 16-bit offset left by two bits, sign-extending the 18-bit result, and adding the 32-bit sign-extended result to the sum of the program counter (instruction address) and 8<sub>10</sub>. Jumps have two versions: absolute and register-indirect. Absolute jumps ("Jump" and "Jump and Link") compute the address control is transferred to by shifting the 26-bit instr_index left by two bits and concatenating the 28-bit result with the four high-order bits of the address of the instruction in the branch delay slot. Register-indirect jumps transfer control to the instruction at the address sourced from a GPR (rs). The address sourced from the GPR must be word-aligned, else an exception is signaled after the instruction in the branch delay slot is executed. Branch and jump instructions that link (except for "Jump and Link Register") save the return address to GPR 31. The "Jump and Link Register" instruction permits the return address to be saved to any writable GPR.
+</p><p>MIPS I has two instructions for software to signal an exception: System Call and Breakpoint. System Call is used by user mode software to make kernel calls; and Breakpoint is used to transfer control to a debugger via the kernel's exception handler. Both instructions have a 20-bit Code field that can contain operating environment-specific information for the exception handler.
+</p><p>MIPS has 32 floating-point registers. Two registers are paired for double precision numbers. Odd numbered registers cannot be used for arithmetic or branching, just as part of a double precision register pair, resulting in 16 usable registers for most instructions (moves/copies and loads/stores were not affected).
+</p><p>Single precision is denoted by the .s suffix, while double precision is denoted by the .d suffix.
+</p>
+<h3><span class="mw-headline" id="MIPS_II">MIPS II</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=8" title="Edit section: MIPS II">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPS II removed the load delay slot<sup id="cite_ref-Sweetman1999_3-4" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>41</span></sup> and added several sets of instructions. For shared-memory multiprocessing, the <i>Synchronize Shared Memory</i>, <i>Load Linked Word</i>, and <i>Store Conditional Word</i> instructions were added. A set of Trap-on-Condition instructions were added. These instructions caused an exception if the evaluated condition is true. All existing branch instructions were given <i>branch-likely</i> versions that executed the instruction in the branch delay slot only if the branch is taken.<sup id="cite_ref-Sweetman1999_3-5" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>40</span></sup> These instructions improve performance in certain cases by allowing useful instructions to fill the branch delay slot.<sup id="cite_ref-Sweetman1999_3-6" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>212</span></sup> Doubleword load and store instructions for COP1&#8211;3 were added. Consistent with other memory access instructions, these loads and stores required the doubleword to be naturally aligned.
+</p><p>The instruction set for the floating point coprocessor also had several instructions added to it. An IEEE 754-compliant floating-point square root instruction was added. It supported both single- and double-precision operands. A set of instructions that converted single- and double-precision floating-point numbers to 32-bit words were added. These complemented the existing conversion instructions by allowing the IEEE rounding mode to be specified by the instruction instead of the Floating Point Control and Status Register.
+</p>
+<h3><span class="mw-headline" id="MIPS_III">MIPS III</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=9" title="Edit section: MIPS III">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPS III is a <a href="/wiki/Backwards-compatible" class="mw-redirect" title="Backwards-compatible">backwards-compatible</a> extension of MIPS II that added support for <a href="/wiki/64-bit" class="mw-redirect" title="64-bit">64-bit</a> memory addressing and integer operations. The 64-bit data type is called a doubleword, and MIPS III extended the general-purpose registers, HI/LO registers, and program counter to 64 bits to support it. New instructions were added to load and store doublewords, to perform integer addition, subtraction, multiplication, division, and shift operations on them, and to move doubleword between the GPRs and HI/LO registers. Existing instructions originally defined to operate on 32-bit words were redefined, where necessary, to sign-extend the 32-bit results to permit words and doublewords to be treated identically by most instructions. Among those instructions redefined was <i>Load Word</i>. In MIPS III it sign-extends words to 64 bits. To complement <i>Load Word</i>, a version that zero-extends was added.
+</p><p>The R instruction format's inability to specify the full shift distance for 64-bit shifts (its 5-bit shift amount field is too narrow to specify the shift distance for doublewords) required MIPS III to provide three 64-bit versions of each MIPS I shift instruction. The first version is a 64-bit version of the original shift instructions, used to specify constant shift distances of 0&#8211;31 bits. The second version is similar to the first, but adds 32<sub>10</sub> the shift amount field's value so that constant shift distances of 32&#8211;64 bits can be specified. The third version obtains the shift distance from the six low-order bits of a GPR.
+</p><p>MIPS III added a <i>supervisor</i> privilege level in between the existing kernel and user privilege levels. This feature only affected the implementation-defined System Control Processor (Coprocessor 0).
+</p><p>MIPS III removed the Coprocessor 3 (CP3) support instructions, and reused its opcodes for the new doubleword instructions. The remaining coprocessors gained instructions to move doublewords between coprocessor registers and the GPRs. The floating general registers (FGRs) were extended to 64 bits and the requirement for instructions to use even-numbered register only was removed. This is incompatible with earlier versions of the architecture; a bit in the floating-point control/status register is used to operate the MIPS III floating-point unit (FPU) in a MIPS I- and II-compatible mode. The floating-point control registers were not extended for compatibility. The only new floating-point instructions added were those to copy doublewords between the CPU and FPU convert single- and double-precision floating-point numbers into doubleword integers and vice versa.
+</p>
+<h3><span class="mw-headline" id="MIPS_IV">MIPS IV</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=10" title="Edit section: MIPS IV">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPS IV is the fourth version of the architecture. It is a superset of MIPS III and is compatible with all existing versions of MIPS. MIPS IV was designed to mainly improve floating-point (FP) performance. To improve access to operands, an indexed <a href="/wiki/Addressing_mode" title="Addressing mode">addressing mode</a> (base + index, both sourced from GPRs) for FP loads and stores was added, as were prefetch instructions for performing memory prefetching and specifying cache hints (these supported both the base + offset and base + index addressing modes).
+</p><p>MIPS IV added several features to improve instruction-level parallelism. To alleviate the bottleneck caused by a single condition bit, seven condition code bits were added to the floating-point control and status register, bringing the total to eight. FP comparison and branch instructions were redefined so they could specify which condition bit was written or read (respectively); and the delay slot in between an FP branch that read the condition bit written to by a prior FP comparison was removed. Support for <a href="/wiki/Branch_predication" class="mw-redirect" title="Branch predication">partial predication</a> was added in the form of conditional move instructions for both GPRs and FPRs; and an implementation could choose between having precise or imprecise exceptions for IEEE 754 traps.
+</p><p>MIPS IV added several new FP arithmetic instructions for both single- and double-precision FPNs: fused-multiply add or subtract, reciprocal, and reciprocal square-root. The FP fused-multiply add or subtract instructions perform either one or two roundings (it is implementation-defined), to exceed or meet IEEE 754 accuracy requirements (respectively). The FP reciprocal and reciprocal square-root instructions do not comply with IEEE 754 accuracy requirements, and produce results that differ from the required accuracy by one or two units of last place (it is implementation defined). These instructions serve applications where instruction latency is more important than accuracy.
+</p>
+<h3><span class="mw-headline" id="MIPS_V">MIPS V</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=11" title="Edit section: MIPS V">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>MIPS V added a new data type, the Paired Single (PS), which consisted of two single-precision (32-bit) floating-point numbers stored in the existing 64-bit floating-point registers. Variants of existing floating-point instructions for arithmetic, compare and conditional move were added to operate on this data type in a SIMD fashion. New instructions were added for loading, rearranging and converting PS data.<sup id="cite_ref-Sweetman1999_3-7" class="reference"><a href="#cite_note-Sweetman1999-3">&#91;3&#93;</a></sup><sup class="reference" style="white-space:nowrap;">:<span>426–429</span></sup> It was the first instruction set to exploit floating-point SIMD with existing resources.<sup id="cite_ref-MPR:1996-11-18_11-1" class="reference"><a href="#cite_note-MPR:1996-11-18-11">&#91;11&#93;</a></sup>
+</p>
+<h3><span id="MIPS32.2FMIPS64"></span><span class="mw-headline" id="MIPS32/MIPS64">MIPS32/MIPS64</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=12" title="Edit section: MIPS32/MIPS64">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The first release of MIPS32, based on MIPS II, added conditional moves, <a href="/wiki/Instruction_prefetch" class="mw-redirect" title="Instruction prefetch">prefetch instructions</a>, and other features from the R4000 and R5000 families of 64-bit processors.<sup id="cite_ref-mips32-and-mips64_13-2" class="reference"><a href="#cite_note-mips32-and-mips64-13">&#91;13&#93;</a></sup>  The first release of MIPS64 adds a MIPS32 mode to run 32-bit code.<sup id="cite_ref-mips32-and-mips64_13-3" class="reference"><a href="#cite_note-mips32-and-mips64-13">&#91;13&#93;</a></sup> The MUL and MADD (<a href="/wiki/Multiply-add" class="mw-redirect" title="Multiply-add">multiply-add</a>) instructions, previously available in some implementations, were added to the MIPS32 and MIPS64 specifications, as were <a href="/wiki/Cache_control_instruction" title="Cache control instruction">cache control instructions</a>.<sup id="cite_ref-mips32-and-mips64_13-4" class="reference"><a href="#cite_note-mips32-and-mips64-13">&#91;13&#93;</a></sup>
+</p><p>MIPS32/MIPS64 Release 6 in 2014 added the following:<sup id="cite_ref-22" class="reference"><a href="#cite_note-22">&#91;22&#93;</a></sup>
+</p>
+<ul><li>a new family of branches with no delay slot:
+<ul><li>unconditional branches (BC) and branch-and-link (BALC) with a 26-bit offset,</li>
+<li>conditional branch on zero/non-zero with a 21-bit offset,</li>
+<li>full set of signed and unsigned conditional branches compare between two registers (e.g. BGTUC) or a register against zero (e.g. BGTZC),</li>
+<li>full set of branch-and-link which compare a register against zero (e.g. BGTZALC).</li></ul></li>
+<li>index jump instructions with no delay slot designed to support large absolute addresses.</li>
+<li>instructions to load 16-bit immediates at bit position 16, 32 or 48, allowing to easily generate large constants.</li>
+<li>PC-relative load instructions, as well as address generation with large (PC-relative) offsets.</li>
+<li>bit-reversal and byte-alignment instructions (previously only available with the DSP extension).</li>
+<li>multiply and divide instructions redefined so that they use a single register for their result).</li>
+<li>instructions generating truth values now generate all zeroes or all ones instead of just clearing/setting the 0-bit,</li>
+<li>instructions using a truth value now only interpret all-zeroes as false instead of just looking at the 0-bit.</li></ul>
+<p>Removed infrequently used instructions:
+</p>
+<ul><li>some conditional moves</li>
+<li><i>branch likely</i> instructions (deprecated in previous releases).</li>
+<li>integer overflow trapping instructions with 16-bit immediate</li>
+<li>integer accumulator instructions (together HI/LO registers, moved to the DSP Application-Specific Extension)</li>
+<li>unaligned load instructions (LWL and LWR), (requiring that most ordinary loads and stores support misaligned access, possibly via trapping and with the addition of a new instruction (BALIGN))</li></ul>
+<p>Reorganized the instruction encoding, freeing space for future expansions.
+</p>
+<h3><span class="mw-headline" id="microMIPS">microMIPS</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=13" title="Edit section: microMIPS">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The microMIPS32/64 architectures are supersets of the MIPS32 and MIPS64 architectures (respectively) designed to replace the MIPS16e ASE. A disadvantage of MIPS16e is that it requires a mode switch before any of its 16-bit instructions can be processed. microMIPS adds versions of the most-frequently used 32-bit instructions that are encoded as 16-bit instructions. This allows programs to intermix 16- and 32-bit instructions without having to switch modes. microMIPS was introduced alongside of MIPS32/64 Release 3, and each subsequent release of MIPS32/64 has a corresponding microMIPS32/64 version. A processor may implement microMIPS32/64 or both microMIPS32/64 and its corresponding MIPS32/64 subset. Starting with MIPS32/64 Release 6, support for MIPS16e ended, and microMIPS is the only form of code compression in MIPS.
+</p>
+<h2><span class="mw-headline" id="Application-specific_extensions">Application-specific extensions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=14" title="Edit section: Application-specific extensions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The base MIPS32 and MIPS64 architectures can be supplemented with a number of optional architectural extensions, which are collectively referred to as <i>application-specific extensions</i> (ASEs). These ASEs provide features that improve the efficiency and performance of certain workloads, such as <a href="/wiki/Digital_signal_processing" title="Digital signal processing">digital signal processing</a>.
+</p>
+<dl><dt>MIPS MCU</dt>
+<dd>Enhancements for microcontroller applications. The MCU ASE (application-specific extension) has been developed to extend the interrupt controller support, reduce the interrupt latency and enhance the I/O peripheral control function typically required in microcontroller system designs.</dd></dl>
+<ul><li>Separate priority and vector generation</li>
+<li>Supports up to 256 interrupts in EIC (External Interrupt Controller) mode and eight hardware interrupt pins</li>
+<li>Provides 16-bit vector offset address</li>
+<li>Pre-fetching of the interrupt exception vector</li>
+<li>Automated Interrupt Prologue – adds hardware to save and update system status before the interrupt handling routine</li>
+<li>Automated Interrupt Epilogue – restores the system state previously stored in the stack for returning from the interrupt.</li>
+<li>Interrupt Chaining – supports the service of pending interrupts without the need to exit the initial interrupt routine, saving the cycles required to store and restore multiple active interrupts</li>
+<li>Supports speculative pre-fetching of the interrupt vector address. Reduces the number of interrupt service cycles by overlapping memory accesses with pipeline flushes and exception prioritization</li>
+<li>Includes atomic bit set/clear instructions which enables bits within an I/O register that are normally used to monitor or control external peripheral functions to be modified without interruption, ensuring the action is performed securely.</li></ul>
+<dl><dt>MIPS16</dt>
+<dd>MIPS16 is an Application-Specific Extension for MIPS I through to V designed by <a href="/wiki/LSI_Logic" class="mw-redirect" title="LSI Logic">LSI Logic</a> and <a href="/wiki/MIPS_Technologies" title="MIPS Technologies">MIPS Technologies</a>, announced on October 21, 1996 alongside its first implementation, the LSI Logic TinyRISC processor.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup> MIPS16 was subsequently licensed by <a href="/wiki/NEC_Electronics" class="mw-redirect" title="NEC Electronics">NEC Electronics</a>, <a href="/wiki/Philips_Semiconductors" class="mw-redirect" title="Philips Semiconductors">Philips Semiconductors</a>, and <a href="/wiki/Toshiba" title="Toshiba">Toshiba</a> (among others); and implemented as an extension to the MIPS I, II, an III architectures. MIPS16 decreases the size of application by up to 40% by using 16-bit instructions instead of 32-bit instructions' and also improves power efficiency, the instruction cache hit rate, and is equivalent in performance to its base architecture.<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup> It is supported by hardware and software development tools from MIPS Technologies and other providers. MIPS16e is an improved version of MIPS16 first supported by MIPS32 and MIPS64 Release 1. MIPS16e2 is an improved version of MIPS16 that is supported by MIPS32 and MIPS64 (up to Release 5). Release 6 replaced it with microMIPS.</dd>
+<dt>MIPS DSP</dt>
+<dd>The DSP ASE is an optional extension to the MIPS32/MIPS64 Release&#160;2 and newer instruction sets which can be used to accelerate a large range of "media" computations—particularly audio and video. The DSP module comprises a set of instructions and state in the integer pipeline and requires minimal additional logic to implement in MIPS processor cores. Revision 2 of the ASE was introduced in the second half of 2006. This revision adds extra instructions to the original ASE, but is otherwise backwards-compatible with it.<sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup> Unlike the bulk of the MIPS architecture, it's a fairly irregular set of operations, many chosen for a particular relevance to some key algorithm. Its main novel features (vs original MIPS32):<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup></dd></dl>
+<ul><li>Saturating arithmetic (when a calculation overflows, deliver the representable number closest to the non-overflowed answer).</li>
+<li>Fixed-point arithmetic on signed 32- and 16-bit fixed-point fractions with a range of -1 to +1 (these are widely called "Q31" and "Q15").</li>
+<li>The existing integer multiplication and multiply-accumulate instructions, which deliver results into a double-size accumulator (called "hi/lo" and 64 bits on MIPS32 CPUs). The DSP ASE adds three more accumulators, and some different flavours of multiply-accumulate.</li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a> instructions operating on 4 x unsigned bytes or 2 x 16-bit values packed into a 32-bit register (the 64-bit variant of the DSP ASE supports larger vectors, too).</li>
+<li>SIMD operations are basic arithmetic, shifts and some multiply-accumulate type operations.</li></ul>
+<dl><dt>MIPS SIMD architecture</dt>
+<dd>Instruction set extensions designed to accelerate multimedia.</dd></dl>
+<ul><li>32 vector registers of 16 x 8-bit, 8 x 16-bit, 4 x 32-bit, and 2 x 64 bit vector elements</li>
+<li>Efficient vector parallel arithmetic operations on integer, fixed-point and floating-point data</li>
+<li>Operations on absolute value operands</li>
+<li>Rounding and saturation options available</li>
+<li>Full precision multiply and multiply-add</li>
+<li>Conversions between integer, floating-point, and fixed-point data</li>
+<li>Complete set of vector-level compare and branch instructions with no condition flag</li>
+<li>Vector (1D) and array (2D) shuffle operations</li>
+<li>Typed load and store instructions for <a href="/wiki/Endianness" title="Endianness">endian</a>-independent operation</li>
+<li>IEEE Standard for Floating-Point Arithmetic 754-2008 compliant</li>
+<li>Element precise floating-point exception signaling</li>
+<li>Pre-defined scalable extensions for chips with more gates/transistors</li>
+<li>Accelerates compute-intensive applications in conjunction with leveraging generic compiler support</li>
+<li>Software-programmable solution for consumer electronics applications or functions not covered by dedicated hardware</li>
+<li>Emerging data mining, feature extraction, image and video processing, and human-computer interaction applications</li>
+<li>High-performance scientific computing</li></ul>
+<dl><dt>MIPS virtualization</dt>
+<dd>Hardware supported virtualization technology.</dd>
+<dt>MIPS multi-threading</dt>
+<dd>Each multi-threaded MIPS core can support up to two VPEs (Virtual Processing Elements) which share a single pipeline as well as other hardware resources. However, since each VPE includes a complete copy of the processor state as seen by the software system, each VPE appears as a complete standalone processor to an <a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">SMP</a> Linux operating system. For more fine-grained thread processing applications, each VPE is capable of supporting up to nine TCs allocated across two VPEs. The TCs share a common execution unit but each has its own program counter and core register files so that each can handle a thread from the software. The MIPS MT architecture also allows the allocation of processor cycles to threads, and sets the relative thread priorities with an optional Quality of Service (<a href="/wiki/Quality_of_service" title="Quality of service">QoS</a>) manager block. This enables two prioritization mechanisms that determine the flow of information across the bus. The first mechanism allows the user to prioritize one thread over another. The second mechanism is used to allocate a specified ratio of the cycles to specific threads over time. The combined use of both mechanisms allows effective allocation of bandwidth to the set of threads, and better control of latencies. In real-time systems, system-level determinism is very critical, and the QoS block facilitates improvement of the predictability of a system. Hardware designers of advanced systems may replace the standard QoS block provided by MIPS Technologies with one that is specifically tuned for their application.</dd>
+<dt>SmartMIPS</dt>
+<dd>SmartMIPS is an Application-Specific Extension (ASE) designed by <a href="/wiki/Gemplus_International" class="mw-redirect" title="Gemplus International">Gemplus International</a> and MIPS Technologies to improve performance and reduce memory consumption for <a href="/wiki/Smart_card" title="Smart card">smart card</a> software. It is supported by MIPS32 only, since smart cards do not require the capabilities of MIPS64 processors. Few smart cards use SmartMIPS.</dd>
+<dt><a href="/wiki/MDMX" title="MDMX">MDMX</a></dt>
+<dt><a href="/wiki/MIPS-3D" title="MIPS-3D">MIPS-3D</a></dt></dl>
+<h2><span class="mw-headline" id="Uses">Uses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=15" title="Edit section: Uses">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Expand_section plainlinks metadata ambox mbox-small-left ambox-content" role="presentation"><tbody><tr><td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" decoding="async" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td><td class="mbox-text"><div class="mbox-text-span">This section <b>needs expansion</b>. <small>You can help by <a class="external text" href="https://en.wikipedia.org/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=">adding to it</a>.</small>  <small class="date-container"><i>(<span class="date">February 2020</span>)</i></small></div></td></tr></tbody></table>
+<p>MIPS processors are used in <a href="/wiki/Embedded_system" title="Embedded system">embedded systems</a> such as <a href="/wiki/Residential_gateway" title="Residential gateway">residential gateways</a> and <a href="/wiki/Router_(computing)" title="Router (computing)">routers</a>. Originally, MIPS was designed for general-purpose computing. During the 1980s and 1990s, MIPS processors for <a href="/wiki/Personal_computer" title="Personal computer">personal</a>, <a href="/wiki/Workstation" title="Workstation">workstation</a>, and <a href="/wiki/Server_(computing)" title="Server (computing)">server</a> computers were used by many companies such as <a href="/wiki/Digital_Equipment_Corporation" title="Digital Equipment Corporation">Digital Equipment Corporation</a>, <a href="/wiki/MIPS_Computer_Systems" class="mw-redirect" title="MIPS Computer Systems">MIPS Computer Systems</a>, <a href="/wiki/NEC" title="NEC">NEC</a>, <a href="/wiki/Pyramid_Technology" title="Pyramid Technology">Pyramid Technology</a>, <a href="/wiki/SiCortex" title="SiCortex">SiCortex</a>, <a href="/wiki/Siemens_Nixdorf_Informationssysteme" title="Siemens Nixdorf Informationssysteme">Siemens Nixdorf</a>, <a href="/wiki/Silicon_Graphics" title="Silicon Graphics">Silicon Graphics</a>, and <a href="/wiki/Tandem_Computers" title="Tandem Computers">Tandem Computers</a>.
+</p><p>Historically, <a href="/wiki/Video_game_console" title="Video game console">video game consoles</a> such as the <a href="/wiki/Nintendo_64" title="Nintendo 64">Nintendo 64</a>, <a href="/wiki/Sony" title="Sony">Sony</a> <a href="/wiki/PlayStation_(console)" title="PlayStation (console)">PlayStation</a>, <a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a>, and <a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a> used MIPS processors. MIPS processors also used to be popular in <a href="/wiki/Supercomputer" title="Supercomputer">supercomputers</a> during the 1990s, but all such systems have dropped off the <a href="/wiki/TOP500" title="TOP500">TOP500</a> list. These uses were complemented by embedded applications at first, but during the 1990s, MIPS became a major presence in the embedded processor market, and by the 2000s, most MIPS processors were for these applications.
+</p><p>In the mid- to late-1990s, it was estimated that one in three RISC microprocessors produced was a MIPS processor.<sup id="cite_ref-Victor_P._Rubio,_2004_27-0" class="reference"><a href="#cite_note-Victor_P._Rubio,_2004-27">&#91;27&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Simulators">Simulators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=16" title="Edit section: Simulators">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Open Virtual Platforms (OVP)<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup> includes the freely available for non-commercial use simulator <a href="/wiki/OVPsim" title="OVPsim">OVPsim</a>, a library of models of processors, peripherals and platforms, and APIs which enable users to develop their own models. The models in the library are open source, written in C, and include the MIPS 4K, 24K, 34K, 74K, 1004K, 1074K, M14K, microAptiv, interAptiv, proAptiv 32-bit cores and the MIPS 64-bit 5K range of cores. These models are created and maintained by Imperas<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup> and in partnership with MIPS Technologies have been tested and assigned the MIPS-Verified (tm) mark. Sample MIPS-based platforms include both bare metal environments and platforms for booting unmodified Linux binary images. These platforms–emulators are available as source or binaries and are fast, free for non-commercial usage, and are easy to use. OVPsim is developed and maintained by <a href="/w/index.php?title=Imperas&amp;action=edit&amp;redlink=1" class="new" title="Imperas (page does not exist)">Imperas</a> and is very fast (hundreds of million of instructions per second), and built to handle multicore homogeneous and heterogeneous architectures and systems.
+</p><p>There is a freely available MIPS32 simulator (earlier versions simulated only the R2000/R3000) called <a href="/wiki/SPIM" title="SPIM">SPIM</a> for use in education. EduMIPS64<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup> is a GPL graphical cross-platform MIPS64 CPU simulator, written in Java/Swing. It supports a wide subset of the MIPS64 ISA and allows the user to graphically see what happens in the pipeline when an assembly program is run by the CPU.
+</p><p>MARS<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup> is another GUI-based MIPS emulator designed for use in education, specifically for use with Hennessy's <i>Computer Organization and Design</i>.
+</p><p>WebMIPS<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup> is a browser-based MIPS simulator with visual representation of a generic, pipelined processor.  This simulator is quite useful for register tracking during step by step execution.
+</p><p>More advanced free emulators are available from the <a href="/wiki/GXemul" title="GXemul">GXemul</a> (formerly known as the mips64emul project) and <a href="/wiki/QEMU" title="QEMU">QEMU</a> projects. These emulate the various MIPS III and IV microprocessors in addition to entire computer systems which use them.
+</p><p>Commercial simulators are available especially for the embedded use of MIPS processors, for example Wind River <a href="/wiki/Simics" title="Simics">Simics</a> (MIPS 4Kc and 5Kc, PMC RM9000, QED RM7000, Broadcom/Netlogic ec4400, <a href="/wiki/Cavium" title="Cavium">Cavium</a> Octeon I), <a href="/w/index.php?title=Imperas&amp;action=edit&amp;redlink=1" class="new" title="Imperas (page does not exist)">Imperas</a> (all MIPS32 and MIPS64 cores), VaST Systems (R3000, R4000), and <a href="/wiki/CoWare" class="mw-redirect" title="CoWare">CoWare</a> (the MIPS4KE, MIPS24K, MIPS25Kf and MIPS34K).
+</p><p>WepSIM<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup> is a browser-based simulator where a subset of MIPS instructions are micro-programmed. This simulator is very useful in order to learn how a CPU works (microprogramming, MIPS routines, traps, interruptions, system calls, etc.).
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=17" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/DLX" title="DLX">DLX</a></li>
+<li><a href="/wiki/List_of_MIPS_architecture_processors" title="List of MIPS architecture processors">List of MIPS architecture processors</a></li>
+<li><a href="/wiki/MIPS_architecture_processors" title="MIPS architecture processors">MIPS architecture processors</a></li>
+<li><a href="/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline (computing)</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=18" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation book">Patterson, David (2014). <i>Computer Organization and Design</i>. <a rel="nofollow" class="external free" href="http://booksite.elsevier.com/9780124077263/downloads/historial%20perspectives/section_4.16.pdf">http://booksite.elsevier.com/9780124077263/downloads/historial%20perspectives/section_4.16.pdf</a>: Elsevier. pp.&#160;4.16-4. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-12-407726-3" title="Special:BookSources/978-0-12-407726-3"><bdi>978-0-12-407726-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization+and+Design&amp;rft.place=http%3A%2F%2Fbooksite.elsevier.com%2F9780124077263%2Fdownloads%2Fhistorial%2520perspectives%2Fsection_4.16.pdf&amp;rft.pages=4.16-4&amp;rft.pub=Elsevier&amp;rft.date=2014&amp;rft.isbn=978-0-12-407726-3&amp;rft.aulast=Patterson&amp;rft.aufirst=David&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-Price1995-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-Price1995_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Price1995_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Price, Charles (September 1995). <i>MIPS IV Instruction Set</i> (Revision 3.2), MIPS Technologies, Inc.</span>
+</li>
+<li id="cite_note-Sweetman1999-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-Sweetman1999_3-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-Sweetman1999_3-7"><sup><i><b>h</b></i></sup></a></span> <span class="reference-text"><cite class="citation book">Sweetman, Dominic (1999). <i>See MIPS Run</i>. Morgan Kaufmann Publishers, Inc. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-55860-410-3" title="Special:BookSources/1-55860-410-3"><bdi>1-55860-410-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=See+MIPS+Run&amp;rft.pub=Morgan+Kaufmann+Publishers%2C+Inc.&amp;rft.date=1999&amp;rft.isbn=1-55860-410-3&amp;rft.aulast=Sweetman&amp;rft.aufirst=Dominic&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.mips.com/products/architectures/mips32-3/">"MIPS32 Architecture"</a>. <i>MIPS</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 20,</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MIPS&amp;rft.atitle=MIPS32+Architecture&amp;rft_id=https%3A%2F%2Fwww.mips.com%2Fproducts%2Farchitectures%2Fmips32-3%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.mips.com/products/architectures/mips64/">"MIPS64 Architecture"</a>. <i>MIPS</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 20,</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MIPS&amp;rft.atitle=MIPS64+Architecture&amp;rft_id=https%3A%2F%2Fwww.mips.com%2Fproducts%2Farchitectures%2Fmips64%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20140103091950/http://www.imgtec.com/mips/mips-3d-ase.asp">"MIPS-3D ASE"</a>. <a href="/wiki/Imagination_Technologies" title="Imagination Technologies">Imagination Technologies</a>. Archived from <a rel="nofollow" class="external text" href="http://www.imgtec.com/mips/mips-3d-ase.asp">the original</a> on 3 January 2014<span class="reference-accessdate">. Retrieved <span class="nowrap">4 January</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=MIPS-3D+ASE&amp;rft.pub=Imagination+Technologies&amp;rft_id=http%3A%2F%2Fwww.imgtec.com%2Fmips%2Fmips-3d-ase.asp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.mips.com/products/architectures/ase/ase16e/">"MIPS16e"</a>. <i>MIPS</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 20,</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MIPS&amp;rft.atitle=MIPS16e&amp;rft_id=https%3A%2F%2Fwww.mips.com%2Fproducts%2Farchitectures%2Fase%2Fase16e%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.mips.com/products/architectures/ase/multi-threading/">"MIPS Multithreading"</a>. <i>MIPS</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 20,</span> 2020</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=MIPS&amp;rft.atitle=MIPS+Multithreading&amp;rft_id=https%3A%2F%2Fwww.mips.com%2Fproducts%2Farchitectures%2Fase%2Fmulti-threading%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web">University of California, Davis. <a rel="nofollow" class="external text" href="http://www.cs.ucdavis.edu/~peisert/teaching/ecs142-sp09/rt.html">"ECS 142 (Compilers) References &amp; Tools page"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110321052440/http://www.cs.ucdavis.edu/~peisert/teaching/ecs142-sp09/rt.html">Archived</a> from the original on 21 March 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">28 May</span> 2009</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=ECS+142+%28Compilers%29+References+%26+Tools+page&amp;rft.au=University+of+California%2C+Davis&amp;rft_id=http%3A%2F%2Fwww.cs.ucdavis.edu%2F~peisert%2Fteaching%2Fecs142-sp09%2Frt.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://archive.is/20120710115823/http://infopad.eecs.berkeley.edu/CIC/otherpr/enhanced_mips.html">"Silicon Graphics Introduces Enhanced MIPS Architecture to Lead the Interactive Digital Revolution"</a>. <a href="/wiki/Silicon_Graphics,_Inc." class="mw-redirect" title="Silicon Graphics, Inc.">Silicon Graphics, Inc.</a> 21 October 1996. Archived from <a rel="nofollow" class="external text" href="http://infopad.eecs.berkeley.edu/CIC/otherpr/enhanced_mips.html">the original</a> on 10 July 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Silicon+Graphics+Introduces+Enhanced+MIPS+Architecture+to+Lead+the+Interactive+Digital+Revolution&amp;rft.pub=Silicon+Graphics%2C+Inc.&amp;rft.date=1996-10-21&amp;rft_id=http%3A%2F%2Finfopad.eecs.berkeley.edu%2FCIC%2Fotherpr%2Fenhanced_mips.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-MPR:1996-11-18-11"><span class="mw-cite-backlink">^ <a href="#cite_ref-MPR:1996-11-18_11-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-MPR:1996-11-18_11-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Gwennap, Linley (November 18, 1996). <a rel="nofollow" class="external text" href="http://studies.ac.upc.edu/ETSETB/SEGPAR/microprocessors/mdmx%20(mpr).pdf">"Digital, MIPS Add Multimedia Extensions<span class="cs1-kern-right">"</span>"</a> <span class="cs1-format">(PDF)</span>. <i><a href="/wiki/Microprocessor_Report" title="Microprocessor Report">Microprocessor Report</a></i>. <b>10</b> (15): 24–28. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20110720095552/http://studies.ac.upc.edu/ETSETB/SEGPAR/microprocessors/mdmx%20(mpr).pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on July 20, 2011.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Microprocessor+Report&amp;rft.atitle=Digital%2C+MIPS+Add+Multimedia+Extensions%22&amp;rft.volume=10&amp;rft.issue=15&amp;rft.pages=24-28&amp;rft.date=1996-11-18&amp;rft.aulast=Gwennap&amp;rft.aufirst=Linley&amp;rft_id=http%3A%2F%2Fstudies.ac.upc.edu%2FETSETB%2FSEGPAR%2Fmicroprocessors%2Fmdmx%2520%28mpr%29.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation pressrelease">"Silicon Graphics Previews New High-Performance MIPS Microprocessor Roadmap" (Press release). May 12, 1997.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Silicon+Graphics+Previews+New+High-Performance+MIPS+Microprocessor+Roadmap&amp;rft.date=1997-05-12&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-mips32-and-mips64-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-mips32-and-mips64_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mips32-and-mips64_13-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-mips32-and-mips64_13-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-mips32-and-mips64_13-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-mips32-and-mips64_13-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite class="citation pressrelease"><a rel="nofollow" class="external text" href="http://www.thefreelibrary.com/MIPS+Technologies,+Inc.+Enhances+Architecture+to+Support+Growing+Need...-a054531136">"MIPS Technologies, Inc. Enhances Architecture to Support Growing Need for IP Re-Use and Integration"</a> (Press release). <a href="/wiki/Business_Wire" title="Business Wire">Business Wire</a>. May 3, 1999.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=MIPS+Technologies%2C+Inc.+Enhances+Architecture+to+Support+Growing+Need+for+IP+Re-Use+and+Integration&amp;rft.pub=Business+Wire&amp;rft.date=1999-05-03&amp;rft_id=http%3A%2F%2Fwww.thefreelibrary.com%2FMIPS%2BTechnologies%2C%2BInc.%2BEnhances%2BArchitecture%2Bto%2BSupport%2BGrowing%2BNeed...-a054531136&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation pressrelease"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20121213115846/http://www.mips.com/news-events/newsroom/newsindex/index.dot?id=79069">"Latest Release of MIPS Architecture Includes Virtualization and SIMD Key Functionality for Enabling Next Generation of MIPS-Based Products"</a> (Press release). <a href="/wiki/MIPS_Technologies" title="MIPS Technologies">MIPS Technologies</a>. December 6, 2012. Archived from <a rel="nofollow" class="external text" href="http://www.mips.com/news-events/newsroom/newsindex/index.dot?id=79069">the original</a> on December 13, 2012.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Latest+Release+of+MIPS+Architecture+Includes+Virtualization+and+SIMD+Key+Functionality+for+Enabling+Next+Generation+of+MIPS-Based+Products&amp;rft.pub=MIPS+Technologies&amp;rft.date=2012-12-06&amp;rft_id=http%3A%2F%2Fwww.mips.com%2Fnews-events%2Fnewsroom%2Fnewsindex%2Findex.dot%3Fid%3D79069&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation magazine"><a rel="nofollow" class="external text" href="http://www.eetasia.com/ART_8800679179_480100_NT_439c939b.HTM">"MIPS skips Release 4 amid bidding war"</a>. <i><a href="/wiki/EE_Times" title="EE Times">EE Times</a></i>. 10 December 2012. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20161014214534/http://www.eetasia.com/ART_8800679179_480100_NT_439c939b.HTM">Archived</a> from the original on 14 October 2016.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=EE+Times&amp;rft.atitle=MIPS+skips+Release+4+amid+bidding+war&amp;rft.date=2012-12-10&amp;rft_id=http%3A%2F%2Fwww.eetasia.com%2FART_8800679179_480100_NT_439c939b.HTM&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wavecomp.ai/wave-computing-extends-ai-lead-by-targeting-edge-of-cloud-through-acquisition-of-mips">"Wave Computing Extends AI Lead by Targeting Edge of Cloud Through Acquisition of MIPS"</a>. June 15, 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Wave+Computing+Extends+AI+Lead+by+Targeting+Edge+of+Cloud+Through+Acquisition+of+MIPS&amp;rft.date=2018-06-15&amp;rft_id=https%3A%2F%2Fwavecomp.ai%2Fwave-computing-extends-ai-lead-by-targeting-edge-of-cloud-through-acquisition-of-mips&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wavecomp.ai/wave-computing-launches-the-mips-open-initiative">"Wave Computing® Launches the MIPS Open Initiative To Accelerate Innovation for the Renowned MIPS® Architecture"</a>. December 17, 2018.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Wave+Computing%C2%AE+Launches+the+MIPS+Open+Initiative+To+Accelerate+Innovation+for+the+Renowned+MIPS%C2%AE+Architecture&amp;rft.date=2018-12-17&amp;rft_id=https%3A%2F%2Fwavecomp.ai%2Fwave-computing-launches-the-mips-open-initiative&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=MIPS-Open-Source-2019">"MIPS Processor ISA To Be Open-Sourced In 2019 - Phoronix"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=MIPS+Processor+ISA+To+Be+Open-Sourced+In+2019+-+Phoronix&amp;rft_id=https%3A%2F%2Fwww.phoronix.com%2Fscan.php%3Fpage%3Dnews_item%26px%3DMIPS-Open-Source-2019&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web">Yoshida, Junko (December 17, 2018). <a rel="nofollow" class="external text" href="https://www.eetimes.com/document.asp?doc_id=1334087">"MIPS Goes Open Source"</a>. <i>EE Times</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=EE+Times&amp;rft.atitle=MIPS+Goes+Open+Source&amp;rft.date=2018-12-17&amp;rft.aulast=Yoshida&amp;rft.aufirst=Junko&amp;rft_id=https%3A%2F%2Fwww.eetimes.com%2Fdocument.asp%3Fdoc_id%3D1334087&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.eetimes.com/mips-r6-architecture-now-available-for-open-use/">"MIPS R6 Architecture Now Available for Open Use"</a>. March 28, 2019.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=MIPS+R6+Architecture+Now+Available+for+Open+Use&amp;rft.date=2019-03-28&amp;rft_id=https%3A%2F%2Fwww.eetimes.com%2Fmips-r6-architecture-now-available-for-open-use%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.hackster.io/news/wave-computing-closes-its-mips-open-initiative-with-immediate-effect-zero-warning-e88b0df9acd0">"Wave Computing Closes Its MIPS Open Initiative with Immediate Effect, Zero Warning"</a>. November 15, 2019.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Wave+Computing+Closes+Its+MIPS+Open+Initiative+with+Immediate+Effect%2C+Zero+Warning&amp;rft.date=2019-11-15&amp;rft_id=https%3A%2F%2Fwww.hackster.io%2Fnews%2Fwave-computing-closes-its-mips-open-initiative-with-immediate-effect-zero-warning-e88b0df9acd0&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160309061723/https://imgtec.com/mips/architectures/mips32/">"MIPS – Market-leading RISC CPU IP processor solutions"</a>. <i>imgtec.com</i>. Archived from <a rel="nofollow" class="external text" href="https://imgtec.com/mips/architectures/mips32/">the original</a> on 9 March 2016<span class="reference-accessdate">. Retrieved <span class="nowrap">11 February</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=imgtec.com&amp;rft.atitle=MIPS+%E2%80%93+Market-leading+RISC+CPU+IP+processor+solutions&amp;rft_id=https%3A%2F%2Fimgtec.com%2Fmips%2Farchitectures%2Fmips32%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation pressrelease">"Silicon Graphics Introduces Compact MIPS RISC Microprocessor Code For High Performance at a Low Cost" (Press release). October 21, 1996.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Silicon+Graphics+Introduces+Compact+MIPS+RISC+Microprocessor+Code+For+High+Performance+at+a+Low+Cost&amp;rft.date=1996-10-21&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation book">Sweetman, Dominic (2007). <i>See MIPS Run</i> (2nd ed.). San Francisco, California: Morgan Kaufmann Publishers. pp.&#160;425–427. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-12-088421-6" title="Special:BookSources/978-0-12-088421-6"><bdi>978-0-12-088421-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=See+MIPS+Run&amp;rft.place=San+Francisco%2C+California&amp;rft.pages=425-427&amp;rft.edition=2nd&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.date=2007&amp;rft.isbn=978-0-12-088421-6&amp;rft.aulast=Sweetman&amp;rft.aufirst=Dominic&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/onlinedocs/gcc/MIPS-DSP-Built-in-Functions.html">"Using the GNU Compiler Collection (GCC): MIPS DSP Built-in Functions"</a>. <i>gcc.gnu.org</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170420143138/https://gcc.gnu.org/onlinedocs/gcc/MIPS-DSP-Built-in-Functions.html">Archived</a> from the original on 20 April 2017.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=gcc.gnu.org&amp;rft.atitle=Using+the+GNU+Compiler+Collection+%28GCC%29%3A+MIPS+DSP+Built-in+Functions&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc%2FMIPS-DSP-Built-in-Functions.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.linux-mips.org/wiki/Instruction_Set_Architecture#DSP_ASE">"Instruction Set Architecture - LinuxMIPS"</a>. <i>www.linux-mips.org</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20170420045837/https://www.linux-mips.org/wiki/Instruction_Set_Architecture#DSP_ASE">Archived</a> from the original on 20 April 2017.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.linux-mips.org&amp;rft.atitle=Instruction+Set+Architecture+-+LinuxMIPS&amp;rft_id=https%3A%2F%2Fwww.linux-mips.org%2Fwiki%2FInstruction_Set_Architecture%23DSP_ASE&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Victor_P._Rubio,_2004-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-Victor_P._Rubio,_2004_27-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Rubio, Victor P. <a rel="nofollow" class="external text" href="http://www.ece.nmsu.edu/~jecook/thesis/Victor_thesis.pdf">"A FPGA Implementation of a MIPS RISC Processor for Computer Architecture Education"</a> <span class="cs1-format">(PDF)</span>. <a href="/wiki/New_Mexico_State_University" title="New Mexico State University">New Mexico State University</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120415011539/http://www.ece.nmsu.edu/~jecook/thesis/Victor_thesis.pdf">Archived</a> <span class="cs1-format">(PDF)</span> from the original on 15 April 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">22 December</span> 2011</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+FPGA+Implementation+of+a+MIPS+RISC+Processor+for+Computer+Architecture+Education&amp;rft.pub=New+Mexico+State+University&amp;rft.aulast=Rubio&amp;rft.aufirst=Victor+P&amp;rft_id=http%3A%2F%2Fwww.ece.nmsu.edu%2F~jecook%2Fthesis%2FVictor_thesis.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.OVPworld.org">"OVP: Fast Simulation, Free Open Source Models. Virtual Platforms for software development"</a>. Ovpworld.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120608022021/http://www.ovpworld.org/">Archived</a> from the original on 8 June 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">30 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=OVP%3A+Fast+Simulation%2C+Free+Open+Source+Models.+Virtual+Platforms+for+software+development&amp;rft.pub=Ovpworld.org&amp;rft_id=http%3A%2F%2Fwww.OVPworld.org&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.imperas.com">"Imperas"</a>. Imperas. 3 March 2008. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120614212338/http://www.imperas.com/">Archived</a> from the original on 14 June 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">30 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Imperas&amp;rft.pub=Imperas&amp;rft.date=2008-03-03&amp;rft_id=http%3A%2F%2Fwww.imperas.com&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.edumips.org">"EduMIPS64"</a>. Edumips.org. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120507013250/http://www.edumips.org/">Archived</a> from the original on 7 May 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">30 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=EduMIPS64&amp;rft.pub=Edumips.org&amp;rft_id=http%3A%2F%2Fwww.edumips.org&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://courses.missouristate.edu/KenVollmar/MARS/">"MARS MIPS simulator - Missouri State University"</a>. Courses.missouristate.edu. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20120502195025/http://courses.missouristate.edu/KenVollmar/MARS/">Archived</a> from the original on 2 May 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">30 May</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=MARS+MIPS+simulator+-+Missouri+State+University&amp;rft.pub=Courses.missouristate.edu&amp;rft_id=http%3A%2F%2Fcourses.missouristate.edu%2FKenVollmar%2FMARS%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://archive.is/20121231212131/http://www.maiconsoft.com.br/webmips/index.asp">"WebMIPS - MIPS CPU PIPLINED SIMULATION On Line"</a>. Archived from <a rel="nofollow" class="external text" href="http://www.maiconsoft.com.br/webmips/index.asp">the original</a> on 31 December 2012<span class="reference-accessdate">. Retrieved <span class="nowrap">13 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=WebMIPS+-+MIPS+CPU+PIPLINED+SIMULATION+On+Line&amp;rft_id=http%3A%2F%2Fwww.maiconsoft.com.br%2Fwebmips%2Findex.asp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> (online demonstration) <cite class="citation web"><a rel="nofollow" class="external text" href="http://www.dii.unisi.it/~giorgi/WEBMIPS/">"Archived copy"</a>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20111010100936/http://www.dii.unisi.it/~giorgi/WEBMIPS/">Archived</a> from the original on 10 October 2011<span class="reference-accessdate">. Retrieved <span class="nowrap">13 January</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Archived+copy&amp;rft_id=http%3A%2F%2Fwww.dii.unisi.it%2F~giorgi%2FWEBMIPS%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: archived copy as title (<a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">link</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> (source)</span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&amp;example=9&amp;simulator=assembly:register_file&amp;notify=false">"WepSim"</a>. (Web version with examples). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20171001030848/https://wepsim.github.io/wepsim/">Archived</a> from the original on 1 October 2017<span class="reference-accessdate">. Retrieved <span class="nowrap">21 October</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=WepSim&amp;rft_id=https%3A%2F%2Fwepsim.github.io%2Fwepsim%2Fws_dist%2Fwepsim-classic.html%3Fmode%3Dep%26example%3D9%26simulator%3Dassembly%3Aregister_file%26notify%3Dfalse&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/> <cite class="citation web"><a rel="nofollow" class="external text" href="https://github.com/wepsim/wepsim">"WepSim"</a>. (GitHub site with source). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20180103211610/https://github.com/wepsim/wepsim">Archived</a> from the original on 3 January 2018<span class="reference-accessdate">. Retrieved <span class="nowrap">21 October</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=WepSim&amp;rft_id=https%3A%2F%2Fgithub.com%2Fwepsim%2Fwepsim&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=19" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book">Farquhar, Erin; Philip Bunce. <i>MIPS Programmer's Handbook</i>. Morgan Kaufmann Publishers. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-55860-297-6" title="Special:BookSources/1-55860-297-6"><bdi>1-55860-297-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=MIPS+Programmer%27s+Handbook&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.isbn=1-55860-297-6&amp;rft.aulast=Farquhar&amp;rft.aufirst=Erin&amp;rft.au=Philip+Bunce&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><a href="/wiki/David_A._Patterson_(scientist)" class="mw-redirect" title="David A. Patterson (scientist)">Patterson, David A</a>; <a href="/wiki/John_L._Hennessy" title="John L. Hennessy">John L. Hennessy</a>. <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/isbn_9781558606043"><i>Computer Organization and Design: The Hardware/Software Interface</i></a></span>. <a href="/wiki/Morgan_Kaufmann_Publishers" title="Morgan Kaufmann Publishers">Morgan Kaufmann Publishers</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-55860-604-1" title="Special:BookSources/1-55860-604-1"><bdi>1-55860-604-1</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Computer+Organization+and+Design%3A+The+Hardware%2FSoftware+Interface&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.isbn=1-55860-604-1&amp;rft.aulast=Patterson&amp;rft.aufirst=David+A&amp;rft.au=John+L.+Hennessy&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fisbn_9781558606043&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Sweetman, Dominic. <i>See MIPS Run</i>. Morgan Kaufmann Publishers. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-55860-410-3" title="Special:BookSources/1-55860-410-3"><bdi>1-55860-410-3</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=See+MIPS+Run&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.isbn=1-55860-410-3&amp;rft.aulast=Sweetman&amp;rft.aufirst=Dominic&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book">Sweetman, Dominic. <i>See MIPS Run, 2nd edition</i>. Morgan Kaufmann Publishers. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-12-088421-6" title="Special:BookSources/0-12-088421-6"><bdi>0-12-088421-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=See+MIPS+Run%2C+2nd+edition&amp;rft.pub=Morgan+Kaufmann+Publishers&amp;rft.isbn=0-12-088421-6&amp;rft.aulast=Sweetman&amp;rft.aufirst=Dominic&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AMIPS+architecture" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=MIPS_architecture&amp;action=edit&amp;section=20" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/MIPS_Assembly" class="extiw" title="wikibooks:MIPS Assembly">MIPS Assembly</a></b></i></td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:MIPS_microprocessors" class="extiw" title="commons:Category:MIPS microprocessors"><span style="">MIPS microprocessors</span></a></b></i>.</td></tr>
+</tbody></table>
+<ul><li><a rel="nofollow" class="external text" href="https://www.mips.com/products/">MIPS Processors</a></li>
+<li><a rel="nofollow" class="external text" href="https://mipsopen.com">MIPS Open</a></li>
+<li><a rel="nofollow" class="external text" href="https://prplfoundation.org">prpl Foundation</a> (a non-profit foundation founded by Imagination Technologies to support the MIPS platform)</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20110111031634/http://meld.org/library/education/mips-architectures">MIPS Architecture history diagram</a></li>
+<li><a rel="nofollow" class="external text" href="https://rivoire.cs.sonoma.edu/cs351/wemips/">Online MIPS emulator</a></li>
+<li><a rel="nofollow" class="external text" href="https://web.cse.ohio-state.edu/~crawfis.3/cse675-02/Slides/MIPS%20Instruction%20Set.pdf">MIPS Instructions - MIPS Instruction Set</a></li></ul>
+<div role="navigation" class="navbox" aria-labelledby="MIPS_microprocessors" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:MIPS_microprocessors" title="Template:MIPS microprocessors"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:MIPS_microprocessors" title="Template talk:MIPS microprocessors"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:MIPS_microprocessors&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="MIPS_microprocessors" style="font-size:114%;margin:0 4em">MIPS microprocessors</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_MIPS_architecture_*_MIPS_architecture_processors_*_List_of_MIPS_architecture_processors">
+<ul><li><a class="mw-selflink selflink">MIPS architecture</a></li>
+<li><a href="/wiki/MIPS_architecture_processors" title="MIPS architecture processors">MIPS architecture processors</a></li>
+<li><a href="/wiki/List_of_MIPS_architecture_processors" title="List of MIPS architecture processors">List of MIPS architecture processors</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">General<br />processors</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="MIPS64compatible" scope="row" class="navbox-group" style="width:1%">MIPS64<br />compatible</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson#Loongson_3_Series" title="Loongson">Loongson 3 Series</a>
+<ul><li>LS3A1000/LS3A1000-I(LS3A1000-i)</li>
+<li>LS3A2000/LS3A1500-I</li>
+<li>LS3A3000/LS3A3000-I(LS3A3000-i)</li>
+<li>LS3A4000/LS3A4000-I(LS3A4000-i)</li>
+<li>LS3B1000</li>
+<li>LS3B1500</li>
+<li>LS3B2000</li>
+<li>LS3B3000</li>
+<li>LS3B4000</li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Application<br />processors</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">MIPS32<br />compatible</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ingenic_Semiconductor" title="Ingenic Semiconductor">Ingenic XBurst</a>
+<ul><li>JZ4720
+<ul><li><a href="/wiki/Ben_NanoNote" title="Ben NanoNote">Ben NanoNote</a></li></ul></li>
+<li>JZ4730 (<a href="/wiki/Skytone_Alpha-400" title="Skytone Alpha-400">Skytone Alpha-400</a>)</li>
+<li>JZ4740 (<a href="/wiki/Dingoo_A320" class="mw-redirect" title="Dingoo A320">Dingoo A320</a>)</li>
+<li>JZ4750 (<a href="/wiki/Game_Gadget" title="Game Gadget">Game Gadget</a>)</li>
+<li>JZ4760
+<ul><li>Velocity Micro T103 Cruz</li>
+<li>Velocity Micro T301 Cruz</li></ul></li>
+<li>JZ4770
+<ul><li><a href="/wiki/NOVO7" title="NOVO7">Ainol Novo7 Paladin</a></li>
+<li>NEOGEO-X</li>
+<li>GCW-Zero</li></ul></li>
+<li>JZ4780</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">MIPS64<br />compatible</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson#Loongson_2_Series" title="Loongson">Loongson 2 Series</a>
+<ul><li>LS2H</li>
+<li>LS2K1000/LS2K2000</li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Microcontroller" title="Microcontroller">Microcontrollers</a><br />(embedded device)</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">M4K</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microchip_Technology" title="Microchip Technology">Microchip Technology</a> <a href="/wiki/PIC_microcontroller#PIC32_32-bit_microcontrollers" class="mw-redirect" title="PIC microcontroller">PIC32MX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>ATI/AMD/Broadcom <a href="/wiki/Xilleon" title="Xilleon">Xilleon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">MIPS32<br />compatible</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson#Loongson_1_Series" title="Loongson">Loongson 1 Series</a>
+<ul><li>LS1A0300</li>
+<li>LS1B</li>
+<li>LS1C300</li>
+<li>LS1C101</li>
+<li>LS1D</li>
+<li>LS1G</li>
+<li>LS1H</li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Networking</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">4Kc/4KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Qualcomm_Atheros" title="Qualcomm Atheros">Qualcomm Atheros</a>
+<ul><li>AR2313</li>
+<li>AR2318</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT2880</li></ul></li>
+<li><a href="/wiki/Texas_Instruments" title="Texas Instruments">Texas Instruments</a>/Infineon/Lantiq
+<ul><li>AR7</li></ul></li>
+<li><a href="/wiki/Lantiq" title="Lantiq">Lantiq</a>
+<ul><li>AMAZON</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">5Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Marvell_Technology_Group" title="Marvell Technology Group">Marvell</a>
+<ul><li>88E6318 "Link Street"</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">24Kc/24KEc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Qualcomm_Atheros" title="Qualcomm Atheros">Qualcomm Atheros</a>
+<ul><li>AR7240</li>
+<li>AR7161</li>
+<li>AR9132</li>
+<li>AR9331</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3050</li>
+<li>RT3052</li>
+<li>RT3350</li>
+<li>RT5350</li>
+<li>RT6856</li>
+<li>MT7620</li></ul></li>
+<li><a href="/wiki/Lantiq" title="Lantiq">Lantiq</a>
+<ul><li>DANUBE</li>
+<li>VINAX</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">34Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Lantiq" title="Lantiq">Lantiq</a>
+<ul><li>AR188</li>
+<li>VRX288</li>
+<li>GRX388</li></ul></li>
+<li><a href="/wiki/Ikanos_Communications" title="Ikanos Communications">Ikanos</a>
+<ul><li>Fusiv Vx175/173</li>
+<li>Fusiv Vx180</li>
+<li>Fusiv Vx185/183</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">74Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Qualcomm_Atheros" title="Qualcomm Atheros">Qualcomm Atheros</a>
+<ul><li>AR9344</li>
+<li>QCA9558</li></ul></li>
+<li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>RT3662</li>
+<li>RT3883</li></ul></li>
+<li><a href="/wiki/Broadcom_Corporation" title="Broadcom Corporation">Broadcom</a>
+<ul><li>BCM4706</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">1004Kc</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MediaTek" title="MediaTek">MediaTek</a>
+<ul><li>MT7621</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">1074Kc</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Realtek" title="Realtek">Realtek</a>
+<ul><li>RTL8198C</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">MIPS32<br />compatible</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Broadcom_Corporation" title="Broadcom Corporation">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a href="/wiki/Cavium" title="Cavium">Cavium</a>
+<ul><li>various</li></ul></li>
+<li>Alchemy Semiconductor
+<ul><li><a href="/wiki/Alchemy_(processor)" class="mw-redirect" title="Alchemy (processor)">Alchemy</a></li></ul></li>
+<li><a href="/wiki/RMI_Corporation" title="RMI Corporation">RMI Corporation</a>
+<ul><li>XLR</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">MIPS64<br />compatible</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Broadcom_Corporation" title="Broadcom Corporation">Broadcom</a>
+<ul><li>various</li></ul></li>
+<li><a href="/wiki/Cavium" title="Cavium">Cavium</a>
+<ul><li>Octeon</li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Gaming</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="various" scope="row" class="navbox-group" style="width:1%">various</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/PlayStation_(console)" title="PlayStation (console)">PlayStation 1</a> MIPS R3000A-compatible</li>
+<li><a href="/wiki/Nintendo_64" title="Nintendo 64">Nintendo 64</a> NEC VR4300</li>
+<li><a href="/wiki/PlayStation_Portable" title="PlayStation Portable">PlayStation Portable</a> R4000-based</li>
+<li><a href="/wiki/PlayStation_2" title="PlayStation 2">PlayStation 2</a> <a href="/wiki/Emotion_Engine" title="Emotion Engine">Emotion Engine</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Supercomputer" title="Supercomputer">Supercomputer</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="MIPS64compatible" scope="row" class="navbox-group" style="width:1%">MIPS64<br />compatible</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson" title="Loongson">Loongson-based systems</a>
+<ul><li>LS2F/LS2F1000</li>
+<li>LS3A1000</li>
+<li>LS3B1000</li></ul></li>
+<li><a href="/wiki/SiCortex" title="SiCortex">SiCortex</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Aerospace</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">MIPS64<br />compatible</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson#Loongson_1_Series" title="Loongson">Loongson 1 Series</a>
+<ul><li>LS1E0300/LS1E1000</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">MIPS32<br />compatible</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loongson#Loongson_1_Series" title="Loongson">Loongson 1 Series</a>
+<ul><li>LS1E04</li>
+<li>LS1F04/LS1F0300</li>
+<li>LS1J</li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Classic<br />processors</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a class="mw-selflink selflink">MIPS I</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R2000_(microprocessor)" title="R2000 (microprocessor)">R2000</a></li>
+<li><a href="/wiki/R3000" title="R3000">R3000</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/MIPS_II" class="mw-redirect" title="MIPS II">MIPS II</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R6000" title="R6000">R6000</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/MIPS_III" class="mw-redirect" title="MIPS III">MIPS III</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R4000" title="R4000">R4000</a>
+<ul><li><a href="/wiki/R4000#R4400" title="R4000">R4400</a></li></ul></li>
+<li><a href="/wiki/R4200" title="R4200">R4200</a>
+<ul><li><a href="/wiki/R4200#R4300i" title="R4200">R4300i</a></li></ul></li>
+<li><a href="/wiki/R4600" title="R4600">R4600</a>
+<ul><li><a href="/wiki/R4600#R4700" title="R4600">R4700</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/MIPS_IV" class="mw-redirect" title="MIPS IV">MIPS IV</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/R5000" title="R5000">R5000</a></li>
+<li><a href="/wiki/R8000" title="R8000">R8000</a></li>
+<li><a href="/wiki/R10000" title="R10000">R10000</a>
+<ul><li><a href="/wiki/R10000#R12000" title="R10000">R12000</a></li>
+<li><a href="/wiki/R10000#R12000A" title="R10000">R12000A</a></li>
+<li><a href="/wiki/R10000#R14000" title="R10000">R14000</a></li>
+<li><a href="/wiki/R10000#R14000A" title="R10000">R14000A</a></li>
+<li><a href="/wiki/R10000#R16000" title="R10000">R16000</a></li>
+<li><a href="/wiki/R10000#R16000A" title="R10000">R16000A</a></li>
+<li><a href="/wiki/R10000#R18000" title="R10000">R18000</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/MIPS_V" class="mw-redirect" title="MIPS V">MIPS V</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li class="mw-empty-elt"></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Reduced_instruction_set_computer_(RISC)_architectures" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:RISC_architectures" title="Template:RISC architectures"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:RISC_architectures" title="Template talk:RISC architectures"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:RISC_architectures&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Reduced_instruction_set_computer_(RISC)_architectures" style="font-size:114%;margin:0 4em"><a href="/wiki/Reduced_instruction_set_computer" title="Reduced instruction set computer">Reduced instruction set computer</a> (RISC) architectures</div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*IBM_801_*Berkeley_RISC_*Stanford_MIPS">
+<ul><li><a href="/wiki/IBM_801" title="IBM 801">IBM 801</a></li>
+<li><a href="/wiki/Berkeley_RISC" title="Berkeley RISC">Berkeley RISC</a></li>
+<li><a href="/wiki/Stanford_MIPS" title="Stanford MIPS">Stanford MIPS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Active</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Blackfin" title="Blackfin">Analog Devices Blackfin</a></li>
+<li><a href="/wiki/ARC_(processor)" title="ARC (processor)">ARC</a></li>
+<li><a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a></li>
+<li><a href="/wiki/AVR_microcontrollers" title="AVR microcontrollers">AVR</a></li>
+<li><a href="/wiki/ESi-RISC" title="ESi-RISC">eSi-RISC</a></li>
+<li><a href="/wiki/LatticeMico8" title="LatticeMico8">LatticeMico8</a></li>
+<li><a href="/wiki/LatticeMico32" title="LatticeMico32">LatticeMico32</a></li>
+<li><a class="mw-selflink selflink">MIPS</a></li>
+<li><a href="/wiki/OpenRISC" title="OpenRISC">OpenRISC</a></li>
+<li><a href="/wiki/Power_ISA" title="Power ISA">Power ISA</a></li>
+<li><a href="/wiki/M32R" title="M32R">Renesas M32R</a></li>
+<li><a href="/wiki/SuperH" title="SuperH">Renesas SuperH</a></li>
+<li><a href="/wiki/V850" title="V850">Renesas V850</a></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/Sunway_(processor)" title="Sunway (processor)">Sunway</a></li>
+<li><a href="/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="/wiki/Unicore" title="Unicore">Unicore</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">Xilinx&#160;MicroBlaze</a></li>
+<li><a href="/wiki/PicoBlaze" title="PicoBlaze">Xilinx&#160;PicoBlaze</a></li>
+<li><a href="/wiki/XCore_Architecture" title="XCore Architecture">XMOS XCore XS1</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Historic</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/DEC_Alpha" title="DEC Alpha">Alpha</a></li>
+<li><a href="/wiki/AMD_Am29000" title="AMD Am29000">AMD Am29000</a></li>
+<li><a href="/wiki/Apollo_PRISM" title="Apollo PRISM">Apollo PRISM</a></li>
+<li><a href="/wiki/AVR32" title="AVR32">Atmel AVR32</a></li>
+<li><a href="/wiki/Clipper_architecture" title="Clipper architecture">Clipper</a></li>
+<li><a href="/wiki/AT%26T_Hobbit" title="AT&amp;T Hobbit">CRISP</a></li>
+<li><a href="/wiki/DEC_Prism" title="DEC Prism">DEC Prism</a></li>
+<li><a href="/wiki/Intel_i860" title="Intel i860">Intel i860</a></li>
+<li><a href="/wiki/Intel_i960" title="Intel i960">Intel i960</a></li>
+<li><a href="/wiki/Imagination_META" title="Imagination META">Meta</a></li>
+<li><a href="/wiki/MIPS-X" title="MIPS-X">MIPS-X</a></li>
+<li><a href="/wiki/Motorola_88000" title="Motorola 88000">Motorola 88000</a></li>
+<li><a href="/wiki/MCORE" class="mw-redirect" title="MCORE">Motorola M·CORE</a></li>
+<li><a href="/wiki/PA-RISC" title="PA-RISC">PA-RISC</a></li>
+<li><a href="/wiki/IBM_ROMP" title="IBM ROMP">ROMP</a></li>
+<li><a href="/wiki/IBM_POWER_instruction_set_architecture" title="IBM POWER instruction set architecture">POWER</a></li>
+<li><a href="/wiki/PowerPC" title="PowerPC">PowerPC</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Processor_technologies" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Processor_technologies" title="Template:Processor technologies"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Processor_technologies" title="Template talk:Processor technologies"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Processor_technologies&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Processor_technologies" style="font-size:114%;margin:0 4em"><a href="/wiki/Processor_(computing)" title="Processor (computing)">Processor technologies</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Model_of_computation" title="Model of computation">Models</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Turing_machine" title="Turing machine">Turing machine</a>
+<ul><li><a href="/wiki/Universal_Turing_machine" title="Universal Turing machine">Universal</a></li>
+<li><a href="/wiki/Post%E2%80%93Turing_machine" title="Post–Turing machine">Post–Turing</a></li>
+<li><a href="/wiki/Quantum_Turing_machine" title="Quantum Turing machine">Quantum</a></li></ul></li>
+<li><a href="/wiki/Belt_machine" class="mw-redirect" title="Belt machine">Belt machine</a></li>
+<li><a href="/wiki/Stack_machine" title="Stack machine">Stack machine</a></li>
+<li><a href="/wiki/Finite-state_machine" title="Finite-state machine">Finite-state machine</a>
+<ul><li><a href="/wiki/Finite_state_machine_with_datapath" class="mw-redirect" title="Finite state machine with datapath">with datapath</a></li>
+<li><a href="/wiki/Hierarchical_state_machine" class="mw-redirect" title="Hierarchical state machine">Hierarchical</a></li>
+<li><a href="/wiki/Queue_automaton" title="Queue automaton">Queue automaton</a></li></ul></li>
+<li><a href="/wiki/Register_machine" title="Register machine">Register machines</a>
+<ul><li><a href="/wiki/Counter_machine" title="Counter machine">Counter</a></li>
+<li><a href="/wiki/Pointer_machine" title="Pointer machine">Pointer</a></li>
+<li><a href="/wiki/Random-access_machine" title="Random-access machine">Random-access</a></li>
+<li><a href="/wiki/Random-access_stored-program_machine" title="Random-access stored-program machine">Random-access stored program</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_architecture" title="Computer architecture">Architecture</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microarchitecture" title="Microarchitecture">Microarchitecture</a></li>
+<li><a href="/wiki/Von_Neumann_architecture" title="Von Neumann architecture">Von Neumann</a></li>
+<li><a href="/wiki/Harvard_architecture" title="Harvard architecture">Harvard</a>
+<ul><li><a href="/wiki/Modified_Harvard_architecture" title="Modified Harvard architecture">modified</a></li></ul></li>
+<li><a href="/wiki/Dataflow_architecture" title="Dataflow architecture">Dataflow</a></li>
+<li><a href="/wiki/Transport_triggered_architecture" title="Transport triggered architecture">Transport-triggered</a></li>
+<li><a href="/wiki/Cellular_architecture" title="Cellular architecture">Cellular</a></li>
+<li><a href="/wiki/Endianness" title="Endianness">Endianness</a></li>
+<li><a href="/wiki/Computer_data_storage" title="Computer data storage">Memory access</a>
+<ul><li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">NUMA</a></li>
+<li><a href="/wiki/Heterogenous_Unified_Memory_Access" class="mw-redirect" title="Heterogenous Unified Memory Access">HUMA</a></li>
+<li><a href="/wiki/Load/store_architecture" class="mw-redirect" title="Load/store architecture">Load/store</a></li>
+<li><a href="/wiki/Register_memory_architecture" title="Register memory architecture">Register/memory</a></li></ul></li>
+<li><a href="/wiki/Cache_hierarchy" title="Cache hierarchy">Cache hierarchy</a></li>
+<li><a href="/wiki/Memory_hierarchy" title="Memory hierarchy">Memory hierarchy</a>
+<ul><li><a href="/wiki/Virtual_memory" title="Virtual memory">Virtual memory</a></li>
+<li><a href="/wiki/Secondary_storage" class="mw-redirect" title="Secondary storage">Secondary storage</a></li></ul></li>
+<li><a href="/wiki/Heterogeneous_System_Architecture" title="Heterogeneous System Architecture">Heterogeneous</a></li>
+<li><a href="/wiki/Fabric_computing" title="Fabric computing">Fabric</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Cognitive_computing" title="Cognitive computing">Cognitive</a></li>
+<li><a href="/wiki/Neuromorphic_engineering" title="Neuromorphic engineering">Neuromorphic</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Instruction_set_architecture" title="Instruction set architecture">Instruction set<br />architectures</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Types</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Complex_instruction_set_computer" title="Complex instruction set computer">CISC</a></li>
+<li><a href="/wiki/Reduced_instruction_set_computer" title="Reduced instruction set computer">RISC</a></li>
+<li><a href="/wiki/Application-specific_instruction_set_processor" title="Application-specific instruction set processor">Application-specific</a></li>
+<li><a href="/wiki/Explicit_data_graph_execution" title="Explicit data graph execution">EDGE</a>
+<ul><li><a href="/wiki/TRIPS_architecture" title="TRIPS architecture">TRIPS</a></li></ul></li>
+<li><a href="/wiki/Very_long_instruction_word" title="Very long instruction word">VLIW</a>
+<ul><li><a href="/wiki/Explicitly_parallel_instruction_computing" title="Explicitly parallel instruction computing">EPIC</a></li></ul></li>
+<li><a href="/wiki/Minimal_instruction_set_computer" title="Minimal instruction set computer">MISC</a></li>
+<li><a href="/wiki/One_instruction_set_computer" title="One instruction set computer">OISC</a></li>
+<li><a href="/wiki/No_instruction_set_computing" title="No instruction set computing">NISC</a></li>
+<li><a href="/wiki/Zero_instruction_set_computer" title="Zero instruction set computer">ZISC</a></li>
+<li><a href="/wiki/Comparison_of_instruction_set_architectures" title="Comparison of instruction set architectures">Comparison</a>
+<ul><li><a href="/wiki/Addressing_mode" title="Addressing mode">Addressing modes</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Instruction sets</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/X86" title="X86">x86</a></li>
+<li><a href="/wiki/ARM_architecture" title="ARM architecture">ARM</a></li>
+<li><a class="mw-selflink selflink">MIPS</a></li>
+<li><a href="/wiki/Power_ISA" title="Power ISA">Power ISA</a></li>
+<li><a href="/wiki/SPARC" title="SPARC">SPARC</a></li>
+<li><a href="/wiki/IA-64" title="IA-64">Itanium</a></li>
+<li><a href="/wiki/Unicore" title="Unicore">Unicore</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/Little_man_computer" title="Little man computer">LMC</a></li>
+<li><a href="/wiki/List_of_instruction_sets" class="mw-redirect" title="List of instruction sets">Others</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Instruction_cycle" title="Instruction cycle">Execution</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Instruction_pipelining" title="Instruction pipelining">Instruction pipelining</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Pipeline_stall" title="Pipeline stall">Pipeline stall</a></li>
+<li><a href="/wiki/Operand_forwarding" title="Operand forwarding">Operand forwarding</a></li>
+<li><a href="/wiki/Classic_RISC_pipeline" title="Classic RISC pipeline">Classic RISC pipeline</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Hazard_(computer_architecture)" title="Hazard (computer architecture)">Hazards</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Data_dependency" title="Data dependency">Data dependency</a></li>
+<li><a href="/wiki/Structural_hazard" class="mw-redirect" title="Structural hazard">Structural</a></li>
+<li><a href="/wiki/Control_hazard" class="mw-redirect" title="Control hazard">Control</a></li>
+<li><a href="/wiki/False_sharing" title="False sharing">False sharing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Out-of-order_execution" title="Out-of-order execution">Out-of-order</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Tomasulo_algorithm" title="Tomasulo algorithm">Tomasulo algorithm</a>
+<ul><li><a href="/wiki/Reservation_station" title="Reservation station">Reservation station</a></li>
+<li><a href="/wiki/Re-order_buffer" title="Re-order buffer">Re-order buffer</a></li></ul></li>
+<li><a href="/wiki/Register_renaming" title="Register renaming">Register renaming</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Speculative_execution" title="Speculative execution">Speculative</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Branch_predictor" title="Branch predictor">Branch prediction</a></li>
+<li><a href="/wiki/Memory_dependence_prediction" title="Memory dependence prediction">Memory dependence prediction</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Parallel_computing" title="Parallel computing">Parallelism</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Level</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a>
+<ul><li><a href="/wiki/Bit-serial_architecture" title="Bit-serial architecture">Bit-serial</a></li>
+<li><a href="/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word</a></li></ul></li>
+<li><a href="/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a></li>
+<li><a href="/wiki/Instruction_pipelining" title="Instruction pipelining">Pipelining</a>
+<ul><li><a href="/wiki/Scalar_processor" title="Scalar processor">Scalar</a></li>
+<li><a href="/wiki/Superscalar_processor" title="Superscalar processor">Superscalar</a></li></ul></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Task</a>
+<ul><li><a href="/wiki/Thread_(computing)" title="Thread (computing)">Thread</a></li>
+<li><a href="/wiki/Process_(computing)" title="Process (computing)">Process</a></li></ul></li>
+<li><a href="/wiki/Data_parallelism" title="Data parallelism">Data</a>
+<ul><li><a href="/wiki/Vector_processor" title="Vector processor">Vector</a></li></ul></li>
+<li><a href="/wiki/Memory-level_parallelism" title="Memory-level parallelism">Memory</a></li>
+<li><a href="/wiki/Distributed_architecture" class="mw-redirect" title="Distributed architecture">Distributed</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal</a></li>
+<li><a href="/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous</a>
+<ul><li><a href="/wiki/Hyper-threading" title="Hyper-threading">Hyperthreading</a></li></ul></li>
+<li><a href="/wiki/Speculative_multithreading" title="Speculative multithreading">Speculative</a></li>
+<li><a href="/wiki/Preemption_(computing)" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="/wiki/Cooperative_multithreading" class="mw-redirect" title="Cooperative multithreading">Cooperative</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Flynn%27s_taxonomy" title="Flynn&#39;s taxonomy">Flynn's taxonomy</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a>
+<ul><li><a href="/wiki/SWAR" title="SWAR">SWAR</a></li></ul></li>
+<li><a href="/wiki/Single_instruction,_multiple_threads" title="Single instruction, multiple threads">SIMT</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a>
+<ul><li><a href="/wiki/SPMD" title="SPMD">SPMD</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_performance" title="Computer performance">Processor<br />performance</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Transistor_count" title="Transistor count">Transistor count</a></li>
+<li><a href="/wiki/Instructions_per_cycle" title="Instructions per cycle">Instructions per cycle</a> (IPC)
+<ul><li><a href="/wiki/Cycles_per_instruction" title="Cycles per instruction">Cycles per instruction</a> (CPI)</li></ul></li>
+<li><a href="/wiki/Instructions_per_second" title="Instructions per second">Instructions per second</a> (IPS)</li>
+<li><a href="/wiki/FLOPS" title="FLOPS">Floating-point operations per second</a> (FLOPS)</li>
+<li><a href="/wiki/Transactions_per_second" title="Transactions per second">Transactions per second</a> (TPS)</li>
+<li><a href="/wiki/SUPS" title="SUPS">Synaptic updates per second</a> (SUPS)</li>
+<li><a href="/wiki/Performance_per_watt" title="Performance per watt">Performance per watt</a> (PPW)</li>
+<li><a href="/wiki/Cache_performance_measurement_and_metric" title="Cache performance measurement and metric">Cache performance metrics</a></li>
+<li><a href="/wiki/Computer_performance_by_orders_of_magnitude" title="Computer performance by orders of magnitude">Computer performance by orders of magnitude</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Processor_(computing)" title="Processor (computing)">Types</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Central_processing_unit" title="Central processing unit">Central processing unit</a> (CPU)</li>
+<li><a href="/wiki/Graphics_processing_unit" title="Graphics processing unit">Graphics processing unit</a> (GPU)
+<ul><li><a href="/wiki/General-purpose_computing_on_graphics_processing_units" title="General-purpose computing on graphics processing units">GPGPU</a></li></ul></li>
+<li><a href="/wiki/Vector_processor" title="Vector processor">Vector</a></li>
+<li><a href="/wiki/Barrel_processor" title="Barrel processor">Barrel</a></li>
+<li><a href="/wiki/Stream_processing" title="Stream processing">Stream</a></li>
+<li><a href="/wiki/Coprocessor" title="Coprocessor">Coprocessor</a></li>
+<li><a href="/wiki/Application-specific_integrated_circuit" title="Application-specific integrated circuit">ASIC</a></li>
+<li><a href="/wiki/Field-programmable_gate_array" title="Field-programmable gate array">FPGA</a></li>
+<li><a href="/wiki/Complex_programmable_logic_device" title="Complex programmable logic device">CPLD</a></li>
+<li><a href="/wiki/Multi-chip_module" title="Multi-chip module">Multi-chip module</a> (MCM)</li>
+<li><a href="/wiki/System_in_package" title="System in package">System in package</a> (SiP)</li></ul>
+</div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">By application</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Microprocessor" title="Microprocessor">Microprocessor</a></li>
+<li><a href="/wiki/Microcontroller" title="Microcontroller">Microcontroller</a></li>
+<li><a href="/wiki/Mobile_processor" title="Mobile processor">Mobile</a></li>
+<li><a href="/wiki/Notebook_processor" title="Notebook processor">Notebook</a></li>
+<li><a href="/wiki/Ultra-low-voltage_processor" title="Ultra-low-voltage processor">Ultra-low-voltage</a></li>
+<li><a href="/wiki/Application-specific_instruction_set_processor" title="Application-specific instruction set processor">ASIP</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Systems<br />on chip</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/System_on_a_chip" title="System on a chip">System on a chip</a> (SoC)</li>
+<li><a href="/wiki/Multiprocessor_system-on-chip" class="mw-redirect" title="Multiprocessor system-on-chip">Multiprocessor</a> (MPSoC)</li>
+<li><a href="/wiki/Programmable_system-on-chip" title="Programmable system-on-chip">Programmable</a> (PSoC)</li>
+<li><a href="/wiki/Network_on_a_chip" title="Network on a chip">Network on a chip</a> (NoC)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Hardware_acceleration" title="Hardware acceleration">Hardware<br />accelerators</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/AI_accelerator" title="AI accelerator">AI accelerator</a></li>
+<li><a href="/wiki/Vision_processing_unit" title="Vision processing unit">Vision processing unit</a> (VPU)</li>
+<li><a href="/wiki/Physics_processing_unit" title="Physics processing unit">Physics processing unit</a> (PPU)</li>
+<li><a href="/wiki/Digital_signal_processor" title="Digital signal processor">Digital signal processor</a> (DSP)</li>
+<li><a href="/wiki/Tensor_processing_unit" title="Tensor processing unit">Tensor processing unit</a> (TPU)</li>
+<li><a href="/wiki/Secure_cryptoprocessor" title="Secure cryptoprocessor">Secure cryptoprocessor</a></li>
+<li><a href="/wiki/Network_processor" title="Network processor">Network processor</a></li>
+<li><a href="/wiki/Baseband_processor" title="Baseband processor">Baseband processor</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Word_(computer_architecture)" title="Word (computer architecture)">Word size</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/1-bit_computing" title="1-bit computing">1-bit</a></li>
+<li><a href="/wiki/4-bit_computing" title="4-bit computing">4-bit</a></li>
+<li><a href="/wiki/8-bit_computing" title="8-bit computing">8-bit</a></li>
+<li><a href="/wiki/12-bit_computing" title="12-bit computing">12-bit</a></li>
+<li><a href="/wiki/Apollo_Guidance_Computer" title="Apollo Guidance Computer">15-bit</a></li>
+<li><a href="/wiki/16-bit_computing" title="16-bit computing">16-bit</a></li>
+<li><a href="/wiki/32-bit_computing" title="32-bit computing">32-bit</a></li>
+<li><a href="/wiki/48-bit_computing" title="48-bit computing">48-bit</a></li>
+<li><a href="/wiki/64-bit_computing" title="64-bit computing">64-bit</a></li>
+<li><a href="/wiki/128-bit_computing" title="128-bit computing">128-bit</a></li>
+<li><a href="/wiki/256-bit_computing" title="256-bit computing">256-bit</a></li>
+<li><a href="/wiki/512-bit_computing" title="512-bit computing">512-bit</a></li>
+<li><a href="/wiki/Bit_slicing" title="Bit slicing">bit slicing</a></li>
+<li><a href="/wiki/Word_(computer_architecture)#Table_of_word_sizes" title="Word (computer architecture)">others</a>
+<ul><li><a href="/wiki/Word_(computer_architecture)#Variable_word_architectures" title="Word (computer architecture)">variable</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Core count</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Single-core" title="Single-core">Single-core</a></li>
+<li><a href="/wiki/Multi-core_processor" title="Multi-core processor">Multi-core</a></li>
+<li><a href="/wiki/Manycore_processor" title="Manycore processor">Manycore</a></li>
+<li><a href="/wiki/Heterogeneous_computing" title="Heterogeneous computing">Heterogeneous architecture</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Processor_core" class="mw-redirect" title="Processor core">Core</a></li>
+<li><a href="/wiki/Cache_(computing)" title="Cache (computing)">Cache</a>
+<ul><li><a href="/wiki/CPU_cache" title="CPU cache">CPU cache</a></li>
+<li><a href="/wiki/Cache_replacement_policies" title="Cache replacement policies">replacement policies</a></li>
+<li><a href="/wiki/Cache_coherence" title="Cache coherence">coherence</a></li></ul></li>
+<li><a href="/wiki/Bus_(computing)" title="Bus (computing)">Bus</a></li>
+<li><a href="/wiki/Clock_rate" title="Clock rate">Clock rate</a></li>
+<li><a href="/wiki/Clock_signal" title="Clock signal">Clock signal</a></li>
+<li><a href="/wiki/FIFO_(computing_and_electronics)" title="FIFO (computing and electronics)">FIFO</a></li></ul>
+</div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Execution_unit" title="Execution unit">Functional units</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Arithmetic_logic_unit" title="Arithmetic logic unit">Arithmetic logic unit</a> (ALU)</li>
+<li><a href="/wiki/Address_generation_unit" title="Address generation unit">Address generation unit</a> (AGU)</li>
+<li><a href="/wiki/Floating-point_unit" title="Floating-point unit">Floating-point unit</a> (FPU)</li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">Memory management unit</a> (MMU)
+<ul><li><a href="/wiki/Load%E2%80%93store_unit" title="Load–store unit">Load–store unit</a></li>
+<li><a href="/wiki/Translation_lookaside_buffer" title="Translation lookaside buffer">Translation lookaside buffer</a> (TLB)</li></ul></li>
+<li><a href="/wiki/Memory_controller" title="Memory controller">Integrated memory controller</a> (IMC)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Digital_logic" class="mw-redirect" title="Digital logic">Logic</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Combinational_logic" title="Combinational logic">Combinational</a></li>
+<li><a href="/wiki/Sequential_logic" title="Sequential logic">Sequential</a></li>
+<li><a href="/wiki/Glue_logic" title="Glue logic">Glue</a></li>
+<li><a href="/wiki/Logic_gate" title="Logic gate">Logic gate</a>
+<ul><li><a href="/wiki/Quantum_logic_gate" title="Quantum logic gate">Quantum</a></li>
+<li><a href="/wiki/Gate_array" title="Gate array">Array</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Hardware_register" title="Hardware register">Registers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Processor_register" title="Processor register">Processor register</a></li>
+<li><a href="/wiki/Status_register" title="Status register">Status register</a></li>
+<li><a href="/wiki/Stack_register" title="Stack register">Stack register</a></li>
+<li><a href="/wiki/Register_file" title="Register file">Register file</a></li>
+<li><a href="/wiki/Memory_buffer_register" title="Memory buffer register">Memory buffer</a></li>
+<li><a href="/wiki/Program_counter" title="Program counter">Program counter</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Control unit</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Instruction_unit" title="Instruction unit">Instruction unit</a></li>
+<li><a href="/wiki/Data_buffer" title="Data buffer">Data buffer</a></li>
+<li><a href="/wiki/Write_buffer" title="Write buffer">Write buffer</a></li>
+<li><a href="/wiki/Microcode" title="Microcode">Microcode</a> <a href="/wiki/ROM_image" title="ROM image">ROM</a></li>
+<li><a href="/wiki/Counter_(digital)" title="Counter (digital)">Counter</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Datapath" title="Datapath">Datapath</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Multiplexer" title="Multiplexer">Multiplexer</a></li>
+<li><a href="/wiki/Demultiplexer" class="mw-redirect" title="Demultiplexer">Demultiplexer</a></li>
+<li><a href="/wiki/Adder_(electronics)" title="Adder (electronics)">Adder</a></li>
+<li><a href="/wiki/Binary_multiplier" title="Binary multiplier">Multiplier</a>
+<ul><li><a href="/wiki/CPU_multiplier" title="CPU multiplier">CPU</a></li></ul></li>
+<li><a href="/wiki/Binary_decoder" title="Binary decoder">Binary decoder</a>
+<ul><li><a href="/wiki/Address_decoder" title="Address decoder">Address decoder</a></li>
+<li><a href="/wiki/Sum_addressed_decoder" class="mw-redirect" title="Sum addressed decoder">Sum addressed decoder</a></li></ul></li>
+<li><a href="/wiki/Barrel_shifter" title="Barrel shifter">Barrel shifter</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Electronic_circuit" title="Electronic circuit">Circuitry</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Integrated_circuit" title="Integrated circuit">Integrated circuit</a>
+<ul><li><a href="/wiki/Three-dimensional_integrated_circuit" title="Three-dimensional integrated circuit">3D</a></li>
+<li><a href="/wiki/Mixed-signal_integrated_circuit" title="Mixed-signal integrated circuit">Mixed-signal</a></li>
+<li><a href="/wiki/Power_management_integrated_circuit" title="Power management integrated circuit">Power management</a></li></ul></li>
+<li><a href="/wiki/Boolean_circuit" title="Boolean circuit">Boolean</a></li>
+<li><a href="/wiki/Digital_circuit" class="mw-redirect" title="Digital circuit">Digital</a></li>
+<li><a href="/wiki/Analog_circuit" class="mw-redirect" title="Analog circuit">Analog</a></li>
+<li><a href="/wiki/Quantum_circuit" title="Quantum circuit">Quantum</a></li>
+<li><a href="/wiki/Switch#Electronic_switches" title="Switch">Switch</a></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Power_management" title="Power management">Power<br />management</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Power_Management_Unit" title="Power Management Unit">PMU</a></li>
+<li><a href="/wiki/Advanced_Power_Management" title="Advanced Power Management">APM</a></li>
+<li><a href="/wiki/Advanced_Configuration_and_Power_Interface" title="Advanced Configuration and Power Interface">ACPI</a></li>
+<li><a href="/wiki/Dynamic_frequency_scaling" title="Dynamic frequency scaling">Dynamic frequency scaling</a></li>
+<li><a href="/wiki/Dynamic_voltage_scaling" title="Dynamic voltage scaling">Dynamic voltage scaling</a></li>
+<li><a href="/wiki/Clock_gating" title="Clock gating">Clock gating</a></li>
+<li><a href="/wiki/Performance_per_watt" title="Performance per watt">Performance per watt</a> (PPW)</li>
+<li><a href="/wiki/Race_to_sleep" title="Race to sleep">Race to sleep</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Related</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/History_of_general-purpose_CPUs" title="History of general-purpose CPUs">History of general-purpose CPUs</a></li>
+<li><a href="/wiki/Microprocessor_chronology" title="Microprocessor chronology">Microprocessor chronology</a></li>
+<li><a href="/wiki/Processor_design" title="Processor design">Processor design</a></li>
+<li><a href="/wiki/Digital_electronics" title="Digital electronics">Digital electronics</a></li>
+<li><a href="/wiki/Hardware_security_module" title="Hardware security module">Hardware security module</a></li>
+<li><a href="/wiki/Semiconductor_device_fabrication" title="Semiconductor device fabrication">Semiconductor device fabrication</a></li>
+<li><a href="/wiki/Tick%E2%80%93tock_model" title="Tick–tock model">Tick–tock model</a></li></ul>
+</div></td></tr></tbody></table></div>
+<p class="mw-empty-elt">
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1310
+Cached time: 20200327102806
+Cache expiry: 86400
+Dynamic content: true
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.656 seconds
+Real time usage: 0.830 seconds
+Preprocessor visited node count: 3598/1000000
+Post‐expand include size: 217990/2097152 bytes
+Template argument size: 2315/2097152 bytes
+Highest expansion depth: 14/40
+Expensive parser function count: 3/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 115001/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.298/10.000 seconds
+Lua memory usage: 5.59 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  680.425      1 -total
+ 40.37%  274.671      1 Template:Refs
+ 15.74%  107.081     25 Template:Cite_web
+ 15.59%  106.111      7 Template:Cite_book
+ 11.13%   75.758      1 Template:Infobox_CPU_architecture
+ 10.44%   71.061     16 Template:Navbox
+ 10.40%   70.795      1 Template:Infobox
+  9.02%   61.351      3 Template:Expand_section
+  7.76%   52.810      1 Template:Commonscat
+  7.01%   47.682      3 Template:Ambox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:20170-0!canonical and timestamp 20200327102806 and revision id 946587889
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=MIPS_architecture&amp;oldid=946587889">https://en.wikipedia.org/w/index.php?title=MIPS_architecture&amp;oldid=946587889</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Advanced_RISC_Computing" title="Category:Advanced RISC Computing">Advanced RISC Computing</a></li><li><a href="/wiki/Category:Computer-related_introductions_in_1985" title="Category:Computer-related introductions in 1985">Computer-related introductions in 1985</a></li><li><a href="/wiki/Category:Instruction_set_architectures" title="Category:Instruction set architectures">Instruction set architectures</a></li><li><a href="/wiki/Category:MIPS_architecture" title="Category:MIPS architecture">MIPS architecture</a></li><li><a href="/wiki/Category:MIPS_Technologies" title="Category:MIPS Technologies">MIPS Technologies</a></li><li><a href="/wiki/Category:Open_microprocessors" title="Category:Open microprocessors">Open microprocessors</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">CS1 maint: location</a></li><li><a href="/wiki/Category:CS1_maint:_archived_copy_as_title" title="Category:CS1 maint: archived copy as title">CS1 maint: archived copy as title</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_February_2020" title="Category:Articles to be expanded from February 2020">Articles to be expanded from February 2020</a></li><li><a href="/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_June_2016" title="Category:Articles with unsourced statements from June 2016">Articles with unsourced statements from June 2016</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Use_mdy_dates_from_October_2018" title="Category:Use mdy dates from October 2018">Use mdy dates from October 2018</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=MIPS+architecture" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=MIPS+architecture" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/MIPS_architecture" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:MIPS_architecture" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/MIPS_architecture">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=MIPS_architecture&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=MIPS_architecture&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/MIPS_architecture" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/MIPS_architecture" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=MIPS_architecture&amp;oldid=946587889" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=MIPS_architecture&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q527464" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=MIPS_architecture&amp;id=946587889&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:MIPS_microprocessors" hreflang="en">Wikimedia Commons</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=MIPS+architecture">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=MIPS+architecture&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=MIPS_architecture&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9_%D8%AA%D8%B9%D9%84%D9%8A%D9%85%D8%A7%D8%AA_%D9%85%D9%8A%D8%A8%D8%B3" title="مجموعة تعليمات ميبس – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Arquitectura_MIPS" title="Arquitectura MIPS – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cv"><a href="https://cv.wikipedia.org/wiki/MIPS" title="MIPS – Chuvash" lang="cv" hreflang="cv" class="interlanguage-link-target">Чӑвашла</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/MIPS_(architektura)" title="MIPS (architektura) – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/MIPS-Architektur" title="MIPS-Architektur – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/MIPS_(procesador)" title="MIPS (procesador) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%B9%D9%85%D8%A7%D8%B1%DB%8C_%D9%85%DB%8C%D9%BE%D8%B3" title="معماری میپس – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Architecture_MIPS" title="Architecture MIPS – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/MIPS_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98" title="MIPS 아키텍처 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Arsitektur_MIPS" title="Arsitektur MIPS – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Architettura_MIPS" title="Architettura MIPS – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%90%D7%A8%D7%9B%D7%99%D7%98%D7%A7%D7%98%D7%95%D7%A8%D7%AA_MIPS" title="ארכיטקטורת MIPS – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/MIPS_arhitekt%C5%ABra" title="MIPS arhitektūra – Latvian" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/MIPS_architekt%C3%BAra" title="MIPS architektúra – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/MIPS_(CPU)" title="MIPS (CPU) – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/MIPS%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="MIPSアーキテクチャ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/MIPS_(RISC-arkitektur)" title="MIPS (RISC-arkitektur) – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Architektura_MIPS" title="Architektura MIPS – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Arquitetura_MIPS" title="Arquitetura MIPS – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/MIPS_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0)" title="MIPS (архитектура) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/MIPS_architecture" title="MIPS architecture – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/MIPS-arkkitehtuuri" title="MIPS-arkkitehtuuri – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/MIPS_(processorarkitektur)" title="MIPS (processorarkitektur) – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/MIPS_mimarisi" title="MIPS mimarisi – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/MIPS" title="MIPS – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/MIPS" title="MIPS – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/MIPS%E6%9E%B6%E6%A7%8B" title="MIPS架構 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q527464#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 21 March 2020, at 03:31<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=MIPS_architecture&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.656","walltime":"0.830","ppvisitednodes":{"value":3598,"limit":1000000},"postexpandincludesize":{"value":217990,"limit":2097152},"templateargumentsize":{"value":2315,"limit":2097152},"expansiondepth":{"value":14,"limit":40},"expensivefunctioncount":{"value":3,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":115001,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  680.425      1 -total"," 40.37%  274.671      1 Template:Refs"," 15.74%  107.081     25 Template:Cite_web"," 15.59%  106.111      7 Template:Cite_book"," 11.13%   75.758      1 Template:Infobox_CPU_architecture"," 10.44%   71.061     16 Template:Navbox"," 10.40%   70.795      1 Template:Infobox","  9.02%   61.351      3 Template:Expand_section","  7.76%   52.810      1 Template:Commonscat","  7.01%   47.682      3 Template:Ambox"]},"scribunto":{"limitreport-timeusage":{"value":"0.298","limit":"10.000"},"limitreport-memusage":{"value":5864203,"limit":52428800}},"cachereport":{"origin":"mw1310","timestamp":"20200327102806","ttl":86400,"transientcontent":true}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"MIPS architecture","url":"https:\/\/en.wikipedia.org\/wiki\/MIPS_architecture","sameAs":"http:\/\/www.wikidata.org\/entity\/Q527464","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q527464","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-11-05T10:58:07Z","dateModified":"2020-03-21T03:31:13Z","headline":"instruction set architecture"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":83,"wgHostname":"mw1371"});});</script></body></html>

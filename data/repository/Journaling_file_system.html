@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Journaling file system - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XnsbxQpAIIQAAMhsadEAAABP","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Journaling_file_system","wgTitle":"Journaling file system","wgCurRevisionId":928595173,"wgRevisionId":928595173,"wgArticleId":23455133,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Use mdy dates from October 2019","Computer file systems"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Journaling_file_system","wgRelevantArticleId":23455133,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q579047","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready",
+"ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Journaling_file_system&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Journaling_file_system&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Journaling_file_system"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Journaling_file_system rootpage-Journaling_file_system skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Journaling file system</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<div role="note" class="hatnote navigation-not-searchable">For the IBM Journaled File System, see <a href="/wiki/JFS_(file_system)" title="JFS (file system)">JFS (file system)</a>.</div>
+<p>A <b>journaling file system</b> is a <a href="/wiki/File_system" title="File system">file system</a> that keeps track of changes not yet committed to the file system's main part by recording the intentions of such changes in a data structure known as a "<a href="/wiki/Journal_(computing)" class="mw-redirect" title="Journal (computing)">journal</a>", which is usually a <a href="/wiki/Circular_log" class="mw-redirect" title="Circular log">circular log</a>.  In the event of a system crash or power failure, such file systems can be brought back online more quickly with a lower likelihood of becoming corrupted.<sup id="cite_ref-developerworks-1_1-0" class="reference"><a href="#cite_note-developerworks-1-1">&#91;1&#93;</a></sup><sup id="cite_ref-ostep-1_2-0" class="reference"><a href="#cite_note-ostep-1-2">&#91;2&#93;</a></sup>
+</p><p>Depending on the actual implementation, a journaling file system may only keep track of stored <a href="/wiki/Metadata" title="Metadata">metadata</a>, resulting in improved performance at the expense of increased possibility for data corruption.  Alternatively, a journaling file system may track both stored data and related metadata, while some implementations allow selectable behavior in this regard.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Rationale"><span class="tocnumber">2</span> <span class="toctext">Rationale</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Techniques"><span class="tocnumber">3</span> <span class="toctext">Techniques</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Physical_journals"><span class="tocnumber">3.1</span> <span class="toctext">Physical journals</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Logical_journals"><span class="tocnumber">3.2</span> <span class="toctext">Logical journals</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Write_hazards"><span class="tocnumber">3.3</span> <span class="toctext">Write hazards</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Alternatives"><span class="tocnumber">4</span> <span class="toctext">Alternatives</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Soft_updates"><span class="tocnumber">4.1</span> <span class="toctext">Soft updates</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Log-structured_file_systems"><span class="tocnumber">4.2</span> <span class="toctext">Log-structured file systems</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Copy-on-write_file_systems"><span class="tocnumber">4.3</span> <span class="toctext">Copy-on-write file systems</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In 1990 IBM <a href="/wiki/JFS_(file_system)" title="JFS (file system)">JFS</a>, introduced with <a href="/wiki/AIX" class="mw-redirect" title="AIX">AIX</a> 3.1, was one of the first UNIX commercial filesystems that implemented journaling. Later in 1993 Microsoft <a href="/wiki/NTFS" title="NTFS">NTFS</a> filesystem and in 2001 <a href="/wiki/Ext3" title="Ext3">ext3</a> implemented journaling.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Rationale">Rationale</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=2" title="Edit section: Rationale">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Updating file systems to reflect changes to files and directories usually requires many separate write operations.  This makes it possible for an interruption (like a power failure or system <a href="/wiki/Crash_(computing)" title="Crash (computing)">crash</a>) between writes to leave data structures in an invalid intermediate state.<sup id="cite_ref-developerworks-1_1-1" class="reference"><a href="#cite_note-developerworks-1-1">&#91;1&#93;</a></sup>
+</p><p>For example, deleting a file on a Unix file system involves three steps:<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<ol><li>Removing its directory entry.</li>
+<li>Releasing the <a href="/wiki/Inode" title="Inode">inode</a> to the pool of free inodes.</li>
+<li>Returning all disk blocks to the pool of free disk blocks.</li></ol>
+<p>If a crash occurs after step 1 and before step 2, there will be an orphaned inode and hence a <a href="/wiki/Storage_leak" class="mw-redirect" title="Storage leak">storage leak</a>; if a crash occurs between steps 2 and 3, then the blocks previously used by the file cannot be used for new files, effectively decreasing the storage capacity of the file system. Re-arranging the steps does not help, either. If step 3 preceded step 1, a crash between them could allow the file's blocks to be reused for a new file, meaning the partially deleted file would contain part of the contents of another file, and modifications to either file would show up in both. On the other hand, if step 2 preceded step 1, a crash between them would cause the file to be inaccessible, despite appearing to exist.
+</p><p>Detecting and recovering from such inconsistencies normally requires a complete <a href="/wiki/Glossary_of_graph_theory_terms#walk" title="Glossary of graph theory terms">walk</a> of its data structures, for example by a tool such as <a href="/wiki/Fsck" title="Fsck">fsck</a> (the file system checker).<sup id="cite_ref-ostep-1_2-1" class="reference"><a href="#cite_note-ostep-1-2">&#91;2&#93;</a></sup>  This must typically be done before the file system is next mounted for read-write access.  If the file system is large and if there is relatively little I/O bandwidth, this can take a long time and result in longer downtimes if it blocks the rest of the system from coming back online.
+</p><p>To prevent this, a journaled file system allocates a special area—the journal—in which it records the changes it will make ahead of time.  After a crash, recovery simply involves reading the journal from the file system and replaying changes from this journal until the file system is consistent again.  The changes are thus said to be <a href="/wiki/Atomicity_(database_systems)" title="Atomicity (database systems)">atomic</a> (not divisible) in that they either succeed (succeeded originally or are replayed completely during recovery), or are not replayed at all (are skipped because they had not yet been completely written to the journal before the crash occurred).
+</p>
+<h2><span class="mw-headline" id="Techniques">Techniques</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=3" title="Edit section: Techniques">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Some file systems allow the journal to grow, shrink and be re-allocated just as a regular file, while others put the journal in a contiguous area or a hidden file that is guaranteed not to move or change size while the file system is mounted.  Some file systems may also allow <i>external journals</i> on a separate device, such as a <a href="/wiki/Solid-state_drive" title="Solid-state drive">solid-state drive</a> or battery-backed non-volatile RAM.  Changes to the journal may themselves be journaled for additional redundancy, or the journal may be distributed across multiple physical volumes to protect against device failure.
+</p><p>The internal format of the journal must guard against crashes while the journal itself is being written to.  Many journal implementations (such as the JBD2 layer in <a href="/wiki/Ext4" title="Ext4">ext4</a>) bracket every change logged with a checksum, on the understanding that a crash would leave a partially written change with a missing (or mismatched) checksum that can simply be ignored when replaying the journal at next remount.
+</p>
+<h3><span class="mw-headline" id="Physical_journals">Physical journals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=4" title="Edit section: Physical journals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <i>physical journal</i> logs an advance copy of every block that will later be written to the main file system.  If there is a crash when the main file system is being written to, the write can simply be replayed to completion when the file system is next mounted.  If there is a crash when the write is being logged to the journal, the partial write will have a missing or mismatched checksum and can be ignored at next mount.
+</p><p>Physical journals impose a significant performance penalty because every changed block must be committed <i>twice</i> to storage, but may be acceptable when absolute fault protection is required.<sup id="cite_ref-tweedie-1_6-0" class="reference"><a href="#cite_note-tweedie-1-6">&#91;6&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Logical_journals">Logical journals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=5" title="Edit section: Logical journals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A <i>logical journal</i> stores only changes to file <a href="/wiki/Metadata" title="Metadata">metadata</a> in the journal, and trades fault tolerance for substantially better write performance.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>  A file system with a logical journal still recovers quickly after a crash, but may allow unjournaled file data and journaled metadata to fall out of sync with each other, causing data corruption.
+</p><p>For example, appending to a file may involve three separate writes to:
+</p>
+<ol><li>The file's <a href="/wiki/Inode" title="Inode">inode</a>, to note in the file's metadata that its size has increased.</li>
+<li>The free space map, to mark out an allocation of space for the to-be-appended data.</li>
+<li>The newly allocated space, to actually write the appended data.</li></ol>
+<p>In a metadata-only journal, step 3 would not be logged.  If step 3 was not done, but steps 1 and 2 are replayed during recovery, the file will be appended with garbage.
+</p>
+<h3><span class="mw-headline" id="Write_hazards">Write hazards</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=6" title="Edit section: Write hazards">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The write cache in most operating systems sorts its writes (using the <a href="/wiki/Elevator_algorithm" title="Elevator algorithm">elevator algorithm</a> or some similar scheme) to maximize throughput.  To avoid an out-of-order write hazard with a metadata-only journal, writes for file data must be sorted so that they are committed to storage before their associated metadata.  This can be tricky to implement because it requires coordination within the operating system kernel between the file system driver and write cache.  An out-of-order write hazard can also occur if a device cannot write blocks immediately to its underlying storage, that is, it cannot flush its write-cache to disk due to deferred write being enabled.
+</p><p>To complicate matters, many mass storage devices have their own write caches, in which they may aggressively reorder writes for better performance.  (This is particularly common on magnetic hard drives, which have large seek latencies that can be minimized with elevator sorting.)  Some journaling file systems conservatively assume such write-reordering always takes place, and sacrifice performance for correctness by forcing the device to flush its cache at certain points in the journal (called barriers in <a href="/wiki/Ext3" title="Ext3">ext3</a> and <a href="/wiki/Ext4" title="Ext4">ext4</a>).<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Alternatives">Alternatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=7" title="Edit section: Alternatives">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Soft_updates">Soft updates</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=8" title="Edit section: Soft updates">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Some <a href="/wiki/Unix_File_System" title="Unix File System">UFS</a> implementations avoid journaling and instead implement <a href="/wiki/Soft_updates" title="Soft updates">soft updates</a>: they order their writes in such a way that the on-disk file system is never inconsistent, or that the only inconsistency that can be created in the event of a crash is a storage leak.  To recover from these leaks, the free space map is reconciled against a full walk of the file system at next mount.  This <a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a> is usually done in the background.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Log-structured_file_systems">Log-structured file systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=9" title="Edit section: Log-structured file systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In <a href="/wiki/Log-structured_file_system" title="Log-structured file system">log-structured file systems</a>, the write-twice penalty does not apply because the journal itself <i>is</i> the file system:  it occupies the entire storage device and is structured so that it can be traversed as would a normal file system.
+</p>
+<h3><span class="mw-headline" id="Copy-on-write_file_systems">Copy-on-write file systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=10" title="Edit section: Copy-on-write file systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Full <a href="/wiki/Copy-on-write" title="Copy-on-write">copy-on-write</a> file systems (such as <a href="/wiki/ZFS" title="ZFS">ZFS</a> and <a href="/wiki/Btrfs" title="Btrfs">Btrfs</a>) avoid in-place changes to file data by writing out the data in newly allocated blocks, followed by updated metadata that would point to the new data and disown the old, followed by metadata pointing to that, and so on up to the superblock, or the root of the file system hierarchy.  This has the same correctness-preserving properties as a journal, without the write-twice overhead.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/ACID" title="ACID">ACID</a></li>
+<li><a href="/wiki/Comparison_of_file_systems" title="Comparison of file systems">Comparison of file systems</a></li>
+<li><a href="/wiki/Database" title="Database">Database</a></li>
+<li><a href="/wiki/Intent_log" title="Intent log">Intent log</a></li>
+<li><a href="/wiki/JFS_(file_system)" title="JFS (file system)">Journaled File System (JFS)</a>&#160;&#8211;&#32; a file system made by IBM</li>
+<li><a href="/wiki/Transaction_processing" title="Transaction processing">Transaction processing</a></li>
+<li><a href="/wiki/Versioning_file_system" title="Versioning file system">Versioning file system</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Journaling_file_system&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-developerworks-1-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-developerworks-1_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-developerworks-1_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFJones2008" class="citation">Jones, M Tim (June 4, 2008), <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/library/l-journaling-filesystems/index.html"><i>Anatomy of Linux journaling file systems</i></a>, <a href="/wiki/IBM_DeveloperWorks" title="IBM DeveloperWorks">IBM DeveloperWorks</a>, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20090221103211/http://www.ibm.com/developerworks/library/l-journaling-filesystems/index.html">archived</a> from the original on February 21, 2009<span class="reference-accessdate">, retrieved <span class="nowrap">April 13,</span> 2009</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Anatomy+of+Linux+journaling+file+systems&amp;rft.pub=IBM+DeveloperWorks&amp;rft.date=2008-06-04&amp;rft.aulast=Jones&amp;rft.aufirst=M+Tim&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fl-journaling-filesystems%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-ostep-1-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-ostep-1_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ostep-1_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite id="CITEREFArpaci-DusseauArpaci-Dusseau2014" class="citation">Arpaci-Dusseau, Remzi H.; Arpaci-Dusseau, Andrea C. (January 21, 2014), <a rel="nofollow" class="external text" href="http://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf"><i>Crash Consistency: FSCK and Journaling</i></a> <span class="cs1-format">(PDF)</span>, Arpaci-Dusseau Books, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20140124115718/http://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf">archived</a> <span class="cs1-format">(PDF)</span> from the original on January 24, 2014<span class="reference-accessdate">, retrieved <span class="nowrap">January 22,</span> 2014</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Crash+Consistency%3A+FSCK+and+Journaling&amp;rft.pub=Arpaci-Dusseau+Books&amp;rft.date=2014-01-21&amp;rft.aulast=Arpaci-Dusseau&amp;rft.aufirst=Remzi+H.&amp;rft.au=Arpaci-Dusseau%2C+Andrea+C.&amp;rft_id=http%3A%2F%2Fpages.cs.wisc.edu%2F~remzi%2FOSTEP%2Ffile-journaling.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://linux.die.net/man/8/tune2fs">"tune2fs(8) –  Linux man page"</a>. <i>linux.die.net</i>. <a rel="nofollow" class="external text" href="https://web.archive.org/web/20150225155348/http://linux.die.net/man/8/tune2fs">Archived</a> from the original on February 25, 2015<span class="reference-accessdate">. Retrieved <span class="nowrap">February 20,</span> 2015</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=linux.die.net&amp;rft.atitle=tune2fs%288%29+%E2%80%93++Linux+man+page&amp;rft_id=http%3A%2F%2Flinux.die.net%2Fman%2F8%2Ftune2fs&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://marc.info/?l=linux-kernel&amp;m=100650331813822&amp;w=2">"<span class="cs1-kern-left">'</span>2.4.15-final' - MARC"</a>. <i>marc.info</i><span class="reference-accessdate">. Retrieved <span class="nowrap">March 24,</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=marc.info&amp;rft.atitle=%272.4.15-final%27+-+MARC&amp;rft_id=http%3A%2F%2Fmarc.info%2F%3Fl%3Dlinux-kernel%26m%3D100650331813822%26w%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">File Systems from Tanenbaum, A.S. (2008). Modern operating systems (3rd ed., pp. 287). Upper Saddle River, NJ: Prentice Hall.</span>
+</li>
+<li id="cite_note-tweedie-1-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-tweedie-1_6-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFTweedie2000" class="citation">Tweedie, Stephen (2000), "Ext3, journaling filesystem", <i>Proceedings of the Ottawa Linux Symposium</i>: 24–29</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Proceedings+of+the+Ottawa+Linux+Symposium&amp;rft.atitle=Ext3%2C+journaling+filesystem&amp;rft.pages=24-29&amp;rft.date=2000&amp;rft.aulast=Tweedie&amp;rft.aufirst=Stephen&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite id="CITEREFPrabhakaranArpaci-DusseauArpaci-Dusseau" class="citation">Prabhakaran, Vijayan; Arpaci-Dusseau, Andrea C; Arpaci-Dusseau, Remzi H, <a rel="nofollow" class="external text" href="https://www.usenix.org/events/usenix05/tech/general/full_papers/prabhakaran/prabhakaran.pdf">"Analysis and Evolution of Journaling File Systems"</a> <span class="cs1-format">(PDF)</span>, <i>2005 USENIX Annual Technical Conference</i>, USENIX Association, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20070926161625/https://www.usenix.org/events/usenix05/tech/general/full_papers/prabhakaran/prabhakaran.pdf">archived</a> <span class="cs1-format">(PDF)</span> from the original on September 26, 2007<span class="reference-accessdate">, retrieved <span class="nowrap">July 27,</span> 2007</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=2005+USENIX+Annual+Technical+Conference&amp;rft.atitle=Analysis+and+Evolution+of+Journaling+File+Systems&amp;rft.aulast=Prabhakaran&amp;rft.aufirst=Vijayan&amp;rft.au=Arpaci-Dusseau%2C+Andrea+C&amp;rft.au=Arpaci-Dusseau%2C+Remzi+H&amp;rft_id=https%3A%2F%2Fwww.usenix.org%2Fevents%2Fusenix05%2Ftech%2Fgeneral%2Ffull_papers%2Fprabhakaran%2Fprabhakaran.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite id="CITEREFCorbet2008" class="citation">Corbet, Jonathan (May 21, 2008), <a rel="nofollow" class="external text" href="https://lwn.net/Articles/283161/"><i>Barriers and journaling filesystems</i></a>, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20100314050156/http://lwn.net/Articles/283161/">archived</a> from the original on March 14, 2010<span class="reference-accessdate">, retrieved <span class="nowrap">March 6,</span> 2010</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Barriers+and+journaling+filesystems&amp;rft.date=2008-05-21&amp;rft.aulast=Corbet&amp;rft.aufirst=Jonathan&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F283161%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite id="CITEREFSeltzerGangerMcKusick" class="citation">Seltzer, Margo I; Ganger, Gregory R; McKusick, M Kirk, <a rel="nofollow" class="external text" href="http://www.usenix.org/event/usenix2000/general/full_papers/seltzer/seltzer_html">"Journaling Versus Soft Updates: Asynchronous Meta-data Protection in File Systems"</a>, <i>2000 USENIX Annual Technical Conference</i>, USENIX Association, <a rel="nofollow" class="external text" href="https://web.archive.org/web/20071026004711/http://www.usenix.org/event/usenix2000/general/full_papers/seltzer/seltzer_html/">archived</a> from the original on October 26, 2007<span class="reference-accessdate">, retrieved <span class="nowrap">July 27,</span> 2007</span></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=2000+USENIX+Annual+Technical+Conference&amp;rft.atitle=Journaling+Versus+Soft+Updates%3A+Asynchronous+Meta-data+Protection+in+File+Systems&amp;rft.aulast=Seltzer&amp;rft.aufirst=Margo+I&amp;rft.au=Ganger%2C+Gregory+R&amp;rft.au=McKusick%2C+M+Kirk&amp;rft_id=http%3A%2F%2Fwww.usenix.org%2Fevent%2Fusenix2000%2Fgeneral%2Ffull_papers%2Fseltzer%2Fseltzer_html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJournaling+file+system" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</span>
+</li>
+</ol></div>
+<div role="navigation" class="navbox" aria-labelledby="File_systems" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:File_systems" title="Template:File systems"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:File_systems" title="Template talk:File systems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:File_systems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="File_systems" style="font-size:114%;margin:0 4em"><a href="/wiki/File_system" title="File system">File systems</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*_Comparison_of_file_systems_**_distributed_*_Unix_filesystem">
+<ul><li><a href="/wiki/Comparison_of_file_systems" title="Comparison of file systems">Comparison of file systems</a>
+<ul><li><a href="/wiki/Comparison_of_distributed_file_systems" title="Comparison of distributed file systems">distributed</a></li></ul></li>
+<li><a href="/wiki/Unix_filesystem" title="Unix filesystem">Unix filesystem</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Disk</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Disc_Filing_System" title="Advanced Disc Filing System">ADFS</a></li>
+<li><a href="/wiki/AdvFS" title="AdvFS">AdvFS</a></li>
+<li><a href="/wiki/Amiga_Fast_File_System" title="Amiga Fast File System">Amiga FFS</a></li>
+<li><a href="/wiki/Amiga_Old_File_System" title="Amiga Old File System">Amiga OFS</a></li>
+<li><a href="/wiki/Apple_File_System" title="Apple File System">APFS</a></li>
+<li><a href="/wiki/AtheOS_File_System" title="AtheOS File System">AthFS</a></li>
+<li><a href="/wiki/Bcachefs" title="Bcachefs">bcachefs</a></li>
+<li><a href="/wiki/BeeGFS" title="BeeGFS">BeeGFS</a></li>
+<li>BFS
+<ul><li><a href="/wiki/Be_File_System" title="Be File System">Be File System</a></li>
+<li><a href="/wiki/Boot_File_System" title="Boot File System">Boot File System</a></li></ul></li>
+<li><a href="/wiki/Btrfs" title="Btrfs">Btrfs</a></li>
+<li><a href="/wiki/StorNext_File_System" title="StorNext File System">CVFS</a></li>
+<li><a href="/wiki/CXFS" title="CXFS">CXFS</a></li>
+<li><a href="/wiki/Disc_Filing_System" title="Disc Filing System">DFS</a></li>
+<li>EFS
+<ul><li><a href="/wiki/Encrypting_File_System" title="Encrypting File System">Encrypting File System</a></li>
+<li><a href="/wiki/Extent_File_System" title="Extent File System">Extent File System</a></li></ul></li>
+<li><a href="/wiki/Episode_filesystem" title="Episode filesystem">Episode</a></li>
+<li><a href="/wiki/Extended_file_system" title="Extended file system">ext</a>
+<ul><li><a href="/wiki/Ext2" title="Ext2">ext2</a></li>
+<li><a href="/wiki/Ext3" title="Ext3">ext3</a></li>
+<li><a href="/wiki/Ext3cow" title="Ext3cow">ext3cow</a></li>
+<li><a href="/wiki/Ext4" title="Ext4">ext4</a></li></ul></li>
+<li><a href="/wiki/Unix_File_System" title="Unix File System">FFS/FFS2</a></li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a>
+<ul><li><a href="/wiki/ExFAT" title="ExFAT">exFAT</a></li></ul></li>
+<li><a href="/wiki/Files-11" title="Files-11">Files-11</a></li>
+<li><a href="/wiki/Fossil_(file_system)" title="Fossil (file system)">Fossil</a></li>
+<li><a href="/wiki/HAMMER_(file_system)" title="HAMMER (file system)">HAMMER</a>
+<ul><li><a href="/wiki/HAMMER2" title="HAMMER2">HAMMER2</a></li></ul></li>
+<li><a href="/wiki/Hierarchical_File_System" title="Hierarchical File System">HFS</a></li>
+<li><a href="/wiki/HFS_Plus" title="HFS Plus">HFS+</a></li>
+<li><a href="/wiki/High_Performance_File_System" title="High Performance File System">HPFS</a></li>
+<li><a href="/wiki/High_Throughput_File_System" title="High Throughput File System">HTFS</a></li>
+<li><a href="/wiki/IBM_Spectrum_Scale" title="IBM Spectrum Scale">IBM Spectrum Scale</a></li>
+<li><a href="/wiki/JFS_(file_system)" title="JFS (file system)">JFS</a></li>
+<li><a href="/wiki/Log-structured_File_System_(BSD)" title="Log-structured File System (BSD)">LFS</a></li>
+<li>MFS
+<ul><li><a href="/wiki/Macintosh_File_System" title="Macintosh File System">Macintosh File System</a></li>
+<li><a href="/wiki/TiVo_Media_File_System" title="TiVo Media File System">TiVo Media File System</a></li></ul></li>
+<li><a href="/wiki/MINIX_file_system" title="MINIX file system">MINIX</a></li>
+<li><a href="/wiki/NetWare_File_System" title="NetWare File System">NetWare File System</a></li>
+<li><a href="/wiki/Next3" title="Next3">Next3</a></li>
+<li><a href="/wiki/NILFS" title="NILFS">NILFS</a>
+<ul><li><a href="/wiki/NILFS" title="NILFS">NILFS2</a></li></ul></li>
+<li><a href="/wiki/Novell_Storage_Services" title="Novell Storage Services">NSS</a></li>
+<li><a href="/wiki/NTFS" title="NTFS">NTFS</a></li>
+<li><a href="/wiki/OneFS_distributed_file_system" title="OneFS distributed file system">OneFS</a></li>
+<li><a href="/wiki/Professional_File_System" title="Professional File System">PFS</a></li>
+<li><a href="/wiki/QFS" title="QFS">QFS</a></li>
+<li><a href="/wiki/QNX4FS" title="QNX4FS">QNX4FS</a></li>
+<li><a href="/wiki/ReFS" title="ReFS">ReFS</a></li>
+<li><a href="/wiki/ReiserFS" title="ReiserFS">ReiserFS</a>
+<ul><li><a href="/wiki/Reiser4" title="Reiser4">Reiser4</a></li></ul></li>
+<li><a href="/wiki/Datalight#Reliance_family" title="Datalight">Reliance</a></li>
+<li><a href="/wiki/Datalight#Reliance_Nitro" title="Datalight">Reliance Nitro</a></li>
+<li><a href="/wiki/Remote_File_Sharing" title="Remote File Sharing">RFS</a></li>
+<li><a href="/wiki/Smart_File_System" title="Smart File System">SFS</a></li>
+<li><a href="/wiki/StorNext_File_System" title="StorNext File System">SNFS</a></li>
+<li><a href="/wiki/Soup_(Apple)" title="Soup (Apple)">Soup (Apple)</a></li>
+<li><a href="/wiki/Tux3" title="Tux3">Tux3</a></li>
+<li><a href="/wiki/UBIFS" title="UBIFS">UBIFS</a></li>
+<li><a href="/wiki/Unix_File_System" title="Unix File System">UFS</a>
+<ul><li><a href="/wiki/Soft_updates" title="Soft updates">soft updates</a></li>
+<li><a href="/wiki/Write_Ahead_Physical_Block_Logging" title="Write Ahead Physical Block Logging">WAPBL</a></li></ul></li>
+<li><a href="/wiki/Veritas_File_System" title="Veritas File System">VxFS</a></li>
+<li><a href="/wiki/Write_Anywhere_File_Layout" title="Write Anywhere File Layout">WAFL</a></li>
+<li><a href="/wiki/Xiafs" title="Xiafs">Xiafs</a></li>
+<li><a href="/wiki/XFS" title="XFS">XFS</a></li>
+<li><a href="/wiki/Xsan" title="Xsan">Xsan</a></li>
+<li><a href="/wiki/ZFS_(z/OS_file_system)" title="ZFS (z/OS file system)">zFS</a></li>
+<li><a href="/wiki/ZFS" title="ZFS">ZFS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Optical_disc" title="Optical disc">Optical disc</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/High_Sierra_Format" title="High Sierra Format">HSF</a></li>
+<li><a href="/wiki/ISO_9660" title="ISO 9660">ISO 9660</a></li>
+<li><a href="/wiki/ISO_13490" title="ISO 13490">ISO 13490</a></li>
+<li><a href="/wiki/Universal_Disk_Format" title="Universal Disk Format">UDF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Flash_memory" title="Flash memory">Flash memory</a> and <a href="/wiki/Solid-state_drive" title="Solid-state drive">SSD</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_File_System" title="Apple File System">APFS</a></li>
+<li><a href="/wiki/File_Allocation_Table" title="File Allocation Table">FAT</a></li>
+<li><a href="/wiki/ExFAT" title="ExFAT">exFAT</a></li>
+<li><a href="/wiki/CHFS" title="CHFS">CHFS</a></li>
+<li><a href="/wiki/Transaction-Safe_FAT_File_System" title="Transaction-Safe FAT File System">TFAT</a></li>
+<li><a href="/wiki/EROFS" title="EROFS">EROFS</a></li>
+<li><a href="/wiki/Flash_file_system" title="Flash file system">FFS2</a></li>
+<li><a href="/wiki/F2FS" title="F2FS">F2FS</a></li>
+<li><a href="/wiki/High_Performance_File_System" title="High Performance File System">HPFS</a></li>
+<li><a href="/wiki/JFFS" title="JFFS">JFFS</a></li>
+<li><a href="/wiki/JFFS2" title="JFFS2">JFFS2</a></li>
+<li><a href="/wiki/JFS_(file_system)" title="JFS (file system)">JFS</a></li>
+<li><a href="/wiki/LogFS" title="LogFS">LogFS</a></li>
+<li><a href="/wiki/NILFS" title="NILFS">NILFS</a>
+<ul><li><a href="/wiki/NILFS" title="NILFS">NILFS2</a></li></ul></li>
+<li><a href="/wiki/Non-Volatile_File_System" title="Non-Volatile File System">NVFS</a></li>
+<li><a href="/wiki/YAFFS" title="YAFFS">YAFFS</a></li>
+<li><a href="/wiki/UBIFS" title="UBIFS">UBIFS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Clustered_file_system#Distributed_file_systems" title="Clustered file system">Distributed</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CXFS" title="CXFS">CXFS</a></li>
+<li><a href="/wiki/GFS2" title="GFS2">GFS2</a></li>
+<li><a href="/wiki/Google_File_System" title="Google File System">Google File System</a></li>
+<li><a href="/wiki/OCFS2" title="OCFS2">OCFS2</a></li>
+<li><a href="/wiki/OrangeFS" title="OrangeFS">OrangeFS</a></li>
+<li><a href="/wiki/Parallel_Virtual_File_System" title="Parallel Virtual File System">PVFS</a></li>
+<li><a href="/wiki/Quantcast_File_System" title="Quantcast File System">QFS</a></li>
+<li><a href="/wiki/Xsan" title="Xsan">Xsan</a></li>
+<li><i><a href="/wiki/List_of_file_systems#Distributed_file_systems" title="List of file systems">more...</a></i></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Network-attached_storage" title="Network-attached storage">NAS</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Andrew_File_System" title="Andrew File System">AFS</a> (<a href="/wiki/OpenAFS" title="OpenAFS">OpenAFS</a>)</li>
+<li><a href="/wiki/Apple_Filing_Protocol" title="Apple Filing Protocol">AFP</a></li>
+<li><a href="/wiki/Coda_(file_system)" title="Coda (file system)">Coda</a></li>
+<li><a href="/wiki/Distributed_File_System_(Microsoft)" title="Distributed File System (Microsoft)">DFS</a></li>
+<li><a href="/wiki/Google_File_System" title="Google File System">Google File System</a></li>
+<li><a href="/wiki/IBM_Spectrum_Scale" title="IBM Spectrum Scale">IBM Spectrum Scale</a></li>
+<li><a href="/wiki/Lustre_(file_system)" title="Lustre (file system)">Lustre</a></li>
+<li><a href="/wiki/NetWare_Core_Protocol" title="NetWare Core Protocol">NCP</a></li>
+<li><a href="/wiki/Network_File_System" title="Network File System">NFS</a></li>
+<li><a href="/wiki/Elliptics" title="Elliptics">POHMELFS</a></li>
+<li><a href="/wiki/Apache_Hadoop" title="Apache Hadoop">Hadoop</a></li>
+<li><a href="/wiki/Server_Message_Block" title="Server Message Block">SMB (CIFS)</a></li>
+<li><a href="/wiki/SSHFS" title="SSHFS">SSHFS</a></li>
+<li><i><a href="/wiki/List_of_file_systems#Distributed_file_systems" title="List of file systems">more...</a></i></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Specialized</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Aufs" title="Aufs">Aufs</a></li>
+<li><a href="/wiki/AXFS" title="AXFS">AXFS</a></li>
+<li><a href="/wiki/Boot_File_System" title="Boot File System">Boot File System</a></li>
+<li><a href="/wiki/CDfs" title="CDfs">CDfs</a></li>
+<li><a href="/wiki/Compact_Disc_File_System" title="Compact Disc File System">Compact Disc File System</a></li>
+<li><a href="/wiki/Cramfs" title="Cramfs">cramfs</a></li>
+<li><a href="/wiki/Davfs2" title="Davfs2">Davfs2</a></li>
+<li><a href="/wiki/EROFS" title="EROFS">EROFS</a></li>
+<li><a href="/wiki/FTPFS" title="FTPFS">FTPFS</a></li>
+<li><a href="/wiki/Filesystem_in_Userspace" title="Filesystem in Userspace">FUSE</a></li>
+<li><a href="/wiki/Lnfs" title="Lnfs">Lnfs</a></li>
+<li><a href="/wiki/Linear_Tape_File_System" title="Linear Tape File System">LTFS</a></li>
+<li><a href="/wiki/NOVA_(filesystem)" title="NOVA (filesystem)">NOVA</a></li>
+<li><a href="/wiki/Rational_MultiVersion_File_System" class="mw-redirect" title="Rational MultiVersion File System">MVFS</a></li>
+<li><a href="/wiki/SquashFS" title="SquashFS">SquashFS</a></li>
+<li><a href="/wiki/FAT_filesystem_and_Linux" title="FAT filesystem and Linux">UMSDOS</a></li>
+<li><a href="/wiki/OverlayFS" title="OverlayFS">OverlayFS</a></li>
+<li><a href="/wiki/UnionFS" title="UnionFS">UnionFS</a></li>
+<li><a href="/wiki/WBFS" title="WBFS">WBFS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Pseudo and <a href="/wiki/Virtual_file_system" title="Virtual file system">virtual</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Configfs" title="Configfs">configfs</a></li>
+<li><a href="/wiki/Device_file" title="Device file">devfs</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Kernfs_(BSD)" title="Kernfs (BSD)">kernfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Specfs" title="Specfs">specfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Tmpfs" title="Tmpfs">tmpfs</a></li>
+<li><a href="/wiki/WinFS" title="WinFS">WinFS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Filesystem-level_encryption" title="Filesystem-level encryption">Encrypted</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ECryptfs" title="ECryptfs">eCryptfs</a></li>
+<li><a href="/wiki/EncFS" title="EncFS">EncFS</a></li>
+<li><a href="/wiki/Encrypting_File_System" title="Encrypting File System">EFS</a></li>
+<li><a href="/wiki/Rubberhose_(file_system)" title="Rubberhose (file system)">Rubberhose</a></li>
+<li><a href="/wiki/SSHFS" title="SSHFS">SSHFS</a></li>
+<li><a href="/wiki/ZFS" title="ZFS">ZFS</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Types</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Clustered_file_system" title="Clustered file system">Clustered</a>
+<ul><li><a href="/wiki/Global_file_system" title="Global file system">Global</a></li>
+<li><a href="/wiki/Grid_file_system" title="Grid file system">Grid</a></li>
+<li><a href="/wiki/Self-certifying_File_System" title="Self-certifying File System">Self-certifying</a></li></ul></li>
+<li><a href="/wiki/Flash_file_system" title="Flash file system">Flash</a></li>
+<li><a class="mw-selflink selflink">Journaling</a></li>
+<li><a href="/wiki/Log-structured_file_system" title="Log-structured file system">Log-structured</a></li>
+<li><a href="/wiki/Object_storage" title="Object storage">Object</a></li>
+<li><a href="/wiki/Record-oriented_filesystem" title="Record-oriented filesystem">Record-oriented</a></li>
+<li><a href="/wiki/Semantic_file_system" title="Semantic file system">Semantic</a></li>
+<li><a href="/wiki/Steganographic_file_system" title="Steganographic file system">Steganographic</a></li>
+<li><a href="/wiki/Synthetic_file_system" title="Synthetic file system">Synthetic</a></li>
+<li><a href="/wiki/Versioning_file_system" title="Versioning file system">Versioning</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Case_preservation" title="Case preservation">Case preservation</a></li>
+<li><a href="/wiki/Copy-on-write" title="Copy-on-write">Copy-on-write</a></li>
+<li><a href="/wiki/Data_deduplication" title="Data deduplication">Data deduplication</a></li>
+<li><a href="/wiki/Data_scrubbing" title="Data scrubbing">Data scrubbing</a></li>
+<li><a href="/wiki/Execute_in_place" title="Execute in place">Execute in place</a></li>
+<li><a href="/wiki/Extent_(file_systems)" title="Extent (file systems)">Extent</a></li>
+<li><a href="/wiki/File_attribute" title="File attribute">File attribute</a>
+<ul><li><a href="/wiki/Extended_file_attributes" title="Extended file attributes">Extended file attributes</a></li></ul></li>
+<li><a href="/wiki/File_change_log" title="File change log">File change log</a></li>
+<li><a href="/wiki/Fork_(file_system)" title="Fork (file system)">Fork</a></li>
+<li>Links
+<ul><li><a href="/wiki/Hard_link" title="Hard link">Hard</a></li>
+<li><a href="/wiki/Symbolic_link" title="Symbolic link">Symbolic</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_access_control" title="Computer access control">Access control</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Access_control_list" class="mw-redirect" title="Access control list">Access control list</a></li>
+<li><a href="/wiki/Filesystem-level_encryption" title="Filesystem-level encryption">Filesystem-level encryption</a></li>
+<li><a href="/wiki/File_system_permissions" title="File system permissions">Permissions</a>
+<ul><li><a href="/wiki/Modes_(Unix)" title="Modes (Unix)">Modes</a></li>
+<li><a href="/wiki/Sticky_bit" title="Sticky bit">Sticky bit</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Interface_(computing)" title="Interface (computing)">Interfaces</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/File_manager" title="File manager">File manager</a></li>
+<li><a href="/wiki/File_system_API" title="File system API">File system API</a>
+<ul><li><a href="/wiki/Installable_File_System" title="Installable File System">Installable File System</a></li></ul></li>
+<li><a href="/wiki/Virtual_file_system" title="Virtual file system">Virtual file system</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_file_systems" title="List of file systems">Lists</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_cryptographic_file_systems" title="List of cryptographic file systems">Cryptographic</a></li>
+<li><a href="/wiki/List_of_default_file_systems" title="List of default file systems">Default</a></li>
+<li><a href="/wiki/List_of_log-structured_file_systems" title="List of log-structured file systems">Log-structured</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Operating_systems" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Operating_system" title="Template:Operating system"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Operating_system" title="Template talk:Operating system"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Operating_system&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Operating_systems" style="font-size:114%;margin:0 4em"><a href="/wiki/Operating_system" title="Operating system">Operating systems</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Operating_system_advocacy" title="Operating system advocacy">Advocacy</a></li>
+<li><a href="/wiki/Comparison_of_operating_systems" title="Comparison of operating systems">Comparison</a></li>
+<li><a href="/wiki/Forensic_software_engineering" title="Forensic software engineering">Forensic engineering</a></li>
+<li><a href="/wiki/History_of_operating_systems" title="History of operating systems">History</a></li>
+<li><a href="/wiki/Hobbyist_operating_system_development" title="Hobbyist operating system development">Hobbyist development</a></li>
+<li><a href="/wiki/List_of_operating_systems" title="List of operating systems">List</a></li>
+<li><a href="/wiki/Timeline_of_operating_systems" title="Timeline of operating systems">Timeline</a></li>
+<li><a href="/wiki/Usage_share_of_operating_systems" title="Usage share of operating systems">Usage share</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Kernel_(operating_system)" title="Kernel (operating system)">Kernel</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:6em"><a href="/wiki/Computer_architecture" title="Computer architecture">Architectures</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Exokernel" title="Exokernel">Exokernel</a></li>
+<li><a href="/wiki/Hybrid_kernel" title="Hybrid kernel">Hybrid</a></li>
+<li><a href="/wiki/Microkernel" title="Microkernel">Microkernel</a></li>
+<li><a href="/wiki/Monolithic_kernel" title="Monolithic kernel">Monolithic</a></li>
+<li><a href="/wiki/Vkernel" title="Vkernel">vkernel</a></li>
+<li><a href="/wiki/Rump_kernel" title="Rump kernel">Rump kernel</a></li>
+<li><a href="/wiki/Unikernel" title="Unikernel">Unikernel</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:6em">Components</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device driver</a></li>
+<li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Loadable kernel module</a></li>
+<li><a href="/wiki/Microkernel" title="Microkernel">Microkernel</a></li>
+<li><a href="/wiki/User_space" title="User space">User space</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Process_management_(computing)" title="Process management (computing)">Process management</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:6em">Concepts</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Context_switch" title="Context switch">Context switch</a></li>
+<li><a href="/wiki/Interrupt" title="Interrupt">Interrupt</a></li>
+<li><a href="/wiki/Inter-process_communication" title="Inter-process communication">IPC</a></li>
+<li><a href="/wiki/Process_(computing)" title="Process (computing)">Process</a></li>
+<li><a href="/wiki/Process_control_block" title="Process control block">Process control block</a></li>
+<li><a href="/wiki/Real-time_operating_system" title="Real-time operating system">Real-time</a></li>
+<li><a href="/wiki/Thread_(computing)" title="Thread (computing)">Thread</a></li>
+<li><a href="/wiki/Time-sharing" title="Time-sharing">Time-sharing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:6em"><a href="/wiki/Scheduling_(computing)" title="Scheduling (computing)">Scheduling<br />algorithms</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Computer_multitasking" title="Computer multitasking">Computer multitasking</a></li>
+<li><a href="/wiki/Fixed-priority_pre-emptive_scheduling" title="Fixed-priority pre-emptive scheduling">Fixed-priority preemptive</a></li>
+<li><a href="/wiki/Multilevel_feedback_queue" title="Multilevel feedback queue">Multilevel feedback queue</a></li>
+<li><a href="/wiki/Preemption_(computing)" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="/wiki/Round-robin_scheduling" title="Round-robin scheduling">Round-robin</a></li>
+<li><a href="/wiki/Shortest_job_next" title="Shortest job next">Shortest job next</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Memory_management" title="Memory management">Memory management</a>,<br /><a href="/wiki/System_resource" title="System resource">resource</a> protection</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bus_error" title="Bus error">Bus error</a></li>
+<li><a href="/wiki/General_protection_fault" title="General protection fault">General protection fault</a></li>
+<li><a href="/wiki/Memory_protection" title="Memory protection">Memory protection</a></li>
+<li><a href="/wiki/Paging" title="Paging">Paging</a></li>
+<li><a href="/wiki/Protection_ring" title="Protection ring">Protection ring</a></li>
+<li><a href="/wiki/Segmentation_fault" title="Segmentation fault">Segmentation fault</a></li>
+<li><a href="/wiki/Virtual_memory" title="Virtual memory">Virtual memory</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Non-volatile_memory" title="Non-volatile memory">Storage</a> access,<br /><a href="/wiki/File_system" title="File system">file systems</a></th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Booting#BOOT-LOADER" title="Booting">Boot loader</a></li>
+<li><a href="/wiki/Defragmentation" title="Defragmentation">Defragmentation</a></li>
+<li><a href="/wiki/Device_file" title="Device file">Device file</a></li>
+<li><a href="/wiki/File_attribute" title="File attribute">File attribute</a></li>
+<li><a href="/wiki/Inode" title="Inode">Inode</a></li>
+<li><a class="mw-selflink selflink">Journal</a></li>
+<li><a href="/wiki/Disk_partitioning" title="Disk partitioning">Partition</a></li>
+<li><a href="/wiki/Virtual_file_system" title="Virtual file system">Virtual file system</a></li>
+<li><a href="/wiki/Virtual_tape_library" title="Virtual tape library">Virtual tape library</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/List_of_operating_systems" title="List of operating systems">List</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Acorn
+<ul><li><a href="/wiki/Arthur_(operating_system)" class="mw-redirect" title="Arthur (operating system)">Arthur</a></li>
+<li><a href="/wiki/ARX_(operating_system)" title="ARX (operating system)">ARX</a></li>
+<li><a href="/wiki/Acorn_MOS" title="Acorn MOS">MOS</a></li>
+<li><a href="/wiki/RISC_iX" title="RISC iX">RISC iX</a></li>
+<li><a href="/wiki/RISC_OS" title="RISC OS">RISC OS</a></li></ul></li>
+<li>Amiga Inc.
+<ul><li><a href="/wiki/AmigaOS" title="AmigaOS">AmigaOS</a></li>
+<li><a href="/wiki/AmigaOS_versions" class="mw-redirect" title="AmigaOS versions">AmigaOS 1.0-3.9</a> (Motorola 68000)</li>
+<li><a href="/wiki/AmigaOS_4" title="AmigaOS 4">AmigaOS 4</a> (PowerPC)</li>
+<li><a href="/wiki/Amiga_Unix" title="Amiga Unix">Amiga Unix, a.k.a. Amix</a></li></ul></li>
+<li>Amstrad
+<ul><li><a href="/wiki/AMSDOS" title="AMSDOS">AMSDOS</a></li>
+<li><a href="/wiki/Contiki" title="Contiki">Contiki</a></li>
+<li><a href="/wiki/SymbOS" title="SymbOS">SymbOS</a></li></ul></li>
+<li><a href="/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li>Apple Inc.
+<ul><li><a href="/wiki/Apple_II" title="Apple II">Apple II</a> family</li>
+<li><a href="/wiki/Apple_III" title="Apple III">Apple III</a></li>
+<li><a href="/wiki/Apple_DOS" title="Apple DOS">Apple DOS</a></li>
+<li><a href="/wiki/Apple_Lisa" title="Apple Lisa">Apple Lisa</a></li>
+<li><a href="/wiki/Apple_SOS" title="Apple SOS">Apple SOS</a></li>
+<li><a href="/wiki/Apple_Pascal" title="Apple Pascal">Apple Pascal</a></li>
+<li><a href="/wiki/ProDOS" class="mw-redirect" title="ProDOS">ProDOS</a></li>
+<li><a href="/wiki/Apple_GS/OS" title="Apple GS/OS">GS/OS</a></li>
+<li><a href="/wiki/GNO/ME" title="GNO/ME">GNO/ME</a></li>
+<li><a href="/wiki/Contiki" title="Contiki">Contiki</a></li>
+<li><a href="/wiki/Macintosh" title="Macintosh">Apple Macintosh</a>
+<ul><li><a href="/wiki/Classic_Mac_OS" title="Classic Mac OS">Classic Mac OS</a></li>
+<li><a href="/wiki/A/UX" title="A/UX">A/UX</a></li>
+<li><a href="/wiki/Copland_(operating_system)" title="Copland (operating system)">Copland</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Taligent" title="Taligent">Pink</a></li>
+<li><a href="/wiki/Rhapsody_(operating_system)" title="Rhapsody (operating system)">Rhapsody</a></li>
+<li><a href="/wiki/MacOS" title="MacOS">macOS</a> (formerly Mac OS X and OS X)</li>
+<li><a href="/wiki/MacOS_Server" title="MacOS Server">macOS Server</a> (formerly Mac OS X Server and OS X Server)</li>
+<li><a href="/wiki/Apple_Network_Server" title="Apple Network Server">Apple Network Server</a></li></ul></li>
+<li><a href="/wiki/Apple_MessagePad" class="mw-redirect" title="Apple MessagePad">Apple MessagePad</a>
+<ul><li><a href="/wiki/Newton_OS" title="Newton OS">Newton OS</a></li></ul></li>
+<li><a href="/wiki/IPhone" title="IPhone">iPhone</a> and <a href="/wiki/Ipod_touch" class="mw-redirect" title="Ipod touch">iPod Touch</a>
+<ul><li><a href="/wiki/IOS" title="IOS">iOS</a> (formerly iPhone OS)</li></ul></li>
+<li><a href="/wiki/IPad" title="IPad">iPad</a>
+<ul><li><a href="/wiki/IPadOS" title="IPadOS">iPadOS</a></li></ul></li>
+<li><a href="/wiki/Apple_Watch" title="Apple Watch">Apple Watch</a>
+<ul><li><a href="/wiki/WatchOS" title="WatchOS">watchOS</a></li></ul></li>
+<li><a href="/wiki/Apple_TV" title="Apple TV">Apple TV</a>
+<ul><li><a href="/wiki/TvOS" title="TvOS">tvOS</a></li></ul></li>
+<li><a href="/wiki/Darwin_(operating_system)" title="Darwin (operating system)">Darwin</a></li>
+<li><a href="/wiki/IPod" title="IPod">iPod</a>
+<ul><li><a href="/wiki/IPod_software" class="mw-redirect" title="IPod software">iPod software</a> (unnamed embedded OS)</li></ul></li></ul></li>
+<li><a href="/wiki/A/ROSE" title="A/ROSE">A/ROSE</a></li>
+<li>Apollo Computer
+<ul><li><a href="/wiki/Domain/OS" title="Domain/OS">Domain/OS</a></li></ul></li>
+<li>Atari
+<ul><li><a href="/wiki/Atari_DOS" title="Atari DOS">Atari DOS</a></li>
+<li><a href="/wiki/Atari_TOS" title="Atari TOS">Atari TOS</a></li>
+<li><a href="/wiki/MultiTOS" class="mw-redirect" title="MultiTOS">Atari MultiTOS</a></li></ul></li>
+<li>BAE Systems <a href="/wiki/XTS-400" title="XTS-400">XTS-400</a></li>
+<li>Be Inc.
+<ul><li><a href="/wiki/BeOS" title="BeOS">BeOS</a></li>
+<li><a href="/wiki/BeIA" title="BeIA">BeIA</a></li>
+<li><a href="/wiki/Dano_(BeOS)" class="mw-redirect" title="Dano (BeOS)">BeOS r5.1d0</a></li></ul></li>
+<li>Bell Labs Non-Unix
+<ul><li><a href="/wiki/BESYS" title="BESYS">BESYS</a></li>
+<li><a href="/wiki/Plan_9_from_Bell_Labs" title="Plan 9 from Bell Labs">Plan 9 from Bell Labs</a></li>
+<li><a href="/wiki/Inferno_(operating_system)" title="Inferno (operating system)">Inferno</a>)</li></ul></li>
+<li>Burroughs Corporation
+<ul><li><a href="/wiki/Burroughs_MCP" title="Burroughs MCP">Burroughs MCP</a></li></ul></li>
+<li><a href="/wiki/Berkeley_Software_Distribution" title="Berkeley Software Distribution">BSD</a></li>
+<li>Control Data Corporation
+<ul><li><a href="/wiki/Chippewa_Operating_System" title="Chippewa Operating System">Chippewa Operating System</a></li>
+<li><a href="/wiki/CDC_Kronos" title="CDC Kronos">Kronos</a></li>
+<li><a href="/wiki/NOS_(software)" title="NOS (software)">NOS (Network Operating System)</a></li>
+<li><a href="/wiki/CDC_SCOPE" title="CDC SCOPE">SCOPE</a>)</li></ul></li>
+<li><a href="/wiki/Convergent_Technologies_Operating_System" title="Convergent Technologies Operating System">Convergent Technologies Operating System</a></li>
+<li><a href="/wiki/Cosmos_(operating_system)" title="Cosmos (operating system)">Cosmos</a></li>
+<li>Cromemco
+<ul><li><a href="/wiki/Cromemco_DOS" title="Cromemco DOS">Cromemco DOS</a></li>
+<li><a href="/wiki/Cromix" class="mw-redirect" title="Cromix">Cromix</a></li></ul></li>
+<li>Data General
+<ul><li><a href="/wiki/Data_General_AOS" title="Data General AOS">AOS (for 16-bit)</a></li>
+<li><a href="/wiki/DG/UX" title="DG/UX">DG/UX</a></li>
+<li><a href="/wiki/Data_General_RDOS" title="Data General RDOS">RDOS (Real-time DOS)</a></li></ul></li>
+<li>Datapoint (CTOS for Z-80)</li>
+<li>DDC-I Inc.
+<ul><li><a href="/wiki/HeartOS" class="mw-redirect" title="HeartOS">HeartOS</a></li></ul></li>
+<li>Digital Research, Inc.
+<ul><li><a href="/wiki/CP/M" title="CP/M">CP/M</a></li>
+<li><a href="/wiki/CP/M_Plus" class="mw-redirect" title="CP/M Plus">CP/M Plus</a></li>
+<li><a href="/wiki/CP/M-68K" class="mw-redirect" title="CP/M-68K">CP/M-68K</a></li>
+<li><a href="/wiki/CP/M-8000" class="mw-redirect" title="CP/M-8000">CP/M-8000</a></li>
+<li><a href="/wiki/CP/M-86" title="CP/M-86">CP/M-86</a></li>
+<li><a href="/wiki/CP/M-86_Plus" class="mw-redirect" title="CP/M-86 Plus">CP/M-86 Plus</a></li>
+<li><a href="/wiki/Concurrent_CP/M" class="mw-redirect" title="Concurrent CP/M">Concurrent CP/M</a></li>
+<li><a href="/wiki/Concurrent_CP/M-86" class="mw-redirect" title="Concurrent CP/M-86">Concurrent CP/M-86</a></li>
+<li><a href="/wiki/Concurrent_CP/M_8-16" class="mw-redirect" title="Concurrent CP/M 8-16">Concurrent CP/M 8-16</a></li>
+<li><a href="/wiki/Concurrent_CP/M-68K" class="mw-redirect" title="Concurrent CP/M-68K">Concurrent CP/M-68K</a></li>
+<li><a href="/wiki/Concurrent_DOS" class="mw-redirect" title="Concurrent DOS">Concurrent DOS</a>
+<ul><li><a href="/wiki/Concurrent_PC_DOS" class="mw-redirect" title="Concurrent PC DOS">Concurrent PC DOS</a></li>
+<li><a href="/wiki/Concurrent_DOS_8-16" class="mw-redirect" title="Concurrent DOS 8-16">Concurrent DOS 8-16</a></li>
+<li><a href="/wiki/Concurrent_DOS_286" class="mw-redirect" title="Concurrent DOS 286">Concurrent DOS 286</a></li>
+<li><a href="/wiki/Concurrent_DOS_XM" class="mw-redirect" title="Concurrent DOS XM">Concurrent DOS XM</a></li>
+<li><a href="/wiki/Concurrent_DOS_386" class="mw-redirect" title="Concurrent DOS 386">Concurrent DOS 386</a></li>
+<li><a href="/wiki/Concurrent_DOS_386/MGE" class="mw-redirect" title="Concurrent DOS 386/MGE">Concurrent DOS 386/MGE</a></li>
+<li><a href="/wiki/Concurrent_DOS_68K" class="mw-redirect" title="Concurrent DOS 68K">Concurrent DOS 68K</a></li></ul></li>
+<li><a href="/wiki/DR-DOS" title="DR-DOS">DR-DOS</a></li>
+<li><a href="/wiki/FlexOS" title="FlexOS">FlexOS</a>
+<ul><li><a href="/wiki/FlexOS_186" class="mw-redirect" title="FlexOS 186">FlexOS 186</a></li>
+<li><a href="/wiki/FlexOS_286" class="mw-redirect" title="FlexOS 286">FlexOS 286</a></li>
+<li><a href="/wiki/FlexOS_68K" class="mw-redirect" title="FlexOS 68K">FlexOS 68K</a></li></ul></li>
+<li><a href="/wiki/Multiuser_DOS" title="Multiuser DOS">Multiuser DOS</a></li>
+<li><a href="/wiki/Datapac_Multiuser_DOS" class="mw-redirect" title="Datapac Multiuser DOS">Datapac Multiuser DOS</a></li>
+<li><a href="/wiki/Datapac_System_Manager" class="mw-redirect" title="Datapac System Manager">Datapac System Manager</a>, a derivative of Datapac Multiuser DOS</li>
+<li><a href="/wiki/IMS_Multiuser_DOS" class="mw-redirect" title="IMS Multiuser DOS">IMS Multiuser DOS</a></li>
+<li><a href="/wiki/MP/M" title="MP/M">MP/M</a>
+<ul><li><a href="/wiki/MP/M_II" class="mw-redirect" title="MP/M II">MP/M II</a></li>
+<li><a href="/wiki/MP/M-86" class="mw-redirect" title="MP/M-86">MP/M-86</a></li>
+<li><a href="/wiki/MP/M_8-16" class="mw-redirect" title="MP/M 8-16">MP/M 8-16</a></li></ul></li>
+<li><a href="/wiki/PalmDOS" class="mw-redirect" title="PalmDOS">PalmDOS</a> 1.0</li>
+<li><a href="/wiki/Personal_CP/M" class="mw-redirect" title="Personal CP/M">Personal CP/M</a></li></ul></li>
+<li>Digital Equipment Corporation
+<ul><li><a href="/wiki/DEC_BATCH-11/DOS-11" title="DEC BATCH-11/DOS-11">Batch-11/DOS-11</a></li>
+<li><a href="/wiki/OS/8" title="OS/8">OS/8</a></li>
+<li><a href="/wiki/RSTS/E" title="RSTS/E">RSTS/E</a></li>
+<li><a href="/wiki/RSX-11" title="RSX-11">RSX-11</a></li>
+<li><a href="/wiki/RT-11" title="RT-11">RT-11</a></li>
+<li><a href="/wiki/TOPS-10" title="TOPS-10">TOPS-10</a></li>
+<li><a href="/wiki/TOPS-20" title="TOPS-20">TOPS-20</a></li>
+<li><a href="/wiki/TENEX_(operating_system)" title="TENEX (operating system)">TENEX</a></li>
+<li><a href="/wiki/Tru64_UNIX" title="Tru64 UNIX">Digital UNIX</a></li>
+<li><a href="/wiki/Ultrix" title="Ultrix">Ultrix</a></li>
+<li><a href="/wiki/OpenVMS" title="OpenVMS">VMS</a></li>
+<li><a href="/wiki/WAITS" title="WAITS">WAITS</a></li></ul></li>
+<li><a href="/wiki/DOS" title="DOS">DOS</a></li>
+<li>ENEA AB  <a href="/wiki/Operating_System_Embedded" title="Operating System Embedded">OSE</a></li>
+<li>Fujitsu <a href="/wiki/Towns_OS" class="mw-redirect" title="Towns OS">Towns OS</a></li>
+<li>General Electric, Honeywell, Bull
+<ul><li><a href="/wiki/Real-Time_Multiprogramming_Operating_System" title="Real-Time Multiprogramming Operating System">Real-Time Multiprogramming Operating System</a></li>
+<li><a href="/wiki/General_Comprehensive_Operating_System" title="General Comprehensive Operating System">GCOS</a></li>
+<li><a href="/wiki/Multics" title="Multics">Multics</a></li></ul></li>
+<li><a href="/wiki/Genode" title="Genode">Genode</a></li>
+<li><a href="/wiki/GNU" title="GNU">GNU</a></li>
+<li>Google
+<ul><li><a href="/wiki/Android_(operating_system)" title="Android (operating system)">Android</a></li>
+<li><a href="/wiki/Chromium_OS" title="Chromium OS">Chromium OS</a></li>
+<li><a href="/wiki/Chrome_OS" title="Chrome OS">Chrome OS</a></li>
+<li><a href="/wiki/Goobuntu" title="Goobuntu">Goobuntu</a></li>
+<li><a href="/wiki/Google_Fuchsia" title="Google Fuchsia">Fuchsia</a>)</li></ul></li>
+<li>Green Hills Software
+<ul><li><a href="/wiki/Integrity_(operating_system)" title="Integrity (operating system)">INTEGRITY</a></li>
+<li><a href="/wiki/INTEGRITY-178B" class="mw-redirect" title="INTEGRITY-178B">INTEGRITY-178B</a></li>
+<li><i><a href="/wiki/Green_Hills_Software#Real-time_operating_systems" title="Green Hills Software">µ-velOSity</a></i></li></ul></li>
+<li><a href="/wiki/Haiku_(operating_system)" title="Haiku (operating system)">Haiku</a></li>
+<li><a href="/wiki/Harmony_OS" title="Harmony OS">Harmony</a></li>
+<li>Heathkit, Zenith Data Systems
+<ul><li><a href="/wiki/HDOS" title="HDOS">HDOS</a></li>
+<li><a href="/wiki/Heathkit_H11#Specifications" title="Heathkit H11">HT-11</a></li></ul></li>
+<li>Hewlett-Packard
+<ul><li><a href="/wiki/HP-UX" title="HP-UX">HP-UX</a></li>
+<li><a href="/wiki/HP_Multi-Programming_Executive" title="HP Multi-Programming Executive">Multi-Programming Executive</a></li></ul></li>
+<li><a href="/wiki/Honeywell_CP-6" title="Honeywell CP-6">Honeywell CP-6</a></li>
+<li>Huawei <a href="/wiki/Harmony_OS" title="Harmony OS">Harmony OS</a></li>
+<li>Intel Corporation
+<ul><li><a href="/wiki/ISIS_(operating_system)" title="ISIS (operating system)">ISIS</a></li></ul></li>
+<li>IBM
+<ul><li>Pre-360
+<ul><li><a href="/wiki/BESYS" title="BESYS">BESYS</a></li>
+<li><a href="/wiki/Compatible_Time-Sharing_System" title="Compatible Time-Sharing System">CTSS</a></li>
+<li><a href="/wiki/GM-NAA_I/O" title="GM-NAA I/O">GM OS &amp; GM-NAA I/O</a></li>
+<li><a href="/wiki/IBM_7090/94_IBSYS" title="IBM 7090/94 IBSYS">IBSYS</a></li>
+<li><a href="/wiki/SHARE_Operating_System" title="SHARE Operating System">SHARE Operating System</a></li>
+<li><a href="/wiki/University_of_Michigan_Executive_System" title="University of Michigan Executive System">University of Michigan Executive System (UMES)</a></li></ul></li>
+<li>OS/360 and successors
+<ul><li><a href="/wiki/OS/360_and_successors" title="OS/360 and successors">OS/360 and successors</a></li>
+<li><a href="/wiki/MVS" title="MVS">MVS</a></li>
+<li><a href="/wiki/OS/390" title="OS/390">OS/390</a></li>
+<li><a href="/wiki/Phoenix_(computer)" title="Phoenix (computer)">Phoenix/MVS</a></li>
+<li><a href="/wiki/Z/OS" title="Z/OS">z/OS</a>)</li></ul></li>
+<li>DOS
+<ul><li><a href="/wiki/DOS/360_and_successors" title="DOS/360 and successors">DOS/360 and successors</a> on IBM S/360, S/370, and successor mainframes</li>
+<li><a href="/wiki/BOS/360" title="BOS/360">BOS/360</a></li>
+<li><a href="/wiki/TOS/360" class="mw-redirect" title="TOS/360">TOS/360</a></li>
+<li><a href="/wiki/DOS/VS" class="mw-redirect" title="DOS/VS">DOS/VS</a></li>
+<li><a href="/wiki/DOS/VSE" class="mw-redirect" title="DOS/VSE">DOS/VSE</a></li>
+<li><a href="/wiki/VSE/SP" class="mw-redirect" title="VSE/SP">VSE/SP</a></li>
+<li><a href="/wiki/VSE/ESA" class="mw-redirect" title="VSE/ESA">VSE/ESA</a></li>
+<li><a href="/wiki/Z/VSE" class="mw-redirect" title="Z/VSE">z/VSE</a>)</li></ul></li>
+<li>VM/CMS
+<ul><li><a href="/wiki/CP/CMS" title="CP/CMS">CP/CMS</a></li>
+<li><a href="/wiki/CP-40" class="mw-redirect" title="CP-40">CP-40</a></li>
+<li><a href="/wiki/CP-67" title="CP-67">CP-67</a></li>
+<li><a href="/wiki/VM/370" class="mw-redirect" title="VM/370">VM/370</a></li>
+<li><a href="/wiki/VM_(operating_system)" title="VM (operating system)">VM/XA</a></li>
+<li>VM/ESA <a href="/wiki/Virtual_machine" title="Virtual machine">Virtual Machine</a></li>
+<li><a href="/wiki/Z/VM" title="Z/VM">z/VM</a>)</li></ul></li>
+<li>TPF line
+<ul><li><a href="/wiki/Airline_Control_Program" class="mw-redirect" title="Airline Control Program">Airline Control Program <i>ACP</i></a></li>
+<li><a href="/wiki/Transaction_Processing_Facility" title="Transaction Processing Facility">Transaction Processing Facility</a>)</li></ul></li>
+<li>Unix-like
+<ul><li><a href="/wiki/IBM_AIX" title="IBM AIX">AIX</a></li>
+<li><a href="/wiki/UTS_(Mainframe_UNIX)" class="mw-redirect" title="UTS (Mainframe UNIX)">UTS (Mainframe UNIX)</a></li>
+<li><a href="/wiki/Linux_on_IBM_Z" title="Linux on IBM Z">Linux on IBM Z</a></li></ul></li>
+<li>Others on IBM S/360, S/370, and successor mainframes
+<ul><li><a href="/wiki/TSS/360" class="mw-redirect" title="TSS/360">TSS/360</a></li>
+<li><a href="/wiki/MUSIC/SP" title="MUSIC/SP">MUSIC/SP</a></li>
+<li><a href="/wiki/ORVYL_and_WYLBUR" title="ORVYL and WYLBUR">ORVYL and WYLBUR</a></li></ul></li>
+<li>IBM PC
+<ul><li><a href="/wiki/PC_DOS" class="mw-redirect" title="PC DOS">PC DOS</a></li>
+<li><a href="/wiki/OS/2" title="OS/2">OS/2</a></li>
+<li><a href="/wiki/OS/2_Warp" class="mw-redirect" title="OS/2 Warp">OS/2 Warp</a></li>
+<li><a href="/wiki/EComStation" title="EComStation">eComStation</a>)</li></ul></li>
+<li>Other hardware
+<ul><li>IBM Series 1
+<ul><li><a href="/wiki/IBM_Series/1#Software_support" title="IBM Series/1">EDX</a></li>
+<li><a href="/wiki/IBM_Series/1#Software_support" title="IBM Series/1">RPS</a></li>
+<li><a href="/wiki/IBM_Series/1#Software_support" title="IBM Series/1">CPS</a></li></ul></li></ul></li>
+<li><a href="/wiki/IBM_1130" title="IBM 1130">IBM 1130 DM2</a></li>
+<li><a href="/wiki/IBM_1800" class="mw-redirect" title="IBM 1800">IBM 1800 MPX &amp; TSX</a></li>
+<li>IBM 8100
+<ul><li><a href="/wiki/IBM_8100_DPCX" title="IBM 8100 DPCX">DPCX</a></li>
+<li><a href="/wiki/IBM_8100_DPPX" class="mw-redirect" title="IBM 8100 DPPX">DPPX</a>)</li></ul></li>
+<li><a href="/wiki/IBM_System/3" title="IBM System/3">System 3 DMS</a></li>
+<li>IBM System 34, 36, 38</li>
+<li><a href="/wiki/IBM_i" title="IBM i">OS/400</a></li></ul></li>
+<li><a href="/wiki/Illumos" title="Illumos">illumos</a></li>
+<li><a href="/wiki/IncludeOS" title="IncludeOS">IncludeOS</a></li>
+<li><a href="/wiki/IOS" title="IOS">iOS</a>
+<ul><li><a href="/wiki/AudioOS" class="mw-redirect" title="AudioOS">audioOS</a></li>
+<li><a href="/wiki/IPadOS" title="IPadOS">iPadOS</a></li>
+<li><a href="/wiki/TvOS" title="TvOS">tvOS</a></li></ul></li>
+<li><a href="/wiki/Linux" title="Linux">Linux</a></li>
+<li><a href="/wiki/MINIX" title="MINIX">MINIX</a></li>
+<li><a href="/wiki/MorphOS" title="MorphOS">MorphOS</a></li>
+<li><a href="/wiki/MUSIC/SP" title="MUSIC/SP">MUSIC/SP</a></li>
+<li><a href="/wiki/Nemesis_(operating_system)" title="Nemesis (operating system)">Nemesis</a></li>
+<li><a href="/wiki/NeXTSTEP" title="NeXTSTEP">NeXTSTEP</a></li>
+<li><a href="/wiki/NOS_(software)" title="NOS (software)">NOS</a></li>
+<li><a href="/wiki/ORVYL_and_WYLBUR" title="ORVYL and WYLBUR">ORVYL</a></li>
+<li><a href="/wiki/OS/2" title="OS/2">OS/2</a></li>
+<li><a href="/wiki/OS-9" title="OS-9">OS-9</a></li>
+<li><a href="/wiki/OSv" title="OSv">OSv</a></li>
+<li><a href="/wiki/Pick_operating_system" title="Pick operating system">Pick</a></li>
+<li><a href="/wiki/QNX" title="QNX">QNX</a></li>
+<li><a href="/wiki/ReactOS" title="ReactOS">ReactOS</a></li>
+<li><a href="/wiki/RISC_OS" title="RISC OS">RISC OS</a></li>
+<li><a href="/wiki/Solaris_(operating_system)" title="Solaris (operating system)">Solaris</a></li>
+<li>Tandem
+<ul><li><a href="/wiki/NonStop_(server_computers)" title="NonStop (server computers)">NonStop</a></li></ul></li>
+<li><a href="/wiki/Transaction_Processing_Facility" title="Transaction Processing Facility">TPF</a></li>
+<li><a href="/wiki/TRIPOS" title="TRIPOS">TRIPOS</a></li>
+<li><a href="/wiki/Unix" title="Unix">Unix</a></li>
+<li><a href="/wiki/Visi_On" title="Visi On">Visi On</a></li>
+<li><a href="/wiki/VS/9" title="VS/9">VS/9</a></li>
+<li><a href="/wiki/WebOS" title="WebOS">webOS</a></li>
+<li><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a></li>
+<li><a href="/wiki/Xerox_500_series" title="Xerox 500 series">Xerox 500 series (530 RTB, 560)</a></li>
+<li><a href="/wiki/Xinu" title="Xinu">Xinu</a></li>
+<li><a href="/wiki/Z/OS" title="Z/OS">z/OS</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Supporting concepts</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Application_programming_interface" title="Application programming interface">API</a></li>
+<li><a href="/wiki/Computer_network" title="Computer network">Computer network</a></li>
+<li><a href="/wiki/Hardware_abstraction" title="Hardware abstraction">HAL</a></li>
+<li><a href="/wiki/Live_CD" title="Live CD">Live CD</a></li>
+<li><a href="/wiki/Live_USB" title="Live USB">Live USB</a></li>
+<li><a href="/wiki/Shell_(computing)" title="Shell (computing)">OS shell</a>
+<ul><li><a href="/wiki/Command-line_interface" title="Command-line interface">CLI</a></li>
+<li><a href="/wiki/Graphical_user_interface" title="Graphical user interface">GUI</a></li>
+<li><a href="/wiki/Natural_user_interface" title="Natural user interface">NUI</a></li>
+<li><a href="/wiki/Text-based_user_interface" title="Text-based user interface">TUI</a></li>
+<li><a href="/wiki/Voice_user_interface" title="Voice user interface">VUI</a></li>
+<li><a href="/wiki/Zooming_user_interface" title="Zooming user interface">ZUI</a></li></ul></li>
+<li><a href="/wiki/Preboot_Execution_Environment" title="Preboot Execution Environment">PXE</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1311
+Cached time: 20200325081928
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.316 seconds
+Real time usage: 0.397 seconds
+Preprocessor visited node count: 906/1000000
+Post‐expand include size: 100375/2097152 bytes
+Template argument size: 324/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 26998/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.119/10.000 seconds
+Lua memory usage: 3.81 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  255.760      1 -total
+ 53.90%  137.853      1 Template:Reflist
+ 41.98%  107.362      6 Template:Citation
+ 18.89%   48.323      1 Template:Use_mdy_dates
+ 16.56%   42.355      7 Template:Navbox
+ 10.67%   27.292      1 Template:File_systems
+  6.29%   16.075      1 Template:For
+  6.07%   15.519      1 Template:DMCA
+  5.11%   13.081      1 Template:Operating_system
+  4.95%   12.669      1 Template:Dated_maintenance_category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:23455133-0!canonical and timestamp 20200325081928 and revision id 928595173
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Journaling_file_system&amp;oldid=928595173">https://en.wikipedia.org/w/index.php?title=Journaling_file_system&amp;oldid=928595173</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Computer_file_systems" title="Category:Computer file systems">Computer file systems</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Use_mdy_dates_from_October_2019" title="Category:Use mdy dates from October 2019">Use mdy dates from October 2019</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Journaling+file+system" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Journaling+file+system" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Journaling_file_system" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Journaling_file_system" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Journaling_file_system">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Journaling_file_system&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Journaling_file_system&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Journaling_file_system" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Journaling_file_system" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Journaling_file_system&amp;oldid=928595173" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Journaling_file_system&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q579047" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Journaling_file_system&amp;id=928595173&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Journaling+file+system">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Journaling+file+system&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Journaling_file_system&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D8%B8%D9%85_%D8%A7%D9%84%D9%85%D9%84%D9%81%D8%A7%D8%AA_%D8%B0%D8%A7%D8%AA_%D8%B5%D8%AD%D8%A7%D8%A6%D9%81" title="نظم الملفات ذات صحائف – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D0%BD%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Журнална файлова система – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Journaling_file_system" title="Journaling file system – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/%C5%BDurn%C3%A1lovac%C3%AD_syst%C3%A9m_soubor%C5%AF" title="Žurnálovací systém souborů – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Journaling-Dateisystem" title="Journaling-Dateisystem – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Journaling" title="Journaling – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%81%D8%A7%DB%8C%D9%84_%D8%B3%DB%8C%D8%B3%D8%AA%D9%85_%DA%98%D9%88%D8%B1%D9%86%D8%A7%D9%84%DB%8C" title="فایل سیستم ژورنالی – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Journal_(syst%C3%A8me_de_fichiers)" title="Journal (système de fichiers) – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%EC%A0%80%EB%84%90%EB%A7%81_%ED%8C%8C%EC%9D%BC_%EC%8B%9C%EC%8A%A4%ED%85%9C" title="저널링 파일 시스템 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Journaling" title="Journaling – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA_%D7%A7%D7%91%D7%A6%D7%99%D7%9D_%D7%9E%D7%AA%D7%95%D7%A2%D7%93%D7%AA" title="מערכת קבצים מתועדת – Hebrew" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Napl%C3%B3z%C3%B3_f%C3%A1jlrendszer" title="Naplózó fájlrendszer – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8A%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ジャーナリングファイルシステム – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Journalf%C3%B8rende_filsystem" title="Journalførende filsystem – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Ksi%C4%99gowanie_(informatyka)" title="Księgowanie (informatyka) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Journaling" title="Journaling – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/Sistem_de_fi%C8%99iere_cu_jurnalizare" title="Sistem de fișiere cu jurnalizare – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%B0%D1%8F_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Журналируемая файловая система – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/%C5%BDurn%C3%A1lovac%C3%AD_s%C3%BAborov%C3%BD_syst%C3%A9m" title="Žurnálovací súborový systém – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Journalointi" title="Journalointi – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Journalf%C3%B6rande_filsystem" title="Journalförande filsystem – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB%D1%8C%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B0_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0" title="Журнальована файлова система – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" title="日志文件系统 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q579047#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 30 November 2019, at 10:16<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Journaling_file_system&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.316","walltime":"0.397","ppvisitednodes":{"value":906,"limit":1000000},"postexpandincludesize":{"value":100375,"limit":2097152},"templateargumentsize":{"value":324,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":26998,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  255.760      1 -total"," 53.90%  137.853      1 Template:Reflist"," 41.98%  107.362      6 Template:Citation"," 18.89%   48.323      1 Template:Use_mdy_dates"," 16.56%   42.355      7 Template:Navbox"," 10.67%   27.292      1 Template:File_systems","  6.29%   16.075      1 Template:For","  6.07%   15.519      1 Template:DMCA","  5.11%   13.081      1 Template:Operating_system","  4.95%   12.669      1 Template:Dated_maintenance_category"]},"scribunto":{"limitreport-timeusage":{"value":"0.119","limit":"10.000"},"limitreport-memusage":{"value":3997774,"limit":52428800}},"cachereport":{"origin":"mw1311","timestamp":"20200325081928","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Journaling file system","url":"https:\/\/en.wikipedia.org\/wiki\/Journaling_file_system","sameAs":"http:\/\/www.wikidata.org\/entity\/Q579047","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q579047","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-02-14T21:56:33Z","dateModified":"2019-11-30T10:16:10Z","headline":"file system that keeps track of not yet committed changes in a data structure called a \u201cjournal\u201d (usually a circular log); when a system crash or power failure occurs, such file systems can be recovered online faster with less corruption"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":87,"wgHostname":"mw1413"});});</script></body></html>

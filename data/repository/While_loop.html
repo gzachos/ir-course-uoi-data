@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>While loop - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn28QQpAICwAABeL1ccAAACP","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"While_loop","wgTitle":"While loop","wgCurRevisionId":941161960,"wgRevisionId":941161960,"wgArticleId":468915,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from October 2016","All articles needing additional references","Articles with example Ada code","Articles with example C code","Articles with example Pascal code","Articles with example Perl code","Articles with example Python code","Control flow",
+"Articles with example Fortran code","Articles with example Racket code","Articles with example Smalltalk code"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"While_loop","wgRelevantArticleId":468915,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q838101","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":
+"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/While-loop-diagram.svg/1200px-While-loop-diagram.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=While_loop&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=While_loop&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/While_loop"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-While_loop rootpage-While_loop skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">While loop</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="box-More_citations_needed plainlinks metadata ambox ambox-content ambox-Refimprove" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" decoding="async" width="50" height="39" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x" data-file-width="512" data-file-height="399" /></a></div></td><td class="mbox-text"><div class="mbox-text-span">This article <b>needs additional citations for <a href="/wiki/Wikipedia:Verifiability" title="Wikipedia:Verifiability">verification</a></b>.<span class="hide-when-compact"> Please help <a class="external text" href="https://en.wikipedia.org/w/index.php?title=While_loop&amp;action=edit">improve this article</a> by <a href="/wiki/Help:Introduction_to_referencing_with_Wiki_Markup/1" title="Help:Introduction to referencing with Wiki Markup/1">adding citations to reliable sources</a>. Unsourced material may be challenged and removed.<br /><small><span class="plainlinks"><i>Find sources:</i>&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?as_eq=wikipedia&amp;q=%22While+loop%22">"While loop"</a>&#160;–&#160;<a rel="nofollow" class="external text" href="//www.google.com/search?tbm=nws&amp;q=%22While+loop%22+-wikipedia">news</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?&amp;q=%22While+loop%22+site:news.google.com/newspapers&amp;source=newspapers">newspapers</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//www.google.com/search?tbs=bks:1&amp;q=%22While+loop%22+-wikipedia">books</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="//scholar.google.com/scholar?q=%22While+loop%22">scholar</a>&#160;<b>·</b> <a rel="nofollow" class="external text" href="https://www.jstor.org/action/doBasicSearch?Query=%22While+loop%22&amp;acc=on&amp;wc=on">JSTOR</a></span></small></span>  <small class="date-container"><i>(<span class="date">October 2016</span>)</i></small><small class="hide-when-compact"><i> (<a href="/wiki/Help:Maintenance_template_removal" title="Help:Maintenance template removal">Learn how and when to remove this template message</a>)</i></small></div></td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:While-loop-diagram.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/While-loop-diagram.svg/220px-While-loop-diagram.svg.png" decoding="async" width="220" height="278" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/43/While-loop-diagram.svg/330px-While-loop-diagram.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/43/While-loop-diagram.svg/440px-While-loop-diagram.svg.png 2x" data-file-width="271" data-file-height="343" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:While-loop-diagram.svg" class="internal" title="Enlarge"></a></div>While loop flow diagram</div></div></div>
+<table class="vertical-navbox nowraplinks plainlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;width:auto;background:#f5faff;font-size:90%;line-height:1.6em;"><tbody><tr><th style="background:#cee0f2;;padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em;font-size:130%;padding-left:0.4em;padding-right:0.4em; display:block;margin-bottom:6px;"><a href="/wiki/Control_flow#Loops" title="Control flow">Loop constructs</a></th></tr><tr><td style="padding:0 0.1em 0.4em;padding-top:0.15em;">
+<ul><li><a href="/wiki/Do_while_loop" title="Do while loop">Do while loop</a></li>
+<li><a class="mw-selflink selflink">While loop</a></li>
+<li><a href="/wiki/For_loop" title="For loop">For loop</a></li>
+<li><a href="/wiki/Foreach_loop" title="Foreach loop">Foreach loop</a></li>
+<li><a href="/wiki/Infinite_loop" title="Infinite loop">Infinite loop</a></li>
+<li><a href="/wiki/Control_flow" title="Control flow">Control flow</a></li></ul></td>
+</tr><tr><td style="text-align:right;font-size:115%"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Loop_constructs" title="Template:Loop constructs"><abbr title="View this template">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Loop_constructs" class="mw-redirect" title="Template talk:Loop constructs"><abbr title="Discuss this template">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Loop_constructs&amp;action=edit"><abbr title="Edit this template">e</abbr></a></li></ul></div></td></tr></tbody></table>
+<p>In most computer programming languages, a <b>while loop</b> is a <a href="/wiki/Control_flow" title="Control flow">control flow</a> <a href="/wiki/Statement_(programming)" class="mw-redirect" title="Statement (programming)">statement</a> that allows code to be executed repeatedly based on a given <a href="/wiki/Boolean_datatype" class="mw-redirect" title="Boolean datatype">Boolean</a> condition. The <i>while</i> loop can be thought of as a repeating <a href="/wiki/Conditional_(programming)" class="mw-redirect" title="Conditional (programming)">if statement</a>.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Demonstrating_while_loops"><span class="tocnumber">2</span> <span class="toctext">Demonstrating <i>while</i> loops</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#ActionScript_3"><span class="tocnumber">2.1</span> <span class="toctext">ActionScript 3</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Ada"><span class="tocnumber">2.2</span> <span class="toctext">Ada</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#AutoHotkey"><span class="tocnumber">2.3</span> <span class="toctext">AutoHotkey</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Microsoft_Small_Basic"><span class="tocnumber">2.4</span> <span class="toctext">Microsoft Small Basic</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Visual_Basic"><span class="tocnumber">2.5</span> <span class="toctext">Visual Basic</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Bourne_(Unix)_shell"><span class="tocnumber">2.6</span> <span class="toctext">Bourne (Unix) shell</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#C_or_C++"><span class="tocnumber">2.7</span> <span class="toctext">C or C++</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href="#Script_syntax"><span class="tocnumber">2.7.1</span> <span class="toctext">Script syntax</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Tag_syntax"><span class="tocnumber">2.7.2</span> <span class="toctext">Tag syntax</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href="#Fortran"><span class="tocnumber">2.8</span> <span class="toctext">Fortran</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Java,_C#,_D"><span class="tocnumber">2.9</span> <span class="toctext">Java, C#, D</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#JavaScript"><span class="tocnumber">2.10</span> <span class="toctext">JavaScript</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Lua"><span class="tocnumber">2.11</span> <span class="toctext">Lua</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#MATLAB_&amp;_GNU_Octave"><span class="tocnumber">2.12</span> <span class="toctext">MATLAB &amp; GNU Octave</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Mathematica"><span class="tocnumber">2.13</span> <span class="toctext">Mathematica</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Oberon,_Oberon-2_(programming_language),_Oberon-07,_or_Component_Pascal"><span class="tocnumber">2.14</span> <span class="toctext">Oberon, Oberon-2 (programming language), Oberon-07, or Component Pascal</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Maya_Embedded_Language"><span class="tocnumber">2.15</span> <span class="toctext">Maya Embedded Language</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Pascal"><span class="tocnumber">2.16</span> <span class="toctext">Pascal</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Perl"><span class="tocnumber">2.17</span> <span class="toctext">Perl</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#PHP"><span class="tocnumber">2.18</span> <span class="toctext">PHP</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#PL/I"><span class="tocnumber">2.19</span> <span class="toctext">PL/I</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Python"><span class="tocnumber">2.20</span> <span class="toctext">Python</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Racket"><span class="tocnumber">2.21</span> <span class="toctext">Racket</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Ruby"><span class="tocnumber">2.22</span> <span class="toctext">Ruby</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Rust"><span class="tocnumber">2.23</span> <span class="toctext">Rust</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Smalltalk"><span class="tocnumber">2.24</span> <span class="toctext">Smalltalk</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Swift"><span class="tocnumber">2.25</span> <span class="toctext">Swift</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Tcl"><span class="tocnumber">2.26</span> <span class="toctext">Tcl</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#VEX"><span class="tocnumber">2.27</span> <span class="toctext">VEX</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#PowerShell"><span class="tocnumber">2.28</span> <span class="toctext">PowerShell</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#While_programming_language"><span class="tocnumber">2.29</span> <span class="toctext">While programming language</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-34"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <i>while</i> construct consists of a block of code and a condition/expression.<sup id="cite_ref-:0_1-0" class="reference"><a href="#cite_note-:0-1">&#91;1&#93;</a></sup> The condition/expression is evaluated, and if the condition/expression is <i>true</i>,<sup id="cite_ref-:0_1-1" class="reference"><a href="#cite_note-:0-1">&#91;1&#93;</a></sup> the code within all of their following in the block is executed. This repeats until the condition/expression becomes <a href="/wiki/False_(logic)" title="False (logic)">false</a>. Because the <i>while</i> loop checks the condition/expression before the block is executed, the control structure is often also known as a <b>pre-test loop</b>. Compare this with the <a href="/wiki/Do_while_loop" title="Do while loop"><i>do while</i> loop</a>, which tests the condition/expression <i>after</i> the loop has executed.
+</p><p>For example, in the <a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a> (as well as <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>,<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> <a href="/wiki/Objective-C" title="Objective-C">Objective-C</a>, and <a href="/wiki/C%2B%2B" title="C++">C++</a>, which <a href="/wiki/Polyglot_(computing)" title="Polyglot (computing)">use the same syntax</a> in this case), the code fragment
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;x = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">x</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>first checks whether x is less than 5, which it is, so then the {loop body} is entered, where the <i>printf</i> function is run and x is incremented by 1. After completing all the statements in the loop body, the condition, (x &lt; 5), is checked again, and the loop is executed again, this process repeating until the <a href="/wiki/Variable_(programming)" class="mw-redirect" title="Variable (programming)">variable</a> x has the value 5.
+</p><p>Note that it is possible, and in some cases desirable, for the condition to <i>always</i> evaluate to true, creating an <a href="/wiki/Infinite_loop" title="Infinite loop">infinite loop</a>. When such a loop is created intentionally, there is usually another control structure (such as a <a href="/wiki/Control_flow" title="Control flow">break</a> statement) that controls termination of the loop.
+For example:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// do complicated stuff</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">someCondition</span><span class="p">)</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="c1">// more stuff</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Demonstrating_while_loops">Demonstrating <i>while</i> loops</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=2" title="Edit section: Demonstrating while loops">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>These <i>while</i> loops will calculate the <a href="/wiki/Factorial" title="Factorial">factorial</a> of the number 5:
+</p>
+<h3><span class="mw-headline" id="ActionScript_3"><a href="/wiki/ActionScript_3.0" class="mw-redirect" title="ActionScript 3.0">ActionScript 3</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=3" title="Edit section: ActionScript 3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-actionscript mw-content-ltr" dir="ltr"><pre><span></span><span class="k">var</span> <span class="nx">counter</span><span class="o">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="k">var</span> <span class="nx">factorial</span><span class="o">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">counter</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">factorial</span> <span class="o">*=</span> <span class="nx">counter</span><span class="o">;</span>
+    <span class="nx">counter</span><span class="o">--;</span>
+<span class="p">}</span>
+
+<span class="nx">Printf</span><span class="p">(</span><span class="s2">&quot;Factorial = %d&quot;</span><span class="o">,</span> <span class="nx">factorial</span><span class="p">);</span>
+</pre></div>
+<h3><span class="mw-headline" id="Ada"><a href="/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=4" title="Edit section: Ada">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">The Wikibook <i><a href="https://en.wikibooks.org/wiki/Ada_Programming" class="extiw" title="wikibooks:Ada Programming">Ada_Programming</a></i> has a page on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/Ada_Programming/Control" class="extiw" title="wikibooks:Ada Programming/Control">Control</a></b></i></td></tr>
+</tbody></table>
+<div class="mw-highlight mw-highlight-lang-ada mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">with</span> <span class="nn">Ada.Integer_Text_IO</span><span class="p">;</span>
+
+<span class="kd">procedure</span> <span class="nf">Factorial</span> <span class="kr">is</span>
+    <span class="n">Counter</span>   <span class="p">:</span> <span class="kt">Integer</span> <span class="p">:=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">Factorial</span> <span class="p">:</span> <span class="kt">Integer</span> <span class="p">:=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kr">begin</span>
+    <span class="kr">while</span> <span class="n">Counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">loop</span>
+        <span class="n">Factorial</span> <span class="p">:=</span> <span class="n">Factorial</span> <span class="o">*</span> <span class="n">Counter</span><span class="p">;</span>
+        <span class="n">Counter</span>   <span class="p">:=</span> <span class="n">Counter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kr">end</span> <span class="kr">loop</span><span class="p">;</span>
+
+    <span class="n">Ada</span><span class="p">.</span><span class="n">Integer_Text_IO</span><span class="p">.</span><span class="n">Put</span> <span class="p">(</span><span class="n">Factorial</span><span class="p">);</span>
+<span class="kr">end</span> <span class="nf">Factorial</span><span class="p">;</span>
+</pre></div>
+<h3><span class="mw-headline" id="AutoHotkey"><a href="/wiki/AutoHotkey" title="AutoHotkey">AutoHotkey</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=5" title="Edit section: AutoHotkey">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-autohotkey mw-content-ltr" dir="ltr"><pre><span></span><span class="n">counter</span> <span class="o">:=</span> <span class="mi">5</span>
+<span class="n">factorial</span> <span class="o">:=</span> <span class="mi">1</span>
+
+<span class="nb">While</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">factorial</span> <span class="o">*=</span> <span class="n">counter</span><span class="o">--</span>    
+
+<span class="nb">MsgBox</span> <span class="o">%</span> <span class="n">factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="Microsoft_Small_Basic"><a href="/wiki/Microsoft_Small_Basic" title="Microsoft Small Basic">Microsoft Small Basic</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=6" title="Edit section: Microsoft Small Basic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-vbnet mw-content-ltr" dir="ltr"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span>    <span class="c">&#39; Counter = 5</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">&#39; initial value of variable &quot;factorial&quot;</span>
+
+<span class="k">While</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">factorial</span> <span class="o">*</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">TextWindow</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+<span class="n">EndWhile</span>
+</pre></div>
+<h3><span class="mw-headline" id="Visual_Basic"><a href="/wiki/Visual_Basic" title="Visual Basic">Visual Basic</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=7" title="Edit section: Visual Basic">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-vbnet mw-content-ltr" dir="ltr"><pre><span></span><span class="k">Dim</span> <span class="n">counter</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">5</span>    <span class="c">&#39; init variable and set value</span>
+<span class="k">Dim</span> <span class="n">factorial</span> <span class="ow">As</span> <span class="kt">Integer</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">&#39; initialize factorial variable</span>
+
+<span class="k">Do</span> <span class="k">While</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="n">factorial</span> <span class="o">=</span> <span class="n">factorial</span> <span class="o">*</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">Loop</span>     <span class="c">&#39; program goes here, until counter = 0</span>
+
+<span class="c">&#39;Debug.Print factorial         &#39; Console.WriteLine(factorial) in Visual Basic .NET</span>
+</pre></div>
+<h3><span id="Bourne_.28Unix.29_shell"></span><span class="mw-headline" id="Bourne_(Unix)_shell"><a href="/wiki/Bourne_shell" title="Bourne shell">Bourne (Unix) shell</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=8" title="Edit section: Bourne (Unix) shell">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">counter</span><span class="o">=</span><span class="m">5</span>
+<span class="nv">factorial</span><span class="o">=</span><span class="m">1</span>
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$counter</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">factorial</span><span class="o">=</span><span class="k">$((</span>factorial <span class="o">*</span> counter<span class="k">))</span>
+    <span class="nv">counter</span><span class="o">=</span><span class="k">$((</span>counter <span class="o">-</span> <span class="m">1</span><span class="k">))</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span> <span class="nv">$factorial</span>
+</pre></div>
+<h3><span id="C_or_C.2B.2B"></span><span class="mw-headline" id="C_or_C++"><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> or <a href="/wiki/C%2B%2B" title="C++">C++</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=9" title="Edit section: C or C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">factorial</span> <span class="o">*=</span> <span class="n">counter</span><span class="o">--</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h4><span class="mw-headline" id="Script_syntax">Script syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=10" title="Edit section: Script syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-highlight-lang-cfm mw-content-ltr" dir="ltr"><pre><span></span>counter = 5;
+factorial = 1;
+ 
+while (counter &gt; 1) {
+    factorial *= counter--;
+}
+
+writeOutput(factorial);
+</pre></div>
+<h4><span class="mw-headline" id="Tag_syntax">Tag syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=11" title="Edit section: Tag syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="mw-highlight mw-highlight-lang-cfm mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">&lt;cfset</span> <span class="nv">counter</span> <span class="o">=</span> <span class="m">5</span><span class="nb">&gt;</span>
+<span class="nb">&lt;cfset</span> <span class="nv">factorial</span> <span class="o">=</span> <span class="m">1</span><span class="nb">&gt;</span>
+<span class="nb">&lt;cfloop</span> <span class="nv">condition</span><span class="o">=</span><span class="s2">&quot;counter GT 1&quot;</span><span class="nb">&gt;</span>
+    <span class="nb">&lt;cfset</span> <span class="nv">factorial</span> <span class="o">*=</span> <span class="nv">counter</span><span class="o">--</span><span class="nb">&gt;</span>
+<span class="nb">&lt;/cfloop&gt;</span>
+<span class="nb">&lt;cfoutput&gt;</span><span class="p">#</span><span class="nv">factorial</span><span class="p">#</span><span class="nb">&lt;/cfoutput&gt;</span>
+</pre></div>
+<h3><span class="mw-headline" id="Fortran"><a href="/wiki/Fortran" title="Fortran">Fortran</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=12" title="Edit section: Fortran">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-fortran mw-content-ltr" dir="ltr"><pre><span></span><span class="k">program </span><span class="n">FactorialProg</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">do while</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">factorial</span> <span class="o">=</span> <span class="n">factorial</span> <span class="o">*</span> <span class="n">counter</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">end do</span>
+
+<span class="k">    print</span> <span class="o">*</span><span class="p">,</span> <span class="n">factorial</span>
+<span class="k">end program </span><span class="n">FactorialProg</span>
+</pre></div>
+<h3><span id="Java.2C_C.23.2C_D"></span><span class="mw-headline" id="Java,_C#,_D"><a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=13" title="Edit section: Java, C#, D">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The code for the loop is the same for Java, C# and D:
+</p>
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="n">counter</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">factorial</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+    <span class="n">factorial</span> <span class="p">*=</span> <span class="n">counter</span><span class="p">--;</span>
+</pre></div>
+<h3><span class="mw-headline" id="JavaScript"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=14" title="Edit section: JavaScript">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-javascript mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">let</span> <span class="nx">counter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nx">counter</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="nx">factorial</span> <span class="o">*=</span> <span class="nx">counter</span><span class="o">--</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">factorial</span><span class="p">);</span>
+</pre></div>
+<h3><span class="mw-headline" id="Lua"><a href="/wiki/Lua_(programming_language)" title="Lua (programming language)">Lua</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=15" title="Edit section: Lua">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-lua mw-content-ltr" dir="ltr"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="kr">while</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">do</span>
+  <span class="n">factorial</span> <span class="o">=</span> <span class="n">factorial</span> <span class="o">*</span> <span class="n">counter</span>
+  <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="kr">end</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+<h3><span id="MATLAB_.26_GNU_Octave"></span><span class="mw-headline" id="MATLAB_&amp;_GNU_Octave"><a href="/wiki/MATLAB" title="MATLAB">MATLAB</a> &amp; <a href="/wiki/GNU_Octave" title="GNU Octave">GNU Octave</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=16" title="Edit section: MATLAB &amp; GNU Octave">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-matlab mw-content-ltr" dir="ltr"><pre><span></span><span class="n">counter</span> <span class="p">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="nb">factorial</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="nb">factorial</span> <span class="p">=</span> <span class="nb">factorial</span> <span class="o">*</span> <span class="n">counter</span><span class="p">;</span>      <span class="c">%Multiply</span>
+    <span class="n">counter</span> <span class="p">=</span> <span class="n">counter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>                <span class="c">%Decrement</span>
+<span class="k">end</span>
+
+<span class="n">factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="Mathematica"><a href="/wiki/Mathematica" class="mw-redirect" title="Mathematica">Mathematica</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=17" title="Edit section: Mathematica">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-mathematica mw-content-ltr" dir="ltr"><pre><span></span><span class="n">Block</span><span class="p">[{</span><span class="n">counter</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">factorial</span><span class="o">=</span><span class="mi">1</span><span class="p">},</span><span class="w">  </span><span class="c">(*localize counter and factorial*)</span><span class="w"></span>
+<span class="w">    </span><span class="n">While</span><span class="p">[</span><span class="n">counter</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span><span class="w">            </span><span class="c">(*While loop*)</span><span class="w"></span>
+<span class="w">        </span><span class="n">factorial</span><span class="o">*=</span><span class="n">counter</span><span class="p">;</span><span class="w">     </span><span class="c">(*Multiply*)</span><span class="w"></span>
+<span class="w">        </span><span class="n">counter</span><span class="o">--</span><span class="p">;</span><span class="w">              </span><span class="c">(*Decrement*)</span><span class="w"></span>
+<span class="w">    </span><span class="p">];</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">factorial</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</pre></div>
+<h3><span id="Oberon.2C_Oberon-2_.28programming_language.29.2C_Oberon-07.2C_or_Component_Pascal"></span><span class="mw-headline" id="Oberon,_Oberon-2_(programming_language),_Oberon-07,_or_Component_Pascal"><a href="/wiki/Oberon_(programming_language)" title="Oberon (programming language)">Oberon</a>, <a href="/wiki/Oberon-2_(programming_language)" class="mw-redirect" title="Oberon-2 (programming language)">Oberon-2 (programming language)</a>, <a href="/wiki/Oberon-07" class="mw-redirect" title="Oberon-07">Oberon-07</a>, or <a href="/wiki/Component_Pascal" title="Component Pascal">Component Pascal</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=18" title="Edit section: Oberon, Oberon-2 (programming language), Oberon-07, or Component Pascal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-modula2 mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">MODULE</span> <span class="n">Factorial</span><span class="p">;</span>
+<span class="kr">IMPORT</span> <span class="n">Out</span><span class="p">;</span>
+<span class="kr">VAR</span>
+    <span class="n">Counter</span><span class="p">,</span> <span class="n">Factorial</span><span class="p">:</span> <span class="nb">INTEGER</span><span class="p">;</span>
+<span class="kr">BEGIN</span>
+    <span class="n">Counter</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="n">Factorial</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="kr">WHILE</span> <span class="n">Counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">DO</span>
+        <span class="n">Factorial</span> <span class="o">:=</span> <span class="n">Factorial</span> <span class="o">*</span> <span class="n">Counter</span><span class="p">;</span>
+        <span class="nb">DEC</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+    <span class="kr">END</span><span class="p">;</span>
+    
+    <span class="n">Out</span><span class="p">.</span><span class="n">Int</span><span class="p">(</span><span class="n">Factorial</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="kr">END</span> <span class="n">Factorial</span><span class="p">.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Maya_Embedded_Language"><a href="/wiki/Maya_Embedded_Language" title="Maya Embedded Language">Maya Embedded Language</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=19" title="Edit section: Maya Embedded Language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-perl mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">int</span> <span class="nv">$counter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="nb">int</span> <span class="nv">$factorial</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="nb">int</span> <span class="nv">$multiplication</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$multiplication</span> <span class="o">=</span> <span class="nv">$factorial</span> <span class="o">*</span> <span class="nv">$counter</span><span class="p">;</span>
+
+    <span class="nv">$counter</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;Counter is: &quot;</span> <span class="o">+</span> <span class="nv">$counter</span> <span class="o">+</span> <span class="s">&quot;, multiplication is: &quot;</span> <span class="o">+</span> <span class="nv">$multiplication</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span class="mw-headline" id="Pascal"><a href="/wiki/Pascal_programming_language" class="mw-redirect" title="Pascal programming language">Pascal</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=20" title="Edit section: Pascal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-pascal mw-content-ltr" dir="ltr"><pre><span></span><span class="k">program</span> <span class="n">Factorial1</span><span class="o">;</span>
+<span class="k">var</span>
+    <span class="n">Counter</span><span class="o">,</span> <span class="n">Factorial</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<span class="k">begin</span>
+    <span class="n">Counter</span> <span class="o">:=</span> <span class="mi">5</span><span class="o">;</span>
+    <span class="n">Factorial</span> <span class="o">:=</span> <span class="mi">1</span><span class="o">;</span>
+    
+    <span class="k">while</span> <span class="n">Counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">do</span>
+    <span class="k">begin</span>
+        <span class="n">Factorial</span> <span class="o">:=</span> <span class="n">Factorial</span> <span class="o">*</span> <span class="n">Counter</span><span class="o">;</span>
+        <span class="n">Counter</span> <span class="o">:=</span> <span class="n">Counter</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">end</span><span class="o">;</span>
+
+    <span class="nb">WriteLn</span><span class="p">(</span><span class="n">Factorial</span><span class="p">)</span>
+<span class="k">end</span><span class="o">.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Perl"><a href="/wiki/Perl" title="Perl">Perl</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=21" title="Edit section: Perl">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-perl mw-content-ltr" dir="ltr"><pre><span></span><span class="k">my</span> <span class="nv">$counter</span>   <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$factorial</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$factorial</span> <span class="o">*=</span> <span class="nv">$counter</span><span class="o">--</span><span class="p">;</span> <span class="c1"># Multiply, then decrement</span>
+<span class="p">}</span>
+
+<span class="k">print</span> <span class="nv">$factorial</span><span class="p">;</span>
+</pre></div>
+<p><i>While</i> loops are frequently used for reading data line by line (as defined by the <code>$/</code> line separator) from open filehandles:
+</p>
+<div class="mw-highlight mw-highlight-lang-perl mw-content-ltr" dir="ltr"><pre><span></span><span class="nb">open</span> <span class="n">IN</span><span class="p">,</span> <span class="s">&quot;&lt;test.txt&quot;</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="sr">&lt;IN&gt;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">close</span> <span class="n">IN</span><span class="p">;</span>
+</pre></div>
+<h3><span class="mw-headline" id="PHP"><a href="/wiki/PHP" title="PHP">PHP</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=22" title="Edit section: PHP">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-php mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$counter</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="nv">$factorial</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$factorial</span> <span class="o">*=</span> <span class="nv">$counter</span><span class="p">;</span> <span class="c1">// Multiply first.</span>
+    <span class="nv">$counter</span><span class="o">--</span><span class="p">;</span> <span class="c1">// then decrement.</span>
+<span class="p">}</span>
+
+<span class="k">print</span> <span class="nv">$factorial</span><span class="p">;</span>
+</pre></div>
+<h3><span id="PL.2FI"></span><span class="mw-headline" id="PL/I"><a href="/wiki/PL/I" title="PL/I">PL/I</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=23" title="Edit section: PL/I">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-rexx mw-content-ltr" dir="ltr"><pre><span></span>declare<span class="w"> </span>counter<span class="w">   </span>fixed<span class="w"> </span>initial<span class="o">(</span><span class="m">5</span><span class="o">)</span><span class="err">;</span><span class="w"></span>
+declare<span class="w"> </span>factorial<span class="w"> </span>fixed<span class="w"> </span>initial<span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="err">;</span><span class="w"></span>
+
+<span class="kr">do</span><span class="w"> </span><span class="kr">while</span><span class="o">(</span>counter<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span>factorial<span class="w"> </span><span class="o">=</span><span class="w"> </span>factorial<span class="w"> </span><span class="o">*</span><span class="w"> </span>counter<span class="err">;</span><span class="w"></span>
+<span class="w">    </span>counter<span class="w"> </span><span class="o">=</span><span class="w"> </span>counter<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="err">;</span><span class="w"></span>
+<span class="kr">end</span><span class="err">;</span><span class="w"></span>
+</pre></div>
+<h3><span class="mw-headline" id="Python"><a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=24" title="Edit section: Python">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">5</span>                           <span class="c1"># Set the value to 5 </span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>                         <span class="c1"># Set the value to 1</span>
+
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>                    <span class="c1"># While counter(5) is greater than 0  </span>
+    <span class="n">factorial</span> <span class="o">*=</span> <span class="n">counter</span>              <span class="c1"># Set new value of factorial to counter.</span>
+    <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>                      <span class="c1"># Set the counter to counter - 1.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>                      <span class="c1"># Print the value of factorial.</span>
+</pre></div>
+<p>Non-terminating while loop:
+</p>
+<div class="mw-highlight mw-highlight-lang-python mw-content-ltr" dir="ltr"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Help! I&#39;m stuck in a loop!&quot;</span><span class="p">)</span>
+</pre></div>
+<h3><span class="mw-headline" id="Racket"><a href="/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=25" title="Edit section: Racket">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Racket, as in other <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> implementations, a <i>named-let</i> is a popular way to implement loops:
+</p>
+<div class="mw-highlight mw-highlight-lang-racket mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">#lang </span><span class="nn">racket</span>
+<span class="p">(</span><span class="k">define</span> <span class="n">counter</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="k">define</span> <span class="n">factorial</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="k">let</span> <span class="n">loop</span> <span class="p">()</span>
+    <span class="p">(</span><span class="k">when</span> <span class="p">(</span><span class="nb">&gt;</span> <span class="n">counter</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">(</span><span class="k">set!</span> <span class="n">factorial</span> <span class="p">(</span><span class="nb">*</span> <span class="n">factorial</span> <span class="n">counter</span><span class="p">))</span>
+        <span class="p">(</span><span class="k">set!</span> <span class="n">counter</span> <span class="p">(</span><span class="nb">sub1</span> <span class="n">counter</span><span class="p">))</span>
+        <span class="p">(</span><span class="n">loop</span><span class="p">)))</span>
+<span class="p">(</span><span class="nb">displayln</span> <span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+<p>Using a macro system, implementing a <i>while</i> loop is a trivial exercise (commonly used to introduce macros):
+</p>
+<div class="mw-highlight mw-highlight-lang-racket mw-content-ltr" dir="ltr"><pre><span></span><span class="kn">#lang </span><span class="nn">racket</span>
+<span class="p">(</span><span class="k">define-syntax-rule</span> <span class="p">(</span><span class="n">while</span> <span class="n">test</span> <span class="n">body</span> <span class="k">...</span><span class="p">)</span> <span class="c1">; implements a while loop</span>
+    <span class="p">(</span><span class="k">let</span> <span class="n">loop</span> <span class="p">()</span> <span class="p">(</span><span class="k">when</span> <span class="n">test</span> <span class="n">body</span> <span class="k">...</span> <span class="p">(</span><span class="n">loop</span><span class="p">))))</span>
+<span class="p">(</span><span class="k">define</span> <span class="n">counter</span> <span class="mi">5</span><span class="p">)</span>
+<span class="p">(</span><span class="k">define</span> <span class="n">factorial</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="n">while</span> <span class="p">(</span><span class="nb">&gt;</span> <span class="n">counter</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">set!</span> <span class="n">factorial</span> <span class="p">(</span><span class="nb">*</span> <span class="n">factorial</span> <span class="n">counter</span><span class="p">))</span>
+    <span class="p">(</span><span class="k">set!</span> <span class="n">counter</span> <span class="p">(</span><span class="nb">sub1</span> <span class="n">counter</span><span class="p">)))</span>
+<span class="p">(</span><span class="nb">displayln</span> <span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+<p>But note that an imperative programming style is often discouraged in Racket (as in Scheme).
+</p>
+<h3><span class="mw-headline" id="Ruby"><a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=26" title="Edit section: Ruby">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-ruby mw-content-ltr" dir="ltr"><pre><span></span><span class="c1"># Calculate the factorial of 5</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">factorial</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span>
+  <span class="n">factorial</span> <span class="o">*=</span> <span class="n">i</span>
+  <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="Rust"><a href="/wiki/Rust_(programming_language)" title="Rust (programming language)">Rust</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=27" title="Edit section: Rust">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-rust mw-content-ltr" dir="ltr"><pre><span></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">factorial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">factorial</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">counter</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">counter</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">factorial</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<h3><span class="mw-headline" id="Smalltalk"><a href="/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=28" title="Edit section: Smalltalk">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Contrary to other languages, in Smalltalk a <i>while</i> loop is not a <a href="/wiki/Language_construct" title="Language construct">language construct</a> but defined in the class <code>BlockClosure</code> as a method with one parameter, the body as a <a href="/wiki/Closure_(computer_science)" class="mw-redirect" title="Closure (computer science)">closure</a>, using self as the condition.
+</p><p>Smalltalk also has a corresponding whileFalse: method.
+</p>
+<div class="mw-highlight mw-highlight-lang-smalltalk mw-content-ltr" dir="ltr"><pre><span></span><span class="o">|</span><span class="nv"> count factorial </span><span class="o">|</span>
+<span class="nv">count</span> <span class="o">:=</span> <span class="m">5</span><span class="p">.</span>
+<span class="nv">factorial</span> <span class="o">:=</span> <span class="m">1</span><span class="p">.</span>
+[<span class="nv">count</span> <span class="nf">&gt;</span> <span class="m">0</span>] <span class="nb">whileTrue:</span> 
+    [<span class="nv">factorial</span> <span class="o">:=</span> <span class="nv">factorial</span> <span class="nf">*</span> <span class="nv">count</span><span class="p">.</span>
+    <span class="nv">count</span> <span class="o">:=</span> <span class="nv">count</span> <span class="nf">-</span> <span class="m">1</span>]<span class="p">.</span>
+<span class="nc">Transcript</span> <span class="nf">show:</span> <span class="nv">factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="Swift"><a href="/wiki/Swift_(programming_language)" title="Swift (programming language)">Swift</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=29" title="Edit section: Swift">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-swift mw-content-ltr" dir="ltr"><pre><span></span><span class="kd">var</span> <span class="nv">counter</span> <span class="p">=</span> <span class="mi">5</span>                 <span class="c1">// Set the initial counter value to 5 </span>
+<span class="kd">var</span> <span class="nv">factorial</span> <span class="p">=</span> <span class="mi">1</span>               <span class="c1">// Set the initial factorial value to 1</span>
+
+<span class="k">while</span> <span class="n">counter</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">{</span>             <span class="c1">// While counter(5) is greater than 0  </span>
+    <span class="n">factorial</span> <span class="o">*=</span> <span class="n">counter</span>        <span class="c1">// Set new value of factorial to factorial x counter.</span>
+    <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>                <span class="c1">// Set the new value of counter to  counter - 1.</span>
+<span class="p">}</span>
+
+<span class="bp">print</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>                <span class="c1">// Print the value of factorial.</span>
+</pre></div>
+<h3><span class="mw-headline" id="Tcl"><a href="/wiki/Tcl" title="Tcl">Tcl</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=30" title="Edit section: Tcl">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-tcl mw-content-ltr" dir="ltr"><pre><span></span><span class="k">set</span> counter <span class="mi">5</span>
+<span class="k">set</span> factorial <span class="mi">1</span>
+
+<span class="k">while</span> <span class="k">{</span><span class="nv">$counter</span> <span class="o">&gt;</span> <span class="nv">0</span><span class="k">}</span> <span class="k">{</span>
+    <span class="k">set</span> factorial <span class="k">[expr</span> <span class="nv">$factorial</span> <span class="o">*</span> <span class="nv">$counter</span><span class="k">]</span> 
+    incr counter <span class="o">-</span><span class="mi">1</span> 
+<span class="k">}</span>
+
+<span class="nb">puts</span> <span class="nv">$factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="VEX"><a href="/wiki/VEX_prefix" title="VEX prefix">VEX</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=31" title="Edit section: VEX">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-csharp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">int</span> <span class="n">counter</span> <span class="p">=</span> <span class="m">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">factorial</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">counter</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+    <span class="n">factorial</span> <span class="p">*=</span> <span class="n">counter</span><span class="p">--;</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">);</span>
+</pre></div>
+<h3><span class="mw-headline" id="PowerShell"><a href="/wiki/PowerShell" title="PowerShell">PowerShell</a></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=32" title="Edit section: PowerShell">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-powershell mw-content-ltr" dir="ltr"><pre><span></span><span class="nv">$counter</span> <span class="p">=</span> <span class="n">5</span>
+<span class="nv">$factorial</span> <span class="p">=</span> <span class="n">1</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$counter</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$factorial</span> <span class="p">*=</span> <span class="nv">$counter</span><span class="p">--</span>
+<span class="p">}</span>
+
+<span class="nv">$factorial</span>
+</pre></div>
+<h3><span class="mw-headline" id="While_programming_language">While programming language</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=33" title="Edit section: While programming language">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The While programming language<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> is a simple programming language constructed from assignments, sequential composition, conditionals and while statements, used in the theoretical analysis of imperative programming language semantics.<sup id="cite_ref-NielsonNielson1999_4-0" class="reference"><a href="#cite_note-NielsonNielson1999-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-whiley mw-content-ltr" dir="ltr"><pre><span></span><span class="n">C</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="n">F</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="kr">while</span> <span class="p">(</span><span class="n">C</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="kr">do</span>
+    <span class="n">F</span> <span class="o">:=</span> <span class="n">F</span> <span class="o">*</span> <span class="n">C</span><span class="p">;</span>
+    <span class="n">C</span> <span class="o">:=</span> <span class="n">C</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=34" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Do_while_loop" title="Do while loop">Do while loop</a></li>
+<li><a href="/wiki/For_loop" title="For loop">For loop</a></li>
+<li><a href="/wiki/Foreach" class="mw-redirect" title="Foreach">Foreach</a></li>
+<li><a href="/wiki/LOOP_(programming_language)" title="LOOP (programming language)">LOOP (programming language)</a> – a programming language with the property that the functions it can compute are exactly the primitive recursive functions</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=While_loop&amp;action=edit&amp;section=35" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-:0-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-:0_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-:0_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html">"The while and do-while Statements (The Java™ Tutorials &gt; Learning the Java Language &gt; Language Basics)"</a>. <i>Dosc.oracle.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-10-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Dosc.oracle.com&amp;rft.atitle=The+while+and+do-while+Statements+%28The+Java%E2%84%A2+Tutorials+%3E+Learning+the+Java+Language+%3E+Language+Basics%29&amp;rft_id=http%3A%2F%2Fdocs.oracle.com%2Fjavase%2Ftutorial%2Fjava%2Fnutsandbolts%2Fwhile.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhile+loop" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/2aeyhxcd.aspx">"while (C# reference)"</a>. <i>Msdn.microsoft.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-10-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Msdn.microsoft.com&amp;rft.atitle=while+%28C%23+reference%29&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2F2aeyhxcd.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhile+loop" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://profs.sci.univr.it/~merro/files/WhileExtra_l.pdf">"Chapter 3&#160;: The While programming language"</a> <span class="cs1-format">(PDF)</span>. <i>Profs.sci.univr.it</i><span class="reference-accessdate">. Retrieved <span class="nowrap">2016-10-21</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Profs.sci.univr.it&amp;rft.atitle=Chapter+3+%3A+The+While+programming+language&amp;rft_id=http%3A%2F%2Fprofs.sci.univr.it%2F~merro%2Ffiles%2FWhileExtra_l.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhile+loop" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-NielsonNielson1999-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-NielsonNielson1999_4-0">^</a></b></span> <span class="reference-text"><cite class="citation book">Flemming Nielson; Hanne R. Nielson; Chris Hankin (1999). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=RLjt0xSj8DcC"><i>Principles of Program Analysis</i></a>. Springer. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-3-540-65410-0" title="Special:BookSources/978-3-540-65410-0"><bdi>978-3-540-65410-0</bdi></a><span class="reference-accessdate">. Retrieved <span class="nowrap">29 May</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Principles+of+Program+Analysis&amp;rft.pub=Springer&amp;rft.date=1999&amp;rft.isbn=978-3-540-65410-0&amp;rft.au=Flemming+Nielson&amp;rft.au=Hanne+R.+Nielson&amp;rft.au=Chris+Hankin&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DRLjt0xSj8DcC&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhile+loop" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation book">Illingworth, Valerie (11 December 1997). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/dictionaryofcomp00illi"><i>Dictionary of Computing</i></a></span>. Oxford Paperback Reference (4th ed.). Oxford University Press. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/9780192800466" title="Special:BookSources/9780192800466"><bdi>9780192800466</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Dictionary+of+Computing&amp;rft.series=Oxford+Paperback+Reference&amp;rft.edition=4th&amp;rft.pub=Oxford+University+Press&amp;rft.date=1997-12-11&amp;rft.isbn=9780192800466&amp;rft.aulast=Illingworth&amp;rft.aufirst=Valerie&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fdictionaryofcomp00illi&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWhile+loop" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<!-- 
+NewPP limit report
+Parsed by mw1391
+Cached time: 20200327000039
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.288 seconds
+Real time usage: 0.870 seconds
+Preprocessor visited node count: 935/1000000
+Post‐expand include size: 22496/2097152 bytes
+Template argument size: 588/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 53770/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.117/10.000 seconds
+Lua memory usage: 3.42 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  790.227      1 -total
+ 15.51%  122.554      1 Template:Reflist
+ 11.82%   93.418      1 Template:Refimprove
+ 11.44%   90.371      3 Template:Cite_web
+  8.97%   70.864      1 Template:Ambox
+  3.60%   28.457      1 Template:Find_sources_mainspace
+  2.79%   22.038      1 Template:Wikibooks
+  2.60%   20.560      1 Template:Loop_constructs
+  2.43%   19.166      1 Template:Sister_project
+  2.19%   17.301      1 Template:Helpbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:468915-0!canonical and timestamp 20200327000038 and revision id 941161960
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=While_loop&amp;oldid=941161960">https://en.wikipedia.org/w/index.php?title=While_loop&amp;oldid=941161960</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Control_flow" title="Category:Control flow">Control flow</a></li><li><a href="/wiki/Category:Articles_with_example_Fortran_code" title="Category:Articles with example Fortran code">Articles with example Fortran code</a></li><li><a href="/wiki/Category:Articles_with_example_Racket_code" title="Category:Articles with example Racket code">Articles with example Racket code</a></li><li><a href="/wiki/Category:Articles_with_example_Smalltalk_code" title="Category:Articles with example Smalltalk code">Articles with example Smalltalk code</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_needing_additional_references_from_October_2016" title="Category:Articles needing additional references from October 2016">Articles needing additional references from October 2016</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:Articles_with_example_Ada_code" title="Category:Articles with example Ada code">Articles with example Ada code</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="/wiki/Category:Articles_with_example_Pascal_code" title="Category:Articles with example Pascal code">Articles with example Pascal code</a></li><li><a href="/wiki/Category:Articles_with_example_Perl_code" title="Category:Articles with example Perl code">Articles with example Perl code</a></li><li><a href="/wiki/Category:Articles_with_example_Python_code" title="Category:Articles with example Python code">Articles with example Python code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=While+loop" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=While+loop" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/While_loop" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:While_loop" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/While_loop">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=While_loop&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=While_loop&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/While_loop" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/While_loop" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=While_loop&amp;oldid=941161960" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=While_loop&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q838101" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=While_loop&amp;id=941161960&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=While+loop">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=While+loop&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=While_loop&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Bucle_While" title="Bucle While – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Cyklus_while-do" title="Cyklus while-do – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/While-l%C3%B8kke" title="While-løkke – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%92%CF%81%CF%8C%CF%87%CE%BF%CF%82_While" title="Βρόχος While – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Bucle_while" title="Bucle while – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/While_begizta" title="While begizta – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Boucle_while" title="Boucle while – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/While_%EB%A3%A8%ED%94%84" title="While 루프 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/While_petlja" title="While petlja – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/While%E6%96%87" title="While文 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Estrutura_de_repeti%C3%A7%C3%A3o" title="Estrutura de repetição – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/While_loop" title="While loop – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/While_%D0%BF%D0%B5%D1%82%D1%99%D0%B0" title="While петља – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/While_petlja" title="While petlja – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Toistorakenne" title="Toistorakenne – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/While" title="While – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/While_d%C3%B6ng%C3%BCs%C3%BC" title="While döngüsü – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="https://zh-yue.wikipedia.org/wiki/While_%E8%BF%B4%E5%9C%88" title="While 迴圈 – Cantonese" lang="yue" hreflang="yue" class="interlanguage-link-target">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/While%E8%BF%B4%E5%9C%88" title="While迴圈 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q838101#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 16 February 2020, at 23:35<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=While_loop&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.288","walltime":"0.870","ppvisitednodes":{"value":935,"limit":1000000},"postexpandincludesize":{"value":22496,"limit":2097152},"templateargumentsize":{"value":588,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":53770,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  790.227      1 -total"," 15.51%  122.554      1 Template:Reflist"," 11.82%   93.418      1 Template:Refimprove"," 11.44%   90.371      3 Template:Cite_web","  8.97%   70.864      1 Template:Ambox","  3.60%   28.457      1 Template:Find_sources_mainspace","  2.79%   22.038      1 Template:Wikibooks","  2.60%   20.560      1 Template:Loop_constructs","  2.43%   19.166      1 Template:Sister_project","  2.19%   17.301      1 Template:Helpbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.117","limit":"10.000"},"limitreport-memusage":{"value":3586340,"limit":52428800}},"cachereport":{"origin":"mw1391","timestamp":"20200327000039","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"While loop","url":"https:\/\/en.wikipedia.org\/wiki\/While_loop","sameAs":"http:\/\/www.wikidata.org\/entity\/Q838101","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q838101","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-02-14T14:28:39Z","dateModified":"2020-02-16T23:35:34Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/4\/43\/While-loop-diagram.svg","headline":"loop in programming language done while a condition is true"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":111,"wgHostname":"mw1323"});});</script></body></html>

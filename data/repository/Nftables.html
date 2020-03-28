@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>nftables - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn0udApAMNAAATeFeNUAAADS","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Nftables","wgTitle":"Nftables","wgCurRevisionId":947467725,"wgRevisionId":947467725,"wgArticleId":23458933,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Firewall software","Linux security software","Linux kernel features"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Nftables","wgRelevantArticleId":23458933,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],
+"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q7021717","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready",
+"ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1200px-Simplified_Structure_of_the_Linux_Kernel.svg.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Nftables&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Nftables&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Nftables"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Nftables rootpage-Nftables skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">nftables</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><span></span>
+</p>
+<table class="infobox vevent" style="width:22em"><caption class="summary">Nftables</caption><tbody><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Original author(s)</a></th><td>The Netfilter Project</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer(s)</a></th><td>The Netfilter Project</td></tr><tr style="display: none;"><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td><div style="margin:0px;">0.9.3<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+   / December&#160;2, 2019<span class="noprint">&#59;&#32;3 months ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2019-12-02</span>)</span></div></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Preview release</a></th><td><div style="margin:0px;"><a rel="nofollow" class="external text" href="https://git.netfilter.org/">Git repo</a>
+   </div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Repository_(version_control)" title="Repository (version control)">Repository</a></th><td><div class="plainlist"><ul><li><span class="url"><a rel="nofollow" class="external text" href="git://git.netfilter.org/nftables">git<wbr />.netfilter<wbr />.org<wbr />/nftables</a></span></li></ul>
+</div> <a href="https://www.wikidata.org/wiki/Q7021717#P1324" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></td></tr><tr><th scope="row" style="white-space: nowrap;">Written in</th><td><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td><a href="/wiki/Linux" title="Linux">Linux</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Computing_platform" title="Computing platform">Platform</a></th><td><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_categories#Categorization_approaches" title="Software categories">Type</a></th><td><a href="/wiki/Firewall_(computing)" title="Firewall (computing)">packet filtering</a></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_license" title="Software license">License</a></th><td><a href="/wiki/GNU_General_Public_License" title="GNU General Public License">GPL (version 2)</a></td></tr><tr><th scope="row" style="white-space: nowrap;">Website</th><td><div class="plainlist"><ul><li><span class="url"><a rel="nofollow" class="external text" href="https://netfilter.org/projects/nftables/">netfilter<wbr />.org<wbr />/projects<wbr />/nftables<wbr />/</a></span></li><li><span class="url"><a rel="nofollow" class="external text" href="https://wiki.nftables.org/wiki-nftables/index.php/Main_Page">wiki<wbr />.nftables<wbr />.org<wbr />/wiki-nftables<wbr />/index<wbr />.php<wbr />/Main<wbr />_Page</a></span></li></ul></div></td></tr></tbody></table>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/220px-Simplified_Structure_of_the_Linux_Kernel.svg.png" decoding="async" width="220" height="124" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/330px-Simplified_Structure_of_the_Linux_Kernel.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/440px-Simplified_Structure_of_the_Linux_Kernel.svg.png 2x" data-file-width="960" data-file-height="540" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg" class="internal" title="Enlarge"></a></div><code><a href="/wiki/Tc_(Linux)" title="Tc (Linux)">tc</a></code> relates to the <a href="/wiki/Linux_kernel_packet_scheduler" class="mw-redirect" title="Linux kernel packet scheduler">Linux kernel packet scheduler</a> as <code><a href="/wiki/Iptables" title="Iptables">iptables</a></code> to <a href="/wiki/Netfilter" title="Netfilter">Netfilter</a> and <code><a href="/w/index.php?title=Nft&amp;action=edit&amp;redlink=1" class="new" title="Nft (page does not exist)">nft</a></code> to nftables. All are user-space <a href="/wiki/Command-line_interface" title="Command-line interface">CLI</a>-programs that are used to configure their respective Linux kernel subsystem.</div></div></div>
+<p><b>nftables</b> is a subsystem of the <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a> providing filtering and classification of <a href="/wiki/Network_packet" title="Network packet">network packets</a>/datagrams/frames. It has been available since Linux kernel 3.13 released on 19 January 2014.<sup id="cite_ref-nftables313_2-0" class="reference"><a href="#cite_note-nftables313-2">&#91;2&#93;</a></sup>
+</p><p>nftables replaces the legacy iptables portions of <a href="/wiki/Netfilter" title="Netfilter">Netfilter</a>. Among the advantages of nftables over iptables is less code duplication and easier extension to new protocols. nftables is configured via the <a href="/wiki/User-space" class="mw-redirect" title="User-space">user-space</a> utility <i>nft</i>, while legacy tools are configured via the utilities <i><a href="/wiki/Iptables" title="Iptables">iptables</a></i>, <i>ip6tables</i>, <i><a href="/wiki/Arptables" title="Arptables">arptables</a></i> and <i>ebtables</i> frameworks.
+</p><p>nftables utilizes the building blocks of the <a href="/wiki/Netfilter" title="Netfilter">Netfilter</a> infrastructure, such as the existing hooks into the networking stack, connection tracking system, userspace queueing component, and logging subsystem.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#nft"><span class="tocnumber">1</span> <span class="toctext">nft</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Command-line_syntax"><span class="tocnumber">1.1</span> <span class="toctext">Command-line syntax</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Overview"><span class="tocnumber">3</span> <span class="toctext">Overview</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="nft">nft</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=1" title="Edit section: nft">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Command-line_syntax">Command-line syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=2" title="Edit section: Command-line syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A command to drop any packets with destination IP address <code>1.2.3.4</code>:
+</p>
+<pre>nft add rule ip filter output ip daddr 1.2.3.4 drop
+</pre>
+<p>Note that the new syntax differs significantly from that of iptables, in which the same rule would be written:
+</p>
+<pre>iptables -A OUTPUT -d 1.2.3.4 -j DROP
+</pre>
+<p>The new syntax can appear more verbose, but it is also far more flexible. nftables incorporates <a rel="nofollow" class="external text" href="https://wiki.nftables.org/wiki-nftables/index.php/Main_Page#Advanced_data_structures_for_performance_packet_classification">advanced data structures</a> such as dictionaries, maps and concatenations that do not exist with iptables. Making use of these can significantly reduce the number of chains and rules needed to express a given packet filtering design.
+</p><p>The <code>iptables-translate</code> tool can be used to translate many existing iptables rules to equivalent nftables rules.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> <a href="/wiki/Debian_version_history#Debian_10_(Buster)" title="Debian version history">Debian 10 (Buster)</a>, among other <a href="/wiki/Linux_distribution" title="Linux distribution">Linux distributions</a>, uses nftables along with <code>iptables-translate</code> as the default packet filtering backend.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=3" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The project was first publicly presented at Netfilter Workshop 2008 by Patrick McHardy from the Netfilter Core Team.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> The first preview release of kernel and userspace implementation was given in March 2009.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> Although the tool has been called "the biggest change to Linux firewalling since the introduction of iptables in 2001", it has received little press attention.<sup id="cite_ref-risky.biz_8-0" class="reference"><a href="#cite_note-risky.biz-8">&#91;8&#93;</a></sup> Notable hacker <a href="/wiki/Fyodor_Vaskovich" class="mw-redirect" title="Fyodor Vaskovich">Fyodor Vaskovich</a> (Gordon Lyon) said that he is "looking forward to its general release in the mainstream <a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a>".<sup id="cite_ref-risky.biz_8-1" class="reference"><a href="#cite_note-risky.biz-8">&#91;8&#93;</a></sup>
+</p><p>The project stayed in alpha stage, and the official website was removed in 2009. In March 2010, emails from the author on the project mailing lists showed the project was still active and approaching a beta release,<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup><sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> but the latter was never shipped officially. In October 2012, Pablo Neira Ayuso proposed a compatibility layer for iptables<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> and announced a possible inclusion of the project into mainstream kernel.
+</p><p>On 16 October 2013, Pablo Neira Ayuso submitted a nftables core <a href="/wiki/Pull_request" class="mw-redirect" title="Pull request">pull request</a> to the <a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Linux kernel mainline</a> tree.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> It was merged into the kernel mainline on 19 January 2014, with the release of Linux kernel version 3.13.<sup id="cite_ref-nftables313_2-1" class="reference"><a href="#cite_note-nftables313-2">&#91;2&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Overview">Overview</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=4" title="Edit section: Overview">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The nftables kernel engine adds a simple <a href="/wiki/Virtual_machine" title="Virtual machine">virtual machine</a> into the Linux kernel, which is able to execute bytecode to inspect a network packet and make decisions on how that packet should be handled. The operations implemented by this virtual machine are intentionally made basic. It can get data from the packet itself, have a look at the associated metadata (inbound interface, for example), and manage connection-tracking data. Arithmetic, bitwise and comparison operators can be used for making decisions based on that data. The virtual machine is also capable of manipulating sets of data (typically, IP addresses), allowing multiple comparison operations to be replaced with a single set lookup.<sup id="cite_ref-lwn-nftables_13-0" class="reference"><a href="#cite_note-lwn-nftables-13">&#91;13&#93;</a></sup>
+</p><p>The above-described organization is contrary to the iptables firewalling code, which has protocol awareness built-in so deeply into the logic that the code has had to be replicated four times&#8212;for <a href="/wiki/IPv4" title="IPv4">IPv4</a>, <a href="/wiki/IPv6" title="IPv6">IPv6</a>, <a href="/wiki/Address_Resolution_Protocol" title="Address Resolution Protocol">ARP</a>, and Ethernet <a href="/wiki/Bridging_(networking)" title="Bridging (networking)">bridging</a>&#8212;as the firewall engines are too protocol-specific to be used in a generic manner.<sup id="cite_ref-lwn-nftables_13-1" class="reference"><a href="#cite_note-lwn-nftables-13">&#91;13&#93;</a></sup>
+</p><p>The main advantages of nftables over iptables are the simplification of the Linux kernel <a href="/wiki/Application_binary_interface" title="Application binary interface">ABI</a>, reduction of <a href="/wiki/Duplicate_code" title="Duplicate code">code duplication</a>, improved <a href="/wiki/Error_message" title="Error message">error reporting</a>, and more efficient execution, storage and incremental changes of filtering rules. Traditionally used <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://man.cx/?page=iptables(8)">iptables(8)</a></code></span>, <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://man.cx/?page=ip6tables(8)">ip6tables(8)</a></code></span>, <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://man.cx/?page=arptables(8)">arptables(8)</a></code></span> and <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://man.cx/?page=ebtables(8)">ebtables(8)</a></code></span> (for IPv4, IPv6, ARP and Ethernet bridging, respectively) are intended to be replaced with <span class="plainlinksneverexpand"><code><a rel="nofollow" class="external text" href="https://www.mankier.com/8/nft">nft(8)</a></code></span> as a single unified implementation, providing firewall configuration on top of the in-kernel virtual machine.
+</p><p>nftables also offers an improved userspace API that allows <a href="/wiki/Atomic_operation" class="mw-redirect" title="Atomic operation">atomic</a> replacements of one or more firewall rules within a single <a href="/wiki/Netlink" title="Netlink">Netlink</a> transaction. This speeds up firewall configuration changes for setups having large rulesets; it can also help in avoiding race conditions while the rule changes are being executed. nftables also includes compatibility features to ease transition from previous firewalls, command-line utilities to convert rules in the iptables format,<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;14&#93;</a></sup> and syntax-compatible versions of iptables commands that use the nftables backend.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://netfilter.org/news.html#2019-12-02-d">"News of the netfilter/iptables project"</a>. <i>netfilter.org</i>. 2019-12-02<span class="reference-accessdate">. Retrieved <span class="nowrap">2020-01-18</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=netfilter.org&amp;rft.atitle=News+of+the+netfilter%2Fiptables+project&amp;rft.date=2019-12-02&amp;rft_id=https%3A%2F%2Fnetfilter.org%2Fnews.html%232019-12-02-d&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-nftables313-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-nftables313_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-nftables313_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://kernelnewbies.org/Linux_3.13#head-f628a9c41d7ec091f7a62db6a49b8da50659ec88">"nftables, the successor of iptables"</a>. <i>Linux 3.13</i>. kernelnewbies.org. 2014-01-19<span class="reference-accessdate">. Retrieved <span class="nowrap">2016-03-04</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Linux+3.13&amp;rft.atitle=nftables%2C+the+successor+of+iptables&amp;rft.date=2014-01-19&amp;rft_id=https%3A%2F%2Fkernelnewbies.org%2FLinux_3.13%23head-f628a9c41d7ec091f7a62db6a49b8da50659ec88&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://wiki.nftables.org/wiki-nftables/index.php/Moving_from_iptables_to_nftables">https://wiki.nftables.org/wiki-nftables/index.php/Moving_from_iptables_to_nftables</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://wiki.nftables.org/wiki-nftables/index.php/List_of_available_translations_via_iptables-translate_tool">https://wiki.nftables.org/wiki-nftables/index.php/List_of_available_translations_via_iptables-translate_tool</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://wiki.debian.org/nftables">https://wiki.debian.org/nftables</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://workshop.netfilter.org/2008/User-day-program.html">"User day program – NFWS2008"</a>. workshop.netfilter.org. 2008-10-03<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-02-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=User+day+program+%E2%80%93+NFWS2008&amp;rft.pub=workshop.netfilter.org&amp;rft.date=2008-10-03&amp;rft_id=https%3A%2F%2Fworkshop.netfilter.org%2F2008%2FUser-day-program.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://marc.info/?l=linux-netdev&amp;m=123735060618579">initial release announcement</a>.</span>
+</li>
+<li id="cite_note-risky.biz-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-risky.biz_8-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-risky.biz_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation news">Gray, Patrick (March 26, 2009). <a rel="nofollow" class="external text" href="https://risky.biz/news_and_opinion/patrick-gray/2009-03-26/news-linux-gets-new-firewall">"NEWS: Linux Gets New Firewall"</a>. Risky.biz.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=NEWS%3A+Linux+Gets+New+Firewall&amp;rft.date=2009-03-26&amp;rft.aulast=Gray&amp;rft.aufirst=Patrick&amp;rft_id=https%3A%2F%2Frisky.biz%2Fnews_and_opinion%2Fpatrick-gray%2F2009-03-26%2Fnews-linux-gets-new-firewall&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.spinics.net/lists/netfilter-devel/msg12409.html">"Linux Netfilter Devel – Re: Current state of nftables"</a>. Spinics.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-01-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Linux+Netfilter+Devel+%E2%80%93+Re%3A+Current+state+of+nftables&amp;rft.pub=Spinics.net&amp;rft_id=https%3A%2F%2Fwww.spinics.net%2Flists%2Fnetfilter-devel%2Fmsg12409.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.spinics.net/lists/netfilter-devel/msg15690.html">"Linux Netfilter Devel – Re: Current state of nftables"</a>. Spinics.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-01-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Linux+Netfilter+Devel+%E2%80%93+Re%3A+Current+state+of+nftables&amp;rft.pub=Spinics.net&amp;rft_id=https%3A%2F%2Fwww.spinics.net%2Flists%2Fnetfilter-devel%2Fmsg15690.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.spinics.net/lists/netfilter-devel/msg23831.html">"Linux Netfilter Devel – &#91;RFC&#93; back on nf_tables (plus compatibility layer)"</a>. Spinics.net<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-01-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Linux+Netfilter+Devel+%E2%80%93+%5B&#82;FC%26%2393%3B+back+on+nf_tables+%28plus+compatibility+layer%29&amp;rft.pub=Spinics.net&amp;rft_id=https%3A%2F%2Fwww.spinics.net%2Flists%2Fnetfilter-devel%2Fmsg23831.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://marc.info/?l=netfilter-devel&amp;m=138176887917614&amp;w=2">"&#91;PATCH 00/17&#93; netfilter updates: nf_tables pull request"</a>. Marc.info<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-01-20</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=%5BPATCH+00%2F17%26%2393%3B+netfilter+updates%3A+nf_tables+pull+request&amp;rft.pub=Marc.info&amp;rft_id=https%3A%2F%2Fmarc.info%2F%3Fl%3Dnetfilter-devel%26m%3D138176887917614%26w%3D2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-lwn-nftables-13"><span class="mw-cite-backlink">^ <a href="#cite_ref-lwn-nftables_13-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-lwn-nftables_13-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Jonathan Corbet (2013-08-20). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/564095/">"The return of nftables"</a>. <a href="/wiki/LWN.net" title="LWN.net">LWN.net</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-10-22</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+return+of+nftables&amp;rft.pub=LWN.net&amp;rft.date=2013-08-20&amp;rft.au=Jonathan+Corbet&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F564095%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation web">Neira Ayuso, Pablo. <a rel="nofollow" class="external text" href="https://git.netfilter.org/nftables/commit/?id=b65a70131d0d38844be12235270eebaa9d2f5a4d">"nftables – nft command line tool"</a>. <i>git.netfilter.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">24 January</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=git.netfilter.org&amp;rft.atitle=nftables+%E2%80%93+nft+command+line+tool&amp;rft.aulast=Neira+Ayuso&amp;rft.aufirst=Pablo&amp;rft_id=https%3A%2F%2Fgit.netfilter.org%2Fnftables%2Fcommit%2F%3Fid%3Db65a70131d0d38844be12235270eebaa9d2f5a4d&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web">Arturo, Ral. <a rel="nofollow" class="external text" href="https://ral-arturo.org/2018/06/16/nfws2018.html">"Netfilter Workshop 2018 Berlin summary"</a>. <i>ral-arturo.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">24 January</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ral-arturo.org&amp;rft.atitle=Netfilter+Workshop+2018+Berlin+summary&amp;rft.aulast=Arturo&amp;rft.aufirst=Ral&amp;rft_id=https%3A%2F%2Fral-arturo.org%2F2018%2F06%2F16%2Fnfws2018.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Nftables&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<style data-mw-deduplicate="TemplateStyles:r936637989">.mw-parser-output .portal{border:solid #aaa 1px;padding:0}.mw-parser-output .portal.tleft{margin:0.5em 1em 0.5em 0}.mw-parser-output .portal.tright{margin:0.5em 0 0.5em 1em}.mw-parser-output .portal>ul{display:table;box-sizing:border-box;padding:0.1em;max-width:175px;background:#f9f9f9;font-size:85%;line-height:110%;font-style:italic;font-weight:bold}.mw-parser-output .portal>ul>li{display:table-row}.mw-parser-output .portal>ul>li>span:first-child{display:table-cell;padding:0.2em;vertical-align:middle;text-align:center}.mw-parser-output .portal>ul>li>span:last-child{display:table-cell;padding:0.2em 0.2em 0.2em 0.3em;vertical-align:middle}</style><div role="navigation" aria-label="Portals" class="noprint portal plainlist tright">
+<ul>
+<li><span><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/28px-Free_and_open-source_software_logo_%282009%29.svg.png" decoding="async" width="28" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" /></span><span><a href="/wiki/Portal:Free_and_open-source_software" title="Portal:Free and open-source software">Free and open-source software portal</a></span></li>
+<li><span><a href="/wiki/File:NewTux.svg" class="image"><img alt="icon" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/23px-NewTux.svg.png" decoding="async" width="23" height="28" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/35px-NewTux.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b0/NewTux.svg/47px-NewTux.svg.png 2x" data-file-width="625" data-file-height="750" /></a></span><span><a href="/wiki/Portal:Linux" title="Portal:Linux">Linux portal</a></span></li></ul></div>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://netfilter.org/projects/nftables/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="https://git.netfilter.org/">nftables Git source code repository</a></li>
+<li><a rel="nofollow" class="external text" href="https://wiki.nftables.org/wiki-nftables/index.php/Main_Page">nftables HOWTO documentation</a></li>
+<li><a rel="nofollow" class="external text" href="https://lore.kernel.org/netdev/49C078B6.4020603@trash.net/">First release of nftables (2009-03-18)</a></li>
+<li><a rel="nofollow" class="external text" href="https://lore.kernel.org/netdev/20121025170632.GA4890@1984/">Pablo Neira Ayuso: &#91;RFC&#93; back on nf_tables (plus compatibility layer)</a></li>
+<li><a rel="nofollow" class="external text" href="https://home.regit.org/netfilter-en/nftables-quick-howto/">nftables quick HOWTO</a></li>
+<li>nftables sections in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Nftables">ArchWiki</a> and <a rel="nofollow" class="external text" href="https://wiki.gentoo.org/wiki/Nftables">Gentoo Wiki</a></li>
+<li><cite class="citation web">Corbet, Jonathan (2009-03-24). <a rel="nofollow" class="external text" href="https://lwn.net/Articles/324989/">"nftables: a new packet filtering engine"</a>. <a href="/wiki/LWN.net" title="LWN.net">LWN.net</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=nftables%3A+a+new+packet+filtering+engine&amp;rft.pub=LWN.net&amp;rft.date=2009-03-24&amp;rft.aulast=Corbet&amp;rft.aufirst=Jonathan&amp;rft_id=https%3A%2F%2Flwn.net%2FArticles%2F324989%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation conference">McHardy, Patrick (2008-09-30). <a rel="nofollow" class="external text" href="http://people.netfilter.org/kaber/nfws2008/nftables.odp"><i>nftables – a successor to iptables, ip6tables, ebtables and arptables</i></a> <span class="cs1-format">(<a href="/wiki/OpenDocument" title="OpenDocument">ODP</a>)</span>. <a rel="nofollow" class="external text" href="https://workshop.netfilter.org/">Netfilter Workshop 2008</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=nftables+%E2%80%93+a+successor+to+iptables%2C+ip6tables%2C+ebtables+and+arptables&amp;rft.date=2008-09-30&amp;rft.aulast=McHardy&amp;rft.aufirst=Patrick&amp;rft_id=http%3A%2F%2Fpeople.netfilter.org%2Fkaber%2Fnfws2008%2Fnftables.odp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ANftables" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><a rel="nofollow" class="external text" href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=5191f4d82daf22b7ee9446f83527d2795e225974">nft_compat extended to support ebtables extensions</a> (merged in Linux kernel 4.0)</li></ul>
+<p><br />
+</p>
+<div role="navigation" class="navbox" aria-labelledby="Firewall_software" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Firewall_software" title="Template:Firewall software"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Firewall_software" title="Template talk:Firewall software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Firewall_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Firewall_software" style="font-size:114%;margin:0 4em"><a href="/wiki/Firewall_(computing)" title="Firewall (computing)">Firewall software</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*Application_firewall_*Context-based_access_control_*Personal_firewall_*Stateful_firewall_*Virtual_firewall">
+<ul><li><a href="/wiki/Application_firewall" title="Application firewall">Application firewall</a></li>
+<li><a href="/wiki/Context-based_access_control" title="Context-based access control">Context-based access control</a></li>
+<li><a href="/wiki/Personal_firewall" title="Personal firewall">Personal firewall</a></li>
+<li><a href="/wiki/Stateful_firewall" title="Stateful firewall">Stateful firewall</a></li>
+<li><a href="/wiki/Virtual_firewall" title="Virtual firewall">Virtual firewall</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux" title="Linux">Linux</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Apps</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/FireHOL" title="FireHOL">FireHOL</a></li>
+<li><a href="/wiki/Firestarter_(firewall)" title="Firestarter (firewall)">Firestarter</a></li>
+<li><a href="/wiki/Firewalld" title="Firewalld">firewalld</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a>
+<ul><li><a href="/wiki/Ipset" class="mw-redirect" title="Ipset">ipset</a></li>
+<li><a href="/wiki/Iptables" title="Iptables">iptables</a></li>
+<li><a href="/wiki/L7-filter" title="L7-filter">L7-filter</a></li>
+<li><a href="/wiki/NuFW" title="NuFW">NuFW</a></li></ul></li>
+<li><a href="/wiki/MoBlock" title="MoBlock">MoBlock</a></li>
+<li><a class="mw-selflink selflink">nftables</a></li>
+<li><a href="/wiki/Privoxy" title="Privoxy">Privoxy</a></li>
+<li><a href="/wiki/Shorewall" title="Shorewall">Shorewall</a></li>
+<li><a href="/wiki/Squid_(software)" title="Squid (software)">Squid</a></li>
+<li><a href="/wiki/Uncomplicated_Firewall" title="Uncomplicated Firewall">Uncomplicated Firewall</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_distribution" title="Linux distribution">Distros</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Endian_Firewall" title="Endian Firewall">Endian Firewall</a></li>
+<li><a href="/wiki/IPFire" title="IPFire">IPFire</a></li>
+<li><a href="/wiki/LEDE" class="mw-redirect" title="LEDE">LEDE</a></li>
+<li><a href="/wiki/OpenWrt" title="OpenWrt">OpenWrt</a></li>
+<li><a href="/wiki/SmoothWall" title="SmoothWall">SmoothWall</a></li>
+<li><a href="/wiki/Untangle" title="Untangle">Untangle</a></li>
+<li><a href="/wiki/Zeroshell" title="Zeroshell">Zeroshell</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/BSD" class="mw-redirect" title="BSD">BSD</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Apps</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IPFilter" title="IPFilter">IPFilter</a></li>
+<li><a href="/wiki/Ipfirewall" title="Ipfirewall">ipfirewall</a></li>
+<li><a href="/wiki/NPF_(firewall)" title="NPF (firewall)">NPF</a></li>
+<li><a href="/wiki/PF_(firewall)" title="PF (firewall)">PF</a>
+<ul><li><a href="/wiki/Common_Address_Redundancy_Protocol" title="Common Address Redundancy Protocol">CARP</a></li>
+<li><a href="/wiki/Pfsync" title="Pfsync">pfsync</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Distros</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/M0n0wall" title="M0n0wall">M0n0wall</a></li>
+<li><a href="/wiki/OPNsense" title="OPNsense">OPNsense</a></li>
+<li><a href="/wiki/PfSense" title="PfSense">pfSense</a></li>
+<li><a href="/wiki/M0n0wall#Derivatives" title="M0n0wall">SmallWall</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/MacOS" title="MacOS">macOS</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Little_Snitch" title="Little Snitch">Little Snitch</a></li>
+<li><a href="/wiki/NetBarrier_X4" title="NetBarrier X4">NetBarrier X4</a></li>
+<li><a href="/wiki/PeerGuardian" title="PeerGuardian">PeerGuardian</a></li>
+<li><a href="/wiki/Intego#VirusBarrier" title="Intego">VirusBarrier X6</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Commercial</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Check_Point_Integrity" title="Check Point Integrity">Check Point Integrity</a></li>
+<li><a href="/wiki/Kaspersky_Internet_Security" title="Kaspersky Internet Security">Kaspersky Internet Security</a></li>
+<li><a href="/wiki/McAfee_Personal_Firewall_Plus" class="mw-redirect" title="McAfee Personal Firewall Plus">McAfee Personal Firewall Plus</a></li>
+<li><a href="/wiki/Microsoft_Forefront_Threat_Management_Gateway" title="Microsoft Forefront Threat Management Gateway">Microsoft Forefront Threat Management Gateway</a></li>
+<li><a href="/wiki/Norton_360" title="Norton 360">Norton 360</a></li>
+<li><a href="/wiki/Norton_Internet_Security" title="Norton Internet Security">Norton Internet Security</a></li>
+<li><a href="/wiki/Norton_Personal_Firewall" title="Norton Personal Firewall">Norton Personal Firewall</a></li>
+<li><a href="/wiki/Outpost_Firewall_Pro" title="Outpost Firewall Pro">Outpost Firewall Pro</a></li>
+<li><a href="/wiki/Symantec_Endpoint_Protection" title="Symantec Endpoint Protection">Symantec Endpoint Protection</a></li>
+<li><a href="/wiki/Trend_Micro_Internet_Security" title="Trend Micro Internet Security">Trend Micro Internet Security</a></li>
+<li><a href="/wiki/Windows_Firewall" title="Windows Firewall">Windows Firewall</a></li>
+<li><a href="/wiki/Windows_Live_OneCare" title="Windows Live OneCare">Windows Live OneCare</a></li>
+<li><a href="/wiki/WinGate" title="WinGate">WinGate</a></li>
+<li><a href="/wiki/WinRoute" class="mw-redirect" title="WinRoute">WinRoute</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Freemium" title="Freemium">Freemium</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comodo_Internet_Security" title="Comodo Internet Security">Comodo Internet Security</a></li>
+<li><a href="/wiki/ZoneAlarm" title="ZoneAlarm">ZoneAlarm</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Open-source</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/PeerBlock" title="PeerBlock">PeerBlock</a></li>
+<li><a href="/wiki/PeerGuardian" title="PeerGuardian">PeerGuardian</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_appliance" title="Computer appliance">Appliances</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Palo_Alto_Networks" title="Palo Alto Networks"> Palo Alto PA-Series</a></li>
+<li><a href="/wiki/F5_Networks" title="F5 Networks"> F5 BIG-IP iSeries</a></li>
+<li><a href="/wiki/Fortinet" title="Fortinet"> FortiGate Series</a></li>
+<li><a href="/wiki/Novell_BorderManager" title="Novell BorderManager">Novell BorderManager</a></li>
+<li><a href="/wiki/Vyatta" title="Vyatta">Vyatta</a></li>
+<li><a href="/wiki/ZoneAlarm_Z100G" title="ZoneAlarm Z100G">ZoneAlarm Z100G</a></li>
+<li><a href="/wiki/Zorp_firewall" class="mw-redirect" title="Zorp firewall">Zorp firewall</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><a href="/wiki/Comparison_of_firewalls" title="Comparison of firewalls">Comparison of firewalls</a></li>
+<li><a href="/wiki/List_of_router_or_firewall_distributions" class="mw-redirect" title="List of router or firewall distributions">List of router or firewall distributions</a></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Linux_kernel" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Linux_kernel" title="Template:Linux kernel"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Linux_kernel" title="Template talk:Linux kernel"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Linux_kernel&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Linux_kernel" style="font-size:114%;margin:0 4em"><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organization</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Kernel" scope="row" class="navbox-group" style="width:1%">Kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Foundation" title="Linux Foundation">Linux Foundation</a></li>
+<li><a href="/wiki/Linux_Mark_Institute" title="Linux Mark Institute">Linux Mark Institute</a></li>
+<li><a href="/wiki/Linus%27s_law" title="Linus&#39;s law">Linus's law</a></li>
+<li><a href="/wiki/Tanenbaum%E2%80%93Torvalds_debate" title="Tanenbaum–Torvalds debate">Tanenbaum–Torvalds debate</a></li>
+<li><a href="/wiki/Tux_(mascot)" title="Tux (mascot)">Tux</a></li>
+<li><a href="/wiki/SCO%E2%80%93Linux_disputes" title="SCO–Linux disputes">SCO disputes</a></li>
+<li><a href="/wiki/Linaro" title="Linaro">Linaro</a></li>
+<li><a href="/wiki/GNU_General_Public_License#Version_2" title="GNU General Public License">GNU GPL v2</a></li>
+<li><a href="/wiki/Menuconfig" title="Menuconfig">menuconfig</a></li>
+<li><a href="/wiki/List_of_Linux-supported_computer_architectures" title="List of Linux-supported computer architectures">Supported computer architectures</a></li>
+<li><a href="/wiki/List_of_Linux_kernel_names" title="List of Linux kernel names">Kernel names</a></li>
+<li><a href="/wiki/Criticism_of_Linux" title="Criticism of Linux">Criticism</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Support</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li>Developers
+<ul><li><i><a href="/wiki/The_Linux_Programming_Interface" title="The Linux Programming Interface">The Linux Programming Interface</a></i></li>
+<li><a href="/wiki/Kernel.org" title="Kernel.org">kernel.org</a></li>
+<li><a href="/wiki/Linux_kernel_mailing_list" title="Linux kernel mailing list">LKML</a></li>
+<li><a href="/wiki/Linux_conference" class="mw-redirect" title="Linux conference">Linux conferences</a></li></ul></li>
+<li>Users
+<ul><li><a href="/wiki/Linux_user_group" title="Linux user group">Linux User Group (LUG)</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Technical</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Debugging</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CRIU" title="CRIU">CRIU</a></li>
+<li><a href="/wiki/Ftrace" title="Ftrace">ftrace</a></li>
+<li><a href="/wiki/Kdump_(Linux)" title="Kdump (Linux)">kdump</a></li>
+<li><a href="/wiki/Linux_kernel_oops" title="Linux kernel oops">Linux kernel oops</a></li>
+<li><a href="/wiki/SystemTap" title="SystemTap">SystemTap</a></li>
+<li><a href="/wiki/Berkeley_Packet_Filter" title="Berkeley Packet Filter">BPF</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_startup_process" title="Linux startup process">Startup</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Vmlinux" title="Vmlinux">vmlinux</a></li>
+<li><a href="/wiki/System.map" title="System.map">System.map</a></li>
+<li><a href="/wiki/Dracut_(software)" title="Dracut (software)">dracut</a></li>
+<li><a href="/wiki/Initrd" class="mw-redirect" title="Initrd">initrd</a></li>
+<li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">ABIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_Standard_Base" title="Linux Standard Base">Linux Standard Base</a></li>
+<li><a href="/wiki/X32_ABI" title="X32 ABI">x32 ABI</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces" title="Linux kernel interfaces">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Of<br /><a href="/wiki/User_space" title="User space">userspace</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtual_file_system" title="Virtual file system">FS</a>,<br /><a href="/wiki/Daemon_(computing)" title="Daemon (computing)">daemons</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Devfs" class="mw-redirect" title="Devfs">devfs</a></li>
+<li><a href="/wiki/Devpts" title="Devpts">devpts</a></li>
+<li><a href="/wiki/Debugfs" title="Debugfs">debugfs</a></li>
+<li><a href="/wiki/Procfs" title="Procfs">procfs</a></li>
+<li><a href="/wiki/Sysfs" title="Sysfs">sysfs</a></li>
+<li><a href="/wiki/Systemd" title="Systemd">systemd</a>
+<ul><li><a href="/wiki/Udev" title="Udev">udev</a></li></ul></li>
+<li><a href="/wiki/Kmscon" title="Kmscon">Kmscon</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Wrapper_library" title="Wrapper library">Wrapper<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_standard_library" title="C standard library">C standard library</a>
+<ul><li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li></ul></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">libcgroup</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">libdrm</a></li>
+<li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">libalsa</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">libevdev</a></li>
+<li><a href="/wiki/Libusb" title="Libusb">libusb</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Of<br />kernel</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#SCI" title="Linux kernel interfaces">System Call<br />Interface</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/POSIX" title="POSIX">POSIX</a>
+<ul><li><a href="/wiki/Ioctl" title="Ioctl">ioctl</a></li>
+<li><a href="/wiki/Select_(Unix)" title="Select (Unix)">select</a></li>
+<li><a href="/wiki/Open_(system_call)" title="Open (system call)">open</a></li>
+<li><a href="/wiki/Read_(system_call)" title="Read (system call)">read</a></li>
+<li><a href="/wiki/Close_(system_call)" title="Close (system call)">close</a></li>
+<li><a href="/wiki/Sync_(Unix)" title="Sync (Unix)">sync</a></li>
+<li>…</li></ul></li>
+<li>Linux-only
+<ul><li><a href="/wiki/Futex" title="Futex">futex</a></li>
+<li><a href="/wiki/Epoll" title="Epoll">epoll</a></li>
+<li><a href="/wiki/Splice_(system_call)" title="Splice (system call)">splice</a></li>
+<li><a href="/wiki/Dnotify" title="Dnotify">dnotify</a></li>
+<li><a href="/wiki/Inotify" title="Inotify">inotify</a></li>
+<li><a href="/wiki/Readahead" title="Readahead">readahead</a></li>
+<li>…</li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_kernel_interfaces#In–kernel_APIs" title="Linux kernel interfaces">In-kernel</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Advanced_Linux_Sound_Architecture" title="Advanced Linux Sound Architecture">ALSA</a></li>
+<li><a href="/wiki/Crypto_API_(Linux)" title="Crypto API (Linux)">Crypto API</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/Kernfs_(Linux)" title="Kernfs (Linux)">kernfs</a></li>
+<li><a href="/wiki/Memory_barrier" title="Memory barrier">Memory barrier</a></li>
+<li><a href="/wiki/New_API" title="New API">New API</a></li>
+<li><a href="/wiki/Read-copy-update" title="Read-copy-update">RCU</a></li>
+<li><a href="/wiki/Video4Linux" title="Video4Linux">Video4Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Loadable_kernel_module" title="Loadable kernel module">Kernel modules</a></li>
+<li><a href="/wiki/BlueZ" class="mw-redirect" title="BlueZ">BlueZ</a></li>
+<li><a href="/wiki/Cgroups" title="Cgroups">cgroups</a></li>
+<li><a href="/wiki/Linux_console" title="Linux console">Console</a></li>
+<li><a href="/wiki/Bcache" title="Bcache">bcache</a></li>
+<li><a href="/wiki/Device_mapper" title="Device mapper">Device mapper</a></li>
+<li><a href="/wiki/Dm-cache" title="Dm-cache">dm-cache</a></li>
+<li><a href="/wiki/Dm-crypt" title="Dm-crypt">dm-crypt</a></li>
+<li><a href="/wiki/Direct_Rendering_Manager" title="Direct Rendering Manager">DRM</a></li>
+<li><a href="/wiki/EDAC_(Linux)" class="mw-redirect" title="EDAC (Linux)">EDAC</a></li>
+<li><a href="/wiki/Evdev" title="Evdev">evdev</a></li>
+<li><a href="/wiki/Kernel_same-page_merging" title="Kernel same-page merging">Kernel same-page merging</a> (KSM)</li>
+<li><a href="/wiki/LIO_(SCSI_target)" title="LIO (SCSI target)">LIO</a></li>
+<li><a href="/wiki/Linux_framebuffer" title="Linux framebuffer">Framebuffer</a></li>
+<li><a href="/wiki/Logical_Volume_Manager_(Linux)" title="Logical Volume Manager (Linux)">LVM</a></li>
+<li><a href="/wiki/KMS_driver" class="mw-redirect" title="KMS driver">KMS driver</a></li>
+<li><a href="/wiki/Netfilter" title="Netfilter">Netfilter</a></li>
+<li><a href="/wiki/Netlink" title="Netlink">Netlink</a></li>
+<li><a class="mw-selflink selflink">nftables</a></li>
+<li><a href="/wiki/Network_scheduler" title="Network scheduler">Network scheduler</a></li>
+<li><a href="/wiki/Perf_(Linux)" title="Perf (Linux)">perf</a></li>
+<li><a href="/wiki/SLUB_(software)" title="SLUB (software)">SLUB</a></li>
+<li><a href="/wiki/Zram" title="Zram">zram</a></li>
+<li><a href="/wiki/Zswap" title="Zswap">zswap</a></li></ul>
+<ul><li><a href="/wiki/Scheduling_(computing)#Linux" title="Scheduling (computing)">Process and I/O schedulers</a>:</li>
+<li><a href="/wiki/O(n)_scheduler" title="O(n) scheduler">O(n) scheduler</a></li>
+<li><a href="/wiki/O(1)_scheduler" title="O(1) scheduler">O(1) scheduler</a></li>
+<li><a href="/wiki/Completely_Fair_Scheduler" title="Completely Fair Scheduler">Completely Fair Scheduler</a> (CFQ)</li>
+<li><a href="/wiki/Brain_Fuck_Scheduler" title="Brain Fuck Scheduler">Brain Fuck Scheduler</a></li>
+<li><a href="/wiki/Noop_scheduler" title="Noop scheduler">Noop scheduler</a></li>
+<li><a href="/wiki/SCHED_DEADLINE" title="SCHED DEADLINE">SCHED_DEADLINE</a></li></ul>
+<ul><li><a href="/wiki/Linux_Security_Modules" title="Linux Security Modules">Security Modules</a>: <a href="/wiki/AppArmor" title="AppArmor">AppArmor</a></li>
+<li><a href="/wiki/Exec_Shield" title="Exec Shield">Exec Shield</a>
+<ul><li><a href="/wiki/PaX" title="PaX">PaX</a></li></ul></li>
+<li><a href="/wiki/Seccomp" title="Seccomp">seccomp</a></li>
+<li><a href="/wiki/Security-Enhanced_Linux" title="Security-Enhanced Linux">SELinux</a></li>
+<li><a href="/wiki/Smack_(software)" title="Smack (software)">Smack</a></li>
+<li><a href="/wiki/Tomoyo_Linux" title="Tomoyo Linux">Tomoyo Linux</a></li>
+<li><a href="/wiki/Linux_PAM" title="Linux PAM">Linux PAM</a></li></ul>
+<ul><li><a href="/wiki/Device_driver" title="Device driver">Device drivers</a>
+<ul><li><a href="/wiki/Comparison_of_open-source_wireless_drivers" title="Comparison of open-source wireless drivers">802.11</a></li>
+<li><a href="/wiki/Free_and_open-source_graphics_device_driver" title="Free and open-source graphics device driver">graphics</a></li></ul></li>
+<li><a href="/wiki/Raw_device" title="Raw device">Raw device</a></li></ul>
+<ul><li><a href="/wiki/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a></li>
+<li><a href="/wiki/KernelCare" title="KernelCare">KernelCare</a></li>
+<li><a href="/wiki/Kexec" title="Kexec">kexec</a></li>
+<li><a href="/wiki/KGraft" title="KGraft">kGraft</a></li>
+<li><a href="/wiki/Kpatch" title="Kpatch">kpatch</a></li>
+<li><a href="/wiki/Ksplice" title="Ksplice">Ksplice</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Variants</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_kernel_mainline" class="mw-redirect" title="Linux kernel mainline">Mainline</a>
+<ul><li><a href="/wiki/Linux_kernel" title="Linux kernel">Linux kernel</a></li>
+<li><a href="/wiki/Linux-libre" title="Linux-libre">Linux-libre</a></li></ul></li>
+<li><a href="/wiki/High-performance_computing" class="mw-redirect" title="High-performance computing">High-performance computing</a>
+<ul><li><a href="/wiki/INK_(operating_system)" title="INK (operating system)">INK</a></li>
+<li><a href="/wiki/Compute_Node_Linux" title="Compute Node Linux">Compute Node Linux</a></li>
+<li><a href="/wiki/Slurm_Workload_Manager" title="Slurm Workload Manager">SLURM</a></li></ul></li>
+<li><a href="/wiki/Real-time_computing" title="Real-time computing">Real-time computing</a>
+<ul><li><a href="/wiki/RTLinux" title="RTLinux">RTLinux</a></li>
+<li><a href="/wiki/RTAI" title="RTAI">RTAI</a></li>
+<li><a href="/wiki/Xenomai" title="Xenomai">Xenomai</a></li>
+<li><a href="/wiki/Carrier_Grade_Linux" title="Carrier Grade Linux">Carrier Grade Linux</a></li></ul></li>
+<li><a href="/wiki/Memory_management_unit" title="Memory management unit">MMU</a>-less
+<ul><li><a href="/wiki/%CE%9CClinux" title="ΜClinux">μClinux</a></li>
+<li><a href="/wiki/PSXLinux" title="PSXLinux">PSXLinux</a></li></ul></li></ul>
+ </div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Virtualization" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Virtualization" title="Virtualization">Virtualization</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hypervisor" title="Hypervisor">Hypervisor</a>
+<ul><li><a href="/wiki/Kernel-based_Virtual_Machine" title="Kernel-based Virtual Machine">KVM</a></li>
+<li><a href="/wiki/Xen" title="Xen">Xen</a></li></ul></li>
+<li><a href="/wiki/OS-level_virtualization" title="OS-level virtualization">OS-level virtualization</a>
+<ul><li><a href="/wiki/Linux-VServer" title="Linux-VServer">Linux-VServer</a></li>
+<li><a href="/wiki/Lguest" title="Lguest">Lguest</a></li>
+<li><a href="/wiki/LXC" title="LXC">LXC</a></li>
+<li><a href="/wiki/OpenVZ" title="OpenVZ">OpenVZ</a></li></ul></li>
+<li>Other
+<ul><li><a href="/wiki/L4Linux" title="L4Linux">L4Linux</a></li>
+<li><a href="/wiki/ELinOS" title="ELinOS">ELinOS</a></li>
+<li><a href="/wiki/User-mode_Linux" title="User-mode Linux">User-mode Linux</a></li>
+<li><a href="/wiki/MkLinux" title="MkLinux">MkLinux</a></li>
+<li><a href="/wiki/Cooperative_Linux" title="Cooperative Linux">coLinux</a></li></ul></li></ul>
+</div></td></tr></tbody></table><div>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_adoption" title="Linux adoption">Adoption</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Rangeof_use" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Linux_range_of_use" title="Linux range of use">Range<br />of use</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_desktop_environments" class="mw-redirect" title="Linux desktop environments">Desktop</a></li>
+<li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Embedded</a></li>
+<li><a href="/wiki/Linux_gaming" title="Linux gaming">Gaming</a></li>
+<li>Thin client:
+<ul><li><a href="/wiki/Linux_Terminal_Server_Project" title="Linux Terminal Server Project">LTSP</a></li>
+<li><a href="/wiki/Thinstation" title="Thinstation">Thinstation</a></li></ul></li>
+<li>Server:
+<ul><li><a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a></li>
+<li><a href="/wiki/LYME_(software_bundle)" title="LYME (software bundle)">LYME-LYCE</a></li></ul></li>
+<li><a href="/wiki/Linux-powered_device" title="Linux-powered device">Devices</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Adopters</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_Linux_adopters" title="List of Linux adopters">List of Linux adopters</a></li>
+<li><a href="/wiki/GENIVI_Alliance" title="GENIVI Alliance">GENIVI Alliance</a></li>
+<li><a href="/wiki/List_of_proprietary_software_for_Linux" title="List of proprietary software for Linux">Proprietary software for Linux</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Linux_kernel" title="Category:Linux kernel">Category</a></b></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> <b><a href="https://commons.wikimedia.org/wiki/Linux_kernel" class="extiw" title="commons:Linux kernel">Commons</a></b></li>
+<li><img alt="Wikipedia book" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/16px-Symbol_book_class2.svg.png" decoding="async" title="Wikipedia book" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/23px-Symbol_book_class2.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Symbol_book_class2.svg/31px-Symbol_book_class2.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="https://en.wikibooks.org/wiki/Linux" class="extiw" title="b:Linux">Book</a></b></li>
+<li><img alt="Wikiversity page" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/16px-Wikiversity-logo.svg.png" decoding="async" title="Wikiversity page" width="16" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/24px-Wikiversity-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/32px-Wikiversity-logo.svg.png 2x" data-file-width="1000" data-file-height="800" /> <b><a href="https://en.wikiversity.org/wiki/Linux" class="extiw" title="v:Linux">Wikiversity</a></b></li>
+<li><img alt="Portal" src="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/16px-Portal-puzzle.svg.png" decoding="async" title="Portal" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/24px-Portal-puzzle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/f/fd/Portal-puzzle.svg/32px-Portal-puzzle.svg.png 2x" data-file-width="32" data-file-height="28" /> <b><a href="/wiki/Portal:Linux" title="Portal:Linux">Portal</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1278
+Cached time: 20200326141709
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.504 seconds
+Real time usage: 0.676 seconds
+Preprocessor visited node count: 2221/1000000
+Post‐expand include size: 129370/2097152 bytes
+Template argument size: 3574/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 40031/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.243/10.000 seconds
+Lua memory usage: 5.64 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  557.686      1 -total
+ 47.61%  265.517      2 Template:Infobox
+ 38.45%  214.446      1 Template:Infobox_software
+ 34.07%  189.984      1 Template:Reflist
+ 27.72%  154.579     11 Template:Cite_web
+ 13.57%   75.700     12 Template:Navbox
+ 11.76%   65.560      1 Template:Infobox_software/simple
+  7.81%   43.551      1 Template:Start_date_and_age
+  7.69%   42.893      1 Template:Portal
+  6.58%   36.691      2 Template:Wikidata
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:23458933-0!canonical and timestamp 20200326141709 and revision id 947467725
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Nftables&amp;oldid=947467725">https://en.wikipedia.org/w/index.php?title=Nftables&amp;oldid=947467725</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Firewall_software" title="Category:Firewall software">Firewall software</a></li><li><a href="/wiki/Category:Linux_security_software" title="Category:Linux security software">Linux security software</a></li><li><a href="/wiki/Category:Linux_kernel_features" title="Category:Linux kernel features">Linux kernel features</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Nftables" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Nftables" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Nftables" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Nftables" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Nftables">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Nftables&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Nftables&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Nftables" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Nftables" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Nftables&amp;oldid=947467725" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Nftables&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7021717" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Nftables&amp;id=947467725&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Nftables">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Nftables&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Nftables&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Nftables" title="Nftables – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Nftables" title="Nftables – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Nftables" title="Nftables – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Nftables" title="Nftables – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Nftables" title="Nftables – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Nftables" title="Nftables – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Nftables" title="Nftables – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q7021717#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 26 March 2020, at 14:17<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Nftables&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.504","walltime":"0.676","ppvisitednodes":{"value":2221,"limit":1000000},"postexpandincludesize":{"value":129370,"limit":2097152},"templateargumentsize":{"value":3574,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":40031,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  557.686      1 -total"," 47.61%  265.517      2 Template:Infobox"," 38.45%  214.446      1 Template:Infobox_software"," 34.07%  189.984      1 Template:Reflist"," 27.72%  154.579     11 Template:Cite_web"," 13.57%   75.700     12 Template:Navbox"," 11.76%   65.560      1 Template:Infobox_software/simple","  7.81%   43.551      1 Template:Start_date_and_age","  7.69%   42.893      1 Template:Portal","  6.58%   36.691      2 Template:Wikidata"]},"scribunto":{"limitreport-timeusage":{"value":"0.243","limit":"10.000"},"limitreport-memusage":{"value":5917773,"limit":52428800}},"cachereport":{"origin":"mw1278","timestamp":"20200326141709","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Nftables","url":"https:\/\/en.wikipedia.org\/wiki\/Nftables","sameAs":"http:\/\/www.wikidata.org\/entity\/Q7021717","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q7021717","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2009-07-01T20:23:30Z","dateModified":"2020-03-26T14:17:05Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/6\/65\/Simplified_Structure_of_the_Linux_Kernel.svg","headline":"subsystem of the Linux kernel providing filtering and classification of network packets\/datagrams\/frames"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":86,"wgHostname":"mw1366"});});</script></body></html>

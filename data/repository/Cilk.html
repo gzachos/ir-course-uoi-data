@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Cilk - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn3ZKgpAAEIAAI-sIwAAAACY","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Cilk","wgTitle":"Cilk","wgCurRevisionId":939182908,"wgRevisionId":939182908,"wgArticleId":945803,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","All articles with specifically marked weasel-worded phrases","Articles with specifically marked weasel-worded phrases from September 2015","All articles with unsourced statements","Articles with unsourced statements from March 2015","Official website different in Wikidata and Wikipedia",
+"Articles with example code","Concurrent programming languages","C programming language family","Massachusetts Institute of Technology software","Intel software"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Cilk","wgRelevantArticleId":945803,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2569373","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles"
+:"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface",
+"ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Cilk&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Cilk&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Cilk"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Cilk rootpage-Cilk skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Cilk</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox vevent" style="width:22em"><caption class="summary">Cilk</caption><tbody><tr><th scope="row"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th><td><a href="/wiki/Imperative_programming" title="Imperative programming">imperative</a> (<a href="/wiki/Procedural_programming" title="Procedural programming">procedural</a>), <a href="/wiki/Structured_programming" title="Structured programming">structured</a>, <a href="/wiki/Parallel_programming" class="mw-redirect" title="Parallel programming">parallel</a></td></tr><tr><th scope="row"><a href="/wiki/Software_design" title="Software design">Designed&#160;by</a></th><td><a href="/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">MIT</a> Laboratory for Computer Science</td></tr><tr><th scope="row"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer</a></th><td class="organiser"><a href="/wiki/Intel" title="Intel">Intel</a></td></tr><tr><th scope="row">First&#160;appeared</th><td>1994</td></tr><tr><th scope="row"><a href="/wiki/Type_system" title="Type system">Typing discipline</a></th><td><a href="/wiki/Type_system" title="Type system">static</a>, <a href="/wiki/Weak_typing" class="mw-redirect" title="Weak typing">weak</a>, <a href="/wiki/Manifest_typing" title="Manifest typing">manifest</a></td></tr><tr><th scope="row">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="https://www.cilkplus.org/">www<wbr />.cilkplus<wbr />.org</a></span></td></tr><tr><th colspan="2" style="text-align:center;background-color: #eee;"><a href="/wiki/Programming_language#Dialects,_flavors_and_implementations" title="Programming language">Dialects</a></th></tr><tr><td colspan="2" style="text-align:center">Cilk++, Cilk Plus</td></tr><tr><th colspan="2" style="text-align:center;background-color: #eee;">Influenced by</th></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/C_(programming_language)" title="C (programming language)">C</a></td></tr><tr><th colspan="2" style="text-align:center;background-color: #eee;">Influenced</th></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a> 3.0<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup></td></tr></tbody></table>
+<table class="infobox vevent" style="width:22em"><caption class="summary">Cilk Plus</caption><tbody><tr><th scope="row"><a href="/wiki/Software_design" title="Software design">Designed&#160;by</a></th><td>Intel</td></tr><tr><th scope="row"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer</a></th><td class="organiser">Intel</td></tr><tr><th scope="row">First&#160;appeared</th><td>2010</td></tr><tr><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td><div style="margin:0px;">1.2
+   / September&#160;9, 2013<span class="noprint">&#59;&#32;6 years ago</span><span style="display:none">&#160;(<span class="bday dtstart published updated">2013-09-09</span>)</span></div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row"><a href="/wiki/Filename_extension" title="Filename extension">Filename extensions</a></th><td>(Same as C or C++)</td></tr><tr><th scope="row">Website</th><td><span class="url"><a rel="nofollow" class="external text" href="http://www.cilkplus.org">www<wbr />.cilkplus<wbr />.org</a></span></td></tr></tbody></table>
+<div role="note" class="hatnote navigation-not-searchable">Not to be confused with <a href="/wiki/SYCL" title="SYCL">SYCL</a>.</div>
+<p><b>Cilk</b>, <b>Cilk++</b> and <b>Cilk Plus</b> are <a href="/wiki/General-purpose_programming_language" title="General-purpose programming language">general-purpose</a> <a href="/wiki/Programming_language" title="Programming language">programming languages</a> designed for <a href="/wiki/Thread_(computer_science)" class="mw-redirect" title="Thread (computer science)">multithreaded</a> <a href="/wiki/Parallel_computing" title="Parallel computing">parallel computing</a>. They are based on the <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> programming languages, which they extend with constructs to express parallel loops and the <a href="/wiki/Fork%E2%80%93join_model" title="Fork–join model">fork–join idiom</a>.
+</p><p>Originally developed in the 1990s at the <a href="/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">Massachusetts Institute of Technology</a> (MIT) in the group of <a href="/wiki/Charles_E._Leiserson" title="Charles E. Leiserson">Charles E. Leiserson</a>, Cilk was later commercialized as Cilk++ by a spinoff company, Cilk Arts. That company was subsequently acquired by <a href="/wiki/Intel" title="Intel">Intel</a>, which increased compatibility with existing C and C++ code, calling the result Cilk Plus.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#MIT_Cilk"><span class="tocnumber">1.1</span> <span class="toctext">MIT Cilk</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Cilk_Arts_and_Cilk++"><span class="tocnumber">1.2</span> <span class="toctext">Cilk Arts and Cilk++</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Intel_Cilk_Plus"><span class="tocnumber">1.3</span> <span class="toctext">Intel Cilk Plus</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Differences_between_versions"><span class="tocnumber">1.4</span> <span class="toctext">Differences between versions</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Obsolescence"><span class="tocnumber">1.5</span> <span class="toctext">Obsolescence</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Language_features"><span class="tocnumber">2</span> <span class="toctext">Language features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#Task_parallelism:_spawn_and_sync"><span class="tocnumber">2.1</span> <span class="toctext">Task parallelism: spawn and sync</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Inlets"><span class="tocnumber">2.2</span> <span class="toctext">Inlets</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Parallel_loops"><span class="tocnumber">2.3</span> <span class="toctext">Parallel loops</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Reducers_and_hyperobjects"><span class="tocnumber">2.4</span> <span class="toctext">Reducers and hyperobjects</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Array_notation"><span class="tocnumber">2.5</span> <span class="toctext">Array notation</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Elemental_functions"><span class="tocnumber">2.6</span> <span class="toctext">Elemental functions</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="##pragma_simd"><span class="tocnumber">2.7</span> <span class="toctext">#pragma simd</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Work-stealing"><span class="tocnumber">3</span> <span class="toctext">Work-stealing</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#See_also"><span class="tocnumber">4</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#References"><span class="tocnumber">5</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#External_links"><span class="tocnumber">6</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="MIT_Cilk">MIT Cilk</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=2" title="Edit section: MIT Cilk">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Cilk programming language grew out of three separate projects at the MIT Laboratory for Computer Science:<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<ul><li>Theoretical work on scheduling multi-threaded applications.</li>
+<li>StarTech – a parallel <a href="/wiki/Computer_chess" title="Computer chess">chess program</a> built to run on the Thinking Machines Corporation's Connection Machine model CM-5.</li>
+<li>PCM/Threaded-C – a C-based package for scheduling continuation-passing-style threads on the CM-5</li></ul>
+<p>In April 1994 the three projects were combined and christened "Cilk". The name Cilk is not an acronym, but an allusion to "nice threads" (<a href="/wiki/Silk" title="Silk">silk</a>) and the C programming language. The Cilk-1 compiler was released in September 1994.
+</p><p>The original Cilk language was based on <a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>, with the addition of Cilk-specific keywords to signal parallelism. When the Cilk keywords are removed from Cilk source code, the result should always be a valid C program, called the <i>serial elision</i> (or <i>C elision</i>) of the full Cilk program, with the same semantics as the Cilk program running on a single processor. Despite several similarities,<sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Avoid_weasel_words" class="mw-redirect" title="Wikipedia:Avoid weasel words"><span title="The material near this tag possibly uses too vague attribution or weasel words. (September 2015)">which?</span></a></i>&#93;</sup> Cilk is not directly related to AT&amp;T Bell Labs' <a href="/w/index.php?title=Concurrent_C&amp;action=edit&amp;redlink=1" class="new" title="Concurrent C (page does not exist)">Concurrent C</a>.
+</p><p>Cilk was implemented as a translator to C, targeting the <a href="/wiki/GNU_C_Compiler" class="mw-redirect" title="GNU C Compiler">GNU C Compiler</a> (GCC). The last version, Cilk 5.4.6, is available from the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), but is no longer supported.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>A showcase for Cilk's capabilities was the Cilkchess parallel chess-playing program, which won several computer chess prizes in the 1990s, including the 1996 Open Dutch Computer Chess Championship.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p>
+<h3><span id="Cilk_Arts_and_Cilk.2B.2B"></span><span class="mw-headline" id="Cilk_Arts_and_Cilk++">Cilk Arts and Cilk++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=3" title="Edit section: Cilk Arts and Cilk++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Prior to <abbr title="circa">c.</abbr><span style="white-space:nowrap;">&#8201;2006</span>, the market for Cilk was restricted to high-performance computing. The emergence of multicore processors in mainstream computing meant that hundreds of millions of new parallel computers were being shipped every year. Cilk Arts was formed to capitalize on that opportunity: in 2006, Leiserson launched Cilk Arts to create and bring to market a modern version of Cilk that supports the commercial needs of an upcoming generation of programmers. The company closed a Series A venture financing round in October 2007, and its product, Cilk++ 1.0, shipped in December, 2008.
+</p><p>Cilk++ differs from Cilk in several ways: support for C++, support for loops, and <a href="#Reducers_and_hyperobjects">hyperobjects</a>&#160;&#8211;&#32; a new construct designed to solve data race problems created by parallel accesses to global variables. Cilk++ was <a href="/wiki/Proprietary_software" title="Proprietary software">proprietary software</a>. Like its predecessor, it was implemented as a Cilk-to-C++ compiler. It supported the <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">Microsoft</a> and GNU compilers.
+</p>
+<h3><span class="mw-headline" id="Intel_Cilk_Plus">Intel Cilk Plus</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=4" title="Edit section: Intel Cilk Plus">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>On July 31, 2009, Cilk Arts announced on its web site that its products and engineering team were now part of <a href="/wiki/Intel" title="Intel">Intel</a> Corp. In early 2010, the Cilk website at <code>www.cilk.com</code> began redirecting to the Intel website (as of early 2017, the original Cilk website no longer resolves to a host). Intel and Cilk Arts integrated and advanced the technology further resulting in a September 2010 release of Intel <a href="/wiki/Cilk_Plus" class="mw-redirect" title="Cilk Plus">Cilk Plus</a>.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> Cilk Plus adopts simplifications, proposed by Cilk Arts in Cilk++, to eliminate the need for several of the original Cilk keywords while adding the ability to spawn functions and to deal with variables involved in reduction operations. Cilk Plus differs from Cilk and Cilk++ by adding array extensions, being incorporated in a commercial compiler (from Intel), and compatibility with existing debuggers.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p><p>Cilk Plus was first implemented in the <a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a> with the release of the Intel compiler in Intel Composer XE 2010.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (March 2015)">citation needed</span></a></i>&#93;</sup> An open source (<a href="/wiki/BSD_license" class="mw-redirect" title="BSD license">BSD-licensed</a>) implementation was contributed by Intel to the <a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GNU Compiler Collection</a> (GCC), which shipped Cilk Plus support in version 4.9,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> except for the <style data-mw-deduplicate="TemplateStyles:r886049734">.mw-parser-output .monospaced{font-family:monospace,monospace}</style><span class="monospaced">_Cilk_for</span> keyword, which was added in GCC 5.0. In February 2013, Intel announced a <a href="/wiki/Clang" title="Clang">Clang</a> <a href="/wiki/Fork_(software_development)" title="Fork (software development)">fork</a> with Cilk Plus support.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> The Intel Compiler, but not the open source implementations, comes with a <a href="/wiki/Race_condition" title="Race condition">race detector</a> and a performance analyzer.
+</p><p>Intel later discontinued it, recommending its users switch to instead using either <a href="/wiki/OpenMP" title="OpenMP">OpenMP</a> or <a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">Intel's own TBB library</a> for their parallel programming needs.<sup id="cite_ref-intelforum_10-0" class="reference"><a href="#cite_note-intelforum-10">&#91;10&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Differences_between_versions">Differences between versions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=5" title="Edit section: Differences between versions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In the original MIT Cilk implementation, the first Cilk keyword is in fact <code>cilk</code>, which identifies a function which is written in Cilk. Since Cilk procedures can call C procedures directly, but C procedures cannot directly call or <a href="/wiki/Spawn_(computing)" title="Spawn (computing)">spawn</a> Cilk procedures, this keyword is needed to distinguish Cilk code from C code. Cilk Plus removes this restriction, as well as the <code>cilk</code> keyword, so C and C++ functions can call into Cilk Plus code and vice versa.
+</p>
+<h3><span class="mw-headline" id="Obsolescence">Obsolescence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=6" title="Edit section: Obsolescence">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In May, 2017, GCC 7.1 was released and marked Cilk Plus support as deprecated.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> Intel itself announced in September 2017 that they would deprecate Cilk Plus with the 2018 release of the Intel Software Development Tools.<sup id="cite_ref-intelforum_10-1" class="reference"><a href="#cite_note-intelforum-10">&#91;10&#93;</a></sup> In May 2018, GCC 8.1 was released with Cilk Plus support removed.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Language_features">Language features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=7" title="Edit section: Language features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The principle behind the design of the Cilk language is that the programmer should be responsible for <i>exposing</i> the parallelism, identifying elements that can safely be executed in parallel; it should then be left to the run-time environment, particularly the <a href="/wiki/Scheduling_(computing)" title="Scheduling (computing)">scheduler</a>, to decide during execution how to actually divide the work between processors. It is because these responsibilities are separated that a Cilk program can run without rewriting on any number of processors, including one.
+</p>
+<h3><span class="mw-headline" id="Task_parallelism:_spawn_and_sync">Task parallelism: spawn and sync</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=8" title="Edit section: Task parallelism: spawn and sync">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="/wiki/Fork%E2%80%93join_model" title="Fork–join model">Fork–join model</a></div>
+<p>Cilk's main addition to C are two keywords that together allow writing task-parallel programs.
+</p>
+<ul><li>The <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn</span> keyword, when preceding a function call (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn f(x)</span>), indicates that the function call (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">f(x)</span>) can safely run in parallel with the statements following it in the calling function. Note that the scheduler is not <i>obligated</i> to run this procedure in parallel; the keyword merely alerts the scheduler that it can do so.</li>
+<li>A <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sync</span> statement indicates that execution of the current function cannot proceed until all previously spawned function calls have completed. This is an example of a <a href="/wiki/Barrier_(computer_science)" title="Barrier (computer science)">barrier</a> method.</li></ul>
+<p>(In Cilk Plus, the keywords are spelled <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">_Cilk_spawn</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">_Cilk_sync</span>, or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk_spawn</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk_sync</span> if the Cilk Plus headers are included.)
+</p><p>Below is a <a href="/wiki/Recursion" title="Recursion">recursive</a> implementation of the <a href="/wiki/Fibonacci_number" title="Fibonacci number">Fibonacci</a> function in Cilk, with parallel recursive calls, which demonstrates the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn</span>, and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sync</span> keywords. The original Cilk required any function using these to be annotated with the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk</span> keyword, which is gone as of Cilk Plus. (Cilk program code is not numbered; the numbers have been added only to make the discussion easier to follow.)
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno"> 1 </span><span class="n">cilk</span> <span class="kt">int</span> <span class="nf">fib</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 2 </span>    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 3 </span>        <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+<span class="lineno"> 4 </span>    <span class="p">}</span>
+<span class="lineno"> 5 </span>    <span class="k">else</span> <span class="p">{</span>
+<span class="lineno"> 6 </span>       <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span><span class="hll">       <span class="n">x</span> <span class="o">=</span> <span class="n">spawn</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class="lineno"> 9 </span><span class="hll">       <span class="n">y</span> <span class="o">=</span> <span class="n">spawn</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+</span><span class="lineno">10 </span>
+<span class="lineno">11 </span><span class="hll">       <span class="n">sync</span><span class="p">;</span>
+</span><span class="lineno">12 </span>
+<span class="lineno">13 </span>       <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="lineno">14 </span>    <span class="p">}</span>
+<span class="lineno">15 </span><span class="p">}</span>
+</pre></div>
+<p>If this code was executed by a <i>single</i> processor to determine the value of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>, that processor would create a <a href="/wiki/Stack_frame" class="mw-redirect" title="Stack frame">frame</a> for <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>, and execute lines 1 through 5. On line 6, it would create spaces in the frame to hold the values of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">x</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">y</span>. On line 8, the processor would have to suspend the current frame, create a new frame to execute the procedure <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(1)</span>, execute the code of that frame until reaching a return statement, and then resume the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> frame with the value of fib(1) placed into <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>'s <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">x</span> variable. On the next line, it would need to suspend again to execute <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(0)</span> and place the result in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>'s <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">y</span> variable.
+</p><p>When the code is executed on a <i>multiprocessor</i> machine, however, execution proceeds differently. One processor starts the execution of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>; when it reaches line 8, however, the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn</span> keyword modifying the call to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(n-1)</span> tells the processor that it can safely give the job to a second processor: this second processor can create a frame for <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(1)</span>, execute its code, and store its result in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span>'s frame when it finishes; the first processor continues executing the code of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> at the same time. A processor is not obligated to assign a spawned procedure elsewhere; if the machine only has two processors and the second is still busy on <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(1)</span> when the processor executing <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> gets to the procedure call, the first processor will suspend <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> and execute <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(0)</span> itself, as it would if it were the only processor. Of course, if another processor is available, then it will be called into service, and all three processors would be executing separate frames simultaneously.
+</p><p>(The preceding description is not entirely accurate. Even though the common terminology for discussing Cilk refers to processors making the decision to spawn off work to other processors, it is actually the scheduler which assigns procedures to processors for execution, using a policy called <i>work-stealing</i>, described later.)
+</p><p>If the processor executing <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> were to execute line 13 before both of the other processors had completed their frames, it would generate an incorrect result or an error; <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> would be trying to add the values stored in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">x</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">y</span>, but one or both of those values would be missing. This is the purpose of the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sync</span> keyword, which we see in line 11: it tells the processor executing a frame that it must suspend its own execution until all the procedure calls it has spawned off have returned. When <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(2)</span> is allowed to proceed past the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sync</span> statement in line 11, it can only be because <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(1)</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib(0)</span> have completed and placed their results in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">x</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">y</span>, making it safe to perform calculations on those results.
+</p><p>The code example above uses the syntax of Cilk-5. The original Cilk (Cilk-1) used a rather different syntax that required programming in an explicit <a href="/wiki/Continuation-passing_style" title="Continuation-passing style">continuation-passing style</a>, and the Fibonacci examples looks as follows:<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="kr">thread</span> <span class="nf">fib</span><span class="p">(</span><span class="n">cont</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">send_argument</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cont</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+        <span class="n">spawn_next</span> <span class="n">sum</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="o">?</span><span class="n">x</span><span class="p">,</span> <span class="o">?</span><span class="n">y</span><span class="p">);</span>
+        <span class="n">spawn</span> <span class="n">fib</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="n">spawn</span> <span class="n">fib</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">thread</span> <span class="nf">sum</span><span class="p">(</span><span class="n">cont</span> <span class="kt">int</span> <span class="n">k</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span>
+<span class="p">{</span>
+     <span class="n">send_argument</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>Inside <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">fib</span>'s recursive case, the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn_next</span> keyword indicates the creation of a <i>successor</i> thread (as opposed to the <i>child</i> threads created by <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">spawn</span>), which executes the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sum</span> subroutine after waiting for the <i>continuation variables</i> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">x</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">y</span> to be filled in by the recursive calls. The base case and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">sum</span> use a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">send_argument(k, n)</span> operation to set their continuation variable <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">k</span> to the value of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">n</span>, effectively "returning" the value to the successor thread.
+</p>
+<h3><span class="mw-headline" id="Inlets">Inlets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=9" title="Edit section: Inlets">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The two remaining Cilk keywords are slightly more advanced, and concern the use of <i>inlets</i>. Ordinarily, when a Cilk procedure is spawned, it can return its results to the parent procedure only by putting those results in a variable in the parent's frame, as we assigned the results of our spawned procedure calls in the example to <code>x</code> and <code>y</code>.
+</p><p>The alternative is to use an inlet. An inlet is a function internal to a Cilk procedure which handles the results of a spawned procedure call as they return. One major reason to use inlets is that all the inlets of a procedure are guaranteed to operate <a href="/wiki/Atomic_(computer_science)" class="mw-redirect" title="Atomic (computer science)">atomically</a> with regards to each other and to the parent procedure, thus avoiding the bugs that could occur if the multiple returning procedures tried to update the same variables in the parent frame at the same time.
+</p>
+<ul><li>The <code>inlet</code> keyword identifies a function defined within the procedure as an inlet.</li>
+<li>The <code>abort</code> keyword can only be used inside an inlet; it tells the scheduler that any other procedures that have been spawned off by the parent procedure can safely be aborted.</li></ul>
+<p>Inlets were removed when Cilk became Cilk++, and are not present in Cilk Plus.
+</p>
+<h3><span class="mw-headline" id="Parallel_loops">Parallel loops</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=10" title="Edit section: Parallel loops">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Cilk++ added an additional construct, the parallel loop, denoted <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk_for</span> in Cilk Plus. These loops look like
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno">1 </span><span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="lineno">2 </span><span class="p">{</span>
+<span class="lineno">3 </span><span class="hll">    <span class="cp">#pragma cilk grainsize = 100  </span><span class="c1">// optional</span>
+</span><span class="lineno">4 </span><span class="hll">    <span class="n">cilk_for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="lineno">5 </span>        <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="lineno">6 </span>    <span class="p">}</span>
+<span class="lineno">7 </span><span class="p">}</span>
+</pre></div>
+<p>This implements the <a href="/wiki/Map_(parallel_programming)" class="mw-redirect" title="Map (parallel programming)">parallel map</a> idiom: the body of the loop, here a call to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">f</span> followed by an assignment to the array <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">a</span>, is executed for each value of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">i</span> from zero to <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">n</span> in an indeterminate order. The optional "grain size" <a href="/wiki/Directive_(programming)" title="Directive (programming)">pragma</a> determines the <a href="/w/index.php?title=Coarsening&amp;action=edit&amp;redlink=1" class="new" title="Coarsening (page does not exist)">coarsening</a>: any sub-array of one hundred or fewer elements is processed sequentially. Although the Cilk specification does not specify the exact behavior of the construct, the typical implementation is a divide-and-conquer recursion,<sup id="cite_ref-loops_14-0" class="reference"><a href="#cite_note-loops-14">&#91;14&#93;</a></sup> as if the programmer had written
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">static</span> <span class="kt">void</span> <span class="nf">recursion</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// The 100 here is the grainsize.</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">start</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">midpoint</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">cilk_spawn</span> <span class="n">recursion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">midpoint</span><span class="p">);</span>
+        <span class="n">recursion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">midpoint</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span>
+        <span class="n">cilk_sync</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">recursion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<p>The reasons for generating a divide-and-conquer program rather than the obvious alternative, a loop that spawn-calls the loop body as a function, lie in both the grainsize handling and in efficiency: doing all the spawning in a single task makes load balancing a bottleneck.<sup id="cite_ref-spp_15-0" class="reference"><a href="#cite_note-spp-15">&#91;15&#93;</a></sup>
+</p><p>A review of various parallel loop constructs on HPCwire found the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk_for</span> construct to be quite general, but noted that the Cilk Plus specification did not stipulate that its iterations need to be data-independent, so a compiler cannot <a href="/wiki/Automatic_vectorization" title="Automatic vectorization">automatically vectorize</a> a <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">cilk_for</span> loop. The review also noted the fact that reductions (e.g., sums over arrays) need additional code.<sup id="cite_ref-loops_14-1" class="reference"><a href="#cite_note-loops-14">&#91;14&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Reducers_and_hyperobjects">Reducers and hyperobjects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=11" title="Edit section: Reducers and hyperobjects">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Cilk++ added a kind of objects called <i>hyperobjects</i>, that allow multiple strands to share state without <a href="/wiki/Race_condition" title="Race condition">race conditions</a> and without using explicit locks. Each strand has a view on the hyperobject that it can use and update; when the strands synchronize, the views are combined in a way specified by the programmer.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup>
+</p><p>The most common type of hyperobject is a reducer, which corresponds to the reduction clause in <a href="/wiki/OpenMP" title="OpenMP">OpenMP</a> or to the algebraic notion of a <a href="/wiki/Monoid" title="Monoid">monoid</a>. Each reducer has an <a href="/wiki/Identity_element" title="Identity element">identity element</a> and an <a href="/wiki/Associative_operation" class="mw-redirect" title="Associative operation">associative operation</a> that combines two values. The archetypal reducer is <a href="/wiki/Summation" title="Summation">summation</a> of numbers: the identity element is zero, and the associative <i>reduce</i> operation computes a sum. This reducer is built into Cilk++ and Cilk Plus:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// Compute ∑ foo(i) for i from 0 to N, in parallel.</span>
+<span class="n">cilk</span><span class="o">::</span><span class="n">reducer_opadd</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">cilk_for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">foo</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</pre></div>
+<p>Other reducers can be used to construct <a href="/wiki/Linked_list" title="Linked list">linked lists</a> or strings, and programmers can define custom reducers.
+</p><p>A limitation of hyperobjects is that they provide only limited <a href="/wiki/Indeterminacy_in_concurrent_computation" title="Indeterminacy in concurrent computation">determinacy</a>. Burckhardt <i>et al.</i> point out that even the sum reducer can result in non-deterministic behavior, showing a program that may produce either <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">1</span> or <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r886049734"/><span class="monospaced">2</span> depending on the scheduling order:<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;17&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="kt">void</span> <span class="nf">add1</span><span class="p">(</span><span class="n">cilk</span><span class="o">::</span><span class="n">reducer_opadd</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">)</span> <span class="p">{</span> <span class="n">r</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="n">cilk</span><span class="o">::</span><span class="n">reducer_opadd</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">r</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="n">cilk_spawn</span> <span class="nf">add1</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span> <span class="n">r</span><span class="o">++</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">cilk_sync</span><span class="p">;</span>
+<span class="n">output</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">get_value</span><span class="p">());</span>
+</pre></div>
+<h3><span class="mw-headline" id="Array_notation">Array notation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=12" title="Edit section: Array notation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Intel Cilk Plus adds notation to express high-level <a href="/wiki/Array_programming" title="Array programming">operations on entire arrays</a> or <a href="/wiki/Array_slicing" title="Array slicing">sections of arrays</a>; e.g., an <a href="/wiki/Basic_Linear_Algebra_Subprograms#Level_1" title="Basic Linear Algebra Subprograms">axpy</a>-style function that is ordinarily written
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span> <span class="c1">// y ← α x + y</span>
+ <span class="kt">void</span> <span class="nf">axpy</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">float</span> <span class="n">alpha</span><span class="p">,</span> <span class="k">const</span> <span class="kt">float</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="o">*</span><span class="n">y</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+<p>can in Cilk Plus be expressed as
+</p>
+<pre>y[0:n] += alpha * x[0:n];
+</pre>
+<p>This notation helps the compiler to effectively vectorize the application. Intel Cilk Plus allows C/C++ operations to be applied to multiple array elements in parallel, and also provides a set of built-in functions that can be used to perform vectorized shifts, rotates, and reductions. Similar functionality exists in <a href="/wiki/Fortran_90" class="mw-redirect" title="Fortran 90">Fortran 90</a>; Cilk Plus differs in that it never allocates temporary arrays, so memory usage is easier to predict.
+</p>
+<h3><span class="mw-headline" id="Elemental_functions">Elemental functions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=13" title="Edit section: Elemental functions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In Cilk Plus, an elemental function is a regular function which can be invoked either on scalar arguments or on array elements in parallel. They are similar to the kernel functions of <a href="/wiki/OpenCL" title="OpenCL">OpenCL</a>.
+</p>
+<h3><span id=".23pragma_simd"></span><span class="mw-headline" id="#pragma_simd">#pragma simd</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=14" title="Edit section: #pragma simd">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This pragma gives the compiler permission to vectorize a loop even in cases where auto-vectorization might fail. It is the simplest way to manually apply vectorization.
+</p>
+<h2><span class="mw-headline" id="Work-stealing">Work-stealing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=15" title="Edit section: Work-stealing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Work_stealing" title="Work stealing">Work stealing</a></div>
+<p>The Cilk scheduler uses a policy called "work-stealing" to divide procedure execution efficiently among multiple processors. Again, it is easiest to understand if we look first at how Cilk code is executed on a single-processor machine.
+</p><p>The processor maintains a <a href="/wiki/Call_stack" title="Call stack">stack</a> on which it places each frame that it has to suspend in order to handle a procedure call. If it is executing <i>fib(2)</i>, and encounters a recursive call to <i>fib(1)</i>, it will save <i>fib(2)</i>'s state, including its variables and where the code suspended execution, and put that state on the stack. It will not take a suspended state off the stack and resume execution until the procedure call that caused the suspension, and any procedures called in turn by that procedure, have all been fully executed.
+</p><p>With multiple processors, things of course change. Each processor still has a stack for storing frames whose execution has been suspended; however, these stacks are more like <a href="/wiki/Deque" class="mw-redirect" title="Deque">deques</a>, in that suspended states can be removed from either end. A processor can still only remove states from its <i>own</i> stack from the same end that it puts them on; however, any processor which is not currently working (having finished its own work, or not yet having been assigned any) will pick another processor at random, through the scheduler, and try to "steal" work from the opposite end of their stack&#160;&#8211;&#32; suspended states, which the stealing processor can then begin to execute. The states which get stolen are the states that the processor stolen from would get around to executing last.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=16" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Grand_Central_Dispatch" title="Grand Central Dispatch">Grand Central Dispatch</a></li>
+<li><a href="/wiki/Intel_Concurrent_Collections" class="mw-redirect" title="Intel Concurrent Collections">Intel Concurrent Collections</a> (CnC)</li>
+<li><a href="/wiki/Intel_Parallel_Building_Blocks" title="Intel Parallel Building Blocks">Intel Parallel Building Blocks</a> (PBB)
+<ul><li><a href="/wiki/Intel_Array_Building_Blocks" title="Intel Array Building Blocks">Intel Array Building Blocks</a> (ArBB)</li></ul></li>
+<li><a href="/wiki/Intel_Parallel_Studio" title="Intel Parallel Studio">Intel Parallel Studio</a></li>
+<li><a href="/wiki/NESL" title="NESL">NESL</a></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></li>
+<li><a href="/wiki/Sieve_C%2B%2B_Parallel_Programming_System" title="Sieve C++ Parallel Programming System">Sieve C++ Parallel Programming System</a></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">Threading Building Blocks</a> (TBB)</li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">Unified Parallel C</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=17" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation conference">LaGrone, James; Aribuki, Ayodunni; Addison, Cody; Chapman, Barbara (2011). <i>A Runtime Implementation of OpenMP Tasks</i>. 7th Int'l Workshop on OpenMP. pp.&#160;165–178. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.221.2775">10.1.1.221.2775</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1007%2F978-3-642-21487-5_13">10.1007/978-3-642-21487-5_13</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=A+Runtime+Implementation+of+OpenMP+Tasks&amp;rft.pages=165-178&amp;rft.date=2011&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.221.2775&amp;rft_id=info%3Adoi%2F10.1007%2F978-3-642-21487-5_13&amp;rft.aulast=LaGrone&amp;rft.aufirst=James&amp;rft.au=Aribuki%2C+Ayodunni&amp;rft.au=Addison%2C+Cody&amp;rft.au=Chapman%2C+Barbara&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.cilkplus.org/cilk-history">"A Brief History of Cilk</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://supertech.csail.mit.edu/cilk/">"The Cilk Project"</a>. MIT CSAIL. 8 October 2010<span class="reference-accessdate">. Retrieved <span class="nowrap">25 January</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Cilk+Project&amp;rft.pub=MIT+CSAIL&amp;rft.date=2010-10-08&amp;rft_id=http%3A%2F%2Fsupertech.csail.mit.edu%2Fcilk%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">Leiserson, Charles E.; Plaat, Aske (1998). <a rel="nofollow" class="external text" href="https://www.researchgate.net/profile/Aske_Plaat/publication/2427921_Programming_Parallel_Applications_in_Cilk/links/0c960528009eddb4e9000000.pdf">"Programming parallel applications in Cilk"</a> <span class="cs1-format">(PDF)</span>. <i>SIAM News</i>. <b>31</b>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=SIAM+News&amp;rft.atitle=Programming+parallel+applications+in+Cilk&amp;rft.volume=31&amp;rft.date=1998&amp;rft.aulast=Leiserson&amp;rft.aufirst=Charles+E.&amp;rft.au=Plaat%2C+Aske&amp;rft_id=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FAske_Plaat%2Fpublication%2F2427921_Programming_Parallel_Applications_in_Cilk%2Flinks%2F0c960528009eddb4e9000000.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.hpcwire.com/features/Intel-Flexes-Parallel-Programming-Muscles-102084438.html">"Intel Flexes Parallel Programming Muscles"</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20100906030803/http://www.hpcwire.com/features/Intel-Flexes-Parallel-Programming-Muscles-102084438.html">Archived</a> 2010-09-06 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>, HPCwire (2010-09-02). Retrieved on 2010-09-14.</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.drdobbs.com/go-parallel/blog/archives/2010/09/parallel_studio_1.html">"Parallel Studio 2011: Now We Know What Happened to Ct, Cilk++, and RapidMind"</a>, Dr. Dobb's Journal (2010-09-02). Retrieved on 2010-09-14.</span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://software.intel.com/en-us/articles/intel-cilk-plus/">"Intel Cilk Plus: A quick, easy and reliable way to improve threaded performance"</a>, Intel. Retrieved on 2010-09-14.</span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/gcc-4.9/changes.html">"GCC 4.9 Release Series Changes, New Features, and Fixes"</a>, Free Software Foundation, Inc. Retrieved on 2014-06-29.</span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://cilkplus.github.io/">Cilk Plus/LLVM</a></span>
+</li>
+<li id="cite_note-intelforum-10"><span class="mw-cite-backlink">^ <a href="#cite_ref-intelforum_10-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-intelforum_10-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Hansang B. (20 September 2017). <a rel="nofollow" class="external text" href="https://software.intel.com/en-us/forums/intel-cilk-plus/topic/745556">"Intel Cilk Plus is being deprecated"</a>. <i>Intel Cilk Plus forum</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Intel+Cilk+Plus+forum&amp;rft.atitle=Intel+Cilk+Plus+is+being+deprecated&amp;rft.date=2017-09-20&amp;rft.au=Hansang+B.&amp;rft_id=https%3A%2F%2Fsoftware.intel.com%2Fen-us%2Fforums%2Fintel-cilk-plus%2Ftopic%2F745556&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/gcc-7/changes.html">"GCC 7 Release Series. Changes, New Features, and Fixes"</a>. <i>GCC, the GNU Compiler Collection</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GCC%2C+the+GNU+Compiler+Collection&amp;rft.atitle=GCC+7+Release+Series.+Changes%2C+New+Features%2C+and+Fixes&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fgcc-7%2Fchanges.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://gcc.gnu.org/gcc-8/changes.html">"GCC 8 Release Series. Changes, New Features, and Fixes"</a>. <i>GCC, the GNU Compiler Collection</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=GCC%2C+the+GNU+Compiler+Collection&amp;rft.atitle=GCC+8+Release+Series.+Changes%2C+New+Features%2C+and+Fixes&amp;rft_id=https%3A%2F%2Fgcc.gnu.org%2Fgcc-8%2Fchanges.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation conference">Blumofe, Robert D.; Joerg, Christopher F.; Kuszmaul, Bradley C.; Leiserson, Charles E.; Randall, Keith H.; Zhou, Yuli (1995). <a rel="nofollow" class="external text" href="http://supertech.csail.mit.edu/papers/PPoPP95.pdf"><i>Cilk: An Efficient Multithreaded Runtime System</i></a> <span class="cs1-format">(PDF)</span>. Proc. ACM SIGPLAN <a href="/wiki/Symposium_on_Principles_and_Practice_of_Parallel_Programming" title="Symposium on Principles and Practice of Parallel Programming">Symp. Principles and Practice of Parallel Programming</a>. pp.&#160;207–216.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Cilk%3A+An+Efficient+Multithreaded+Runtime+System&amp;rft.pages=207-216&amp;rft.date=1995&amp;rft.aulast=Blumofe&amp;rft.aufirst=Robert+D.&amp;rft.au=Joerg%2C+Christopher+F.&amp;rft.au=Kuszmaul%2C+Bradley+C.&amp;rft.au=Leiserson%2C+Charles+E.&amp;rft.au=Randall%2C+Keith+H.&amp;rft.au=Zhou%2C+Yuli&amp;rft_id=http%3A%2F%2Fsupertech.csail.mit.edu%2Fpapers%2FPPoPP95.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-loops-14"><span class="mw-cite-backlink">^ <a href="#cite_ref-loops_14-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-loops_14-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web">Wolfe, Michael (6 April 2015). <a rel="nofollow" class="external text" href="http://www.hpcwire.com/2015/04/06/compilers-and-more-the-past-present-and-future-of-parallel-loops/">"Compilers and More: The Past, Present and Future of Parallel Loops"</a>. <i>HPCwire</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=HPCwire&amp;rft.atitle=Compilers+and+More%3A+The+Past%2C+Present+and+Future+of+Parallel+Loops&amp;rft.date=2015-04-06&amp;rft.aulast=Wolfe&amp;rft.aufirst=Michael&amp;rft_id=http%3A%2F%2Fwww.hpcwire.com%2F2015%2F04%2F06%2Fcompilers-and-more-the-past-present-and-future-of-parallel-loops%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-spp-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-spp_15-0">^</a></b></span> <span class="reference-text"><cite class="citation book">McCool, Michael; Reinders, James; Robison, Arch (2013). <i>Structured Parallel Programming: Patterns for Efficient Computation</i>. Elsevier. p.&#160;30.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Structured+Parallel+Programming%3A+Patterns+for+Efficient+Computation&amp;rft.pages=30&amp;rft.pub=Elsevier&amp;rft.date=2013&amp;rft.aulast=McCool&amp;rft.aufirst=Michael&amp;rft.au=Reinders%2C+James&amp;rft.au=Robison%2C+Arch&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation conference">Frigo, Matteo; Halpern, Pablo; Leiserson, Charles E.; Lewin-Berlin, Stephen (2009). <a rel="nofollow" class="external text" href="http://www.fftw.org/~athena/papers/hyper.pdf"><i>Reducers and other Cilk++ hyperobjects</i></a> <span class="cs1-format">(PDF)</span>. Proc. Annual Symposium on Parallelism in Algorithms and Architectures (SPAA). ACM.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Reducers+and+other+Cilk%2B%2B+hyperobjects&amp;rft.pub=ACM&amp;rft.date=2009&amp;rft.aulast=Frigo&amp;rft.aufirst=Matteo&amp;rft.au=Halpern%2C+Pablo&amp;rft.au=Leiserson%2C+Charles+E.&amp;rft.au=Lewin-Berlin%2C+Stephen&amp;rft_id=http%3A%2F%2Fwww.fftw.org%2F~athena%2Fpapers%2Fhyper.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation conference">Burckhardt, Sebastian; Baldassin, Alexandro; Leijen, Daan (2010). <a rel="nofollow" class="external text" href="http://research.microsoft.com/pubs/132619/revisions-oopsla2010.pdf"><i>Concurrent Programming with Revisions and Isolation Types</i></a> <span class="cs1-format">(PDF)</span>. Proc. <a href="/wiki/OOPSLA" title="OOPSLA">OOPSLA</a>/SPLASH.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=conference&amp;rft.btitle=Concurrent+Programming+with+Revisions+and+Isolation+Types&amp;rft.date=2010&amp;rft.aulast=Burckhardt&amp;rft.aufirst=Sebastian&amp;rft.au=Baldassin%2C+Alexandro&amp;rft.au=Leijen%2C+Daan&amp;rft_id=http%3A%2F%2Fresearch.microsoft.com%2Fpubs%2F132619%2Frevisions-oopsla2010.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ACilk" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Cilk&amp;action=edit&amp;section=18" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.cilkplus.org">Official website</a></span></span> for Cilk Plus</li>
+<li><a rel="nofollow" class="external text" href="http://supertech.csail.mit.edu/cilk/">Cilk Project website at MIT</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/cpp-taskflow/cpp-taskflow">Cpp-Taskflow: A Modern C++ Parallel Task Programming Library</a></li>
+<li>Arch D. Robison, <a rel="nofollow" class="external text" href="http://parallelbook.com/sites/parallelbook.com/files/CilkPlus-HPCAST18_0.pdf">"Cilk Plus: Language Support for Thread and Vector Parallelism"</a> and <a rel="nofollow" class="external text" href="http://www.parallelbook.com/sites/parallelbook.com/files/ISC2012_Tutorial_9_CilkPlus_Robison_final.pdf">"Parallel Programming with Cilk Plus"</a>, July 16, 2012.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_programming_language" title="Template:C programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_programming_language" title="Template talk:C programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*ANSI_C&amp;#10;**C89_and_C90&amp;#10;*C99&amp;#10;*C11&amp;#10;*C18&amp;#10;*C2x&amp;#10;*Embedded_C&amp;#10;*MISRA_C">
+<ul><li><a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>
+<ul><li><a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C89 and C90</a></li></ul></li>
+<li><a href="/wiki/C99" title="C99">C99</a></li>
+<li><a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a></li>
+<li><a href="/wiki/C18_(C_standard_revision)" title="C18 (C standard revision)">C18</a></li>
+<li><a href="/wiki/C2x" title="C2x">C2x</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subroutine" title="Subroutine">Functions</a></li>
+<li><a href="/wiki/Include_directive#C" title="Include directive">Header files</a></li>
+<li><a href="/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String</a></li>
+<li><a href="/wiki/C_syntax" title="C syntax">Syntax</a></li>
+<li><a href="/wiki/C_preprocessor" title="C preprocessor">Preprocessor</a></li>
+<li><a href="/wiki/C_data_types" title="C data types">Data types</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C_standard_library" title="C standard library">Standard library<br />functions</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_character_classification" title="C character classification">Char (ctype.h)</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File I/O (stdio.h)</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Math (math.h)</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Dynamic memory (stdlib.h)</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String (string.h)</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Time (time.h)</a></li>
+<li><a href="/wiki/Stdarg.h" title="Stdarg.h">Variadic (stdarg.h)</a></li>
+<li><a href="/wiki/C_POSIX_library" title="C POSIX library">POSIX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_standard_library" title="Category:C standard library">Standard<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Microsoft_Windows_library_files#MSVCRT.DLL,_MSVCPP.DLL_and_CRTDLL.DLL" title="Microsoft Windows library files">Microsoft Run-time Library</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/BSD_libc" class="mw-redirect" title="BSD libc">BSD libc</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C_compilers" title="List of compilers">Comparison of compilers</a></li>
+<li><a href="/wiki/Amsterdam_Compiler_Kit" title="Amsterdam Compiler Kit">ACK</a></li>
+<li><a href="/wiki/Borland_Turbo_C" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">ICC</a></li>
+<li><a href="/wiki/LCC_(compiler)" title="LCC (compiler)">LCC</a></li>
+<li><a href="/wiki/Portable_C_Compiler" title="Portable C Compiler">PCC</a></li>
+<li><a href="/wiki/Small_Device_C_Compiler" title="Small Device C Compiler">SDCC</a></li>
+<li><a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">TCC</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> / <a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Express</a> / <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/GNOME_Builder" title="GNOME Builder">GNOME Builder</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison with<br />other languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="Compatibility of C and C++">Compatibility of C and C++</a></li>
+<li>Comparison with <a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison with Pascal</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Descendant<br />languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Alef_(programming_language)" title="Alef (programming language)">Alef</a></li>
+<li><a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Vala_(programming_language)" title="Vala (programming language)">Vala</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Intel_software" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Intel_software" title="Template:Intel software"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Intel_software" title="Template talk:Intel software"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Intel_software&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Intel_software" style="font-size:114%;margin:0 4em"><a href="/wiki/Intel" title="Intel">Intel</a> <a href="/wiki/Software" title="Software">software</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="Items_in_italics_are_no_longer_maintained_or_have_planned_end-of-life_dates.">Items <i>in italics</i> are no longer maintained or have planned end-of-life dates.</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Development</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Intel_Parallel_Studio" title="Intel Parallel Studio">Parallel Studio</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">C++ Compiler</a></li>
+<li><a href="/wiki/Intel_Fortran_Compiler" title="Intel Fortran Compiler">Fortran Compiler</a></li>
+<li><i><a href="/wiki/Intel_Debugger" title="Intel Debugger">Debugger</a></i></li>
+<li><a href="/wiki/Intel_Advisor" title="Intel Advisor">Advisor</a></li>
+<li><a href="/wiki/Intel_Inspector" title="Intel Inspector">Inspector</a></li>
+<li><a href="/wiki/VTune" title="VTune">VTune</a></li>
+<li><a href="/wiki/Intel_Array_Visualizer" title="Intel Array Visualizer">Array Visualizer</a></li>
+<li><a href="/wiki/Cilk_Plus" class="mw-redirect" title="Cilk Plus">Cilk Plus</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Components</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Concurrent_Collections#Concurrent_Collections_for_C++" title="Concurrent Collections">Concurrent Collections for C++</a> (CnC)</li>
+<li><a href="/wiki/Data_Analytics_Acceleration_Library" title="Data Analytics Acceleration Library">Data Analytics Acceleration Library</a> (DAAL)</li>
+<li><i><a href="/wiki/Indeo" title="Indeo">Indeo</a></i></li>
+<li><a href="/wiki/Integrated_Performance_Primitives" title="Integrated Performance Primitives">Integrated Performance Primitives</a> (IPP)</li>
+<li><a href="/wiki/Math_Kernel_Library" title="Math Kernel Library">Math Kernel Library</a> (MKL)</li>
+<li><i><a href="/wiki/Intel_Parallel_Building_Blocks" title="Intel Parallel Building Blocks">Parallel Building Blocks</a> (PBB)</i>
+<ul><li><i><a href="/wiki/Intel_Array_Building_Blocks" title="Intel Array Building Blocks">Intel Array Building Blocks</a> (ArBB)</i></li>
+<li><i><a href="/wiki/Intel_Ct" title="Intel Ct">Ct</a></i></li></ul></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">Threading Building Blocks</a> (TBB)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Open source</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Cilk_Plus" class="mw-redirect" title="Cilk Plus">Cilk Plus</a></li>
+<li><a href="/wiki/Concurrent_Collections#Concurrent_Collections_for_C++" title="Concurrent Collections">Concurrent Collections for C++</a> (CnC)</li>
+<li><a href="/wiki/Data_Analytics_Acceleration_Library" title="Data Analytics Acceleration Library">Data Analytics Acceleration Library</a> (DAAL)</li>
+<li><i><a href="/wiki/MeeGo" title="MeeGo">MeeGo</a></i></li>
+<li><i><a href="/wiki/Moblin" title="Moblin">Moblin</a></i></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">Threading Building Blocks</a> (TBB)</li>
+<li><a href="/wiki/Tizen" title="Tizen">Tizen</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software programs</th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Havok_(company)" title="Havok (company)">Telekinesys Research</a><sup>1</sup>
+<ul><li><a href="/wiki/Havok_(software)" title="Havok (software)">Havok</a><sup>1</sup></li>
+<li><a href="/wiki/Vision_(game_engine)" title="Vision (game engine)">Vision</a><sup>1</sup></li></ul></li>
+<li><a href="/wiki/Wind_River_Systems" title="Wind River Systems">Wind River Systems</a>
+<ul><li><a href="/wiki/Simics" title="Simics">Simics</a></li>
+<li><a href="/wiki/VxWorks" title="VxWorks">VxWorks</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organizations</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Intel_Developer_Zone" title="Intel Developer Zone">Developer Zone</a></li>
+<li><i><a href="/wiki/Intel_AppUp" title="Intel AppUp">AppUp</a></i></li>
+<li><a href="/wiki/Intel_Research" class="mw-redirect" title="Intel Research">Research</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow hlist" colspan="2"><div>
+<ul><li><span style="font-size:85%;"><sup>1</sup><i>Sold to <a href="/wiki/Microsoft" title="Microsoft">Microsoft</a></i></span>&#160;&#160;</li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Parallel_computing" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Parallel_computing" title="Template:Parallel computing"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Parallel_computing" title="Template talk:Parallel computing"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Parallel_computing&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Parallel_computing" style="font-size:114%;margin:0 4em"><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Distributed_computing" title="Distributed computing">Distributed computing</a></li>
+<li><a href="/wiki/Parallel_computing" title="Parallel computing">Parallel computing</a></li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel</a></li>
+<li><a href="/wiki/Cloud_computing" title="Cloud computing">Cloud computing</a></li>
+<li><a href="/wiki/Supercomputer" title="Supercomputer">High-performance computing</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Manycore_processor" title="Manycore processor">Manycore processor</a></li>
+<li><a href="/wiki/General-purpose_computing_on_graphics_processing_units" title="General-purpose computing on graphics processing units">GPGPU</a></li>
+<li><a href="/wiki/Computer_network" title="Computer network">Computer network</a></li>
+<li><a href="/wiki/Systolic_array" title="Systolic array">Systolic array</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Levels</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bit-level_parallelism" title="Bit-level parallelism">Bit</a></li>
+<li><a href="/wiki/Instruction-level_parallelism" title="Instruction-level parallelism">Instruction</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Thread</a></li>
+<li><a href="/wiki/Task_parallelism" title="Task parallelism">Task</a></li>
+<li><a href="/wiki/Data_parallelism" title="Data parallelism">Data</a></li>
+<li><a href="/wiki/Memory-level_parallelism" title="Memory-level parallelism">Memory</a></li>
+<li><a href="/wiki/Loop-level_parallelism" title="Loop-level parallelism">Loop</a></li>
+<li><a href="/wiki/Pipeline_(computing)" title="Pipeline (computing)">Pipeline</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Multithreading_(computer_architecture)" title="Multithreading (computer architecture)">Multithreading</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Temporal_multithreading" title="Temporal multithreading">Temporal</a></li>
+<li><a href="/wiki/Simultaneous_multithreading" title="Simultaneous multithreading">Simultaneous</a> (SMT)</li>
+<li><a href="/wiki/Speculative_multithreading" title="Speculative multithreading">Speculative</a> (SpMT)</li>
+<li><a href="/wiki/Preemption_(computing)" title="Preemption (computing)">Preemptive</a></li>
+<li><a href="/wiki/Computer_multitasking#Cooperative_multitasking" title="Computer multitasking">Cooperative</a></li>
+<li><a href="/wiki/Bulldozer_(microarchitecture)#Bulldozer_core" title="Bulldozer (microarchitecture)">Clustered Multi-Thread</a> (CMT)</li>
+<li><a href="/wiki/Hardware_scout" title="Hardware scout">Hardware scout</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Theory</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Parallel_random-access_machine" title="Parallel random-access machine">PRAM model</a></li>
+<li><a href="/wiki/Parallel_external_memory" title="Parallel external memory">PEM Model</a></li>
+<li><a href="/wiki/Analysis_of_parallel_algorithms" title="Analysis of parallel algorithms">Analysis of parallel algorithms</a></li>
+<li><a href="/wiki/Amdahl%27s_law" title="Amdahl&#39;s law">Amdahl's law</a></li>
+<li><a href="/wiki/Gustafson%27s_law" title="Gustafson&#39;s law">Gustafson's law</a></li>
+<li><a href="/wiki/Cost_efficiency" title="Cost efficiency">Cost efficiency</a></li>
+<li><a href="/wiki/Karp%E2%80%93Flatt_metric" title="Karp–Flatt metric">Karp–Flatt metric</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Slowdown</a></li>
+<li><a href="/wiki/Speedup" title="Speedup">Speedup</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Elements</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Process_(computing)" title="Process (computing)">Process</a></li>
+<li><a href="/wiki/Thread_(computing)" title="Thread (computing)">Thread</a></li>
+<li><a href="/wiki/Fiber_(computer_science)" title="Fiber (computer science)">Fiber</a></li>
+<li><a href="/wiki/Instruction_window" title="Instruction window">Instruction window</a></li>
+<li><a href="/wiki/Array_data_structure" title="Array data structure">Array data structure</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Coordination</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessing</a></li>
+<li><a href="/wiki/Memory_coherence" title="Memory coherence">Memory coherency</a></li>
+<li><a href="/wiki/Cache_coherence" title="Cache coherence">Cache coherency</a></li>
+<li><a href="/wiki/Cache_invalidation" title="Cache invalidation">Cache invalidation</a></li>
+<li><a href="/wiki/Barrier_(computer_science)" title="Barrier (computer science)">Barrier</a></li>
+<li><a href="/wiki/Synchronization_(computer_science)" title="Synchronization (computer science)">Synchronization</a></li>
+<li><a href="/wiki/Application_checkpointing" title="Application checkpointing">Application checkpointing</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_programming" title="Computer programming">Programming</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Stream_processing" title="Stream processing">Stream processing</a></li>
+<li><a href="/wiki/Dataflow_programming" title="Dataflow programming">Dataflow programming</a></li>
+<li><a href="/wiki/Parallel_programming_model" title="Parallel programming model">Models</a>
+<ul><li><a href="/wiki/Implicit_parallelism" title="Implicit parallelism">Implicit parallelism</a></li>
+<li><a href="/wiki/Explicit_parallelism" title="Explicit parallelism">Explicit parallelism</a></li>
+<li><a href="/wiki/Concurrency_(computer_science)" title="Concurrency (computer science)">Concurrency</a></li></ul></li>
+<li><a href="/wiki/Non-blocking_algorithm" title="Non-blocking algorithm">Non-blocking algorithm</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_hardware" title="Computer hardware">Hardware</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Flynn%27s_taxonomy" title="Flynn&#39;s taxonomy">Flynn's taxonomy</a>
+<ul><li><a href="/wiki/SISD" title="SISD">SISD</a></li>
+<li><a href="/wiki/SIMD" title="SIMD">SIMD</a></li>
+<li><a href="/wiki/Single_instruction,_multiple_threads" title="Single instruction, multiple threads">SIMT</a></li>
+<li><a href="/wiki/MISD" title="MISD">MISD</a></li>
+<li><a href="/wiki/MIMD" title="MIMD">MIMD</a></li></ul></li>
+<li><a href="/wiki/Dataflow_architecture" title="Dataflow architecture">Dataflow architecture</a></li>
+<li><a href="/wiki/Instruction_pipelining" title="Instruction pipelining">Pipelined processor</a></li>
+<li><a href="/wiki/Superscalar_processor" title="Superscalar processor">Superscalar processor</a></li>
+<li><a href="/wiki/Vector_processor" title="Vector processor">Vector processor</a></li>
+<li><a href="/wiki/Multiprocessing" title="Multiprocessing">Multiprocessor</a>
+<ul><li><a href="/wiki/Symmetric_multiprocessing" title="Symmetric multiprocessing">symmetric</a></li>
+<li><a href="/wiki/Asymmetric_multiprocessing" title="Asymmetric multiprocessing">asymmetric</a></li></ul></li>
+<li><a href="/wiki/Semiconductor_memory" title="Semiconductor memory">Memory</a>
+<ul><li><a href="/wiki/Shared_memory" title="Shared memory">shared</a></li>
+<li><a href="/wiki/Distributed_memory" title="Distributed memory">distributed</a></li>
+<li><a href="/wiki/Distributed_shared_memory" title="Distributed shared memory">distributed shared</a></li>
+<li><a href="/wiki/Uniform_memory_access" title="Uniform memory access">UMA</a></li>
+<li><a href="/wiki/Non-uniform_memory_access" title="Non-uniform memory access">NUMA</a></li>
+<li><a href="/wiki/Cache-only_memory_architecture" title="Cache-only memory architecture">COMA</a></li></ul></li>
+<li><a href="/wiki/Massively_parallel" title="Massively parallel">Massively parallel computer</a></li>
+<li><a href="/wiki/Computer_cluster" title="Computer cluster">Computer cluster</a></li>
+<li><a href="/wiki/Grid_computing" title="Grid computing">Grid computer</a></li>
+<li><a href="/wiki/Hardware_acceleration" title="Hardware acceleration">Hardware acceleration</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Application_programming_interface" title="Application programming interface">APIs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ateji_PX" title="Ateji PX">Ateji PX</a></li>
+<li><a href="/wiki/Boost_(C%2B%2B_libraries)#Multithreading_–_Boost.Thread" title="Boost (C++ libraries)">Boost.Thread</a></li>
+<li><a href="/wiki/Chapel_(programming_language)" title="Chapel (programming language)">Chapel</a></li>
+<li><a href="/wiki/HPX" title="HPX">HPX</a></li>
+<li><a href="/wiki/Charm%2B%2B" title="Charm++"> Charm++</a></li>
+<li><a class="mw-selflink selflink">Cilk</a></li>
+<li><a href="/wiki/Coarray_Fortran" title="Coarray Fortran">Coarray Fortran</a></li>
+<li><a href="/wiki/CUDA" title="CUDA">CUDA</a></li>
+<li><a href="/wiki/Heterogeneous-compute_Interface_for_Portability" class="mw-redirect" title="Heterogeneous-compute Interface for Portability">HIP</a></li>
+<li><a href="/wiki/Dryad_(programming)" title="Dryad (programming)">Dryad</a></li>
+<li><a href="/wiki/C%2B%2B_AMP" title="C++ AMP">C++ AMP</a></li>
+<li><a href="/wiki/Global_Arrays" title="Global Arrays">Global Arrays</a></li>
+<li><a href="/wiki/Message_Passing_Interface" title="Message Passing Interface">MPI</a></li>
+<li><a href="/wiki/OpenMP" title="OpenMP">OpenMP</a></li>
+<li><a href="/wiki/OpenCL" title="OpenCL">OpenCL</a></li>
+<li><a href="/wiki/OpenHMPP" title="OpenHMPP">OpenHMPP</a></li>
+<li><a href="/wiki/OpenACC" title="OpenACC">OpenACC</a></li>
+<li><a href="/wiki/Parallel_Extensions#Task_Parallel_Library" title="Parallel Extensions">TPL</a></li>
+<li><a href="/wiki/Parallel_Extensions#PLINQ" title="Parallel Extensions">PLINQ</a></li>
+<li><a href="/wiki/Parallel_Virtual_Machine" title="Parallel Virtual Machine">PVM</a></li>
+<li><a href="/wiki/POSIX_Threads" title="POSIX Threads">POSIX Threads</a></li>
+<li><a href="/wiki/RaftLib" title="RaftLib">RaftLib</a></li>
+<li><a href="/wiki/Unified_Parallel_C" title="Unified Parallel C">UPC</a></li>
+<li><a href="/wiki/Threading_Building_Blocks" title="Threading Building Blocks">TBB</a></li>
+<li><a href="/wiki/ZPL_(programming_language)" title="ZPL (programming language)">ZPL</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Problems</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Automatic_parallelization" title="Automatic parallelization">Automatic parallelization</a></li>
+<li><a href="/wiki/Deadlock" title="Deadlock">Deadlock</a></li>
+<li><a href="/wiki/Deadlock#Livelock" title="Deadlock">Livelock</a></li>
+<li><a href="/wiki/Deterministic_algorithm" title="Deterministic algorithm">Deterministic algorithm</a></li>
+<li><a href="/wiki/Embarrassingly_parallel" title="Embarrassingly parallel">Embarrassingly parallel</a></li>
+<li><a href="/wiki/Parallel_slowdown" title="Parallel slowdown">Parallel slowdown</a></li>
+<li><a href="/wiki/Race_condition#Computing" title="Race condition">Race condition</a></li>
+<li><a href="/wiki/Software_lockout" title="Software lockout">Software lockout</a></li>
+<li><a href="/wiki/Scalability" title="Scalability">Scalability</a></li>
+<li><a href="/wiki/Starvation_(computer_science)" title="Starvation (computer science)">Starvation</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" />&#160;<a href="/wiki/Category:Parallel_computing" title="Category:Parallel computing">Category: parallel computing</a></li>
+<li><img alt="Commons page" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" decoding="async" title="Commons page" width="12" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Parallel_computing" class="extiw" title="c:Category:Parallel computing">Parallel computing</a> at Wikimedia Commons</li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1239
+Cached time: 20200306195044
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.604 seconds
+Real time usage: 1.950 seconds
+Preprocessor visited node count: 4110/1000000
+Post‐expand include size: 100426/2097152 bytes
+Template argument size: 6134/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 8/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 60649/5000000 bytes
+Number of Wikibase entities loaded: 3/400
+Lua time usage: 0.220/10.000 seconds
+Lua memory usage: 6.63 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1808.881      1 -total
+ 12.48%  225.706      1 Template:Reflist
+ 10.22%  184.933      3 Template:Infobox
+  8.15%  147.430      4 Template:Cite_conference
+  7.94%  143.550      2 Template:Infobox_programming_language
+  3.25%   58.746      2 Template:Fix
+  3.20%   57.817      2 Template:Infobox_software/simple
+  3.05%   55.241      1 Template:Which
+  2.54%   46.030     63 Template:Mono
+  2.17%   39.324      3 Template:Navbox
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:945803-0!canonical and timestamp 20200306195042 and revision id 939182908
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Cilk&amp;oldid=939182908">https://en.wikipedia.org/w/index.php?title=Cilk&amp;oldid=939182908</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Concurrent_programming_languages" title="Category:Concurrent programming languages">Concurrent programming languages</a></li><li><a href="/wiki/Category:C_programming_language_family" title="Category:C programming language family">C programming language family</a></li><li><a href="/wiki/Category:Massachusetts_Institute_of_Technology_software" title="Category:Massachusetts Institute of Technology software">Massachusetts Institute of Technology software</a></li><li><a href="/wiki/Category:Intel_software" title="Category:Intel software">Intel software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases" title="Category:All articles with specifically marked weasel-worded phrases">All articles with specifically marked weasel-worded phrases</a></li><li><a href="/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_September_2015" title="Category:Articles with specifically marked weasel-worded phrases from September 2015">Articles with specifically marked weasel-worded phrases from September 2015</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_March_2015" title="Category:Articles with unsourced statements from March 2015">Articles with unsourced statements from March 2015</a></li><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li><li><a href="/wiki/Category:Articles_with_example_code" title="Category:Articles with example code">Articles with example code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Cilk" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Cilk" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Cilk" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Cilk" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Cilk">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Cilk&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Cilk&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Cilk" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Cilk" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Cilk&amp;oldid=939182908" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Cilk&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2569373" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Cilk&amp;id=939182908&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Cilk">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Cilk&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Cilk&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/Cilk" title="Cilk – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Cilk" title="Cilk – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Cilk" title="Cilk – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Cilk" title="Cilk – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Cilk" title="Cilk – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Cilk" title="Cilk – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2569373#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 4 February 2020, at 21:39<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Cilk&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.604","walltime":"1.950","ppvisitednodes":{"value":4110,"limit":1000000},"postexpandincludesize":{"value":100426,"limit":2097152},"templateargumentsize":{"value":6134,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":60649,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00% 1808.881      1 -total"," 12.48%  225.706      1 Template:Reflist"," 10.22%  184.933      3 Template:Infobox","  8.15%  147.430      4 Template:Cite_conference","  7.94%  143.550      2 Template:Infobox_programming_language","  3.25%   58.746      2 Template:Fix","  3.20%   57.817      2 Template:Infobox_software/simple","  3.05%   55.241      1 Template:Which","  2.54%   46.030     63 Template:Mono","  2.17%   39.324      3 Template:Navbox"]},"scribunto":{"limitreport-timeusage":{"value":"0.220","limit":"10.000"},"limitreport-memusage":{"value":6953546,"limit":52428800}},"cachereport":{"origin":"mw1239","timestamp":"20200306195044","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Cilk","url":"https:\/\/en.wikipedia.org\/wiki\/Cilk","sameAs":"http:\/\/www.wikidata.org\/entity\/Q2569373","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q2569373","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-08-31T01:56:19Z","dateModified":"2020-02-04T21:39:18Z","headline":"Parallel programming language"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":113,"wgHostname":"mw1271"});});</script></body></html>

@@ -1,0 +1,1787 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Operators in C and C++ - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XnbYEwpAMFUAACNflDkAAACF","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Operators_in_C_and_C++","wgTitle":"Operators in C and C++","wgCurRevisionId":946741001,"wgRevisionId":946741001,"wgArticleId":585336,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Use American English from March 2019","All Wikipedia articles written in American English","Use dmy dates from December 2019","All articles with unsourced statements","Articles with unsourced statements from September 2011",
+"Articles with unsourced statements from January 2009","Articles with example C++ code","C (programming language)","C++","Operators (programming)","Comparison of individual programming languages"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Operators_in_C_and_C++","wgRelevantArticleId":585336,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1078424","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE=
+{"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.24"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Operators_in_C_and_C rootpage-Operators_in_C_and_C skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Operators in C and C++</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">built-in and (in C++) overloadable functions</div>
+<p>
+
+This is a list of <a href="/wiki/Operator_(programming)" class="mw-redirect" title="Operator (programming)">operators</a> in the <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> <a href="/wiki/Programming_language" title="Programming language">programming languages</a>. All the operators listed exist in C++; the fourth column "Included in C", states whether an operator is also present in C. Note that C does not support <a href="/wiki/Operator_overloading" title="Operator overloading">operator overloading</a>.
+</p><p>When not overloaded, for the operators <code>&amp;&amp;</code>, <code>||</code>, and <code>,</code> (the <a href="/wiki/Comma_operator" title="Comma operator">comma operator</a>), there is a <a href="/wiki/Sequence_point" title="Sequence point">sequence point</a> after the evaluation of the first operand.
+</p><p>C++ also contains the <a href="/wiki/Type_conversion" title="Type conversion">type conversion</a> operators <code>const_cast</code>, <code>static_cast</code>, <code>dynamic_cast</code>, and <code>reinterpret_cast</code>. The formatting of these operators means that their precedence level is unimportant.
+</p><p>Most of the operators available in C and C++ are also available in other <a href="/wiki/C-family" class="mw-redirect" title="C-family">C-family</a> languages such as <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a>, <a href="/wiki/D_(programming_language)" title="D (programming language)">D</a>, <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/Perl" title="Perl">Perl</a>, and <a href="/wiki/PHP" title="PHP">PHP</a> with the same precedence, associativity, and semantics.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Table"><span class="tocnumber">1</span> <span class="toctext">Table</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Arithmetic_operators"><span class="tocnumber">1.1</span> <span class="toctext">Arithmetic operators</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Comparison_operators/relational_operators"><span class="tocnumber">1.2</span> <span class="toctext">Comparison operators/relational operators</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Logical_operators"><span class="tocnumber">1.3</span> <span class="toctext">Logical operators</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Bitwise_operators"><span class="tocnumber">1.4</span> <span class="toctext">Bitwise operators</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Compound_assignment_operators"><span class="tocnumber">1.5</span> <span class="toctext">Compound assignment operators</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Member_and_pointer_operators"><span class="tocnumber">1.6</span> <span class="toctext">Member and pointer operators</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Other_operators"><span class="tocnumber">1.7</span> <span class="toctext">Other operators</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Operator_precedence"><span class="tocnumber">2</span> <span class="toctext">Operator precedence</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Notes"><span class="tocnumber">2.1</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Criticism_of_bitwise_and_equality_operators_precedence"><span class="tocnumber">2.2</span> <span class="toctext">Criticism of bitwise and equality operators precedence</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#C++_operator_synonyms"><span class="tocnumber">2.3</span> <span class="toctext">C++ operator synonyms</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Table">Table</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=1" title="Edit section: Table">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>For the purposes of these tables, <code>a</code>, <code>b</code>, and <code>c</code> represent valid values (literals, values from variables, or return value), object names, or lvalues, as appropriate. <code>R</code>, <code>S</code> and <code>T</code> stand for any type(s), and <code>K</code> for a class type or enumerated type.
+</p>
+<h3><span class="mw-headline" id="Arithmetic_operators">Arithmetic operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=2" title="Edit section: Arithmetic operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">C++ prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Assignment_operator_in_C%2B%2B" class="mw-redirect" title="Assignment operator in C++">Basic assignment</a>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Addition" title="Addition">Addition</a>
+</td>
+<td style="text-align:center;"><code>a <b>+</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">+</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">+</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Subtraction" title="Subtraction">Subtraction</a>
+</td>
+<td style="text-align:center;"><code>a <b>-</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">-</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">-</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Unary_operation" title="Unary operation">Unary</a> plus (<a href="/wiki/Type_conversion#Type_promotion" title="Type conversion">integer promotion</a>)
+</td>
+<td style="text-align:center;"><code><b>+</b>a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">+</span><span class="p">();</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">+</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Unary minus (<a href="/wiki/Additive_inverse" title="Additive inverse">additive inverse</a>)
+</td>
+<td style="text-align:center;"><code><b>-</b>a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">-</span><span class="p">();</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">-</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Multiplication" title="Multiplication">Multiplication</a>
+</td>
+<td style="text-align:center;"><code>a <b>*</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">*</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">*</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Division_(mathematics)" title="Division (mathematics)">Division</a>
+</td>
+<td style="text-align:center;"><code>a <b>/</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">/</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">/</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Modulo_operation" title="Modulo operation">Modulo</a> (integer remainder)<sup id="cite_ref-modulo_1-0" class="reference"><a href="#cite_note-modulo-1">&#91;a&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>%</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">%</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">%</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td width="15%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" rowspan="3"><a href="/wiki/Increment_and_decrement_operators" title="Increment and decrement operators">Increment</a>
+</td>
+<td width="8%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh">Prefix
+</td>
+<td width="11%" align="center"><code><b>++</b>a</code>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">++</span><span class="p">();</span></code>
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">++</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" rowspan="2">Postfix
+</td>
+<td rowspan="2" style="text-align:center;"><code>a<b>++</b></code>
+</td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">++</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">++</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="font-size:smaller;" class="table-rh" colspan="2">Note: <a href="/wiki/C%2B%2B" title="C++">C++</a> uses the unnamed dummy-parameter <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">int</span></code> to differentiate between prefix and postfix increment operators.
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" rowspan="3"><a href="/wiki/Increment_and_decrement_operators" title="Increment and decrement operators">Decrement</a>
+</td>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh">Prefix
+</td>
+<td style="text-align:center;"><code><b>--</b>a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">--</span><span class="p">();</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">--</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" rowspan="2">Postfix
+</td>
+<td rowspan="2" style="text-align:center;"><code>a<b>--</b></code></td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">--</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">--</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="font-size:smaller;" class="table-rh" colspan="2">Note: <a href="/wiki/C%2B%2B" title="C++">C++</a> uses the unnamed dummy-parameter <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">int</span></code> to differentiate between prefix and postfix decrement operators.
+</td></tr></tbody></table>
+<h3><span id="Comparison_operators.2Frelational_operators"></span><span class="mw-headline" id="Comparison_operators/relational_operators">Comparison operators/relational operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=3" title="Edit section: Comparison operators/relational operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">Prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="23%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Equal to
+</td>
+<td width="11%" align="center"><code>a <b>==</b> b</code>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">==</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></code>
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">==</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Not equal to
+</td>
+<td style="text-align:center;"><code>a <b>!=</b> b</code><br /><code>a <b>not_eq</b> b</code><sup id="cite_ref-synonyms_2-0" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">!=</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code> <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">!=</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">!=</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Greater than
+</td>
+<td style="text-align:center;"><code>a <b>&gt;</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&gt;</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&gt;</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Less than
+</td>
+<td style="text-align:center;"><code>a <b>&lt;</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&lt;</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span><span class="k">const</span><span class="p">;</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&lt;</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Greater than or equal to
+</td>
+<td style="text-align:center;"><code>a <b>&gt;=</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&gt;=</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&gt;=</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Less than or equal to
+</td>
+<td style="text-align:center;"><code>a <b>&lt;=</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&lt;=</span><span class="p">(</span><span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&lt;=</span><span class="p">(</span><span class="n">K</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2" rowspan="2"><a href="/wiki/Three-way_comparison" title="Three-way comparison">Three-way comparison</a><sup id="cite_ref-threewaycomparison_3-0" class="reference"><a href="#cite_note-threewaycomparison-3">&#91;c&#93;</a></sup>
+</td>
+<td rowspan="2" style="text-align:center;"><code>a <b>&lt;=&gt;</b> b</code></td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td rowspan="2" style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">weak_equality</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span> <span class="n">S</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">std</span><span class="o">::</span><span class="n">weak_equality</span> <span class="k">operator</span> <span class="o">&lt;=&gt;</span><span class="p">(</span><span class="k">const</span> <span class="n">K</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">S</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="font-size:smaller;" class="table-rh" colspan="2">Note: The operator has a total of 6 return types: <code>std::weak_equality</code>, <code>std::strong_equality</code>, <code>std::partial_ordering</code>, <code>std::weak_ordering</code>, <code>std::strong_ordering</code>, and <code>std::common_comparison_category</code>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Logical_operators">Logical operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=4" title="Edit section: Logical operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">C++ prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="23%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Negation" title="Negation">Logical negation (NOT)</a>
+</td>
+<td width="11%" align="center"><code><b>!</b>a</code><br /><code><b>not</b> a</code><sup id="cite_ref-synonyms_2-1" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">!</span><span class="p">();</span></code>
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">!</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Logical_conjunction" title="Logical conjunction">Logical AND</a>
+</td>
+<td style="text-align:center;"><code>a <b>&amp;&amp;</b> b</code><br /><code>a <b>and</b> b</code><sup id="cite_ref-synonyms_2-2" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Logical_disjunction" title="Logical disjunction">Logical OR</a>
+</td>
+<td style="text-align:center;"><code>a <b>||</b> b</code><br /><code>a <b>or</b> b</code><sup id="cite_ref-synonyms_2-3" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="kt">bool</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">||</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" id="" style="" dir="ltr"><span class="kt">bool</span> <span class="k">operator</span> <span class="o">||</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Bitwise_operators">Bitwise operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=5" title="Edit section: Bitwise operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">Prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="23%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_operation#NOT" title="Bitwise operation">Bitwise NOT</a>
+</td>
+<td width="11%" align="center"><code><b>~</b>a</code><br /><code><b>compl</b> a</code><sup id="cite_ref-synonyms_2-4" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">~</span><span class="p">();</span></code>
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">~</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_operation#AND" title="Bitwise operation">Bitwise AND</a>
+</td>
+<td style="text-align:center;"><code>a <b>&amp;</b> b</code><br /><code>a <b>bitand</b> b</code><sup id="cite_ref-synonyms_2-5" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_operation#OR" title="Bitwise operation">Bitwise OR</a>
+</td>
+<td style="text-align:center;"><code>a <b>|</b> b</code><br /><code>a <b>bitor</b> b</code><sup id="cite_ref-synonyms_2-6" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">|</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">|</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_operation#XOR" title="Bitwise operation">Bitwise XOR</a>
+</td>
+<td style="text-align:center;"><code>a <b>^</b> b</code><br /><code>a <b>xor</b> b</code><sup id="cite_ref-synonyms_2-7" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">^</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">^</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_shift" class="mw-redirect" title="Bitwise shift">Bitwise left shift</a><sup id="cite_ref-bitshift_4-0" class="reference"><a href="#cite_note-bitshift-4">&#91;d&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>&lt;&lt;</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Bitwise_shift" class="mw-redirect" title="Bitwise shift">Bitwise right shift</a><sup id="cite_ref-bitshift_4-1" class="reference"><a href="#cite_note-bitshift-4">&#91;d&#93;</a></sup><sup id="cite_ref-rightbitshift_6-0" class="reference"><a href="#cite_note-rightbitshift-6">&#91;e&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>&gt;&gt;</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Compound_assignment_operators">Compound assignment operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=6" title="Edit section: Compound assignment operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Meaning
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">C++ prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="12%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Addition assignment
+</td>
+<td width="11%" align="center"><code>a <b>+=</b> b</code>
+</td>
+<td width="11%" align="center"><code>a <b>=</b> a <b>+</b> b</code>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">+=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td width="25%"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">+=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Subtraction assignment
+</td>
+<td style="text-align:center;"><code>a <b>-=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>-</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">-=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">-=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Multiplication assignment
+</td>
+<td style="text-align:center;"><code>a <b>*=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>*</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">*=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">*=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Division assignment
+</td>
+<td style="text-align:center;"><code>a <b>/=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>/</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">/=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">/=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Modulo assignment
+</td>
+<td style="text-align:center;"><code>a <b>%=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>%</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">%=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">%=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Bitwise AND assignment
+</td>
+<td style="text-align:center;"><code>a <b>&amp;=</b> b</code><br /><code>a <b>and_eq</b> b</code><sup id="cite_ref-synonyms_2-8" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>&amp;</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&amp;=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&amp;=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Bitwise OR assignment
+</td>
+<td style="text-align:center;"><code>a <b>|=</b> b</code><br /><code>a <b>or_eq</b> b</code><sup id="cite_ref-synonyms_2-9" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>|</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">|=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">|=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Bitwise XOR assignment
+</td>
+<td style="text-align:center;"><code>a <b>^=</b> b</code><br /><code>a <b>xor_eq</b> b</code><sup id="cite_ref-synonyms_2-10" class="reference"><a href="#cite_note-synonyms-2">&#91;b&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>^</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">^=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">^=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Bitwise left shift assignment
+</td>
+<td style="text-align:center;"><code>a <b>&lt;&lt;=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>&lt;&lt;</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&lt;&lt;=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&lt;&lt;=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Bitwise right shift assignment<sup id="cite_ref-rightbitshift_6-1" class="reference"><a href="#cite_note-rightbitshift-6">&#91;e&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a <b>&gt;&gt;=</b> b</code>
+</td>
+<td style="text-align:center;"><code>a <b>=</b> a <b>&gt;&gt;</b> b</code>
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&gt;&gt;=</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">&gt;&gt;=</span><span class="p">(</span><span class="n">K</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Member_and_pointer_operators">Member and pointer operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=7" title="Edit section: Member and pointer operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">C++ prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="23%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Indexer_(programming)" title="Indexer (programming)">Subscript</a>
+</td>
+<td width="11%" align="center"><code>a<b>[</b>b<b>]</b></code>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="p">[](</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code><br />
+</td>
+<td width="25%" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Indirection ("object pointed to by <i>a</i>")
+</td>
+<td style="text-align:center;"><code><b>*</b>a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">*</span><span class="p">();</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">*</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Address-of ("address of <i>a</i>")
+</td>
+<td style="text-align:center;"><code><b>&amp;</b>a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">*</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">&amp;</span><span class="p">();</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">*</span> <span class="k">operator</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Structure dereference ("member <i>b</i> of object pointed to by <i>a</i>")
+</td>
+<td style="text-align:center;"><code>a<b>-&gt;</b>b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">*</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">-&gt;</span><span class="p">();</span></code><sup id="cite_ref-arrowptr_7-0" class="reference"><a href="#cite_note-arrowptr-7">&#91;f&#93;</a></sup><br />
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Structure reference ("member <i>b</i> of object <i>a</i>")
+</td>
+<td style="text-align:center;"><code>a<b>.</b>b</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na" colspan="2" data-sort-value="">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Member selected by <a href="/w/index.php?title=Pointer-to-member&amp;action=edit&amp;redlink=1" class="new" title="Pointer-to-member (page does not exist)">pointer-to-member</a> <i>b</i> of object pointed to by <i>a</i><sup id="cite_ref-arrowstar_8-0" class="reference"><a href="#cite_note-arrowstar-8">&#91;g&#93;</a></sup>
+</td>
+<td style="text-align:center;"><code>a<b>-&gt;*</b>b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="o">-&gt;*</span><span class="p">(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span><span class="o">&amp;</span> <span class="k">operator</span> <span class="o">-&gt;*</span><span class="p">(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Member of object <i>a</i> selected by <a href="/w/index.php?title=Pointer-to-member&amp;action=edit&amp;redlink=1" class="new" title="Pointer-to-member (page does not exist)">pointer-to-member</a> <i>b</i>
+</td>
+<td style="text-align:center;"><code>a<b>.*</b>b</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na" colspan="2" data-sort-value="">N/A
+</td></tr></tbody></table>
+<h3><span class="mw-headline" id="Other_operators">Other operators</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=8" title="Edit section: Other operators">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<table class="wikitable" style="width:100%">
+<tbody><tr>
+<th colspan="2" rowspan="2">Operator name
+</th>
+<th rowspan="2">Syntax
+</th>
+<th rowspan="2">Can overload in C++
+</th>
+<th rowspan="2">Included<br />in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>
+</th>
+<th colspan="2">Prototype examples
+</th></tr>
+<tr>
+<th>As member of K
+</th>
+<th>Outside class definitions
+</th></tr>
+<tr>
+<td width="12%" style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Function_(programming)" class="mw-redirect" title="Function (programming)">Function</a> call<br /><i>See <a href="/wiki/Function_object" title="Function object">Function object</a></i>.
+</td>
+<td width="22%" align="center"><code>a<b>(</b>a1, a2<b>)</b></code>
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td width="8%" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="p">()(</span><span class="n">S</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">,</span> <span class="p">...);</span></code>
+</td>
+<td width="25%" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Comma_operator" title="Comma operator">Comma</a>
+</td>
+<td style="text-align:center;"><code>a<b>,</b> b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="p">,(</span><span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="p">,(</span><span class="n">K</span> <span class="n">a</span><span class="p">,</span> <span class="n">S</span> <span class="n">b</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/%3F:" title="?:">Ternary conditional</a>
+</td>
+<td style="text-align:center;"><code>a <b>?</b> b <b>:</b> c</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Scope_resolution_operator#C++" title="Scope resolution operator">Scope resolution</a>
+</td>
+<td style="text-align:center;"><code>a<b>::</b>b</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">User-defined literals<sup id="cite_ref-ud-literal_9-0" class="reference"><a href="#cite_note-ud-literal-9">&#91;h&#93;</a></sup><br /><i>since C++11</i>
+</td>
+<td style="text-align: center;"><code>"a"_b</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">R</span> <span class="k">operator</span> <span class="s">&quot;&quot;</span> <span class="n">_b</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">)</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Sizeof" title="Sizeof">Sizeof</a>
+</td>
+<td style="text-align:center;"><code><b>sizeof</b>(a)</code><sup id="cite_ref-sizeof_10-0" class="reference"><a href="#cite_note-sizeof-10">&#91;i&#93;</a></sup><br /><code><b>sizeof</b>(<i>type</i>)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Size of <a href="/wiki/Variadic_template" title="Variadic template">parameter pack</a><br /><i>since C++11</i>
+</td>
+<td style="text-align:center;"><code><b>sizeof...</b>(Args)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/w/index.php?title=Alignof&amp;action=edit&amp;redlink=1" class="new" title="Alignof (page does not exist)">Alignof</a><br /><i>since C++11</i>
+</td>
+<td style="text-align:center;"><code><b>alignof</b>(<i>type</i>)</code> <br /> or <code><b>_Alignof</b>(<i>type</i>)</code><sup id="cite_ref-alignof_11-0" class="reference"><a href="#cite_note-alignof-11">&#91;j&#93;</a></sup></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Type identification
+</td>
+<td style="text-align:center;"><code><b>typeid</b>(a)</code><br /><code><b>typeid</b>(<i>type</i>)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Type_conversion" title="Type conversion">Conversion</a> (C-style cast)
+</td>
+<td style="text-align:center;"><code>(<i>type</i>)a</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Type_conversion" title="Type conversion">Conversion</a>
+</td>
+<td style="text-align:center;"><code><i>type</i>(a)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td style="font-size:smaller" class="table-rh" colspan="2">Note: behaves like const_cast/static_cast/reinterpret_cast<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;2&#93;</a></sup>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" rowspan="2" colspan="2"><a href="/wiki/Static_cast" title="Static cast">static_cast</a> conversion
+</td>
+<td rowspan="2" style="text-align:center;"><code><b>static_cast</b>&lt;<i>type</i>&gt;(a)</code></td>
+<td rowspan="2" style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td rowspan="2" style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="n">R</span><span class="p">();</span></code><br /><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="k">explicit</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="n">R</span><span class="p">();</span></code> <i>since C++11</i>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="font-size:smaller;" class="table-rh" colspan="2">Note: for user-defined conversions, the return type implicitly and necessarily matches the operator name.
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Dynamic_cast" class="mw-redirect" title="Dynamic cast">dynamic cast</a> conversion
+</td>
+<td style="text-align:center;"><code><b>dynamic_cast</b>&lt;<i>type</i>&gt;(a)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Const_cast" class="mw-redirect" title="Const cast">const_cast</a> conversion
+</td>
+<td style="text-align:center;"><code><b>const_cast</b>&lt;<i>type</i>&gt;(a)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Reinterpret_cast" class="mw-redirect" title="Reinterpret cast">reinterpret_cast</a> conversion
+</td>
+<td style="text-align:center;"><code><b>reinterpret_cast</b>&lt;<i>type</i>&gt;(a)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/New_(c%2B%2B)" class="mw-redirect" title="New (c++)">Allocate storage</a>
+</td>
+<td style="text-align:center;"><code><b>new</b> <i>type</i></code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span><span class="o">*</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="k">new</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">x</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span><span class="o">*</span> <span class="k">operator</span> <span class="nf">new</span><span class="p">(</span><span class="kt">size_t</span> <span class="n">x</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Allocate storage (array)
+</td>
+<td style="text-align:center;"><code><b>new</b> <i>type</i><b>[</b>n<b>]</b></code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span><span class="o">*</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="k">new</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">a</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span><span class="o">*</span> <span class="k">operator</span> <span class="k">new</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2"><a href="/wiki/Operator_delete" class="mw-redirect" title="Operator delete">Deallocate storage</a>
+</td>
+<td style="text-align:center;"><code><b>delete</b> a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="k">delete</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span> <span class="k">operator</span> <span class="nf">delete</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Deallocate storage (array)
+</td>
+<td style="text-align:center;"><code><b>delete[]</b> a</code></td>
+<td style="background:#9F9;vertical-align:middle;text-align:center;" class="table-yes">Yes</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span> <span class="n">K</span><span class="o">::</span><span class="k">operator</span> <span class="k">delete</span><span class="p">[](</span><span class="kt">void</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span></code>
+</td>
+<td><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="kt">void</span> <span class="k">operator</span> <span class="k">delete</span><span class="p">[](</span><span class="kt">void</span> <span class="o">*</span><span class="n">a</span><span class="p">);</span></code>
+</td></tr>
+<tr>
+<td style="background: #ececec; color: black; font-weight: bold; vertical-align: middle; text-align: left;" class="table-rh" colspan="2">Exception check<br /><i>since C++11</i>
+</td>
+<td style="text-align:center;"><code><b>noexcept</b>(a)</code></td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No</td>
+<td style="background:#F99;vertical-align:middle;text-align:center;" class="table-no">No
+</td>
+<td colspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td></tr></tbody></table>
+<p>Notes:
+</p>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-modulo-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-modulo_1-0">^</a></b></span> <span class="reference-text">The modulus operator works just with integer operands, for floating point numbers a library function must be used instead (like <a href="/wiki/Math.h" class="mw-redirect" title="Math.h"><code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">fmod</span></code></a>).</span>
+</li>
+<li id="cite_note-synonyms-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-synonyms_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-synonyms_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-synonyms_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-synonyms_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-synonyms_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-synonyms_2-5"><sup><i><b>f</b></i></sup></a> <a href="#cite_ref-synonyms_2-6"><sup><i><b>g</b></i></sup></a> <a href="#cite_ref-synonyms_2-7"><sup><i><b>h</b></i></sup></a> <a href="#cite_ref-synonyms_2-8"><sup><i><b>i</b></i></sup></a> <a href="#cite_ref-synonyms_2-9"><sup><i><b>j</b></i></sup></a> <a href="#cite_ref-synonyms_2-10"><sup><i><b>k</b></i></sup></a></span> <span class="reference-text">Requires <code><a href="/wiki/Iso646.h" class="mw-redirect" title="Iso646.h">iso646.h</a></code> in C. See <a href="#C.2B.2B_operator_synonyms">C++ operator synonyms</a></span>
+</li>
+<li id="cite_note-threewaycomparison-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-threewaycomparison_3-0">^</a></b></span> <span class="reference-text">About <a rel="nofollow" class="external text" href="https://en.cppreference.com/w/cpp/language/operator_comparison#Three-way_comparison">C++20 three-way comparison</a></span>
+</li>
+<li id="cite_note-bitshift-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-bitshift_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-bitshift_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">In the context of <a href="/wiki/Iostream" class="mw-redirect" title="Iostream">iostreams</a>, writers often will refer to <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="o">&lt;&lt;</span></code> and <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="o">&gt;&gt;</span></code> as the "put-to" or "stream insertion" and "get-from" or "stream extraction" operators, respectively.</span>
+</li>
+<li id="cite_note-rightbitshift-6"><span class="mw-cite-backlink">^ <a href="#cite_ref-rightbitshift_6-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-rightbitshift_6-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"> According to the C99 standard, the right shift of a negative number is implementation defined. Most implementations, e.g., the GCC,<sup id="cite_ref-Integers_5-0" class="reference"><a href="#cite_note-Integers-5">&#91;1&#93;</a></sup> use an <a href="/wiki/Arithmetic_shift" title="Arithmetic shift">arithmetic shift</a> (i.e., sign extension), but a <a href="/wiki/Logical_shift" title="Logical shift">logical shift</a> is possible.</span>
+</li>
+<li id="cite_note-arrowptr-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-arrowptr_7-0">^</a></b></span> <span class="reference-text">The return type of <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="k">operator</span><span class="o">-&gt;</span><span class="p">()</span></code> must be a type for which the <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="o">-&gt;</span></code> operation can be applied, such as a pointer type. If <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">x</span></code> is of type <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">C</span></code> where <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">C</span></code> overloads <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="k">operator</span><span class="o">-&gt;</span><span class="p">()</span></code>, <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">x</span><span class="o">-&gt;</span><span class="n">y</span></code> gets expanded to <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">x</span><span class="p">.</span><span class="k">operator</span><span class="o">-&gt;</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">y</span></code>.</span>
+</li>
+<li id="cite_note-arrowstar-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-arrowstar_8-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFMeyers1999" class="citation">Meyers, Scott (October 1999), <a rel="nofollow" class="external text" href="http://aristeia.com/Papers/DDJ_Oct_1999.pdf">"Implementing operator-&gt;* for Smart Pointers"</a> <span class="cs1-format">(PDF)</span>, <i>Dr. Dobb's Journal</i>, Aristeia</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Dr.+Dobb%27s+Journal&amp;rft.atitle=Implementing+operator-%26gt%3B%2A+for+Smart+Pointers&amp;rft.date=1999-10&amp;rft.aulast=Meyers&amp;rft.aufirst=Scott&amp;rft_id=http%3A%2F%2Faristeia.com%2FPapers%2FDDJ_Oct_1999.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style>.</span>
+</li>
+<li id="cite_note-ud-literal-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-ud-literal_9-0">^</a></b></span> <span class="reference-text">About <a rel="nofollow" class="external text" href="http://en.cppreference.com/w/cpp/language/user_literal">C++11 User-defined literals</a></span>
+</li>
+<li id="cite_note-sizeof-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-sizeof_10-0">^</a></b></span> <span class="reference-text">The parentheses are not necessary when taking the size of a value, only when taking the size of a type. However, they are usually used regardless.</span>
+</li>
+<li id="cite_note-alignof-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-alignof_11-0">^</a></b></span> <span class="reference-text">C++ defines <code>alignof</code> operator, whereas C defines <code>_Alignof</code>. Both operators have the same semantics.</span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="Operator_precedence">Operator precedence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=9" title="Edit section: Operator precedence">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following is a table that lists the <a href="/wiki/Order_of_operations" title="Order of operations">precedence</a> and <a href="/wiki/Operator_associativity" title="Operator associativity">associativity</a> of all the operators in the <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> languages (when the operators also exist in <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/Perl" title="Perl">Perl</a>, <a href="/wiki/PHP" title="PHP">PHP</a> and many other recent languages, the precedence is the same as that given<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="I&#39;ve heard that PHP has">citation needed</span></a></i>&#93;</sup>). Operators are listed top to bottom, in descending precedence. Descending precedence refers to the priority of the grouping of operators and operands. Considering an expression, an operator which is listed on some row will be grouped prior to any operator that is listed on a row further below it. Operators that are in the same cell (there may be several rows of operators listed in a cell) are grouped with the same precedence, in the given direction. An operator's precedence is unaffected by overloading.
+</p><p>The syntax of expressions in C and C++ is specified by a <a href="/wiki/Phrase_structure_grammar" title="Phrase structure grammar">phrase structure grammar</a>.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;3&#93;</a></sup> The table given here has been inferred from the grammar.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (January 2009)">citation needed</span></a></i>&#93;</sup> For the ISO C 1999 standard, section 6.5.6 note 71 states that the C grammar provided by the specification defines the precedence of the C operators, and also states that the operator precedence resulting from the grammar closely follows the specification's section ordering:
+</p><p>"<a href="/wiki/C_syntax" title="C syntax">The [C] syntax</a> [i.e., grammar] specifies the precedence of operators in the evaluation of an expression, which is the same as the order of the major subclauses of this subclause, highest precedence first."<sup id="cite_ref-14" class="reference"><a href="#cite_note-14">&#91;4&#93;</a></sup>
+</p><p>A precedence table, while mostly adequate, cannot resolve a few details. In particular, note that the <a href="/wiki/Ternary_operator" class="mw-redirect" title="Ternary operator">ternary operator</a> allows any arbitrary expression as its middle operand, despite being listed as having higher precedence than the assignment and comma operators. Thus <code>a&#160;? b, c&#160;: d</code> is interpreted as <code>a&#160;? (b, c)&#160;: d</code>, and not as the meaningless <code>(a&#160;? b), (c&#160;: d)</code>. So, the expression in the middle of the conditional operator (between <code><b>?</b></code> and <code><b>:</b></code>) is parsed as if parenthesized. Also, note that the immediate, unparenthesized result of a C cast expression cannot be the operand of <code>sizeof</code>. Therefore, <code>sizeof (int) * x</code> is interpreted as <code>(sizeof(int)) * x</code> and not <code>sizeof ((int) * x)</code>.
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th style="text-align: left">Precedence
+</th>
+<th style="text-align: left">Operator
+</th>
+<th style="text-align: left">Description
+</th>
+<th style="text-align: left">Associativity
+</th></tr>
+<tr>
+<th>1
+<p><small>highest</small>
+</p>
+</th>
+<td><code>::</code>
+</td>
+<td><a href="/wiki/Scope_resolution_operator#C.2B.2B" title="Scope resolution operator">Scope resolution</a> (C++ only)
+</td>
+<td>None
+</td></tr>
+<tr>
+<th rowspan="11">2
+</th>
+<td style="border-bottom-style: none"><code>++</code>
+</td>
+<td style="border-bottom-style: none">Postfix increment
+</td>
+<td style="vertical-align: top" rowspan="11">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>--</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Postfix decrement
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>()</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Function call
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>[]</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Array subscripting
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>.</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Element selection by reference
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>-&gt;</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Element selection through pointer
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>typeid()</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none"><a href="/wiki/Run-time_type_information" title="Run-time type information">Run-time type information</a> (C++ only) (see <a href="/wiki/Typeid" class="mw-redirect" title="Typeid">typeid</a>)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>const_cast</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Type cast (C++ only) (see <a href="/wiki/Const_cast" class="mw-redirect" title="Const cast">const_cast</a>)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>dynamic_cast</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Type cast (C++ only) (see <a href="/wiki/Dynamic_cast" class="mw-redirect" title="Dynamic cast">dynamic cast</a>)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>reinterpret_cast</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Type cast (C++ only) (see <a href="/wiki/Reinterpret_cast" class="mw-redirect" title="Reinterpret cast">reinterpret_cast</a>)
+</td></tr>
+<tr>
+<td style="border-top-style: none"><code>static_cast</code>
+</td>
+<td style="border-top-style: none">Type cast (C++ only) (see <a href="/wiki/Static_cast" title="Static cast">static_cast</a>)
+</td></tr>
+<tr>
+<th rowspan="13">3
+</th>
+<td style="border-bottom-style: none"><code>++</code>
+</td>
+<td style="border-bottom-style: none">Prefix increment
+</td>
+<td rowspan="13" style="vertical-align: top">Right-to-left
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>--</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Prefix decrement
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>+</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Unary plus
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>-</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Unary minus
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>!</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Logical NOT
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>~</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Bitwise NOT (One's Complement)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>(<i>type</i>)</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Type cast
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>*</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Indirection (dereference)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&amp;</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Address-of
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>sizeof</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none"><a href="/wiki/Sizeof" title="Sizeof">Sizeof</a>
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>_Alignof</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Alignment requirement (since C11)
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>new</code>, <code>new[]</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Dynamic memory allocation (C++ only)
+</td></tr>
+<tr>
+<td style="border-top-style: none"><code>delete</code>, <code>delete[]</code>
+</td>
+<td style="border-top-style: none">Dynamic memory deallocation (C++ only)
+</td></tr>
+<tr>
+<th rowspan="2">4
+</th>
+<td style="border-bottom-style: none"><code>.*</code>
+</td>
+<td style="border-bottom-style: none">Pointer to member (C++ only)
+</td>
+<td style="vertical-align: top" rowspan="2">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>-&gt;*</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Pointer to member (C++ only)
+</td></tr>
+<tr>
+<th rowspan="3">5
+</th>
+<td style="border-bottom-style: none"><code>*</code>
+</td>
+<td style="border-bottom-style: none">Multiplication
+</td>
+<td style="vertical-align: top" rowspan="3">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>/</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Division
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>%</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none"><a href="/wiki/Modulo_operation" title="Modulo operation">Modulo</a> (remainder)
+</td></tr>
+<tr>
+<th rowspan="2">6
+</th>
+<td style="border-bottom-style: none"><code>+</code>
+</td>
+<td style="border-bottom-style: none">Addition
+</td>
+<td style="vertical-align: top" rowspan="2">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>-</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Subtraction
+</td></tr>
+<tr>
+<th rowspan="2">7
+</th>
+<td style="border-bottom-style: none"><code>&lt;&lt;</code>
+</td>
+<td style="border-bottom-style: none"><a href="/wiki/Bitwise_operation" title="Bitwise operation">Bitwise</a> left shift
+</td>
+<td style="vertical-align: top" rowspan="2">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&gt;&gt;</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none"><a href="/wiki/Bitwise_operation" title="Bitwise operation">Bitwise</a> right shift
+</td></tr>
+<tr>
+<th rowspan="1">8
+</th>
+<td style="border-bottom-style:none;"><code>&lt;=&gt;</code>
+</td>
+<td style="border-bottom-style:none;"><a href="/wiki/Three-way_comparison" title="Three-way comparison">Three-way comparison</a> (Introduced in <a href="/wiki/C%2B%2B20" title="C++20">C++20</a> - C++ only)
+</td>
+<td style="vertical-align: top" rowspan="1">Left-to-right
+</td></tr>
+<tr>
+<th rowspan="4">9
+</th>
+<td style="border-bottom-style: none"><code>&lt;</code>
+</td>
+<td style="border-bottom-style: none">Less than
+</td>
+<td style="vertical-align: top" rowspan="4">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&lt;=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Less than or equal to
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&gt;</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Greater than
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&gt;=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Greater than or equal to
+</td></tr>
+<tr>
+<th rowspan="2">10
+</th>
+<td style="border-bottom-style: none"><code>==</code>
+</td>
+<td style="border-bottom-style: none">Equal to
+</td>
+<td style="vertical-align: top" rowspan="2">Left-to-right
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>!=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Not equal to
+</td></tr>
+<tr>
+<th>11
+</th>
+<td><code>&amp;</code>
+</td>
+<td>Bitwise AND
+</td>
+<td>Left-to-right
+</td></tr>
+<tr>
+<th>12
+</th>
+<td><code>^</code>
+</td>
+<td>Bitwise XOR (exclusive or)
+</td>
+<td>Left-to-right
+</td></tr>
+<tr>
+<th>13
+</th>
+<td><code>|</code>
+</td>
+<td>Bitwise OR (inclusive or)
+</td>
+<td>Left-to-right
+</td></tr>
+<tr>
+<th>14
+</th>
+<td><code>&amp;&amp;</code>
+</td>
+<td>Logical AND
+</td>
+<td>Left-to-right
+</td></tr>
+<tr>
+<th>15
+</th>
+<td><code>||</code>
+</td>
+<td>Logical OR
+</td>
+<td>Left-to-right
+</td></tr>
+<tr>
+<th rowspan="13">16
+</th>
+<td style="border-bottom-style: none"><code>?:</code>
+</td>
+<td style="border-bottom-style: none"><a href="/wiki/Ternary_operator" class="mw-redirect" title="Ternary operator">Ternary</a> conditional (see <a href="/wiki/%3F:" title="?:">?:</a>)
+</td>
+<td rowspan="13">Right-to-left
+</td></tr>
+<tr>
+<td style="border-bottom-style: none"><code>=</code>
+</td>
+<td style="border-bottom-style: none">Direct assignment
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>+=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by sum
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>-=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by difference
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>*=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by product
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>/=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by quotient
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>%=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by remainder
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&lt;&lt;=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise left shift
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&gt;&gt;=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise right shift
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>&amp;=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise AND
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>^=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise XOR
+</td></tr>
+<tr>
+<td style="border-bottom-style: none; border-top-style: none"><code>|=</code>
+</td>
+<td style="border-bottom-style: none; border-top-style: none">Assignment by bitwise OR
+</td></tr>
+<tr>
+<td><code>throw</code>
+</td>
+<td>Throw operator (exceptions throwing, C++ only)
+</td></tr>
+<tr>
+<th>17
+<p><small>lowest</small>
+</p>
+</th>
+<td><code>,</code>
+</td>
+<td><a href="/wiki/Comma_operator" title="Comma operator">Comma</a>
+</td>
+<td>Left-to-right
+</td></tr></tbody></table>
+<p><sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;5&#93;</a></sup><sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;6&#93;</a></sup><sup id="cite_ref-17" class="reference"><a href="#cite_note-17">&#91;7&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=10" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The precedence table determines the order of binding in chained expressions, when it is not expressly specified by parentheses.
+</p>
+<ul><li>For example, <code>++x*3</code> is ambiguous without some precedence rule(s). The precedence table tells us that: <tt>x</tt> is 'bound' more tightly to <tt>++</tt> than to <tt>*</tt>, so that whatever <tt>++</tt> does (now or later—see below), it does it ONLY to <tt>x</tt> (and not to <code>x*3</code>); it is equivalent to (<code>++x</code>, <code>x*3</code>).</li>
+<li>Similarly, with <code>3*x++</code>, where though the post-fix <tt>++</tt> is designed to act AFTER the entire expression is evaluated, the precedence table makes it clear that ONLY <tt>x</tt> gets incremented (and NOT <code>3*x</code>). In fact, the expression (<code>tmp=x++</code>, <code>3*tmp</code>) is evaluated with <tt>tmp</tt> being a temporary value. It is functionally equivalent to something like (<code>tmp=3*x</code>, <code>++x</code>, <code>tmp</code>).</li></ul>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:202px;"><a href="/wiki/File:Precedence_2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/c/c4/Precedence_2.png" decoding="async" width="200" height="143" class="thumbimage" data-file-width="200" data-file-height="143" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Precedence_2.png" class="internal" title="Enlarge"></a></div>Precedence and bindings</div></div></div></div>
+<ul><li>Abstracting the issue of precedence or binding, consider the diagram above for the expression 3+2*y[i]++. The compiler's job is to resolve the diagram into an expression, one in which several unary operators (call them 3+( . ), 2*( . ), ( . )++ and ( . )[ i ]) are competing to bind to y. The order of precedence table resolves the final sub-expression they each act upon: ( . )[ i ] acts only on y, ( . )++ acts only on y[i], 2*( . ) acts only on y[i]++ and 3+( . ) acts 'only' on 2*((y[i])++). It is important to note that WHAT sub-expression gets acted on by each operator is clear from the precedence table but WHEN each operator acts is not resolved by the precedence table; in this example, the ( . )++ operator acts only on y[i] by the precedence rules but binding levels alone do not indicate the timing of the postfix ++ (the ( . )++ operator acts only after y[i] is evaluated in the expression).</li></ul>
+<p>Many of the operators containing multi-character sequences are given "names" built from the operator name of each character. For example, <code>+=</code> and <code>-=</code> are often called <i>plus equal(s)</i> and <i>minus equal(s)</i>, instead of the more verbose "assignment by addition" and "assignment by subtraction".
+The binding of operators in C and C++ is specified (in the corresponding Standards) by a factored language grammar, rather than a precedence table. This creates some subtle conflicts. For example, in C, the syntax for a conditional expression is:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">logical</span><span class="o">-</span><span class="n">OR</span><span class="o">-</span><span class="n">expression</span> <span class="o">?</span> <span class="nl">expression</span> <span class="p">:</span> <span class="n">conditional</span><span class="o">-</span><span class="n">expression</span>
+</pre></div>
+<p>while in C++ it is:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">logical</span><span class="o">-</span><span class="n">OR</span><span class="o">-</span><span class="n">expression</span> <span class="o">?</span> <span class="nl">expression</span> <span class="p">:</span> <span class="n">assignment</span><span class="o">-</span><span class="n">expression</span>
+</pre></div>
+<p>Hence, the expression:
+</p>
+<div class="mw-highlight mw-highlight-lang-text mw-content-ltr" dir="ltr"><pre><span></span>e = a &lt; d ? a++ : a = d
+</pre></div>
+<p>is parsed differently in the two languages. In C, this expression is a syntax error, because the syntax for an assignment expression in C is:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="n">unary</span><span class="o">-</span><span class="n">expression</span> <span class="sc">&#39;=&#39;</span> <span class="n">assignment</span><span class="o">-</span><span class="n">expression</span>
+</pre></div>
+<p>In C++, it is parsed as:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">d</span> <span class="o">?</span> <span class="n">a</span><span class="o">++</span> <span class="o">:</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="n">d</span><span class="p">))</span>
+</pre></div>
+<p>which is a valid expression.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;8&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Criticism_of_bitwise_and_equality_operators_precedence">Criticism of bitwise and equality operators precedence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=11" title="Edit section: Criticism of bitwise and equality operators precedence">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The precedence of the bitwise logical operators has been criticized.<sup id="cite_ref-Bell_19-0" class="reference"><a href="#cite_note-Bell-19">&#91;9&#93;</a></sup> Conceptually, &amp; and | are arithmetic operators like * and +.
+</p><p>The expression <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">7</span></code> is syntactically parsed as <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">a</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">b</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span></code> whereas the expression <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">7</span></code> is parsed as <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span></code>. This requires parentheses to be used more often than they otherwise would.
+</p><p>Historically, there was no syntactic distinction between the bitwise and logical operators. In <a href="/wiki/BCPL" title="BCPL">BCPL</a>, <a href="/wiki/B_(programming_language)" title="B (programming language)">B</a> and early C, the operators <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="o">&amp;&amp;</span> <span class="o">||</span></code> didn't exist. Instead <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="o">&amp;</span> <span class="o">|</span></code> had different meaning depending on whether they are used in a 'truth-value context' (i.e. when a Boolean value was expected, for example in <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span> <span class="o">&amp;</span> <span class="n">c</span><span class="p">)</span> <span class="p">{...}</span></code> it behaved as a logical operator, but in <code class="mw-highlight mw-highlight-lang-cpp" dir="ltr"><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span></code> it behaved as a bitwise one). It was retained so as to keep <a href="/wiki/Backward_compatibility" title="Backward compatibility">backward compatibility</a> with existing installations.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;10&#93;</a></sup>
+</p><p>Moreover, in C++ (and later versions of C) equality operations, with the exception of the three-way comparison operator, yield <a href="/wiki/Boolean_data_type" title="Boolean data type">bool</a> type values which are conceptually a single bit (1 or 0) and as such do not properly belong in "bitwise" operations.
+</p>
+<h3><span id="C.2B.2B_operator_synonyms"></span><span class="mw-headline" id="C++_operator_synonyms">C++ operator synonyms</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=12" title="Edit section: C++ operator synonyms">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>C++ defines<sup id="cite_ref-Committee_21-0" class="reference"><a href="#cite_note-Committee-21">&#91;11&#93;</a></sup> certain keywords to act as aliases for a number of operators:
+</p>
+<table class="wikitable" style="width:30%; text-align:center;">
+<tbody><tr>
+<th>Keyword</th>
+<th>Operator
+</th></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">and</code></td>
+<td><code>&amp;&amp;</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">and_eq</code></td>
+<td><code>&amp;=</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">bitand</code></td>
+<td><code>&amp;</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">bitor</code></td>
+<td><code>&#x7c;</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">compl</code></td>
+<td><code>~</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">not</code></td>
+<td><code>!</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">not_eq</code></td>
+<td><code>!=</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">or</code></td>
+<td><code>&#x7c;&#x7c;</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">or_eq</code></td>
+<td><code>&#x7c;=</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">xor</code></td>
+<td><code>^</code>
+</td></tr>
+<tr>
+<td><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">xor_eq</code></td>
+<td><code>^=</code>
+</td></tr></tbody></table>
+<p>These can be used exactly the same way as the punctuation symbols they replace, as they are not the same operator under a different name, but rather simple token replacements for the <i>name</i> (character string) of the respective operator. This means that the expressions <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">(a &gt; 0 and not flag)</code> and <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">(a &gt; 0 &amp;&amp; !flag)</code> have identical meanings. It also means that, for example, the <code>bitand</code> keyword may be used to replace not only the <i>bitwise-and</i> operator but also the <i>address-of</i> operator, and it can even be used to specify reference types (e.g., <code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">int bitand ref = n</code>). The ISO C specification makes allowance for these keywords as preprocessor macros in the header file <a href="/wiki/Iso646.h" class="mw-redirect" title="Iso646.h"><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">iso646.h</code></a>. For compatibility with C, C++ provides the header <a href="/wiki/Ciso646" class="mw-redirect" title="Ciso646"><code class="mw-highlight mw-highlight-lang-text" id="" style="" dir="ltr">ciso646</code></a>, the inclusion of which has no effect.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Bitwise_operations_in_C" title="Bitwise operations in C">Bitwise operations in C</a></li>
+<li><a href="/wiki/Bit_manipulation" title="Bit manipulation">Bit manipulation</a></li>
+<li><a href="/wiki/Logical_operator" class="mw-redirect" title="Logical operator">Logical operator</a></li>
+<li><a href="/wiki/Boolean_algebra_(logic)" class="mw-redirect" title="Boolean algebra (logic)">Boolean algebra (logic)</a></li>
+<li><a href="/wiki/Table_of_logic_symbols" class="mw-redirect" title="Table of logic symbols">Table of logic symbols</a></li>
+<li><a href="/wiki/Digraphs_and_trigraphs#C" title="Digraphs and trigraphs">Digraphs and trigraphs in C</a> and <a href="/wiki/Digraphs_and_trigraphs#C.2B.2B" title="Digraphs and trigraphs">in C++</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Integers-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-Integers_5-0">^</a></b></span> <span class="reference-text"><cite class="citation">"Integers implementation", <a rel="nofollow" class="external text" href="//gcc.gnu.org/onlinedocs/gcc-4.3.3/gcc/Integers-implementation.html#Integers-implementation"><i>GCC 4.3.3</i></a>, GNU</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Integers+implementation&amp;rft.btitle=GCC+4.3.3&amp;rft.pub=GNU&amp;rft_id=%2F%2Fgcc.gnu.org%2Fonlinedocs%2Fgcc-4.3.3%2Fgcc%2FIntegers-implementation.html%23Integers-implementation&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/cpp/language/explicit_cast">Explicit type conversion</a> in C++</span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation book"><i>ISO/IEC 9899:201x Programming Languages - C</i>. open-std.org – The C Standards Committee. 19 December 2011. p.&#160;465.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ISO%2FIEC+9899%3A201x+Programming+Languages+-+C&amp;rft.pages=465&amp;rft.pub=open-std.org+%E2%80%93+The+C+Standards+Committee&amp;rft.date=2011-12-19&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14">^</a></b></span> <span class="reference-text"><cite class="citation techreport"><i>the ISO C 1999 standard, section 6.5.6 note 71</i> (Technical report). ISO. 1999.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=report&amp;rft.btitle=the+ISO+C+1999+standard%2C+section+6.5.6+note+71&amp;rft.pub=ISO&amp;rft.date=1999&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/language/operator_precedence">"C Operator Precedence - cppreference.com"</a>. <i>en.cppreference.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">16 July</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=en.cppreference.com&amp;rft.atitle=C+Operator+Precedence+-+cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fc%2Flanguage%2Foperator_precedence&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.microsoft.com/en-us/download/details.aspx?id=55984">"Visual Studio 2005 Retired documentation"</a>. <i>Microsoft Download Center</i><span class="reference-accessdate">. Retrieved <span class="nowrap">23 March</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Microsoft+Download+Center&amp;rft.atitle=Visual+Studio+2005+Retired+documentation&amp;rft_id=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fdownload%2Fdetails.aspx%3Fid%3D55984&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/cpp/language/operator_precedence">"C++ Operator Precedence - cppreference.com"</a>. <i>en.cppreference.com</i><span class="reference-accessdate">. Retrieved <span class="nowrap">16 July</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=en.cppreference.com&amp;rft.atitle=C%2B%2B+Operator+Precedence+-+cppreference.com&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fcpp%2Flanguage%2Foperator_precedence&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/13515434/does-the-c-c-ternary-operator-actually-have-the-same-precedence-as-assignment/13515505">"Does the C/C++ ternary operator actually have the same precedence as assignment operators?"</a>. <i>Stack Overflow</i><span class="reference-accessdate">. Retrieved <span class="nowrap">22 September</span> 2019</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Stack+Overflow&amp;rft.atitle=Does+the+C%2FC%2B%2B+ternary+operator+actually+have+the+same+precedence+as+assignment+operators%3F&amp;rft_id=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F13515434%2Fdoes-the-c-c-ternary-operator-actually-have-the-same-precedence-as-assignment%2F13515505&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Bell-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-Bell_19-0">^</a></b></span> <span class="reference-text"><cite class="citation"><a rel="nofollow" class="external text" href="https://www.bell-labs.com/usr/dmr/www/chist.html"><i>C history § Neonatal C</i></a>, Bell labs</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=C+history+%C2%A7+Neonatal+C&amp;rft.pub=Bell+labs&amp;rft_id=https%3A%2F%2Fwww.bell-labs.com%2Fusr%2Fdmr%2Fwww%2Fchist.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.perlmonks.org/?node_id=1159769">"Re^10: next unless condition"</a>. <i>www.perlmonks.org</i><span class="reference-accessdate">. Retrieved <span class="nowrap">23 March</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=www.perlmonks.org&amp;rft.atitle=Re%5E10%3A+next+unless+condition&amp;rft_id=https%3A%2F%2Fwww.perlmonks.org%2F%3Fnode_id%3D1159769&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Committee-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-Committee_21-0">^</a></b></span> <span class="reference-text"><cite class="citation book"><i>ISO/IEC 14882:1998(E) Programming Language C++</i>. open-std.org – The C++ Standards Committee. 1 September 1998. pp.&#160;40–41.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=ISO%2FIEC+14882%3A1998%28E%29+Programming+Language+C%2B%2B&amp;rft.pages=40-41&amp;rft.pub=open-std.org+%E2%80%93+The+C%2B%2B+Standards+Committee&amp;rft.date=1998-09-01&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation">"Operators", <a rel="nofollow" class="external text" href="https://en.cppreference.com/w/cpp/language/expressions#Operators"><i>C++ reference</i></a> (wiki)</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.atitle=Operators&amp;rft.btitle=C%2B%2B+reference&amp;rft_id=https%3A%2F%2Fen.cppreference.com%2Fw%2Fcpp%2Flanguage%2Fexpressions%23Operators&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li>
+<li><a rel="nofollow" class="external text" href="https://en.cppreference.com/w/c/language/operator_precedence">C Operator Precedence</a></li>
+<li><cite class="citation"><a rel="nofollow" class="external text" href="https://docs.microsoft.com/en-US/cpp/cpp/postfix-increment-and-decrement-operators-increment-and-decrement"><i>Postfix Increment and Decrement Operators: ++ and --</i></a> (Developer network), Microsoft</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Postfix+Increment+and+Decrement+Operators%3A+%2B%2B+and+--&amp;rft.pub=Microsoft&amp;rft_id=https%3A%2F%2Fdocs.microsoft.com%2Fen-US%2Fcpp%2Fcpp%2Fpostfix-increment-and-decrement-operators-increment-and-decrement&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AOperators+in+C+and+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/>.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C_programming_language" title="Template:C programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C_programming_language" title="Template talk:C programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/C_(programming_language)" title="C (programming language)">C programming language</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*ANSI_C_**C89_and_C90_*C99_*C11_*C18_*C2x_*Embedded_C_*MISRA_C">
+<ul><li><a href="/wiki/ANSI_C" title="ANSI C">ANSI C</a>
+<ul><li><a href="/wiki/ANSI_C#C89_and_C90" title="ANSI C">C89 and C90</a></li></ul></li>
+<li><a href="/wiki/C99" title="C99">C99</a></li>
+<li><a href="/wiki/C11_(C_standard_revision)" title="C11 (C standard revision)">C11</a></li>
+<li><a href="/wiki/C18_(C_standard_revision)" title="C18 (C standard revision)">C18</a></li>
+<li><a href="/wiki/C2x" title="C2x">C2x</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Subroutine" title="Subroutine">Functions</a></li>
+<li><a href="/wiki/Include_directive#C" title="Include directive">Header files</a></li>
+<li><a href="/wiki/Category:C_libraries" title="Category:C libraries">Libraries</a></li>
+<li><a class="mw-selflink selflink">Operators</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String</a></li>
+<li><a href="/wiki/C_syntax" title="C syntax">Syntax</a></li>
+<li><a href="/wiki/C_preprocessor" title="C preprocessor">Preprocessor</a></li>
+<li><a href="/wiki/C_data_types" title="C data types">Data types</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C_standard_library" title="C standard library">Standard library<br />functions</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C_character_classification" title="C character classification">Char (ctype.h)</a></li>
+<li><a href="/wiki/C_file_input/output" title="C file input/output">File I/O (stdio.h)</a></li>
+<li><a href="/wiki/C_mathematical_functions" title="C mathematical functions">Math (math.h)</a></li>
+<li><a href="/wiki/C_dynamic_memory_allocation" title="C dynamic memory allocation">Dynamic memory (stdlib.h)</a></li>
+<li><a href="/wiki/C_string_handling" title="C string handling">String (string.h)</a></li>
+<li><a href="/wiki/C_date_and_time_functions" title="C date and time functions">Time (time.h)</a></li>
+<li><a href="/wiki/Stdarg.h" title="Stdarg.h">Variadic (stdarg.h)</a></li>
+<li><a href="/wiki/C_POSIX_library" title="C POSIX library">POSIX</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_standard_library" title="Category:C standard library">Standard<br />libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Bionic_(software)" title="Bionic (software)">Bionic</a>
+<ul><li><a href="/wiki/Hybris_(software)" title="Hybris (software)">libhybris</a></li></ul></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">EGLIBC</a></li>
+<li><a href="/wiki/GNU_C_Library" title="GNU C Library">glibc</a></li>
+<li><a href="/wiki/Klibc" title="Klibc">klibc</a></li>
+<li><a href="/wiki/Microsoft_Windows_library_files#MSVCRT.DLL,_MSVCPP.DLL_and_CRTDLL.DLL" title="Microsoft Windows library files">Microsoft Run-time Library</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li>
+<li><a href="/wiki/Newlib" title="Newlib">Newlib</a></li>
+<li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/BSD_libc" class="mw-redirect" title="BSD libc">BSD libc</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C_compilers" title="Category:C compilers">Compilers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C_compilers" title="List of compilers">Comparison of compilers</a></li>
+<li><a href="/wiki/Amsterdam_Compiler_Kit" title="Amsterdam Compiler Kit">ACK</a></li>
+<li><a href="/wiki/Borland_Turbo_C" title="Borland Turbo C">Borland Turbo C</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">ICC</a></li>
+<li><a href="/wiki/LCC_(compiler)" title="LCC (compiler)">LCC</a></li>
+<li><a href="/wiki/Portable_C_Compiler" title="Portable C Compiler">PCC</a></li>
+<li><a href="/wiki/Small_Device_C_Compiler" title="Small Device C Compiler">SDCC</a></li>
+<li><a href="/wiki/Tiny_C_Compiler" title="Tiny C Compiler">TCC</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a> / <a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Express</a> / <a href="/wiki/Microsoft_Visual_C%2B%2B" title="Microsoft Visual C++">C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/GNOME_Builder" title="GNOME Builder">GNOME Builder</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison with<br />other languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="Compatibility of C and C++">Compatibility of C and C++</a></li>
+<li>Comparison with <a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a href="/wiki/Comparison_of_Pascal_and_C" title="Comparison of Pascal and C">Comparison with Pascal</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Descendant<br />languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a></li>
+<li><a href="/wiki/D_(programming_language)" title="D (programming language)">D</a></li>
+<li><a href="/wiki/Objective-C" title="Objective-C">Objective-C</a></li>
+<li><a href="/wiki/Alef_(programming_language)" title="Alef (programming language)">Alef</a></li>
+<li><a href="/wiki/Limbo_(programming_language)" title="Limbo (programming language)">Limbo</a></li>
+<li><a href="/wiki/Go_(programming_language)" title="Go (programming language)">Go</a></li>
+<li><a href="/wiki/Vala_(programming_language)" title="Vala (programming language)">Vala</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1374
+Cached time: 20200322030928
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.492 seconds
+Real time usage: 0.658 seconds
+Preprocessor visited node count: 4174/1000000
+Post‐expand include size: 74983/2097152 bytes
+Template argument size: 5469/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 4/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 81503/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.146/10.000 seconds
+Lua memory usage: 4.71 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  496.614      1 -total
+ 33.80%  167.838      2 Template:Reflist
+ 17.90%   88.895      5 Template:Citation
+ 14.12%   70.139    117 Template:Cpp
+ 10.97%   54.483      2 Template:Citation_needed
+ 10.53%   52.298      1 Template:Short_description
+ 10.08%   50.048      2 Template:Fix
+  7.16%   35.578      1 Template:Pagetype
+  6.06%   30.070      1 Template:CProLang
+  5.73%   28.432      4 Template:Category_handler
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:585336-0!canonical and timestamp 20200322031005 and revision id 946741001
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;oldid=946741001">https://en.wikipedia.org/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;oldid=946741001</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li><li><a href="/wiki/Category:C%2B%2B" title="Category:C++">C++</a></li><li><a href="/wiki/Category:Operators_(programming)" title="Category:Operators (programming)">Operators (programming)</a></li><li><a href="/wiki/Category:Comparison_of_individual_programming_languages" title="Category:Comparison of individual programming languages">Comparison of individual programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Use_American_English_from_March_2019" title="Category:Use American English from March 2019">Use American English from March 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">All Wikipedia articles written in American English</a></li><li><a href="/wiki/Category:Use_dmy_dates_from_December_2019" title="Category:Use dmy dates from December 2019">Use dmy dates from December 2019</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_September_2011" title="Category:Articles with unsourced statements from September 2011">Articles with unsourced statements from September 2011</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_January_2009" title="Category:Articles with unsourced statements from January 2009">Articles with unsourced statements from January 2009</a></li><li><a href="/wiki/Category:Articles_with_example_C%2B%2B_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Operators+in+C+and+C%2B%2B" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Operators+in+C+and+C%2B%2B" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Operators_in_C_and_C%2B%2B" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Operators_in_C_and_C%2B%2B" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Operators_in_C_and_C%2B%2B">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Operators_in_C_and_C%2B%2B" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Operators_in_C_and_C%2B%2B" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;oldid=946741001" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1078424" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Operators_in_C_and_C%2B%2B&amp;id=946741001&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Operators+in+C+and+C%2B%2B">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Operators+in+C+and+C%2B%2B&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Anexo:Operadores_de_C_y_C%2B%2B" title="Anexo:Operadores de C y C++ – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/C%EC%99%80_C%2B%2B%EC%9D%98_%EC%97%B0%EC%82%B0%EC%9E%90" title="C와 C++의 연산자 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Oper%C3%A1torok_(C%2B%2B)" title="Operátorok (C++) – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="https://mk.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8_%D0%B2%D0%BE_C_%D0%B8_C%2B%2B" title="Оператори во C и C++ – Macedonian" lang="mk" hreflang="mk" class="interlanguage-link-target">Македонски</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/C%E3%81%A8C%2B%2B%E3%81%AE%E6%BC%94%E7%AE%97%E5%AD%90" title="CとC++の演算子 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Operadores_em_C_e_C%2B%2B" title="Operadores em C e C++ – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D0%B2_C_%D0%B8_C%2B%2B" title="Операторы в C и C++ – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8_%D1%83_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%BC_%D1%98%D0%B5%D0%B7%D0%B8%D1%86%D0%B8%D0%BC%D0%B0_C_%D0%B8_C%2B%2B" title="Оператори у програмским језицима C и C++ – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%B8_%D0%B2_C_%D1%82%D0%B0_C%2B%2B" title="Оператори в C та C++ – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/C%E5%92%8CC%2B%2B%E9%81%8B%E7%AE%97%E5%AD%90" title="C和C++運算子 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1078424#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 22 March 2020, at 03:10<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Operators_in_C_and_C%2B%2B&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.492","walltime":"0.658","ppvisitednodes":{"value":4174,"limit":1000000},"postexpandincludesize":{"value":74983,"limit":2097152},"templateargumentsize":{"value":5469,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":4,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":81503,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  496.614      1 -total"," 33.80%  167.838      2 Template:Reflist"," 17.90%   88.895      5 Template:Citation"," 14.12%   70.139    117 Template:Cpp"," 10.97%   54.483      2 Template:Citation_needed"," 10.53%   52.298      1 Template:Short_description"," 10.08%   50.048      2 Template:Fix","  7.16%   35.578      1 Template:Pagetype","  6.06%   30.070      1 Template:CProLang","  5.73%   28.432      4 Template:Category_handler"]},"scribunto":{"limitreport-timeusage":{"value":"0.146","limit":"10.000"},"limitreport-memusage":{"value":4936264,"limit":52428800}},"cachereport":{"origin":"mw1374","timestamp":"20200322030928","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Operators in C and C++","url":"https:\/\/en.wikipedia.org\/wiki\/Operators_in_C_and_C%2B%2B","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1078424","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1078424","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-04-09T09:03:04Z","dateModified":"2020-03-22T03:10:05Z","headline":"built-in and (in C++) overloadable functions"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":111,"wgHostname":"mw1250"});});</script></body></html>

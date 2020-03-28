@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>struct (C programming language) - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn-CHQpAAEIAAHOk7ScAAADF","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Struct_(C_programming_language)","wgTitle":"Struct (C programming language)","wgCurRevisionId":947783725,"wgRevisionId":947783725,"wgArticleId":992538,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["C (programming language)"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Struct_(C_programming_language)","wgRelevantArticleId":992538,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1164699","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready",
+"ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Struct_(C_programming_language)"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Struct_C_programming_language rootpage-Struct_C_programming_language skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">struct (C programming language)</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A <b>struct</b> in the <a href="/wiki/C_programming_language" class="mw-redirect" title="C programming language">C programming language</a> (and many derivatives) is a <a href="/wiki/Composite_data_type" title="Composite data type">composite data type</a> (or <a href="/wiki/Record_(computer_science)" title="Record (computer science)">record</a>) declaration that defines a physically grouped list of variables under one name in a block of memory, allowing the different variables to be accessed via a single <a href="/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointer</a> or by the struct declared name which returns the same address. The struct data type can contain other data types so is used for mixed-data-type records such as a hard-drive directory entry (file length, name, extension, physical address, etc.), or other mixed-type records (name, address, telephone, balance, etc.).
+</p><p>The C struct directly references a <i>contiguous block</i> of physical memory, usually delimited (sized) by word-length boundaries. It corresponds to the similarly named feature available in some <a href="/wiki/Assembly_language" title="Assembly language">assemblers</a> for Intel processors. Language implementations that could utilize half-word or byte boundaries (giving denser packing, using less memory) were considered advanced in the mid-1980s. Being a block of contiguous memory, each field within a struct is located at a certain fixed offset from the start.
+</p><p>Because the contents of a struct are stored in contiguous memory, the <a href="/wiki/Sizeof" title="Sizeof">sizeof</a> operator must be used to get the number of bytes needed to store a particular type of struct, just as it can be used for <a href="/wiki/Primitive_data_type" title="Primitive data type">primitives</a>. The alignment of particular fields in the struct (with respect to <a href="/wiki/Word_(computer_architecture)" title="Word (computer architecture)">word</a> boundaries) is implementation-specific and may include padding, although modern compilers typically support the <code>#pragma pack</code> directive, which changes the size in bytes used for alignment.<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup>
+</p><p>In the <a href="/wiki/C%2B%2B" title="C++">C++</a> language, a struct is identical to a <a href="/wiki/C%2B%2B_classes" title="C++ classes">C++ class</a> but has a different default visibility: class members are private by default, whereas struct members are public by default.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#In_other_languages"><span class="tocnumber">1</span> <span class="toctext">In other languages</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Declaration"><span class="tocnumber">2</span> <span class="toctext">Declaration</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Initialization"><span class="tocnumber">3</span> <span class="toctext">Initialization</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Assignment"><span class="tocnumber">4</span> <span class="toctext">Assignment</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Pointers_to_struct"><span class="tocnumber">5</span> <span class="toctext">Pointers to struct</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#typedef"><span class="tocnumber">6</span> <span class="toctext">typedef</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="In_other_languages">In other languages</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=1" title="Edit section: In other languages">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The struct data type in C was derived from the <a href="/wiki/ALGOL_68" title="ALGOL 68">ALGOL 68</a> struct data type.<sup id="cite_ref-sigplan_2-0" class="reference"><a href="#cite_note-sigplan-2">&#91;2&#93;</a></sup>
+</p><p>Like its C counterpart, the struct data type in <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> (<i>Structure</i> in <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a>) is similar to a <a href="/wiki/Class_(computer_programming)" title="Class (computer programming)">class</a>. The biggest difference between a struct and a class in these languages is that when a struct is passed as an argument to a function, any modifications to the struct in that function will not be reflected in the original variable (unless pass-by-reference is used).<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p><p>This differs from C++, where classes or structs can be statically allocated or dynamically allocated either on the stack (similar to C#) or on the heap, with an explicit pointer. In <a href="/wiki/C%2B%2B" title="C++">C++</a>, the only difference between a struct and a <a href="/wiki/C%2B%2B_classes" title="C++ classes">class</a> is that the members and base classes of a struct are <a href="/wiki/Access_modifiers" title="Access modifiers">public</a> by default. (A class defined with the <code>class</code> keyword has <a href="/wiki/Access_modifiers" title="Access modifiers">private</a> members and base classes by default.)
+</p><p><a href="/wiki/Golang" class="mw-redirect" title="Golang">Golang</a> also uses structs.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Declaration">Declaration</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=2" title="Edit section: Declaration">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The general syntax for a struct declaration in C is:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">tag_name</span> <span class="p">{</span>
+   <span class="n">type</span> <span class="n">member1</span><span class="p">;</span>
+   <span class="n">type</span> <span class="n">member2</span><span class="p">;</span>
+   <span class="cm">/* declare as many members as desired, but the entire structure size must be known to the compiler. */</span>
+<span class="p">};</span>
+</pre></div>
+<p>Here <code>tag_name</code> is optional in some contexts.
+</p><p>Such a <code>struct</code> declaration may also appear in the context of a <a href="/wiki/Typedef" title="Typedef">typedef</a> declaration of a type alias or the declaration or definition of a variable:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">tag_name</span> <span class="p">{</span>
+   <span class="n">type</span> <span class="n">member1</span><span class="p">;</span>
+   <span class="n">type</span> <span class="n">member2</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">struct_alias</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Initialization">Initialization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=3" title="Edit section: Initialization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are three ways to initialize a structure. For the <code>struct</code> type
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Declare the struct with integer members x, y */</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="p">{</span>
+   <span class="kt">int</span>    <span class="n">x</span><span class="p">;</span>
+   <span class="kt">int</span>    <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p><i>C89-style initializers</i> are used when contiguous members may be given.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Define a variable p of type point, and initialize its first two members in place */</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="n">p</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">};</span>
+</pre></div>
+<p>For non contiguous or out of order members list, <i>designated initializer</i> style<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> may be used
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Define a variable p of type point, and set members using designated initializers*/</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="n">p</span> <span class="o">=</span> <span class="p">{</span> <span class="p">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">};</span>
+</pre></div>
+<p>If an initializer is given or if the object is <a href="/wiki/Static_memory_allocation" class="mw-redirect" title="Static memory allocation">statically allocated</a>, omitted elements are initialized to 0.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup>
+</p><p>A third way of initializing a structure is to copy the value of an existing object of the same type
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cm">/* Define a variable q of type point, and set members to the same values as those of p */</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="Assignment">Assignment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=4" title="Edit section: Assignment">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A struct may be assigned to another struct. A compiler might use <code>memcpy()</code> to perform such an assignment.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">point</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">point</span> <span class="n">p</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span> <span class="p">};</span>        <span class="cm">/* initialized variable */</span>
+    <span class="k">struct</span> <span class="n">point</span> <span class="n">q</span><span class="p">;</span>                   <span class="cm">/* uninitialized */</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span>                     <span class="cm">/* copy member values from p into q */</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Pointers_to_struct">Pointers to struct</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=5" title="Edit section: Pointers to struct">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Pointers can be used to refer to a <code>struct</code> by its address. This is useful for passing structs to a function. The pointer can be <a href="/wiki/Dereference_operator" title="Dereference operator">dereferenced</a> using the <code>*</code> operator. The <code>-&gt;</code> operator dereferences the pointer to struct (left operand) and then accesses the value of a member of the struct (right operand).
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">struct</span> <span class="n">point</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="n">my_point</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span> <span class="p">};</span>
+<span class="k">struct</span> <span class="n">point</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">my_point</span><span class="p">;</span>  <span class="cm">/* p is a pointer to my_point */</span>
+<span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">).</span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>                   <span class="cm">/* set the first member of the struct */</span>
+<span class="n">p</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>                     <span class="cm">/* equivalent method to set the first member of the struct */</span>
+</pre></div>
+<h2><span class="mw-headline" id="typedef">typedef</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=6" title="Edit section: typedef">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Typedef" title="Typedef">typedef</a></div>
+<p><a href="/wiki/Typedef" title="Typedef">Typedefs</a> can be used as shortcuts, for example:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+   <span class="kt">int</span>    <span class="n">account_number</span><span class="p">;</span>
+   <span class="kt">char</span>   <span class="o">*</span><span class="n">first_name</span><span class="p">;</span>
+   <span class="kt">char</span>   <span class="o">*</span><span class="n">last_name</span><span class="p">;</span>
+   <span class="kt">float</span>  <span class="n">balance</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">account</span><span class="p">;</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Bit_field" title="Bit field">Bit field</a></li>
+<li><a href="/wiki/Composite_data_type" title="Composite data type">Composite data type</a></li>
+<li><a href="/wiki/Flexible_array_member" title="Flexible array member">Flexible array member</a></li>
+<li><a href="/wiki/Passive_data_structure" title="Passive data structure">Passive data structure</a></li>
+<li><a href="/wiki/Union_type" title="Union type">Union type</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://stackoverflow.com/questions/2748995/c-struct-memory-layout">C struct memory layout? - Stack Overflow</a></span>
+</li>
+<li id="cite_note-sigplan-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-sigplan_2-0">^</a></b></span> <span class="reference-text"><cite id="CITEREFRitchie1993" class="citation journal"><a href="/wiki/Dennis_Ritchie" title="Dennis Ritchie">Ritchie, Dennis M.</a> (March 1993). <a rel="nofollow" class="external text" href="http://www.bell-labs.com/usr/dmr/www/chist.html">"The Development of the C Language"</a>. <i>ACM SIGPLAN Notices</i>. <b>28</b> (3): 201–208. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1145%2F155360.155580">10.1145/155360.155580</a>. <q>The scheme of type composition adopted by C owes considerable debt to Algol 68, although it did not, perhaps, emerge in a form that Algol's adherents would approve of. The central notion I captured from Algol was a type structure based on atomic types (including structures), composed into arrays, pointers (references), and functions (procedures). Algol 68's concept of unions and casts also had an influence that appeared later.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=ACM+SIGPLAN+Notices&amp;rft.atitle=The+Development+of+the+C+Language&amp;rft.volume=28&amp;rft.issue=3&amp;rft.pages=201-208&amp;rft.date=1993-03&amp;rft_id=info%3Adoi%2F10.1145%2F155360.155580&amp;rft.aulast=Ritchie&amp;rft.aufirst=Dennis+M.&amp;rft_id=http%3A%2F%2Fwww.bell-labs.com%2Fusr%2Fdmr%2Fwww%2Fchist.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://yoda.arachsys.com/csharp/parameters.html">Parameter passing in C#</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://yourbasic.org/golang/structs-explained/">https://yourbasic.org/golang/structs-explained/</a></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://gobyexample.com/structs">https://gobyexample.com/structs</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation book">Kelley, Al; Pohl, Ira (2004). <span class="cs1-lock-registration" title="Free registration required"><a rel="nofollow" class="external text" href="https://archive.org/details/bookoncprogrammi00kell/page/418"><i>A Book On C: Programming in C</i></a></span> (Fourth ed.). pp.&#160;<a rel="nofollow" class="external text" href="https://archive.org/details/bookoncprogrammi00kell/page/418">418</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-18399-4" title="Special:BookSources/0-201-18399-4"><bdi>0-201-18399-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=A+Book+On+C%3A+Programming+in+C&amp;rft.pages=418&amp;rft.edition=Fourth&amp;rft.date=2004&amp;rft.isbn=0-201-18399-4&amp;rft.aulast=Kelley&amp;rft.aufirst=Al&amp;rft.au=Pohl%2C+Ira&amp;rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fbookoncprogrammi00kell%2Fpage%2F418&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.cbclx01/strin.htm">"IBM Linux compilers. Initialization of structures and unions"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=IBM+Linux+compilers.+Initialization+of+structures+and+unions&amp;rft_id=https%3A%2F%2Fwww.ibm.com%2Fsupport%2Fknowledgecenter%2Fen%2FSSLTBW_2.3.0%2Fcom.ibm.zos.v2r3.cbclx01%2Fstrin.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://c0x.coding-guidelines.com/6.7.8.html#1695">"The New C Standard, §6.7.8 Initialization"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+New+C+Standard%2C+%C2%A76.7.8+Initialization&amp;rft_id=http%3A%2F%2Fc0x.coding-guidelines.com%2F6.7.8.html%231695&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AStruct+%28C+programming+language%29" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<p><span></span>
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw1313
+Cached time: 20200328131437
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.188 seconds
+Real time usage: 0.249 seconds
+Preprocessor visited node count: 357/1000000
+Post‐expand include size: 7350/2097152 bytes
+Template argument size: 95/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 21008/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.104/10.000 seconds
+Lua memory usage: 2.54 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  207.862      1 -total
+ 81.43%  169.263      1 Template:Reflist
+ 61.98%  128.837      1 Template:Cite_journal
+ 14.82%   30.807      1 Template:Main
+  5.09%   10.584      2 Template:Cite_web
+  4.43%    9.203      1 Template:Cite_book
+  2.72%    5.660      1 Template:Lowercase
+  1.48%    3.083      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:992538-0!canonical and timestamp 20200328131545 and revision id 947783725
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=947783725">https://en.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;oldid=947783725</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C_(programming_language)" title="Category:C (programming language)">C (programming language)</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Struct+%28C+programming+language%29" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Struct+%28C+programming+language%29" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Struct_(C_programming_language)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Struct_(C_programming_language)" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Struct_(C_programming_language)">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Struct_(C_programming_language)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Struct_(C_programming_language)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Struct_(C_programming_language)&amp;oldid=947783725" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Struct_(C_programming_language)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1164699" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Struct_%28C_programming_language%29&amp;id=947783725&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-wikiversity"><a href="https://en.wikiversity.org/wiki/C_Programming/Structs" hreflang="en">Wikiversity</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Struct+%28C+programming+language%29">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Struct+%28C+programming+language%29&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Struct_(C_programming_language)&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Struktura_(programovac%C3%AD_jazyk_C)" title="Struktura (programovací jazyk C) – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Struktur_(Datentyp)" title="Struktur (Datentyp) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D8%AE%D8%AA%D8%A7%D8%B1_(%D8%B2%D8%A8%D8%A7%D9%86_%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C_%D8%B3%DB%8C)" title="ساختار (زبان برنامه‌نویسی سی) – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/Struct" title="Struct – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E6%A7%8B%E9%80%A0%E4%BD%93" title="構造体 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Struct" title="Struct – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Struktura_(programowanie)" title="Struktura (programowanie) – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0_(%D1%8F%D0%B7%D1%8B%D0%BA_%D0%A1%D0%B8)" title="Структура (язык Си) – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E7%BB%93%E6%9E%84%E4%BD%93_(C%E8%AF%AD%E8%A8%80)" title="结构体 (C语言) – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1164699#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 28 March 2020, at 13:15<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Struct_(C_programming_language)&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.188","walltime":"0.249","ppvisitednodes":{"value":357,"limit":1000000},"postexpandincludesize":{"value":7350,"limit":2097152},"templateargumentsize":{"value":95,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":21008,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  207.862      1 -total"," 81.43%  169.263      1 Template:Reflist"," 61.98%  128.837      1 Template:Cite_journal"," 14.82%   30.807      1 Template:Main","  5.09%   10.584      2 Template:Cite_web","  4.43%    9.203      1 Template:Cite_book","  2.72%    5.660      1 Template:Lowercase","  1.48%    3.083      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.104","limit":"10.000"},"limitreport-memusage":{"value":2665412,"limit":52428800}},"cachereport":{"origin":"mw1313","timestamp":"20200328131437","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Struct (C programming language)","url":"https:\/\/en.wikipedia.org\/wiki\/Struct_(C_programming_language)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1164699","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1164699","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-09-17T04:39:02Z","dateModified":"2020-03-28T13:15:45Z","headline":"structured type in C programming language"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":97,"wgHostname":"mw1271"});});</script></body></html>

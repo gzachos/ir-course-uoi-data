@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>SystemC - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn82bwpAICIAAJcNbsgAAAEY","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"SystemC","wgTitle":"SystemC","wgCurRevisionId":931791375,"wgRevisionId":931791375,"wgArticleId":1038989,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","CS1 errors: missing periodical","Use American English from March 2019","All Wikipedia articles written in American English","Articles with short description","Use mdy dates from March 2019","All articles with specifically marked weasel-worded phrases",
+"Articles with specifically marked weasel-worded phrases from May 2019","Official website different in Wikidata and Wikipedia","Hardware description languages","Hardware verification languages","System description languages","C++ programming language family"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"SystemC","wgRelevantArticleId":1038989,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1753563","wgCentralAuthMobileDomain":
+!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents",
+"ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=SystemC&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=SystemC&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/SystemC"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-SystemC rootpage-SystemC skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">SystemC</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="mw-empty-elt">
+</p>
+<div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none">C++ extensions for simulating embedded systems</div>
+<p class="mw-empty-elt">
+</p>
+<div role="note" class="hatnote navigation-not-searchable">For the UK health care company, see <a href="/wiki/System_C" title="System C">System C</a>.</div>
+<p><b>SystemC</b> is a set of <a href="/wiki/C%2B%2B" title="C++">C++</a> classes and macros which provide an <a href="/wiki/Event-driven_programming" title="Event-driven programming">event-driven</a> simulation interface (see also <a href="/wiki/Discrete_event_simulation" class="mw-redirect" title="Discrete event simulation">discrete event simulation</a>).  These facilities enable a designer to <i>simulate</i> <a href="/wiki/Concurrent_process" class="mw-redirect" title="Concurrent process">concurrent processes</a>, each described using plain <a href="/wiki/C%2B%2B" title="C++">C++</a> <a href="/wiki/Syntax" title="Syntax">syntax</a>. SystemC processes can communicate in a <i>simulated</i> real-time environment, using signals of all the <a href="/wiki/Datatype" class="mw-redirect" title="Datatype">datatypes</a> offered by C++, some additional ones offered by the SystemC library, as well as user defined. In certain respects, SystemC deliberately mimics the <a href="/wiki/Hardware_description_language" title="Hardware description language">hardware description languages</a> <a href="/wiki/VHDL" title="VHDL">VHDL</a> and <a href="/wiki/Verilog" title="Verilog">Verilog</a>, but is more aptly described as a <i>system-level modeling language</i>.
+</p><p>SystemC is applied to system-level <a href="/wiki/Scientific_modelling" title="Scientific modelling">modeling</a>, architectural exploration, performance modeling, <a href="/wiki/Software_development" title="Software development">software development</a>, <a href="/wiki/Functional_verification" title="Functional verification">functional verification</a>, and <a href="/wiki/High-level_synthesis" title="High-level synthesis">high-level synthesis</a>. SystemC is often associated with <a href="/wiki/Electronic_system-level" class="mw-redirect" title="Electronic system-level">electronic system-level</a> (ESL) design, and with <a href="/wiki/Transaction-level_modeling" title="Transaction-level modeling">transaction-level modeling</a> (TLM).
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Language_specification"><span class="tocnumber">1</span> <span class="toctext">Language specification</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Language_features"><span class="tocnumber">2</span> <span class="toctext">Language features</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Modules"><span class="tocnumber">2.1</span> <span class="toctext">Modules</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Ports"><span class="tocnumber">2.2</span> <span class="toctext">Ports</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Signals"><span class="tocnumber">2.3</span> <span class="toctext">Signals</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Exports"><span class="tocnumber">2.4</span> <span class="toctext">Exports</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Processes"><span class="tocnumber">2.5</span> <span class="toctext">Processes</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Channels"><span class="tocnumber">2.6</span> <span class="toctext">Channels</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Interfaces"><span class="tocnumber">2.7</span> <span class="toctext">Interfaces</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Events"><span class="tocnumber">2.8</span> <span class="toctext">Events</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Data_types"><span class="tocnumber">2.9</span> <span class="toctext">Data types</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#History"><span class="tocnumber">3</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Example_code"><span class="tocnumber">4</span> <span class="toctext">Example code</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#Power/Energy_estimation_in_SystemC"><span class="tocnumber">5</span> <span class="toctext">Power/Energy estimation in SystemC</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#Notes"><span class="tocnumber">7</span> <span class="toctext">Notes</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Language_specification">Language specification</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=1" title="Edit section: Language specification">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>SystemC is defined and promoted by the Open SystemC Initiative (OSCI — now <a href="/wiki/Accellera" title="Accellera">Accellera</a>), and has been approved by the IEEE Standards Association as IEEE 1666-2011<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> - the SystemC Language Reference Manual (LRM). The LRM provides the definitive statement of the semantics of SystemC. OSCI also provide an open-source proof-of-concept simulator (sometimes incorrectly referred to as the reference simulator), which can be downloaded from the OSCI website.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> Although it was the intent of OSCI that commercial vendors and academia could create original software compliant to IEEE 1666, in practice most SystemC implementations have been at least partly based on the OSCI proof-of-concept simulator.
+</p><p>SystemC has semantic similarities to <a href="/wiki/VHDL" title="VHDL">VHDL</a> and <a href="/wiki/Verilog" title="Verilog">Verilog</a>, but may be said to have a syntactical overhead compared to these when used as a <a href="/wiki/Hardware_description_language" title="Hardware description language">hardware description language</a>. On the other hand, it offers a greater range of expression, similar to <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented design partitioning</a> and template classes. Although strictly a C++ class library, SystemC is sometimes viewed as being a language in its own right. Source code can be compiled with the SystemC library (which includes a simulation kernel) to give an executable. The performance of the OSCI open-source implementation is typically less optimal than commercial VHDL/Verilog simulators when used for <a href="/wiki/Register_transfer_level" class="mw-redirect" title="Register transfer level">register transfer level</a> simulation.
+</p><p>SystemC version 1 included common <a href="/wiki/Hardware_description_language" title="Hardware description language">hardware-description language</a> features such as structural hierarchy and connectivity, clock-cycle accuracy, delta cycles, <a href="/wiki/Four-valued_logic" title="Four-valued logic">four-valued logic</a> (0, 1, X, Z), and bus-resolution functions. From version 2 onward, the focus of SystemC has moved to communication abstraction, <a href="/wiki/Transaction-level_modeling" title="Transaction-level modeling">transaction-level modeling</a>, and virtual-platform modeling. SystemC version 2 added abstract ports, dynamic processes, and timed event notifications.
+</p>
+<h2><span class="mw-headline" id="Language_features">Language features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=2" title="Edit section: Language features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Modules">Modules</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=3" title="Edit section: Modules">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SystemC has a notion of a container class called a module. This is a hierarchical entity that can have other modules or processes contained in it.
+</p><p>Modules are the basic building blocks of a SystemC design hierarchy. A SystemC model usually consists of several modules which communicate via ports. The modules can be thought of as a building block of SystemC.
+</p>
+<h3><span class="mw-headline" id="Ports">Ports</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=4" title="Edit section: Ports">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ports allow communication from inside a module to the outside (usually to other modules) via channels.
+</p>
+<h3><span class="mw-headline" id="Signals">Signals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=5" title="Edit section: Signals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SystemC supports resolved and unresolved signals. Resolved signals can have more than one driver (a bus) while unresolved signals can have only one driver.
+</p>
+<h3><span class="mw-headline" id="Exports">Exports</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=6" title="Edit section: Exports">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Modules have ports through which they connect to other modules. SystemC supports single-direction and bidirectional ports.
+</p><p>Exports incorporate channels and allow communication from inside a module to the outside (usually to other modules).
+</p>
+<h3><span class="mw-headline" id="Processes">Processes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=7" title="Edit section: Processes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Processes are used to describe functionality. Processes are contained inside modules. SystemC provides three different process abstractions<sup class="noprint Inline-Template" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Avoid_weasel_words" class="mw-redirect" title="Wikipedia:Avoid weasel words"><span title="The material near this tag possibly uses too vague attribution or weasel words. (May 2019)">which?</span></a></i>&#93;</sup> to be used by hardware and software designers. Processes are the main computation elements. They are concurrent.
+</p>
+<h3><span class="mw-headline" id="Channels">Channels</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=8" title="Edit section: Channels">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Channels are the communication elements of SystemC. They can be either simple wires or complex communication mechanisms like <a href="/wiki/FIFO_(computing_and_electronics)" title="FIFO (computing and electronics)">FIFOs</a> or <a href="/wiki/Bus_(computing)" title="Bus (computing)">bus channels</a>.
+</p><p>Elementary channels:
+</p>
+<ul><li>signal: the equivalent of a wire</li>
+<li>buffer</li>
+<li>fifo</li>
+<li>mutex</li>
+<li>semaphore</li></ul>
+<h3><span class="mw-headline" id="Interfaces">Interfaces</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=9" title="Edit section: Interfaces">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Ports use interfaces to communicate with channels.
+</p>
+<h3><span class="mw-headline" id="Events">Events</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=10" title="Edit section: Events">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Events allow synchronization between processes and must be defined during initialization.
+</p>
+<h3><span class="mw-headline" id="Data_types">Data types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=11" title="Edit section: Data types">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>SystemC introduces several data types which support the modeling of hardware.
+</p><p>Extended standard types:
+</p>
+<ul><li>sc_int&lt;<i>n</i>&gt;      <i>n</i>-bit signed integer</li>
+<li>sc_uint&lt;<i>n</i>&gt;     <i>n</i>-bit unsigned integer</li>
+<li>sc_bigint&lt;<i>n</i>&gt;   <i>n</i>-bit signed integer for <i>n</i> &gt; 64</li>
+<li>sc_biguint&lt;<i>n</i>&gt;  <i>n</i>-bit unsigned integer for <i>n</i> &gt; 64</li></ul>
+<p>Logic types:
+</p>
+<ul><li>sc_bit        2-valued single bit</li>
+<li>sc_logic      4-valued single bit</li>
+<li>sc_bv&lt;<i>n</i>&gt;       vector of length <i>n</i> of sc_bit</li>
+<li>sc_lv&lt;<i>n</i>&gt;       vector of length <i>n</i> of sc_logic</li></ul>
+<p>Fixed point types:
+</p>
+<ul><li>sc_fixed&lt;&gt;    templated signed fixed point</li>
+<li>sc_ufixed&lt;&gt;   templated unsigned fixed point</li>
+<li>sc_fix        untemplated signed fixed point</li>
+<li>sc_ufix       untemplated unsigned fixed point</li></ul>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=12" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>1999-09-27 Open SystemC Initiative announced</li>
+<li>2000-03-01 SystemC V0.91 released</li>
+<li>2000-03-28 SystemC V1.0 released</li>
+<li>2001-02-01 SystemC V2.0 specification and V1.2 Beta source code released</li>
+<li>2003-06-03 SystemC 2.0.1 LRM (language reference manual) released</li>
+<li>2005-06-06 SystemC 2.1 LRM and TLM 1.0 transaction-level modeling standard released</li>
+<li>2005-12-12 IEEE approves the IEEE 1666&#8211;2005 standard for SystemC</li>
+<li>2007-04-13 SystemC v2.2 released</li>
+<li>2008-06-09 TLM-2.0.0 library released</li>
+<li>2009-07-27 TLM-2.0 LRM released, accompanied by TLM-2.0.1 library</li>
+<li>2010-03-08 <a href="/wiki/SystemC_AMS" title="SystemC AMS">SystemC AMS</a> extensions 1.0 LRM released</li>
+<li>2011-11-10 IEEE approves the IEEE 1666&#8211;2011 standard for SystemC<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup></li>
+<li>2016-04-06 IEEE approves the IEEE 1666.1&#8211;2016 standard for <a href="/wiki/SystemC_AMS" title="SystemC AMS">SystemC AMS</a></li></ul>
+<p>SystemC traces its origins to work on Scenic programming language described in a DAC 1997 paper.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p><a href="/wiki/ARM_Holdings" class="mw-redirect" title="ARM Holdings">ARM</a> Ltd., <a href="/wiki/CoWare" class="mw-redirect" title="CoWare">CoWare</a>, <a href="/wiki/Synopsys" title="Synopsys">Synopsys</a> and CynApps teamed up to develop SystemC (CynApps later became <a href="/wiki/Forte_Design_Systems" title="Forte Design Systems">Forte Design Systems</a>) to launch it first draft version in 1999.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>  The chief competitor at the time was <a href="/wiki/SpecC" title="SpecC">SpecC</a> another C based open source package developed by <a href="/wiki/UC_Irvine" class="mw-redirect" title="UC Irvine">UC Irvine</a> personnel and some Japanese companies.
+</p><p>In June 2000, a standards group known as the <a href="/wiki/Open_SystemC_Initiative" class="mw-redirect" title="Open SystemC Initiative">Open SystemC Initiative</a> was formed to provide an industry neutral organization to host SystemC activities and to allow Synopsys' largest competitors, Cadence and Mentor Graphics, democratic representation in SystemC development.
+</p>
+<h2><span class="mw-headline" id="Example_code">Example code</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=13" title="Edit section: Example code">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Example code of an <a href="/wiki/Adder_(electronics)" title="Adder (electronics)">adder</a>:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;systemc.h&quot;</span><span class="cp"></span>
+
+<span class="n">SC_MODULE</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>          <span class="c1">// module (class) declaration</span>
+<span class="p">{</span>
+  <span class="n">sc_in</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>        <span class="c1">// ports</span>
+  <span class="n">sc_out</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">sum</span><span class="p">;</span>
+
+  <span class="kt">void</span> <span class="nf">do_add</span><span class="p">()</span>           <span class="c1">// process</span>
+  <span class="p">{</span>
+    <span class="n">sum</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">read</span><span class="p">()</span> <span class="o">+</span> <span class="n">b</span><span class="p">.</span><span class="n">read</span><span class="p">());</span> <span class="c1">//or just sum = a + b</span>
+  <span class="p">}</span>
+
+  <span class="n">SC_CTOR</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>          <span class="c1">// constructor</span>
+  <span class="p">{</span>
+    <span class="n">SC_METHOD</span><span class="p">(</span><span class="n">do_add</span><span class="p">);</span>    <span class="c1">// register do_add to kernel</span>
+    <span class="n">sensitive</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">b</span><span class="p">;</span>  <span class="c1">// sensitivity list of do_add</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+<h2><span id="Power.2FEnergy_estimation_in_SystemC"></span><span class="mw-headline" id="Power/Energy_estimation_in_SystemC">Power/Energy estimation in SystemC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=14" title="Edit section: Power/Energy estimation in SystemC">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The Power/Energy estimation can be accomplished in SystemC by means of simulations.
+<a href="/w/index.php?title=Powersim&amp;action=edit&amp;redlink=1" class="new" title="Powersim (page does not exist)">Powersim</a><sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> is a SystemC class library aimed to the calculation of power and energy consumption of hardware described at system level. To this end, C++ operators are monitored and different energy models can be used for each SystemC data type.
+Simulations with Powersim do not require any change in the application source code.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=15" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Accellera" title="Accellera">Accellera</a></li>
+<li><a href="/wiki/SpecC" title="SpecC">SpecC</a></li>
+<li><a href="/wiki/SystemVerilog" title="SystemVerilog">SystemVerilog</a></li>
+<li><a href="/wiki/SystemRDL" title="SystemRDL">SystemRDL</a></li></ul>
+<h2><span class="mw-headline" id="Notes">Notes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=16" title="Edit section: Notes">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://standards.ieee.org/getieee/1666/">"Browse Standards"</a>. <i>standards.ieee.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=standards.ieee.org&amp;rft.atitle=Browse+Standards&amp;rft_id=http%3A%2F%2Fstandards.ieee.org%2Fgetieee%2F1666%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASystemC" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.systemc.org">www.systemc.org, the Open SystemC Initiative website</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20081006172519/http://systemc.org/">Archived</a> 2008-10-06 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text">IEEE Approves Revised IEEE 1666™ “SystemC Language” Standard for Electronic System-Level Design, Adding Support for Transaction-level Modeling -- <a rel="nofollow" class="external free" href="http://www.businesswire.com/news/home/20111109006054/en/IEEE-Approves-Revised-IEEE-1666%E2%84%A2-%E2%80%9CSystemC-Language%E2%80%9D">http://www.businesswire.com/news/home/20111109006054/en/IEEE-Approves-Revised-IEEE-1666%E2%84%A2-%E2%80%9CSystemC-Language%E2%80%9D</a></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation journal">"ScenicDAC1997". <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.6483">10.1.1.56.6483</a></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=ScenicDAC1997&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.56.6483&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASystemC" class="Z3988"></span> <span class="cs1-hidden-error error citation-comment">Cite journal requires <code class="cs1-code">&#124;journal=</code> (<a href="/wiki/Help:CS1_errors#missing_periodical" title="Help:CS1 errors">help</a>)</span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text">Synopsys and Co-Ware Inc., which did much of the work behind the SystemC -- <a rel="nofollow" class="external free" href="http://www.electronicsweekly.com/Articles/1999/12/07/13906/stm-synopsys-in-3-year-rampd-deal.htm">http://www.electronicsweekly.com/Articles/1999/12/07/13906/stm-synopsys-in-3-year-rampd-deal.htm</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text">"<a href="/wiki/ARM_Holdings" class="mw-redirect" title="ARM Holdings">ARM</a> is pleased that <a href="/wiki/Synopsys" title="Synopsys">Synopsys</a>, <a href="/wiki/CoWare" class="mw-redirect" title="CoWare">CoWare</a> and other companies have come together on SystemC, because if it is taken up by the industry, it simplifies our world," said <a href="/w/index.php?title=Tudor_Brown&amp;action=edit&amp;redlink=1" class="new" title="Tudor Brown (page does not exist)">Tudor Brown</a>, chief technology officer of <a href="/wiki/ARM_Holdings" class="mw-redirect" title="ARM Holdings">ARM</a> Ltd" in Babel of languages competing for role in SoC  -  <a rel="nofollow" class="external free" href="http://www.eetimes.com/ip99/ip99story1.html">http://www.eetimes.com/ip99/ip99story1.html</a></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://sourceforge.net/projects/powersim/">http://sourceforge.net/projects/powersim/</a></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=17" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><cite class="citation book"><i>1666-2005 — IEEE Standard System C Language Reference Manual</i>. 2006. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FIEEESTD.2006.99475">10.1109/IEEESTD.2006.99475</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7381-4871-7" title="Special:BookSources/0-7381-4871-7"><bdi>0-7381-4871-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=1666-2005+%E2%80%94+IEEE+Standard+System+C+Language+Reference+Manual&amp;rft.date=2006&amp;rft_id=info%3Adoi%2F10.1109%2FIEEESTD.2006.99475&amp;rft.isbn=0-7381-4871-7&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASystemC" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li><cite class="citation book"><i>1666-2011 — IEEE Standard for Standard SystemC Language Reference Manual</i>. 2012. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1109%2FIEEESTD.2012.6134619">10.1109/IEEESTD.2012.6134619</a>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-7381-6801-2" title="Special:BookSources/978-0-7381-6801-2"><bdi>978-0-7381-6801-2</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=1666-2011+%E2%80%94+IEEE+Standard+for+Standard+SystemC+Language+Reference+Manual&amp;rft.date=2012&amp;rft_id=info%3Adoi%2F10.1109%2FIEEESTD.2012.6134619&amp;rft.isbn=978-0-7381-6801-2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASystemC" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></li>
+<li>T. Grötker, S. Liao, G. Martin, S. Swan, <i>System Design with SystemC</i>. Springer, 2002. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-4020-7072-1" title="Special:BookSources/1-4020-7072-1">1-4020-7072-1</a></li>
+<li><a rel="nofollow" class="external text" href="http://sclive.wordpress.com/">A SystemC based Linux Live CD with C++/SystemC tutorial</a></li>
+<li>J. Bhasker, <i>A SystemC Primer</i>, Second Edition, Star Galaxy Publishing, 2004. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-9650391-2-9" title="Special:BookSources/0-9650391-2-9">0-9650391-2-9</a></li>
+<li>D. C. Black, J. Donovan, <i>SystemC: From the Ground Up</i>, 2nd ed., Springer 2009. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-387-69957-0" title="Special:BookSources/0-387-69957-0">0-387-69957-0</a></li>
+<li>George Frazier, <a rel="nofollow" class="external text" href="https://www.drdobbs.com/cpp/systemc-hardware-oriented-constructs-in/184401897/">SystemC: Hardware-Oriented Constructs in C++</a></li>
+<li>Frank Ghenassia (Editor), <i>Transaction-Level Modeling with SystemC: TLM Concepts and Applications for Embedded Systems</i>, Springer 2006. <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-387-26232-6" title="Special:BookSources/0-387-26232-6">0-387-26232-6</a></li>
+<li>Stan Y. Liao, Steven W. K. Tjiang, Rajesh K. Gupta: An Efficient Implementation of Reactivity for Modeling Hardware in the Scenic Design Environment. DAC 1997: 70-75</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=SystemC&amp;action=edit&amp;section=18" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="https://accellera.org/community/systemc">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.asic-world.com/systemc/tutorial.html">SystemC Tutorial</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.embedded.uni-tuebingen.de/ESCUG.escug.0.html">ESCUG</a> - European SystemC Users Group</li>
+<li><a rel="nofollow" class="external text" href="http://www.nascug.org">NASCUG</a> - North American SystemC User's Group</li>
+<li><a rel="nofollow" class="external text" href="http://www.lascug.org">LASCUG</a> - Latin American SystemC User's Group</li>
+<li><a rel="nofollow" class="external text" href="http://dvcon-india.org">ISCUG</a> - Indian SystemC User's Group</li>
+<li><a rel="nofollow" class="external text" href="http://www.edaplayground.com">EDA Playground</a> - Free web browser-based C++/SystemC IDE</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="IEEE_standards" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:IEEE_standards" title="Template:IEEE standards"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:IEEE_standards" title="Template talk:IEEE standards"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:IEEE_standards&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="IEEE_standards" style="font-size:114%;margin:0 4em"><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE standards</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Current</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE-488" title="IEEE-488">488</a></li>
+<li><a href="/wiki/Software_quality_assurance" title="Software quality assurance">730</a></li>
+<li><a href="/wiki/IEEE_754" title="IEEE 754">754</a>
+<ul><li><a href="/wiki/IEEE_754-2008_revision" title="IEEE 754-2008 revision">Revision</a></li></ul></li>
+<li><a href="/wiki/IEEE_854-1987" title="IEEE 854-1987">854</a></li>
+<li><a href="/wiki/Software_configuration_management" title="Software configuration management">828</a></li>
+<li><a href="/wiki/Software_test_documentation" title="Software test documentation">829</a></li>
+<li><a href="/wiki/Futurebus" title="Futurebus">896</a></li>
+<li><a href="/wiki/Single_UNIX_Specification" title="Single UNIX Specification">1003</a></li>
+<li><a href="/wiki/VMEbus" title="VMEbus">1014</a></li>
+<li><a href="/wiki/Software_design_description" title="Software design description">1016</a></li>
+<li><a href="/wiki/VHDL" title="VHDL">1076</a></li>
+<li><a href="/wiki/JTAG" title="JTAG">1149.1</a></li>
+<li><a href="/wiki/PILOT" title="PILOT">1154</a></li>
+<li><a href="/wiki/IEEE_1164" title="IEEE 1164">1164</a></li>
+<li><a href="/wiki/Open_Firmware" title="Open Firmware">1275</a></li>
+<li><a href="/wiki/Distributed_Interactive_Simulation" title="Distributed Interactive Simulation">1278</a></li>
+<li><a href="/wiki/IEEE_1284" title="IEEE 1284">1284</a></li>
+<li><a href="/wiki/IEEE_1355" title="IEEE 1355">1355</a></li>
+<li><a href="/wiki/IEEE_1394" title="IEEE 1394">1394</a></li>
+<li><a href="/wiki/IEEE_1451" title="IEEE 1451">1451</a></li>
+<li><a href="/wiki/Standard_Delay_Format" title="Standard Delay Format">1497</a></li>
+<li><a href="/wiki/High-level_architecture" class="mw-redirect" title="High-level architecture">1516</a></li>
+<li><a href="/wiki/IEEE_1541-2002" title="IEEE 1541-2002">1541</a></li>
+<li><a href="/wiki/IEEE_1547" title="IEEE 1547">1547</a></li>
+<li><a href="/wiki/IEEE_1584" title="IEEE 1584">1584</a></li>
+<li><a href="/wiki/Precision_Time_Protocol" title="Precision Time Protocol">1588</a></li>
+<li><a href="/wiki/Scalable_Coherent_Interface" title="Scalable Coherent Interface">1596</a></li>
+<li><a href="/wiki/Advanced_Library_Format" title="Advanced Library Format">1603</a></li>
+<li><a href="/wiki/IEEE_1613" title="IEEE 1613">1613</a></li>
+<li><a class="mw-selflink selflink">1666</a></li>
+<li><a href="/wiki/IEEE_1667" title="IEEE 1667">1667</a></li>
+<li><a href="/wiki/IEEE_1675-2008" title="IEEE 1675-2008">1675</a></li>
+<li><a href="/wiki/IP-XACT" title="IP-XACT">1685</a></li>
+<li><a href="/wiki/IEEE_1722" class="mw-redirect" title="IEEE 1722">1722</a></li>
+<li><a href="/wiki/IEEE_1733" class="mw-redirect" title="IEEE 1733">1733</a></li>
+<li><a href="/wiki/SystemVerilog" title="SystemVerilog">1800</a></li>
+<li><a href="/wiki/Unified_Power_Format" title="Unified Power Format">1801</a></li>
+<li><a href="/wiki/DNP3" title="DNP3">1815</a></li>
+<li><a href="/wiki/Property_Specification_Language" title="Property Specification Language">1850</a></li>
+<li><a href="/wiki/DySPAN" title="DySPAN">1900</a></li>
+<li><a href="/wiki/IEEE_1901" title="IEEE 1901">1901</a></li>
+<li><a href="/wiki/RuBee" title="RuBee">1902</a></li>
+<li><a href="/wiki/Service_Interoperability_in_Ethernet_Passive_Optical_Networks" title="Service Interoperability in Ethernet Passive Optical Networks">1904</a></li>
+<li><a href="/wiki/IEEE_1905" title="IEEE 1905">1905</a></li>
+<li><a href="/wiki/IEEE_2030" title="IEEE 2030">2030</a></li>
+<li><a href="/wiki/Micro_T-Kernel" title="Micro T-Kernel">2050</a></li>
+<li><a href="/wiki/ISO/IEEE_11073" title="ISO/IEEE 11073">11073</a></li>
+<li><a href="/wiki/ISO/IEC_12207" title="ISO/IEC 12207">12207</a></li>
+<li><a href="/wiki/Software_maintenance" title="Software maintenance">14764</a></li>
+<li><a href="/wiki/Risk_management" title="Risk management">16085</a></li>
+<li><a href="/wiki/Project_management" title="Project management">16326</a></li>
+<li><a href="/wiki/Requirements_engineering" title="Requirements engineering">29148</a></li>
+<li><a href="/wiki/ISO/IEC_42010" title="ISO/IEC 42010">42010</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802" title="IEEE 802">802 series</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.1" title="IEEE 802.1">802.1</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.1D" title="IEEE 802.1D">D</a></li>
+<li><a href="/wiki/IEEE_P802.1p" title="IEEE P802.1p">p</a></li>
+<li><a href="/wiki/IEEE_802.1Q" title="IEEE 802.1Q">Q</a></li>
+<li><a href="/wiki/IEEE_802.1Qav" class="mw-redirect" title="IEEE 802.1Qav">Qav</a></li>
+<li><a href="/wiki/Stream_Reservation_Protocol" title="Stream Reservation Protocol">Qat</a></li>
+<li><a href="/wiki/Provider_Backbone_Bridge_Traffic_Engineering" title="Provider Backbone Bridge Traffic Engineering">Qay</a></li>
+<li><a href="/wiki/Spanning_Tree_Protocol" title="Spanning Tree Protocol">w</a></li>
+<li><a href="/wiki/IEEE_802.1X" title="IEEE 802.1X">X</a></li>
+<li><a href="/wiki/Link_Layer_Discovery_Protocol" title="Link Layer Discovery Protocol">ab</a></li>
+<li><a href="/wiki/IEEE_802.1ad" title="IEEE 802.1ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.1AE" title="IEEE 802.1AE">AE</a></li>
+<li><a href="/wiki/IEEE_802.1ag" title="IEEE 802.1ag">ag</a></li>
+<li><a href="/wiki/IEEE_802.1ah-2008" title="IEEE 802.1ah-2008">ah</a></li>
+<li><a href="/wiki/Multiple_Registration_Protocol" title="Multiple Registration Protocol">ak</a></li>
+<li><a href="/wiki/IEEE_802.1aq" title="IEEE 802.1aq">aq</a></li>
+<li><a href="/wiki/IEEE_802.1AS" class="mw-redirect" title="IEEE 802.1AS">AS</a></li>
+<li><a href="/wiki/Link_aggregation" title="Link aggregation">ax</a></li>
+<li><a href="/wiki/Data_center_bridging#IEEE_Task_Group" title="Data center bridging">az</a></li>
+<li><a href="/wiki/Audio_Video_Bridging" title="Audio Video Bridging">BA</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.3" title="IEEE 802.3">802.3</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/10BASE5" title="10BASE5">-1983</a></li>
+<li><a href="/wiki/802.3a" class="mw-redirect" title="802.3a">a</a></li>
+<li><a href="/wiki/802.3b" class="mw-redirect" title="802.3b">b</a></li>
+<li><a href="/wiki/802.3d" class="mw-redirect" title="802.3d">d</a></li>
+<li><a href="/wiki/802.3e" class="mw-redirect" title="802.3e">e</a></li>
+<li><a href="/wiki/802.3i" class="mw-redirect" title="802.3i">i</a></li>
+<li><a href="/wiki/802.3j" class="mw-redirect" title="802.3j">j</a></li>
+<li><a href="/wiki/802.3u" class="mw-redirect" title="802.3u">u</a></li>
+<li><a href="/wiki/IEEE_802.3x" class="mw-redirect" title="IEEE 802.3x">x</a></li>
+<li><a href="/wiki/802.3y" class="mw-redirect" title="802.3y">y</a></li>
+<li><a href="/wiki/802.3z" class="mw-redirect" title="802.3z">z</a></li>
+<li><a href="/wiki/802.3ab" class="mw-redirect" title="802.3ab">ab</a></li>
+<li><a href="/wiki/802.3ac" class="mw-redirect" title="802.3ac">ac</a></li>
+<li><a href="/wiki/802.3ad" class="mw-redirect" title="802.3ad">ad</a></li>
+<li><a href="/wiki/802.3ae" class="mw-redirect" title="802.3ae">ae</a></li>
+<li><a href="/wiki/802.3af" class="mw-redirect" title="802.3af">af</a></li>
+<li><a href="/wiki/802.3ah" class="mw-redirect" title="802.3ah">ah</a></li>
+<li><a href="/wiki/802.3ak" class="mw-redirect" title="802.3ak">ak</a></li>
+<li><a href="/wiki/802.3an" class="mw-redirect" title="802.3an">an</a></li>
+<li><a href="/wiki/802.3aq" class="mw-redirect" title="802.3aq">aq</a></li>
+<li><a href="/wiki/802.3at" class="mw-redirect" title="802.3at">at</a></li>
+<li><a href="/wiki/802.3av" class="mw-redirect" title="802.3av">av</a></li>
+<li><a href="/wiki/802.3az" class="mw-redirect" title="802.3az">az</a></li>
+<li><a href="/wiki/802.3ba" class="mw-redirect" title="802.3ba">ba</a></li>
+<li><a href="/wiki/802.3bt" class="mw-redirect" title="802.3bt">bt</a></li>
+<li><a href="/wiki/802.3by" class="mw-redirect" title="802.3by">by</a></li>
+<li><a href="/wiki/802.3bz" class="mw-redirect" title="802.3bz">bz</a></li>
+<li><a href="/w/index.php?title=802.3cg&amp;action=edit&amp;redlink=1" class="new" title="802.3cg (page does not exist)">cg</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/IEEE_802.11" title="IEEE 802.11">802.11</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_802.11_(legacy_mode)" title="IEEE 802.11 (legacy mode)">legacy mode</a></li>
+<li><a href="/wiki/IEEE_802.11a-1999" title="IEEE 802.11a-1999">a</a></li>
+<li><a href="/wiki/IEEE_802.11b-1999" title="IEEE 802.11b-1999">b</a></li>
+<li><a href="/wiki/IEEE_802.11c" title="IEEE 802.11c">c</a></li>
+<li><a href="/wiki/IEEE_802.11d-2001" title="IEEE 802.11d-2001">d</a></li>
+<li><a href="/wiki/IEEE_802.11e-2005" title="IEEE 802.11e-2005">e</a></li>
+<li><a href="/wiki/Inter-Access_Point_Protocol" title="Inter-Access Point Protocol">f</a></li>
+<li><a href="/wiki/IEEE_802.11g-2003" title="IEEE 802.11g-2003">g</a></li>
+<li><a href="/wiki/IEEE_802.11h-2003" title="IEEE 802.11h-2003">h</a></li>
+<li><a href="/wiki/IEEE_802.11i-2004" title="IEEE 802.11i-2004">i</a></li>
+<li><a href="/wiki/IEEE_802.11j-2004" title="IEEE 802.11j-2004">j</a></li>
+<li><a href="/wiki/IEEE_802.11k-2008" title="IEEE 802.11k-2008">k</a></li>
+<li><a href="/wiki/IEEE_802.11n-2009" title="IEEE 802.11n-2009">n</a></li>
+<li><a href="/wiki/IEEE_802.11p" title="IEEE 802.11p">p</a></li>
+<li><a href="/wiki/IEEE_802.11r-2008" title="IEEE 802.11r-2008">r</a></li>
+<li><a href="/wiki/IEEE_802.11s" title="IEEE 802.11s">s</a></li>
+<li><a href="/wiki/IEEE_802.11u" title="IEEE 802.11u">u</a></li>
+<li><a href="/wiki/IEEE_802.11v" title="IEEE 802.11v">v</a></li>
+<li><a href="/wiki/IEEE_802.11w-2009" title="IEEE 802.11w-2009">w</a></li>
+<li><a href="/wiki/IEEE_802.11y-2008" title="IEEE 802.11y-2008">y</a></li>
+<li><a href="/wiki/IEEE_802.11ac" title="IEEE 802.11ac">ac</a></li>
+<li><a href="/wiki/IEEE_802.11ad" title="IEEE 802.11ad">ad</a></li>
+<li><a href="/wiki/IEEE_802.11af" title="IEEE 802.11af">af</a></li>
+<li><a href="/wiki/IEEE_802.11ah" title="IEEE 802.11ah">ah</a></li>
+<li><a href="/wiki/IEEE_802.11ai" title="IEEE 802.11ai">ai</a></li>
+<li><a href="/wiki/IEEE_802.11ax" title="IEEE 802.11ax">ax</a></li>
+<li><a href="/wiki/IEEE_802.11ay" title="IEEE 802.11ay">ay</a></li>
+<li><a href="/wiki/IEEE_802.11be" title="IEEE 802.11be">be</a></li></ul>
+</div></td></tr></tbody></table><div>
+<ul><li><a href="/wiki/IEEE_802.2" title="IEEE 802.2">.2</a></li>
+<li><a href="/wiki/Token_bus_network" title="Token bus network">.4</a></li>
+<li><a href="/wiki/Token_ring" title="Token ring">.5</a></li>
+<li><a href="/wiki/IEEE_802.6" title="IEEE 802.6">.6</a></li>
+<li><a href="/wiki/IEEE_802.7" title="IEEE 802.7">.7</a></li>
+<li><a href="/wiki/IEEE_802.8" title="IEEE 802.8">.8</a></li>
+<li><a href="/wiki/IEEE_802.9" title="IEEE 802.9">.9</a></li>
+<li><a href="/wiki/IEEE_802.10" title="IEEE 802.10">.10</a></li>
+<li><a href="/wiki/100BaseVG" title="100BaseVG">.12</a></li>
+<li><a href="/wiki/Cable_modem#IEEE_802.14" title="Cable modem">.14</a></li>
+<li><a href="/wiki/IEEE_802.15" title="IEEE 802.15">.15</a>
+<ul><li><a href="/wiki/Bluetooth" title="Bluetooth">.1</a></li>
+<li><a href="/wiki/IEEE_802.15.4" title="IEEE 802.15.4">.4</a></li>
+<li><a href="/wiki/IEEE_802.15.4a" title="IEEE 802.15.4a">.4a</a></li>
+<li><a href="/wiki/IEEE_802.15.6" title="IEEE 802.15.6">.6</a></li></ul></li>
+<li><a href="/wiki/IEEE_802.16" title="IEEE 802.16">.16</a>
+<ul><li><a href="/wiki/WiMAX" title="WiMAX">Original · d · e</a></li></ul></li>
+<li><a href="/wiki/Resilient_Packet_Ring" title="Resilient Packet Ring">.17</a></li>
+<li><a href="/wiki/IEEE_802.18" title="IEEE 802.18">.18</a></li>
+<li><a href="/wiki/IEEE_802.20" title="IEEE 802.20">.20</a></li>
+<li><a href="/wiki/IEEE_802.21" title="IEEE 802.21">.21</a></li>
+<li><a href="/wiki/IEEE_802.22" title="IEEE 802.22">.22</a></li></ul></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Proposed</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><a href="/wiki/IEEE_P1363" title="IEEE P1363">P1363</a></li>
+<li><a href="/wiki/IEEE_P1619" title="IEEE P1619">P1619</a></li>
+<li><a href="/wiki/Rosetta-lang" title="Rosetta-lang">P1699</a></li>
+<li><a href="/wiki/Universal_Power_Adapter_for_Mobile_Devices" title="Universal Power Adapter for Mobile Devices">P1823</a></li>
+<li><a href="/wiki/IEEE_P1906.1" title="IEEE P1906.1">P1906.1</a></li>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Superseded</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IEEE_754-1985" title="IEEE 754-1985">754-1985</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">830</a></li>
+<li><a href="/wiki/IEEE_1219" class="mw-redirect" title="IEEE 1219">1219</a></li>
+<li><a href="/wiki/Software_requirements_specification" title="Software requirements specification">1233</a></li>
+<li><a href="/wiki/Concept_of_operations" title="Concept of operations">1362</a></li>
+<li><a href="/wiki/Verilog" title="Verilog">1364</a></li>
+<li><a href="/wiki/IEEE_1471" title="IEEE 1471">1471</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<dl><dt><i>See also</i></dt>
+<dd><a href="/wiki/IEEE_Standards_Association" title="IEEE Standards Association">IEEE Standards Association</a></dd>
+<dd><a href="/wiki/Category:IEEE_standards" title="Category:IEEE standards">Category:IEEE standards</a></dd></dl>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Programmable_logic" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Programmable_Logic" title="Template:Programmable Logic"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Programmable_Logic" title="Template talk:Programmable Logic"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Programmable_Logic&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Programmable_logic" style="font-size:114%;margin:0 4em"><a href="/wiki/Programmable_logic_device" title="Programmable logic device">Programmable logic</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Concepts</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Application-specific_integrated_circuit" title="Application-specific integrated circuit">ASIC</a></li>
+<li><a href="/wiki/System_on_a_chip" title="System on a chip">SoC</a></li>
+<li><a href="/wiki/Field-programmable_gate_array" title="Field-programmable gate array">FPGA</a>
+<ul><li><a href="/wiki/Logic_block" title="Logic block">Logic block</a></li></ul></li>
+<li><a href="/wiki/Complex_programmable_logic_device" title="Complex programmable logic device">CPLD</a></li>
+<li><a href="/wiki/Erasable_programmable_logic_device" title="Erasable programmable logic device">EPLD</a></li>
+<li><a href="/wiki/Programmable_logic_array" title="Programmable logic array">PLA</a></li>
+<li><a href="/wiki/Programmable_Array_Logic" title="Programmable Array Logic">PAL</a></li>
+<li><a href="/wiki/Generic_array_logic" title="Generic array logic">GAL</a></li>
+<li><a href="/wiki/Programmable_system-on-chip" title="Programmable system-on-chip">PSoC</a></li>
+<li><a href="/wiki/Reconfigurable_computing" title="Reconfigurable computing">Reconfigurable computing</a>
+<ul><li><a href="/wiki/Xputer" title="Xputer">Xputer</a></li></ul></li>
+<li><a href="/wiki/Soft_microprocessor" title="Soft microprocessor">Soft microprocessor</a></li>
+<li><a href="/wiki/Circuit_underutilization" title="Circuit underutilization">Circuit underutilization</a></li>
+<li><a href="/wiki/High-level_synthesis" title="High-level synthesis">High-level synthesis</a></li>
+<li><a href="/wiki/Hardware_acceleration" title="Hardware acceleration">Hardware acceleration</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Hardware_description_language" title="Hardware description language">Languages</a></th><td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Verilog" title="Verilog">Verilog</a>
+<ul><li><a href="/wiki/Verilog-A" title="Verilog-A">A</a></li>
+<li><a href="/wiki/Verilog-AMS" title="Verilog-AMS">AMS</a></li></ul></li>
+<li><a href="/wiki/VHDL" title="VHDL">VHDL</a>
+<ul><li><a href="/wiki/VHDL-AMS" title="VHDL-AMS">AMS</a></li>
+<li><a href="/wiki/VHDL-VITAL" title="VHDL-VITAL">VITAL</a></li></ul></li>
+<li><a href="/wiki/SystemVerilog" title="SystemVerilog">SystemVerilog</a>
+<ul><li><a href="/wiki/SystemVerilog_DPI" title="SystemVerilog DPI">DPI</a></li></ul></li>
+<li><a class="mw-selflink selflink">SystemC</a></li>
+<li><a href="/wiki/Altera_Hardware_Description_Language" title="Altera Hardware Description Language">AHDL</a></li>
+<li><a href="/wiki/Handel-C" title="Handel-C">Handel-C</a></li>
+<li><a href="/wiki/Property_Specification_Language" title="Property Specification Language">PSL</a></li>
+<li><a href="/wiki/Unified_Power_Format" title="Unified Power Format">UPF</a></li>
+<li><a href="/wiki/PALASM" title="PALASM">PALASM</a></li>
+<li><a href="/wiki/Advanced_Boolean_Expression_Language" title="Advanced Boolean Expression Language">ABEL</a></li>
+<li><a href="/wiki/Programmable_Array_Logic#CUPL" title="Programmable Array Logic">CUPL</a></li>
+<li><a href="/wiki/OpenVera" title="OpenVera">OpenVera</a></li>
+<li><a href="/wiki/C_to_HDL" title="C to HDL">C to HDL</a></li>
+<li><a href="/wiki/Flow_to_HDL" title="Flow to HDL">Flow to HDL</a></li>
+<li><a href="/wiki/MyHDL" title="MyHDL">MyHDL</a></li>
+<li><a href="/wiki/JHDL" title="JHDL">JHDL</a></li>
+<li><a href="/wiki/ELLA_(programming_language)" title="ELLA (programming language)">ELLA</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Companies</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Accellera" title="Accellera">Accellera</a></li>
+<li><a href="/wiki/Actel" title="Actel">Actel</a></li>
+<li><a href="/wiki/Achronix" title="Achronix">Achronix</a></li>
+<li><a href="/wiki/Advanced_Micro_Devices" title="Advanced Micro Devices">AMD</a></li>
+<li><a href="/wiki/Aldec" title="Aldec">Aldec</a></li>
+<li><a href="/wiki/Atmel" title="Atmel">Atmel</a></li>
+<li><a href="/wiki/Cadence_Design_Systems" title="Cadence Design Systems">Cadence</a></li>
+<li><a href="/wiki/Cypress_Semiconductor" title="Cypress Semiconductor">Cypress</a></li>
+<li><a href="/wiki/Duolog" title="Duolog">Duolog</a></li>
+<li><a href="/wiki/Forte_Design_Systems" title="Forte Design Systems">Forte</a></li>
+<li><a href="/wiki/Intel" title="Intel">Intel</a>
+<ul><li><a href="/wiki/Altera" title="Altera">Altera</a></li></ul></li>
+<li><a href="/wiki/Lattice_Semiconductor" title="Lattice Semiconductor">Lattice</a></li>
+<li><a href="/wiki/National_Semiconductor" title="National Semiconductor">National</a></li>
+<li><a href="/wiki/Mentor_Graphics" title="Mentor Graphics">Mentor Graphics</a></li>
+<li><a href="/wiki/Microsemi" title="Microsemi">Microsemi</a></li>
+<li><a href="/wiki/Signetics" title="Signetics">Signetics</a></li>
+<li><a href="/wiki/Synopsys" title="Synopsys">Synopsys</a>
+<ul><li><a href="/wiki/Magma_Design_Automation" title="Magma Design Automation">Magma</a></li>
+<li><a href="/wiki/Virage_Logic" title="Virage Logic">Virage Logic</a></li></ul></li>
+<li><a href="/wiki/Texas_Instruments" title="Texas Instruments">Texas Instruments</a></li>
+<li><a href="/wiki/Tabula_(company)" title="Tabula (company)">Tabula</a></li>
+<li><a href="/wiki/Xilinx" title="Xilinx">Xilinx</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Products</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Hardware</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ICE_(FPGA)" title="ICE (FPGA)">iCE</a></li>
+<li><a href="/wiki/Stratix" title="Stratix">Stratix</a></li>
+<li><a href="/wiki/Virtex_(FPGA)" title="Virtex (FPGA)">Virtex</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Intel_Quartus_Prime" title="Intel Quartus Prime">Intel Quartus Prime</a></li>
+<li><a href="/wiki/Xilinx_ISE" title="Xilinx ISE">Xilinx ISE</a></li>
+<li><a href="/wiki/Xilinx_Vivado" title="Xilinx Vivado">Xilinx Vivado</a></li>
+<li><a href="/wiki/ModelSim" title="ModelSim">ModelSim</a></li>
+<li><a href="/wiki/Verilog-to-Routing" title="Verilog-to-Routing">VTR</a></li>
+<li><a href="/wiki/List_of_HDL_simulators" title="List of HDL simulators">Simulators</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">IP</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%">Proprietary</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ARC_(processor)" title="ARC (processor)">ARC</a></li>
+<li><a href="/wiki/ARM_Cortex-M" title="ARM Cortex-M">ARM Cortex-M</a></li>
+<li><a href="/wiki/LEON" title="LEON">LEON</a></li>
+<li><a href="/wiki/LatticeMico8" title="LatticeMico8">LatticeMico8</a></li>
+<li><a href="/wiki/MicroBlaze" title="MicroBlaze">MicroBlaze</a></li>
+<li><a href="/wiki/PicoBlaze" title="PicoBlaze">PicoBlaze</a></li>
+<li><a href="/wiki/Nios_embedded_processor" title="Nios embedded processor">Nios</a></li>
+<li><a href="/wiki/Nios_II" title="Nios II">Nios II</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Open-source</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Java_Optimized_Processor" title="Java Optimized Processor">JOP</a></li>
+<li><a href="/wiki/LatticeMico32" title="LatticeMico32">LatticeMico32</a></li>
+<li><a href="/wiki/OpenCores" title="OpenCores">OpenCores</a></li>
+<li><a href="/wiki/OpenRISC" title="OpenRISC">OpenRISC</a>
+<ul><li><a href="/wiki/OpenRISC_1200" title="OpenRISC 1200">1200</a></li></ul></li>
+<li><a href="/wiki/RISC-V" title="RISC-V">RISC-V</a></li>
+<li><a href="/wiki/Zet_(hardware)" title="Zet (hardware)">Zet</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1308
+Cached time: 20200328015543
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.364 seconds
+Real time usage: 0.515 seconds
+Preprocessor visited node count: 1831/1000000
+Post‐expand include size: 65898/2097152 bytes
+Template argument size: 3535/2097152 bytes
+Highest expansion depth: 13/40
+Expensive parser function count: 5/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 22833/5000000 bytes
+Number of Wikibase entities loaded: 3/400
+Lua time usage: 0.165/10.000 seconds
+Lua memory usage: 5.48 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  442.457      1 -total
+ 32.50%  143.795      1 Template:Reflist
+ 18.65%   82.533      1 Template:Cite_web
+ 16.88%   74.700      4 Template:ISBN
+ 10.38%   45.919      1 Template:Which
+  9.61%   42.510      1 Template:Fix
+  8.62%   38.118      1 Template:Use_American_English
+  8.59%   38.023      1 Template:Short_description
+  8.04%   35.553      1 Template:Cite_paper
+  6.81%   30.121      2 Template:Cite_book
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:1038989-0!canonical and timestamp 20200328015543 and revision id 931791375
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=SystemC&amp;oldid=931791375">https://en.wikipedia.org/w/index.php?title=SystemC&amp;oldid=931791375</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Hardware_description_languages" title="Category:Hardware description languages">Hardware description languages</a></li><li><a href="/wiki/Category:Hardware_verification_languages" title="Category:Hardware verification languages">Hardware verification languages</a></li><li><a href="/wiki/Category:System_description_languages" title="Category:System description languages">System description languages</a></li><li><a href="/wiki/Category:C%2B%2B_programming_language_family" title="Category:C++ programming language family">C++ programming language family</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:CS1_errors:_missing_periodical" title="Category:CS1 errors: missing periodical">CS1 errors: missing periodical</a></li><li><a href="/wiki/Category:Use_American_English_from_March_2019" title="Category:Use American English from March 2019">Use American English from March 2019</a></li><li><a href="/wiki/Category:All_Wikipedia_articles_written_in_American_English" title="Category:All Wikipedia articles written in American English">All Wikipedia articles written in American English</a></li><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Use_mdy_dates_from_March_2019" title="Category:Use mdy dates from March 2019">Use mdy dates from March 2019</a></li><li><a href="/wiki/Category:All_articles_with_specifically_marked_weasel-worded_phrases" title="Category:All articles with specifically marked weasel-worded phrases">All articles with specifically marked weasel-worded phrases</a></li><li><a href="/wiki/Category:Articles_with_specifically_marked_weasel-worded_phrases_from_May_2019" title="Category:Articles with specifically marked weasel-worded phrases from May 2019">Articles with specifically marked weasel-worded phrases from May 2019</a></li><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=SystemC" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=SystemC" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/SystemC" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:SystemC" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/SystemC">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=SystemC&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=SystemC&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/SystemC" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/SystemC" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=SystemC&amp;oldid=931791375" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=SystemC&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1753563" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=SystemC&amp;id=931791375&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=SystemC">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=SystemC&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=SystemC&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/SystemC" title="SystemC – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/SystemC" title="SystemC – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/SystemC" title="SystemC – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/SystemC" title="SystemC – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/SystemC" title="SystemC – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/SystemC" title="SystemC – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ro"><a href="https://ro.wikipedia.org/wiki/SystemC" title="SystemC – Romanian" lang="ro" hreflang="ro" class="interlanguage-link-target">Română</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/SystemC" title="SystemC – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/SystemC" title="SystemC – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/SystemC" title="SystemC – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/SystemC" title="SystemC – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1753563#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 21 December 2019, at 07:09<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=SystemC&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.364","walltime":"0.515","ppvisitednodes":{"value":1831,"limit":1000000},"postexpandincludesize":{"value":65898,"limit":2097152},"templateargumentsize":{"value":3535,"limit":2097152},"expansiondepth":{"value":13,"limit":40},"expensivefunctioncount":{"value":5,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":22833,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00%  442.457      1 -total"," 32.50%  143.795      1 Template:Reflist"," 18.65%   82.533      1 Template:Cite_web"," 16.88%   74.700      4 Template:ISBN"," 10.38%   45.919      1 Template:Which","  9.61%   42.510      1 Template:Fix","  8.62%   38.118      1 Template:Use_American_English","  8.59%   38.023      1 Template:Short_description","  8.04%   35.553      1 Template:Cite_paper","  6.81%   30.121      2 Template:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.165","limit":"10.000"},"limitreport-memusage":{"value":5750277,"limit":52428800}},"cachereport":{"origin":"mw1308","timestamp":"20200328015543","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"SystemC","url":"https:\/\/en.wikipedia.org\/wiki\/SystemC","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1753563","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1753563","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-10-04T12:07:56Z","dateModified":"2019-12-21T07:09:44Z","headline":"C++ extensions for simulating embedded systems"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":116,"wgHostname":"mw1332"});});</script></body></html>

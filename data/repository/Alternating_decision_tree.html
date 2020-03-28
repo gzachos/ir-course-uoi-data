@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Alternating decision tree - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn7aVwpAADwAABwp6gEAAADQ","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Alternating_decision_tree","wgTitle":"Alternating decision tree","wgCurRevisionId":808502242,"wgRevisionId":808502242,"wgArticleId":11288998,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Decision trees","Classification algorithms"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Alternating_decision_tree","wgRelevantArticleId":11288998,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q4736414","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.math.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready",
+"ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","ext.math.scripts","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Alternating_decision_tree&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Alternating_decision_tree&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Alternating_decision_tree"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Alternating_decision_tree rootpage-Alternating_decision_tree skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Alternating decision tree</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>An <b>alternating decision tree</b> (ADTree) is a <a href="/wiki/Machine_learning" title="Machine learning">machine learning</a> method for classification. It generalizes <a href="/wiki/Decision_tree_learning" title="Decision tree learning">decision trees</a> and has connections to <a href="/wiki/Boosting_(machine_learning)" title="Boosting (machine learning)">boosting</a>.
+</p><p>An ADTree consists of an alternation of decision nodes, which specify a predicate condition, and prediction nodes, which contain a single number.  An instance is classified by an ADTree by following all paths for which all decision nodes are true, and summing any prediction nodes that are traversed.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Motivation"><span class="tocnumber">2</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Alternating_decision_tree_structure"><span class="tocnumber">3</span> <span class="toctext">Alternating decision tree structure</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="#Example"><span class="tocnumber">3.1</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Description_of_the_algorithm"><span class="tocnumber">4</span> <span class="toctext">Description of the algorithm</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Empirical_results"><span class="tocnumber">5</span> <span class="toctext">Empirical results</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>ADTrees were introduced by <a href="/wiki/Yoav_Freund" title="Yoav Freund">Yoav Freund</a> and Llew Mason.<sup id="cite_ref-Freund99_1-0" class="reference"><a href="#cite_note-Freund99-1">&#91;1&#93;</a></sup>  However, the algorithm as presented had several typographical errors.  Clarifications and optimizations were later presented by Bernhard Pfahringer, Geoffrey Holmes and Richard Kirkby.<sup id="cite_ref-Pfahringer_2-0" class="reference"><a href="#cite_note-Pfahringer-2">&#91;2&#93;</a></sup>  Implementations are available in <a href="/wiki/Weka_(machine_learning)" title="Weka (machine learning)">Weka</a> and JBoost.
+</p>
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=2" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Original <a href="/wiki/Boosting_(meta-algorithm)" class="mw-redirect" title="Boosting (meta-algorithm)">boosting</a> algorithms typically used either <a href="/wiki/Decision_stump" title="Decision stump">decision stumps</a> 
+or decision trees as weak hypotheses.  As an example, boosting <a href="/wiki/Decision_stump" title="Decision stump">decision stumps</a> creates
+a set of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>T</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;" alt="T"/></span> weighted decision stumps (where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>T</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;" alt="T"/></span>
+is the number of boosting iterations), which then vote on the final classification according to their weights.  Individual decision stumps are weighted according to their ability to classify the data.  
+</p><p>Boosting a simple learner results in an unstructured set of <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle T}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>T</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle T}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7200acd984a1d3a3d7dc455e262fbe54f7f6e0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.636ex; height:2.176ex;" alt="T"/></span> hypotheses, making it difficult to infer <a href="/wiki/Correlation" class="mw-redirect" title="Correlation">correlations</a> between attributes.  Alternating decision trees introduce structure to the set of hypotheses by requiring that they build off a hypothesis that was produced in an earlier iteration.  The resulting set of hypotheses can be visualized in a tree based on the relationship between a hypothesis and its "parent."
+</p><p>Another important feature of boosted algorithms is that the data is given a different <a href="/wiki/Frequency_distribution" title="Frequency distribution">distribution</a> at each iteration.  Instances that are misclassified are given a larger weight while accurately classified instances are given reduced weight.
+</p>
+<h2><span class="mw-headline" id="Alternating_decision_tree_structure">Alternating decision tree structure</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=3" title="Edit section: Alternating decision tree structure">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>An alternating decision tree consists of decision nodes and prediction nodes.  <b>Decision nodes</b> specify a predicate condition.  <b>Prediction nodes</b> contain a single number.  ADTrees always have prediction nodes as both root and leaves.  An instance is classified by an ADTree by following all paths for which all decision nodes are true and summing any prediction nodes that are traversed.  This is different from binary classification trees such as CART (<a href="/wiki/Classification_and_regression_tree" class="mw-redirect" title="Classification and regression tree">Classification and regression tree</a>) or <a href="/wiki/C4.5" class="mw-redirect" title="C4.5">C4.5</a> in which an instance follows only one path through the tree.
+</p>
+<h3><span class="mw-headline" id="Example">Example</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=4" title="Edit section: Example">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The following tree was constructed using JBoost on the spambase dataset<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> (available from the UCI Machine Learning Repository).<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>  In this example, spam is coded as <span class="nowrap"><span data-sort-value="7000100000000000000♠"></span>1</span> and regular email is coded as <span class="nowrap"><span data-sort-value="2999900000000000000♠"></span>−1</span>.  
+</p>
+<div class="center"><div class="floatnone"><a href="/wiki/File:Spambase_adtree_example.png" class="image" title="An ADTree for 6 iterations on the Spambase dataset."><img alt="An ADTree for 6 iterations on the Spambase dataset." src="//upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Spambase_adtree_example.png/800px-Spambase_adtree_example.png" decoding="async" width="800" height="331" srcset="//upload.wikimedia.org/wikipedia/commons/7/7d/Spambase_adtree_example.png 1.5x" data-file-width="1121" data-file-height="464" /></a></div></div>
+<p>The following table contains part of the information for a single instance.
+</p>
+<table class="wikitable">
+<caption>An instance to be classified
+</caption>
+<tbody><tr>
+<th>Feature
+</th>
+<th>Value
+</th></tr>
+<tr>
+<td>char_freq_bang
+</td>
+<td>0.08
+</td></tr>
+<tr>
+<td>word_freq_hp
+</td>
+<td>0.4
+</td></tr>
+<tr>
+<td>capital_run_length_longest
+</td>
+<td>4
+</td></tr>
+<tr>
+<td>char_freq_dollar
+</td>
+<td>0
+</td></tr>
+<tr>
+<td>word_freq_remove
+</td>
+<td>0.9
+</td></tr>
+<tr>
+<td>word_freq_george
+</td>
+<td>0
+</td></tr>
+<tr>
+<td>Other features
+</td>
+<td>...
+</td></tr></tbody></table>
+<p>The instance is scored by summing all of the prediction nodes through which it passes.  In the case of the instance above, the score is
+calculated as
+</p>
+<table class="wikitable">
+<caption>Score for the above instance
+</caption>
+<tbody><tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: left; font-weight: bolder;" scope="row" class="rh heading table-rh">Iteration
+</th>
+<th>0
+</th>
+<th>1
+</th>
+<th>2
+</th>
+<th>3
+</th>
+<th>4
+</th>
+<th>5
+</th>
+<th>6
+</th></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: left; font-weight: bolder;" scope="row" class="rh heading table-rh">Instance values
+</th>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td>.08 &lt; .052 = <i>f</i>
+</td>
+<td>.4 &lt; .195 = <i>f</i>
+</td>
+<td>0 &lt; .01 = <i>t</i>
+</td>
+<td>0 &lt; 0.005 = <i>t</i>
+</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A
+</td>
+<td>.9 &lt; .225 = <i>f</i>
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: left; font-weight: bolder;" scope="row" class="rh heading table-rh">Prediction
+</th>
+<td>-0.093
+</td>
+<td>0.74
+</td>
+<td>-1.446
+</td>
+<td>-0.38
+</td>
+<td>0.176
+</td>
+<td>0
+</td>
+<td>1.66
+</td></tr></tbody></table>
+<p>The final score of <span class="nowrap"><span data-sort-value="6999657000000000000♠"></span>0.657</span> is positive, so the instance is classified as spam.  The magnitude of the value is a measure of confidence in the prediction.  The original authors list three potential levels of interpretation for the set of attributes identified by an ADTree:
+</p>
+<ul><li>Individual nodes can be evaluated for their own predictive ability.</li>
+<li>Sets of nodes on the same path may be interpreted as having a joint effect</li>
+<li>The tree can be interpreted as a whole.</li></ul>
+<p>Care must be taken when interpreting individual nodes as the scores reflect a re weighting of the data in each iteration.
+</p>
+<h2><span class="mw-headline" id="Description_of_the_algorithm">Description of the algorithm</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=5" title="Edit section: Description of the algorithm">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The inputs to the alternating decision tree algorithm are:
+</p>
+<ul><li>A set of inputs <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle (x_{1},y_{1}),\ldots ,(x_{m},y_{m})}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+        <mo>,</mo>
+        <mo>&#x2026;<!-- … --></mo>
+        <mo>,</mo>
+        <mo stretchy="false">(</mo>
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+        <mo>,</mo>
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>m</mi>
+          </mrow>
+        </msub>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle (x_{1},y_{1}),\ldots ,(x_{m},y_{m})}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8bbf34d026d9b77ca0ca7a3b2f772aba216502d1" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:21.261ex; height:2.843ex;" alt="(x_1,y_1),\ldots,(x_m,y_m)"/></span> where <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle x_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>x</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle x_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/e87000dd6142b81d041896a30fe58f0c3acb2158" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.129ex; height:2.009ex;" alt="x_{i}"/></span> is a vector of attributes and <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle y_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>y</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle y_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/67d30d30b6c2dbe4d6f150d699de040937ecc95f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:1.939ex; height:2.009ex;" alt="y_{i}"/></span> is either -1 or 1.  Inputs are also called instances.</li>
+<li>A set of weights <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{i}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{i}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/fe22f0329d3ecb2e1880d44d191aba0e5475db68" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:2.464ex; height:2.009ex;" alt="w_{i}"/></span> corresponding to each instance.</li></ul>
+<p>The fundamental element of the ADTree algorithm is the rule.  A single
+rule consists of a precondition, a condition, and two scores.  A
+condition is a predicate of the form "attribute &lt;comparison&gt; value."
+A precondition is simply a <a href="/wiki/Logical_conjunction" title="Logical conjunction">logical conjunction</a> of conditions.
+Evaluation of a rule involves a pair of nested if statements:
+</p>
+<pre>1  <b>if</b>(precondition)
+2      <b>if</b>(condition)
+3          <b>return</b> score_one
+4      <b>else</b>
+5          <b>return</b> score_two
+6      <b>end if</b>
+7  <b>else</b>
+8      <b>return</b> 0
+9  <b>end if</b>
+</pre>
+<p>Several auxiliary functions are also required by the algorithm:
+</p>
+<ul><li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle W_{+}(c)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>+</mo>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>c</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle W_{+}(c)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/db87d50801194c1f3cc3fb79cfe35f88e65832ad" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.521ex; height:2.843ex;" alt="W_+(c)"/></span> returns the sum of the weights of all positively labeled examples that satisfy predicate <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/86a67b81c2de995bd608d5b2df50cd8cd7d92455" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.007ex; height:1.676ex;" alt="c"/></span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle W_{-}(c)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>c</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle W_{-}(c)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f4649a1324c2d5f609790392b2a5484c290aa38c" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:6.521ex; height:2.843ex;" alt="W_-(c)"/></span> returns the sum of the weights of all negatively labeled examples that satisfy predicate <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/86a67b81c2de995bd608d5b2df50cd8cd7d92455" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.007ex; height:1.676ex;" alt="c"/></span></li>
+<li><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle W(c)=W_{+}(c)+W_{-}(c)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>W</mi>
+        <mo stretchy="false">(</mo>
+        <mi>c</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>+</mo>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>c</mi>
+        <mo stretchy="false">)</mo>
+        <mo>+</mo>
+        <msub>
+          <mi>W</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+          </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>c</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle W(c)=W_{+}(c)+W_{-}(c)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/25dc4eb329ffa6ea7a1db3aef3b2e979110e8498" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:24.231ex; height:2.843ex;" alt="W(c) = W_+(c) + W_-(c)"/></span> returns the sum of the weights of all  examples that satisfy predicate <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle c}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/86a67b81c2de995bd608d5b2df50cd8cd7d92455" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.007ex; height:1.676ex;" alt="c"/></span></li></ul>
+<p>The algorithm is as follows:
+</p>
+<pre>1  <b>function</b> ad_tree
+2  <b>input</b> Set of <span class="texhtml mvar" style="font-style:italic;">m</span> training instances
+3 
+4  <span class="texhtml"><i>w<sub>i</sub></i> = 1/<i>m</i></span> for all <span class="texhtml mvar" style="font-style:italic;">i</span>
+5  <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(true)}{W_{-}(true)}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>a</mi>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>ln</mtext>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>+</mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>t</mi>
+              <mi>r</mi>
+              <mi>u</mi>
+              <mi>e</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>&#x2212;<!-- − --></mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>t</mi>
+              <mi>r</mi>
+              <mi>u</mi>
+              <mi>e</mi>
+              <mo stretchy="false">)</mo>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(true)}{W_{-}(true)}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/eb96f9955809b0294e1bd4f73813cdd9837aefbe" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:18.918ex; height:6.509ex;" alt="a = \frac 1 2 \textrm{ln}\frac{W_+(true)}{W_-(true)}"/></span></span>
+6  <span class="texhtml"><i>R</i><sub>0</sub> =</span> a rule with scores <span class="texhtml mvar" style="font-style:italic;">a</span> and <span class="texhtml">0</span>, precondition "true" and condition "true."
+7  <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {P}}=\{true\}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">P</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+        <mo fence="false" stretchy="false">{</mo>
+        <mi>t</mi>
+        <mi>r</mi>
+        <mi>u</mi>
+        <mi>e</mi>
+        <mo fence="false" stretchy="false">}</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {P}}=\{true\}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/67bc4b5199a361668268075361f184788d09f38d" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.838ex; width:11.428ex; height:2.843ex;" alt="\mathcal{P} = \{true\}"/></span></span>
+8  <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {C}}=}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">C</mi>
+          </mrow>
+        </mrow>
+        <mo>=</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {C}}=}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/82b7bcca93bed7fd2bb4e1c0ea3e7c702d227c2a" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:3.692ex; height:2.176ex;" alt="\mathcal{C} = "/></span> the set of all possible conditions</span>
+9  <span class="nowrap"><b>for</b> <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle j=1\dots T}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>j</mi>
+        <mo>=</mo>
+        <mn>1</mn>
+        <mo>&#x2026;<!-- … --></mo>
+        <mi>T</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle j=1\dots T}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b84cfa3159281dd86952a26b2c3f5806871472d8" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.027ex; width:10.379ex; height:2.509ex;" alt="j = 1 \dots T"/></span></span>
+10      <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle p\in {\mathcal {P}},c\in {\mathcal {C}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>p</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">P</mi>
+          </mrow>
+        </mrow>
+        <mo>,</mo>
+        <mi>c</mi>
+        <mo>&#x2208;<!-- ∈ --></mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">C</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle p\in {\mathcal {P}},c\in {\mathcal {C}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/0000acfaf8b73ee23ecd622d960cc03f2557357f" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; margin-left: -0.089ex; width:11.924ex; height:2.509ex;" alt="p \in \mathcal{P}, c \in \mathcal{C} "/></span> get values</span> <span class="nowrap">that minimize <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle z=2\left({\sqrt {W_{+}(p\wedge c)W_{-}(p\wedge c)}}+{\sqrt {W_{+}(p\wedge \neg c)W_{-}(p\wedge \neg c)}}\right)+W(\neg p)}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mi>z</mi>
+        <mo>=</mo>
+        <mn>2</mn>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mrow class="MJX-TeXAtom-ORD">
+              <msqrt>
+                <msub>
+                  <mi>W</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>+</mo>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>p</mi>
+                <mo>&#x2227;<!-- ∧ --></mo>
+                <mi>c</mi>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>W</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>p</mi>
+                <mo>&#x2227;<!-- ∧ --></mo>
+                <mi>c</mi>
+                <mo stretchy="false">)</mo>
+              </msqrt>
+            </mrow>
+            <mo>+</mo>
+            <mrow class="MJX-TeXAtom-ORD">
+              <msqrt>
+                <msub>
+                  <mi>W</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>+</mo>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>p</mi>
+                <mo>&#x2227;<!-- ∧ --></mo>
+                <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+                <mi>c</mi>
+                <mo stretchy="false">)</mo>
+                <msub>
+                  <mi>W</mi>
+                  <mrow class="MJX-TeXAtom-ORD">
+                    <mo>&#x2212;<!-- − --></mo>
+                  </mrow>
+                </msub>
+                <mo stretchy="false">(</mo>
+                <mi>p</mi>
+                <mo>&#x2227;<!-- ∧ --></mo>
+                <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+                <mi>c</mi>
+                <mo stretchy="false">)</mo>
+              </msqrt>
+            </mrow>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>W</mi>
+        <mo stretchy="false">(</mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>p</mi>
+        <mo stretchy="false">)</mo>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle z=2\left({\sqrt {W_{+}(p\wedge c)W_{-}(p\wedge c)}}+{\sqrt {W_{+}(p\wedge \neg c)W_{-}(p\wedge \neg c)}}\right)+W(\neg p)}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/50c8da613301197c565e4d8c5b85a95b24c32eb0" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -1.838ex; width:69.995ex; height:4.843ex;" alt=" z = 2 \left(  \sqrt{W_+(p \wedge c) W_-(p \wedge c)} + \sqrt{W_+(p \wedge \neg c) W_-(p \wedge \neg c)} \right) +W(\neg p) "/></span></span>
+11      <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {P}}+=p\wedge c+p\wedge \neg c}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">P</mi>
+          </mrow>
+        </mrow>
+        <mo>+</mo>
+        <mo>=</mo>
+        <mi>p</mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi>c</mi>
+        <mo>+</mo>
+        <mi>p</mi>
+        <mo>&#x2227;<!-- ∧ --></mo>
+        <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+        <mi>c</mi>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {P}}+=p\wedge c+p\wedge \neg c}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/ebf5f59657ae3016c8425ed463886f0e8f198111" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:20.519ex; height:2.509ex;" alt="\mathcal{P} += p \wedge c + p \wedge \neg c"/></span></span>
+12      <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{1}={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(p\wedge c)+1}{W_{-}(p\wedge c)+1}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>1</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>ln</mtext>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>+</mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>p</mi>
+              <mo>&#x2227;<!-- ∧ --></mo>
+              <mi>c</mi>
+              <mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>&#x2212;<!-- − --></mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>p</mi>
+              <mo>&#x2227;<!-- ∧ --></mo>
+              <mi>c</mi>
+              <mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{1}={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(p\wedge c)+1}{W_{-}(p\wedge c)+1}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/6de62a7b0e5dbe8ed749a43735367c03e0780489" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:24.432ex; height:6.509ex;" alt="a_1=\frac{1}{2}\textrm{ln}\frac{W_+(p\wedge c)+1}{W_-(p \wedge c)+1}"/></span></span>
+13      <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle a_{2}={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(p\wedge \neg c)+1}{W_{-}(p\wedge \neg c)+1}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>a</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mn>2</mn>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mn>1</mn>
+            <mn>2</mn>
+          </mfrac>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mtext>ln</mtext>
+          </mrow>
+        </mrow>
+        <mrow class="MJX-TeXAtom-ORD">
+          <mfrac>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>+</mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>p</mi>
+              <mo>&#x2227;<!-- ∧ --></mo>
+              <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+              <mi>c</mi>
+              <mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+            <mrow>
+              <msub>
+                <mi>W</mi>
+                <mrow class="MJX-TeXAtom-ORD">
+                  <mo>&#x2212;<!-- − --></mo>
+                </mrow>
+              </msub>
+              <mo stretchy="false">(</mo>
+              <mi>p</mi>
+              <mo>&#x2227;<!-- ∧ --></mo>
+              <mi mathvariant="normal">&#x00AC;<!-- ¬ --></mi>
+              <mi>c</mi>
+              <mo stretchy="false">)</mo>
+              <mo>+</mo>
+              <mn>1</mn>
+            </mrow>
+          </mfrac>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle a_{2}={\frac {1}{2}}{\textrm {ln}}{\frac {W_{+}(p\wedge \neg c)+1}{W_{-}(p\wedge \neg c)+1}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2d9fd2a86e01f4ecb86c165ee2f98ff443c413f9" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -2.671ex; width:25.982ex; height:6.509ex;" alt="a_2=\frac{1}{2}\textrm{ln}\frac{W_+(p\wedge \neg c)+1}{W_-(p \wedge \neg c)+1}"/></span></span>
+14      <span class="texhtml"><i>R<sub>j</sub></i> =</span> new rule with precondition <span class="texhtml mvar" style="font-style:italic;">p</span>, condition <span class="texhtml mvar" style="font-style:italic;">c</span>, and weights <span class="texhtml"><i>a</i><sub>1</sub></span> and <span class="texhtml"><i>a</i><sub>2</sub></span>
+15      <span class="nowrap"><span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle w_{i}=w_{i}e^{-y_{i}R_{j}(x_{i})}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mi>w</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>i</mi>
+          </mrow>
+        </msub>
+        <msup>
+          <mi>e</mi>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mo>&#x2212;<!-- − --></mo>
+            <msub>
+              <mi>y</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <msub>
+              <mi>R</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>j</mi>
+              </mrow>
+            </msub>
+            <mo stretchy="false">(</mo>
+            <msub>
+              <mi>x</mi>
+              <mrow class="MJX-TeXAtom-ORD">
+                <mi>i</mi>
+              </mrow>
+            </msub>
+            <mo stretchy="false">)</mo>
+          </mrow>
+        </msup>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle w_{i}=w_{i}e^{-y_{i}R_{j}(x_{i})}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/f9b5d6fa0690250f745c603471e0c864a6314ab6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.671ex; width:16.857ex; height:3.176ex;" alt="w_i = w_i e^{ -y_i R_j(x_i)   }"/></span></span>
+16  <b>end for</b>
+17  <b>return</b> set of <span class="texhtml"><i>R<sub>j</sub></i></span>
+</pre>
+<p>The set <span class="mwe-math-element"><span class="mwe-math-mathml-inline mwe-math-mathml-a11y" style="display: none;"><math xmlns="http://www.w3.org/1998/Math/MathML"  alttext="{\displaystyle {\mathcal {P}}}">
+  <semantics>
+    <mrow class="MJX-TeXAtom-ORD">
+      <mstyle displaystyle="true" scriptlevel="0">
+        <mrow class="MJX-TeXAtom-ORD">
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi class="MJX-tex-caligraphic" mathvariant="script">P</mi>
+          </mrow>
+        </mrow>
+      </mstyle>
+    </mrow>
+    <annotation encoding="application/x-tex">{\displaystyle {\mathcal {P}}}</annotation>
+  </semantics>
+</math></span><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/10d6ec962de5797ba4f161c40e66dca74ae95cc6" class="mwe-math-fallback-image-inline" aria-hidden="true" style="vertical-align: -0.338ex; width:1.704ex; height:2.176ex;" alt="{\mathcal {P}}"/></span> grows by two preconditions in each iteration, and it is possible to derive the tree structure of a set of rules by making note of the precondition that is used in each successive rule.
+</p>
+<h2><span class="mw-headline" id="Empirical_results">Empirical results</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=6" title="Edit section: Empirical results">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Figure 6 in the original paper<sup id="cite_ref-Freund99_1-1" class="reference"><a href="#cite_note-Freund99-1">&#91;1&#93;</a></sup> demonstrates that ADTrees are typically as robust as boosted decision trees and boosted <a href="/wiki/Decision_stump" title="Decision stump">decision stumps</a>.  Typically, equivalent accuracy can be achieved with a much simpler tree structure than recursive partitioning algorithms.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=7" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-Freund99-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Freund99_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Freund99_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Yoav Freund and Llew Mason.  The
+Alternating Decision Tree Algorithm.  Proceedings of the 16th International Conference on Machine Learning, pages 124-133 (1999)</span>
+</li>
+<li id="cite_note-Pfahringer-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-Pfahringer_2-0">^</a></b></span> <span class="reference-text">Bernhard Pfahringer, Geoffrey Holmes and Richard Kirkby.  Optimizing the Induction of Alternating Decision Trees.  Proceedings of the Fifth Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining.  2001, pp. 477-487</span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ics.uci.edu/~mlearn/databases/spambase/">"UCI Machine Learning Repository"</a>. Ics.uci.edu<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-03-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=UCI+Machine+Learning+Repository&amp;rft.pub=Ics.uci.edu&amp;rft_id=http%3A%2F%2Fwww.ics.uci.edu%2F~mlearn%2Fdatabases%2Fspambase%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlternating+decision+tree" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ics.uci.edu/~mlearn/MLRepository.html">"UCI Machine Learning Repository"</a>. Ics.uci.edu<span class="reference-accessdate">. Retrieved <span class="nowrap">2012-03-16</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=UCI+Machine+Learning+Repository&amp;rft.pub=Ics.uci.edu&amp;rft_id=http%3A%2F%2Fwww.ics.uci.edu%2F~mlearn%2FMLRepository.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AAlternating+decision+tree" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit&amp;section=8" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://jboost.sourceforge.net/presentations/BoostingLightIntro.pdf">An introduction to Boosting and ADTrees</a>  (Has many graphical examples of alternating decision trees in practice).</li>
+<li><a rel="nofollow" class="external text" href="http://jboost.sourceforge.net/">JBoost</a> software implementing ADTrees.</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1247
+Cached time: 20200316214051
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.224 seconds
+Real time usage: 0.325 seconds
+Preprocessor visited node count: 565/1000000
+Post‐expand include size: 5380/2097152 bytes
+Template argument size: 601/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 0/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 7863/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.103/10.000 seconds
+Lua memory usage: 2.81 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  213.981      1 -total
+ 55.15%  118.020      1 Template:Reflist
+ 46.68%   99.885      2 Template:Cite_web
+ 31.06%   66.461      3 Template:Val
+  2.85%    6.097      2 Template:N/A
+  2.64%    5.655      3 Template:Rh2
+  2.20%    4.697     10 Template:Nowrap
+  2.13%    4.552      7 Template:Math
+  1.61%    3.441      1 Template:Main_other
+  1.61%    3.439      5 Template:Mvar
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:11288998-0!canonical!math=5 and timestamp 20200316214051 and revision id 808502242
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Alternating_decision_tree&amp;oldid=808502242">https://en.wikipedia.org/w/index.php?title=Alternating_decision_tree&amp;oldid=808502242</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Decision_trees" title="Category:Decision trees">Decision trees</a></li><li><a href="/wiki/Category:Classification_algorithms" title="Category:Classification algorithms">Classification algorithms</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Alternating+decision+tree" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Alternating+decision+tree" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Alternating_decision_tree" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Alternating_decision_tree" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Alternating_decision_tree">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Alternating_decision_tree&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Alternating_decision_tree&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Alternating_decision_tree" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Alternating_decision_tree" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Alternating_decision_tree&amp;oldid=808502242" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Alternating_decision_tree&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q4736414" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Alternating_decision_tree&amp;id=808502242&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Alternating+decision+tree">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Alternating+decision+tree&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Alternating_decision_tree&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/%C3%81rbol_de_decisi%C3%B3n_alternativo" title="Árbol de decisión alternativo – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q4736414#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 3 November 2017, at 06:54<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Alternating_decision_tree&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.224","walltime":"0.325","ppvisitednodes":{"value":565,"limit":1000000},"postexpandincludesize":{"value":5380,"limit":2097152},"templateargumentsize":{"value":601,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":7863,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00%  213.981      1 -total"," 55.15%  118.020      1 Template:Reflist"," 46.68%   99.885      2 Template:Cite_web"," 31.06%   66.461      3 Template:Val","  2.85%    6.097      2 Template:N/A","  2.64%    5.655      3 Template:Rh2","  2.20%    4.697     10 Template:Nowrap","  2.13%    4.552      7 Template:Math","  1.61%    3.441      1 Template:Main_other","  1.61%    3.439      5 Template:Mvar"]},"scribunto":{"limitreport-timeusage":{"value":"0.103","limit":"10.000"},"limitreport-memusage":{"value":2941784,"limit":52428800}},"cachereport":{"origin":"mw1247","timestamp":"20200316214051","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Alternating decision tree","url":"https:\/\/en.wikipedia.org\/wiki\/Alternating_decision_tree","sameAs":"http:\/\/www.wikidata.org\/entity\/Q4736414","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q4736414","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2007-05-18T12:31:08Z","dateModified":"2017-11-03T06:54:02Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":115,"wgHostname":"mw1265"});});</script></body></html>

@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Function pointer - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn8dFApAIC0AAK0lmlQAAADG","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Function_pointer","wgTitle":"Function pointer","wgCurRevisionId":938639671,"wgRevisionId":938639671,"wgArticleId":510000,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["CS1 maint: location","All articles with unsourced statements","Articles with unsourced statements from August 2011","Articles with example C code","Articles with example C++ code","Data types","Subroutines"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":
+"Function_pointer","wgRelevantArticleId":510000,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q2736305","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":
+"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Function_pointer&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Function_pointer&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Function_pointer"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Function_pointer rootpage-Function_pointer skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Function pointer</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>A <b>function pointer</b>, also called a <b>subroutine pointer</b> or <b>procedure pointer</b>, is a <a href="/wiki/Pointer_(computer_programming)" title="Pointer (computer programming)">pointer</a> that points to a function. As opposed to referencing a data value, a function pointer points to executable code within memory. <a href="/wiki/Dereference_operator" title="Dereference operator">Dereferencing</a> the function pointer yields the referenced <a href="/wiki/Subroutine" title="Subroutine">function</a>, which can be invoked and passed arguments just as in a normal function call. Such an invocation is also known as an "indirect" call, because the function is being invoked <i>indirectly</i> through a variable instead of <i>directly</i> through a fixed identifier or address.
+</p><p>Function pointers can be used to simplify code by providing a simple way to select a function to execute based on run-time values.
+</p><p>Function pointers are supported by <a href="/wiki/Third-generation_programming_language" title="Third-generation programming language">third-generation</a> <a href="/wiki/Programming_language" title="Programming language">programming languages</a> (such as <a href="/wiki/PL/I" title="PL/I">PL/I</a>, <a href="/wiki/COBOL" title="COBOL">COBOL</a>, <a href="/wiki/Fortran" title="Fortran">Fortran</a>,<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> dBASE dBL, and <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>) and <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a> languages (such as <a href="/wiki/C%2B%2B" title="C++">C++</a> and <a href="/wiki/D_(programming_language)" title="D (programming language)">D</a>).<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Simple_function_pointers"><span class="tocnumber">1</span> <span class="toctext">Simple function pointers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Example_in_C"><span class="tocnumber">1.1</span> <span class="toctext">Example in C</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Functors"><span class="tocnumber">2</span> <span class="toctext">Functors</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Method_pointers"><span class="tocnumber">3</span> <span class="toctext">Method pointers</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#In_C++"><span class="tocnumber">4</span> <span class="toctext">In C++</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Pointers_to_member_functions_in_C++"><span class="tocnumber">4.1</span> <span class="toctext">Pointers to member functions in C++</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Alternate_C_and_C++_Syntax"><span class="tocnumber">5</span> <span class="toctext">Alternate C and C++ Syntax</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="#C_and_C++"><span class="tocnumber">5.1</span> <span class="toctext">C and C++</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#C++"><span class="tocnumber">5.2</span> <span class="toctext">C++</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#References"><span class="tocnumber">7</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#External_links"><span class="tocnumber">8</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Simple_function_pointers">Simple function pointers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=1" title="Edit section: Simple function pointers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The simplest implementation of a function (or subroutine) pointer is as a <a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">variable</a> containing the <a href="/wiki/Memory_address" title="Memory address">address</a> of the function within executable memory. Older <a href="/wiki/Third-generation_programming_language" title="Third-generation programming language">third-generation languages</a> such as <a href="/wiki/PL/I" title="PL/I">PL/I</a> and <a href="/wiki/COBOL" title="COBOL">COBOL</a>, as well as more modern languages such as <a href="/wiki/Pascal_(programming_language)" title="Pascal (programming language)">Pascal</a> and <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> generally implement function pointers in this manner.<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Example_in_C">Example in C</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=2" title="Edit section: Example in C">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="#Alternate_C_and_C++_Syntax"> §&#160;Alternate C and C++ Syntax</a></div>
+<p>The following C program illustrates the use of two function pointers:
+</p>
+<ul><li><i>func1</i> takes one double-precision (double) parameter and returns another double, and is assigned to a function which converts centimetres to inches.</li>
+<li><i>func2</i> takes a pointer to a constant character array as well as an integer and returns a pointer to a character, and is assigned to a <a href="/wiki/C_string_handling" title="C string handling">C string handling</a> function which returns a pointer to the first occurrence of a given character in a character array.</li></ul>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;  /* for printf */</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt; /* for strchr */</span><span class="cp"></span>
+
+<span class="kt">double</span> <span class="nf">cm_to_inches</span><span class="p">(</span><span class="kt">double</span> <span class="n">cm</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="n">cm</span> <span class="o">/</span> <span class="mf">2.54</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// &quot;strchr&quot; is part of the C string handling (i.e., no need for declaration)</span>
+<span class="c1">// See https://en.wikipedia.org/wiki/C_string_handling#Functions</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">double</span> <span class="p">(</span><span class="o">*</span><span class="n">func1</span><span class="p">)(</span><span class="kt">double</span><span class="p">)</span> <span class="o">=</span> <span class="n">cm_to_inches</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span> <span class="p">(</span><span class="o">*</span><span class="n">func2</span><span class="p">)(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="o">=</span> <span class="n">strchr</span><span class="p">;</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f %s&quot;</span><span class="p">,</span> <span class="n">func1</span><span class="p">(</span><span class="mf">15.0</span><span class="p">),</span> <span class="n">func2</span><span class="p">(</span><span class="s">&quot;Wikipedia&quot;</span><span class="p">,</span> <span class="sc">&#39;p&#39;</span><span class="p">));</span>
+	<span class="cm">/* prints &quot;5.905512 pedia&quot; */</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>The next program uses a function pointer to invoke one of two functions (<code>sin</code> or <code>cos</code>) indirectly from another function (<code>compute_sum</code>, computing an approximation of the function's <a href="/wiki/Riemann_integration" class="mw-redirect" title="Riemann integration">Riemann integration</a>). The program operates by having function <code>main</code> call function <code>compute_sum</code> twice, passing it a pointer to the library function <code>sin</code> the first time, and a pointer to function <code>cos</code> the second time. Function <code>compute_sum</code> in turn invokes one of the two functions indirectly by dereferencing its function pointer argument <code>funcp</code> multiple times, adding together the values that the invoked function returns and returning the resulting sum. The two sums are written to the standard output by <code>main</code>.
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno"> 1 </span><span class="cp">#include</span> <span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="lineno"> 2 </span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="lineno"> 3 </span>
+<span class="lineno"> 4 </span><span class="c1">// Function taking a function pointer as an argument</span>
+<span class="lineno"> 5 </span><span class="kt">double</span> <span class="nf">compute_sum</span><span class="p">(</span><span class="kt">double</span> <span class="p">(</span><span class="o">*</span><span class="n">funcp</span><span class="p">)(</span><span class="kt">double</span><span class="p">),</span> <span class="kt">double</span> <span class="n">lo</span><span class="p">,</span> <span class="kt">double</span> <span class="n">hi</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 6 </span>    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+<span class="lineno"> 7 </span>
+<span class="lineno"> 8 </span>    <span class="c1">// Add values returned by the pointed-to function &#39;*funcp&#39;</span>
+<span class="lineno"> 9 </span>    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="lineno">10 </span>    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11 </span>        <span class="c1">// Use the function pointer &#39;funcp&#39; to invoke the function</span>
+<span class="lineno">12 </span>        <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="p">)</span> <span class="o">+</span> <span class="n">lo</span><span class="p">;</span>
+<span class="lineno">13 </span>        <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="n">funcp</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="lineno">14 </span>        <span class="n">sum</span> <span class="o">+=</span> <span class="n">y</span><span class="p">;</span>
+<span class="lineno">15 </span>    <span class="p">}</span>
+<span class="lineno">16 </span>    <span class="k">return</span> <span class="n">sum</span> <span class="o">/</span> <span class="mf">101.0</span> <span class="o">*</span> <span class="p">(</span><span class="n">hi</span> <span class="o">-</span> <span class="n">lo</span><span class="p">);</span>
+<span class="lineno">17 </span><span class="p">}</span>
+<span class="lineno">18 </span>
+<span class="lineno">19 </span><span class="kt">double</span> <span class="nf">square</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">20 </span>     <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+<span class="lineno">21 </span><span class="p">}</span>
+<span class="lineno">22 </span>
+<span class="lineno">23 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">24 </span>    <span class="kt">double</span>  <span class="n">sum</span><span class="p">;</span>
+<span class="lineno">25 </span>
+<span class="lineno">26 </span>    <span class="c1">// Use standard library function &#39;sin()&#39; as the pointed-to function</span>
+<span class="lineno">27 </span>    <span class="n">sum</span> <span class="o">=</span> <span class="n">compute_sum</span><span class="p">(</span><span class="n">sin</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="lineno">28 </span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;sum(sin): %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+<span class="lineno">29 </span>
+<span class="lineno">30 </span>    <span class="c1">// Use standard library function &#39;cos()&#39; as the pointed-to function</span>
+<span class="lineno">31 </span>    <span class="n">sum</span> <span class="o">=</span> <span class="n">compute_sum</span><span class="p">(</span><span class="n">cos</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="lineno">32 </span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;sum(cos): %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+<span class="lineno">33 </span>
+<span class="lineno">34 </span>    <span class="c1">// Use user-defined function &#39;square()&#39; as the pointed-to function</span>
+<span class="lineno">35 </span>    <span class="n">sum</span> <span class="o">=</span> <span class="n">compute_sum</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+<span class="lineno">36 </span>    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;sum(square): %g</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+<span class="lineno">37 </span>
+<span class="lineno">38 </span>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">39 </span><span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Functors">Functors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=3" title="Edit section: Functors">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Function_object" title="Function object">Function object</a></div>
+<p>Functors, or function objects, are similar to function pointers, and can be used in similar ways. A functor is an object of a class type that implements the <a href="/wiki/Function-call_operator" class="mw-redirect" title="Function-call operator">function-call operator</a>, allowing the object to be used within expressions using the same syntax as a function call. Functors are more powerful than simple function pointers, being able to contain their own data values, and allowing the programmer to emulate <a href="/wiki/Closure_(computer_programming)" title="Closure (computer programming)">closures</a>. They are also used as callback functions if it is necessary to use a member function as a callback function.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup>
+</p><p>Many "pure" object-oriented languages do not support function pointers. Something similar can be implemented in these kinds of languages, though, using <a href="/wiki/Reference_(computer_science)" title="Reference (computer science)">references</a> to <a href="/wiki/Protocol_(object-oriented_programming)" title="Protocol (object-oriented programming)">interfaces</a> that define a single <a href="/wiki/Method_(computer_programming)" title="Method (computer programming)">method</a> (member function). <a href="/wiki/List_of_CLI_languages" title="List of CLI languages">CLI languages</a> such as <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a> and <a href="/wiki/Visual_Basic_.NET" title="Visual Basic .NET">Visual Basic .NET</a> implement <a href="/wiki/Type_safety" title="Type safety">type-safe</a> function pointers with <a href="/wiki/Delegate_(CLI)" title="Delegate (CLI)">delegates</a>.
+</p><p>In other languages that support <a href="/wiki/First-class_function" title="First-class function">first-class functions</a>, functions are regarded as data, and can be passed, returned, and created dynamically directly by other functions, eliminating the need for function pointers.
+</p><p>Extensively using function pointers to call functions may produce a slow-down for the code on modern processors, because <a href="/wiki/Branch_predictor" title="Branch predictor">branch predictor</a> may not be able to figure out where to branch to (it depends on the value of the function pointer at run time) although this effect can be overstated as it is often amply compensated for by significantly reduced non-indexed table lookups.
+</p>
+<h2><span class="mw-headline" id="Method_pointers">Method pointers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=4" title="Edit section: Method pointers">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>C++ includes support for <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented programming</a>, so classes can have <a href="/wiki/Method_(computer_programming)" title="Method (computer programming)">methods</a> (usually referred to as member functions). Non-static member functions (instance methods) have an implicit parameter (the <i><a href="/wiki/This_(computer_programming)" title="This (computer programming)">this</a></i> pointer) which is the pointer to the object it is operating on, so the type of the object must be included as part of the type of the function pointer. The method is then used on an object of that class by using one of the "pointer-to-member" operators: <code>.*</code> or <code>-&gt;*</code> (for an object or a pointer to object, respectively).
+</p><p>Although function pointers in C and C++ can be implemented as simple addresses, so that typically <code>sizeof(Fx)==sizeof(void *)</code>, member pointers in C++ are sometimes implemented as "fat pointers", typically two or three times the size of a simple function pointer, in order to deal with <a href="/wiki/Virtual_methods" class="mw-redirect" title="Virtual methods">virtual methods</a> and <a href="/wiki/Virtual_inheritance" title="Virtual inheritance">virtual inheritance</a><sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (August 2011)">citation needed</span></a></i>&#93;</sup>.
+</p>
+<h2><span id="In_C.2B.2B"></span><span class="mw-headline" id="In_C++">In C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=5" title="Edit section: In C++">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In C++, in addition to the method used in C, it is also possible to use the C++ standard library class template <tt>std::function</tt>, of which the instances are function objects:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;functional&gt;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">double</span> <span class="nf">derivative</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">function</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">f</span><span class="p">,</span> <span class="kt">double</span> <span class="n">x0</span><span class="p">,</span> <span class="kt">double</span> <span class="n">eps</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">eps2</span> <span class="o">=</span> <span class="n">eps</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">lo</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">-</span> <span class="n">eps2</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">hi</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">eps2</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">hi</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">lo</span><span class="p">))</span> <span class="o">/</span> <span class="n">eps</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">double</span> <span class="nf">f</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;d/dx(x ^ 2) [@ x = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;] = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">derivative</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mf">1e-5</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h3><span id="Pointers_to_member_functions_in_C.2B.2B"></span><span class="mw-headline" id="Pointers_to_member_functions_in_C++">Pointers to member functions in C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=6" title="Edit section: Pointers to member functions in C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="#Alternate_C_and_C++_Syntax"> §&#160;Alternate C and C++ Syntax</a></div>
+<p>This is how C++ uses function pointers when dealing with member functions of classes or structs.  These are invoked using an object pointer or a this call.  They are type safe in that you can only call members of that class (or derivatives) using a pointer of that type.  This example also demonstrates the use of a typedef for the pointer to member function added for simplicity.  Function pointers to static member functions are done in the traditional 'C' style because there is no object pointer for this call required.
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">mult</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">static</span> <span class="kt">int</span> <span class="n">negate</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kt">int</span> <span class="nf">bar1</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="n">Foo</span><span class="o">*</span> <span class="n">pFoo</span><span class="p">,</span> <span class="kt">int</span><span class="p">(</span><span class="n">Foo</span><span class="o">::*</span><span class="n">pfn</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">pFoo</span><span class="o">-&gt;*</span><span class="n">pfn</span><span class="p">)(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">typedef</span> <span class="nf">int</span><span class="p">(</span><span class="n">Foo</span><span class="o">::*</span><span class="n">Foo_pfn</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">bar2</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="n">Foo</span><span class="o">*</span> <span class="n">pFoo</span><span class="p">,</span> <span class="n">Foo_pfn</span> <span class="n">pfn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">pFoo</span><span class="o">-&gt;*</span><span class="n">pfn</span><span class="p">)(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">typedef</span> <span class="nf">int</span><span class="p">(</span><span class="o">*</span><span class="n">PFN</span><span class="p">)(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">bar3</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">PFN</span> <span class="n">pfn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">pfn</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Foo</span> <span class="n">foo</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Foo::add(2,4) = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">bar1</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Foo</span><span class="o">::</span><span class="n">add</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Foo::mult(3,5) = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">bar2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">foo</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Foo</span><span class="o">::</span><span class="n">mult</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Foo::negate(6) = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">bar3</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Foo</span><span class="o">::</span><span class="n">negate</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span id="Alternate_C_and_C.2B.2B_Syntax"></span><span class="mw-headline" id="Alternate_C_and_C++_Syntax">Alternate C and C++ Syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=7" title="Edit section: Alternate C and C++ Syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The C and C++ syntax given above is the canonical one used in all the textbooks - but it's difficult to read and explain. Even the above <code>typedef</code> examples use this syntax. However, every C and C++ compiler supports a more clear and concise mechanism to declare function pointers: use <code>typedef</code>, but <i>don't</i> store the pointer as part of the definition. Note that the only way this kind of <code>typedef</code> can actually be used is with a pointer - but that highlights the pointer-ness of it.
+</p>
+<h3><span id="C_and_C.2B.2B"></span><span class="mw-headline" id="C_and_C++">C and C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=8" title="Edit section: C and C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// This declares &#39;F&#39;, a function that accepts a &#39;char&#39; and returns an &#39;int&#39;. Definition is elsewhere.</span>
+<span class="kt">int</span> <span class="nf">F</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+
+<span class="c1">// This defines &#39;Fn&#39;, a type of function that accepts a &#39;char&#39; and returns an &#39;int&#39;.</span>
+<span class="k">typedef</span> <span class="kt">int</span> <span class="nf">Fn</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+
+<span class="c1">// This defines &#39;fn&#39;, a variable of type pointer-to-&#39;Fn&#39;, and assigns the address of &#39;F&#39; to it.</span>
+<span class="n">Fn</span> <span class="o">*</span><span class="n">fn</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">F</span><span class="p">;</span>      <span class="c1">// Note &#39;&amp;&#39; not required - but it highlights what is being done.</span>
+
+<span class="c1">// This calls &#39;F&#39; using &#39;fn&#39;, assigning the result to the variable &#39;a&#39;</span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
+
+<span class="c1">// This defines &#39;Call&#39;, a function that accepts a pointer-to-&#39;Fn&#39;, calls it, and returns the result</span>
+<span class="kt">int</span> <span class="nf">Call</span><span class="p">(</span><span class="n">Fn</span> <span class="o">*</span><span class="n">fn</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// Call(fn, c)</span>
+
+<span class="c1">// This calls function &#39;Call&#39;, passing in &#39;F&#39; and assigning the result to &#39;call&#39;</span>
+<span class="kt">int</span> <span class="n">call</span> <span class="o">=</span> <span class="n">Call</span><span class="p">(</span><span class="o">&amp;</span><span class="n">F</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">);</span>   <span class="c1">// Again, &#39;&amp;&#39; is not required</span>
+
+<span class="c1">// LEGACY: Note that to maintain existing code bases, the above definition style can still be used first;</span>
+<span class="c1">// then the original type can be defined in terms of it using the new style.</span>
+
+<span class="c1">// This defines &#39;PFn&#39;, a type of pointer-to-type-Fn.</span>
+<span class="k">typedef</span> <span class="n">Fn</span> <span class="o">*</span><span class="n">PFn</span><span class="p">;</span>
+
+<span class="c1">// &#39;PFn&#39; can be used wherever &#39;Fn *&#39; can</span>
+<span class="n">PFn</span> <span class="n">pfn</span> <span class="o">=</span> <span class="n">F</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">CallP</span><span class="p">(</span><span class="n">PFn</span> <span class="n">fn</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+<h3><span id="C.2B.2B"></span><span class="mw-headline" id="C++">C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=9" title="Edit section: C++">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These examples use the above definitions. In particular, note that the above definition for <code>Fn</code> can be used in pointer-to-member-function definitions:
+</p>
+<div class="mw-highlight mw-highlight-lang-cpp mw-content-ltr" dir="ltr"><pre><span></span><span class="c1">// This defines &#39;C&#39;, a class with similar static and member functions,</span>
+<span class="c1">// and then creates an instance called &#39;c&#39;</span>
+<span class="k">class</span> <span class="nc">C</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">Static</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">Member</span><span class="p">(</span><span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+<span class="p">}</span> <span class="n">c</span><span class="p">;</span> <span class="c1">// C</span>
+
+<span class="c1">// This defines &#39;p&#39;, a pointer to &#39;C&#39; and assigns the address of &#39;c&#39; to it</span>
+<span class="n">C</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">;</span>
+
+<span class="c1">// This assigns a pointer-to-&#39;Static&#39; to &#39;fn&#39;.</span>
+<span class="c1">// Since there is no &#39;this&#39;, &#39;Fn&#39; is the correct type; and &#39;fn&#39; can be used as above.</span>
+<span class="n">fn</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">C</span><span class="o">::</span><span class="n">Static</span><span class="p">;</span>
+
+<span class="c1">// This defines &#39;m&#39;, a pointer-to-member-of-&#39;C&#39; with type &#39;Fn&#39;,</span>
+<span class="c1">// and assigns the address of &#39;C::Member&#39; to it.</span>
+<span class="c1">// You can read it right-to-left like all pointers:</span>
+<span class="c1">// &quot;&#39;m&#39; is a pointer to member of class &#39;C&#39; of type &#39;Fn&#39;&quot;</span>
+<span class="n">Fn</span> <span class="n">C</span><span class="o">::*</span><span class="n">m</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">C</span><span class="o">::</span><span class="n">Member</span><span class="p">;</span>
+
+<span class="c1">// This uses &#39;m&#39; to call &#39;Member&#39; in &#39;c&#39;, assigning the result to &#39;cA&#39;</span>
+<span class="kt">int</span> <span class="n">cA</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">)(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
+
+<span class="c1">// This uses &#39;m&#39; to call &#39;Member&#39; in &#39;p&#39;, assigning the result to &#39;pA&#39;</span>
+<span class="kt">int</span> <span class="n">pA</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-&gt;*</span><span class="n">m</span><span class="p">)(</span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
+
+<span class="c1">// This defines &#39;Ref&#39;, a function that accepts a reference-to-&#39;C&#39;,</span>
+<span class="c1">// a pointer-to-member-of-&#39;C&#39; of type &#39;Fn&#39;, and a &#39;char&#39;,</span>
+<span class="c1">// calls the function and returns the result</span>
+<span class="kt">int</span> <span class="nf">Ref</span><span class="p">(</span><span class="n">C</span> <span class="o">&amp;</span><span class="n">r</span><span class="p">,</span> <span class="n">Fn</span> <span class="n">C</span><span class="o">::*</span><span class="n">m</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="o">*</span><span class="n">m</span><span class="p">)(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// Ref(r, m, c)</span>
+
+<span class="c1">// This defines &#39;Ptr&#39;, a function that accepts a pointer-to-&#39;C&#39;,</span>
+<span class="c1">// a pointer-to-member-of-&#39;C&#39; of type &#39;Fn&#39;, and a &#39;char&#39;,</span>
+<span class="c1">// calls the function and returns the result</span>
+<span class="kt">int</span> <span class="nf">Ptr</span><span class="p">(</span><span class="n">C</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="n">Fn</span> <span class="n">C</span><span class="o">::*</span><span class="n">m</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+   <span class="k">return</span> <span class="p">(</span><span class="n">p</span><span class="o">-&gt;*</span><span class="n">m</span><span class="p">)(</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span> <span class="c1">// Ptr(p, m, c)</span>
+
+<span class="c1">// LEGACY: Note that to maintain existing code bases, the above definition style can still be used first;</span>
+<span class="c1">// then the original type can be defined in terms of it using the new style.</span>
+
+<span class="c1">// This defines &#39;FnC&#39;, a type of pointer-to-member-of-class-&#39;C&#39; of type &#39;Fn&#39;</span>
+<span class="k">typedef</span> <span class="n">Fn</span> <span class="n">C</span><span class="o">::*</span><span class="n">FnC</span><span class="p">;</span>
+
+<span class="c1">// &#39;FnC&#39; can be used wherever &#39;Fn C::*&#39; can</span>
+<span class="n">FnC</span> <span class="n">fnC</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">C</span><span class="o">::</span><span class="n">Member</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">RefP</span><span class="p">(</span><span class="n">C</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">,</span> <span class="n">FnC</span> <span class="n">m</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">);</span>
+</pre></div>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Delegation_(computing)" title="Delegation (computing)">Delegation (computing)</a></li>
+<li><a href="/wiki/Function_object" title="Function object">Function object</a></li>
+<li><a href="/wiki/Higher-order_function" title="Higher-order function">Higher-order function</a></li>
+<li><a href="/wiki/Procedural_parameter" title="Procedural parameter">Procedural parameter</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=11" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">Andrew J. Miller. <a rel="nofollow" class="external text" href="http://www.esm.psu.edu/~ajm138/fortranexamples.html#ex1">"Fortran Examples"</a>. <a rel="nofollow" class="external free" href="http://www.esm.psu.edu/~ajm138/fortranexamples.html">http://www.esm.psu.edu/~ajm138/fortranexamples.html</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-09-14</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Fortran+Examples&amp;rft.place=http%3A%2F%2Fwww.esm.psu.edu%2F~ajm138%2Ffortranexamples.html&amp;rft.au=Andrew+J.+Miller&amp;rft_id=http%3A%2F%2Fwww.esm.psu.edu%2F~ajm138%2Ffortranexamples.html%23ex1&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+pointer" class="Z3988"></span><span class="cs1-maint citation-comment">CS1 maint: location (<a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">link</a>)</span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.newty.de/fpt/intro.html#what">"The Function Pointer Tutorials"</a>. <a rel="nofollow" class="external free" href="http://www.newty.de/">http://www.newty.de/</a>: logo<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-13</span></span>. <q>Function Pointers are pointers, i.e. variables, which point to the address of a function</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Function+Pointer+Tutorials&amp;rft.place=http%3A%2F%2Fwww.newty.de%2F&amp;rft.pub=logo&amp;rft_id=http%3A%2F%2Fwww.newty.de%2Ffpt%2Fintro.html%23what&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+pointer" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.newty.de/fpt/intro.html#top">"The Function Pointer Tutorials"</a>. <a rel="nofollow" class="external free" href="http://www.newty.de/">http://www.newty.de/</a>: logo<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-13</span></span>. <q>Important note: A function pointer always points to a function with a specific signature! Thus all functions, you want to use with the same function pointer, must have the same parameters and return-type!</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Function+Pointer+Tutorials&amp;rft.place=http%3A%2F%2Fwww.newty.de%2F&amp;rft.pub=logo&amp;rft_id=http%3A%2F%2Fwww.newty.de%2Ffpt%2Fintro.html%23top&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+pointer" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.devx.com/tips/Tip/27126">"Expertise: Intermediate Language: C++: Use Functor for Callbacks in C++"</a>. <a rel="nofollow" class="external free" href="http://www.devx.com/">http://www.devx.com/</a>: DevX.com. 2005-01-31<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-13</span></span>. <q>If you want to use a member function as a callback function, then the member function needs to be associated with an object of the class before it can be called. In this case, you can use functor [with an example on this page].</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Expertise%3A+Intermediate+Language%3A+C%2B%2B%3A+Use+Functor+for+Callbacks+in+C%2B%2B&amp;rft.place=http%3A%2F%2Fwww.devx.com%2F&amp;rft.pub=DevX.com&amp;rft.date=2005-01-31&amp;rft_id=http%3A%2F%2Fwww.devx.com%2Ftips%2FTip%2F27126&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AFunction+pointer" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Function_pointer&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20041013202445/http://www.parashift.com/c++-faq-lite/pointers-to-members.html#faq-33.12">FAQ on Function Pointers</a>, things to avoid with function pointers, some information on using <a href="/wiki/Function_object" title="Function object">function objects</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.newty.de/fpt/">Function Pointer Tutorials</a>, a guide to C/C++ function pointers, <a href="/wiki/Callback_(computer_programming)" title="Callback (computer programming)">callbacks</a>, and <a href="/wiki/Function_object" title="Function object">function objects</a> (functors)</li>
+<li><a rel="nofollow" class="external text" href="http://www.codeproject.com/KB/cpp/FastDelegate.aspx">Member Function Pointers and the Fastest Possible C++ Delegates</a>, CodeProject article by Don Clugston</li>
+<li><a rel="nofollow" class="external text" href="http://www.cplusplus.com/doc/tutorial/pointers.html">Pointer Tutorials</a>, C++ documentation and tutorials</li>
+<li><a rel="nofollow" class="external text" href="http://www.onlinecomputerteacher.net/pointers-in-c.html">C pointers explained</a> a visual guide of pointers in C</li>
+<li><a rel="nofollow" class="external text" href="http://www.codeproject.com/KB/security/Securefunctionpointer.aspx">Secure Function Pointer and Callbacks in Windows Programming</a>, CodeProject article by R. Selvam</li>
+<li><a rel="nofollow" class="external text" href="http://publications.gbdirect.co.uk/c_book/chapter5/function_pointers.html">The C Book</a>, Function Pointers in C by "The C Book"</li>
+<li><a rel="nofollow" class="external text" href="http://www.dbase.com/help/2_80/Language_Definition/IDH_LDEF_FUNCPOINTERS.htm">Function Pointers in dBASE dBL</a>, Function Pointer in dBASE dBL</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1369
+Cached time: 20200306195355
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.240 seconds
+Real time usage: 1.361 seconds
+Preprocessor visited node count: 466/1000000
+Post‐expand include size: 9566/2097152 bytes
+Template argument size: 558/2097152 bytes
+Highest expansion depth: 12/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 40968/5000000 bytes
+Number of Wikibase entities loaded: 0/400
+Lua time usage: 0.095/10.000 seconds
+Lua memory usage: 2.96 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00% 1317.553      1 -total
+  8.41%  110.821      1 Template:Reflist
+  6.96%   91.729      4 Template:Cite_web
+  5.63%   74.136      1 Template:Citation_needed
+  4.76%   62.705      1 Template:Fix
+  3.17%   41.773      2 Template:Category_handler
+  2.13%   28.002      2 Template:See_also
+  1.24%   16.394      1 Template:Delink
+  0.67%    8.879      1 Template:Main
+  0.37%    4.813      1 Template:Fix/category
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:510000-0!canonical and timestamp 20200306195354 and revision id 938639671
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Function_pointer&amp;oldid=938639671">https://en.wikipedia.org/w/index.php?title=Function_pointer&amp;oldid=938639671</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Data_types" title="Category:Data types">Data types</a></li><li><a href="/wiki/Category:Subroutines" title="Category:Subroutines">Subroutines</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:CS1_maint:_location" title="Category:CS1 maint: location">CS1 maint: location</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_August_2011" title="Category:Articles with unsourced statements from August 2011">Articles with unsourced statements from August 2011</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li><li><a href="/wiki/Category:Articles_with_example_C%2B%2B_code" title="Category:Articles with example C++ code">Articles with example C++ code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Function+pointer" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Function+pointer" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Function_pointer" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Function_pointer" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Function_pointer">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Function_pointer&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Function_pointer&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Function_pointer" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Function_pointer" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Function_pointer&amp;oldid=938639671" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Function_pointer&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2736305" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Function_pointer&amp;id=938639671&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Function+pointer">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Function+pointer&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Function_pointer&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%85%D8%A4%D8%B4%D8%B1_%D8%AF%D8%A7%D9%84%D8%A9" title="مؤشر دالة – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Zeiger_(Informatik)#Funktionszeiger_(Methodenzeiger)" title="Zeiger (Informatik) – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/%CE%94%CE%B5%CE%AF%CE%BA%CF%84%CE%B7%CF%82_%CF%83%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7%CF%82" title="Δείκτης συνάρτησης – Greek" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%A7%D8%B4%D8%A7%D8%B1%D9%87%E2%80%8C%DA%AF%D8%B1_%D8%A8%D9%87_%D8%AA%D8%A7%D8%A8%D8%B9" title="اشاره‌گر به تابع – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/%ED%95%A8%EC%88%98_%ED%8F%AC%EC%9D%B8%ED%84%B0" title="함수 포인터 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Puntatori_a_funzione" title="Puntatori a funzione – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/%E9%96%A2%E6%95%B0%E3%81%B8%E3%81%AE%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF" title="関数へのポインタ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Typ_funkcyjny" title="Typ funkcyjny – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-th"><a href="https://th.wikipedia.org/wiki/%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B8%8A%E0%B8%B5%E0%B9%89%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99" title="ตัวชี้ฟังก์ชัน – Thai" lang="th" hreflang="th" class="interlanguage-link-target">ไทย</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88" title="函数指针 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q2736305#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 1 February 2020, at 14:22<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Function_pointer&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.240","walltime":"1.361","ppvisitednodes":{"value":466,"limit":1000000},"postexpandincludesize":{"value":9566,"limit":2097152},"templateargumentsize":{"value":558,"limit":2097152},"expansiondepth":{"value":12,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":40968,"limit":5000000},"entityaccesscount":{"value":0,"limit":400},"timingprofile":["100.00% 1317.553      1 -total","  8.41%  110.821      1 Template:Reflist","  6.96%   91.729      4 Template:Cite_web","  5.63%   74.136      1 Template:Citation_needed","  4.76%   62.705      1 Template:Fix","  3.17%   41.773      2 Template:Category_handler","  2.13%   28.002      2 Template:See_also","  1.24%   16.394      1 Template:Delink","  0.67%    8.879      1 Template:Main","  0.37%    4.813      1 Template:Fix/category"]},"scribunto":{"limitreport-timeusage":{"value":"0.095","limit":"10.000"},"limitreport-memusage":{"value":3101688,"limit":52428800}},"cachereport":{"origin":"mw1369","timestamp":"20200306195355","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Function pointer","url":"https:\/\/en.wikipedia.org\/wiki\/Function_pointer","sameAs":"http:\/\/www.wikidata.org\/entity\/Q2736305","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q2736305","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2004-03-07T08:07:01Z","dateModified":"2020-02-01T14:22:46Z","headline":"pointer that points to a function"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":104,"wgHostname":"mw1324"});});</script></body></html>
