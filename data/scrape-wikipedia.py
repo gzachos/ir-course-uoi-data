@@ -4,6 +4,8 @@ import os
 import sys
 import requests
 from requests.exceptions import RequestException
+from bs4 import BeautifulSoup
+
 
 class Article:
     def __init__(self, url=None, filename=None):
@@ -30,6 +32,21 @@ def read_seeds():
         exit(ose.errno)
 
 
+def expand_frontier(html):
+    global crawl_frontier
+    if len(crawl_frontier) > 5000:
+        return
+    soup = BeautifulSoup(html, 'html.parser')
+    links = soup.find(id='content').find_all('a')
+    for link in links:
+        href = str(link.get('href'))
+        if href.startswith('/wiki/') and not ('#' in href or ':' in href):
+            url = 'https://en.wikipedia.org' + href
+            print('Adding \'%s\' to frontier' % (url))
+            crawl_frontier.append(url)
+
+
+
 def download(url, repo_path):
     global articles
     target_fname = repo_path + url.split('/')[-1] + '.html'
@@ -46,12 +63,14 @@ def download(url, repo_path):
     except:
         perror('Error writing: \'%s\'' % (url))
         exit(1)
+    expand_frontier(req.text)
+    print(len(crawl_frontier))
     articles.append(Article(url, target_fname))
     return target_fname
 
 
 def crawl(seeds):
-    global articles
+    global articles, crawl_frontier
     repo_path = './repository/'
     crawl_frontier = seeds
     for url in crawl_frontier:
@@ -74,3 +93,4 @@ articles = []
 seeds = read_seeds()
 crawl(seeds)
 
+print(len(crawl_frontier))
