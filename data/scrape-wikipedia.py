@@ -3,8 +3,8 @@
 import os
 import sys
 import requests
-from requests.exceptions import RequestException
 from bs4 import BeautifulSoup
+from requests.exceptions import RequestException
 
 
 class Article:
@@ -33,14 +33,15 @@ def read_seeds():
 
 
 def expand_frontier(html):
-    global crawl_frontier
-    if len(crawl_frontier) == 5000:
-        return
     soup = BeautifulSoup(html, 'html.parser')
     links = soup.find(id='content').find_all('a')
     for link in links:
         href = str(link.get('href'))
-        if href.startswith('/wiki/') and not ('#' in href or ':' in href):
+        path_tokens = href.strip('/').split('/')
+        if href.startswith('/wiki/') and len(path_tokens) == 2 \
+                and not ('#' in href or ':' in href) \
+                and not ('ISO_' in href or 'IEEE_' in href) \
+                and not ('802.' in href or 'IEC_' in href):
             url = 'https://en.wikipedia.org' + href
             if url in crawl_frontier:
                 continue
@@ -50,50 +51,74 @@ def expand_frontier(html):
                 break
 
 
-def download(url, repo_path):
-    global articles
-    target_fname = repo_path + url.split('/')[-1] + '.html'
+def scrape_article(article):
     try:
-        outfile = open(target_fname, 'w')
-        print('Downloading \'%s\' -> \'%s\'' % (url, target_fname))
+        url = article.url
+        filepath = repo_path + article.filename
+        outfile = open(filepath, 'w')
+        print('Downloading \'%s\' -> \'%s\'' % (url, filepath))
         req = requests.get(url)
         if req.status_code != 200:
             raise RequestException()
         outfile.write(req.text)
+        outfile.close()
     except RequestException:
         perror('Error downloading: \'%s\'' % (url))
         exit(1)
     except:
         perror('Error writing: \'%s\'' % (url))
         exit(1)
+
+
+def crawl_article(url):
+    try:
+        print('Crawling \'%s\'' % (url))
+        req = requests.get(url)
+        if req.status_code != 200:
+            raise Exception('Status code: ' + str(req.status_code))
+    except Exception as e:
+        perror('Error crawling: \'%s\'' % (url))
+        exit(1)
     expand_frontier(req.text)
-    print(len(crawl_frontier))
-    articles.append(Article(url, target_fname))
-    return target_fname
 
 
 def crawl(seeds):
-    global articles, crawl_frontier
-    repo_path = './repository/'
+    global crawl_frontier
     crawl_frontier = seeds
     for url in crawl_frontier:
-        download(url, repo_path)
+        crawl_article(url)
+        if len(crawl_frontier) == 5000:
+            break
 
+    articles = []
+    for url in crawl_frontier:
+        target_fname = url.split('/')[-1] + '.html'
+        articles.append(Article(url, target_fname))
+
+    return articles
+
+
+def write_urls_tofile(articles):
     try:
         outfile = open(repo_path + 'urls.txt', 'w')
         for article in articles:
             outfile.write(article.url + "\n")
+        outfile.close()
     except:
         perror('Cannot write \'urls.txt\'')
-    finally:
-        outfile.close()
-        
+
+
+def scrape(articles):
+    for article in articles:
+        scrape_article(article)
 
 
 # Global data
-articles = []
+repo_path = './repository/'
 
-seeds = read_seeds()
-crawl(seeds)
+if __name__ == '__main__':
+    seeds = read_seeds()
+    articles = crawl(seeds)
+    write_urls_tofile(articles)
+    scrape(articles)
 
-print(len(crawl_frontier))
