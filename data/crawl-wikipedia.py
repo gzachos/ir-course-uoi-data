@@ -167,7 +167,7 @@ def download(article_hrefs, tid, num_threads):
             lb = tid
             ub = lb + chunksize
             if tid >= num_hrefs:   # Terminate the surplus of threads
-                print('Thread %3d is exiting early...' % (tid))
+                # print('Thread %3d is exiting early...' % (tid))
                 return
         else:   # num_hrefs > num_threads
             # First remainder threads get one more href than the remaining 
@@ -192,7 +192,7 @@ def download(article_hrefs, tid, num_threads):
     tlock.acquire()
     total_downloads += local_downloads 
     tlock.release()
-    print('Thread %3d is exiting...' % (tid))
+    # print('Thread %3d is exiting...' % (tid))
 
 
 def multithreaded_download(article_hrefs):
@@ -203,10 +203,8 @@ def multithreaded_download(article_hrefs):
         thread_list.append(thread)
         thread.start()
     # Join threads
-    print('multithreaded_download join start')
     for thread in thread_list:
         thread.join()
-    print('multithreaded_download exit')
 
 
 def print_stats(webpages_parsed, frontier_build_time, download_time):
@@ -238,7 +236,6 @@ def main():
     t2 = time.time()
     actual_downloads = multithreaded_download(article_hrefs)
     t3 = time.time()
-    print('main')
     frontier_build_time = t1 - t0
     download_time = t3 - t2
     print_stats(webpages_parsed, frontier_build_time, download_time)
