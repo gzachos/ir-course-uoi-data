@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Definite assignment analysis - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"05b28b1e-37dc-406f-b157-8a035a105a16","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Definite_assignment_analysis","wgTitle":"Definite assignment analysis","wgCurRevisionId":911817608,"wgRevisionId":911817608,"wgArticleId":20520308,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Data-flow analysis"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Definite_assignment_analysis","wgRelevantArticleId":20520308,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],
+"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q5251590","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready",
+"ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.27"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Definite_assignment_analysis"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Definite_assignment_analysis rootpage-Definite_assignment_analysis skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Definite assignment analysis</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p>In <a href="/wiki/Computer_science" title="Computer science">computer science</a>, <b>definite assignment analysis</b> is a <a href="/wiki/Data-flow_analysis" title="Data-flow analysis">data-flow analysis</a> used by <a href="/wiki/Compiler" title="Compiler">compilers</a> to conservatively ensure that a variable or location is always assigned to before it is used.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Motivation"><span class="tocnumber">1</span> <span class="toctext">Motivation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Terminology"><span class="tocnumber">2</span> <span class="toctext">Terminology</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#The_analysis"><span class="tocnumber">3</span> <span class="toctext">The analysis</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Motivation">Motivation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit&amp;section=1" title="Edit section: Motivation">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In <a href="/wiki/C_programming_language" class="mw-redirect" title="C programming language">C</a> and <a href="/wiki/C%2B%2B" title="C++">C++</a> programs, a source of particularly difficult-to-diagnose errors is the nondeterministic behavior that results from reading <a href="/wiki/Uninitialized_variable" title="Uninitialized variable">uninitialized variables</a>; this behavior can vary between platforms, builds, and even from run to run.
+</p><p>There are two common ways to solve this problem. One is to ensure that all locations are written before they are read. <a href="/wiki/Rice%27s_theorem" title="Rice&#39;s theorem">Rice's theorem</a> establishes that this problem cannot be solved in general for all programs; however, it is possible to create a conservative (imprecise) analysis that will accept only programs that satisfy this constraint, while rejecting some correct programs, and definite assignment analysis is such an analysis. The <a href="/wiki/Java_programming_language" class="mw-redirect" title="Java programming language">Java</a><sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> and <a href="/wiki/C_Sharp_(programming_language)" title="C Sharp (programming language)">C#</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> programming language specifications require that the compiler report a compile-time error if the analysis fails. Both languages require a specific form of the analysis that is spelled out in meticulous detail. In Java, this analysis was formalized by Stärk et al.,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup> and some correct programs are rejected and must be altered to introduce explicit unnecessary assignments. In C#, this analysis was formalized by Fruja, and is precise as well as sound, in the sense that all variables assigned along all control flow paths will be considered definitely assigned.<sup id="cite_ref-fruja_4-0" class="reference"><a href="#cite_note-fruja-4">&#91;4&#93;</a></sup> The <a href="/wiki/Cyclone_(programming_language)" title="Cyclone (programming language)">Cyclone</a> language also requires programs to pass a definite assignment analysis, but only on variables with pointer types, to ease porting of C programs.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p><p>The second way to solve the problem is to automatically initialize all locations to some fixed, predictable value at the point at which they are defined, but this introduces new assignments that may impede performance. In this case, definite assignment analysis enables a <a href="/wiki/Compiler_optimization" class="mw-redirect" title="Compiler optimization">compiler optimization</a> where redundant assignments &#8212; assignments followed only by other assignments with no possible intervening reads &#8212; can be eliminated. In this case, no programs are rejected, but programs for which the analysis fails to recognize definite assignment may contain redundant initialization. The <a href="/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">Common Language Infrastructure</a> relies on this approach.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Terminology">Terminology</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit&amp;section=2" title="Edit section: Terminology">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>A variable or location can be said to be in one of three states at any given point in the program:
+</p>
+<ul><li><i>Definitely assigned</i>: The variable is known with certainty to be assigned.</li>
+<li><i>Definitely unassigned</i>: The variable is known with certainty to be unassigned.</li>
+<li><i>Unknown</i>: The variable may be assigned or unassigned; the analysis is not precise enough to determine which.</li></ul>
+<h2><span class="mw-headline" id="The_analysis">The analysis</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit&amp;section=3" title="Edit section: The analysis">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The following is based on Fruja's formalization of the C# intraprocedural (single method) definite assignment analysis, which is responsible for ensuring that all local variables are assigned before they are used.<sup id="cite_ref-fruja_4-1" class="reference"><a href="#cite_note-fruja-4">&#91;4&#93;</a></sup> It simultaneously does definite assignment analysis and <a href="/wiki/Constant_propagation" class="mw-redirect" title="Constant propagation">constant propagation</a> of boolean values. We define five static functions:
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th>Name</th>
+<th>Domain</th>
+<th>Description
+</th></tr>
+<tr>
+<td><i>before</i></td>
+<td>All statements and expressions</td>
+<td>Variables definitely assigned before the evaluation of the given statement or expression.
+</td></tr>
+<tr>
+<td><i>after</i></td>
+<td>All statements and expressions</td>
+<td>Variables definitely assigned after the evaluation of the given statement or expression, assuming it completes normally.
+</td></tr>
+<tr>
+<td><i>vars</i></td>
+<td>All statements and expressions</td>
+<td>All variables available in the scope of the given statement or expression.
+</td></tr>
+<tr>
+<td><i>true</i></td>
+<td>All boolean expressions</td>
+<td>Variables definitely assigned after the evaluation of the given expression, assuming the expression evaluates to <b>true</b>.
+</td></tr>
+<tr>
+<td><i>false</i></td>
+<td>All boolean expressions</td>
+<td>Variables definitely assigned after the evaluation of the given expression, assuming the expression evaluates to <b>false</b>.
+</td></tr></tbody></table>
+<p>We supply data-flow equations that define the values of these functions on various expressions and statements, in terms of the values of the functions on their syntactic subexpressions. Assume for the moment that there are no <i>goto</i>, <i>break</i>, <i>continue</i>, <i>return</i>, or <a href="/wiki/Exception_handling" title="Exception handling">exception handling</a> statements. Following are a few examples of these equations:
+</p>
+<ul><li>Any expression or statement <i>e</i> that does not affect the set of variables definitely assigned: <i>after</i>(<i>e</i>) = <i>before</i>(<i>e</i>)</li>
+<li>Let <i>e</i> be the assignment expression <i>loc</i> = <i>v</i>. Then <i>before</i>(<i>v</i>) = <i>before</i>(<i>e</i>), and <i>after</i>(<i>e</i>) = <i>after</i>(<i>v</i>) U {loc}.</li>
+<li>Let <i>e</i> be the expression <b>true</b>. Then <i>true</i>(<i>e</i>) = <i>before</i>(<i>e</i>) and <i>false</i>(<i>e</i>) = <i>vars</i>(<i>e</i>). In other words, if <i>e</i> evaluates to <b>false</b>, all variables are (<a href="/wiki/Vacuous_truth" title="Vacuous truth">vacuously</a>) definitely assigned, because <i>e</i> does not evaluate to false.</li>
+<li>Since method arguments are evaluated left to right, before(<i>arg</i><sub><i>i</i>&#160;+&#160;1</sub>) = after(<i>arg</i><sub><i>i</i></sub>). After a method completes, <i>out</i> parameters are definitely assigned.</li>
+<li>Let <i>s</i> be the conditional statement <b>if</b> (<i>e</i>) <i>s</i><sub>1</sub> <b>else</b> <i>s</i><sub>2</sub>. Then <i>before</i>(<i>e</i>) = <i>before</i>(<i>s</i>), <i>before</i>(s<sub>1</sub>) = <i>true</i>(<i>e</i>), <i>before</i>(<i>s</i><sub>2</sub>) = <i>false</i>(<i>e</i>), and after(<i>s</i>) = after(<i>s</i><sub>1</sub>) intersect after(<i>s</i><sub>2</sub>).</li>
+<li>Let <i>s</i> be the while loop statement <b>while</b> (<i>e</i>) <i>s</i><sub>1</sub>. Then before(<i>e</i>) = before(<i>s</i>), before(<i>s</i><sub>1</sub>) = true(<i>e</i>), and after(<i>s</i>) = false(<i>e</i>).</li>
+<li>And so on.</li></ul>
+<p>At the beginning of the method, no local variables are definitely assigned. The verifier repeatedly iterates over the <a href="/wiki/Abstract_syntax_tree" title="Abstract syntax tree">abstract syntax tree</a> and uses the data-flow equations to migrate information between the sets until a <a href="/wiki/Fixed_point_(mathematics)" title="Fixed point (mathematics)">fixed point</a> can be reached. Then, the verifier examines the <i>before</i> set of every expression that uses a local variable to ensure that it contains that variable.
+</p><p>The algorithm is complicated by the introduction of control-flow jumps like <i>goto</i>, <i>break</i>, <i>continue</i>, <i>return</i>, and exception handling. Any statement that can be the target of one of these jumps must intersect its <i>before</i> set with the set of definitely assigned variables at the jump source. When these are introduced, the resulting data flow may have multiple fixed points, as in this example:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno">1 </span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="lineno">2 </span> <span class="nl">L</span><span class="p">:</span>
+<span class="lineno">3 </span> <span class="k">goto</span> <span class="n">L</span><span class="p">;</span>
+</pre></div>
+<p>Since the label L can be reached from two locations, the control-flow equation for goto dictates that <i>before</i>(2) = <i>after</i>(1) intersect <i>before</i>(3). But <i>before</i>(3) = <i>before</i>(2), so <i>before</i>(2) = <i>after</i>(1) intersect <i>before</i>(2). This has two fixed-points for <i>before</i>(2), {i} and the empty set. However, it can be shown that because of the monotonic form of the data-flow equations, there is a unique maximal fixed point (fixed point of largest size) that provides the most possible information about the definitely assigned variables. Such a maximal (or maximum) fixed point may be computed by standard techniques; see <a href="/wiki/Data-flow_analysis" title="Data-flow analysis">data-flow analysis</a>.
+</p><p>An additional issue is that a control-flow jump may render certain control flows infeasible; for example, in this code fragment the variable <i>i</i> is definitely assigned before it is used:
+</p>
+<div class="mw-highlight mw-highlight-lang-c mw-content-ltr" dir="ltr"><pre><span></span><span class="lineno">1 </span> <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="lineno">2 </span> <span class="k">if</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span> <span class="k">else</span> <span class="n">i</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+<span class="lineno">3 </span> <span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+</pre></div>
+<p>The data-flow equation for <i>if</i> says that <i>after</i>(2) = after(<b>return</b>) intersect after(<i>i</i> = <i>j</i>). To make this work out correctly, we define <i>after</i>(<i>e</i>) = <i>vars</i>(<i>e</i>) for all control-flow jumps; this is vacuously valid in the same sense that the equation <i>false</i>(<b>true</b>) = <i>vars</i>(<i>e</i>) is valid, because it is not possible for control to reach a point immediately after a control-flow jump.
+</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit&amp;section=4" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web">J. Gosling; B. Joy; G. Steele; G. Bracha. <a rel="nofollow" class="external text" href="http://java.sun.com/docs/books/jls/third_edition/html/defAssign.html">"The Java Language Specification, 3rd Edition"</a>. pp.&#160;Chapter 16 (pp.527–552)<span class="reference-accessdate">. Retrieved <span class="nowrap">December 2,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+Java+Language+Specification%2C+3rd+Edition&amp;rft.pages=Chapter+16+%28pp.527-552%29&amp;rft.au=J.+Gosling&amp;rft.au=B.+Joy&amp;rft.au=G.+Steele&amp;rft.au=G.+Bracha&amp;rft_id=http%3A%2F%2Fjava.sun.com%2Fdocs%2Fbooks%2Fjls%2Fthird_edition%2Fhtml%2FdefAssign.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-334.htm">"Standard ECMA-334, C# Language Specification"</a>. <i>ECMA International</i>. pp.&#160;Section 12.3 (pp.122–133)<span class="reference-accessdate">. Retrieved <span class="nowrap">December 2,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ECMA+International&amp;rft.atitle=Standard+ECMA-334%2C+C%23+Language+Specification&amp;rft.pages=Section+12.3+%28pp.122-133%29&amp;rft_id=http%3A%2F%2Fwww.ecma-international.org%2Fpublications%2Fstandards%2FEcma-334.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation book">Stärk, Robert F.; E. Borger; Joachim Schmid (2001). <i>Java and the Java Virtual Machine: Definition, Verification, Validation</i>. Secaucus, NJ, USA: Springer-Verlag New York, Inc. pp.&#160;Section 8.3. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/3-540-42088-6" title="Special:BookSources/3-540-42088-6"><bdi>3-540-42088-6</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=Java+and+the+Java+Virtual+Machine%3A+Definition%2C+Verification%2C+Validation&amp;rft.place=Secaucus%2C+NJ%2C+USA&amp;rft.pages=Section+8.3&amp;rft.pub=Springer-Verlag+New+York%2C+Inc.&amp;rft.date=2001&amp;rft.isbn=3-540-42088-6&amp;rft.aulast=St%C3%A4rk&amp;rft.aufirst=Robert+F.&amp;rft.au=E.+Borger&amp;rft.au=Joachim+Schmid&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-fruja-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-fruja_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-fruja_4-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation journal">Fruja, Nicu G. (October 2004). <a rel="nofollow" class="external text" href="http://www.jot.fm/issues/issue_2004_10/article2">"The Correctness of the Definite Assignment Analysis in C#"</a>. <i>Journal of Object Technology</i>. <b>3</b> (9): 29–52. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.165.6696">10.1.1.165.6696</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.5381%2Fjot.2004.3.9.a2">10.5381/jot.2004.3.9.a2</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-12-02</span></span>. <q>We actually prove more than correctness: we show that the solution of the analysis is a perfect solution (and not only a safe approximation).</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Object+Technology&amp;rft.atitle=The+Correctness+of+the+Definite+Assignment+Analysis+in+C%23&amp;rft.volume=3&amp;rft.issue=9&amp;rft.pages=29-52&amp;rft.date=2004-10&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.165.6696&amp;rft_id=info%3Adoi%2F10.5381%2Fjot.2004.3.9.a2&amp;rft.aulast=Fruja&amp;rft.aufirst=Nicu+G.&amp;rft_id=http%3A%2F%2Fwww.jot.fm%2Fissues%2Fissue_2004_10%2Farticle2&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://cyclone.thelanguage.org/wiki/Definite%20Assignment">"Cyclone: Definite Assignment"</a>. <i>Cyclone User's Manual</i><span class="reference-accessdate">. Retrieved <span class="nowrap">December 16,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Cyclone+User%27s+Manual&amp;rft.atitle=Cyclone%3A+Definite+Assignment&amp;rft_id=http%3A%2F%2Fcyclone.thelanguage.org%2Fwiki%2FDefinite%2520Assignment&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ecma-international.org/publications/standards/Ecma-335.htm">"Standard ECMA-335, Common Language Infrastructure (CLI)"</a>. <i>ECMA International</i>. pp.&#160;Section 1.8.1.1 (Partition III, pg. 19)<span class="reference-accessdate">. Retrieved <span class="nowrap">December 2,</span> 2008</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=ECMA+International&amp;rft.atitle=Standard+ECMA-335%2C+Common+Language+Infrastructure+%28CLI%29&amp;rft.pages=Section+1.8.1.1+%28Partition+III%2C+pg.+19%29&amp;rft_id=http%3A%2F%2Fwww.ecma-international.org%2Fpublications%2Fstandards%2FEcma-335.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ADefinite+assignment+analysis" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<!-- 
+NewPP limit report
+Parsed by mw1262
+Cached time: 20200415202202
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.204 seconds
+Real time usage: 0.591 seconds
+Preprocessor visited node count: 278/1000000
+Post‐expand include size: 10604/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 20903/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.116/10.000 seconds
+Lua memory usage: 2.54 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  191.289      1 -total
+ 72.09%  137.903      4 Template:Cite_web
+ 24.01%   45.936      1 Template:Cite_journal
+  3.55%    6.799      1 Template:Cite_book
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:20520308-0!canonical and timestamp 20200415202201 and revision id 911817608
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Definite_assignment_analysis&amp;oldid=911817608">https://en.wikipedia.org/w/index.php?title=Definite_assignment_analysis&amp;oldid=911817608</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Data-flow_analysis" title="Category:Data-flow analysis">Data-flow analysis</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Definite+assignment+analysis" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Definite+assignment+analysis" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Definite_assignment_analysis" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Definite_assignment_analysis" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Definite_assignment_analysis">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Definite_assignment_analysis" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Definite_assignment_analysis" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Definite_assignment_analysis&amp;oldid=911817608" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Definite_assignment_analysis&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5251590" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Definite_assignment_analysis&amp;id=911817608&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Definite+assignment+analysis">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Definite+assignment+analysis&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Definite_assignment_analysis&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Definitivna_analiza_dodele" title="Definitivna analiza dodele – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q5251590#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 21 August 2019, at 10:26<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Definite_assignment_analysis&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.204","walltime":"0.591","ppvisitednodes":{"value":278,"limit":1000000},"postexpandincludesize":{"value":10604,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":20903,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  191.289      1 -total"," 72.09%  137.903      4 Template:Cite_web"," 24.01%   45.936      1 Template:Cite_journal","  3.55%    6.799      1 Template:Cite_book"]},"scribunto":{"limitreport-timeusage":{"value":"0.116","limit":"10.000"},"limitreport-memusage":{"value":2662330,"limit":52428800}},"cachereport":{"origin":"mw1262","timestamp":"20200415202202","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Definite assignment analysis","url":"https:\/\/en.wikipedia.org\/wiki\/Definite_assignment_analysis","sameAs":"http:\/\/www.wikidata.org\/entity\/Q5251590","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q5251590","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2008-12-02T21:27:49Z","dateModified":"2019-08-21T10:26:07Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":726,"wgHostname":"mw1262"});});</script></body></html>

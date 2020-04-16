@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>S-expression - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XpcxCgpAICoAAExnVsgAAACV","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"S-expression","wgTitle":"S-expression","wgCurRevisionId":946934804,"wgRevisionId":946934804,"wgArticleId":54458,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Webarchive template wayback links","Pages using RFC magic links","Lisp (programming language)","Data serialization formats"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"S-expression","wgRelevantArticleId":54458,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":
+!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1113529","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready",
+"ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.27"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/e/e3/Corrected_S-expression_tree_2.png"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=S-expression&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=S-expression&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/S-expression"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-S-expression rootpage-S-expression skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">S-expression</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:Corrected_S-expression_tree_2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Corrected_S-expression_tree_2.png/220px-Corrected_S-expression_tree_2.png" decoding="async" width="220" height="224" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Corrected_S-expression_tree_2.png/330px-Corrected_S-expression_tree_2.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Corrected_S-expression_tree_2.png/440px-Corrected_S-expression_tree_2.png 2x" data-file-width="868" data-file-height="884" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Corrected_S-expression_tree_2.png" class="internal" title="Enlarge"></a></div><a href="/wiki/Tree_(data_structure)" title="Tree (data structure)">Tree</a> <a href="/wiki/Data_structure" title="Data structure">data structure</a> representing the s-expression <code>(* 2 (+ 3 4))</code></div></div></div>
+<p>In computing, <b>s-expressions</b>, <b>sexprs</b> or <b>sexps</b> (for "symbolic expression") are a notation for nested <a href="/wiki/List_(computing)" class="mw-redirect" title="List (computing)">list</a> (<a href="/wiki/Tree_(data_structure)" title="Tree (data structure)">tree</a>-structured) data, invented for and popularized by the programming language <a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp</a>, which uses them for source code as well as data. In the usual parenthesized syntax of Lisp, an s-expression is classically defined<sup id="cite_ref-McCarthy1960_1-0" class="reference"><a href="#cite_note-McCarthy1960-1">&#91;1&#93;</a></sup> as
+</p>
+<ol><li>an atom, or</li>
+<li>an expression of the form <code>(<i>x</i> . <i>y</i>)</code> where <i>x</i> and <i>y</i> are s-expressions.</li></ol>
+<p>The second, recursive part of the definition represents an <a href="/wiki/Ordered_pair" title="Ordered pair">ordered pair</a>, which means that s-expressions are <a href="/wiki/Binary_tree" title="Binary tree">binary trees</a>.
+</p><p>The definition of an atom varies per context; in the original definition by <a href="/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a>,<sup id="cite_ref-McCarthy1960_1-1" class="reference"><a href="#cite_note-McCarthy1960-1">&#91;1&#93;</a></sup> it was assumed that there existed "an infinite set of distinguishable <a href="/wiki/Symbol_(programming)" title="Symbol (programming)">atomic symbols</a>" represented as "strings of capital Latin letters and digits with single embedded blanks" (i.e., <a href="/wiki/String_(computing)" class="mw-redirect" title="String (computing)">character string</a> and numeric literals). Most modern sexpr notations in addition use an abbreviated notation to represent <a href="/wiki/Linked_list" title="Linked list">lists</a> in s-expressions, so that
+</p>
+<dl><dd><code>(<i>x</i> <i>y</i> <i>z</i>)</code></dd></dl>
+<p>stands for
+</p>
+<dl><dd><code>(<i>x</i> . (<i>y</i> . (<i>z</i> . NIL)))</code></dd></dl>
+<p>where <code>NIL</code> is the special end-of-list object (alternatively written <code>()</code>, which is the only representation in <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a><sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup>).
+</p><p>In the Lisp family of programming languages, s-expressions are used to represent both source code and data. Other uses of S-expressions are in Lisp-derived languages such as <a href="/wiki/Document_Style_Semantics_and_Specification_Language" title="Document Style Semantics and Specification Language">DSSSL</a>, and as mark-up in communications protocols like <a href="/wiki/Internet_Message_Access_Protocol" title="Internet Message Access Protocol">IMAP</a> and <a href="/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a>'s <a href="/wiki/Common_Business_Communication_Language" title="Common Business Communication Language">CBCL</a>. It's also used as text representation of <a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a>. The details of the <a href="/wiki/Syntax" title="Syntax">syntax</a> and supported data types vary in the different languages, but the most common feature among these languages is the use of S-expressions and prefix notation.
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Datatypes_and_syntax"><span class="tocnumber">1</span> <span class="toctext">Datatypes and syntax</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Use_in_Lisp"><span class="tocnumber">2</span> <span class="toctext">Use in Lisp</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Examples_of_data_s-expressions"><span class="tocnumber">2.1</span> <span class="toctext">Examples of data s-expressions</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Example_of_source_code_s-expressions"><span class="tocnumber">2.2</span> <span class="toctext">Example of source code s-expressions</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Parsing"><span class="tocnumber">3</span> <span class="toctext">Parsing</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Standardization"><span class="tocnumber">4</span> <span class="toctext">Standardization</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Rivest&#39;s_variant"><span class="tocnumber">4.1</span> <span class="toctext">Rivest's variant</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="#See_also"><span class="tocnumber">5</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#External_links"><span class="tocnumber">7</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Datatypes_and_syntax">Datatypes and syntax</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=1" title="Edit section: Datatypes and syntax">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>There are many variants of the S-expression format, supporting a variety of different syntaxes for different datatypes. The most widely supported are:
+</p>
+<ul><li><i>Lists and pairs</i>: <code>(1 () (2 . 3) (4))</code></li>
+<li><i>Symbols</i>: <code>with-hyphen</code> <code>?@!$</code> <code>a\ symbol\ with\ spaces</code></li>
+<li><i>Strings</i>: <code>"Hello, world!"</code></li>
+<li><i>Integers</i>: <code>-9876543210</code></li>
+<li><i>Floating-point numbers</i>: <code>-0.0</code> <code>6.28318</code> <code>6.023e23</code></li></ul>
+<p>The character <code>#</code> is often used to prefix extensions to the syntax, e.g. <code>#x10</code> for hexadecimal integers, or <code>#\C</code> for characters.
+</p>
+<h2><span class="mw-headline" id="Use_in_Lisp">Use in Lisp</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=2" title="Edit section: Use in Lisp">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>When representing source code in Lisp, the first element of an S-expression is commonly an operator or function name and any remaining elements are treated as arguments. This is called "prefix notation" or "<a href="/wiki/Polish_notation" title="Polish notation">Polish notation</a>". As an example, the <a href="/wiki/Boolean_logic" class="mw-redirect" title="Boolean logic">Boolean</a> expression written <span class="nowrap"><code>4 == (2 + 2)</code></span> in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, is represented as <span class="nowrap"><code>(= 4 (+ 2 2))</code></span> in Lisp's s-expr-based prefix notation.
+</p><p>As noted above, the precise definition of "atom" varies across LISP-like languages. A quoted string can typically contain anything but a quote, while
+an unquoted identifier atom can typically contain anything but quotes, whitespace characters, parentheses, brackets, braces, backslashes, and semicolons. In either case, a prohibited character can typically be included by escaping it with a preceding backslash. <a href="/wiki/Unicode" title="Unicode">Unicode</a> support varies.
+</p><p>The recursive case of the s-expr definition is traditionally implemented using <a href="/wiki/Cons_cell" class="mw-redirect" title="Cons cell">cons cells</a>.
+</p><p>S-expressions were originally intended only for data to be manipulated by <a href="/wiki/M-expression" title="M-expression">M-expressions</a>, but the first implementation of Lisp was an interpreter of S-expression encodings of M-expressions, and Lisp programmers soon became accustomed to using S-expressions for both code and data.
+This means that Lisp is <a href="/wiki/Homoiconic" class="mw-redirect" title="Homoiconic">homoiconic</a>; that is, the primary representation of programs is also a data structure in a primitive type of the language itself.
+</p>
+<h3><span class="mw-headline" id="Examples_of_data_s-expressions">Examples of data s-expressions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=3" title="Edit section: Examples of data s-expressions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Nested lists can be written as S-expressions: <code>((milk juice) (honey marmalade))</code> is a two-element S-expression whose elements are also two-element S-expressions.  The whitespace-separated notation used in Lisp (and this article) is typical. Line breaks (newline characters) usually qualify as separators.
+</p><p>This is a simple <a href="/wiki/Context-free_grammar" title="Context-free grammar">context-free grammar</a> for a tiny subset of English written as an s-expression (Gazdar/Melish, Natural Language Processing in Lisp), where S=sentence, NP=Noun Phrase, VP=Verb Phrase, V=Verb:
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="p">(((</span><span class="nv">S</span><span class="p">)</span> <span class="p">(</span><span class="nv">NP</span> <span class="nv">VP</span><span class="p">))</span>
+ <span class="p">((</span><span class="nv">VP</span><span class="p">)</span> <span class="p">(</span><span class="nv">V</span><span class="p">))</span>
+ <span class="p">((</span><span class="nv">VP</span><span class="p">)</span> <span class="p">(</span><span class="nv">V</span> <span class="nv">NP</span><span class="p">))</span>
+ <span class="p">((</span><span class="nv">V</span><span class="p">)</span> <span class="nv">died</span><span class="p">)</span>
+ <span class="p">((</span><span class="nv">V</span><span class="p">)</span> <span class="nv">employed</span><span class="p">)</span>
+ <span class="p">((</span><span class="nv">NP</span><span class="p">)</span> <span class="nv">nurses</span><span class="p">)</span>
+ <span class="p">((</span><span class="nv">NP</span><span class="p">)</span> <span class="nv">patients</span><span class="p">)</span>
+ <span class="p">((</span><span class="nv">NP</span><span class="p">)</span> <span class="nv">Medicenter</span><span class="p">)</span>
+ <span class="p">((</span><span class="nv">NP</span><span class="p">)</span> <span class="s">&quot;Dr Chan&quot;</span><span class="p">))</span>
+</pre></div>
+<h3><span class="mw-headline" id="Example_of_source_code_s-expressions">Example of source code s-expressions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=4" title="Edit section: Example of source code s-expressions">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Program code can be written in S-expressions, usually using prefix notation.
+</p><p>Example in <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>:
+</p>
+<div class="mw-highlight mw-highlight-lang-lisp mw-content-ltr" dir="ltr"><pre><span></span><span class="p">(</span><span class="nb">defun</span> <span class="nv">factorial</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span>
+   <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">zerop</span> <span class="nv">x</span><span class="p">)</span>
+       <span class="mi">1</span>
+       <span class="p">(</span><span class="nb">*</span> <span class="nv">x</span> <span class="p">(</span><span class="nv">factorial</span> <span class="p">(</span><span class="nb">-</span> <span class="nv">x</span> <span class="mi">1</span><span class="p">)))))</span>
+</pre></div>
+<p>S-expressions can be read in Lisp using the function READ. READ reads the textual representation of an s-expression and returns Lisp data. The function PRINT can be used to output an s-expression. The output then can be read with the function READ, when all printed data objects have a readable representation.  Lisp has readable representations for numbers, strings, symbols, lists and many other data types. Program code can be formatted as pretty printed S-expressions using the function PPRINT (note: with two Ps, short for <i>pretty</i>-print).
+</p><p>Lisp programs are valid s-expressions, but not all s-expressions are valid Lisp programs. <code>(1.0 + 3.1)</code> is a valid s-expression, but not a valid Lisp program, since Lisp uses prefix notation and a floating point number (here 1.0) is not valid as an operation (the first element of the expression).
+</p><p>An S-expression preceded by a single quotation mark, as in <code>'x</code>, is <a href="/wiki/Syntactic_sugar" title="Syntactic sugar">syntactic sugar</a> for a <a href="/wiki/Lisp_(programming_language)#Self-evaluating_forms_and_quoting" title="Lisp (programming language)">quoted S-expression</a>, in this case <code>(quote x)</code>.
+</p>
+<h2><span class="mw-headline" id="Parsing">Parsing</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=5" title="Edit section: Parsing">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>S-Expressions are often compared to <a href="/wiki/XML" title="XML">XML</a>, a key difference being that S-Expressions are far simpler in syntax, therefore being much easier to parse.
+</p>
+<h2><span class="mw-headline" id="Standardization">Standardization</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=6" title="Edit section: Standardization">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Standards for some Lisp-derived programming languages include a specification for their S-expression syntax.  These include <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> (ANSI standard document ANSI INCITS 226-1994 (R2004)), <a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a> (R5RS and <a href="/wiki/R6RS" class="mw-redirect" title="R6RS">R6RS</a><sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>), and <a href="/wiki/ISLISP" title="ISLISP">ISLISP</a>.
+</p>
+<h3><span id="Rivest.27s_variant"></span><span class="mw-headline" id="Rivest's_variant">Rivest's variant</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=7" title="Edit section: Rivest&#039;s variant">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div role="note" class="hatnote navigation-not-searchable">See also: <a href="/wiki/Canonical_S-expressions" title="Canonical S-expressions">Canonical S-expressions</a></div>
+<p>In May 1997, <a href="/wiki/Ron_Rivest" title="Ron Rivest">Ron Rivest</a> submitted an <a href="/wiki/Internet-Draft" class="mw-redirect" title="Internet-Draft">Internet-Draft</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> to be considered for publication as an <a href="/wiki/Request_for_Comments" title="Request for Comments">RFC</a>. The draft defined a syntax based on Lisp S-expressions but intended for general-purpose data storage and exchange (similar to <a href="/wiki/XML" title="XML">XML</a>) rather than specifically for programming. It was never approved as an RFC, but it has since been cited and used by other RFCs (e.g. <a class="external mw-magiclink-rfc" rel="nofollow" href="https://tools.ietf.org/html/rfc2693">RFC 2693</a>) and several other publications.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> It was originally intended for use in <a href="/wiki/Simple_public_key_infrastructure" class="mw-redirect" title="Simple public key infrastructure">SPKI</a>.
+</p><p>Rivest's format defines an S-expression as being either an octet-string (a series of <a href="/wiki/Byte" title="Byte">bytes</a>) or a finite list of other S-expressions. It describes three interchange formats for expressing this structure. One is the "advanced transport", which is very flexible in terms of formatting, and is syntactically similar to Lisp-style expressions, but they are not identical. The advanced transport, for example, allows octet-strings to be represented verbatim (the string's length followed by a colon and the entire raw string), a quoted form allowing escape characters, <a href="/wiki/Hexadecimal" title="Hexadecimal">hexadecimal</a>, <a href="/wiki/Base64" title="Base64">Base64</a>, or placed directly as a "token" if it meets certain conditions. (Rivest's tokens differ from Lisp tokens in that the former are just for convenience and aesthetics, and treated exactly like other strings, while the latter have specific syntactical meaning.)
+</p><p>Rivest's draft defines a <a href="/wiki/Canonical_S-expressions" title="Canonical S-expressions">canonical representation</a> "for digital signature purposes". It's intended to be compact, easier to parse, and unique for any abstract S-expression. It only allows verbatim strings, and prohibits whitespace as formatting outside strings. Finally there is the "basic transport representation", which is either the canonical form or the same encoded as Base64 and surrounded by <a href="/wiki/Bracket" title="Bracket">braces</a>, the latter intended to safely transport a canonically encoded S-expression in a system which might change spacing (e.g. an email system which has 80-character-wide lines and wraps anything longer than that).
+</p><p>This format has not been widely adapted for use outside of SPKI (some of the users being <a href="/wiki/GnuPG" class="mw-redirect" title="GnuPG">GnuPG</a>, libgcrypt, <a href="/wiki/Nettle_(cryptographic_library)" title="Nettle (cryptographic library)">Nettle</a>, and <a href="/wiki/GNU" title="GNU">GNU</a> lsh). Rivest's S-expressions web page provides <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> source code for a parser and generator (available under the <a href="/wiki/MIT_license" class="mw-redirect" title="MIT license">MIT license</a>), which could be adapted and embedded into other programs.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> In addition, there are no restrictions on independently implementing the format.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Cons" title="Cons">cons</a></li>
+<li><a href="/wiki/CAR_and_CDR" title="CAR and CDR">CAR and CDR</a></li>
+<li><a href="/wiki/Fexpr" title="Fexpr">Fexpr</a></li>
+<li><a href="/wiki/Lambda_calculus" title="Lambda calculus">Lambda calculus</a></li>
+<li><a href="/wiki/M-expression" title="M-expression">M-expression</a></li>
+<li><a href="/wiki/Canonical_S-expressions" title="Canonical S-expressions">Canonical S-expressions</a></li>
+<li><a href="/wiki/Comparison_of_data_serialization_formats" class="mw-redirect" title="Comparison of data serialization formats">Comparison of data serialization formats</a></li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-McCarthy1960-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-McCarthy1960_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-McCarthy1960_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">John McCarthy (1960/2006). <a rel="nofollow" class="external text" href="http://www-formal.stanford.edu/jmc/recursive/recursive.html">Recursive functions of symbolic expressions</a> <a rel="nofollow" class="external text" href="https://web.archive.org/web/20040202215021/http://www-formal.stanford.edu/jmc/recursive/recursive.html">Archived</a> 2004-02-02 at the <a href="/wiki/Wayback_Machine" title="Wayback Machine">Wayback Machine</a>. Originally published in <a href="/wiki/Communications_of_the_ACM" title="Communications of the ACM">Communications of the ACM</a>.</span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://schemers.org/Documents/Standards/R5RS/HTML/r5rs-Z-H-9.html">"Revised^5 Report on the Algorithmic Language Scheme"</a>. <i>schemers.org</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=schemers.org&amp;rft.atitle=Revised%5E5+Report+on+the+Algorithmic+Language+Scheme&amp;rft_id=https%3A%2F%2Fschemers.org%2FDocuments%2FStandards%2FR5RS%2FHTML%2Fr5rs-Z-H-9.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AS-expression" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation journal">Sperber, Michael; Dybvig, R. Kent; Flatt, Matthew; Van Straaten, Anton; Findler, Robby; Matthews, Jacob (Aug 12, 2009). "Revised6 Report on the Algorithmic Language Scheme". <i>Journal of Functional Programming</i>. <b>19</b> (S1): 1–301. <a href="/wiki/CiteSeerX" title="CiteSeerX">CiteSeerX</a>&#160;<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="//citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.372.373">10.1.1.372.373</a></span>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="https://doi.org/10.1017%2FS0956796809990074">10.1017/S0956796809990074</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=Journal+of+Functional+Programming&amp;rft.atitle=Revised6+Report+on+the+Algorithmic+Language+Scheme&amp;rft.volume=19&amp;rft.issue=S1&amp;rft.pages=1-301&amp;rft.date=2009-08-12&amp;rft_id=%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fsummary%3Fdoi%3D10.1.1.372.373&amp;rft_id=info%3Adoi%2F10.1017%2FS0956796809990074&amp;rft.aulast=Sperber&amp;rft.aufirst=Michael&amp;rft.au=Dybvig%2C+R.+Kent&amp;rft.au=Flatt%2C+Matthew&amp;rft.au=Van+Straaten%2C+Anton&amp;rft.au=Findler%2C+Robby&amp;rft.au=Matthews%2C+Jacob&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AS-expression" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://people.csail.mit.edu/rivest/Sexp.txt">S-Expressions</a>, Network Working Group, Internet Draft, Expires November 4, 1997 - R. Rivest, May 4, 1997 draft-rivest-sexp-00.txt, Ronald L. Rivest, CSAIL MIT website</span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://scholar.google.com/scholar?hl=en&amp;lr=&amp;safe=off&amp;q=rivest+sexp&amp;btnG=Search">rivest sexp</a>, Google Scholar (search)</span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://people.csail.mit.edu/rivest/sexp.html">"SEXP (S-expressions)"</a>. <i>people.csail.mit.edu</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=people.csail.mit.edu&amp;rft.atitle=SEXP+%28S-expressions%29&amp;rft_id=http%3A%2F%2Fpeople.csail.mit.edu%2Frivest%2Fsexp.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AS-expression" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=S-expression&amp;action=edit&amp;section=10" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://sexpr.sourceforge.net/">sfsexp</a> the small, fast s-expression library for C/C++ on Sourceforge</li>
+<li><a rel="nofollow" class="external text" href="http://leon.bottou.org/projects/minilisp">minilisp</a>, by Léon Bottou.</li>
+<li><a rel="nofollow" class="external text" href="http://rosettacode.org/wiki/S-Expressions">S-Expressions on Rosettacode</a> has implementations of readers and writers in many languages.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="Lisp_programming_language" style="padding:3px"><table class="nowraplinks hlist mw-collapsible mw-collapsed navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Lisp_programming_language" title="Template:Lisp programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/w/index.php?title=Template_talk:Lisp_programming_language&amp;action=edit&amp;redlink=1" class="new" title="Template talk:Lisp programming language (page does not exist)"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Lisp_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Lisp_programming_language" style="font-size:114%;margin:0 4em"><a href="/wiki/Lisp_(programming_language)" title="Lisp (programming language)">Lisp programming language</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">Automatic storage management</a></li>
+<li><a href="/wiki/Conditional_(computer_programming)" title="Conditional (computer programming)">Conditionals</a></li>
+<li><a href="/wiki/Dynamic_typing" class="mw-redirect" title="Dynamic typing">Dynamic typing</a></li>
+<li><a href="/wiki/Higher-order_function" title="Higher-order function">Higher-order functions</a></li>
+<li><a href="/wiki/Linked_list" title="Linked list">Linked lists</a></li>
+<li><a href="/wiki/M-expression" title="M-expression">M-expressions</a> (deprecated)</li>
+<li><a href="/wiki/Read%E2%80%93eval%E2%80%93print_loop" title="Read–eval–print loop">Read–eval–print loop</a></li>
+<li><a href="/wiki/Recursion_(computer_science)" title="Recursion (computer science)">Recursion</a></li>
+<li><a class="mw-selflink selflink">S-expressions</a></li>
+<li><a href="/wiki/Self-hosting_(compilers)" title="Self-hosting (compilers)">Self-hosting</a> <a href="/wiki/Compiler" title="Compiler">compiler</a></li>
+<li><a href="/wiki/Tree_data_structure" class="mw-redirect" title="Tree data structure">Tree data structures</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Object-oriented_programming" title="Object-oriented programming">Object</a> systems</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Common_Lisp_Object_System" title="Common Lisp Object System">Common Lisp Object System</a> (CLOS)</li>
+<li><a href="/wiki/CommonLoops" title="CommonLoops">CommonLoops</a></li>
+<li><a href="/wiki/Flavors_(programming_language)" title="Flavors (programming language)">Flavors</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Programming_language_implementation" title="Programming language implementation">Implementations</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Technical_standard" title="Technical standard">Technical<br />standard(s)</a><br />exists</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Common_Lisp" title="Common Lisp">Common<br />Lisp</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Allegro_Common_Lisp" title="Allegro Common Lisp">Allegro Common Lisp</a></li>
+<li><a href="/wiki/Armed_Bear_Common_Lisp" class="mw-redirect" title="Armed Bear Common Lisp">Armed Bear Common Lisp</a> (ABCL)</li>
+<li><a href="/wiki/CLISP" title="CLISP">CLISP</a></li>
+<li><a href="/wiki/Clozure_CL" title="Clozure CL">Clozure CL</a></li>
+<li><a href="/wiki/CMU_Common_Lisp" title="CMU Common Lisp">CMU Common Lisp</a> (CMUCL)</li>
+<li><a href="/wiki/Corman_Common_Lisp" title="Corman Common Lisp">Corman Common Lisp</a></li>
+<li><a href="/wiki/Embeddable_Common_Lisp" title="Embeddable Common Lisp">Embeddable Common Lisp</a> (ECL)</li>
+<li><a href="/wiki/GNU_Common_Lisp" title="GNU Common Lisp">GNU Common Lisp</a> (GCL)</li>
+<li><a href="/wiki/LispWorks" title="LispWorks">LispWorks</a></li>
+<li><a href="/wiki/Macintosh_Common_Lisp" title="Macintosh Common Lisp">Macintosh Common Lisp</a></li>
+<li><a href="/wiki/Mocl" title="Mocl">Mocl</a></li>
+<li><a href="/wiki/Movitz" title="Movitz">Movitz</a></li>
+<li><a href="/wiki/Poplog" title="Poplog">Poplog</a></li>
+<li><a href="/wiki/Steel_Bank_Common_Lisp" title="Steel Bank Common Lisp">Steel Bank Common Lisp</a> (SBCL)</li>
+<li><a href="/wiki/Genera_(operating_system)" title="Genera (operating system)">Symbolics Common Lisp</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><i><a href="/wiki/History_of_the_Scheme_programming_language" title="History of the Scheme programming language">History</a></i></li>
+<li><a href="/wiki/Bigloo" title="Bigloo">Bigloo</a></li>
+<li><a href="/wiki/Chez_Scheme" title="Chez Scheme">Chez Scheme</a></li>
+<li><a href="/wiki/Chicken_(Scheme_implementation)" title="Chicken (Scheme implementation)">Chicken</a></li>
+<li><a href="/wiki/Gambit_(scheme_implementation)" title="Gambit (scheme implementation)">Gambit</a></li>
+<li><a href="/wiki/Game_Oriented_Assembly_Lisp" title="Game Oriented Assembly Lisp">Game Oriented Assembly Lisp</a> (GOAL)</li>
+<li><a href="/wiki/Ikarus_(Scheme_implementation)" title="Ikarus (Scheme implementation)">Ikarus</a></li>
+<li><a href="/wiki/JScheme" title="JScheme">JScheme</a></li>
+<li><a href="/wiki/Kawa_(Scheme_implementation)" title="Kawa (Scheme implementation)">Kawa</a></li>
+<li><a href="/wiki/Larceny_(Scheme_implementation)" title="Larceny (Scheme implementation)">Larceny</a></li>
+<li><a href="/wiki/MIT/GNU_Scheme" title="MIT/GNU Scheme">MIT/GNU Scheme</a></li>
+<li><a href="/wiki/MultiLisp" title="MultiLisp">MultiLisp</a></li>
+<li>Pocket Scheme</li>
+<li><a href="/wiki/Racket_(programming_language)" title="Racket (programming language)">Racket</a></li>
+<li><a href="/wiki/RScheme" title="RScheme">RScheme</a></li>
+<li><a href="/wiki/Scheme_48" title="Scheme 48">Scheme 48</a></li>
+<li><a href="/wiki/SCM_(Scheme_implementation)" title="SCM (Scheme implementation)">SCM</a></li>
+<li><a href="/wiki/SIOD" title="SIOD">SIOD</a></li>
+<li><a href="/wiki/T_(programming_language)" title="T (programming language)">T</a></li>
+<li><a href="/wiki/TinyScheme" title="TinyScheme">TinyScheme</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/ISLISP" title="ISLISP">ISLISP</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/OpenLisp" title="OpenLisp">OpenLisp</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Nonstandard</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th id="Logo" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Logo_(programming_language)" title="Logo (programming language)">Logo</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/MSWLogo" title="MSWLogo">MSWLogo</a></li>
+<li><a href="/wiki/NetLogo" title="NetLogo">NetLogo</a></li>
+<li><a href="/wiki/StarLogo" title="StarLogo">StarLogo</a></li>
+<li><a href="/wiki/UCBLogo" title="UCBLogo">UCBLogo</a></li></ul>
+</div></td></tr></tbody></table><div>
+<ul><li><a href="/wiki/Arc_(programming_language)" title="Arc (programming language)">Arc</a></li>
+<li><a href="/wiki/AutoLISP" title="AutoLISP">AutoLISP</a></li>
+<li><a href="/wiki/BBN_LISP" title="BBN LISP">BBN LISP</a></li>
+<li><a href="/wiki/Clojure" title="Clojure">Clojure</a></li>
+<li><a href="/wiki/Dylan_(programming_language)" title="Dylan (programming language)">Dylan</a> (<a href="/wiki/Apple_Dylan" title="Apple Dylan">Apple</a>, <i><a href="/wiki/History_of_the_Dylan_programming_language" title="History of the Dylan programming language">history</a></i>)</li>
+<li><a href="/wiki/Emacs_Lisp" title="Emacs Lisp">Emacs Lisp</a></li>
+<li><a href="/wiki/EuLisp" title="EuLisp">EuLisp</a></li>
+<li><a href="/wiki/Franz_Lisp" title="Franz Lisp">Franz Lisp</a>, <a href="/wiki/PC-LISP" title="PC-LISP">PC-LISP</a></li>
+<li><a href="/wiki/Hy" title="Hy">Hy</a></li>
+<li><a href="/wiki/Interlisp" title="Interlisp">Interlisp</a></li>
+<li><a href="/wiki/Knowledge_Engineering_Environment" title="Knowledge Engineering Environment">Knowledge Engineering Environment</a></li>
+<li><a href="/wiki/*Lisp" title="*Lisp">*Lisp</a></li>
+<li><a href="/wiki/LeLisp" class="mw-redirect" title="LeLisp">LeLisp</a></li>
+<li><a href="/wiki/LFE_(programming_language)" title="LFE (programming language)">LFE</a></li>
+<li><a href="/wiki/Lisp_Machine_Lisp" title="Lisp Machine Lisp">Lisp Machine Lisp</a></li>
+<li><a href="/wiki/Maclisp" title="Maclisp">Maclisp</a></li>
+<li><a href="/wiki/MDL_(programming_language)" title="MDL (programming language)">MDL</a></li>
+<li><a href="/wiki/MLisp" title="MLisp">MLisp</a></li>
+<li><a href="/wiki/NewLISP" title="NewLISP">newLISP</a></li>
+<li><a href="/wiki/NIL_(programming_language)" title="NIL (programming language)">NIL</a></li>
+<li><a href="/wiki/PC-LISP" title="PC-LISP">PC-LISP</a></li>
+<li><a href="/wiki/Picolisp" class="mw-redirect" title="Picolisp">Picolisp</a></li>
+<li><a href="/wiki/Portable_Standard_Lisp" title="Portable Standard Lisp">Portable Standard Lisp</a></li>
+<li><a href="/wiki/RPL_(programming_language)" title="RPL (programming language)">RPL</a></li>
+<li><a href="/wiki/S-1_Lisp" title="S-1 Lisp">S-1 Lisp</a></li>
+<li><a href="/wiki/Cadence_SKILL" title="Cadence SKILL">SKILL</a></li>
+<li><a href="/wiki/Spice_Lisp" title="Spice Lisp">Spice Lisp</a></li>
+<li><a href="/wiki/Zetalisp" class="mw-redirect" title="Zetalisp">Zetalisp</a></li></ul></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Operating_system" title="Operating system">Operating system</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<li><a href="/wiki/Common_Lisp_Interface_Manager" title="Common Lisp Interface Manager">Common Lisp Interface Manager</a>, <a href="/wiki/McCLIM" title="McCLIM">McCLIM</a></li>
+<li><a href="/wiki/Genera_(operating_system)" title="Genera (operating system)">Genera</a></li>
+<li><a href="/wiki/Scsh" title="Scsh">Scsh</a></li>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Computer_hardware" title="Computer hardware">Hardware</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Lisp_machine" title="Lisp machine">Lisp machines</a></li>
+<li><a href="/wiki/TI_Explorer" title="TI Explorer">TI Explorer</a></li>
+<li><a href="/wiki/Space-cadet_keyboard" title="Space-cadet keyboard">Space-cadet keyboard</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Community_of_practice" title="Community of practice">Community</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Technical_standard" title="Technical standard">Standards</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Scheme_Requests_for_Implementation" title="Scheme Requests for Implementation">Scheme Requests for Implementation</a></li>
+<li><a href="/wiki/Common_Lisp_HyperSpec" title="Common Lisp HyperSpec">Common Lisp HyperSpec</a></li>
+<li><a href="/wiki/X3J13" title="X3J13">X3J13</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Education" title="Education">Education</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Book" title="Book">Books</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Common_Lisp_the_Language" title="Common Lisp the Language">Common Lisp the Language</a></li>
+<li><a href="/wiki/How_to_Design_Programs" title="How to Design Programs">How to Design Programs</a> (HTDP)</li>
+<li><a href="/wiki/On_Lisp" title="On Lisp">On Lisp</a></li>
+<li><a href="/wiki/Practical_Common_Lisp" title="Practical Common Lisp">Practical Common Lisp</a></li>
+<li><a href="/wiki/Structure_and_Interpretation_of_Computer_Programs" title="Structure and Interpretation of Computer Programs">Structure and Interpretation of Computer Programs</a> (SICP)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Curriculum" title="Curriculum">Curriculum</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ProgramByDesign" title="ProgramByDesign">ProgramByDesign</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Organization" title="Organization">Organizations</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Business" title="Business">Business</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Apple_Inc." title="Apple Inc.">Apple Computer</a></li>
+<li><a href="/wiki/BBN_Technologies" title="BBN Technologies">Bolt, Beranek and Newman</a></li>
+<li><a href="/wiki/Harlequin_(software_company)" title="Harlequin (software company)">Harlequin</a></li>
+<li><a href="/wiki/Lucid_Inc." title="Lucid Inc.">Lucid Inc.</a></li>
+<li><a href="/wiki/Symbolics" title="Symbolics">Symbolics</a></li>
+<li><a href="/wiki/Xanalys" title="Xanalys">Xanalys</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Education" title="Education">Education</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">Massachusetts Institute of Technology</a> (MIT)</li>
+<li><a href="/wiki/MIT_Computer_Science_and_Artificial_Intelligence_Laboratory" title="MIT Computer Science and Artificial Intelligence Laboratory">MIT Computer Science and Artificial Intelligence Laboratory</a> (CSAIL)</li>
+<li><a href="/wiki/Stanford_University_centers_and_institutes#Stanford_Artificial_Intelligence_Laboratory" title="Stanford University centers and institutes">Stanford Artificial Intelligence Laboratory</a></li>
+<li><a href="/wiki/University_of_California,_Berkeley" title="University of California, Berkeley">University of California, Berkeley</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">People</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Edmund_Berkeley" title="Edmund Berkeley">Edmund Berkeley</a></li>
+<li><a href="/wiki/Daniel_G._Bobrow" title="Daniel G. Bobrow">Daniel G. Bobrow</a></li>
+<li><a href="/wiki/William_Clinger_(computer_scientist)" title="William Clinger (computer scientist)">William Clinger</a></li>
+<li><a href="/wiki/R._Kent_Dybvig" title="R. Kent Dybvig">R. Kent Dybvig</a></li>
+<li><a href="/wiki/Matthias_Felleisen" title="Matthias Felleisen">Matthias Felleisen</a></li>
+<li><a href="/wiki/Robert_Bruce_Findler" title="Robert Bruce Findler">Robert Bruce Findler</a></li>
+<li><a href="/wiki/Matthew_Flatt" title="Matthew Flatt">Matthew Flatt</a></li>
+<li><a href="/wiki/Phyllis_Fox" title="Phyllis Fox">Phyllis Fox</a></li>
+<li><a href="/wiki/Paul_Graham_(programmer)" title="Paul Graham (programmer)">Paul Graham</a></li>
+<li><a href="/wiki/Richard_Greenblatt_(programmer)" title="Richard Greenblatt (programmer)">Richard Greenblatt</a></li>
+<li>Timothy P. Hart</li>
+<li><a href="/wiki/Louis_Hodes" title="Louis Hodes">Louis Hodes</a></li>
+<li>Mike Levin</li>
+<li><a href="/wiki/David_Luckham" title="David Luckham">David Luckham</a></li>
+<li><a href="/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a></li>
+<li><a href="/wiki/Robert_Tappan_Morris" title="Robert Tappan Morris">Robert Tappan Morris</a></li>
+<li><a href="/wiki/Joel_Moses" title="Joel Moses">Joel Moses</a></li>
+<li><a href="/wiki/David_Park_(computer_scientist)" title="David Park (computer scientist)">David Park</a></li>
+<li><a href="/wiki/Steve_Russell_(computer_scientist)" title="Steve Russell (computer scientist)">Steve Russell</a></li>
+<li><a href="/wiki/Richard_Stallman" title="Richard Stallman">Richard Stallman</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Scott_Fahlman" title="Scott Fahlman">Scott Fahlman</a></li>
+<li><a href="/wiki/Richard_P._Gabriel" title="Richard P. Gabriel">Richard P. Gabriel</a></li>
+<li><a href="/wiki/Philip_Greenspun" title="Philip Greenspun">Philip Greenspun</a> (<a href="/wiki/Greenspun%27s_tenth_rule" title="Greenspun&#39;s tenth rule">10th rule</a>)</li>
+<li><a href="/wiki/David_A._Moon" title="David A. Moon">David A. Moon</a></li>
+<li><a href="/wiki/Kent_Pitman" title="Kent Pitman">Kent Pitman</a></li>
+<li><a href="/wiki/Guy_L._Steele_Jr." title="Guy L. Steele Jr.">Guy L. Steele Jr.</a></li>
+<li><a href="/wiki/Daniel_Weinreb" title="Daniel Weinreb">Daniel Weinreb</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Shriram_Krishnamurthi" title="Shriram Krishnamurthi">Shriram Krishnamurthi</a></li>
+<li><a href="/wiki/Guy_L._Steele_Jr." title="Guy L. Steele Jr.">Guy L. Steele Jr.</a></li>
+<li><a href="/wiki/Gerald_Jay_Sussman" title="Gerald Jay Sussman">Gerald Jay Sussman</a></li>
+<li><a href="/wiki/Julie_Sussman" class="mw-redirect" title="Julie Sussman">Julie Sussman</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Logo_(programming_language)" title="Logo (programming language)">Logo</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Hal_Abelson" title="Hal Abelson">Hal Abelson</a></li>
+<li><a href="/wiki/Denison_Bollay" title="Denison Bollay">Denison Bollay</a></li>
+<li><a href="/wiki/Wally_Feurzeig" title="Wally Feurzeig">Wally Feurzeig</a></li>
+<li><a href="/wiki/Brian_Harvey_(lecturer)" title="Brian Harvey (lecturer)">Brian Harvey</a></li>
+<li><a href="/wiki/Seymour_Papert" title="Seymour Papert">Seymour Papert</a></li>
+<li><a href="/wiki/Mitchel_Resnick" title="Mitchel Resnick">Mitchel Resnick</a></li>
+<li><a href="/wiki/Cynthia_Solomon" title="Cynthia Solomon">Cynthia Solomon</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr></tbody></table><div></div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Lisp_(programming_language)" title="Category:Lisp (programming language)">Category</a></b></li>
+<li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:Lisp_programming_language_family" title="Category:Lisp programming language family">Category</a></b></li>
+<li><img alt="List-Class article" src="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/16px-Symbol_list_class.svg.png" decoding="async" title="List-Class article" width="16" height="16" srcset="//upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/23px-Symbol_list_class.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/d/db/Symbol_list_class.svg/31px-Symbol_list_class.svg.png 2x" data-file-width="180" data-file-height="185" /> <b><a href="/wiki/List_of_Lisp-family_programming_languages" title="List of Lisp-family programming languages">List</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1293
+Cached time: 20200408144938
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.272 seconds
+Real time usage: 0.383 seconds
+Preprocessor visited node count: 615/1000000
+Post‐expand include size: 77888/2097152 bytes
+Template argument size: 76/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 2/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 13418/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.132/10.000 seconds
+Lua memory usage: 3.36 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  295.656      1 -total
+ 61.35%  181.385      1 Template:Reflist
+ 32.51%   96.117      9 Template:Navbox
+ 30.61%   90.514      2 Template:Cite_web
+ 25.11%   74.245      1 Template:Lisp_programming_language
+ 18.10%   53.527      1 Template:Cite_journal
+ 10.19%   30.127      1 Template:See_also
+  5.42%   16.038      1 Template:Webarchive
+  4.15%   12.271      3 Template:Icon
+  0.99%    2.916      1 Template:Main_other
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:54458-0!canonical and timestamp 20200408144938 and revision id 946934804
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=S-expression&amp;oldid=946934804">https://en.wikipedia.org/w/index.php?title=S-expression&amp;oldid=946934804</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Lisp_(programming_language)" title="Category:Lisp (programming language)">Lisp (programming language)</a></li><li><a href="/wiki/Category:Data_serialization_formats" title="Category:Data serialization formats">Data serialization formats</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Webarchive_template_wayback_links" title="Category:Webarchive template wayback links">Webarchive template wayback links</a></li><li><a href="/wiki/Category:Pages_using_RFC_magic_links" title="Category:Pages using RFC magic links">Pages using RFC magic links</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=S-expression" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=S-expression" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/S-expression" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:S-expression" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/S-expression">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=S-expression&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=S-expression&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/S-expression" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/S-expression" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=S-expression&amp;oldid=946934804" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=S-expression&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1113529" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=S-expression&amp;id=946934804&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=S-expression">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=S-expression&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=S-expression&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/S-v%C3%BDraz" title="S-výraz – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Expresi%C3%B3n_S" title="Expresión S – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/S-expression" title="S-expression – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/S-%ED%91%9C%ED%98%84%EC%8B%9D" title="S-표현식 – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/S-expression" title="S-expression – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/S%E5%BC%8F" title="S式 – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/S-wyra%C5%BCenie" title="S-wyrażenie – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/S-%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5" title="S-выражение – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/S-lauseke" title="S-lauseke – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/S-%D0%B2%D0%B8%D1%80%D0%B0%D0%B7" title="S-вираз – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/S-%E8%A1%A8%E8%BE%BE%E5%BC%8F" title="S-表达式 – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1113529#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 23 March 2020, at 07:55<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=S-expression&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.272","walltime":"0.383","ppvisitednodes":{"value":615,"limit":1000000},"postexpandincludesize":{"value":77888,"limit":2097152},"templateargumentsize":{"value":76,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":2,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":13418,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  295.656      1 -total"," 61.35%  181.385      1 Template:Reflist"," 32.51%   96.117      9 Template:Navbox"," 30.61%   90.514      2 Template:Cite_web"," 25.11%   74.245      1 Template:Lisp_programming_language"," 18.10%   53.527      1 Template:Cite_journal"," 10.19%   30.127      1 Template:See_also","  5.42%   16.038      1 Template:Webarchive","  4.15%   12.271      3 Template:Icon","  0.99%    2.916      1 Template:Main_other"]},"scribunto":{"limitreport-timeusage":{"value":"0.132","limit":"10.000"},"limitreport-memusage":{"value":3525299,"limit":52428800}},"cachereport":{"origin":"mw1293","timestamp":"20200408144938","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"S-expression","url":"https:\/\/en.wikipedia.org\/wiki\/S-expression","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1113529","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1113529","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-06-01T08:35:06Z","dateModified":"2020-03-23T07:55:27Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/e\/e3\/Corrected_S-expression_tree_2.png","headline":"data serialization format"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":88,"wgHostname":"mw1321"});});</script></body></html>

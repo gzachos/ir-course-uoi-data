@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8"/>
 <title>Pointer (computer programming) - Wikipedia</title>
-<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"Xn9-cwpAMNAAAw69p5EAAABI","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Pointer_(computer_programming)","wgTitle":"Pointer (computer programming)","wgCurRevisionId":946535527,"wgRevisionId":946535527,"wgArticleId":459018,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from April 2018","All articles needing additional references","All articles with unsourced statements","Articles with unsourced statements from May 2009","Articles with unsourced statements from July 2011",
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XpZzZQpAICkAADO2g3YAAAAC","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Pointer_(computer_programming)","wgTitle":"Pointer (computer programming)","wgCurRevisionId":949614955,"wgRevisionId":949614955,"wgArticleId":459018,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing additional references from April 2018","All articles needing additional references","All articles with unsourced statements","Articles with unsourced statements from May 2009","Articles with unsourced statements from July 2011",
 "Articles with unsourced statements from September 2011","Articles with unsourced statements from February 2014","Commons category link is on Wikidata","CS1 maint: multiple names: authors list","Wikipedia articles with GND identifiers","Articles with example C code","Data types","Primitive types","American inventions"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Pointer_(computer_programming)","wgRelevantArticleId":459018,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Pointer_arithmetic","wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,
 "wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgInternalRedirectTargetUrl":"/wiki/Pointer_(computer_programming)","wgWikibaseItemId":"Q118155","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["mediawiki.action.view.redirect","ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar",
 "ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
@@ -14,7 +14,7 @@
 <script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
 <meta name="ResourceLoaderDynamicStyles" content=""/>
 <link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
-<meta name="generator" content="MediaWiki 1.35.0-wmf.25"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.27"/>
 <meta name="referrer" content="origin"/>
 <meta name="referrer" content="origin-when-crossorigin"/>
 <meta name="referrer" content="origin-when-cross-origin"/>
@@ -467,7 +467,7 @@ To suppress the compiler warning, it must be made explicit that you do indeed wi
 </p><p>A pointer which does not have any address assigned to it is called a <a href="/wiki/Wild_pointer" class="mw-redirect" title="Wild pointer">wild pointer</a>. Any attempt to use such uninitialized pointers can cause unexpected behavior, either because the initial value is not a valid address, or because using it may damage other parts of the program. The result is often a <a href="/wiki/Segmentation_fault" title="Segmentation fault">segmentation fault</a>, <a href="/wiki/Storage_violation" title="Storage violation">storage violation</a> or <a href="/wiki/Wild_branch" title="Wild branch">wild branch</a> (if used as a function pointer or branch address).
 </p><p>In systems with explicit memory allocation, it is possible to create a <a href="/wiki/Dangling_pointer" title="Dangling pointer">dangling pointer</a> by deallocating the memory region it points into. This type of pointer is dangerous and subtle because a deallocated memory region may contain the same data as it did before it was deallocated but may be then reallocated and overwritten by unrelated code, unknown to the earlier code. Languages with <a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a> prevent this type of error because deallocation is performed automatically when there are no more references in scope.
 </p><p>Some languages, like <a href="/wiki/C%2B%2B" title="C++">C++</a>, support <a href="/wiki/Smart_pointer" title="Smart pointer">smart pointers</a>, which use a simple form of <a href="/wiki/Reference_counting" title="Reference counting">reference counting</a> to help track allocation of dynamic memory in addition to acting as a reference. In the absence of reference cycles, where an object refers to itself indirectly through a sequence of smart pointers, these eliminate the possibility of dangling pointers and memory leaks. <a href="/wiki/Borland_Delphi" class="mw-redirect" title="Borland Delphi">Delphi</a> strings support reference counting natively.
-</p><p>The <a href="/wiki/Rust_programming_language" class="mw-redirect" title="Rust programming language">Rust programming language</a> introduces a <i>borrow checker</i>, <i>pointer lifetimes</i>, and an optimisation based around <a href="/wiki/Optional_type" class="mw-redirect" title="Optional type">optional types</a> for <a href="/wiki/Null_pointer" title="Null pointer">null pointers</a> to eliminate pointer bugs, without resorting to a <a href="/wiki/Garbage_collector" class="mw-redirect" title="Garbage collector">garbage collector</a>.
+</p><p>The <a href="/wiki/Rust_programming_language" class="mw-redirect" title="Rust programming language">Rust programming language</a> introduces a <i>borrow checker</i>, <i>pointer lifetimes</i>, and an optimisation based around <a href="/wiki/Optional_type" class="mw-redirect" title="Optional type">optional types</a> for <a href="/wiki/Null_pointer" title="Null pointer">null pointers</a> to eliminate pointer bugs, without resorting to <a href="/wiki/Garbage_collection_(computer_science)" title="Garbage collection (computer science)">garbage collection</a>.
 </p>
 <h2><span class="mw-headline" id="Null_pointer">Null pointer</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Pointer_(computer_programming)&amp;action=edit&amp;section=15" title="Edit section: Null pointer">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
 <div role="note" class="hatnote navigation-not-searchable">Main article: <a href="/wiki/Null_pointer" title="Null pointer">Null pointer</a></div>
@@ -849,48 +849,48 @@ interfacing with non-Eiffel software, and other features.
 <li><a href="/wiki/Type_system" title="Type system">Type system</a></li>
 <li><a href="/wiki/Type_theory" title="Type theory">Type theory</a></li>
 <li><a href="/wiki/Variable_(computer_science)" title="Variable (computer science)">Variable</a></li></ul>
-</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>See also <a href="/wiki/Template:Information_units" title="Template:Information units">platform-dependent and independent units of information</a></div></td></tr></tbody></table></div>
+</div></td></tr></tbody></table></div>
 <div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q118155&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q118155&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q118155" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
 <ul><li><span class="nowrap"><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4285887-2">4285887-2</a></span></span></li></ul>
 </div></td></tr></tbody></table></div>
 <!-- 
 NewPP limit report
-Parsed by mw1374
-Cached time: 20200320200554
+Parsed by mw1331
+Cached time: 20200414174506
 Cache expiry: 2592000
 Dynamic content: false
 Complications: [vary‐revision‐sha1]
-CPU time usage: 0.632 seconds
-Real time usage: 0.860 seconds
-Preprocessor visited node count: 3027/1000000
-Post‐expand include size: 64302/2097152 bytes
+CPU time usage: 0.544 seconds
+Real time usage: 0.772 seconds
+Preprocessor visited node count: 3005/1000000
+Post‐expand include size: 63779/2097152 bytes
 Template argument size: 5897/2097152 bytes
 Highest expansion depth: 15/40
 Expensive parser function count: 8/500
 Unstrip recursion depth: 1/20
 Unstrip post‐expand size: 64827/5000000 bytes
 Number of Wikibase entities loaded: 3/400
-Lua time usage: 0.240/10.000 seconds
-Lua memory usage: 5.12 MB/50 MB
+Lua time usage: 0.216/10.000 seconds
+Lua memory usage: 5.13 MB/50 MB
 -->
 <!--
 Transclusion expansion time report (%,ms,calls,template)
-100.00%  699.155      1 -total
- 35.13%  245.582      1 Template:Reflist
- 19.45%  136.010      1 Template:Cite_journal
- 18.92%  132.248      1 Template:More_citations_needed
- 12.56%   87.827      1 Template:Ambox
-  9.99%   69.858      4 Template:Citation_needed
-  8.67%   60.616      4 Template:Fix
-  8.65%   60.489      1 Template:Commons_category
-  6.84%   47.813      1 Template:ISBN
-  5.36%   37.504      1 Template:Find_sources_mainspace
+100.00%  619.244      1 -total
+ 38.18%  236.425      1 Template:Reflist
+ 19.34%  119.785      1 Template:Cite_journal
+ 16.31%  101.004      1 Template:More_citations_needed
+ 13.66%   84.596      1 Template:Ambox
+ 10.71%   66.319      4 Template:Citation_needed
+  9.41%   58.279      4 Template:Fix
+  7.96%   49.281      1 Template:ISBN
+  7.41%   45.911      1 Template:Commons_category
+  6.23%   38.562      1 Template:Find_sources_mainspace
 -->
 
-<!-- Saved in parser cache with key enwiki:pcache:idhash:459018-0!canonical and timestamp 20200320200553 and revision id 946535527
+<!-- Saved in parser cache with key enwiki:pcache:idhash:459018-0!canonical and timestamp 20200414174505 and revision id 949614955
  -->
 </div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
-		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Pointer_(computer_programming)&amp;oldid=946535527">https://en.wikipedia.org/w/index.php?title=Pointer_(computer_programming)&amp;oldid=946535527</a>"</div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Pointer_(computer_programming)&amp;oldid=949614955">https://en.wikipedia.org/w/index.php?title=Pointer_(computer_programming)&amp;oldid=949614955</a>"</div>
 		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Data_types" title="Category:Data types">Data types</a></li><li><a href="/wiki/Category:Primitive_types" title="Category:Primitive types">Primitive types</a></li><li><a href="/wiki/Category:American_inventions" title="Category:American inventions">American inventions</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_needing_additional_references_from_April_2018" title="Category:Articles needing additional references from April 2018">Articles needing additional references from April 2018</a></li><li><a href="/wiki/Category:All_articles_needing_additional_references" title="Category:All articles needing additional references">All articles needing additional references</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_May_2009" title="Category:Articles with unsourced statements from May 2009">Articles with unsourced statements from May 2009</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2011" title="Category:Articles with unsourced statements from July 2011">Articles with unsourced statements from July 2011</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_September_2011" title="Category:Articles with unsourced statements from September 2011">Articles with unsourced statements from September 2011</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_February_2014" title="Category:Articles with unsourced statements from February 2014">Articles with unsourced statements from February 2014</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:CS1_maint:_multiple_names:_authors_list" title="Category:CS1 maint: multiple names: authors list">CS1 maint: multiple names: authors list</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Articles_with_example_C_code" title="Category:Articles with example C code">Articles with example C code</a></li></ul></div></div>
 		<div class="visualClear"></div>
 		
@@ -916,7 +916,7 @@ Transclusion expansion time report (%,ms,calls,template)
             <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
             	<h3 id="p-namespaces-label">Namespaces</h3>
             	<ul >
-            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Pointer_(computer_programming)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Pointer_(computer_programming)" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Talk</a></li>
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Pointer_(computer_programming)" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Pointer_(computer_programming)" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li>
             	</ul>
             </div>
             <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
@@ -990,7 +990,7 @@ Transclusion expansion time report (%,ms,calls,template)
     			Tools
     		</h3>
     		<div class="body">
-    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Pointer_(computer_programming)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Pointer_(computer_programming)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Pointer_(computer_programming)&amp;oldid=946535527" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Pointer_(computer_programming)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q118155" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Pointer_%28computer_programming%29&amp;id=946535527&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Pointer_(computer_programming)" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Pointer_(computer_programming)" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Pointer_(computer_programming)&amp;oldid=949614955" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Pointer_(computer_programming)&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q118155" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Pointer_%28computer_programming%29&amp;id=949614955&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
     			
     		</div>
     	</div>
@@ -1030,7 +1030,7 @@ Transclusion expansion time report (%,ms,calls,template)
 
 <div id="footer" role="contentinfo" >
 	<ul id="footer-info" class="">
-		<li id="footer-info-lastmod"> This page was last edited on 20 March 2020, at 20:05<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-lastmod"> This page was last edited on 7 April 2020, at 14:42<span class="anonymous-show">&#160;(UTC)</span>.</li>
 		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
 additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
 	</ul>
@@ -1051,6 +1051,6 @@ additional terms may apply.  By using this site, you agree to the <a href="//fou
 	<div style="clear: both;"></div>
 </div>
 
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.632","walltime":"0.860","ppvisitednodes":{"value":3027,"limit":1000000},"postexpandincludesize":{"value":64302,"limit":2097152},"templateargumentsize":{"value":5897,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":64827,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00%  699.155      1 -total"," 35.13%  245.582      1 Template:Reflist"," 19.45%  136.010      1 Template:Cite_journal"," 18.92%  132.248      1 Template:More_citations_needed"," 12.56%   87.827      1 Template:Ambox","  9.99%   69.858      4 Template:Citation_needed","  8.67%   60.616      4 Template:Fix","  8.65%   60.489      1 Template:Commons_category","  6.84%   47.813      1 Template:ISBN","  5.36%   37.504      1 Template:Find_sources_mainspace"]},"scribunto":{"limitreport-timeusage":{"value":"0.240","limit":"10.000"},"limitreport-memusage":{"value":5371541,"limit":52428800}},"cachereport":{"origin":"mw1374","timestamp":"20200320200554","ttl":2592000,"transientcontent":false}}});});</script>
-<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Pointer (computer programming)","url":"https:\/\/en.wikipedia.org\/wiki\/Pointer_(computer_programming)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q118155","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q118155","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-09-30T22:32:28Z","dateModified":"2020-03-20T20:05:49Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/b4\/Pointers.svg","headline":"programming language data type"}</script>
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":138,"wgHostname":"mw1366"});});</script></body></html>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.544","walltime":"0.772","ppvisitednodes":{"value":3005,"limit":1000000},"postexpandincludesize":{"value":63779,"limit":2097152},"templateargumentsize":{"value":5897,"limit":2097152},"expansiondepth":{"value":15,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":64827,"limit":5000000},"entityaccesscount":{"value":3,"limit":400},"timingprofile":["100.00%  619.244      1 -total"," 38.18%  236.425      1 Template:Reflist"," 19.34%  119.785      1 Template:Cite_journal"," 16.31%  101.004      1 Template:More_citations_needed"," 13.66%   84.596      1 Template:Ambox"," 10.71%   66.319      4 Template:Citation_needed","  9.41%   58.279      4 Template:Fix","  7.96%   49.281      1 Template:ISBN","  7.41%   45.911      1 Template:Commons_category","  6.23%   38.562      1 Template:Find_sources_mainspace"]},"scribunto":{"limitreport-timeusage":{"value":"0.216","limit":"10.000"},"limitreport-memusage":{"value":5374283,"limit":52428800}},"cachereport":{"origin":"mw1331","timestamp":"20200414174506","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Pointer (computer programming)","url":"https:\/\/en.wikipedia.org\/wiki\/Pointer_(computer_programming)","sameAs":"http:\/\/www.wikidata.org\/entity\/Q118155","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q118155","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2001-09-30T22:32:28Z","dateModified":"2020-04-07T14:42:15Z","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/b\/b4\/Pointers.svg","headline":"programming language data type"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":119,"wgHostname":"mw1320"});});</script></body></html>

@@ -83,7 +83,7 @@ def extract_hrefs_from_article(href):
         except Exception as e:
             perror('Error extracting hrefs from: \'%s\'' % (url))
             download_attempts += 1
-            time.sleep(1)
+            time.sleep(5)
     return limit_reached, success
 
 
@@ -249,7 +249,7 @@ article_limit = 5000   # Number of articles to download
 crawl_limit = article_limit + round(article_limit * 0.2)
 num_processors = os.cpu_count()
 num_threads = num_processors * 16   # Number of threads used during downloading
-max_downld_retries = 5   # How many times (at most) retry downloading an article
+max_downld_retries = 3   # How many times (at most) retry downloading an article
 total_downloads = 0   # How many articles where downloaded by all threads
 tlock = threading.Lock()   # Protects access to total_downloads
 

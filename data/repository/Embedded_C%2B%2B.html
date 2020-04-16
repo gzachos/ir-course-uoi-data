@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Embedded C++ - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"XpedQApAIIIAA8Rme-kAAABR","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Embedded_C++","wgTitle":"Embedded C++","wgCurRevisionId":939188356,"wgRevisionId":939188356,"wgArticleId":2407197,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles needing POV-check from May 2018","All NPOV disputes","Official website different in Wikidata and Wikipedia","C++ programming language family","Class-based programming languages","Hardware description languages","Embedded systems"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext",
+"wgRelevantPageName":"Embedded_C++","wgRelevantArticleId":2407197,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q1334967","wgCentralAuthMobileDomain":!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":
+"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.27"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Embedded_C%2B%2B"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Embedded_C rootpage-Embedded_C skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">Embedded C++</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><b>Embedded C++</b> (<b>EC++</b>) is a <a href="/wiki/Programming_language_dialect" class="mw-redirect" title="Programming language dialect">dialect</a> of the <a href="/wiki/C%2B%2B" title="C++">C++</a> programming language for <a href="/wiki/Embedded_system" title="Embedded system">embedded systems</a>. It was defined by an industry group led by major Japanese <a href="/wiki/Central_processing_unit" title="Central processing unit">central processing unit</a> (CPU) manufacturers, including <a href="/wiki/NEC_Corporation" class="mw-redirect" title="NEC Corporation">NEC</a>, <a href="/wiki/Hitachi,_Ltd." class="mw-redirect" title="Hitachi, Ltd.">Hitachi</a>, <a href="/wiki/Fujitsu" title="Fujitsu">Fujitsu</a>, and <a href="/wiki/Toshiba" title="Toshiba">Toshiba</a>, to address the shortcomings of C++ for embedded applications. The goal of the effort<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">&#91;1&#93;</a></sup> is to preserve the most useful <a href="/wiki/Object-oriented_programming" title="Object-oriented programming">object-oriented</a> features of the C++ language yet minimize code size while maximizing execution efficiency and making <a href="/wiki/Compiler" title="Compiler">compiler</a> construction simpler. The official website states the goal as "to  provide embedded systems programmers with a subset of C++ that is easy for the average C programmer to understand and use".<sup id="cite_ref-qa_2-0" class="reference"><a href="#cite_note-qa-2">&#91;2&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Differences_from_C++"><span class="tocnumber">1</span> <span class="toctext">Differences from C++</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Compilation"><span class="tocnumber">1.1</span> <span class="toctext">Compilation</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Criticism"><span class="tocnumber">2</span> <span class="toctext">Criticism</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#See_also"><span class="tocnumber">3</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Differences_from_C.2B.2B"></span><span class="mw-headline" id="Differences_from_C++">Differences from C++</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=1" title="Edit section: Differences from C++">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Embedded C++ excludes some features of C++.
+</p>
+<table class="wikitable">
+<tbody><tr>
+<th scope="col">Feature</th>
+<th scope="col">ISO/ANSI C C++</th>
+<th scope="col">Embedded C++
+</th></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Exception_handling" title="Exception handling">Exception handling</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Multiple_inheritance" title="Multiple inheritance">Multiple inheritance</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><tt>mutable</tt>, a <a href="/wiki/Storage_class_specifier" class="mw-redirect" title="Storage class specifier">storage class specifier</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Namespaces" class="mw-redirect" title="Namespaces">Namespaces</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Generic_programming#Templates_in_C++" title="Generic programming">Templates</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Run-time_type_information" title="Run-time type information">Run-time type information</a> <span style="font-size:85%;">(<tt>typeid</tt>)</span></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal">Style casts<br /><span style="font-size:85%;">(<tt>static_cast</tt>, <tt>dynamic_cast</tt>, <tt>reinterpret_cast</tt> and <tt>const_cast</tt>)</span></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr>
+<tr>
+<th style="background: #edf; color: black; vertical-align: middle; text-align: right; font-weight: bolder;" scope="row" class="rh heading table-rh"><span style="font-weight:normal"><a href="/wiki/Virtual_base_class" class="mw-redirect" title="Virtual base class">Virtual base classes</a></span>
+</th>
+<td data-sort-value="Yes" style="background: #D2FFD2; color: black; vertical-align: middle; text-align: center;" class="table-yes2"><img alt="Yes" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/13px-Green_check.svg.png" decoding="async" title="Yes" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/20px-Green_check.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/03/Green_check.svg/26px-Green_check.svg.png 2x" data-file-width="600" data-file-height="600" /></td>
+<td data-sort-value="No" style="background: #FFD2D2; color:black; vertical-align: middle; text-align: center;" class="table-no2"><img alt="No" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/13px-Dark_Red_x.svg.png" decoding="async" title="No" width="13" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/20px-Dark_Red_x.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dark_Red_x.svg/26px-Dark_Red_x.svg.png 2x" data-file-width="600" data-file-height="600" />
+</td></tr></tbody></table>
+<p>Some compilers, such as those from Green Hills and IAR Systems, allow certain features of ISO/ANSI C++ to be enabled in Embedded C++. <a href="/wiki/IAR_Systems" title="IAR Systems">IAR Systems</a> calls this "Extended Embedded C++".<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">&#91;3&#93;</a></sup>
+</p>
+<h3><span class="mw-headline" id="Compilation">Compilation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=2" title="Edit section: Compilation">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An EC++ program can be compiled with any C++ compiler. But, a compiler specific to EC++ may have an easier time doing optimization.
+</p><p>Compilers specific to EC++ are provided by companies such as:
+</p>
+<ul><li><a href="/wiki/IAR_Systems" title="IAR Systems">IAR Systems</a><sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup></li>
+<li><a href="/wiki/Freescale_Semiconductor" title="Freescale Semiconductor">Freescale Semiconductor</a>, (spin-off from <a href="/wiki/Motorola" title="Motorola">Motorola</a> in 2004 who had acquired <a href="/wiki/Metrowerks" title="Metrowerks">Metrowerks</a> in 1999)</li>
+<li>Tasking Software,<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup> part of <a href="/wiki/Altium_Limited" class="mw-redirect" title="Altium Limited">Altium Limited</a></li>
+<li><a href="/wiki/Green_Hills_Software" title="Green Hills Software">Green Hills Software</a><sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup></li></ul>
+<h2><span class="mw-headline" id="Criticism">Criticism</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=3" title="Edit section: Criticism">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="box-Criticism_section plainlinks metadata ambox ambox-content ambox-criticism" role="presentation"><tbody><tr><td class="mbox-image"><div style="width:52px"><img alt="Ambox scales.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ambox_scales.svg/50px-Ambox_scales.svg.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ambox_scales.svg/75px-Ambox_scales.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Ambox_scales.svg/100px-Ambox_scales.svg.png 2x" data-file-width="620" data-file-height="620" /></div></td><td class="mbox-text"><div class="mbox-text-span">This article's <i>Criticism</i> or <i>Controversy</i> section <b>may compromise the article's <a href="/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutral point of view</a> of the subject</b>.<span class="hide-when-compact"> Please <a href="/wiki/Wikipedia:Neutral_point_of_view#Article_structure" title="Wikipedia:Neutral point of view">integrate the section's contents</a> into the article as a whole, or rewrite the material.</span>  <small class="date-container"><i>(<span class="date">May 2018</span>)</i></small></div></td></tr></tbody></table>
+<p>The language has had a poor reception with many expert C++ programmers. In particular, <a href="/wiki/Bjarne_Stroustrup" title="Bjarne Stroustrup">Bjarne Stroustrup</a> says, "To the best of my knowledge EC++ is dead (2004), and if it isn't it ought to be."<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup> In fact, the official English EC++ website has not been updated since 2002. Nevertheless, a restricted subset of C++ (based on Embedded C++) has been adopted by Apple, Inc. as the exclusive programming language to create all I/O Kit device drivers for Apple's Mac OS X and iOS operating systems of the popular MacBook, iPhone, and iPad products.<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">&#91;8&#93;</a></sup> Apple engineers felt the exceptions, multiple inheritance, templates, and runtime type information features of standard C++ were either insufficient or not efficient enough for use in a high-performance, multithreaded kernel.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=4" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/Comparison_of_Free_EDA_software" class="mw-redirect" title="Comparison of Free EDA software">Comparison of Free EDA software</a></li>
+<li><a href="/wiki/Comparison_of_EDA_Software" class="mw-redirect" title="Comparison of EDA Software">Comparison of EDA Software</a></li>
+<li><a href="/wiki/Electronic_design_automation" title="Electronic design automation">Electronic design automation</a> (EDA)</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=5" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<div class="mw-references-wrap"><ol class="references">
+<li id="cite_note-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-1">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.caravan.net/ec2plus/rationale.html">"EC++ Rationale"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=EC%2B%2B+Rationale&amp;rft_id=http%3A%2F%2Fwww.caravan.net%2Fec2plus%2Frationale.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-qa-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-qa_2-0">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.caravan.net/ec2plus/question.html">EC++ Questions and Answers</a></span>
+</li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20130521152331/http://www.testech-elect.com/iar/extended_embedded_c++.htm">"Embedded and Extended Embedded C++"</a>. Archived from <a rel="nofollow" class="external text" href="http://www.testech-elect.com/iar/extended_embedded_c++.htm">the original</a> on 21 May 2013<span class="reference-accessdate">. Retrieved <span class="nowrap">9 December</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Embedded+and+Extended+Embedded+C%2B%2B&amp;rft_id=http%3A%2F%2Fwww.testech-elect.com%2Fiar%2Fextended_embedded_c%2B%2B.htm&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.iar.com/ew">"IAR Systems - Compilers and debuggers"</a>. <i>IAR Systems website</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IAR+Systems+website&amp;rft.atitle=IAR+Systems+-+Compilers+and+debuggers&amp;rft_id=http%3A%2F%2Fwww.iar.com%2Few&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20090101140055/http://www.tasking.com/resources/technologies/compilers/ecpp/">"Embedded C++ compiler technology"</a>. <i>Tasking website</i>. Archived from <a rel="nofollow" class="external text" href="http://www.tasking.com/resources/technologies/compilers/ecpp">the original</a> on 2009-01-01.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Tasking+website&amp;rft.atitle=Embedded+C%2B%2B+compiler+technology&amp;rft_id=http%3A%2F%2Fwww.tasking.com%2Fresources%2Ftechnologies%2Fcompilers%2Fecpp&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://web.archive.org/web/20081025094812/http://www.ghs.com/products/optimizingC++EC++Compilers.html">"Green Hills Optimizing C/C++/EC++ Compilers"</a>. <i>Green Hills Software website</i>. Archived from <a rel="nofollow" class="external text" href="http://www.ghs.com/products/optimizingC++EC++Compilers.html">the original</a> on 2008-10-25.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Green+Hills+Software+website&amp;rft.atitle=Green+Hills+Optimizing+C%2FC%2B%2B%2FEC%2B%2B+Compilers&amp;rft_id=http%3A%2F%2Fwww.ghs.com%2Fproducts%2FoptimizingC%2B%2BEC%2B%2BCompilers.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.stroustrup.com/bs_faq.html#EC++">"What do you think of EC++?"</a>. <i><a href="/wiki/Bjarne_Stroustrup" title="Bjarne Stroustrup">Bjarne Stroustrup</a>'s FAQ</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Bjarne+Stroustrup%27s+FAQ&amp;rft.atitle=What+do+you+think+of+EC%2B%2B%3F&amp;rft_id=http%3A%2F%2Fwww.stroustrup.com%2Fbs_faq.html%23EC%2B%2B&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://osxbook.com/book/bonus/ancient/whatismacosx/arch_xnu.html">"What is Mac OS X?"</a>. <i>Amit Singh</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=Amit+Singh&amp;rft.atitle=What+is+Mac+OS+X%3F&amp;rft_id=http%3A%2F%2Fosxbook.com%2Fbook%2Fbonus%2Fancient%2Fwhatismacosx%2Farch_xnu.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://developer.apple.com/library/mac/documentation/DeviceDrivers/Conceptual/WritingDeviceDriver/CPluPlusRuntime/CPlusPlusRuntime.html#//apple_ref/doc/uid/TP30000695-BAJIBFDE">"The libkern C++ Runtime"</a>. <i>IOKit Device Driver Design Guidelines</i>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=IOKit+Device+Driver+Design+Guidelines&amp;rft.atitle=The+libkern+C%2B%2B+Runtime&amp;rft_id=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fmac%2Fdocumentation%2FDeviceDrivers%2FConceptual%2FWritingDeviceDriver%2FCPluPlusRuntime%2FCPlusPlusRuntime.html%23%2F%2Fapple_ref%2Fdoc%2Fuid%2FTP30000695-BAJIBFDE&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AEmbedded+C%2B%2B" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div></div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit&amp;section=6" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><span class="official-website"><span class="url"><a rel="nofollow" class="external text" href="http://www.caravan.net/ec2plus">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://www.caravan.net/ec2plus/objectives/object.html">Background and Objectives of the Embedded C++ Specification Development</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.embedded.com/design/prototyping-and-development/4017902/Embedded-C--Yields-Faster-Smaller-Code">Embedded C++ Yields Faster Smaller Code</a>, John Carbone (Embedded.com), June 19, 1998</li>
+<li><a rel="nofollow" class="external text" href="http://www.embedded.com/design/embedded/4007119/Building-Bare-Metal-ARM-Systems-with-GNU-Part-1--Getting-Started">Building Bare-Metal ARM Systems with GNU: Part 1 - Getting Started</a>, Miro Samek, Quantum Leaps, June 26, 2007</li>
+<li><a rel="nofollow" class="external text" href="http://www.open-std.org/jtc1/sc22/wg21/docs/TR18015.pdf">Technical Report on C++ Performance</a>, by WG 21 of ISO Subcommittee SC 22</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="C++" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:C%2B%2B_programming_language" title="Template:C++ programming language"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:C%2B%2B_programming_language" title="Template talk:C++ programming language"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:C%2B%2B_programming_language&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="C++" style="font-size:114%;margin:0 4em"><a href="/wiki/C%2B%2B" title="C++">C++</a></div></th></tr><tr><td class="navbox-abovebelow" colspan="2"><div id="*C++_*C++98_*C++03_*C++11_*C++14_*C++17_*C++20_*C++23">
+<ul><li><a href="/wiki/C%2B%2B" title="C++">C++</a></li>
+<li><a href="/wiki/C%2B%2B#Standardization" title="C++">C++98</a></li>
+<li><a href="/wiki/C%2B%2B03" title="C++03">C++03</a></li>
+<li><a href="/wiki/C%2B%2B11" title="C++11">C++11</a></li>
+<li><a href="/wiki/C%2B%2B14" title="C++14">C++14</a></li>
+<li><a href="/wiki/C%2B%2B17" title="C++17">C++17</a></li>
+<li><a href="/wiki/C%2B%2B20" title="C++20">C++20</a></li>
+<li><a href="/wiki/C%2B%2B23" title="C++23">C++23</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Features</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C%2B%2B_classes" title="C++ classes">Classes</a></li>
+<li><a href="/wiki/C%2B%2B#Exception_handling" title="C++">Exception handling</a></li>
+<li><a href="/wiki/Function_overloading" title="Function overloading">Function overloading</a></li>
+<li><a href="/wiki/New_and_delete_(C%2B%2B)" title="New and delete (C++)">new and delete</a></li>
+<li><a href="/wiki/Operator_overloading" title="Operator overloading">Operator overloading</a></li>
+<li><a href="/wiki/Operators_in_C_and_C%2B%2B" title="Operators in C and C++">Operators</a></li>
+<li><a href="/wiki/Template_(C%2B%2B)" title="Template (C++)">Templates</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/C%2B%2B_Standard_Library" title="C++ Standard Library">Standard Library</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Input/output_(C%2B%2B)" title="Input/output (C++)">I/O Streams</a></li>
+<li><a href="/wiki/Smart_pointer" title="Smart pointer">Smart pointers</a></li>
+<li><a href="/wiki/Standard_Template_Library" title="Standard Template Library">STL</a></li>
+<li><a href="/wiki/C%2B%2B_string_handling" title="C++ string handling">Strings</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:C%2B%2B_compilers" title="Category:C++ compilers">Compilers</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/List_of_compilers#C++_compilers" title="List of compilers">Comparison of C++ compilers</a></li>
+<li><a href="/wiki/Borland_C%2B%2B" title="Borland C++">Borland C++</a></li>
+<li><a href="/wiki/Borland_C%2B%2B" title="Borland C++">Borland Turbo C++</a></li>
+<li><a href="/wiki/C%2B%2BBuilder" title="C++Builder">C++Builder</a></li>
+<li><a href="/wiki/Clang" title="Clang">Clang</a></li>
+<li><a href="/wiki/GNU_Compiler_Collection" title="GNU Compiler Collection">GCC</a></li>
+<li><a href="/wiki/Intel_C%2B%2B_Compiler" title="Intel C++ Compiler">Intel C++ Compiler</a></li>
+<li><a href="/wiki/Oracle_Developer_Studio" title="Oracle Developer Studio">Oracle Solaris Studio</a></li>
+<li><a href="/wiki/Visual_C%2B%2B" class="mw-redirect" title="Visual C++">Visual C++</a></li>
+<li><a href="/wiki/Watcom_C/C%2B%2B" title="Watcom C/C++">Watcom C/C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Category:Integrated_development_environments" title="Category:Integrated development environments">IDEs</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Comparison_of_integrated_development_environments#C/C++" title="Comparison of integrated development environments">Comparison of C IDEs</a></li>
+<li><a href="/wiki/Anjuta" title="Anjuta">Anjuta</a></li>
+<li><a href="/wiki/CLion" class="mw-redirect" title="CLion">CLion</a></li>
+<li><a href="/wiki/Code::Blocks" title="Code::Blocks">Code::Blocks</a></li>
+<li><a href="/wiki/CodeLite" title="CodeLite">CodeLite</a></li>
+<li><a href="/wiki/Eclipse_(software)" title="Eclipse (software)">Eclipse</a></li>
+<li><a href="/wiki/Geany" title="Geany">Geany</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Microsoft Visual Studio</a></li>
+<li><a href="/wiki/NetBeans" title="NetBeans">NetBeans</a></li>
+<li><a href="/wiki/KDevelop" title="KDevelop">KDevelop</a></li>
+<li><a href="/wiki/Qt_Creator" title="Qt Creator">Qt Creator</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Superset languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Objective-C%2B%2B" class="mw-redirect" title="Objective-C++">Objective-C++</a></li>
+<li><a href="/wiki/C%2B%2B/CLI" title="C++/CLI">C++/CLI</a></li>
+<li>( <a href="/wiki/C%2B%2B/CX" title="C++/CX">C++/CX</a> )</li>
+<li><a href="/wiki/Ch_(computer_programming)" title="Ch (computer programming)">Ch</a></li>
+<li><a href="/wiki/SYCL" title="SYCL">SYCL</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Dialects</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink"> Embedded C++</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Relative to<br />other languages</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Compatibility_of_C_and_C%2B%2B" title="Compatibility of C and C++">Compatibility of C and C++</a></li>
+<li><a href="/wiki/Comparison_of_Java_and_C%2B%2B" title="Comparison of Java and C++">Comparison of Java and C++</a></li>
+<li><a href="/wiki/Comparison_of_ALGOL_68_and_C%2B%2B" title="Comparison of ALGOL 68 and C++">Comparison of ALGOL 68 and C++</a></li>
+<li><a href="/wiki/Comparison_of_programming_languages" title="Comparison of programming languages">Comparison of programming languages</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><img alt="Category" src="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" decoding="async" title="Category" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /> <b><a href="/wiki/Category:C%2B%2B_programming_language_family" title="Category:C++ programming language family">Category</a></b></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="Embedded_systems" style="padding:3px"><table class="nowraplinks hlist mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:Embedded_systems" title="Template:Embedded systems"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:Embedded_systems" title="Template talk:Embedded systems"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:Embedded_systems&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="Embedded_systems" style="font-size:114%;margin:0 4em"><a href="/wiki/Embedded_system" title="Embedded system">Embedded systems</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">General terms</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Application-specific_integrated_circuit" title="Application-specific integrated circuit">ASIC</a></li>
+<li><a href="/wiki/Board_support_package" title="Board support package">Board support package</a></li>
+<li><a href="/wiki/Bootloader" class="mw-redirect" title="Bootloader">Bootloader</a></li>
+<li><a href="/wiki/Consumer_electronics" title="Consumer electronics">Consumer electronics</a></li>
+<li><a href="/wiki/Cross_compiler" title="Cross compiler">Cross compiler</a></li>
+<li><a href="/wiki/Embedded_database" title="Embedded database">Embedded database</a></li>
+<li><a href="/wiki/Embedded_hypervisor" title="Embedded hypervisor">Embedded hypervisor</a></li>
+<li><a href="/wiki/Embedded_operating_system" title="Embedded operating system">Embedded OS</a></li>
+<li><a href="/wiki/Embedded_software" title="Embedded software">Embedded software</a></li>
+<li><a href="/wiki/Field-programmable_gate_array" title="Field-programmable gate array">FPGA</a></li>
+<li><a href="/wiki/Internet_of_things" title="Internet of things">IoT</a></li>
+<li><a href="/wiki/Memory_footprint" title="Memory footprint">Memory footprint</a></li>
+<li><a href="/wiki/Microcontroller" title="Microcontroller">Microcontroller</a></li>
+<li><a href="/wiki/Single-board_computer" title="Single-board computer">Single-board computer</a>
+<ul><li><a href="/wiki/Raspberry_Pi" title="Raspberry Pi">Raspberry Pi</a></li></ul></li>
+<li><a href="/wiki/System_on_a_chip" title="System on a chip">SoC</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Firmware" title="Firmware">Firmware</a> and controls</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Closed_platform" title="Closed platform">Closed platform</a></li>
+<li><a href="/wiki/Crippleware" title="Crippleware">Crippleware</a></li>
+<li><a href="/wiki/Custom_firmware" title="Custom firmware">Custom firmware</a></li>
+<li><a href="/wiki/Defective_by_Design" title="Defective by Design">Defective by Design</a></li>
+<li><a href="/wiki/Hacking_of_consumer_electronics" title="Hacking of consumer electronics">Hacking of consumer electronics</a></li>
+<li><a href="/wiki/Homebrew_(video_games)" title="Homebrew (video games)">Homebrew (video games)</a></li>
+<li><a href="/wiki/IOS_jailbreaking" title="IOS jailbreaking">iOS jailbreaking</a></li>
+<li><a href="/wiki/PlayStation_3_Jailbreak" title="PlayStation 3 Jailbreak">PlayStation 3 Jailbreak</a></li>
+<li><a href="/wiki/Proprietary_firmware" title="Proprietary firmware">Proprietary firmware</a></li>
+<li><a href="/wiki/Rooting_(Android_OS)" class="mw-redirect" title="Rooting (Android OS)">Rooting (Android)</a></li>
+<li><a href="/wiki/Vendor_lock-in" title="Vendor lock-in">Vendor lock-in</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Library_(computing)" title="Library (computing)">Software libraries</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/UClibc" title="UClibc">uClibc</a></li>
+<li><a href="/wiki/Dietlibc" title="Dietlibc">dietlibc</a></li>
+<li><a href="/wiki/Embedded_GLIBC" title="Embedded GLIBC">Embedded GLIBC</a></li>
+<li><a href="/wiki/LwIP" title="LwIP">lwIP</a></li>
+<li><a href="/wiki/Musl" title="Musl">musl</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Programming_tool" title="Programming tool">Programming tools</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Almquist_shell" title="Almquist shell">Almquist shell</a></li>
+<li><a href="/wiki/Bitbake" class="mw-redirect" title="Bitbake">Bitbake</a></li>
+<li><a href="/wiki/Buildroot" title="Buildroot">Buildroot</a></li>
+<li><a href="/wiki/BusyBox" title="BusyBox">BusyBox</a></li>
+<li><a href="/wiki/OpenEmbedded" title="OpenEmbedded">OpenEmbedded</a></li>
+<li><a href="/wiki/Stand-alone_shell" title="Stand-alone shell">Stand-alone shell</a></li>
+<li><a href="/wiki/Toybox" title="Toybox">Toybox</a></li>
+<li><a href="/wiki/Yocto_Project" title="Yocto Project">Yocto Project</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Embedded_operating_system" title="Embedded operating system">Operating systems</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Linux_on_embedded_systems" title="Linux on embedded systems">Linux on embedded systems</a></li>
+<li><a href="/wiki/Linux_for_mobile_devices" title="Linux for mobile devices">Linux for mobile devices</a></li>
+<li><a href="/wiki/Light-weight_Linux_distribution" title="Light-weight Linux distribution">Light-weight Linux distribution</a></li>
+<li><a href="/wiki/Real-time_operating_system" title="Real-time operating system">Real-time operating system</a></li>
+<li><a href="/wiki/Windows_IoT" title="Windows IoT">Windows IoT</a>
+<ul><li><a href="/wiki/Windows_Embedded_Compact" title="Windows Embedded Compact">Win CE</a></li></ul></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Programming_language" title="Programming language">Programming languages</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Ada_(programming_language)" title="Ada (programming language)">Ada</a></li>
+<li><a href="/wiki/Assembly_language" title="Assembly language">Assembly language</a></li>
+<li><a href="/w/index.php?title=Communication_Access_Programming_Language&amp;action=edit&amp;redlink=1" class="new" title="Communication Access Programming Language (page does not exist)">CAPL</a></li>
+<li><a href="/wiki/Embedded_C" title="Embedded C">Embedded C</a></li>
+<li><a class="mw-selflink selflink">Embedded C++</a></li>
+<li><a href="/wiki/Embedded_Java" title="Embedded Java">Embedded Java</a></li>
+<li><a href="/wiki/MISRA_C" title="MISRA C">MISRA C</a></li></ul>
+</div></td></tr><tr><td class="navbox-abovebelow" colspan="2"><div>
+<ul><li><a href="/wiki/Comparison_of_lightweight_web_browsers" title="Comparison of lightweight web browsers">Lightweight browsers</a></li>
+<li><a href="/wiki/Open-source_computing_hardware" class="mw-redirect" title="Open-source computing hardware">Open-source computing hardware</a></li>
+<li><a href="/wiki/Open-source_robotics" title="Open-source robotics">Open-source robotics</a></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1384
+Cached time: 20200401065233
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.264 seconds
+Real time usage: 0.362 seconds
+Preprocessor visited node count: 803/1000000
+Post‐expand include size: 45190/2097152 bytes
+Template argument size: 435/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 1/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 24004/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.132/10.000 seconds
+Lua memory usage: 3.48 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  288.341      1 -total
+ 43.28%  124.803      1 Template:Reflist
+ 36.00%  103.795      8 Template:Cite_web
+ 22.80%   65.744      1 Template:Criticism_section
+ 15.83%   45.633      1 Template:Ambox
+ 11.96%   34.478      2 Template:Navbox
+ 11.44%   32.984      1 Template:C++_programming_language
+  8.80%   25.382      1 Template:Official_website
+  4.00%   11.528      1 Template:Icon
+  3.50%   10.101      1 Template:Embedded_systems
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:2407197-0!canonical and timestamp 20200401065232 and revision id 939188356
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Embedded_C%2B%2B&amp;oldid=939188356">https://en.wikipedia.org/w/index.php?title=Embedded_C%2B%2B&amp;oldid=939188356</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:C%2B%2B_programming_language_family" title="Category:C++ programming language family">C++ programming language family</a></li><li><a href="/wiki/Category:Class-based_programming_languages" title="Category:Class-based programming languages">Class-based programming languages</a></li><li><a href="/wiki/Category:Hardware_description_languages" title="Category:Hardware description languages">Hardware description languages</a></li><li><a href="/wiki/Category:Embedded_systems" title="Category:Embedded systems">Embedded systems</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_needing_POV-check_from_May_2018" title="Category:Articles needing POV-check from May 2018">Articles needing POV-check from May 2018</a></li><li><a href="/wiki/Category:All_NPOV_disputes" title="Category:All NPOV disputes">All NPOV disputes</a></li><li><a href="/wiki/Category:Official_website_different_in_Wikidata_and_Wikipedia" title="Category:Official website different in Wikidata and Wikipedia">Official website different in Wikidata and Wikipedia</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Embedded+C%2B%2B" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Embedded+C%2B%2B" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/Embedded_C%2B%2B" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:Embedded_C%2B%2B" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/Embedded_C%2B%2B">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Embedded_C%2B%2B" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Embedded_C%2B%2B" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Embedded_C%2B%2B&amp;oldid=939188356" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Embedded_C%2B%2B&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1334967" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Embedded_C%2B%2B&amp;id=939188356&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Embedded+C%2B%2B">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=Embedded+C%2B%2B&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Embedded_C%2B%2B&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Embedded_C%2B%2B" title="Embedded C++ – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/Embedded_C%2B%2B" title="Embedded C++ – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Embedded_C%2B%2B" title="Embedded C++ – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/%D0%92%D1%81%D1%82%D1%80%D0%B0%D0%B8%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_C%2B%2B" title="Встраиваемый C++ – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/EC%2B%2B" title="EC++ – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Embedded_C%2B%2B" title="Embedded C++ – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q1334967#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 4 February 2020, at 22:18<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Embedded_C%2B%2B&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.264","walltime":"0.362","ppvisitednodes":{"value":803,"limit":1000000},"postexpandincludesize":{"value":45190,"limit":2097152},"templateargumentsize":{"value":435,"limit":2097152},"expansiondepth":{"value":8,"limit":40},"expensivefunctioncount":{"value":1,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":24004,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  288.341      1 -total"," 43.28%  124.803      1 Template:Reflist"," 36.00%  103.795      8 Template:Cite_web"," 22.80%   65.744      1 Template:Criticism_section"," 15.83%   45.633      1 Template:Ambox"," 11.96%   34.478      2 Template:Navbox"," 11.44%   32.984      1 Template:C++_programming_language","  8.80%   25.382      1 Template:Official_website","  4.00%   11.528      1 Template:Icon","  3.50%   10.101      1 Template:Embedded_systems"]},"scribunto":{"limitreport-timeusage":{"value":"0.132","limit":"10.000"},"limitreport-memusage":{"value":3648137,"limit":52428800}},"cachereport":{"origin":"mw1384","timestamp":"20200401065233","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Embedded C++","url":"https:\/\/en.wikipedia.org\/wiki\/Embedded_C%2B%2B","sameAs":"http:\/\/www.wikidata.org\/entity\/Q1334967","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q1334967","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2005-08-08T17:27:45Z","dateModified":"2020-02-04T22:18:35Z"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":94,"wgHostname":"mw1411"});});</script></body></html>

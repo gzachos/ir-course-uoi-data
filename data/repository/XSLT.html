@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>XSLT - Wikipedia</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgBreakFrames":!1,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"affb61b0-782d-4268-b8e5-09cf9dc4ddb5","wgCSPNonce":!1,"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"XSLT","wgTitle":"XSLT","wgCurRevisionId":950889676,"wgRevisionId":950889676,"wgArticleId":34211,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["All articles with unsourced statements","Articles with unsourced statements from July 2009","Commons category link is on Wikidata","Wikipedia articles with GND identifiers","Wikipedia articles with LCCN identifiers","Articles with example code","Declarative programming languages","Functional languages",
+"Markup languages","Transformation languages","World Wide Web Consortium standards","XML-based programming languages","XML-based standards","Programming languages created in 1998","1998 software","High-level programming languages","Homoiconic programming languages"],"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"XSLT","wgRelevantArticleId":34211,"wgIsProbablyEditable":!0,"wgRelevantPageIsProbablyEditable":!0,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgMediaViewerOnClick":!0,"wgMediaViewerEnabledByDefault":!0,"wgPopupsReferencePreviews":!1,"wgPopupsConflictsWithNavPopupGadget":!1,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgMFDisplayWikibaseDescriptions":{"search":!0,"nearby":!0,"watchlist":!0,"tagline":!1},"wgWMESchemaEditAttemptStepOversample":!1,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q32110","wgCentralAuthMobileDomain":
+!1,"wgEditSubmitButtonLabelPublish":!0};RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.cite.styles":"ready","ext.pygments":"ready","jquery.makeCollapsible.styles":"ready","mediawiki.toc.styles":"ready","skins.vector.styles.legacy":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready"};RLPAGEMODULES=["ext.cite.ux-enhancements","site","mediawiki.page.startup","skins.vector.js","mediawiki.page.ready","jquery.makeCollapsible","mediawiki.toc","ext.gadget.ReferenceTooltips","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader",
+"ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.compactlinks","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.options@1hzgi",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.cite.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cjquery.makeCollapsible.styles%7Cmediawiki.toc.styles%7Cskins.vector.styles.legacy%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.35.0-wmf.27"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=XSLT&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=XSLT&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/XSLT"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-XSLT rootpage-XSLT skin-vector action-view">
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading" lang="en">XSLT</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+		<div id="contentSub"></div>
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+		<a class="mw-jump-link" href="#p-search">Jump to search</a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox vevent" style="width:22em"><caption class="summary">XSLT</caption><tbody><tr><th scope="row"><a href="/wiki/Programming_paradigm" title="Programming paradigm">Paradigm</a></th><td><a href="/wiki/Declarative_programming" title="Declarative programming">Declarative</a></td></tr><tr><th scope="row"><a href="/wiki/Software_developer" class="mw-redirect" title="Software developer">Developer</a></th><td class="organiser"><a href="/wiki/W3C" class="mw-redirect" title="W3C">W3C</a></td></tr><tr><th scope="row">First&#160;appeared</th><td>1998</td></tr><tr><td colspan="2" style="text-align:center"></td></tr><tr><th scope="row" style="white-space: nowrap;"><a href="/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th><td><div style="margin:0px;">3.0
+   </div></td></tr><tr style="display:none"><td colspan="2">
+</td></tr><tr><th scope="row">Website</th><td><a rel="nofollow" class="external text" href="http://www.w3.org/standards/xml/transformation">W3C Transformation</a></td></tr><tr><th colspan="2" style="text-align:center;background-color: #eee;">Major <a href="/wiki/Programming_language_implementation" title="Programming language implementation">implementations</a></th></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/Libxslt" title="Libxslt">libxslt</a>, <a href="/wiki/Saxon_XSLT" title="Saxon XSLT">Saxon</a>, <a href="/wiki/Xalan" class="mw-redirect" title="Xalan">Xalan</a></td></tr><tr><th colspan="2" style="text-align:center;background-color: #eee;">Influenced by</th></tr><tr><td colspan="2" style="text-align:center"><a href="/wiki/DSSSL" class="mw-redirect" title="DSSSL">DSSSL</a></td></tr></tbody></table><p><b>XSLT</b> (<b>Extensible Stylesheet Language Transformations</b>) is a language for <a href="/wiki/XML_transformation_language" title="XML transformation language">transforming</a> <a href="/wiki/XML" title="XML">XML</a> documents into other XML documents,<sup id="cite_ref-Transformation_1-0" class="reference"><a href="#cite_note-Transformation-1">&#91;1&#93;</a></sup> or other formats such as <a href="/wiki/HTML" title="HTML">HTML</a> for <a href="/wiki/Web_page" title="Web page">web pages</a>, <a href="/wiki/Plain_text" title="Plain text">plain text</a> or <a href="/wiki/XSL_Formatting_Objects" title="XSL Formatting Objects">XSL Formatting Objects</a>, which may subsequently be converted to other formats, such as <a href="/wiki/Portable_Document_Format" class="mw-redirect" title="Portable Document Format">PDF</a>, <a href="/wiki/PostScript" title="PostScript">PostScript</a> and <a href="/wiki/Portable_Network_Graphic" class="mw-redirect" title="Portable Network Graphic">PNG</a>.<sup id="cite_ref-2" class="reference"><a href="#cite_note-2">&#91;2&#93;</a></sup> XSLT 1.0 is widely supported in modern web browsers.<sup id="cite_ref-Used_for_3-0" class="reference"><a href="#cite_note-Used_for-3">&#91;3&#93;</a></sup>
+</p><p>The original document is not changed; rather, a new document is created based on the content of an existing one.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">&#91;4&#93;</a></sup> Typically, input documents are XML files, but anything from which the processor can build an <a href="/wiki/XQuery_and_XPath_Data_Model" title="XQuery and XPath Data Model">XQuery and XPath Data Model</a> can be used, such as <a href="/wiki/Relational_database" title="Relational database">relational database</a> tables or <a href="/wiki/Geographical_information_systems" class="mw-redirect" title="Geographical information systems">geographical information systems</a>.<sup id="cite_ref-Transformation_1-1" class="reference"><a href="#cite_note-Transformation-1">&#91;1&#93;</a></sup>
+</p><p>Although XSLT is designed as a special-purpose language for XML transformation, the language is <a href="/wiki/Turing-complete" class="mw-redirect" title="Turing-complete">Turing-complete</a>, making it theoretically capable of arbitrary computations.<sup id="cite_ref-5" class="reference"><a href="#cite_note-5">&#91;5&#93;</a></sup>
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Design_and_processing_model"><span class="tocnumber">2</span> <span class="toctext">Design and processing model</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#XPath"><span class="tocnumber">3</span> <span class="toctext">XPath</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#XQuery_compared"><span class="tocnumber">4</span> <span class="toctext">XQuery compared</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Media_types"><span class="tocnumber">5</span> <span class="toctext">Media types</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Examples"><span class="tocnumber">6</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Example_1_(transforming_XML_to_XML)"><span class="tocnumber">6.1</span> <span class="toctext">Example 1 (transforming XML to XML)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Example_2_(transforming_XML_to_XHTML)"><span class="tocnumber">6.2</span> <span class="toctext">Example 2 (transforming XML to XHTML)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="#Processor_implementations"><span class="tocnumber">7</span> <span class="toctext">Processor implementations</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#Performance"><span class="tocnumber">7.1</span> <span class="toctext">Performance</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#Further_reading"><span class="tocnumber">10</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#External_links"><span class="tocnumber">11</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>XSLT is influenced by <a href="/wiki/Functional_programming" title="Functional programming">functional languages</a>,<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">&#91;6&#93;</a></sup> and by text-based pattern matching languages like <a href="/wiki/SNOBOL" title="SNOBOL">SNOBOL</a> and <a href="/wiki/AWK_(programming_language)" class="mw-redirect" title="AWK (programming language)">AWK</a>. Its most direct predecessor is <a href="/wiki/DSSSL" class="mw-redirect" title="DSSSL">DSSSL</a>, which did for <a href="/wiki/SGML" class="mw-redirect" title="SGML">SGML</a> what XSLT does for XML.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">&#91;7&#93;</a></sup>
+</p>
+<ul><li>XSLT 1.0: XSLT was part of the <a href="/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium</a> (W3C)'s <a href="/wiki/Extensible_Stylesheet_Language" class="mw-redirect" title="Extensible Stylesheet Language">eXtensible Stylesheet Language</a> (XSL) development effort of 1998–1999, a project that also produced <a href="/wiki/XSL-FO" class="mw-redirect" title="XSL-FO">XSL-FO</a> and <a href="/wiki/XPath" title="XPath">XPath</a>. Some members of the standards committee that developed XSLT, including <a href="/wiki/James_Clark_(XML_expert)" class="mw-redirect" title="James Clark (XML expert)">James Clark</a>, the editor, had previously worked on DSSSL. XSLT 1.0 was published as a <a href="/wiki/W3C_recommendation" class="mw-redirect" title="W3C recommendation">W3C recommendation</a> in November 1999.<sup id="cite_ref-timelinehistory_8-0" class="reference"><a href="#cite_note-timelinehistory-8">&#91;8&#93;</a></sup> Despite its age, XSLT 1.0<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">&#91;9&#93;</a></sup> is still widely used (as of 2018), since later versions are not supported natively in <a href="/wiki/Web_browser" title="Web browser">web browsers</a> or for environments like <a href="/wiki/LAMP_(software_bundle)" title="LAMP (software bundle)">LAMP</a>.</li></ul>
+<ul><li>XSLT 2.0: after an abortive attempt to create a version 1.1 in 2001,<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">&#91;10&#93;</a></sup> the XSL working group joined forces with the <a href="/wiki/XQuery" title="XQuery">XQuery</a> working group to create <a href="/wiki/XPath_2.0" title="XPath 2.0">XPath 2.0</a>,<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">&#91;11&#93;</a></sup> with a richer data model and type system based on <a href="/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a>. Building on this is XSLT 2.0,<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">&#91;12&#93;</a></sup> developed under the editorship of <a href="/wiki/Michael_Howard_Kay" title="Michael Howard Kay">Michael Kay</a>, which reached recommendation status in January 2007.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13">&#91;13&#93;</a></sup> The most important innovations in XSLT 2.0 include:
+<ul><li>String manipulation using <a href="/wiki/Regular_expressions" class="mw-redirect" title="Regular expressions">regular expressions</a></li>
+<li>Functions and operators for manipulating dates, times, and durations</li>
+<li>Multiple output documents</li>
+<li>Grouping (creating hierarchic structure from flat input sequences)</li>
+<li>A richer type system and stronger type checking</li></ul></li></ul>
+<ul><li>XSLT 3.0: became a W3C Recommendation on 8 June 2017. The main new features are:<sup id="cite_ref-new-in-3_14-0" class="reference"><a href="#cite_note-new-in-3-14">&#91;14&#93;</a></sup>
+<ul><li><a href="/wiki/Streaming_XML" title="Streaming XML">Streaming transformations</a>: in previous versions the entire input document had to be read into memory before it could be processed,<sup id="cite_ref-15" class="reference"><a href="#cite_note-15">&#91;15&#93;</a></sup> and output could not be written until processing had finished (although Saxon does have a streaming extension). XSLT 3.0 allows <a href="/wiki/Streaming_XML" title="Streaming XML">XML streaming</a> which is useful for processing documents too large to fit in memory or when transformations are chained in <a href="/wiki/XML_Pipelines" class="mw-redirect" title="XML Pipelines">XML Pipelines</a>.</li>
+<li>Improvements to the modularity of large stylesheets.</li>
+<li>Improved handling of dynamic errors with, for example, an xsl:try instruction.</li>
+<li>Functions can now be arguments to other (higher-order) functions.</li></ul></li></ul>
+<h2><span class="mw-headline" id="Design_and_processing_model">Design and processing model</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=2" title="Edit section: Design and processing model">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright"><div class="thumbinner" style="width:222px;"><a href="/wiki/File:XSLT_en.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/XSLT_en.svg/220px-XSLT_en.svg.png" decoding="async" width="220" height="417" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e6/XSLT_en.svg/330px-XSLT_en.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e6/XSLT_en.svg/440px-XSLT_en.svg.png 2x" data-file-width="231" data-file-height="438" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:XSLT_en.svg" class="internal" title="Enlarge"></a></div>Diagram of the basic elements and process flow of eXtensible Stylesheet Language Transformations.</div></div></div>
+<p>The XSLT processor takes one or more XML source documents, plus one or more XSLT stylesheets, and processes them to produce an output document. In contrast to widely implemented <a href="/wiki/Imperative_programming" title="Imperative programming">imperative</a> programming languages like <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a>, XSLT is <a href="/wiki/Declarative_programming" title="Declarative programming">declarative</a>.<sup id="cite_ref-16" class="reference"><a href="#cite_note-16">&#91;16&#93;</a></sup> The basic processing paradigm is pattern matching.<sup id="cite_ref-IBM_17-0" class="reference"><a href="#cite_note-IBM-17">&#91;17&#93;</a></sup> Rather than listing an imperative sequence of actions to perform in a stateful environment, template rules only define how to handle a node matching a particular XPath-like pattern, if the processor should happen to encounter one, and the contents of the templates effectively comprise <a href="/wiki/Functional_programming" title="Functional programming">functional</a> <a href="/wiki/Expression_(programming)" class="mw-redirect" title="Expression (programming)">expressions</a> that directly represent their evaluated form: the result tree, which is the basis of the processor's output.
+</p><p>A typical processor behaves as follows. First, assuming a stylesheet has already been read and prepared, the processor builds a source <a href="/wiki/Tree_data_structure" class="mw-redirect" title="Tree data structure">tree</a> from the input XML document. It then processes the source tree's root node, finds the best-matching template for that node in the stylesheet, and evaluates the template's contents. Instructions in each template generally direct the processor to either create nodes in the result tree, or to process more nodes in the source tree in the same way as the root node. Finally the result tree is serialized as XML or HTML text.
+</p>
+<h2><span class="mw-headline" id="XPath">XPath</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=3" title="Edit section: XPath">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/XPath" title="XPath">XPath</a></div>
+<p>XSLT uses <a href="/wiki/XPath" title="XPath">XPath</a> to identify subsets of the source document tree and perform calculations. XPath also provides a range of <a href="/wiki/Subroutine" title="Subroutine">functions</a>, which XSLT itself further augments.
+</p><p>XSLT 1.0 uses XPath 1.0, while XSLT 2.0 uses XPath 2.0. XSLT 3.0 will work with either XPath 3.0 or 3.1. In the case of 1.0 and 2.0, the XSLT and XPath specifications were published on the same date. With 3.0, however, they were no longer synchronized; XPath 3.0 became a Recommendation in April 2014, followed by XPath 3.1 in February 2017; XSLT 3.0 followed in June 2017.
+</p>
+<h2><span class="mw-headline" id="XQuery_compared">XQuery compared</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=4" title="Edit section: XQuery compared">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div role="note" class="hatnote navigation-not-searchable">Further information: <a href="/wiki/XQuery#XQuery_and_XSLT_compared" title="XQuery">XQuery §&#160;XQuery and XSLT compared</a></div>
+<p>XSLT functionalities overlap with those of <a href="/wiki/XQuery" title="XQuery">XQuery</a>, which was initially conceived as a query language for large collections of XML documents.
+</p><p>The XSLT 2.0 and XQuery 1.0 standards were developed by separate working groups within <a href="/wiki/W3C" class="mw-redirect" title="W3C">W3C</a>, working together to ensure a common approach where appropriate. They share the same data model, type system, and function library, and both include <a href="/wiki/XPath" title="XPath">XPath</a> 2.0 as a sublanguage.
+</p><p>The two languages, however, are rooted in different traditions and serve the needs of different communities. XSLT was primarily conceived as a stylesheet language whose primary goal was to render XML for the human reader on screen, on <a href="/wiki/The_web" class="mw-redirect" title="The web">the web</a> (as a <a href="/wiki/Web_template" class="mw-redirect" title="Web template">web template language</a>), or on paper. XQuery was primarily conceived as a <a href="/wiki/Database_query_language" class="mw-redirect" title="Database query language">database query language</a> in the tradition of <a href="/wiki/SQL" title="SQL">SQL</a>.
+</p><p>Because the two languages originate in different communities, XSLT is stronger in its handling
+of narrative documents with more flexible structure, while XQuery is stronger in its data handling, for example when performing relational joins.<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">&#91;<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (July 2009)">citation needed</span></a></i>&#93;</sup>
+</p>
+<h2><span class="mw-headline" id="Media_types">Media types</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=5" title="Edit section: Media types">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The <code>&lt;output&gt;</code> element can optionally take the attribute <code>media-type</code>, which allows one to set the <a href="/wiki/Internet_media_type" class="mw-redirect" title="Internet media type">media type</a> (or MIME type) for the resulting output, for example: <code>&lt;xsl:output output="xml" media-type="application/xml"/&gt;</code>. The XSLT 1.0 recommendation recommends the more general attribute types <code>text/xml</code> and <code>application/xml</code> since for a long time there was no registered media type for XSLT. During this time <code>text/xsl</code> became the de facto standard. In XSLT 1.0 it was not specified how the <code>media-type</code> values should be used.
+</p><p>With the release of the XSLT 2.0, the W3C recommended the registration of the MIME media type <code>application/xslt+xml</code><sup id="cite_ref-18" class="reference"><a href="#cite_note-18">&#91;18&#93;</a></sup> and it was later registered with the <a href="/wiki/Internet_Assigned_Numbers_Authority" title="Internet Assigned Numbers Authority">Internet Assigned Numbers Authority</a>.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">&#91;19&#93;</a></sup>
+</p><p>Pre-1.0 working drafts of XSLT used <code>text/xsl</code> in their embedding examples, and this type was implemented and continues to be promoted by Microsoft in Internet Explorer<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">&#91;20&#93;</a></sup> and MSXML. It is also widely recognized in the <code>xml-stylesheet</code> processing instruction by other browsers. In practice, therefore, users wanting to control transformation in the browser using this processing instruction are obliged to use this unregistered media type.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">&#91;21&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="Examples">Examples</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=6" title="Edit section: Examples">edit</a><span class="mw-editsection-bracket">]</span></span></h2><p>
+These examples use the following incoming XML document</p><div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+<span class="nt">&lt;persons&gt;</span>
+  <span class="nt">&lt;person</span> <span class="na">username=</span><span class="s">&quot;JS1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>John<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;family-name&gt;</span>Smith<span class="nt">&lt;/family-name&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+  <span class="nt">&lt;person</span> <span class="na">username=</span><span class="s">&quot;MI1&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Morka<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;family-name&gt;</span>Ismincius<span class="nt">&lt;/family-name&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+<span class="nt">&lt;/persons&gt;</span>
+</pre></div>
+<h3><span id="Example_1_.28transforming_XML_to_XML.29"></span><span class="mw-headline" id="Example_1_(transforming_XML_to_XML)">Example 1 (transforming XML to XML)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=7" title="Edit section: Example 1 (transforming XML to XML)">edit</a><span class="mw-editsection-bracket">]</span></span></h3><p>
+This XSLT stylesheet provides templates to transform the XML document:</p><div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;xsl:stylesheet</span> <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:output</span> <span class="na">method=</span><span class="s">&quot;xml&quot;</span> <span class="na">indent=</span><span class="s">&quot;yes&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;/persons&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;root&gt;</span>
+      <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">&quot;person&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/root&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;person&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name</span> <span class="na">username=</span><span class="s">&quot;{@username}&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">&quot;name&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</pre></div>
+<p>Its evaluation results in a new XML document, having another structure:
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;root&gt;</span>
+  <span class="nt">&lt;name</span> <span class="na">username=</span><span class="s">&quot;JS1&quot;</span><span class="nt">&gt;</span>John<span class="nt">&lt;/name&gt;</span>
+  <span class="nt">&lt;name</span> <span class="na">username=</span><span class="s">&quot;MI1&quot;</span><span class="nt">&gt;</span>Morka<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;/root&gt;</span>
+</pre></div>
+<h3><span id="Example_2_.28transforming_XML_to_XHTML.29"></span><span class="mw-headline" id="Example_2_(transforming_XML_to_XHTML)">Example 2 (transforming XML to XHTML)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=8" title="Edit section: Example 2 (transforming XML to XHTML)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Processing the following example XSLT file
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;xsl:stylesheet</span>
+  <span class="na">version=</span><span class="s">&quot;1.0&quot;</span>
+  <span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span>
+  <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;xsl:output</span> <span class="na">method=</span><span class="s">&quot;xml&quot;</span> <span class="na">indent=</span><span class="s">&quot;yes&quot;</span> <span class="na">encoding=</span><span class="s">&quot;UTF-8&quot;</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;/persons&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span> <span class="nt">&lt;title&gt;</span>Testing XML Example<span class="nt">&lt;/title&gt;</span> <span class="nt">&lt;/head&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Persons<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;ul&gt;</span>
+          <span class="nt">&lt;xsl:apply-templates</span> <span class="na">select=</span><span class="s">&quot;person&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;xsl:sort</span> <span class="na">select=</span><span class="s">&quot;family-name&quot;</span> <span class="nt">/&gt;</span>
+          <span class="nt">&lt;/xsl:apply-templates&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">&quot;person&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+      <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">&quot;family-name&quot;</span><span class="nt">/&gt;&lt;xsl:text&gt;</span>, <span class="nt">&lt;/xsl:text&gt;&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</pre></div>
+<p>with the XML input file shown above results in the following <a href="/wiki/XHTML" title="XHTML">XHTML</a> (<a href="/wiki/Whitespace_(computer_science)" class="mw-redirect" title="Whitespace (computer science)">whitespace</a> has been adjusted here for clarity):
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span> <span class="nt">&lt;title&gt;</span>Testing XML Example<span class="nt">&lt;/title&gt;</span> <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Persons<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Ismincius, Morka<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Smith, John<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+<p>This XHTML generates the output below when rendered in a web browser.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:196px;"><a href="/wiki/File:Xslt_ex2.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/c/c3/Xslt_ex2.png" decoding="async" width="194" height="98" class="thumbimage" data-file-width="194" data-file-height="98" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/wiki/File:Xslt_ex2.png" class="internal" title="Enlarge"></a></div>Rendered XHTML generated from an XML input file and an XSLT transformation.</div></div></div></div>
+<p>In order for a web browser to be able automatically to apply an XSL transformation to an XML document on display, an XML stylesheet processing instruction can be inserted into XML. So, for example, if the stylesheet in Example 2 above were available as "example2.xsl", the following instruction could be added to the original incoming XML:<sup id="cite_ref-w3cxslt_22-0" class="reference"><a href="#cite_note-w3cxslt-22">&#91;22&#93;</a></sup>
+</p>
+<div class="mw-highlight mw-highlight-lang-xml mw-content-ltr" dir="ltr"><pre><span></span><span class="cp">&lt;?xml-stylesheet href=&quot;example2.xsl&quot; type=&quot;text/xsl&quot; ?&gt;</span>
+</pre></div>
+<p>In this example, <code>text/xsl</code> is technically incorrect according to the W3C specifications<sup id="cite_ref-w3cxslt_22-1" class="reference"><a href="#cite_note-w3cxslt-22">&#91;22&#93;</a></sup> (which say the type should be <code>application/xslt+xml</code>), but it is the only media type that is widely supported across browsers as of 2009.
+</p>
+<h2><span class="mw-headline" id="Processor_implementations">Processor implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=9" title="Edit section: Processor implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>RaptorXML from <a href="/wiki/Altova" title="Altova">Altova</a> is an XSLT 3.0 processor available in the XMLSpy development toolkit and as a free-standing server implementation, invoked using a REST interface.</li>
+<li><a href="/wiki/IBM" title="IBM">IBM</a> offers XSLT processing embedded in a special-purpose hardware appliance under the <a href="/wiki/IBM_WebSphere_DataPower_SOA_Appliances" title="IBM WebSphere DataPower SOA Appliances">Datapower</a> brand.</li>
+<li><a href="/wiki/Libxslt" title="Libxslt">libxslt</a> is a <a href="/wiki/Free_software" title="Free software">free</a> <a href="/wiki/Library_(computing)" title="Library (computing)">library</a> released under the <a href="/wiki/MIT_License" title="MIT License">MIT License</a> that can be reused in commercial applications. It is based on <a href="/wiki/Libxml" class="mw-redirect" title="Libxml">libxml</a> and implemented in <a href="/wiki/C_(programming_language)" title="C (programming language)">C</a> for speed and portability. It supports XSLT 1.0 and <a href="/wiki/EXSLT" title="EXSLT">EXSLT</a> extensions.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23">&#91;23&#93;</a></sup>
+<ul><li>It can be used at the command line via xsltproc<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">&#91;24&#93;</a></sup> which is included in <a href="/wiki/MacOS" title="MacOS">macOS</a><sup id="cite_ref-25" class="reference"><a href="#cite_note-25">&#91;25&#93;</a></sup> and many <a href="/wiki/Linux_distributions" class="mw-redirect" title="Linux distributions">Linux distributions</a>, and can be used on <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a> via <a href="/wiki/Cygwin" title="Cygwin">Cygwin</a>.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">&#91;26&#93;</a></sup></li>
+<li>The <a href="/wiki/WebKit" title="WebKit">WebKit</a> and <a href="/wiki/Blink_(layout_engine)" class="mw-redirect" title="Blink (layout engine)">Blink</a> layout engines, used for example in the <a href="/wiki/Apple_Safari" class="mw-redirect" title="Apple Safari">Safari</a> and <a href="/wiki/Google_Chrome" title="Google Chrome">Chrome</a> web browsers respectively, uses the libxslt library to do XSL transformations.<sup id="cite_ref-27" class="reference"><a href="#cite_note-27">&#91;27&#93;</a></sup></li>
+<li><a href="/wiki/Language_binding" title="Language binding">Bindings</a> exist for <a href="/wiki/Python_(programming_language)" title="Python (programming language)">Python</a>,<sup id="cite_ref-28" class="reference"><a href="#cite_note-28">&#91;28&#93;</a></sup> <a href="/wiki/Perl" title="Perl">Perl</a>,<sup id="cite_ref-29" class="reference"><a href="#cite_note-29">&#91;29&#93;</a></sup> <a href="/wiki/Ruby_(programming_language)" title="Ruby (programming language)">Ruby</a>,<sup id="cite_ref-30" class="reference"><a href="#cite_note-30">&#91;30&#93;</a></sup> <a href="/wiki/PHP" title="PHP">PHP</a>,<sup id="cite_ref-31" class="reference"><a href="#cite_note-31">&#91;31&#93;</a></sup> <a href="/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a>,<sup id="cite_ref-32" class="reference"><a href="#cite_note-32">&#91;32&#93;</a></sup> <a href="/wiki/Tcl" title="Tcl">Tcl</a>,<sup id="cite_ref-33" class="reference"><a href="#cite_note-33">&#91;33&#93;</a></sup> and <a href="/wiki/C%2B%2B" title="C++">C++</a>.<sup id="cite_ref-34" class="reference"><a href="#cite_note-34">&#91;34&#93;</a></sup></li></ul></li>
+<li><a href="/wiki/Microsoft" title="Microsoft">Microsoft</a> provides two XSLT processors (both XSLT 1.0 only). The earlier processor <a href="/wiki/MSXML" title="MSXML">MSXML</a> provides COM interfaces; from MSXML 4.0 it also includes the command line utility <code>msxsl.exe</code>.<sup id="cite_ref-35" class="reference"><a href="#cite_note-35">&#91;35&#93;</a></sup> The .NET runtime includes a separate built-in XSLT processor in its <code>System.Xml.Xsl</code> library.</li>
+<li><a href="/wiki/Saxon_XSLT" title="Saxon XSLT">Saxon</a> is an XSLT 3.0 and XQuery 3.1 processor with <a href="/wiki/Open-source_software" title="Open-source software">open-source</a> and <a href="/wiki/Proprietary_software" title="Proprietary software">proprietary</a> versions for stand-alone operation and for <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>, <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a> and .NET. A derived product Saxon-JS<sup id="cite_ref-36" class="reference"><a href="#cite_note-36">&#91;36&#93;</a></sup> offers XSLT 3.0 processing in the browser.</li>
+<li><a href="/wiki/Xalan" class="mw-redirect" title="Xalan">Xalan</a> is an open source  XSLT 1.0 processor from the <a href="/wiki/Apache_Software_Foundation" class="mw-redirect" title="Apache Software Foundation">Apache Software Foundation</a> available for Java and C++. A variant of the Xalan processor is included as the default XSLT processor in the standard Java distribution from Oracle.</li>
+<li>Web browsers: Safari, Chrome, Firefox, Opera and Internet Explorer all support XSLT 1.0 (only). Browsers can perform on-the-fly transformations of XML files and display the transformation output in the browser window. This is done either by embedding the XSL in the XML document or by referencing a file containing XSL instructions from the XML document. The latter may not work with Chrome on files from local filesystem because of its security model.<sup id="cite_ref-37" class="reference"><a href="#cite_note-37">&#91;37&#93;</a></sup></li></ul>
+<h3><span class="mw-headline" id="Performance">Performance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=10" title="Edit section: Performance">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Most early XSLT processors were interpreters.  More recently, code generation is increasingly common, using portable intermediate languages (such as <a href="/wiki/Java_bytecode" title="Java bytecode">Java bytecode</a> or .NET <a href="/wiki/Common_Intermediate_Language" title="Common Intermediate Language">Common Intermediate Language</a>) as the target. However, even the interpretive products generally offer separate analysis and execution phases, allowing an optimized expression tree to be created in memory and reused to perform multiple transformations. This gives substantial performance benefits in online publishing applications, where the same transformation is applied many times per second to different source documents.<sup id="cite_ref-38" class="reference"><a href="#cite_note-38">&#91;38&#93;</a></sup> This separation is reflected in the design of XSLT processing APIs (such as <a href="/wiki/Java_API_for_XML_Processing" title="Java API for XML Processing">JAXP</a>).
+</p><p>Early XSLT processors had very few optimizations.  Stylesheet documents were read into <a href="/wiki/Document_Object_Model" title="Document Object Model">Document Object Models</a> and the processor would act on them directly. <a href="/wiki/XPath" title="XPath">XPath</a> engines were also not optimized. Increasingly, however, XSLT processors use optimization techniques found in functional programming languages and database query languages, such as static rewriting of an expression tree (e.g., to move calculations out of loops), and lazy pipelined evaluation to reduce the memory footprint of intermediate results (and allow "early exit" when the processor can evaluate an expression such as <code>following-sibling::*[1]</code> without a complete evaluation of all subexpressions). Many processors also use tree representations that are significantly more efficient (in both space and time)<sup id="cite_ref-39" class="reference"><a href="#cite_note-39">&#91;39&#93;</a></sup> than general-purpose DOM implementations.
+</p><p>In June 2014, Debbie Lockett and <a href="/wiki/Michael_Howard_Kay" title="Michael Howard Kay">Michael Kay</a> introduced an open-source benchmarking framework for XSLT processors called XT-Speedo.<sup id="cite_ref-40" class="reference"><a href="#cite_note-40">&#91;40&#93;</a></sup>
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=11" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a href="/wiki/XSLT_elements" title="XSLT elements">XSLT elements</a> – a list of some commonly used XSLT structures.</li>
+<li><a href="/wiki/XSLT/Muenchian_grouping" title="XSLT/Muenchian grouping">Muenchian grouping</a> – a dialect differential between XSLT1 and XSLT2+.</li>
+<li><a href="/wiki/Extensible_Stylesheet_Language" class="mw-redirect" title="Extensible Stylesheet Language">eXtensible Stylesheet Language</a> – a family of languages of which XSLT is a member</li>
+<li><a href="/wiki/XQuery#XQuery_and_XSLT_compared" title="XQuery">XQuery and XSLT compared</a></li>
+<li><a href="/wiki/XSL_Formatting_Objects" title="XSL Formatting Objects">XSL formatting objects</a> or <i>XSL-FO</i> – An XML-based language for documents, usually generated by transforming source documents with XSLT, consisting of objects used to create formatted output</li>
+<li><a href="/wiki/Identity_transform" title="Identity transform">Identity transform</a> – a starting point for filter chains that add or remove data elements from XML trees in a transformation pipeline</li>
+<li><a href="/wiki/Apache_Cocoon" title="Apache Cocoon">Apache Cocoon</a> – a <a href="/wiki/Java_(programming_language)" title="Java (programming language)">Java</a>-based framework for processing data with XSLT and other transformers.</li></ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=12" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Transformation-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Transformation_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Transformation_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/standards/xml/transformation">"Transformation"</a>. 2012-09-19.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Transformation&amp;rft.date=2012-09-19&amp;rft_id=http%3A%2F%2Fwww.w3.org%2Fstandards%2Fxml%2Ftransformation&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><style data-mw-deduplicate="TemplateStyles:r935243608">.mw-parser-output cite.citation{font-style:inherit}.mw-parser-output .citation q{quotes:"\"""\"""'""'"}.mw-parser-output .id-lock-free a,.mw-parser-output .citation .cs1-lock-free a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lock-green.svg/9px-Lock-green.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-limited a,.mw-parser-output .id-lock-registration a,.mw-parser-output .citation .cs1-lock-limited a,.mw-parser-output .citation .cs1-lock-registration a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Lock-gray-alt-2.svg/9px-Lock-gray-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .id-lock-subscription a,.mw-parser-output .citation .cs1-lock-subscription a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Lock-red-alt-2.svg/9px-Lock-red-alt-2.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration{color:#555}.mw-parser-output .cs1-subscription span,.mw-parser-output .cs1-registration span{border-bottom:1px dotted;cursor:help}.mw-parser-output .cs1-ws-icon a{background:url("//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png")no-repeat;background-position:right .1em center}.mw-parser-output code.cs1-code{color:inherit;background:inherit;border:inherit;padding:inherit}.mw-parser-output .cs1-hidden-error{display:none;font-size:100%}.mw-parser-output .cs1-visible-error{font-size:100%}.mw-parser-output .cs1-maint{display:none;color:#33aa33;margin-left:0.3em}.mw-parser-output .cs1-subscription,.mw-parser-output .cs1-registration,.mw-parser-output .cs1-format{font-size:95%}.mw-parser-output .cs1-kern-left,.mw-parser-output .cs1-kern-wl-left{padding-left:0.2em}.mw-parser-output .cs1-kern-right,.mw-parser-output .cs1-kern-wl-right{padding-right:0.2em}</style></span>
+</li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt#output">"XML Output Method"</a>. 2012-09-19.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XML+Output+Method&amp;rft.date=2012-09-19&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt%23output&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-Used_for-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-Used_for_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://www.w3.org/standards/xml/transformation#uses">"What is XSLT Used For?"</a>. 2018-02-07.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=What+is+XSLT+Used+For%3F&amp;rft.date=2018-02-07&amp;rft_id=https%3A%2F%2Fwww.w3.org%2Fstandards%2Fxml%2Ftransformation%23uses&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt#section-Introduction">"Introduction"</a>. <i>XSL Transformations (XSLT) Version 1.0  W3C Recommendation</i>. W3C. 16 November 1999<span class="reference-accessdate">. Retrieved <span class="nowrap">November 7,</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=unknown&amp;rft.jtitle=XSL+Transformations+%28XSLT%29+Version+1.0++W3C+Recommendation&amp;rft.atitle=Introduction&amp;rft.date=1999-11-16&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt%23section-Introduction&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://www.researchgate.net/publication/221568016_XSLT_Version_20_Is_Turing-Complete_A_Purely_Transformation_Based_Proof">XSLT Version 2.0 Is Turing-Complete: A Purely Transformation Based Proof</a></span>
+</li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6">^</a></b></span> <span class="reference-text"><cite class="citation web">Michael Kay. <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/library/x-xslt/">"What kind of language is XSLT?"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">July 8,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=What+kind+of+language+is+XSLT%3F&amp;rft.au=Michael+Kay&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fx-xslt%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/NOTE-XSL.html">"A Proposal for XSL"</a>. W3C<span class="reference-accessdate">. Retrieved <span class="nowrap">November 7,</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Proposal+for+XSL&amp;rft.pub=W3C&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2FNOTE-XSL.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-timelinehistory-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-timelinehistory_8-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.dblab.ntua.gr/~bikakis/XML%20and%20Semantic%20Web%20W3C%20Standards%20Timeline-History.pdf">"XML and Semantic Web W3C Standards Timeline"</a> <span class="cs1-format">(PDF)</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XML+and+Semantic+Web+W3C+Standards+Timeline&amp;rft_id=http%3A%2F%2Fwww.dblab.ntua.gr%2F~bikakis%2FXML%2520and%2520Semantic%2520Web%2520W3C%2520Standards%2520Timeline-History.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt">"XSL Transformations (XSLT)"</a>. W3.org. 1999-11-16<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSL+Transformations+%28XSLT%29&amp;rft.pub=W3.org&amp;rft.date=1999-11-16&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt11/">"XSL Transformations (XSLT) Version 1.1"</a>. W3.org. 2001-08-24<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSL+Transformations+%28XSLT%29+Version+1.1&amp;rft.pub=W3.org&amp;rft.date=2001-08-24&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt11%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xpath20/">"XML Path Language (XPath) 2.0 (Second Edition)"</a>. W3.org. 2010-12-14<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XML+Path+Language+%28XPath%29+2.0+%28Second+Edition%29&amp;rft.pub=W3.org&amp;rft.date=2010-12-14&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxpath20%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt20/">"XSL Transformations (XSLT) Version 2.0"</a>. W3.org. 2007-01-23<span class="reference-accessdate">. Retrieved <span class="nowrap">2014-07-12</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSL+Transformations+%28XSLT%29+Version+2.0&amp;rft.pub=W3.org&amp;rft.date=2007-01-23&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt20%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.dblab.ntua.gr/~bikakis/XML%20and%20Semantic%20Web%20W3C%20Standards%20Timeline-History.pdf">"XML and Semantic Web W3C Standards Timeline"</a> <span class="cs1-format">(PDF)</span>. 2012-02-04.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XML+and+Semantic+Web+W3C+Standards+Timeline&amp;rft.date=2012-02-04&amp;rft_id=http%3A%2F%2Fwww.dblab.ntua.gr%2F~bikakis%2FXML%2520and%2520Semantic%2520Web%2520W3C%2520Standards%2520Timeline-History.pdf&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-new-in-3-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-new-in-3_14-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt-30/#whats-new-in-xslt3">"What's New in XSLT 3.0?"</a>. w3<span class="reference-accessdate">. Retrieved <span class="nowrap">6 January</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=What%27s+New+in+XSLT+3.0%3F&amp;rft.pub=w3&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt-30%2F%23whats-new-in-xslt3&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15">^</a></b></span> <span class="reference-text">
+<cite class="citation web">Kay, Michael. <a rel="nofollow" class="external text" href="http://www.balisage.net/Proceedings/vol5/html/Kay01/BalisageVol5-Kay01.html">"A Streaming XSLT Processor"</a>. Balisage: The Markup Conference 2010 Proceedings<span class="reference-accessdate">. Retrieved <span class="nowrap">15 February</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=A+Streaming+XSLT+Processor&amp;rft.pub=Balisage%3A+The+Markup+Conference+2010+Proceedings&amp;rft.aulast=Kay&amp;rft.aufirst=Michael&amp;rft_id=http%3A%2F%2Fwww.balisage.net%2FProceedings%2Fvol5%2Fhtml%2FKay01%2FBalisageVol5-Kay01.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.developer.com/xml/article.php/3357231#Coding%20styles">"Discover the Wonders of XSLT: XSLT Quirks"</a>. <q>XSLT is a very specialized language with a distinct declarative flavor.</q></cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Discover+the+Wonders+of+XSLT%3A+XSLT+Quirks&amp;rft_id=http%3A%2F%2Fwww.developer.com%2Fxml%2Farticle.php%2F3357231%23Coding%2520styles&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-IBM-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-IBM_17-0">^</a></b></span> <span class="reference-text"><cite class="citation web">Kay, Michael. <a rel="nofollow" class="external text" href="http://www.ibm.com/developerworks/library/x-xslt/">"What kind of language is XSLT?"</a>. IBM<span class="reference-accessdate">. Retrieved <span class="nowrap">13 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=What+kind+of+language+is+XSLT%3F&amp;rft.pub=IBM&amp;rft.aulast=Kay&amp;rft.aufirst=Michael&amp;rft_id=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Flibrary%2Fx-xslt%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/2007/REC-xslt20-20070123/#media-type-registration">"XSL Transformations (XSLT) Version 2.0"</a>. W3C<span class="reference-accessdate">. Retrieved <span class="nowrap">19 October</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSL+Transformations+%28XSLT%29+Version+2.0&amp;rft.pub=W3C&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2F2007%2FREC-xslt20-20070123%2F%23media-type-registration&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.iana.org/assignments/media-types/application/index.html">"Application Media Types"</a>. IANA<span class="reference-accessdate">. Retrieved <span class="nowrap">19 October</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Application+Media+Types&amp;rft.pub=IANA&amp;rft_id=http%3A%2F%2Fwww.iana.org%2Fassignments%2Fmedia-types%2Fapplication%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms757857(v=vs.85).aspx">"XSLT Requirements for Viewing XML in a Browser"</a>. Microsoft<span class="reference-accessdate">. Retrieved <span class="nowrap">19 October</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSLT+Requirements+for+Viewing+XML+in+a+Browser&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fwindows%2Fdesktop%2Fms757857%28v%3Dvs.85%29.aspx&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation book">Kay, Michael (2008). <i>XSLT 2.0 and XPath 2.0 Programmer's Reference</i>. Wiley. p.&#160;100. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-470-19274-0" title="Special:BookSources/978-0-470-19274-0"><bdi>978-0-470-19274-0</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=XSLT+2.0+and+XPath+2.0+Programmer%27s+Reference&amp;rft.pages=100&amp;rft.pub=Wiley&amp;rft.date=2008&amp;rft.isbn=978-0-470-19274-0&amp;rft.aulast=Kay&amp;rft.aufirst=Michael&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-w3cxslt-22"><span class="mw-cite-backlink">^ <a href="#cite_ref-w3cxslt_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-w3cxslt_22-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt#section-Embedding-Stylesheets">"XSL Transformations (XSLT) Version 1.0: W3C Recommendation&#160;– Embedding Stylesheets"</a>. W3C. 16 November 1999<span class="reference-accessdate">. Retrieved <span class="nowrap">20 September</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XSL+Transformations+%28XSLT%29+Version+1.0%3A+W3C+Recommendation+%E2%80%93+Embedding+Stylesheets&amp;rft.pub=W3C&amp;rft.date=1999-11-16&amp;rft_id=http%3A%2F%2Fwww.w3.org%2FTR%2Fxslt%23section-Embedding-Stylesheets&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://xmlsoft.org/XSLT/index.html">"The XSLT C library for GNOME: libxslt"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+XSLT+C+library+for+GNOME%3A+libxslt&amp;rft_id=http%3A%2F%2Fxmlsoft.org%2FXSLT%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://xmlsoft.org/XSLT/xsltproc2.html">"The XSLT C library for GNOME: The xsltproc tool"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+XSLT+C+library+for+GNOME%3A+The+xsltproc+tool&amp;rft_id=http%3A%2F%2Fxmlsoft.org%2FXSLT%2Fxsltproc2.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/xsltproc.1.html">"xsltproc man page"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=xsltproc+man+page&amp;rft_id=https%3A%2F%2Fdeveloper.apple.com%2Flibrary%2Fmac%2F%23documentation%2FDarwin%2FReference%2FManPages%2Fman1%2Fxsltproc.1.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.cygwin.com/ml/cygwin-announce/2002/msg00018.html">"New package: libxslt"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=New+package%3A+libxslt&amp;rft_id=http%3A%2F%2Fwww.cygwin.com%2Fml%2Fcygwin-announce%2F2002%2Fmsg00018.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://webkit.org/projects/xslt/index.html">"The WebKit Open Source Project - XSLT"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2009-10-25</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+WebKit+Open+Source+Project+-+XSLT&amp;rft_id=http%3A%2F%2Fwebkit.org%2Fprojects%2Fxslt%2Findex.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://xmlsoft.org/python.html">"The XML C parser and toolkit of Gnome: Python and bindings"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=The+XML+C+parser+and+toolkit+of+Gnome%3A+Python+and+bindings&amp;rft_id=http%3A%2F%2Fxmlsoft.org%2Fpython.html&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://metacpan.org/module/XML::LibXSLT">"XML::LibXSLT - Interface to the GNOME libxslt library"</a>. CPAN<span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=XML%3A%3ALibXSLT+-+Interface+to+the+GNOME+libxslt+library&amp;rft.pub=CPAN&amp;rft_id=https%3A%2F%2Fmetacpan.org%2Fmodule%2FXML%3A%3ALibXSLT&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://rubygems.org/gems/libxslt-ruby">"libxslt-ruby"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=libxslt-ruby&amp;rft_id=http%3A%2F%2Frubygems.org%2Fgems%2Flibxslt-ruby&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.php.net/manual/en/book.libxml.php">"libxml"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=libxml&amp;rft_id=http%3A%2F%2Fwww.php.net%2Fmanual%2Fen%2Fbook.libxml.php&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://code.google.com/p/cl-libxml2/">"cl-libxml2 High-level wrapper around libxml2 and libxslt libraries"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=cl-libxml2+High-level+wrapper+around+libxml2+and+libxslt+libraries&amp;rft_id=https%3A%2F%2Fcode.google.com%2Fp%2Fcl-libxml2%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://tclxml.sourceforge.net/">"TclXML"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">21 May</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=TclXML&amp;rft_id=http%3A%2F%2Ftclxml.sourceforge.net%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-34"><span class="mw-cite-backlink"><b><a href="#cite_ref-34">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://libxmlplusplus.sourceforge.net/">"libxml++"</a>. sourceforge.net<span class="reference-accessdate">. Retrieved <span class="nowrap">23 November</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=libxml%2B%2B&amp;rft.pub=sourceforge.net&amp;rft_id=http%3A%2F%2Flibxmlplusplus.sourceforge.net%2F&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-35"><span class="mw-cite-backlink"><b><a href="#cite_ref-35">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.microsoft.com/en-us/download/details.aspx?id=21714">"Command Line Transformation Utility (msxsl.exe)"</a>. Microsoft<span class="reference-accessdate">. Retrieved <span class="nowrap">22 October</span> 2012</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Command+Line+Transformation+Utility+%28msxsl.exe%29&amp;rft.pub=Microsoft&amp;rft_id=http%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fdownload%2Fdetails.aspx%3Fid%3D21714&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-36"><span class="mw-cite-backlink"><b><a href="#cite_ref-36">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.saxonica.com/saxon-js/index.xml">"Saxon-JS"</a>. Saxonica<span class="reference-accessdate">. Retrieved <span class="nowrap">6 September</span> 2018</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Saxon-JS&amp;rft.pub=Saxonica&amp;rft_id=http%3A%2F%2Fwww.saxonica.com%2Fsaxon-js%2Findex.xml&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-37"><span class="mw-cite-backlink"><b><a href="#cite_ref-37">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="https://bugs.chromium.org/p/chromium/issues/detail?id=58151">"Issue 58151: Fails to load xml file on local file system using XMLHttpRequest"</a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=unknown&amp;rft.btitle=Issue+58151%3A+Fails+to+load+xml+file+on+local+file+system+using+XMLHttpRequest&amp;rft_id=https%3A%2F%2Fbugs.chromium.org%2Fp%2Fchromium%2Fissues%2Fdetail%3Fid%3D58151&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-38"><span class="mw-cite-backlink"><b><a href="#cite_ref-38">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www-128.ibm.com/developerworks/xml/library/x-xslt2/">Saxon: Anatomy of an XSLT processor</a> - Article describing implementation &amp; optimization details of a popular XSLT processor.</span>
+</li>
+<li id="cite_note-39"><span class="mw-cite-backlink"><b><a href="#cite_ref-39">^</a></b></span> <span class="reference-text"><cite class="citation journal">Lumley, John; Kay, Michael (June 2015). <a rel="nofollow" class="external text" href="http://xmllondon.com/2015/presentations/lumley">"Improving Pattern Matching Performance in XSLT"</a>. <i>XML London 2015</i>: 9–25. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.14337%2FXMLLondon15.Lumley01">10.14337/XMLLondon15.Lumley01</a></span>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-9926471-2-4" title="Special:BookSources/978-0-9926471-2-4"><bdi>978-0-9926471-2-4</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=XML+London+2015&amp;rft.atitle=Improving+Pattern+Matching+Performance+in+XSLT&amp;rft.pages=9-25&amp;rft.date=2015-06&amp;rft_id=info%3Adoi%2F10.14337%2FXMLLondon15.Lumley01&amp;rft.isbn=978-0-9926471-2-4&amp;rft.aulast=Lumley&amp;rft.aufirst=John&amp;rft.au=Kay%2C+Michael&amp;rft_id=http%3A%2F%2Fxmllondon.com%2F2015%2Fpresentations%2Flumley&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+<li id="cite_note-40"><span class="mw-cite-backlink"><b><a href="#cite_ref-40">^</a></b></span> <span class="reference-text"><cite class="citation journal">Kay, Michael; Lockett, Debbie (June 2014). <a rel="nofollow" class="external text" href="http://xmllondon.com/2014/presentations/kay">"Benchmarking XSLT Performance"</a>. <i>XML London 2014</i>: 10–23. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<span class="cs1-lock-free" title="Freely accessible"><a rel="nofollow" class="external text" href="https://doi.org/10.14337%2FXMLLondon14.Kay01">10.14337/XMLLondon14.Kay01</a></span>. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-9926471-1-7" title="Special:BookSources/978-0-9926471-1-7"><bdi>978-0-9926471-1-7</bdi></a>.</cite><span title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.jtitle=XML+London+2014&amp;rft.atitle=Benchmarking+XSLT+Performance&amp;rft.pages=10-23&amp;rft.date=2014-06&amp;rft_id=info%3Adoi%2F10.14337%2FXMLLondon14.Kay01&amp;rft.isbn=978-0-9926471-1-7&amp;rft.aulast=Kay&amp;rft.aufirst=Michael&amp;rft.au=Lockett%2C+Debbie&amp;rft_id=http%3A%2F%2Fxmllondon.com%2F2014%2Fpresentations%2Fkay&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AXSLT" class="Z3988"></span><link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/></span>
+</li>
+</ol></div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=13" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><i>XSLT</i> by Doug Tidwell, published by O’Reilly (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-596-00053-7" title="Special:BookSources/0-596-00053-7">0-596-00053-7</a>)</li>
+<li><i>XSLT Cookbook</i> by Sal Mangano, published by O’Reilly (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-596-00974-7" title="Special:BookSources/0-596-00974-7">0-596-00974-7</a>)</li>
+<li><i>XSLT 2.0 Programmer's Reference</i> by <a href="/wiki/Michael_Howard_Kay" title="Michael Howard Kay">Michael Kay</a> (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-764-56909-0" title="Special:BookSources/0-764-56909-0">0-764-56909-0</a>)</li>
+<li><i>XSLT 2.0 and XPath 2.0 Programmer's Reference</i> by Michael Kay (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-470-19274-0" title="Special:BookSources/978-0-470-19274-0">978-0-470-19274-0</a>)</li>
+<li><i>XSLT 2.0 Web Development</i> by Dmitry Kirsanov (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-140635-3" title="Special:BookSources/0-13-140635-3">0-13-140635-3</a>)</li>
+<li><i>XSL Companion, 2nd Edition</i> by Neil Bradley, published by Addison-Wesley (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-201-77083-0" title="Special:BookSources/0-201-77083-0">0-201-77083-0</a>)</li>
+<li><i>XSLT and XPath on the Edge (Unlimited Edition)</i> by <a href="/wiki/Jeni_Tennison" title="Jeni Tennison">Jeni Tennison</a>, published by Hungry Minds Inc, U.S. (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-7645-4776-3" title="Special:BookSources/0-7645-4776-3">0-7645-4776-3</a>)</li>
+<li><i>XSLT &amp; XPath, A Guide to XML Transformations</i> by John Robert Gardner and Zarella Rendon, published by Prentice-Hall (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-13-040446-2" title="Special:BookSources/0-13-040446-2">0-13-040446-2</a>)</li>
+<li><i>XSL-FO</i> by Dave Pawson, published by O'Reilly (<link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r935243608"/><a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/978-0-596-00355-5" title="Special:BookSources/978-0-596-00355-5">978-0-596-00355-5</a>)</li></ul>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=XSLT&amp;action=edit&amp;section=14" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/40px-Wikibooks-logo-en-noslogan.svg.png" decoding="async" width="40" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/60px-Wikibooks-logo-en-noslogan.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wikibooks-logo-en-noslogan.svg/80px-Wikibooks-logo-en-noslogan.svg.png 2x" data-file-width="400" data-file-height="400" /></td>
+<td class="mbox-text plainlist">Wikibooks has a book on the topic of: <i><b><a href="https://en.wikibooks.org/wiki/XML_-_Managing_Data_Exchange/XSLT_and_Style_Sheets" class="extiw" title="wikibooks:XML - Managing Data Exchange/XSLT and Style Sheets">XML - Managing Data Exchange/XSLT and Style Sheets</a></b></i></td></tr>
+</tbody></table>
+<table role="presentation" class="mbox-small plainlinks sistersitebox" style="background-color:#f9f9f9;border:1px solid #aaa;color:#000">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" decoding="async" width="30" height="40" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="https://commons.wikimedia.org/wiki/Category:Extensible_Stylesheet_Language_Transformations" class="extiw" title="commons:Category:Extensible Stylesheet Language Transformations"><span style="">Extensible Stylesheet Language Transformations</span></a></b></i>.</td></tr>
+</tbody></table>
+<dl><dt>Documentation</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="https://www.w3.org/TR/xslt-10/">XSLT 1.0 W3C Recommendation</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt20/">XSLT 2.0 W3C Recommendation</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.w3.org/TR/xslt-30/">XSLT 3.0 W3C Recommendation</a></li>
+<li><a rel="nofollow" class="external text" href="https://developer.mozilla.org/en/XSLT">XSLT - MDC Docs</a> by <a rel="nofollow" class="external text" href="https://developer.mozilla.org">Mozilla Developer Network</a></li>
+<li><a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms256069.aspx">XSLT Reference (MSDN)</a></li>
+<li><a rel="nofollow" class="external text" href="http://saxon.sourceforge.net/saxon7.5/xsl-elements.html">XSLT Elements (Saxon)</a></li>
+<li><a rel="nofollow" class="external text" href="http://data2type.de/en/xml-xslt-xslfo/xslt/">XSLT introduction and reference</a></li></ul>
+<dl><dt>XSLT code libraries</dt></dl>
+<ul><li><a rel="nofollow" class="external text" href="http://www.exslt.org/">EXSLT</a> is a widespread community initiative to provide extensions to XSLT.</li>
+<li><a rel="nofollow" class="external text" href="http://fxsl.sf.net/">FXSL</a> is a library implementing support for <a href="/wiki/Higher-order_function" title="Higher-order function">Higher-order functions</a> in XSLT. FXSL is written in XSLT itself.</li>
+<li><a rel="nofollow" class="external text" href="http://xsltsl.sourceforge.net/">The XSLT Standard Library</a> xsltsl, provides the XSLT developer with a set of XSLT templates for commonly used functions. These are implemented purely in XSLT, that is they do not use any extensions. xsltsl is a SourceForge project.</li>
+<li><a rel="nofollow" class="external text" href="http://kernowforsaxon.sf.net/">Kernow</a> A GUI for Saxon that provides a point and click interface for running transforms.</li>
+<li><a rel="nofollow" class="external text" href="http://johannburkard.de/software/xsltjs/">xslt.js&#160;– Transform XML with XSLT</a> JavaScript library that transforms XML with XSLT in the browser.</li></ul>
+<div role="navigation" class="navbox" aria-labelledby="XSL" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:XSL" title="Template:XSL"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:XSL" title="Template talk:XSL"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:XSL&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="XSL" style="font-size:114%;margin:0 4em"><a href="/wiki/XSL" title="XSL">XSL</a></div></th></tr><tr><td colspan="2" class="navbox-list navbox-odd hlist" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a class="mw-selflink selflink">XSLT</a>
+<ul><li><a href="/wiki/XSLT_elements" title="XSLT elements">elements</a></li></ul></li>
+<li><a href="/wiki/XSL_Formatting_Objects" title="XSL Formatting Objects">XSL-FO</a></li>
+<li><a href="/wiki/XPath" title="XPath">XPath</a>
+<ul><li><a href="/wiki/XPath_1.0" class="mw-redirect" title="XPath 1.0">1.0</a></li>
+<li><a href="/wiki/XPath_2.0" title="XPath 2.0">2.0</a></li></ul></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox" aria-labelledby="World_Wide_Web_Consortium_(W3C)" style="padding:3px"><table class="nowraplinks mw-collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th scope="col" class="navbox-title" colspan="2"><div class="plainlinks hlist navbar mini"><ul><li class="nv-view"><a href="/wiki/Template:W3C_standards" title="Template:W3C standards"><abbr title="View this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">v</abbr></a></li><li class="nv-talk"><a href="/wiki/Template_talk:W3C_standards" title="Template talk:W3C standards"><abbr title="Discuss this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">t</abbr></a></li><li class="nv-edit"><a class="external text" href="https://en.wikipedia.org/w/index.php?title=Template:W3C_standards&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none; padding:0;">e</abbr></a></li></ul></div><div id="World_Wide_Web_Consortium_(W3C)" style="font-size:114%;margin:0 4em"><a href="/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">World Wide Web Consortium (W3C)</a></div></th></tr><tr><th scope="row" class="navbox-group" style="width:1%">Products and<br />standards</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/World_Wide_Web_Consortium#Specification_maturation" title="World Wide Web Consortium">Recommendations</a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/ActivityPub" title="ActivityPub">ActivityPub</a></li>
+<li><a href="/wiki/WAI-ARIA" title="WAI-ARIA">ARIA</a></li>
+<li><a href="/wiki/Canonical_XML" title="Canonical XML">Canonical XML</a></li>
+<li><a href="/wiki/Compound_Document_Format" title="Compound Document Format">CDF</a></li>
+<li><a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="/wiki/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wiki/W3C_Geolocation_API" title="W3C Geolocation API">Geolocation API</a></li>
+<li><a href="/wiki/HTML" title="HTML">HTML</a> (<a href="/wiki/HTML5" title="HTML5">HTML5</a>)</li>
+<li><a href="/wiki/Internationalization_Tag_Set" title="Internationalization Tag Set">ITS</a></li>
+<li><a href="/wiki/JSON-LD" title="JSON-LD">JSON-LD</a></li>
+<li><a href="/wiki/Linked_Data_Notifications" title="Linked Data Notifications">Linked Data Notifications</a></li>
+<li><a href="/wiki/MathML" title="MathML">MathML</a></li>
+<li><a href="/wiki/Micropub_(protocol)" title="Micropub (protocol)">Micropub</a></li>
+<li><a href="/wiki/Web_Ontology_Language" title="Web Ontology Language">OWL</a></li>
+<li><a href="/wiki/Pronunciation_Lexicon_Specification" title="Pronunciation Lexicon Specification">PLS</a></li>
+<li><a href="/wiki/Resource_Description_Framework" title="Resource Description Framework">RDF</a></li>
+<li><a href="/wiki/RDF_Schema" title="RDF Schema">RDF Schema</a></li>
+<li><a href="/wiki/Semantic_Interpretation_for_Speech_Recognition" title="Semantic Interpretation for Speech Recognition">SISR</a></li>
+<li><a href="/wiki/Simple_Knowledge_Organization_System" title="Simple Knowledge Organization System">SKOS</a></li>
+<li><a href="/wiki/Synchronized_Multimedia_Integration_Language" title="Synchronized Multimedia Integration Language">SMIL</a></li>
+<li><a href="/wiki/SOAP" title="SOAP">SOAP</a></li>
+<li><a href="/wiki/Speech_Recognition_Grammar_Specification" title="Speech Recognition Grammar Specification">SRGS</a></li>
+<li><a href="/wiki/Subresource_Integrity" title="Subresource Integrity">SRI</a></li>
+<li><a href="/wiki/Speech_Synthesis_Markup_Language" title="Speech Synthesis Markup Language">SSML</a></li>
+<li><a href="/wiki/Scalable_Vector_Graphics" title="Scalable Vector Graphics">SVG</a></li>
+<li><a href="/wiki/SCXML" title="SCXML">SCXML</a></li>
+<li><a href="/wiki/SHACL" title="SHACL">SHACL</a></li>
+<li><a href="/wiki/SPARQL" title="SPARQL">SPARQL</a></li>
+<li><a href="/wiki/Timed_text" title="Timed text">Timed text</a></li>
+<li><a href="/wiki/VoiceXML" title="VoiceXML">VoiceXML</a></li>
+<li><a href="/wiki/Web_storage" title="Web storage">Web storage</a></li>
+<li><a href="/wiki/Web_Services_Description_Language" title="Web Services Description Language">WSDL</a></li>
+<li><a href="/wiki/Webmention" title="Webmention">Webmention</a></li>
+<li><a href="/wiki/WebSub" title="WebSub">WebSub</a></li>
+<li><a href="/wiki/XForms" title="XForms">XForms</a></li>
+<li><a href="/wiki/XHTML" title="XHTML">XHTML</a></li>
+<li><a href="/wiki/XHTML%2BRDFa" title="XHTML+RDFa">XHTML+RDFa</a></li>
+<li><a href="/wiki/XInclude" title="XInclude">XInclude</a></li>
+<li><a href="/wiki/XLink" title="XLink">XLink</a></li>
+<li><a href="/wiki/XML" title="XML">XML</a></li>
+<li><a href="/wiki/XML_Base" title="XML Base">XML Base</a></li>
+<li><a href="/wiki/XML_Encryption" title="XML Encryption">XML Encryption</a></li>
+<li><a href="/wiki/XML_Events" title="XML Events">XML Events</a></li>
+<li><a href="/wiki/XML_Information_Set" title="XML Information Set">XML Information Set</a></li>
+<li><a href="/wiki/XML_namespace" title="XML namespace">XML namespace</a></li>
+<li><a href="/wiki/XML_Schema_(W3C)" title="XML Schema (W3C)">XML Schema</a></li>
+<li><a href="/wiki/XML_Signature" title="XML Signature">XML Signature</a></li>
+<li><a href="/wiki/XML-binary_Optimized_Packaging" title="XML-binary Optimized Packaging">XOP</a></li>
+<li><a href="/wiki/XPath" title="XPath">XPath</a></li>
+<li><a href="/wiki/XPath_2.0" title="XPath 2.0">XPath 2.0</a></li>
+<li><a href="/wiki/XPointer" title="XPointer">XPointer</a></li>
+<li><a href="/wiki/XProc" title="XProc">XProc</a></li>
+<li><a href="/wiki/XQuery" title="XQuery">XQuery</a></li>
+<li><a href="/wiki/XSL" title="XSL">XSL</a></li>
+<li><a href="/wiki/XSL_Formatting_Objects" title="XSL Formatting Objects">XSL-FO</a></li>
+<li><a class="mw-selflink selflink">XSLT</a>&#160;(<a href="/wiki/XSLT_elements" title="XSLT elements">elements</a>)</li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Notes</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/IndieAuth" title="IndieAuth">IndieAuth</a></li>
+<li><a href="/w/index.php?title=JF2&amp;action=edit&amp;redlink=1" class="new" title="JF2 (page does not exist)">JF2</a></li>
+<li><a href="/w/index.php?title=Post_Type_Discovery&amp;action=edit&amp;redlink=1" class="new" title="Post Type Discovery (page does not exist)">Post Type Discovery</a></li>
+<li><a href="/wiki/XAdES" title="XAdES">XAdES</a></li>
+<li><a href="/wiki/XHTML%2BSMIL" title="XHTML+SMIL">XHTML+SMIL</a></li>
+<li><a href="/wiki/Extensible_User_Interface_Protocol" title="Extensible User Interface Protocol">XUP</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Working drafts</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Call_Control_eXtensible_Markup_Language" title="Call Control eXtensible Markup Language">CCXML</a></li>
+<li><a href="/wiki/CURIE" title="CURIE">CURIE</a></li>
+<li><a href="/wiki/Encrypted_Media_Extensions" title="Encrypted Media Extensions">EME</a></li>
+<li><a href="/wiki/InkML" title="InkML">InkML</a></li>
+<li><a href="/wiki/Media_Source_Extensions" title="Media Source Extensions">MSE</a></li>
+<li><a href="/wiki/Rule_Interchange_Format" title="Rule Interchange Format">RIF</a></li>
+<li><a href="/wiki/SMIL_Timesheets" title="SMIL Timesheets">SMIL Timesheets</a></li>
+<li><a href="/wiki/SXBL" title="SXBL">sXBL</a></li>
+<li><a href="/wiki/Extensible_Forms_Description_Language" title="Extensible Forms Description Language">XFDL</a></li>
+<li><a href="/wiki/XFrames" title="XFrames">XFrames</a></li>
+<li><a href="/wiki/XBL" title="XBL">XBL</a></li>
+<li><a href="/wiki/XMLHttpRequest" title="XMLHttpRequest">XMLHttpRequest</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Guidelines</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Web_Content_Accessibility_Guidelines" title="Web Content Accessibility Guidelines">Web Content Accessibility Guidelines</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Initiative</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/W3C_MMI" title="W3C MMI">Multimodal Interaction Activity (MMI)</a></li>
+<li><a href="/wiki/W3C_Markup_Validation_Service" title="W3C Markup Validation Service">Markup Validation Service</a></li>
+<li><a href="/wiki/Web_Accessibility_Initiative" title="Web Accessibility Initiative">Web Accessibility Initiative</a></li>
+<li><a href="/wiki/WebPlatform" class="mw-redirect" title="WebPlatform">WebPlatform</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Deprecated</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/C-HTML" class="mw-redirect" title="C-HTML">C-HTML</a></li>
+<li><a href="/wiki/Handheld_Device_Markup_Language" title="Handheld Device Markup Language">HDML</a></li>
+<li><a href="/wiki/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JSSS</a></li>
+<li><a href="/wiki/Precision_Graphics_Markup_Language" title="Precision Graphics Markup Language">PGML</a></li>
+<li><a href="/wiki/Vector_Markup_Language" title="Vector Markup Language">VML</a></li>
+<li><a href="/wiki/XHTML%2BMathML%2BSVG" title="XHTML+MathML+SVG">XHTML+MathML+SVG</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Obsoleted</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/P3P" title="P3P">P3P</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Organizations</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-even" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/w/index.php?title=Advisory_Committee_(W3C)&amp;action=edit&amp;redlink=1" class="new" title="Advisory Committee (W3C) (page does not exist)">Advisory Committee (AC)</a></li>
+<li><a href="/wiki/World_Wide_Web_Foundation" title="World Wide Web Foundation">World Wide Web Foundation</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Elected groups</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/w/index.php?title=Advisory_Board_(W3C)&amp;action=edit&amp;redlink=1" class="new" title="Advisory Board (W3C) (page does not exist)">Advisory Board (AB)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Working groups</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CSS_Working_Group" title="CSS Working Group">CSS</a></li>
+<li><a href="/w/index.php?title=Geolocation_Working_Group&amp;action=edit&amp;redlink=1" class="new" title="Geolocation Working Group (page does not exist)">Geolocation</a></li>
+<li><a href="/w/index.php?title=Social_Web_Working_Group&amp;action=edit&amp;redlink=1" class="new" title="Social Web Working Group (page does not exist)">Social Web</a></li>
+<li><a href="/wiki/SVG_Working_Group" title="SVG Working Group">SVG</a></li>
+<li><a href="/wiki/WHATWG" title="WHATWG">Web Hypertext Application Technology (WHATWG)</a></li>
+<li><a href="/w/index.php?title=Web_Platform_Working_Group&amp;action=edit&amp;redlink=1" class="new" title="Web Platform Working Group (page does not exist)">Web Platform</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Community groups</th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/w/index.php?title=Web_Incubator_Community_Group&amp;action=edit&amp;redlink=1" class="new" title="Web Incubator Community Group (page does not exist)">Web Incubator Community Group (WICG)</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Closed groups</th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/W3C_Device_Description_Working_Group" title="W3C Device Description Working Group">Device Description (DDWG)</a></li>
+<li><a href="/wiki/HTML_Working_Group" title="HTML Working Group">HTML</a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Software</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em"></div><table class="nowraplinks navbox-subgroup" style="border-spacing:0"><tbody><tr><td colspan="2" class="navbox-list navbox-odd" style="width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/CERN_httpd" title="CERN httpd">CERN httpd</a></li>
+<li><a href="/wiki/Libwww" title="Libwww">Libwww</a></li></ul>
+</div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Web_browser" title="Web browser">Browsers</a></th><td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/Line_Mode_Browser" title="Line Mode Browser">Line Mode <span style="font-size:90%;">(1990–)</span></a></li>
+<li><a href="/wiki/Arena_(web_browser)" title="Arena (web browser)">Arena <span style="font-size:90%;">(1993–98)</span></a></li>
+<li><a href="/wiki/Agora_(web_browser)" title="Agora (web browser)">Agora <span style="font-size:90%;">(1994–97)</span></a></li>
+<li><a href="/wiki/Argo_(web_browser)" title="Argo (web browser)">Argo <span style="font-size:90%;">(1994–97)</span></a></li>
+<li><a href="/wiki/Amaya_(web_editor)" title="Amaya (web editor)">Amaya <span style="font-size:90%;">(browser/editor, 1996–2012)</span></a></li></ul>
+</div></td></tr></tbody></table><div></div></td></tr><tr><th scope="row" class="navbox-group" style="width:1%">Conferences</th><td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><a href="/wiki/International_World_Wide_Web_Conference" class="mw-redirect" title="International World Wide Web Conference">International World Wide Web Conference (IW3C)</a>
+<ul><li><a href="/wiki/International_World_Wide_Web_Conferences_Steering_Committee" class="mw-redirect" title="International World Wide Web Conferences Steering Committee">Steering Committee (IW3C2)</a></li>
+<li><a href="/wiki/First_International_Conference_on_the_World-Wide_Web" title="First International Conference on the World-Wide Web">First conference ("WWW1", 1994)</a></li></ul></li></ul>
+</div></td></tr></tbody></table></div>
+<div role="navigation" class="navbox authority-control" aria-labelledby="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q32110&amp;#124;Edit_this_at_Wikidata" style="padding:3px"><table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit"><tbody><tr><th id="Authority_control_frameless_&amp;#124;text-top_&amp;#124;10px_&amp;#124;alt=Edit_this_at_Wikidata_&amp;#124;link=https&amp;#58;//www.wikidata.org/wiki/Q32110&amp;#124;Edit_this_at_Wikidata" scope="row" class="navbox-group" style="width:1%"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a> <a href="https://www.wikidata.org/wiki/Q32110" title="Edit this at Wikidata"><img alt="Edit this at Wikidata" src="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/10px-OOjs_UI_icon_edit-ltr-progressive.svg.png" decoding="async" width="10" height="10" style="vertical-align: text-top" srcset="//upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/15px-OOjs_UI_icon_edit-ltr-progressive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/8/8a/OOjs_UI_icon_edit-ltr-progressive.svg/20px-OOjs_UI_icon_edit-ltr-progressive.svg.png 2x" data-file-width="20" data-file-height="20" /></a></th><td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px"><div style="padding:0em 0.25em">
+<ul><li><span class="nowrap"><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://d-nb.info/gnd/4613222-3">4613222-3</a></span></span></li>
+<li><span class="nowrap"><a href="/wiki/Library_of_Congress_Control_Number" title="Library of Congress Control Number">LCCN</a>: <span class="uid"><a rel="nofollow" class="external text" href="https://id.loc.gov/authorities/subjects/sh2001001708">sh2001001708</a></span></span></li></ul>
+</div></td></tr></tbody></table></div>
+<!-- 
+NewPP limit report
+Parsed by mw1329
+Cached time: 20200415180410
+Cache expiry: 2592000
+Dynamic content: false
+Complications: [vary‐revision‐sha1]
+CPU time usage: 0.712 seconds
+Real time usage: 0.947 seconds
+Preprocessor visited node count: 4530/1000000
+Post‐expand include size: 119689/2097152 bytes
+Template argument size: 7031/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 6/500
+Unstrip recursion depth: 1/20
+Unstrip post‐expand size: 137852/5000000 bytes
+Number of Wikibase entities loaded: 2/400
+Lua time usage: 0.351/10.000 seconds
+Lua memory usage: 5.7 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  816.658      1 -total
+ 36.98%  301.970      1 Template:Reflist
+ 23.83%  194.625     35 Template:Cite_web
+ 13.15%  107.363      9 Template:ISBN
+ 10.37%   84.724      1 Template:Commons_category
+  9.69%   79.132      2 Template:Infobox
+  8.10%   66.113      1 Template:Infobox_programming_language
+  7.85%   64.100      1 Template:Authority_control
+  7.83%   63.913      5 Template:Navbox
+  7.20%   58.819      1 Template:Citation_needed
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:34211-0!canonical and timestamp 20200415180409 and revision id 950889676
+ -->
+</div><noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=XSLT&amp;oldid=950889676">https://en.wikipedia.org/w/index.php?title=XSLT&amp;oldid=950889676</a>"</div>
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Declarative_programming_languages" title="Category:Declarative programming languages">Declarative programming languages</a></li><li><a href="/wiki/Category:Functional_languages" title="Category:Functional languages">Functional languages</a></li><li><a href="/wiki/Category:Markup_languages" title="Category:Markup languages">Markup languages</a></li><li><a href="/wiki/Category:Transformation_languages" title="Category:Transformation languages">Transformation languages</a></li><li><a href="/wiki/Category:World_Wide_Web_Consortium_standards" title="Category:World Wide Web Consortium standards">World Wide Web Consortium standards</a></li><li><a href="/wiki/Category:XML-based_programming_languages" title="Category:XML-based programming languages">XML-based programming languages</a></li><li><a href="/wiki/Category:XML-based_standards" title="Category:XML-based standards">XML-based standards</a></li><li><a href="/wiki/Category:Programming_languages_created_in_1998" title="Category:Programming languages created in 1998">Programming languages created in 1998</a></li><li><a href="/wiki/Category:1998_software" title="Category:1998 software">1998 software</a></li><li><a href="/wiki/Category:High-level_programming_languages" title="Category:High-level programming languages">High-level programming languages</a></li><li><a href="/wiki/Category:Homoiconic_programming_languages" title="Category:Homoiconic programming languages">Homoiconic programming languages</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_July_2009" title="Category:Articles with unsourced statements from July 2009">Articles with unsourced statements from July 2009</a></li><li><a href="/wiki/Category:Commons_category_link_is_on_Wikidata" title="Category:Commons category link is on Wikidata">Commons category link is on Wikidata</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_LCCN_identifiers" title="Category:Wikipedia articles with LCCN identifiers">Wikipedia articles with LCCN identifiers</a></li><li><a href="/wiki/Category:Articles_with_example_code" title="Category:Articles with example code">Articles with example code</a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+<div id='mw-data-after-content'>
+	<div class="read-more-container"></div>
+</div>
+
+<div id="mw-navigation">
+    <h2>Navigation menu</h2>
+    <div id="mw-head">
+        
+        <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+        	<h3 id="p-personal-label">Personal tools</h3>
+        	<ul >
+        		
+        		<li id="pt-anonuserpage">Not logged in</li>
+        		<li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=XSLT" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=XSLT" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o">Log in</a></li>
+        	</ul>
+        </div>
+        <div id="left-navigation">
+            <div id="p-namespaces" role="navigation" class="vectorTabs " aria-labelledby="p-namespaces-label">
+            	<h3 id="p-namespaces-label">Namespaces</h3>
+            	<ul >
+            		<li id="ca-nstab-main" class="selected"><a href="/wiki/XSLT" title="View the content page [c]" accesskey="c">Article</a></li><li id="ca-talk"><a href="/wiki/Talk:XSLT" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t">Talk</a></li>
+            	</ul>
+            </div>
+            <div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+            	<h3 id="p-variants-label">
+            		<span>Variants</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+        </div>
+        <div id="right-navigation">
+            <div id="p-views" role="navigation" class="vectorTabs " aria-labelledby="p-views-label">
+            	<h3 id="p-views-label">Views</h3>
+            	<ul >
+            		<li id="ca-view" class="collapsible selected"><a href="/wiki/XSLT">Read</a></li><li id="ca-edit" class="collapsible"><a href="/w/index.php?title=XSLT&amp;action=edit" title="Edit this page [e]" accesskey="e">Edit</a></li><li id="ca-history" class="collapsible"><a href="/w/index.php?title=XSLT&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></li>
+            	</ul>
+            </div>
+            <div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+            	<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+            	<h3 id="p-cactions-label">
+            		<span>More</span>
+            	</h3>
+            	<ul class="menu" >
+            		
+            	</ul>
+            </div>
+            <div id="p-search" role="search">
+            	<h3 >
+            		<label for="searchInput">Search</label>
+            	</h3>
+            	<form action="/w/index.php" id="searchform">
+            		<div id="simpleSearch">
+            			<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/>
+            			<input type="hidden" value="Special:Search" name="title"/>
+            			<input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/>
+            			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>
+            		</div>
+            	</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mw-panel">
+    	<div id="p-logo" role="banner">
+    		<a  title="Visit the main page" class="mw-wiki-logo" href="/wiki/Main_Page"></a>
+    	</div>
+    	<div class="portal" role="navigation" id="p-navigation"  aria-labelledby="p-navigation-label">
+    		<h3  id="p-navigation-label">
+    			Navigation
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Wikipedia:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-interaction"  aria-labelledby="p-interaction-label">
+    		<h3  id="p-interaction-label">
+    			Interaction
+    		</h3>
+    		<div class="body">
+    			<ul><li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-tb"  aria-labelledby="p-tb-label">
+    		<h3  id="p-tb-label">
+    			Tools
+    		</h3>
+    		<div class="body">
+    			<ul><li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/XSLT" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/XSLT" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=XSLT&amp;oldid=950889676" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=XSLT&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q32110" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=XSLT&amp;id=950889676&amp;wpFormIdentifier=titleform" title="Information on how to cite this page">Cite this page</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-wikibase-otherprojects"  aria-labelledby="p-wikibase-otherprojects-label">
+    		<h3  id="p-wikibase-otherprojects-label">
+    			In other projects
+    		</h3>
+    		<div class="body">
+    			<ul><li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Extensible_Stylesheet_Language_Transformations" hreflang="en">Wikimedia Commons</a></li><li class="wb-otherproject-link wb-otherproject-wikibooks"><a href="https://en.wikibooks.org/wiki/XSLT" hreflang="en">Wikibooks</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-coll-print_export"  aria-labelledby="p-coll-print_export-label">
+    		<h3  id="p-coll-print_export-label">
+    			Print/export
+    		</h3>
+    		<div class="body">
+    			<ul><li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=XSLT">Create a book</a></li><li id="coll-download-as-rl"><a href="/w/index.php?title=Special:ElectronPdf&amp;page=XSLT&amp;action=show-download-screen">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=XSLT&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li></ul>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="portal" role="navigation" id="p-lang"  aria-labelledby="p-lang-label">
+    		<h3  id="p-lang-label">
+    			Languages
+    		</h3>
+    		<div class="body">
+    			<ul><li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%AD%D9%88%D9%8A%D9%84_%D9%84%D8%BA%D8%A9_%D8%A7%D9%84%D8%A3%D8%B3%D9%84%D9%88%D8%A8_%D8%A7%D9%84%D9%85%D9%88%D8%B3%D8%B9" title="تحويل لغة الأسلوب الموسع – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/XSLT" title="XSLT – Azerbaijani" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/XSLT" title="XSLT – Bulgarian" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Czech" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/XSLT" title="XSLT – Danish" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/XSL_Transformation" title="XSL Transformation – German" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/XSLT" title="XSLT – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D8%AA%D8%A8%D8%AF%DB%8C%D9%84%D8%A7%D8%AA_%D8%A7%DA%A9%D8%B3%E2%80%8C%D8%A7%D8%B3%E2%80%8C%D8%A7%D9%84" title="تبدیلات اکس‌اس‌ال – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="https://ga.wikipedia.org/wiki/XSLT" title="XSLT – Irish" lang="ga" hreflang="ga" class="interlanguage-link-target">Gaeilge</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/XSLT" title="XSLT – Korean" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-hr"><a href="https://hr.wikipedia.org/wiki/XSLT" title="XSLT – Croatian" lang="hr" hreflang="hr" class="interlanguage-link-target">Hrvatski</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Indonesian" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-is"><a href="https://is.wikipedia.org/wiki/XSLT" title="XSLT – Icelandic" lang="is" hreflang="is" class="interlanguage-link-target">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/XSL_Transformations" title="XSL Transformations – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-lt"><a href="https://lt.wikipedia.org/wiki/XSLT" title="XSLT – Lithuanian" lang="lt" hreflang="lt" class="interlanguage-link-target">Lietuvių</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Hungarian" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/XSLT" title="XSLT – Malay" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Extensible_Stylesheet_Language_Transformations" title="Extensible Stylesheet Language Transformations – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-ja"><a href="https://ja.wikipedia.org/wiki/XSL_Transformations" title="XSL Transformations – Japanese" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/XSLT" title="XSLT – Norwegian Bokmål" lang="nb" hreflang="nb" class="interlanguage-link-target">Norsk bokmål</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/XSL_Transformations" title="XSL Transformations – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/XSLT" title="XSLT – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/XSLT" title="XSLT – Russian" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/XSLT" title="XSLT – Simple English" lang="en-simple" hreflang="en-simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sk"><a href="https://sk.wikipedia.org/wiki/XSLT" title="XSLT – Slovak" lang="sk" hreflang="sk" class="interlanguage-link-target">Slovenčina</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/XSLT" title="XSLT – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/XSLT" title="XSLT – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/XSLT" title="XSLT – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="https://ta.wikipedia.org/wiki/%E0%AE%8E%E0%AE%95%E0%AF%8D%E0%AE%9A%E0%AF%81.%E0%AE%8E%E0%AE%9A%E0%AF%81.%E0%AE%8E%E0%AE%B2%E0%AF%8D.%E0%AE%B0%E0%AE%BF" title="எக்சு.எசு.எல்.ரி – Tamil" lang="ta" hreflang="ta" class="interlanguage-link-target">தமிழ்</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/XSLT" title="XSLT – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/XSL_Transformations" title="XSL Transformations – Ukrainian" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/XSLT" title="XSLT – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-bat-smg"><a href="https://bat-smg.wikipedia.org/wiki/XSLT" title="XSLT – Samogitian" lang="sgs" hreflang="sgs" class="interlanguage-link-target">Žemaitėška</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/XSLT" title="XSLT – Chinese" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li></ul>
+    			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q32110#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+    		</div>
+    	</div>
+    	
+    </div>
+</div>
+
+<div id="footer" role="contentinfo" >
+	<ul id="footer-info" class="">
+		<li id="footer-info-lastmod"> This page was last edited on 14 April 2020, at 11:22<span class="anonymous-show">&#160;(UTC)</span>.</li>
+		<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//foundation.wikimedia.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//foundation.wikimedia.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+	</ul>
+	<ul id="footer-places" class="">
+		<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+		<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+		<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+		<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+		<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+		<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+		<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Cookie_statement">Cookie statement</a></li>
+		<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=XSLT&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+	</ul>
+	<ul id="footer-icons" class="noprint">
+		<li id="footer-copyrightico"><a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a></li>
+		<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.712","walltime":"0.947","ppvisitednodes":{"value":4530,"limit":1000000},"postexpandincludesize":{"value":119689,"limit":2097152},"templateargumentsize":{"value":7031,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":6,"limit":500},"unstrip-depth":{"value":1,"limit":20},"unstrip-size":{"value":137852,"limit":5000000},"entityaccesscount":{"value":2,"limit":400},"timingprofile":["100.00%  816.658      1 -total"," 36.98%  301.970      1 Template:Reflist"," 23.83%  194.625     35 Template:Cite_web"," 13.15%  107.363      9 Template:ISBN"," 10.37%   84.724      1 Template:Commons_category","  9.69%   79.132      2 Template:Infobox","  8.10%   66.113      1 Template:Infobox_programming_language","  7.85%   64.100      1 Template:Authority_control","  7.83%   63.913      5 Template:Navbox","  7.20%   58.819      1 Template:Citation_needed"]},"scribunto":{"limitreport-timeusage":{"value":"0.351","limit":"10.000"},"limitreport-memusage":{"value":5977484,"limit":52428800}},"cachereport":{"origin":"mw1329","timestamp":"20200415180410","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"XSLT","url":"https:\/\/en.wikipedia.org\/wiki\/XSLT","sameAs":"http:\/\/www.wikidata.org\/entity\/Q32110","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q32110","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2002-02-25T15:43:11Z","dateModified":"2020-04-14T11:22:48Z","headline":"language for transforming XML documents"}</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":106,"wgHostname":"mw1264"});});</script></body></html>
