@@ -20,6 +20,14 @@ def perror(*args, **kwargs):
     sys.stderr.flush()
 
 
+# Article titles starting with a '.' will be stored as hidden files.
+# i.e. '.NET_Framework'. This function replaces leading '.' with '__dot__'.
+def canonicalize(filename):
+    if filename.startswith('.'):
+        return '__dot__' + filename
+    return filename
+
+
 # Read seeds from text file.
 def read_seeds():
     seeds = []
@@ -122,7 +130,7 @@ def download_article(href):
     while download_attempts <= max_downld_retries:
         try:
             url = url_prefix + href
-            filename = href.split('/')[-1] + '.html'
+            filename = canonicalize(href.split('/')[-1]) + '.html'
             print('Downloading \'%s\' -> \'%s\'' % (url, filename))
             req = requests.get(url)
             if req.status_code != 200:
