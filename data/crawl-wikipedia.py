@@ -24,7 +24,7 @@ def perror(*args, **kwargs):
 # i.e. '.NET_Framework'. This function replaces leading '.' with '__dot__'.
 def canonicalize(filename):
     if filename.startswith('.'):
-        return '__dot__' + filename
+        return '__dot__' + filename[1:]
     return filename
 
 
