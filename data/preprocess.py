@@ -141,8 +141,17 @@ def parse_html(content):
     return string
 
 
+def add_to_misc(c, misc, key, join_str):
+    string = parse_html(c)
+    if key in misc:
+        misc[key] += join_str + string
+    else:
+        misc[key] = string
+
+
 def parse_article(html_filename):
     plain_text = {}
+    misc = {}
     try:
         infile = open(repo_path + html_filename, 'r')
         soup = BeautifulSoup(infile, 'html5lib')
@@ -178,19 +187,29 @@ def parse_article(html_filename):
                     continue
                 if 'navbox' in classes: # Ignore navbox
                     continue
-                if 'vcard' in classes or 'infobox' in classes:
-                    continue   # TODO parse vcard, infobox
+                if 'infobox' in classes: #'vcard'
+                    add_to_misc(c, misc, '__infobox__', '')
+                    continue
                 if c.name == 'table':
                     skip = False
                     for cls in classes:
-                        if 'box' in cls:
+                        if cls.startswith('box'):
                             skip = True
                             break
                     if skip == True:
                         continue
+                if c.name == 'div':
+                    if 'thumb' in classes:
+                        add_to_misc(c, misc, '__multimedia__', '\n')
+                        continue
+                    if 'quotebox' in classes:
+                        add_to_misc(c, misc, '__quotes__', '\n')
+                        continue
             string = parse_html(c)
             plain_text[curr_heading] += string
             # print(string)
+        # Append misc sections like infobox/vcard etc. at the end.
+        plain_text = dict(plain_text, **misc)
         return plain_text, canonical_url
     except:
         perror('Cannot parse file: \'%s\'' % (html_filename))
@@ -205,10 +224,10 @@ def preprocess_files():
         html_files = [f for f in files if f.endswith('.html')]
         for hf in html_files:
             article_count += 1
-            # if article_count == 100:
+            #if article_count == 100:
             #    break
             #if 'User_space' in hf:
-            #if article_count == 424:
+            #if article_count == 11:
             if True:
                 print('------------------------------------------------------')
                 print(str(article_count) + ': ' + hf)
