@@ -69,15 +69,31 @@ def write_plain_text(dictionary, target_filename, canonical_url):
         outfile.write(field_separator)
         first_key = True
         for key in dictionary:
-            outfile.write(key)
+            outfile.write('\n' + key + '\n')
             if first_key == True:
                 first_key = False
                 outfile.write(field_separator)
-            outfile.write(dictionary[key])
+            outfile.write(cleanup_section(dictionary[key]) + '\n')
     except:
         perror('\tCannot write \'%s\'' % (filepath))
         write_failures.append(target_filename)
         remove_file(filepath)
+
+
+def cleanup_section(string):
+    while '  ' in string:
+        string = string.replace('  ', ' ')
+    while ' \n' in string:
+        string = string.replace(' \n', '\n')
+    while '\n ' in string:
+        string = string.replace('\n ', '\n')
+    while '\n\n' in string:
+        string = string.replace('\n\n', '\n')
+    while ' ,' in string:
+        string = string.replace(' ,', ',')
+    while ' .' in string:
+        string = string.replace(' .', '.')
+    return string.strip()
 
 
 def parse_h1(h):
@@ -112,7 +128,7 @@ def parse_html(content):
         return ''
 
     for c in content.children:
-        string += parse_html(c)
+        string += ' ' + parse_html(c)
     '''
     print(content.name)
     print('\nText:\n')
@@ -149,7 +165,7 @@ def parse_article(html_filename):
                 plain_text[curr_heading] = ''
                 continue
             elif c.name in ['h3','h4','h5','h6']:
-                plain_text[curr_heading] += '\n' + parse_h(c) + '\n'
+                plain_text[curr_heading] += parse_h(c)
                 continue
             # print(c.attrs)
             if c.has_attr('id'):
@@ -158,12 +174,20 @@ def parse_article(html_filename):
                     continue
             elif c.has_attr('class'):
                 classes = c.attrs['class']
+                if 'hatnote' in classes:
+                    continue
                 if 'navbox' in classes: # Ignore navbox
                     continue
                 if 'vcard' in classes or 'infobox' in classes:
                     continue   # TODO parse vcard, infobox
-               # if 'reflist' in classes:
-               #     continue   # TODO parse references
+                if c.name == 'table':
+                    skip = False
+                    for cls in classes:
+                        if 'box' in cls:
+                            skip = True
+                            break
+                    if skip == True:
+                        continue
             string = parse_html(c)
             plain_text[curr_heading] += string
             # print(string)
@@ -181,7 +205,9 @@ def preprocess_files():
         html_files = [f for f in files if f.endswith('.html')]
         for hf in html_files:
             article_count += 1
-            #if 'RKM_code' in f:
+            # if article_count == 100:
+            #    break
+            #if 'User_space' in hf:
             #if article_count == 424:
             if True:
                 print('------------------------------------------------------')
@@ -195,7 +221,6 @@ def preprocess_files():
         perror('Cannot list files in directory: %s' % (repo_path))
         exit(1)
 
-
 def main():
     t0 = time.time()
     article_count = preprocess_files()
@@ -203,7 +228,6 @@ def main():
     preproc_time = t1 - t0
     print_failures()
     print_stats(preproc_time, article_count)
-
 
 
 ###############
@@ -214,7 +238,7 @@ corpus_path = './corpus/'   # Where corpus (parsed) text files will be stored
 corpus_doc_suffix = '.txt'
 parse_failures = []   # filenames of HTML files that text wasn't extracted
 write_failures = []   # filenames of TXT files that couldn't be stored to disk
-field_separator = '\n\n\n'
+field_separator = '\n\n'
 
 
 if __name__ == '__main__':
