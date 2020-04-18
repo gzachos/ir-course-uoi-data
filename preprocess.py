@@ -188,9 +188,14 @@ def parse_article(html_filename):
                     continue
             elif c.has_attr('class'):
                 classes = c.attrs['class']
-                if 'hatnote' in classes:
+                if 'hatnote' in classes or 'noprint' in classes:
                     continue
-                if 'navbox' in classes: # Ignore navbox
+                skip = False
+                for cls in classes:
+                    if 'navbox' in cls:
+                        skip = True
+                        break
+                if skip == True:
                     continue
                 if 'infobox' in classes: #'vcard'
                     add_to_misc(c, misc, '__infobox__', '')
