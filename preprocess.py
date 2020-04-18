@@ -64,7 +64,7 @@ def print_plain_text(dictionary):
 def write_plain_text(dictionary, target_filename, canonical_url):
     try:
         filepath = corpus_path + target_filename
-        outfile = open(filepath, 'w')
+        outfile = open(filepath, mode='w', encoding='utf-8')
         outfile.write(canonical_url)
         outfile.write(field_separator)
         first_key = True
@@ -153,7 +153,7 @@ def parse_article(html_filename):
     plain_text = {}
     misc = {}
     try:
-        infile = open(repo_path + html_filename, 'r')
+        infile = open(repo_path + html_filename, mode='r', encoding='utf-8')
         soup = BeautifulSoup(infile, 'html5lib')
         # soup = BeautifulSoup(infile, 'html.parser')
         canonical_url = soup.head.find('link', rel='canonical').get('href')

@@ -32,7 +32,7 @@ def canonicalize(filename):
 def read_seeds():
     seeds = []
     try:
-        f = open(seeds_filename, 'r')
+        f = open(seeds_filename, mode='r', encoding='utf-8')
         for line in f.readlines():
             seeds.append(line.strip())
         return seeds
@@ -114,7 +114,7 @@ def build_crawl_frontier(seeds):
 # Write URLs to urls.txt
 def write_urls_tofile(article_hrefs):
     try:
-        outfile = open(repo_path + 'urls.txt', 'w')
+        outfile = open(repo_path + 'urls.txt', mode='w', encoding='utf-8')
         for href in article_hrefs:
             outfile.write(href + '\n')
         outfile.close()
@@ -135,7 +135,7 @@ def download_article(href):
             req = requests.get(url)
             if req.status_code != 200:
                 raise RequestException()
-            outfile = open(repo_path + filename, 'w')
+            outfile = open(repo_path + filename, mode='w', encoding='utf-8')
             outfile.write(req.text)
             outfile.close()
             return 1   # Downloaded one article
