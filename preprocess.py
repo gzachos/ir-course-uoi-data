@@ -182,13 +182,11 @@ def parse_article(html_filename):
                 plain_text[curr_heading] += parse_h(c)
                 continue
             # print(c.attrs)
-            if c.has_attr('id'):
-                # Ignore table of contents
-                if c.attrs['id'] == 'toc':
-                    continue
             elif c.has_attr('class'):
                 classes = c.attrs['class']
-                if 'hatnote' in classes or 'noprint' in classes:
+                # print(classes)
+                if 'hatnote' in classes or 'noprint' in classes or \
+                        'haudio' in classes:
                     continue
                 skip = False
                 for cls in classes:
@@ -209,6 +207,14 @@ def parse_article(html_filename):
                     if skip == True:
                         continue
                 if c.name == 'div':
+                    # Ignore TOC
+                    skip = False
+                    for cls in classes:
+                        if 'toc' in cls:
+                            skip = True
+                            break
+                    if skip == True:
+                        continue
                     if 'thumb' in classes:
                         add_to_misc(c, misc, '__multimedia__', '\n')
                         continue
@@ -234,7 +240,8 @@ def preprocess_files(html_files, pid, queue):
         article_count += 1
         #if article_count == 100:
         #    break
-        #if 'User_space' in hf:
+        #if 'A*_search_algorithm' in hf:
+        #if 'Bioinformatics' in hf:
         #if article_count == 11:
         if True:
             print('Process %2d: file: %4d - %s' % (pid, article_count, hf))
