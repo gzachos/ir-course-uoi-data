@@ -64,7 +64,7 @@ def expand_frontier(html_text):
                 if not href in crawl_frontier:
                     print('Adding   \'%s\' to frontier' % (href))
                     crawl_frontier.append(href)
-                if len(crawl_frontier) == crawl_limit:
+                if len(crawl_frontier) == article_limit:
                     limit_reached = True
                     break
     except:
@@ -144,7 +144,7 @@ def download_article(href):
             perror('Error downloading: \'%s\' [attempt %d/%d]' %
                     (url, download_attempts + 1, max_downld_retries + 1))
         except OSError as ose:
-            perror('Error writing: \'%s\' -> \'%s\': %s [attempt %d/%d' % 
+            perror('Error writing: \'%s\' -> \'%s\': %s [attempt %d/%d' %
                     (url, repo_path + filename, ose.strerror,
                         download_attempts + 1, max_downld_retries + 1))
         download_attempts += 1
@@ -152,45 +152,43 @@ def download_article(href):
     return 0   # No article was stored
 
 
-# Statically assign work to each thread and perform downloading.
-def download(article_hrefs, tid, num_threads):
-    global total_downloads
+# Statically assign work to each thread.
+def calculate_chunk(article_hrefs, tid, num_threads):
     num_hrefs = len(article_hrefs)
     chunksize = num_hrefs // num_threads
     remainder = num_hrefs % num_threads
-    
-    local_downloads = 0
 
     if remainder != 0:   # hrefs cannot be divided in equal chunks
         if chunksize == 0:   # num_hrefs < num_threads
             chunksize = 1
             lb = tid
-            ub = lb + chunksize
-            if tid >= num_hrefs:   # Terminate the surplus of threads
-                # print('Thread %3d is exiting early...' % (tid))
-                return
+            if tid >= num_hrefs:
+                return (-1, -1)
         else:   # num_hrefs > num_threads
-            # First remainder threads get one more href than the remaining 
+            # First remainder threads get one more href than the remaining
             if tid < remainder:
                 chunksize += 1
                 lb = tid * chunksize
-                ub = lb + chunksize
             else:
                 lb = remainder * (chunksize + 1) + (tid - remainder) * chunksize
-                ub = lb + chunksize
     else:   # Chunksize is the same for all threads
         lb = tid * chunksize
-        ub = lb + chunksize
+    return (lb, lb + chunksize)
 
+
+# Perform download of assigned chunk.
+def download(article_hrefs, tid, num_threads):
+    global total_downloads
+    local_downloads = 0
     # Scrape articles assigned to me
     # print("TID %3d: [%d-%d)" % (tid, lb, ub))
-    for href in article_hrefs[lb:ub]:
+    for href in article_hrefs:
         local_downloads += download_article(href)
 
     # Update total_downloads using synchronization to avoid race conditions
     # perror('down:tid: %d' % (local_downloads))
     tlock.acquire()
-    total_downloads += local_downloads 
+    total_downloads += local_downloads
     tlock.release()
     # print('Thread %3d is exiting...' % (tid))
 
@@ -199,7 +197,11 @@ def multithreaded_download(article_hrefs):
     thread_list = []
     # Create threads
     for i in range(num_threads):
-        thread = threading.Thread(target=download, args = (article_hrefs, i, num_threads))
+        lb, ub = calculate_chunk(article_hrefs, i, num_threads)
+        if lb == -1 and ub == -1:   # No work to be assigned
+            continue
+        arg_list = (article_hrefs[lb:ub], i, num_threads)
+        thread = threading.Thread(target=download, args = arg_list)
         thread_list.append(thread)
         thread.start()
     # Join threads
@@ -208,21 +210,17 @@ def multithreaded_download(article_hrefs):
 
 
 def print_stats(webpages_parsed, frontier_build_time, download_time):
-    print('############################## STATS ##############################')
-    print('Extracted %d hyperlinks from %d articles in %.2f sec' % (crawl_limit,
-        webpages_parsed, frontier_build_time))
-    print('Downloaded %d/%d articles in %.2f sec' % (total_downloads,
-        crawl_limit, download_time)) 
-    print('###################################################################\n')
+    print('\n############################## STATS ######################################')
+    print('Extracted %d hyperlinks from %d articles in %.2f sec' %
+            (article_limit, webpages_parsed, frontier_build_time))
+    print('Downloaded %d/%d articles in %.2f sec using %d threads [%d processors]'
+            % (total_downloads, article_limit, download_time, num_threads, num_processors))
+    print('###########################################################################\n')
 
 
 def print_startup_info():
     print('############################## INFO ##############################')
-    print('Minimum number of articles required: %s' % (article_limit))
-    print('Will crawl %d articles for redundancy' % (crawl_limit))
     print('Raw HTML files will be stored in: \'%s\'' % (repo_path))
-    print('Crawling will be perfomed by %d threads [%d processors]' % 
-            (num_threads, num_processors))
     print('##################################################################\n')
 
 
@@ -247,11 +245,7 @@ def main():
 repo_path = './repository/'   # Where downloaded HTML files will be stored
 url_prefix = 'https://en.wikipedia.org'
 seeds_filename = 'crawler-seeds.txt'   # Crawler seeds
-article_limit = 5000   # Number of articles to download
-# Download 20% more articles than article_limit in case non-canonical webpages
-# are encountered. Non-canonical web pages will be discarded at a later time
-# to keep download time small.
-crawl_limit = article_limit + round(article_limit * 0.2)
+article_limit = 6000   # Number of articles to download
 num_processors = os.cpu_count()
 num_threads = num_processors * 16   # Number of threads used during downloading
 max_downld_retries = 3   # How many times (at most) retry downloading an article
