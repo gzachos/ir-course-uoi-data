@@ -154,6 +154,16 @@ def add_to_misc(c, misc, key, join_str):
         misc[key] = string
 
 
+def search(classes, string, search_type='matches'):
+    for cls in classes:
+        if (search_type == 'startswith' and cls.startswith(string)) or \
+                (search_type == 'contains' and string in cls) or \
+                (search_type == 'matches' and string == cls):
+            return True
+    return False
+
+
+# Returns dictionary of the form {heading: content} and the canonical url
 def parse_article(html_filename):
     plain_text = {}
     misc = {}
@@ -184,46 +194,30 @@ def parse_article(html_filename):
             # print(c.attrs)
             elif c.has_attr('class'):
                 classes = c.attrs['class']
-                # print(classes)
-                if 'hatnote' in classes or 'noprint' in classes or \
-                        'haudio' in classes:
+                if search(classes, 'hatnote') == True or \
+                        search(classes, 'noprint') == True or \
+                        search(classes, 'haudio') == True:
                     continue
-                skip = False
-                for cls in classes:
-                    if 'navbox' in cls:
-                        skip = True
-                        break
-                if skip == True:
+                if search(classes, 'navbox', 'contains') == True:
                     continue
-                if 'infobox' in classes: #'vcard'
+                if search(classes, 'infobox') == True: # 'vcard'
                     add_to_misc(c, misc, '__infobox__', '')
                     continue
                 if c.name == 'table':
-                    skip = False
-                    for cls in classes:
-                        if cls.startswith('box'):
-                            skip = True
-                            break
-                    if skip == True:
+                    if search(classes, 'box', 'startswith') == True:
                         continue
                 if c.name == 'div':
-                    # Ignore TOC
-                    skip = False
-                    for cls in classes:
-                        if 'toc' in cls:
-                            skip = True
-                            break
-                    if skip == True:
+                    if search(classes, 'toc', 'contains') == True:
                         continue
-                    if 'thumb' in classes:
+                    if search(classes, 'thumb') == True:
                         add_to_misc(c, misc, '__multimedia__', '\n')
                         continue
-                    if 'quotebox' in classes:
+                    if search(classes, 'quotebox') == True:
                         add_to_misc(c, misc, '__quotes__', '\n')
                         continue
             string = parse_html(c)
             plain_text[curr_heading] += string
-            # print(string)
+            #print(string)
         # Append misc sections like infobox/vcard etc. at the end.
         plain_text = dict(plain_text, **misc)
         return (plain_text, canonical_url)
@@ -240,7 +234,6 @@ def preprocess_files(html_files, pid, queue):
         article_count += 1
         #if article_count == 100:
         #    break
-        #if 'A*_search_algorithm' in hf:
         #if 'Bioinformatics' in hf:
         #if article_count == 11:
         if True:
