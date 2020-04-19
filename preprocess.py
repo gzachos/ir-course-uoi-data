@@ -152,6 +152,7 @@ def add_to_misc(c, misc, key, join_str):
         misc[key] += join_str + string
     else:
         misc[key] = string
+    return string
 
 
 def search(classes, string, search_type='matches'):
@@ -215,6 +216,10 @@ def parse_article(html_filename):
                     if search(classes, 'quotebox') == True:
                         add_to_misc(c, misc, '__quotes__', '\n')
                         continue
+                if c.name == 'blockquote':
+                    string = add_to_misc(c, misc, '__quotes__', '\n')
+                    plain_text[curr_heading] += string
+                    continue
             string = parse_html(c)
             plain_text[curr_heading] += string
             #print(string)
