@@ -66,6 +66,36 @@ def print_plain_text(dictionary):
         print(dictionary[key])
 
 
+def write_virtual_xml(dictionary, target_filename, canonical_url):
+    try:
+        filepath = corpus_path + target_filename
+        outfile = open(filepath, mode='w', encoding='utf-8')
+        outfile.write('<document>\n')
+        outfile.write('<url>\n')
+        outfile.write(canonical_url)
+        outfile.write('\n</url>\n')
+        first_key = True
+        for key in dictionary:
+            if first_key == True:
+                first_key = False
+                outfile.write('<title>\n')
+                outfile.write(key)
+                outfile.write('\n</title>\n')
+            outfile.write('<section>\n')
+            outfile.write('<heading>\n')
+            outfile.write(key)
+            outfile.write('\n</heading>\n')
+            outfile.write('<content>\n')
+            outfile.write(cleanup_section(dictionary[key]))
+            outfile.write('\n</content>\n')
+            outfile.write('</section>\n')
+        outfile.write('</document>\n')
+    except:
+        perror('\tCannot write \'%s\'' % (filepath))
+        write_failures.append(target_filename)
+        remove_file(filepath)
+
+
 def write_plain_text(dictionary, target_filename, canonical_url):
     try:
         filepath = corpus_path + target_filename
@@ -86,6 +116,7 @@ def write_plain_text(dictionary, target_filename, canonical_url):
 
 
 def cleanup_section(string):
+    # TODO handle tabs
     while '  ' in string:
         string = string.replace('  ', ' ')
     while ' \n' in string:
@@ -247,6 +278,7 @@ def preprocess_files(html_files, pid, queue):
             if dictionary != {} and url != None:
                 # print_plain_text(dictionary)
                 write_plain_text(dictionary, hf[:-5] + corpus_doc_suffix, url)
+                # write_virtual_xml(dictionary, hf[:-5] + corpus_doc_suffix_xml, url)
 
     # Update total_article_count using synchronization to avoid race conditions
     # Send the number of files processed to main thread
@@ -323,6 +355,7 @@ def main():
 repo_path = './repository/'   # Where downloaded HTML files are stored
 corpus_path = './corpus/'   # Where corpus (parsed) text files will be stored
 corpus_doc_suffix = '.txt'
+corpus_doc_suffix_xml = '.xml'
 parse_failures = []   # filenames of HTML files that text wasn't extracted
 write_failures = []   # filenames of TXT files that couldn't be stored to disk
 field_separator = '\n\n'
