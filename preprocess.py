@@ -116,7 +116,7 @@ def write_plain_text(dictionary, target_filename, canonical_url):
 
 
 def cleanup_section(string):
-    # TODO handle tabs
+    string = string.replace('\t', ' ')
     while '  ' in string:
         string = string.replace('  ', ' ')
     while ' \n' in string:
@@ -235,6 +235,9 @@ def parse_article(html_filename):
                 if search(classes, 'infobox') == True: # 'vcard'
                     add_to_misc(c, misc, '__infobox__', '')
                     continue
+                if search(classes, 'gallery') == True:
+                        add_to_misc(c, misc, '__multimedia__', '\n')
+                        continue
                 if c.name == 'table':
                     if search(classes, 'box', 'startswith') == True:
                         continue
@@ -270,7 +273,7 @@ def preprocess_files(html_files, pid, queue):
         article_count += 1
         #if article_count == 100:
         #    break
-        #if 'Bioinformatics' in hf:
+        #if 'Anseriformes' in hf:
         #if article_count == 11:
         if True:
             print('Process %2d: file: %4d - %s' % (pid, article_count, hf))
@@ -360,7 +363,8 @@ parse_failures = []   # filenames of HTML files that text wasn't extracted
 write_failures = []   # filenames of TXT files that couldn't be stored to disk
 field_separator = '\n\n'
 num_processors = os.cpu_count()
-num_processes = num_processors # Number of processes used during preprocessing
+# Number of processes used during preprocessing
+num_processes = (num_processors - 1) if num_processors > 1 else 1
 total_article_count = 0   # How many articles where preprocessed by all processes
 
 
