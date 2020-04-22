@@ -42,13 +42,13 @@ def print_stats(preproc_time):
 
 def print_failures():
     if len(parse_failures) > 0:
-        print('Failed to extract text from the following HTML files:')
-        for fail in parse_failures:
-            print(fail)
+        print('\nFailed to extract text from the following HTML files:')
+        for i in range(len(parse_failures)):
+            print('%2d - %s' % (i+1, parse_failures[i]))
     if len(write_failures) > 0:
         print('\nFailed to write the following TXT files:')
-        for fail in write_failures:
-            print(fail)
+        for i in range(len(write_failures)):
+            print(' %2d - %s' % (i+1, write_failures[i]))
 
 
 def remove_file(filepath):
@@ -328,22 +328,19 @@ def parse_article(html_filename):
 
 
 def preprocess_files(html_files, pid, queue):
-    global total_article_count
     article_count = 0
     for hf in html_files:
         article_count += 1
-        #if '%22Hello,_World!%22_program' in hf:
-        if True:
-            print('Process %2d: file: %4d - %s' % (pid, article_count, hf))
-            dictionary, url = parse_article(hf)
-            if dictionary != {} and url != None:
-                #print_plain_text(dictionary)
-                write_plain_text(dictionary, hf[:-5] + corpus_doc_suffix, url)
-                # write_virtual_xml(dictionary, hf[:-5] + corpus_doc_suffix_xml, url)
+        print('Process %2d: file: %4d - %s' % (pid, article_count, hf))
+        dictionary, url = parse_article(hf)
+        if dictionary != {} and url != None:
+            #print_plain_text(dictionary)
+            write_plain_text(dictionary, hf[:-5] + corpus_doc_suffix, url)
+            # write_virtual_xml(dictionary, hf[:-5] + corpus_doc_suffix_xml, url)
 
-    # Update total_article_count using synchronization to avoid race conditions
-    # Send the number of files processed to main thread
-    queue.put(article_count)
+    # Send to main thread the number of files processed and the
+    # filenames of the HTML files that couldn't be parsed or written.
+    queue.put((article_count, parse_failures, write_failures))
     # print('Process %3d is exiting...' % (pid))
 
 
@@ -371,7 +368,7 @@ def calculate_chunk(html_files, pid, num_processes):
 
 
 def multiprocess_preprocessing(html_files):
-    global total_article_count
+    global total_article_count, parse_failures, write_failures
     process_list = []
     # Create processes
     queue = multiprocessing.Queue()
@@ -386,7 +383,10 @@ def multiprocess_preprocessing(html_files):
     # Join processes
     for process in process_list:
         # Get the number of files processed by each thread
-        total_article_count += queue.get()
+        article_count, local_parse_failures, local_write_failures = queue.get()
+        total_article_count += article_count
+        parse_failures += local_parse_failures
+        write_failures += local_write_failures
         process.join()
 
 
@@ -428,5 +428,4 @@ total_article_count = 0  # How many articles where preprocessed by all processes
 
 if __name__ == '__main__':
     main()
-
 
