@@ -335,8 +335,8 @@ def preprocess_files(html_files, pid, queue):
         dictionary, url = parse_article(hf)
         if dictionary != {} and url != None:
             #print_plain_text(dictionary)
-            write_plain_text(dictionary, hf[:-5] + corpus_doc_suffix, url)
-            # write_virtual_xml(dictionary, hf[:-5] + corpus_doc_suffix_xml, url)
+            #write_plain_text(dictionary, hf[:-5] + corpus_doc_suffix, url)
+            write_virtual_xml(dictionary, hf[:-5] + corpus_doc_suffix_xml, url)
 
     # Send to main thread the number of files processed and the
     # filenames of the HTML files that couldn't be parsed or written.
