@@ -6,6 +6,7 @@ import time
 from bs4 import BeautifulSoup, NavigableString, Comment
 import multiprocessing
 import traceback
+import re
 
 
 ########################
@@ -67,6 +68,31 @@ def print_plain_text(dictionary):
         print(dictionary[key])
 
 
+def normalize_summary(summary_str):
+    try:
+        if len(summary_str) <= MAX_SUMMARY_LENGTH_CHARS:
+            return summary_str
+        string = ''
+        words = summary_str.split(' ')
+        for word in words:
+            if len(string) + len(word) > MAX_SUMMARY_LENGTH_CHARS:
+                break
+            string += ' ' + word
+        if len(string) == 0:
+            return NO_DESC_AVAIL
+        sentences = string.split('.')
+        num_sentences = len(sentences)
+        if num_sentences > 1:
+            last_sentence_length = len(sentences[num_sentences-1])
+            if last_sentence_length < MIN_SUMMARY_SENTENCE_LENGTH_CHARS:
+                return string[:len(string)-last_sentence_length]
+        if string[:-1] != '.':
+            string += '...'
+        return string
+    except:
+        return NO_DESC_AVAIL
+
+
 # Write plain text to a virtual XML file. The format is named virtual
 # because the output is not a valid XML but XML tags are only used as
 # field separators. Only one XML tag can exist per line, without any
@@ -91,7 +117,10 @@ def write_virtual_xml(dictionary, target_filename, canonical_url):
             outfile.write(key)
             outfile.write('\n</heading>\n')
             outfile.write('<content>\n')
-            outfile.write(cleanup_section(dictionary[key]))
+            clean_str = cleanup_section(dictionary[key])
+            if key == '__summary__':
+                clean_str = normalize_summary(clean_str).strip()
+            outfile.write(clean_str)
             outfile.write('\n</content>\n')
             outfile.write('</section>\n')
         outfile.write('</document>\n')
@@ -114,7 +143,10 @@ def write_plain_text(dictionary, target_filename, canonical_url):
             if first_key == True:
                 first_key = False
                 outfile.write(field_separator)
-            outfile.write(cleanup_section(dictionary[key]) + '\n')
+            clean_str = cleanup_section(dictionary[key])
+            if key == '__summary__':
+                clean_str = normalize_summary(clean_str).strip()
+            outfile.write(clean_str + '\n')
     except:
         perror('\tCannot write \'%s\'' % (filepath))
         traceback.print_exc()
@@ -195,7 +227,7 @@ def parse_childrenof(c, level, ignore_hrefs=False, in_infobox=False):
 # used to implement <sup> parsing and in_infobox is used to
 # parse HTML tags of infobox class.
 def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
-    global curr_heading
+    global curr_heading, read_summary, title
     ########################################################
     # Segment A - Handle Comments and NavigableStrings     #
     ########################################################
@@ -237,16 +269,30 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         if c.name == 'div':
             if find_in(classes, 'toc'):
                 return ''
+        '''
+        if c.name == 'a':
+            if find_in(classes, 'external') or find_in(classes, 'autonumber'):
+                return ''
+        '''
     ########################################################
     # Segment C - Handle elements containing useful text   #
     ########################################################
     if c.name == 'h2':
         curr_heading = parse_childrenof(c, level, ignore_hrefs, in_infobox)
         plain_text[curr_heading] = ''
+        if curr_heading != title:  # Summary is only taken from first section
+            read_summary = False
         return ''
     if c.name in ['h3','h4','h5','h6']:
         string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
         plain_text[curr_heading] += string
+        return string
+    if c.name == 'p' and level == 0 and read_summary == True:
+        string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
+        sum_string = re.sub(r'\ \([^()]*\)', '', string)  # Ignore parentheses
+        add_to_misc('__summary__', sum_string, ' ')
+        if len(misc['__summary__']) >= MAX_SUMMARY_LENGTH_CHARS:
+            read_summary = False
         return string
     if c.name == 'blockquote':
         string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
@@ -304,9 +350,10 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
 
 # Returns dictionary of the form {heading: content} and the canonical url
 def parse_article(html_filename):
-    global plain_text, misc, curr_heading
+    global plain_text, misc, curr_heading, read_summary, title
     plain_text = {}
     misc = {}
+    read_summary = True
     try:
         infile = open(repo_path + html_filename, mode='r', encoding='utf-8')
         soup = BeautifulSoup(infile, 'html5lib')
@@ -424,6 +471,9 @@ field_separator = '\n\n'
 num_processors = os.cpu_count()
 num_processes = num_processors # Number of processes used during preprocessing
 total_article_count = 0  # How many articles where preprocessed by all processes
+MAX_SUMMARY_LENGTH_CHARS = 170
+MIN_SUMMARY_SENTENCE_LENGTH_CHARS = 25
+NO_DESC_AVAIL = 'No description is available'
 
 
 if __name__ == '__main__':
