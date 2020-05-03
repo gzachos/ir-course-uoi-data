@@ -214,10 +214,12 @@ def add_to_misc(key, string, join_str):
         misc[key] = string
 
 
-# Search classes and return True if string exists.
+# Search attrs and return True if string exists.
 # search_type = {'matches', 'contains', 'startswith'}
-def find_in(classes, string, search_type='matches'):
-    for cls in classes:
+def find_in(attrs, string, search_type='matches'):
+    if not isinstance(attrs, list):
+        attrs = [attrs]
+    for cls in attrs:
         if (search_type == 'startswith' and cls.startswith(string)) or \
                 (search_type == 'contains' and string in cls) or \
                 (search_type == 'matches' and string == cls):
@@ -260,7 +262,7 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
     if c.name == 'span':
         if c.has_attr('id'):
             ids = c.attrs['id']
-            if 'coordinates' in ids:
+            if find_in(ids, 'coordinates'):
                 return ''
     if c.has_attr('role'):
         roles = c.attrs['role']
