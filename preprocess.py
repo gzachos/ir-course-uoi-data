@@ -68,24 +68,35 @@ def print_plain_text(dictionary):
         print(dictionary[key])
 
 
-def normalize_summary(summary_str):
+def shorten_summary(summary_str):
     try:
-        if len(summary_str) <= MAX_SUMMARY_LENGTH_CHARS:
-            return summary_str
+        # summary_str is already stripped.
+        # Summary string contains only whitespace.
+        if len(summary_str) == 0:
+            return NO_DESC_AVAIL
+        # Make summary string fit in one line.
+        no_newline_string = summary_str.replace('\n', ' ')
+        # No need to shorten summary string 
+        if len(no_newline_string) <= MAX_SUMMARY_LENGTH_CHARS:
+            return no_newline_string
+        # Summary string needs to be shortened.
         string = ''
-        words = summary_str.split(' ')
+        words = no_newline_string.split(' ')
         for word in words:
             if len(string) + len(word) > MAX_SUMMARY_LENGTH_CHARS:
                 break
             string += ' ' + word
-        if len(string) == 0:
+        # First non-whitespace token is longer than MAX_SUMMARY_LENGTH_CHARS.
+        if len(string.strip()) == 0:
             return NO_DESC_AVAIL
+        # Remove last sentence if its length is smaller than a threshold.
         sentences = string.split('.')
         num_sentences = len(sentences)
         if num_sentences > 1:
             last_sentence_length = len(sentences[num_sentences-1])
             if last_sentence_length < MIN_SUMMARY_SENTENCE_LENGTH_CHARS:
                 return string[:len(string)-last_sentence_length]
+        # Append '...' at string end in case last sentence was trimmed.
         if string[:-1] != '.':
             string += '...'
         return string
@@ -119,7 +130,7 @@ def write_virtual_xml(dictionary, target_filename, canonical_url):
             outfile.write('<content>\n')
             clean_str = cleanup_section(dictionary[key])
             if key == '__summary__':
-                clean_str = normalize_summary(clean_str).strip()
+                clean_str = shorten_summary(clean_str).strip()
             outfile.write(clean_str)
             outfile.write('\n</content>\n')
             outfile.write('</section>\n')
@@ -145,7 +156,7 @@ def write_plain_text(dictionary, target_filename, canonical_url):
                 outfile.write(field_separator)
             clean_str = cleanup_section(dictionary[key])
             if key == '__summary__':
-                clean_str = normalize_summary(clean_str).strip()
+                clean_str = shorten_summary(clean_str).strip()
             outfile.write(clean_str + '\n')
     except:
         perror('\tCannot write \'%s\'' % (filepath))
@@ -281,6 +292,8 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         curr_heading = parse_childrenof(c, level, ignore_hrefs, in_infobox)
         plain_text[curr_heading] = ''
         if curr_heading != title:  # Summary is only taken from first section
+            if '__summary__' not in misc:   # First section had no text
+                add_to_misc('__summary__', NO_DESC_AVAIL, '')
             read_summary = False
         return ''
     if c.name in ['h3','h4','h5','h6']:
@@ -289,7 +302,7 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         return string
     if c.name == 'p' and level == 0 and read_summary == True:
         string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
-        sum_string = re.sub(r'\ \([^()]*\)', '', string)  # Ignore parentheses
+        sum_string = re.sub(r'\ \(.+\)', '', string)  # Ignore parentheses
         add_to_misc('__summary__', sum_string, ' ')
         if len(misc['__summary__']) >= MAX_SUMMARY_LENGTH_CHARS:
             read_summary = False
