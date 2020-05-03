@@ -257,6 +257,11 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         return ''
     if c.name == 'a' and ignore_hrefs == True:
         return ''
+    if c.name == 'span':
+        if c.has_attr('id'):
+            ids = c.attrs['id']
+            if 'coordinates' in ids:
+                return ''
     if c.has_attr('role'):
         roles = c.attrs['role']
         if 'note' in roles:
