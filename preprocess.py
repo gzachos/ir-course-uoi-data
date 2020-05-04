@@ -6,7 +6,6 @@ import time
 from bs4 import BeautifulSoup, NavigableString, Comment
 import multiprocessing
 import traceback
-import re
 
 
 ########################
@@ -60,6 +59,24 @@ def remove_file(filepath):
         exit(ose.errno)
 
 
+def remove_matching_parentheses(string):
+    stack = []
+    new_str = ''
+    for c in string:
+        if c == '(':
+            stack.append(c)
+        if len(stack) == 0:
+            new_str += c
+        if c == ')':
+            if len(stack) == 0:
+                continue
+            stack.pop()
+    if len(stack) != 0:
+        perror('Mismatching parentheses')
+    new_str = new_str.replace('  ', ' ')
+    return new_str
+
+
 def print_plain_text(dictionary):
     for key in dictionary:
         print('\n\n###############')
@@ -68,15 +85,17 @@ def print_plain_text(dictionary):
         print(dictionary[key])
 
 
-def shorten_summary(summary_str):
+def get_summary(section_text):
+    # It is assumed that section_text is stripped
     try:
-        # summary_str is already stripped.
+        # Remove parentheses.
+        summary_str = remove_matching_parentheses(section_text)
         # Summary string contains only whitespace.
         if len(summary_str) == 0:
             return NO_DESC_AVAIL
         # Make summary string fit in one line.
         no_newline_string = summary_str.replace('\n', ' ')
-        # No need to shorten summary string 
+        # No need to shorten summary string.
         if len(no_newline_string) <= MAX_SUMMARY_LENGTH_CHARS:
             return no_newline_string
         # Summary string needs to be shortened.
@@ -130,7 +149,7 @@ def write_virtual_xml(dictionary, target_filename, canonical_url):
             outfile.write('<content>\n')
             clean_str = cleanup_section(dictionary[key])
             if key == '__summary__':
-                clean_str = shorten_summary(clean_str).strip()
+                clean_str = get_summary(clean_str).strip()
             outfile.write(clean_str)
             outfile.write('\n</content>\n')
             outfile.write('</section>\n')
@@ -156,7 +175,7 @@ def write_plain_text(dictionary, target_filename, canonical_url):
                 outfile.write(field_separator)
             clean_str = cleanup_section(dictionary[key])
             if key == '__summary__':
-                clean_str = shorten_summary(clean_str).strip()
+                clean_str = get_summary(clean_str).strip()
             outfile.write(clean_str + '\n')
     except:
         perror('\tCannot write \'%s\'' % (filepath))
@@ -309,10 +328,7 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         return string
     if c.name == 'p' and level == 0 and read_summary == True:
         string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
-        sum_string = re.sub(r'\ \(.+\)', '', string)  # Ignore parentheses
-        add_to_misc('__summary__', sum_string, ' ')
-        if len(misc['__summary__']) >= MAX_SUMMARY_LENGTH_CHARS:
-            read_summary = False
+        add_to_misc('__summary__', string, ' ')
         return string
     if c.name == 'blockquote':
         string = parse_childrenof(c, level, ignore_hrefs, in_infobox)
