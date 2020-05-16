@@ -318,8 +318,6 @@ def parse_child(c, level, ignore_hrefs=False, in_infobox=False):
         curr_heading = parse_childrenof(c, level, ignore_hrefs, in_infobox)
         plain_text[curr_heading] = ''
         if curr_heading != title:  # Summary is only taken from first section
-            if '__summary__' not in misc:   # First section had no text
-                add_to_misc('__summary__', NO_DESC_AVAIL, '')
             read_summary = False
         return ''
     if c.name in ['h3','h4','h5','h6']:
@@ -400,6 +398,9 @@ def parse_article(html_filename):
         plain_text[curr_heading] = ''
         for c in content.children:
             plain_text[curr_heading] += parse_child(c, level = 0)
+        # Add __summary__ section in misc.
+        if '__summary__' not in misc:
+            add_to_misc('__summary__', NO_DESC_AVAIL, '')
         # Append misc sections like infobox/vcard etc. at the end.
         plain_text = dict(plain_text, **misc)
         return (plain_text, canonical_url)
