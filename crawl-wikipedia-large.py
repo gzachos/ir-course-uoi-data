@@ -44,6 +44,19 @@ def read_seeds():
         exit(ose.errno)
 
 
+# Read urls from urls file.
+def read_urls():
+    urls = []
+    try:
+        f = open('./repository/urls.txt', mode='r', encoding='utf-8')
+        for line in f.readlines():
+            urls.append(line.strip())
+        return urls
+    except OSError as ose:
+        perror('./repository/urls.txt', + ': ' + ose.strerror)
+        exit(ose.errno)
+
+
 # Parses an HTML text and adds the hyperlinks currently not in the crawl
 # frontier. Articles named {ISO,IEC,IEEE}_* and 802.* are excluded to support
 # a larger  variety of articles as there are many variants of them.
@@ -88,6 +101,7 @@ def extract_hrefs_from_article(href):
             if req.status_code != 200:
                 raise Exception('Status code: ' + str(req.status_code))
             limit_reached, success = expand_frontier(req.text)
+            print(len(crawl_frontier))
             break
         except Exception as e:
             perror('Error extracting hrefs from: \'%s\'' % (url))
@@ -132,6 +146,8 @@ def download_article(href):
         try:
             url = url_prefix + href
             filename = canonicalize(href.split('/')[-1]) + '.html'
+            if download_missing and os.path.exists(repo_path + filename) == True:
+                return 0
             print('Downloading \'%s\' -> \'%s\'' % (url, filename))
             req = requests.get(url)
             if req.status_code != 200:
@@ -220,10 +236,11 @@ def print_stats(webpages_parsed, frontier_build_time, download_time):
     failed_num = download_fail_num + write_fail_num
     success_num = total_downloads - failed_num
     print('\n################################ STATS ##########################################')
-    print('Extracted %d hyperlinks from %d articles in %.2f minutes' %
-            (article_limit, webpages_parsed, frontier_build_time/60))
-    print('Downloaded %d/%d articles in %.2f minutes using %d threads [%d processors]'
-            % (total_downloads, article_limit, download_time/60, num_threads, num_processors))
+    if not update_corpus:
+        print('Extracted %d hyperlinks from %d articles in %.2f minutes' %
+                (article_limit, webpages_parsed, frontier_build_time/60))
+    print('Downloaded %d/%d articles in %.2f minutes using %d threads' %
+            (total_downloads, article_limit, download_time/60, num_threads))
     if download_fail_num > 0:
         print('Failed to download %d webpages [%.4f%%]' %
                 (download_fail_num, download_fail_num / article_limit * 100))
@@ -231,7 +248,7 @@ def print_stats(webpages_parsed, frontier_build_time, download_time):
         print('Failed to write %d HTML documents [%.4f%%]' %
                 (write_fail_num, write_fail_num / total_downloads * 100))
     print('Removed %d/%d articles to drop article count to %d' %
-            (num_removals+1, total_downloads, article_target))
+            (num_removals, total_downloads, article_target))
     print('#################################################################################\n')
 
 
@@ -275,20 +292,24 @@ def remove_redundant_files():
         print("Removing redundant file: %3d - %s" % (i+1, rand_file))
         remove_file(repo_path + rand_file)
 
-
 def main():
-    seeds = read_seeds()
-    t0 = time.time()
-    article_hrefs, webpages_parsed = build_crawl_frontier(seeds)
-    t1 = time.time()
-    write_urls_tofile(article_hrefs)
+    webpages_parsed = 0
+    frontier_build_time = 0
+    if update_corpus == True:
+        article_hrefs = read_urls()
+    else:
+        seeds = read_seeds()
+        t0 = time.time()
+        article_hrefs, webpages_parsed = build_crawl_frontier(seeds)
+        t1 = time.time()
+        frontier_build_time = t1 - t0
+        write_urls_tofile(article_hrefs)
     t2 = time.time()
     actual_downloads = multithreaded_download(article_hrefs)
     t3 = time.time()
-    frontier_build_time = t1 - t0
     download_time = t3 - t2
-    remove_redundant_files()
     print_failures()
+    remove_redundant_files()
     print_stats(webpages_parsed, frontier_build_time, download_time)
 
 
@@ -299,20 +320,30 @@ filename_max_size = 64
 repo_path = './repository/'   # Where downloaded HTML files will be stored
 url_prefix = 'https://en.wikipedia.org'
 seeds_filename = 'crawler-seeds-extended.txt'   # Crawler seeds (extended list)
-article_target = 100000 # Number of articles to download (>= 10)
+article_target = 100000 # Number of articles to download (>= 33)
 # Number of articles to add in the crawler frontier is 0.5% more than
 # article_target for redundancy reasons (i.e. bad hyperlinks).
 article_limit = ceil(article_target * 1.005)
-num_processors = os.cpu_count()
-num_threads = num_processors * 4   # Number of threads used during downloading
-max_downld_retries = 3   # How many times (at most) retry downloading an article
+num_threads = 7   # Number of threads used during downloading
+max_downld_retries = 6   # How many times (at most) retry downloading an article
 total_downloads = 0   # How many articles where downloaded by all threads
 tlock = threading.Lock()   # Protects access to total_downloads
 download_failures = []
 write_failures = []
-
+update_corpus = False
+download_missing = False
 
 if __name__ == '__main__':
+    args = sys.argv[1:]
+    for arg in args:
+        if arg == "--update":
+            update_corpus = True
+        elif arg == "--download-missing":
+            download_missing = True
+            update_corpus = True
+        else:
+            perror("Uknown command-line argument: '" + arg + "'")
+            exit(1)
     main()
 
 
