@@ -22,5 +22,5 @@ in two stages.
  of the search engine will also take place.
  
  # License
- __TODO__: Select one complying with the wikipedia material
+[GNU GENERAL PUBLIC LICENSE Version 2, June 1991](LICENSE)
 
