@@ -139,7 +139,7 @@ def write_urls_tofile(article_hrefs):
             outfile.write(href + '\n')
         outfile.close()
     except OSError as ose:
-        perror('Cannot write \'urls.txt\': ' + ose.strerror)
+        perror('Cannot write \'' + repo_path + 'urls.txt\': ' + ose.strerror)
         exit(ose.errno)
 
 

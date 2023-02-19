@@ -17,9 +17,15 @@ in two stages.
  
  Plain text extraction from HTML files is performed by `preprocess.py` and output
  text files are stored in `corpus/` directory. Because `repository/` and `corpus/`
- exceed 1 GB of storage size, `corpus/` directory has been placed in 
- [ir-course-uoi](https://github.com/gzachos/ir-course-uoi), where implementation
- of the search engine will also take place.
+ exceed 1 GB of storage size, `corpus/` directory has not been uploaded in git.
+ In [ir-course-uoi](https://github.com/gzachos/ir-course-uoi), the implementation
+ of the search engine has taken place.
+
+
+# Screenshots
+![scraping-statistics.png](./screenshots/scraping-statistics.png)
+![preprcessing-statistics.png](./screenshots/preprcessing-statistics.png)
+
  
  # License
 [GNU GENERAL PUBLIC LICENSE Version 2, June 1991](LICENSE)
