@@ -24,7 +24,7 @@ in two stages.
 
 # Screenshots
 ![scraping-statistics.png](./screenshots/scraping-statistics.png)
-![preprcessing-statistics.png](./screenshots/preprcessing-statistics.png)
+![preprcessing-statistics.png](./screenshots/preprocessing-statistics.png)
 
  
  # License
