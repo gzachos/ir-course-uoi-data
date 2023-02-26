@@ -27,6 +27,6 @@ in two stages.
 ![preprcessing-statistics.png](./screenshots/preprocessing-statistics.png)
 
  
- # License
+# License
 [GNU GENERAL PUBLIC LICENSE Version 2, June 1991](LICENSE)
 
